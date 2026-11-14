@@ -1,0 +1,22 @@
+{
+ "1.4.0": {
+  "en": ["Sign up and sign in: a teacher account with a password, and student accounts with a 4-digit PIN.",
+         "Passwords and PINs are stored only as secure hashes; wrong tries make the user wait; automatic sign-out.",
+         "A new Settings page: sounds, spoken praise, volume, text size, recording speed, animations, shadowing countdown and Arabic support.",
+         "Teacher settings: students, PIN reset, security, encrypted backups and progress reset.",
+         "An update button (🔄) and automatic updates."],
+  "ar": ["التسجيل والدخول: حساب للمعلم بكلمة مرور، وحسابات للطلاب برمز من 4 أرقام.",
+         "تُحفظ كلمات المرور والرموز كبصمات آمنة فقط، مع انتظار بعد المحاولات الخاطئة وتسجيل خروج تلقائي.",
+         "صفحة إعدادات جديدة: الأصوات، كلمات التشجيع، مستوى الصوت، حجم الخط، سرعة التسجيلات، الحركة، العدّ التنازلي، والدعم بالعربية.",
+         "إعدادات المعلم: الطلاب، إعادة تعيين الرمز، الأمان، النسخ الاحتياطية المشفّرة، ومسح التقدّم.",
+         "زر للتحديث (🔄) وتحديث تلقائي."]
+ },
+ "1.3.0": {
+  "en": ["Sounds and spoken praise for right and wrong answers.", "A celebration with confetti and a trophy when a task is finished well."],
+  "ar": ["أصوات وكلمات تشجيع للإجابات الصحيحة والخاطئة.", "احتفال بالقصاصات الملونة والكأس عند إنهاء المهمة بنجاح."]
+ },
+ "1.2.0": {
+  "en": ["Colour-coded lessons.", "3D pictures for the vocabulary.", "No sound while the student records in shadowing."],
+  "ar": ["ألوان مميزة لكل درس.", "صور ثلاثية الأبعاد للمفردات.", "لا صوت أثناء تسجيل الطالب في التظليل."]
+ }
+}

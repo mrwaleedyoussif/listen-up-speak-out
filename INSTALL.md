@@ -26,7 +26,7 @@ The web app updates itself. When a new version is ready, a small message appears
 1. On the phone or tablet, open the Releases page and download `Listen-Up-Speak-Out-1.0.0.apk`.
 2. Open the downloaded file. If Android asks, allow **Install unknown apps** for the browser or file manager, then press **Install**.
 3. The first time a student records, Android asks for the **microphone**: press **Allow**.
-4. **Updates:** install the new `.apk` over the old one. Students' progress stays.
+4. **Updates:** press 🔄 in the app (or wait for its message). It opens the download of the new `.apk`; open the file and press **Update**. Accounts and progress stay.
 
 All the audio is inside the app, so it works with no internet at all.
 
@@ -34,6 +34,8 @@ All the audio is inside the app, so it works with no internet at all.
 
 - **Installer:** `Listen-Up-Speak-Out-Setup-1.0.0.exe` installs the app with a desktop shortcut. The installer speaks English or Arabic.
 - **Portable:** `Listen-Up-Speak-Out-Portable-1.0.0.exe` runs straight from a USB stick, with no installation.
+
+**Updates:** the installer edition updates itself. It downloads a new version in the background and installs it when the app is closed (or at once with 🔄 → **Restart and update**). The portable edition shows the download link instead.
 
 Windows may show **"Windows protected your PC"** because the app is new and not signed with a paid certificate. Press **More info → Run anyway**.
 
@@ -43,6 +45,13 @@ In class: **F11** switches full screen, and **Ctrl +** / **Ctrl −** zoom in an
 
 - **Now:** use the web app (part 1, "Add to Home Screen"). It works like an app, with the microphone and offline audio.
 - **App Store (later):** Apple only installs apps signed by a paid **Apple Developer Program** account (99 USD a year). The project for this is ready in the `ios` folder, and every build checks that it compiles (the `.ipa` file on the Releases page is that unsigned build). With an Apple developer account, open `ios/App/App.xcodeproj` in Xcode on a Mac, choose your team under **Signing & Capabilities**, then **Product → Archive → Distribute App**.
+
+## Accounts, settings and updates
+
+- **First start on a device:** the teacher (or a parent) creates the teacher account (username + password) and saves the **recovery code** that is shown once. Students then sign up with their name, class and a 4-digit PIN.
+- **Security:** passwords and PINs are stored only as salted PBKDF2-SHA256 hashes; after 5 wrong tries the user must wait (the wait doubles each time); automatic sign-out after a time without activity; backups are encrypted with the teacher password (AES-GCM). Everything stays on the device.
+- **⚙️ Settings:** sounds, spoken praise, volume, recording speed, text size, animations, Arabic support and the shadowing countdown for everyone; class mode, security, students (add, rename, reset PIN, delete), backups, progress reset and automatic updates for the teacher.
+- **🔄 Updates:** a red dot means a new version is ready. The web app installs it by itself at a safe moment (never during a lesson). `version.json` on the website tells the apps which version is newest; GitHub Actions publishes it after the Releases page has the new app files.
 
 ## 5. Changing the program and making a new version
 
@@ -97,7 +106,7 @@ Note: APKs signed with the private key cannot install over the shared-key APKs f
 1. من الجهاز نفسه افتح صفحة الإصدارات ونزّل ملف `Listen-Up-Speak-Out-1.0.0.apk`.
 2. افتح الملف. إذا طلب أندرويد ذلك فاسمح بـ **تثبيت التطبيقات غير المعروفة** للمتصفح أو مدير الملفات، ثم اضغط **تثبيت**.
 3. عند أول تسجيل صوتي يطلب أندرويد إذن **الميكروفون**، فاضغط **سماح**.
-4. **التحديث:** ثبّت ملف apk الجديد فوق القديم، ويبقى تقدّم الطلاب كما هو.
+4. **التحديث:** اضغط 🔄 في التطبيق (أو انتظر رسالته)، فيفتح تنزيل ملف apk الجديد؛ افتحه واضغط **تحديث**. تبقى الحسابات والتقدّم.
 
 كل الصوتيات داخل التطبيق، فيعمل دون إنترنت إطلاقًا.
 
@@ -105,6 +114,8 @@ Note: APKs signed with the private key cannot install over the shared-key APKs f
 
 - **المثبّت:** الملف `Listen-Up-Speak-Out-Setup-1.0.0.exe` يثبّت التطبيق مع اختصار على سطح المكتب، والمثبّت بالعربية أو الإنجليزية.
 - **النسخة المحمولة:** الملف `Listen-Up-Speak-Out-Portable-1.0.0.exe` يعمل مباشرة من ذاكرة USB دون تثبيت.
+
+**التحديث:** نسخة المثبّت تحدّث نفسها؛ تنزّل الإصدار الجديد في الخلفية وتثبّته عند إغلاق التطبيق (أو فورًا من 🔄 ← **Restart and update**). أما النسخة المحمولة فتعرض رابط التنزيل.
 
 قد يظهر تنبيه **"Windows protected your PC"** لأن التطبيق جديد وغير موقّع بشهادة مدفوعة. اضغط **More info** ثم **Run anyway**.
 
@@ -114,6 +125,13 @@ Note: APKs signed with the private key cannot install over the shared-key APKs f
 
 - **الآن:** استخدم تطبيق الويب (القسم ١، «إضافة إلى الشاشة الرئيسية»)، ويعمل كتطبيق مع الميكروفون والصوت دون إنترنت.
 - **متجر App Store لاحقًا:** تشترط أبل حساب **Apple Developer Program** المدفوع (99 دولارًا سنويًا). المشروع جاهز في مجلد `ios`، وبعد إنشاء الحساب يُفتح في برنامج Xcode على جهاز ماك ويُرفع إلى المتجر.
+
+## الحسابات والإعدادات والتحديثات
+
+- **أول تشغيل على الجهاز:** ينشئ المعلم (أو ولي الأمر) حساب المعلم باسم مستخدم وكلمة مرور، ويحفظ **رمز الاسترداد** الذي يظهر مرة واحدة. ثم يسجّل الطلاب بالاسم والفصل ورمز من 4 أرقام.
+- **الأمان:** تُحفظ كلمات المرور والرموز كبصمات مشفّرة فقط، ويجب الانتظار بعد 5 محاولات خاطئة، مع خروج تلقائي بعد مدة دون نشاط، وتُشفَّر النسخ الاحتياطية بكلمة مرور المعلم. تبقى جميع البيانات على الجهاز.
+- **⚙️ الإعدادات:** الأصوات وسرعة التسجيلات وحجم الخط والدعم بالعربية للجميع، وإعدادات الفصل والأمان والطلاب والنسخ الاحتياطية والتحديث التلقائي للمعلم.
+- **🔄 التحديثات:** تعني النقطة الحمراء أن إصدارًا جديدًا جاهز، ويثبّته تطبيق الويب تلقائيًا في وقت مناسب.
 
 ## ٥. تعديل البرنامج وإصدار نسخة جديدة
 

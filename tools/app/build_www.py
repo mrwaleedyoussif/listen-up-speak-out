@@ -31,7 +31,7 @@ for dp, dn, fn in os.walk(WWW):
     dn.sort()
     for f in sorted(fn):
         p = os.path.join(dp, f); r = rel(p)
-        if r.endswith('.mp3') or r in ('sw.js', 'index.html') or r.startswith('icons/shots/') or f.startswith('.'): continue
+        if r.endswith('.mp3') or r in ('sw.js', 'index.html', 'version.json') or r.startswith('icons/shots/') or f.startswith('.'): continue
         shell.append(r)
 vh = hashlib.sha1()
 for r in shell: vh.update(r.encode()); vh.update(open(os.path.join(WWW, r), 'rb').read())
@@ -41,3 +41,13 @@ sw = tpl.replace('__VERSION__', V).replace('__AUDIO_VERSION__', AV).replace('__S
 open(os.path.join(WWW, 'sw.js'), 'w').write(sw)
 tot = sum(g['bytes'] for g in grades.values())
 print(f'app version {V} · audio version {AV} · {len(shell)} app files · {sum(len(g["files"]) for g in grades.values())} audio files ({tot/1048576:.1f} MB)')
+
+# 3. version.json: the newest version and what is new (the apps check it for updates).
+#    In GitHub Actions, tools/app/release_info.py adds the download links of the release files.
+import datetime
+pkg = json.load(open(os.path.join(ROOT, 'package.json')))
+log = json.load(open(os.path.join(ROOT, 'tools', 'app', 'changelog.json'), encoding='utf-8'))
+ver = pkg['version']
+vj = {'version': ver, 'date': datetime.date.today().isoformat(), 'notes': log.get(ver, {'en': [], 'ar': []}), 'files': {}}
+json.dump(vj, open(os.path.join(WWW, 'version.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+print(f'version.json: {ver}')

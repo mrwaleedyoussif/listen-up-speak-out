@@ -29,13 +29,24 @@
     if (btn) t.querySelector('.btn').onclick = () => { t.remove(); onBtn(); };
     t.querySelector('.iconbtn').onclick = () => t.remove();
   }
+  /* The app's update manager (Upd in index.html) uses this to check, wait for and apply a new version. */
+  const SW = window.LSP_SW = {
+    ok: WEB && 'serviceWorker' in navigator, reg: null, waiting: null, cbs: [],
+    onReady(cb) { this.cbs.push(cb); if (this.waiting) cb(); },
+    async check() { if (this.reg) await this.reg.update(); },
+    waitReady(ms) { return new Promise(res => { if (this.waiting) return res(true); const t0 = Date.now(); const iv = setInterval(() => { if (this.waiting) { clearInterval(iv); res(true); } else if (Date.now() - t0 > ms) { clearInterval(iv); res(false); } }, 400); }); },
+    apply() { const w = this.waiting || (this.reg && this.reg.waiting); if (!w) { location.reload(); return; } wantReload = true; w.postMessage('skipWaiting'); setTimeout(() => { if (wantReload) location.reload(); }, 5000); }
+  };
   function offerUpdate(w) {
-    toast('✨ A new version is ready.', 'Update', () => { wantReload = true; w.postMessage('skipWaiting'); });
+    SW.waiting = w;
+    if (SW.cbs.length) SW.cbs.forEach(cb => { try { cb(); } catch (e) {} });
+    else toast('✨ A new version is ready.', 'Update', () => SW.apply());
   }
   if (WEB && 'serviceWorker' in navigator) {
     navigator.serviceWorker.addEventListener('controllerchange', () => { if (wantReload) { wantReload = false; location.reload(); } });
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('sw.js').then(reg => {
+        SW.reg = reg;
         if (reg.waiting && navigator.serviceWorker.controller) offerUpdate(reg.waiting);
         reg.addEventListener('updatefound', () => {
           const w = reg.installing; if (!w) return;

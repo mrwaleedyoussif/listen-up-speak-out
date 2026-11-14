@@ -35,14 +35,21 @@ jobs:
           echo "name=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
           echo "code=$((100 + GITHUB_RUN_NUMBER))" >> "$GITHUB_OUTPUT"
 
+  # The website goes live after the release, so version.json (which the apps check for updates)
+  # only announces a version whose app files are already on the Releases page.
   web:
+    needs: [version, release]
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v7
       - run: python3 tools/app/build_www.py
+      - run: python3 tools/app/release_info.py "v${{ needs.version.outputs.name }}"
       - uses: actions/configure-pages@v6
         continue-on-error: true
         with:
@@ -118,7 +125,9 @@ jobs:
           name: app-windows
           path: |
             dist/Listen-Up-Speak-Out-Setup-*.exe
+            dist/Listen-Up-Speak-Out-Setup-*.exe.blockmap
             dist/Listen-Up-Speak-Out-Portable-*.exe
+            dist/latest.yml
           retention-days: 30
 
   ios:

@@ -21,6 +21,7 @@ self.addEventListener('fetch', e => {
   if (r.method !== 'GET') return;
   const u = new URL(r.url);
   if (u.origin !== location.origin) return;
+  if (u.pathname.endsWith('/version.json')) return;   // always from the network: it says which version is newest
   if (u.pathname.endsWith('.mp3')) { e.respondWith(audio(r)); return; }
   e.respondWith(shell(r));
 });
