@@ -321,6 +321,23 @@ a.btn{text-decoration:none}
 .cert-sign img{width:96px;height:96px}
 .cert-foot{font-size:.8rem;color:var(--muted);margin:16px 0 0}
 @media (max-width:760px){.hero-in{flex-direction:column;align-items:flex-start}.byline{align-self:stretch}.by-ph{width:76px;height:76px}.about{flex-direction:column;text-align:center}.ab-seal{width:90px;height:90px}}
+/* v1.2: colour-coded lesson icons and pictures */
+.lrow .ic{width:50px;height:50px;border-radius:15px;position:relative;font-size:1.5rem;box-shadow:inset 0 -3px 0 rgba(0,0,0,.14),0 5px 12px rgba(20,30,60,.14)}
+.lrow .ic i{position:absolute;right:-7px;bottom:-7px;width:22px;height:22px;border-radius:50%;background:#fff;color:#1D2433;font:800 .78rem/22px var(--fh);font-style:normal;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.ic-l1{background:linear-gradient(135deg,#5AB0FF,#1F5FD6)!important}.ic-l2{background:linear-gradient(135deg,#3FE0C5,#0E8F80)!important}.ic-l3{background:linear-gradient(135deg,#B49CFF,#6A3BE0)!important}
+.ic-s1{background:linear-gradient(135deg,#FFB067,#EF6A1E)!important}.ic-s2{background:linear-gradient(135deg,#FF86A5,#DE2F5E)!important}.ic-ck{background:linear-gradient(135deg,#FFE066,#E8A200)!important}
+.lrow:has(.ic-l1):hover{border-color:#1F5FD6}.lrow:has(.ic-l2):hover{border-color:#0E8F80}.lrow:has(.ic-l3):hover{border-color:#6A3BE0}.lrow:has(.ic-s1):hover{border-color:#EF6A1E}.lrow:has(.ic-s2):hover{border-color:#DE2F5E}
+.gtile .em.gem{width:66px;height:66px;border-radius:20px;display:grid;place-items:center;font-size:2.1rem;box-shadow:inset 0 -4px 0 rgba(0,0,0,.14),0 6px 14px rgba(20,30,60,.15)}
+.gem-catch{background:linear-gradient(135deg,#4BE3A3,#0E9F6E)}.gem-who{background:linear-gradient(135deg,#CF9BFF,#8B3FE0)}.gem-lineup{background:linear-gradient(135deg,#FFCF4A,#E58A00)}
+.gem-shl{background:linear-gradient(135deg,#55CCFF,#0B7FC4)}.gem-shs{background:linear-gradient(135deg,#FF8AC8,#D12A80)}
+.kbadge{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:10px;margin-right:8px;vertical-align:middle;font-size:1rem;box-shadow:inset 0 -2px 0 rgba(0,0,0,.14)}
+img.pic{display:block;object-fit:contain;-webkit-user-drag:none;user-select:none}
+.vcard .em{min-height:96px;display:grid;place-items:center}.vcard .em img.pic{width:96px;height:96px;filter:drop-shadow(0 6px 8px rgba(20,30,60,.18));transition:transform .15s}
+.vcard:hover .em img.pic,.vcard.playing .em img.pic{transform:scale(1.08) rotate(-3deg)}
+.pick4 button .em img.pic{width:76px;height:76px;filter:drop-shadow(0 4px 6px rgba(20,30,60,.15))}
+.ucard .ue img.pic{width:42px;height:42px}
+.hpic img.pic{display:inline-block;width:1.25em;height:1.25em;vertical-align:-.22em;margin-right:.3em}
+.uh .ue img.pic{width:36px;height:36px}
 /* studio v1.1: phases, countdown, live voice meter, score card */
 .phase{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:12px 0 0}
 .phase span{padding:5px 12px;border-radius:99px;background:#EEF1F7;color:var(--muted);font-weight:800;font-size:.85rem}
@@ -351,6 +368,7 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 <body>
 <div id="app"><div class="wrap"><p style="padding:40px;text-align:center">Loading… If this message stays, make sure <b>data.js</b> is in the same folder as this page.</p></div></div>
 <script src="capacitor.js"></script>
+<script src="img/pics/index.js"></script>
 <script src="data.js"></script>
 <script src="audio/timings.js"></script>
 <script>
@@ -367,9 +385,13 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const pickN = (a, n) => shuffle(a).slice(0, n);
 const LET = ['a', 'b', 'c', 'd'];
+/* Pictures (Microsoft Fluent Emoji 3D, MIT licence) for vocabulary and units; the emoji is the fallback */
+const PICS = new Set(window.LSP_PICS || []);
+const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16)).filter(x => x !== 'fe0f').join('-');
+const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.1.0';
+const APP_VER = '1.2.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -753,7 +775,7 @@ VIEWS.home = m => {
       <p class="ar ar-block">الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة.</p></div>
     <img class="ab-seal" src="img/seal.svg" alt="Mr. Waleed Youssef seal" width="112" height="112">
   </section>
-  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}</p>`;
+  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   $$('[data-prof]', m).forEach(b => b.onclick = () => { Store.data.current = b.dataset.prof; Store.save(); render(); });
   $('#newP', m).onsubmit = e => {
@@ -774,7 +796,7 @@ VIEWS.grade = m => {
   <section class="grid g2" style="margin-top:16px">
     ${gr.units.map(u => { const ls = lessonList(u); const dn = ls.filter(x => (Store.get(x.L.id) || {}).done).length; const st = ls.reduce((a, x) => a + ((Store.get(x.L.id) || {}).stars || 0), 0); const ck = Store.get(u.id + 'check');
       return `<button class="card ucard" data-unit="${u.n}">
-        <div class="uh"><span class="ue">${u.emoji}</span><div><span class="pill">Unit ${u.n}</span><h3>${esc(u.title)}</h3><span class="ar">${esc(u.ar)}</span></div></div>
+        <div class="uh"><span class="ue">${pic(u.emoji)}</span><div><span class="pill">Unit ${u.n}</span><h3>${esc(u.title)}</h3><span class="ar">${esc(u.ar)}</span></div></div>
         <span class="muted" style="font-size:.9rem">${u.goals.map(esc).join(' · ')}</span>
         <span style="display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:.9rem"><span>${dn}/5 lessons · ★ ${st}</span><span>${ck ? '🏅 Check ' + Math.round(ck.best * 100) + '%' : ''}</span></span>
       </button>`; }).join('')}
@@ -787,20 +809,20 @@ VIEWS.unit = m => {
   const u = U(S.g, S.u);
   const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`]];
   const row = (x) => { const p = Store.get(x.L.id) || {}; const isL = x.kind === 'listen';
-    return `<button class="lrow ${p.done ? 'done' : ''}" data-les="${x.L.id}"><span class="ic">${isL ? '🎧' : '🗣️'}</span><span class="tx"><small>${isL ? 'Listening ' + x.L.n : 'Speaking ' + x.L.n} · ${esc(isL ? x.L.skill : x.L.func)}</small><b>${esc(x.L.title)}</b><span class="ar">${esc(isL ? x.L.skill_ar : x.L.func_ar)}</span></span>${starHTML(p.stars || 0)}</button>`; };
-  const gm = (k, em, t, d) => { const p = Store.get(u.id + k) || {}; return `<button class="gtile" data-game="${k}"><span class="em">${em}</span><b>${t}</b><span class="muted" style="font-size:.9rem">${d}</span>${starHTML(p.stars || 0)}</button>`; };
+    return `<button class="lrow ${p.done ? 'done' : ''}" data-les="${x.L.id}"><span class="ic ic-${isL ? 'l' : 's'}${x.L.n}">${isL ? '🎧' : '🗣️'}<i>${x.L.n}</i></span><span class="tx"><small>${isL ? 'Listening ' + x.L.n : 'Speaking ' + x.L.n} · ${esc(isL ? x.L.skill : x.L.func)}</small><b>${esc(x.L.title)}</b><span class="ar">${esc(isL ? x.L.skill_ar : x.L.func_ar)}</span></span>${starHTML(p.stars || 0)}</button>`; };
+  const gm = (k, em, t, d) => { const p = Store.get(u.id + k) || {}; return `<button class="gtile" data-game="${k}"><span class="em gem gem-${k}">${em}</span><b>${t}</b><span class="muted" style="font-size:.9rem">${d}</span>${starHTML(p.stars || 0)}</button>`; };
   const ck = Store.get(u.id + 'check') || {};
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead"><span class="k">Grade ${S.g} · Unit ${u.n}</span><h1>${u.emoji} ${esc(u.title)}</h1><span class="ar">${esc(u.ar)}</span>
+  <section class="lhead"><span class="k">Grade ${S.g} · Unit ${u.n}</span><h1><span class="hpic">${pic(u.emoji)}</span>${esc(u.title)}</h1><span class="ar">${esc(u.ar)}</span>
     <ul style="margin:.6rem 0 0;padding-left:20px">${u.goals.map(g => `<li>${esc(g)}</li>`).join('')}</ul></section>
   <div class="section-title"><h2>🎧 Listening</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'listen').map(row).join('')}</div>
   <div class="section-title"><h2>🗣️ Speaking</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'speak').map(row).join('')}</div>
   <div class="section-title"><h2>🎮 Games</h2></div>
   <div class="grid g3">${gm('catch', '🎯', 'Sound Catcher', 'Hear a word and catch the right picture.')}${gm('who', '🕵️', 'Who Said It?', 'Hear a sentence. Who said it?')}${gm('lineup', '🧩', 'Line Up', 'Listen and put the conversation in order.')}</div>
   <div class="section-title"><h2>🎙️ Shadowing</h2></div>
-  <div class="grid g3">${shTracks(S.g, u.n).map(t => `<button class="gtile" data-sh="${t.key}"><span class="em">${t.icon}</span><b>${esc(t.title)}</b><span class="muted" style="font-size:.9rem">${t.lines.length} lines · ⭐ ${t.lines.filter(l => shState(l.audio) === 'ms').length} mastered</span></button>`).join('')}</div>
+  <div class="grid g3">${shTracks(S.g, u.n).map(t => `<button class="gtile" data-sh="${t.key}"><span class="em gem gem-sh${t.key[0]}">${t.icon}</span><b>${esc(t.title)}</b><span class="muted" style="font-size:.9rem">${t.lines.length} lines · ⭐ ${t.lines.filter(l => shState(l.audio) === 'ms').length} mastered</span></button>`).join('')}</div>
   <div class="section-title"><h2>🏅 Unit Check</h2></div>
-  <button class="lrow" id="ucheck"><span class="ic">🏅</span><span class="tx"><small>10 listening questions · certificate at 70%</small><b>Unit ${u.n} Check</b></span>${ck.best != null ? `<b>${Math.round(ck.best * 100)}%</b>` : ''} ${starHTML(ck.stars || 0)}</button>`;
+  <button class="lrow" id="ucheck"><span class="ic ic-ck">🏅</span><span class="tx"><small>10 listening questions · certificate at 70%</small><b>Unit ${u.n} Check</b></span>${ck.best != null ? `<b>${Math.round(ck.best * 100)}%</b>` : ''} ${starHTML(ck.stars || 0)}</button>`;
   bindCrumbs(m, parts);
   $$('[data-les]', m).forEach(b => b.onclick = () => { const id = b.dataset.les; const L = [...u.listen, ...u.speak].find(x => x.id === id); go(L.kind === 'listen' ? 'listen' : 'speak', { g: S.g, u: S.u, id, step: 0 }); });
   $$('[data-game]', m).forEach(b => b.onclick = () => go('game', { g: S.g, u: S.u, game: b.dataset.game }));
@@ -813,7 +835,7 @@ function lessonShell(m, L, steps, title) {
   const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], [title]];
   S.seen = S.seen || {}; S.seen[S.step] = true;
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead"><span class="k">${L.kind === 'listen' ? '🎧 Listening ' + L.n : '🗣️ Speaking ' + L.n} · ${esc(L.kind === 'listen' ? L.skill : L.func)}</span><h1>${esc(L.title)}</h1><span class="ar">${esc(L.kind === 'listen' ? L.skill_ar : L.func_ar)}</span></section>
+  <section class="lhead"><span class="k"><span class="kbadge ic-${L.kind === 'listen' ? 'l' : 's'}${L.n}">${L.kind === 'listen' ? '🎧' : '🗣️'}</span>${L.kind === 'listen' ? 'Listening ' + L.n : 'Speaking ' + L.n} · ${esc(L.kind === 'listen' ? L.skill : L.func)}</span><h1>${esc(L.title)}</h1><span class="ar">${esc(L.kind === 'listen' ? L.skill_ar : L.func_ar)}</span></section>
   <nav class="steps noprint">${steps.map((s, i) => `<button class="${i === S.step ? 'cur' : ''} ${S.seen[i] && i !== S.step ? 'dn' : ''}" data-step="${i}">${i + 1}. ${esc(s)}</button>`).join('')}</nav>
   ${teacherCard(L)}
   <section class="panel" id="panel"></section>
@@ -837,7 +859,7 @@ VIEWS.listen = m => {
   };
   const lines = L.script;
   if (S.step === 0) {
-    P.innerHTML = instr(1, 'words') + `<div class="vgrid">${L.vocab.map((v, i) => `<button class="vcard" data-v="${i}"><span class="em">${v.emoji || '🔤'}</span><span class="w">${esc(v.w)}</span><span class="ar">${esc(v.ar)}</span><span class="ex">${esc(v.ex)}</span></button>`).join('')}</div>
+    P.innerHTML = instr(1, 'words') + `<div class="vgrid">${L.vocab.map((v, i) => `<button class="vcard" data-v="${i}"><span class="em">${pic(v.emoji)}</span><span class="w">${esc(v.w)}</span><span class="ar">${esc(v.ar)}</span><span class="ex">${esc(v.ex)}</span></button>`).join('')}</div>
       <div class="ctrls" style="margin-top:14px"><button class="btn sec" id="allV">🔁 Hear all words</button></div>`;
     $$('[data-v]', P).forEach(b => b.onclick = () => AU.one(clipOf(L.vocab[+b.dataset.v]), 1, b));
     $('#allV', P).onclick = () => { const cards = $$('[data-v]', P); AU.list(L.vocab.map(clipOf), { gap: 900, onLine: i => { cards.forEach(c => c.classList.remove('playing')); if (i >= 0) cards[i].classList.add('playing'); } }); };
@@ -1122,7 +1144,7 @@ VIEWS.game = m => {
     const isC = S.game === 'catch';
     const play = () => isC ? AU.one(clipOf(R.v)) : AU.one(clipOf(R.x));
     P.innerHTML = `<div class="player">${hud}<button class="bigplay" id="pp">🔊</button><b>${isC ? 'Which word do you hear?' : 'Who said this?'}</b>
-      <div class="pick4">${R.opts.map((o, j) => isC ? `<button data-o="${j}"><span class="em">${o.emoji || '🔤'}</span>${esc(o.w)}</button>` : `<button data-o="${j}"><span class="em">${avatar(o.sp, o.name)}</span>${esc(o.name)}</button>`).join('')}</div><p id="fb" style="min-height:1.6em;font-weight:800;text-align:center"></p></div>`;
+      <div class="pick4">${R.opts.map((o, j) => isC ? `<button data-o="${j}"><span class="em">${pic(o.emoji)}</span>${esc(o.w)}</button>` : `<button data-o="${j}"><span class="em">${avatar(o.sp, o.name)}</span>${esc(o.name)}</button>`).join('')}</div><p id="fb" style="min-height:1.6em;font-weight:800;text-align:center"></p></div>`;
     $('#pp', P).onclick = play; play();
     $$('[data-o]', P).forEach(b => b.onclick = () => {
       if (st.locked) return; st.locked = true; const o = R.opts[+b.dataset.o]; const ok = isC ? o.w === R.v.w : o.name === R.x.name;
@@ -1261,9 +1283,9 @@ const TM = window.LSP_TIMINGS || {};
 const SH_MODES = [
   { k: 'read', icon: '👂', name: 'Listen & Read', en: 'Listen and follow the words as they light up. Tap any word to hear it again.', ar: 'استمع وتابع الكلمات وهي تُضاء. اضغط على أي كلمة لتسمعها مرة أخرى.' },
   { k: 'echo', icon: '🔁', name: 'Echo', en: 'Listen first. After the 2-second countdown, say the line in the same way.', ar: 'استمع أولًا، وبعد العدّ التنازلي (ثانيتان) قل الجملة بالطريقة نفسها.' },
-  { k: 'shadow', icon: '🗣️', name: 'Shadow', en: 'Listen first. After the 2-second countdown, speak at the same time as the speaker.', ar: 'استمع أولًا، وبعد العدّ التنازلي تحدّث في الوقت نفسه مع المتحدث.' },
-  { k: 'blind', icon: '🙈', name: 'Blind Shadow', en: 'Listen first, then shadow without the text — use only your ears! The text appears after you finish.', ar: 'استمع أولًا ثم ظلّل دون النص معتمدًا على أذنيك فقط! يظهر النص بعد أن تنتهي.' },
-  { k: 'run', icon: '🎬', name: 'Full Run', en: 'Listen to the whole conversation, then shadow all the lines without stopping.', ar: 'استمع إلى المحادثة كاملة، ثم ظلّل جميع الجمل دون توقف.' }
+  { k: 'shadow', icon: '🗣️', name: 'Shadow', en: 'Listen first. After the 2-second countdown, say the line as the words light up at the speaker’s speed. Only your voice is recorded.', ar: 'استمع أولًا، وبعد العدّ التنازلي قل الجملة والكلمات تُضاء بسرعة المتحدث. يُسجَّل صوتك وحدك.' },
+  { k: 'blind', icon: '🙈', name: 'Blind Shadow', en: 'Listen first, then say the line from memory — no text and no sound; the hidden words light up one by one at the speaker’s speed. The text appears after you finish.', ar: 'استمع أولًا، ثم قل الجملة من الذاكرة دون نص ودون صوت؛ تُضاء الكلمات المخفية واحدة تلو الأخرى بسرعة المتحدث. يظهر النص بعد أن تنتهي.' },
+  { k: 'run', icon: '🎬', name: 'Full Run', en: 'Listen to the whole conversation, then say all the lines without stopping as the words light up. Only your voice is recorded.', ar: 'استمع إلى المحادثة كاملة، ثم قل جميع الجمل دون توقف والكلمات تُضاء. يُسجَّل صوتك وحدك.' }
 ];
 const VOICED_TH = /^(the|this|that|these|those|they|them|their|theirs|there|then|than|though|with|without|mother|father|brother|other|another|together|weather|clothes|gather|smooth|breathe|rather|either|neither)$/;
 
@@ -1475,12 +1497,12 @@ VIEWS.studio = m => {
     <p class="ar" style="color:#fff">التظليل يعني أن تستمع إلى الإنجليزية وتتحدث معها في الوقت نفسه، مقلّدًا الأصوات والإيقاع والنغمة. تدرّب قليلًا كل يوم.</p></section>
   <div class="hud" style="margin:14px 0"><span>⏱️ ${st.min} min</span><span>🗣️ ${st.lines} lines practised</span><span>⭐ ${st.mastered} mastered</span><span>🔥 ${st.streak}-day streak</span></div>
   <div class="card"><b>The 5 steps of shadowing</b><div class="grid g3" style="margin-top:10px">${SH_MODES.map((x, i) => `<div class="kag"><b>${i + 1}. ${x.icon} ${esc(x.name)}</b><br><span style="font-size:.92rem">${esc(x.en)}</span><span class="ar ar-block">${esc(x.ar)}</span></div>`).join('')}</div>
-    <p class="muted" style="margin:.8rem 0 0">🎧 Use headphones for steps 3–5, so the microphone hears only you.</p></div>
+    <p class="muted" style="margin:.8rem 0 0">🔇 In steps 3–5 no sound plays while you record — you hear the line first, then say it with the lighting-up words. <span dir="rtl" lang="ar">لا يُشغَّل أي صوت أثناء التسجيل في الخطوات 3–5.</span></p></div>
   <div class="section-title"><h2>Choose your grade</h2></div>
   <div class="seg" id="gsel">${D.grades.map(x => `<button data-g="${x.grade}" class="${x.grade === S.g ? 'on' : ''}">Grade ${x.grade}</button>`).join('')}</div>
   <div class="ctrls" style="justify-content:flex-start;margin-top:14px"><button class="btn" id="daily">⚡ Daily 5 — five lines for today</button></div>
   <div class="grid g2" style="margin-top:16px">${gr.units.map(u0 => { const tr = shTracks(S.g, u0.n); const all = tr.flatMap(t => t.lines); const ms = all.filter(l => shState(l.audio) === 'ms').length;
-    return `<div class="card"><div class="uh" style="display:flex;gap:10px;align-items:center"><span class="ue" style="width:46px;height:46px;border-radius:14px;background:var(--cl);display:grid;place-items:center;font-size:1.5rem">${u0.emoji}</span><div><span class="pill">Unit ${u0.n}</span><h3 style="font-size:1.1rem">${esc(u0.title)}</h3></div></div>
+    return `<div class="card"><div class="uh" style="display:flex;gap:10px;align-items:center"><span class="ue" style="width:46px;height:46px;border-radius:14px;background:var(--cl);display:grid;place-items:center;font-size:1.5rem">${pic(u0.emoji)}</span><div><span class="pill">Unit ${u0.n}</span><h3 style="font-size:1.1rem">${esc(u0.title)}</h3></div></div>
       <div class="lesson-list" style="margin-top:10px">${tr.map(t => { const d = t.lines.filter(l => shState(l.audio) === 'ms').length; return `<button class="lrow" data-tr="${u0.n}|${t.key}" style="padding:9px 12px"><span class="ic" style="width:34px;height:34px">${t.icon}</span><span class="tx"><b style="font-size:.95rem">${esc(t.title)}</b><small>${t.lines.length} lines · ⭐ ${d}</small></span></button>`; }).join('')}</div>
       <div class="muted" style="font-size:.85rem;margin-top:8px">⭐ ${ms}/${all.length} lines mastered</div></div>`; }).join('')}</div>`;
   bindCrumbs(m, [['Home', () => go('home')], ['Studio']]);
@@ -1506,7 +1528,6 @@ VIEWS.shadow = m => {
     <span class="seg" id="rt">${[0.7, 0.85, 1, 1.15].map(r => `<button data-r="${r}" class="${r === S.rate ? 'on' : ''}">${r === 1 ? 'Normal' : r + '×'}</button>`).join('')}</span>
     ${S.mode === 0 ? `<span class="seg" id="lp"><button data-l="1" class="${S.loop === 1 ? 'on' : ''}">Play once</button><button data-l="3" class="${S.loop === 3 ? 'on' : ''}">🔁 ×3</button></span>` : ''}
     ${people.length > 1 && S.src !== 'daily' ? `<select id="who" class="chip" aria-label="Lines to practise"><option value="">All lines</option>${people.map(([k, n]) => `<option value="${k}" ${S.who === k ? 'selected' : ''}>Only ${esc(n)}’s lines</option>`).join('')}</select>` : ''}
-    ${S.mode >= 2 ? `<label class="chip"><input type="checkbox" id="hp" ${set.hp ? 'checked' : ''}> 🎧 I’m using headphones</label>` : ''}
   </div>
   <div id="sbody"></div>
   <div class="dots" ${S.mode === 4 ? 'hidden' : ''}>${lines.map((x, i) => `<button class="dot ${shState(x.audio)} ${i === S.i ? 'cur' : ''}" data-i="${i}" title="Line ${i + 1}${(shData().lines[x.audio] || {}).best ? ' · best ' + shData().lines[x.audio].best + '%' : ''}">${i + 1}</button>`).join('')}</div>
@@ -1571,10 +1592,13 @@ VIEWS.shadow = m => {
         shTime(lineSec());
       } else {
         if (rec) await Mic.start();
-        recUI(msg, S.mode === 3 ? 'Shadow now — no text!' : 'Speak with the speaker!', S.mode === 3 ? 'ظلّل الآن دون نص!' : 'تحدّث مع المتحدث الآن!', rec, false);
+        recUI(msg, S.mode === 3 ? 'Say it from memory — at the speaker’s speed!' : 'Say the line as the words light up!', S.mode === 3 ? 'قلها من الذاكرة بسرعة المتحدث!' : 'قل الجملة والكلمات تُضاء!', rec, false);
         const R = recLoop(msg, lineSec() + 1.2, tok, false);
+        // the line runs silently: only the student's voice is recorded, the words light up at the speaker's pace
         let tPlay = performance.now(); AU.el.addEventListener('playing', () => { tPlay = performance.now(); }, { once: true });
-        const ok = await AU.one(clip, S.rate); await sleep(700); R.end();
+        AU.el.muted = !!rec; let ok;   // silent while the student records; class mode (no recording) keeps the sound
+        try { ok = await AU.one(clip, S.rate); await sleep(700); } finally { AU.el.muted = false; }
+        R.end();
         if (rec) { blob = await Mic.stop(); model = { words: mwRec((tPlay - Mic.t0) / 1000) }; }
         if (!ok || tok !== SHT.tok) return quit();
         shTime(lineSec());
@@ -1614,7 +1638,6 @@ function shFeedback(box, l, labels, mode, rec, rerender) {
     const total = Math.max(F.A ? F.A.dur : 0, mw[mw.length - 1][1] + 0.4);
     html += `${F.A && !J.silent ? rhythmSVG(mw, labels, F.A.segs, total) : ''}
       <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn sm sec" id="mine">▶ My voice</button><button class="btn sm sec" id="mod">🔊 Speaker</button>${md !== 'echo' ? '<button class="btn sm sec" id="both">🎧 Both together</button>' : ''}${SRec ? '<button class="btn sm sec" id="wcb">🎯 Word check (online)</button>' : ''}</div><div class="wc" id="wc"></div>
-      ${!Store.data.settings.hp && md !== 'echo' ? '<p class="honest">Without headphones, the microphone may also hear the speaker, so the start and speed can look better than they were.</p>' : ''}
       <p class="honest">The app measures start, speed, flow and loudness. It does not grade pronunciation: check your sounds below, and with your teacher.<span class="ar ar-block">يقيس التطبيق البداية والسرعة والانسياب وارتفاع الصوت، ولا يقيّم النطق؛ قيّم أصواتك بنفسك أدناه ومع معلمك.</span></p>`;
   } else html += `<p class="muted">No recording this time. Check yourself honestly below.</p>`;
   html += `<div style="margin-top:12px"><b>Check yourself:</b> <span class="ar">قيّم نفسك بصدق</span>
@@ -1661,11 +1684,13 @@ function shFullRun(B, lines, m) {
     setPhase(B, 2); if (!(await getReady(msg, tok))) return quit();
     // 3. shadow every line (recording)
     setPhase(B, 3); if (rec) await Mic.start();
-    recUI(msg, 'Shadow every line!', 'ظلّل كل الجمل!', rec, false);
+    recUI(msg, 'Say every line as the words light up!', 'قل كل الجمل والكلمات تُضاء!', rec, false);
     const R = recLoop(msg, lines.reduce((t, l) => t + secOf(l) + 0.5, 0.6), tok, false);
     const starts = []; const t0 = performance.now();
-    const ok = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: i => { mark(i); if (i >= 0) starts[i] = (performance.now() - (rec ? Mic.t0 : t0)) / 1000 + 0.05; } });
-    await sleep(600); R.end(); const blob = rec ? await Mic.stop() : null; mark(-1);
+    AU.el.muted = !!rec; let ok;   // silent while recording: only the student’s voice is recorded
+    try { ok = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: i => { mark(i); if (i >= 0) starts[i] = (performance.now() - (rec ? Mic.t0 : t0)) / 1000 + 0.05; } }); await sleep(600); }
+    finally { AU.el.muted = false; }
+    R.end(); const blob = rec ? await Mic.stop() : null; mark(-1);
     if (!ok || tok !== SHT.tok) return quit();
     beep(523, 160);
     // 4. result
