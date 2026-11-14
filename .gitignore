@@ -13,3 +13,5 @@ ios/App/build/
 ios/DerivedData/
 ios/App/Pods/
 www/.lsp-build
+__pycache__/
+*.pyc

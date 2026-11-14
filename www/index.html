@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Listen Up! Speak Out! — Elementary Listening & Speaking Program</title>
-<meta name="description" content="Listening and speaking program for Grades 3–6 (CEFR A1 → A2+): real audio, listening tasks, pronunciation games, shadowing and role-plays, with Arabic support.">
+<title>Listen Up! Speak Out! — by Mr. Waleed Youssef</title>
+<meta name="description" content="Listening and speaking program for Grades 3–6 (CEFR A1 → A2+): real audio, listening tasks, pronunciation games, shadowing and role-plays, with Arabic support. Designed by Mr. Waleed Youssef.">
 <meta name="theme-color" content="#2F7BEA">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
@@ -297,6 +297,54 @@ a.btn{text-decoration:none}
 .dlrow .st{font-weight:700;font-size:.88rem;color:var(--muted);min-width:110px}
 .dlrow .st.ok{color:#1F8A4C}
 .steps-ios{margin:.5rem 0 0;padding-left:20px}
+/* brand v1.1: logo, designer card, about, certificate */
+.brand svg{border-radius:10px}
+.hero-in{display:flex;gap:22px;align-items:center;justify-content:space-between;position:relative;z-index:1}
+.hero-tx{flex:1 1 auto;min-width:0}
+.hero-logo svg{width:1.15em;height:1.15em;vertical-align:-.2em;margin-right:.3em;filter:drop-shadow(0 4px 10px rgba(0,0,0,.18));border-radius:.28em}
+.byline{flex:none;display:flex;align-items:center;gap:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);border-radius:22px;padding:14px 18px 14px 14px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(20,25,60,.18)}
+.by-ph{width:96px;height:96px;border-radius:50%;object-fit:cover;background:#fff;border:4px solid #F2C14E;box-shadow:0 0 0 3px rgba(255,255,255,.9),0 8px 18px rgba(0,0,0,.2)}
+.by-tx{display:flex;flex-direction:column;line-height:1.25}
+.by-k{font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.by-tx b{font-family:var(--fh);font-size:1.35rem;font-weight:800}
+.by-t{font-size:.86rem;font-weight:700;opacity:.92}
+.by-ar{font-family:var(--fa);font-size:.88rem;margin-top:2px;opacity:.95}
+.about{display:flex;gap:20px;align-items:center;margin-top:16px;border-top:5px solid #1D3F9E}
+.ab-ph{width:128px;height:128px;border-radius:50%;object-fit:cover;flex:none;border:4px solid #F2C14E;box-shadow:0 0 0 3px #fff,0 8px 20px rgba(29,63,158,.22)}
+.ab-tx{flex:1;min-width:0}.ab-tx h3{font-size:1.45rem;margin:.1rem 0 .3rem;color:#1D3F9E}.ab-tx p{margin:.3rem 0}
+.ab-seal{width:112px;height:112px;flex:none}
+.cert-logo svg{width:84px;height:84px;border-radius:20px;box-shadow:0 8px 20px rgba(29,63,158,.25)}
+.cert-sign{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-top:26px}
+.cert-sign>div{display:flex;flex-direction:column;align-items:center;flex:1}
+.cert-sign .line{display:block;width:180px;max-width:100%;border-bottom:2px solid var(--ink2);margin-bottom:4px}
+.cert-sign .signame{font-family:var(--fh);font-weight:800;font-size:1.2rem;color:#1D3F9E;margin-bottom:2px}
+.cert-sign img{width:96px;height:96px}
+.cert-foot{font-size:.8rem;color:var(--muted);margin:16px 0 0}
+@media (max-width:760px){.hero-in{flex-direction:column;align-items:flex-start}.byline{align-self:stretch}.by-ph{width:76px;height:76px}.about{flex-direction:column;text-align:center}.ab-seal{width:90px;height:90px}}
+/* studio v1.1: phases, countdown, live voice meter, score card */
+.phase{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin:12px 0 0}
+.phase span{padding:5px 12px;border-radius:99px;background:#EEF1F7;color:var(--muted);font-weight:800;font-size:.85rem}
+.phase span.on{background:var(--c);color:#fff}
+.phase span.done{background:var(--cl);color:var(--cd)}
+.cdown{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--sun);color:#1D2433;font-family:var(--fh);font-size:2.2rem;font-weight:800;animation:cdp 1s ease-out infinite;vertical-align:middle;margin-right:10px}
+@keyframes cdp{0%{box-shadow:0 0 0 0 rgba(255,194,51,.75)}100%{box-shadow:0 0 0 20px rgba(255,194,51,0)}}
+.recdot{display:inline-block;width:16px;height:16px;border-radius:50%;background:var(--bad);margin-right:8px;vertical-align:-2px;animation:rp 1s infinite}
+@keyframes rp{50%{opacity:.25}}
+.recbox{display:flex;flex-direction:column;align-items:center;gap:8px}
+.recbar{width:min(420px,90%);height:10px;border-radius:99px;background:var(--line);overflow:hidden}.recbar i{display:block;height:100%;width:0;background:var(--bad)}
+.vu{display:flex;gap:3px;align-items:flex-end;height:30px}.vu i{width:7px;border-radius:3px;background:#D5DAE5;height:6px;transition:height .06s}.vu i.on{background:var(--ok)}
+.fbtop{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.fbstars{font-size:2.1rem;letter-spacing:2px;color:var(--sun);line-height:1}.fbstars .off{color:#D5DAE5}
+.fbscore{margin-left:auto;font-family:var(--fh);font-size:2.1rem;font-weight:800;color:var(--cd)}
+.crit{display:grid;gap:8px;margin:12px 0}
+.crow{display:grid;grid-template-columns:34px 110px 1fr;gap:8px;align-items:center;padding:8px 12px;border-radius:12px;background:#F5F7FC}
+.crow .ci{font-size:1.3rem;text-align:center}.crow b{font-family:var(--fh)}
+.crow.g2{background:var(--ok-l)}.crow.g1{background:#FFF6DE}.crow.g0{background:var(--bad-l)}
+.crow .cd{font-size:.95rem}
+.sbars{display:grid;gap:4px;margin-top:5px;max-width:360px}.sbars span{display:block;height:9px;border-radius:99px}
+.tipbox{background:#F1ECFF;border-radius:14px;padding:10px 14px;margin:8px 0;font-weight:700;color:#3B2A8F}
+.honest{font-size:.82rem;color:var(--muted);margin:.5rem 0 0}
+@media (max-width:640px){.crow{grid-template-columns:30px 1fr}.crow .cd{grid-column:1/-1}.fbscore{font-size:1.7rem}}
 textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px solid var(--line);border-radius:12px;padding:10px}
 </style>
 </head>
@@ -321,7 +369,7 @@ const pickN = (a, n) => shuffle(a).slice(0, n);
 const LET = ['a', 'b', 'c', 'd'];
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.0.0';
+const APP_VER = '1.1.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -341,7 +389,7 @@ const BANDS = {
   6: { name: 'Summit', c: '#6A4CE0', l: '#ECE7FF', d: '#4630A8', em: '🏔️', grad: 'linear-gradient(135deg,#8E72FF,#6A4CE0)' }
 };
 const SPC = { NARRATOR:'#64748B', SAMI:'#2F7BEA', NOOR:'#E2558C', BEN:'#F08A24', ADAM:'#16A34A', LINA:'#A855F7', YUSUF:'#0EA5E9', MR_HASSAN:'#334155', MS_GREEN:'#059669', MOM:'#DB2777', DAD:'#1D4ED8', GRANDPA:'#92400E', MAN:'#475569', WOMAN:'#9333EA', ANNOUNCER:'#B45309' };
-const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="18" fill="#2F7BEA"/><path d="M14 22a8 8 0 0 1 8-8h20a8 8 0 0 1 8 8v12a8 8 0 0 1-8 8H30l-9 8v-8h1a8 8 0 0 1-8-8z" fill="#fff"/><g fill="#FF6B4A"><rect x="23" y="24" width="3.5" height="8" rx="1.7"/><rect x="29" y="20" width="3.5" height="16" rx="1.7"/><rect x="35" y="23" width="3.5" height="10" rx="1.7"/><rect x="41" y="26" width="3.5" height="4" rx="1.7"/></g><circle cx="50" cy="14" r="6" fill="#FFC233"/></svg>`;
+const LOGO = `<svg viewBox="0 0 512 512" aria-hidden="true"> <defs> <linearGradient id="lgbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3D8BFF"/><stop offset="1" stop-color="#1D3F9E"/></linearGradient> <linearGradient id="lggold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD25E"/><stop offset="1" stop-color="#F5A623"/></linearGradient> <linearGradient id="lgcoral" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF8566"/><stop offset="1" stop-color="#EE5233"/></linearGradient> </defs> <rect x="16" y="16" width="480" height="480" rx="120" fill="url(#lgbg)"/> <circle cx="400" cy="104" r="120" fill="#fff" opacity=".07"/> <g transform="translate(-26 -22)"> <path d="M136 282 A120 120 0 0 1 376 270" fill="none" stroke="#fff" stroke-width="30" stroke-linecap="round"/> <rect x="98" y="258" width="78" height="132" rx="34" fill="url(#lgcoral)"/> <rect x="116" y="278" width="20" height="92" rx="10" fill="#fff" opacity=".35"/> <path d="M330 232 h96 a40 40 0 0 1 40 40 v58 a40 40 0 0 1 -40 40 h-50 l-50 40 l12 -40 h-8 a40 40 0 0 1 -40 -40 v-58 a40 40 0 0 1 40 -40 z" fill="url(#lggold)"/> <g fill="#1D3F9E"> <rect x="322" y="282" width="16" height="38" rx="8"/> <rect x="352" y="266" width="16" height="70" rx="8"/> <rect x="382" y="276" width="16" height="50" rx="8"/> <rect x="412" y="290" width="16" height="22" rx="8"/> </g> </g> </svg>`;
 
 /* ---------- Instructions (English + Arabic) ---------- */
 const T = {
@@ -416,6 +464,7 @@ const AU = {
   el: new Audio(), token: 0, rate: 1,
   stop() {
     this.token++;
+    const pd = this.pend; this.pend = null; if (pd) pd();
     try { this.el.pause(); } catch (e) {}
     try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {}
     $$('.playing').forEach(x => x.classList.remove('playing'));
@@ -433,7 +482,7 @@ const AU = {
   spr(sp, c, rate) {
     return new Promise(res => {
       const el = this.el, tok = this.token; let done = false, tm = null;
-      const fin = v => { if (!done) { done = true; if (tm) clearTimeout(tm); res(v); } };
+      const fin = v => { if (!done) { done = true; if (tm) clearTimeout(tm); if (this.pend === stopIt) this.pend = null; res(v); } }; const stopIt = () => fin(false); this.pend = stopIt;
       const fall = () => { if (!done) this.tts(c.text, rate).then(fin); };
       const go2 = () => {
         try { el.currentTime = sp[1]; } catch (e) {}
@@ -449,7 +498,7 @@ const AU = {
   clip(c, rate) {
     const SPR = window.LSP_SPRITES; if (SPR && SPR[c.src]) return this.spr(SPR[c.src], c, rate);
     return new Promise(res => {
-      const el = this.el; let done = false, fell = false; const fin = v => { if (!done) { done = true; res(v); } };
+      const el = this.el; let done = false, fell = false; const fin = v => { if (!done) { done = true; if (this.pend === stopIt) this.pend = null; res(v); } }; const stopIt = () => fin(false); this.pend = stopIt;
       const fall = () => { if (fell || done) return; fell = true; this.tts(c.text, rate).then(fin); };
       el.onended = () => fin(true);
       el.onerror = fall;
@@ -575,7 +624,7 @@ function modal(html, onOk, okLabel) {
 const S = { view: 'home' };
 function go(view, p = {}) {
   const prev = S.view;
-  AU.stop(); stopAllRec(); if (view !== 'shadow') { try { Mic.close(); } catch (e) {} }
+  SHT.tok++; AU.stop(); stopAllRec(); if (view !== 'shadow') { try { Mic.close(); } catch (e) {} }
   if (view === 'shadow' && prev === 'studio' && !p.upTo) p = Object.assign({}, p, { upTo: 'studio' });
   for (const k of Object.keys(S)) delete S[k];
   Object.assign(S, { view }, p);
@@ -623,7 +672,7 @@ function render() {
   const me = Store.me();
   $('#app').innerHTML = `
   <header class="top"><div class="in">
-    <button class="brand" data-go="home" aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>Listening & Speaking · Grades 3–6</small></span></button>
+    <button class="brand" data-go="home" aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>by Mr. Waleed Youssef · Grades 3–6</small></span></button>
     <span class="sp"></span>
     ${g ? `<button class="chip ${arOn(g) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     <button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>
@@ -657,10 +706,14 @@ VIEWS.home = m => {
   m.innerHTML = `
   <section class="hero">
     <svg class="bubbles" viewBox="0 0 200 200"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="150" cy="110" r="40" fill="#fff"/><circle cx="90" cy="160" r="26" fill="#fff"/></svg>
+    <div class="hero-in"><div class="hero-tx">
     <span class="pill" style="background:rgba(255,255,255,.22);color:#fff">Elementary · Grades 3–6 · CEFR A1 → A2+</span>
-    <h1 style="margin-top:10px">Listen Up! Speak Out!</h1>
+    <h1 style="margin-top:10px"><span class="hero-logo">${LOGO}</span>Listen Up! Speak Out!</h1>
     <p>A complete listening and speaking program: real audio, smart listening tasks, pronunciation games, shadowing and role-plays — with Arabic support.</p>
     <p class="ar" style="color:#fff;text-align:left;direction:rtl">برنامج متكامل لتنمية مهارتي الاستماع والتحدث للمرحلة الابتدائية</p>
+    </div>
+    <div class="byline"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="96" height="96"><div class="by-tx"><span class="by-k">Designed by</span><b>Mr. Waleed Youssef</b><span class="by-t">English Teacher & Curriculum Designer</span><span class="by-ar" lang="ar" dir="rtl">تصميم وإعداد: أ. وليد يوسف</span></div></div>
+    </div>
   </section>
   <section class="card" style="margin-top:16px">
     <h2 style="font-size:1.35rem">Who is learning today?</h2>
@@ -693,7 +746,14 @@ VIEWS.home = m => {
     <span class="ar ar-block">استوديو التظليل: استمع وتحدّث مع المتحدث في الوقت نفسه، مع تسجيل صوتك وتغذية راجعة.</span></span>
     <span class="hud"><span>⏱️ ${shStats().min} min</span><span>⭐ ${shStats().mastered}</span><span>🔥 ${shStats().streak}</span></span></button>
   <div id="appBox"></div>
-  <p class="foot">Listen Up! Speak Out! · Designed for Mr. Waleed Yussuf · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}</p>`;
+  <section class="card about">
+    <img class="ab-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="128" height="128">
+    <div class="ab-tx"><span class="by-k" style="color:var(--muted)">About the designer</span><h3>Mr. Waleed Youssef</h3>
+      <p>Mr. Waleed Youssef is an English language teacher, a trainer of STEP and IELTS candidates, and a curriculum and materials designer. He created <b>Listen Up! Speak Out!</b> so that young learners listen with confidence and speak with joy.</p>
+      <p class="ar ar-block">الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة.</p></div>
+    <img class="ab-seal" src="img/seal.svg" alt="Mr. Waleed Youssef seal" width="112" height="112">
+  </section>
+  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}</p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   $$('[data-prof]', m).forEach(b => b.onclick = () => { Store.data.current = b.dataset.prof; Store.save(); render(); });
   $('#newP', m).onsubmit = e => {
@@ -1125,10 +1185,11 @@ VIEWS.check = m => {
 
 VIEWS.cert = m => {
   const u = U(S.g, S.u), me = Store.me(), b = BANDS[S.g];
-  m.innerHTML = `<div class="cert"><div style="font-size:3rem">🏅</div><h1>Certificate of Achievement</h1><p>This certificate is proudly presented to</p><div class="nm">${esc(me.name)}</div>
+  m.innerHTML = `<div class="cert"><div class="cert-logo">${LOGO}</div><h1>Certificate of Achievement</h1><p>This certificate is proudly presented to</p><div class="nm">${esc(me.name)}</div>
     <p>for successfully completing<br><b style="font-size:1.25rem">Grade ${S.g} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>Listen Up! Speak Out!</b> (${esc(b.name)} Level, CEFR ${esc(G(S.g).level)})</p>
     <p style="font-size:1.3rem;font-weight:800;color:var(--ok)">Unit Check score: ${S.pct}%</p><p class="muted">${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}${me.cls ? ' · Class ' + esc(me.cls) : ''}</p>
-    <p style="margin-top:26px">______________________<br><span class="muted">Teacher</span></p></div>
+    <div class="cert-sign"><div><span class="line"></span><span class="muted">Teacher</span></div><img src="img/seal.svg" alt="Seal of Mr. Waleed Youssef" width="96" height="96"><div><span class="signame">Mr. Waleed Youssef</span><span class="line"></span><span class="muted">Program Designer</span></div></div>
+    <p class="cert-foot">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef</p></div>
     <div class="ctrls noprint"><button class="btn" id="pr">🖨️ Print</button><button class="btn sec" id="bk">Back to unit</button></div>`;
   $('#pr', m).onclick = () => { try { window.print(); } catch (e) {} };
   $('#bk', m).onclick = () => go('unit', { g: S.g, u: S.u });
@@ -1199,10 +1260,10 @@ VIEWS.teacher = m => {
 const TM = window.LSP_TIMINGS || {};
 const SH_MODES = [
   { k: 'read', icon: '👂', name: 'Listen & Read', en: 'Listen and follow the words as they light up. Tap any word to hear it again.', ar: 'استمع وتابع الكلمات وهي تُضاء. اضغط على أي كلمة لتسمعها مرة أخرى.' },
-  { k: 'echo', icon: '🔁', name: 'Echo', en: 'Listen to the whole line. After the beep, say it in the same way.', ar: 'استمع إلى الجملة كاملة، وبعد الصافرة قلها بالطريقة نفسها.' },
-  { k: 'shadow', icon: '🗣️', name: 'Shadow', en: 'Speak at the same time as the speaker. Follow the words as they light up.', ar: 'تحدّث في الوقت نفسه مع المتحدث، وتابع الكلمات المضاءة.' },
-  { k: 'blind', icon: '🙈', name: 'Blind Shadow', en: 'Shadow without the text — use only your ears! The text appears after you finish.', ar: 'ظلّل دون النص واعتمد على أذنيك فقط! يظهر النص بعد أن تنتهي.' },
-  { k: 'run', icon: '🎬', name: 'Full Run', en: 'Shadow all the lines without stopping, like a real conversation.', ar: 'ظلّل جميع الجمل دون توقف، كأنها محادثة حقيقية.' }
+  { k: 'echo', icon: '🔁', name: 'Echo', en: 'Listen first. After the 2-second countdown, say the line in the same way.', ar: 'استمع أولًا، وبعد العدّ التنازلي (ثانيتان) قل الجملة بالطريقة نفسها.' },
+  { k: 'shadow', icon: '🗣️', name: 'Shadow', en: 'Listen first. After the 2-second countdown, speak at the same time as the speaker.', ar: 'استمع أولًا، وبعد العدّ التنازلي تحدّث في الوقت نفسه مع المتحدث.' },
+  { k: 'blind', icon: '🙈', name: 'Blind Shadow', en: 'Listen first, then shadow without the text — use only your ears! The text appears after you finish.', ar: 'استمع أولًا ثم ظلّل دون النص معتمدًا على أذنيك فقط! يظهر النص بعد أن تنتهي.' },
+  { k: 'run', icon: '🎬', name: 'Full Run', en: 'Listen to the whole conversation, then shadow all the lines without stopping.', ar: 'استمع إلى المحادثة كاملة، ثم ظلّل جميع الجمل دون توقف.' }
 ];
 const VOICED_TH = /^(the|this|that|these|those|they|them|their|theirs|there|then|than|though|with|without|mother|father|brother|other|another|together|weather|clothes|gather|smooth|breathe|rather|either|neither)$/;
 
@@ -1242,12 +1303,24 @@ function beep(f = 880, ms = 140) {
   try { const o = c.createOscillator(), g = c.createGain(); o.frequency.value = f; g.gain.value = 0.18; o.connect(g); g.connect(c.destination); o.start(); g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + ms / 1000); o.stop(c.currentTime + ms / 1000 + 0.03); } catch (e) {}
   return sleep(ms);
 }
+/* Keep the sound output awake: many speakers, Bluetooth links and phones need a moment to wake up,
+   which cuts the first sound of a clip. A silent tone (-100 dB) keeps the output open while the app is visible. */
+const Warm = {
+  on: false,
+  start() {
+    const c = actx(); if (!c || this.on) return;
+    try { const o = c.createOscillator(), g = c.createGain(); o.frequency.value = 40; g.gain.value = 0.00001; o.connect(g); g.connect(c.destination); o.start(); this.on = true; } catch (e) {}
+  }
+};
+document.addEventListener('pointerdown', () => Warm.start(), { capture: true });
+document.addEventListener('keydown', () => Warm.start(), { capture: true });
+document.addEventListener('visibilitychange', () => { if (!ACX) return; try { document.hidden ? ACX.suspend() : ACX.resume(); } catch (e) {} });
 AU.range = function (c, a, b, rate) {
   this.stop(); const tok = this.token, el = this.el, SPR = window.LSP_SPRITES, sp = SPR && SPR[c.src];
   const base = sp ? sp[1] : 0, url = sp ? sp[0] : 'audio/' + c.src;
   this.cur = c.src; this.base = base; el.onerror = null; el.onended = null;
   return new Promise(res => {
-    const go2 = () => { try { el.currentTime = base + Math.max(0, a - 0.03); } catch (e) {} el.playbackRate = rate || 1; const p = el.play(); if (p && p.catch) p.catch(() => {}); setTimeout(() => { if (tok === this.token) el.pause(); res(); }, (b - a + 0.08) / (rate || 1) * 1000); };
+    const go2 = () => { try { el.currentTime = base + Math.max(0, a - 0.08); } catch (e) {} el.playbackRate = rate || 1; const p = el.play(); if (p && p.catch) p.catch(() => {}); setTimeout(() => { if (tok === this.token) el.pause(); res(); }, (b - a + 0.16) / (rate || 1) * 1000); };
     if (!el.src || !el.src.endsWith(url)) { el.onloadedmetadata = () => { el.onloadedmetadata = null; go2(); }; el.src = url; el.load(); } else go2();
   });
 };
@@ -1276,8 +1349,48 @@ const Mic = {
   },
   start() { return new Promise(res => { this.chunks = []; this.mr = new MediaRecorder(this.stream); this.mr.ondataavailable = e => { if (e.data && e.data.size) this.chunks.push(e.data); }; this.mr.onstart = () => { this.t0 = performance.now(); res(); }; this.mr.start(); }); },
   stop() { return new Promise(res => { if (!this.mr || this.mr.state === 'inactive') return res(null); this.mr.onstop = () => res(new Blob(this.chunks, { type: this.mr.mimeType || 'audio/webm' })); this.mr.stop(); }); },
-  close() { try { if (this.mr && this.mr.state !== 'inactive') this.mr.stop(); } catch (e) {} try { this.stream && this.stream.getTracks().forEach(t => t.stop()); } catch (e) {} this.stream = null; }
+  close() { try { if (this.mr && this.mr.state !== 'inactive') this.mr.stop(); } catch (e) {} try { this.stream && this.stream.getTracks().forEach(t => t.stop()); } catch (e) {} this.stream = null; },
+  level() {   // loudness of the microphone right now (0 … about 0.3)
+    const c = actx(); if (!c || !this.stream) return 0;
+    try {
+      if (this.anS !== this.stream) { this.an = c.createAnalyser(); this.an.fftSize = 1024; c.createMediaStreamSource(this.stream).connect(this.an); this.anS = this.stream; this.buf = new Uint8Array(this.an.fftSize); }
+      this.an.getByteTimeDomainData(this.buf); let s = 0; for (let i = 0; i < this.buf.length; i++) { const v = (this.buf[i] - 128) / 128; s += v * v; } return Math.sqrt(s / this.buf.length);
+    } catch (e) { return 0; }
+  }
 };
+/* --- the recording routine: listen first -> 2-second get ready -> speak --- */
+const SHT = { tok: 0 };
+const PHASES = `<div class="phase" id="ph">${[['👂', 'Listen', 'استمع'], ['⏳', 'Get ready', 'استعد'], ['🎤', 'Speak', 'تحدّث'], ['📊', 'Result', 'النتيجة']].map((x, i) => `<span data-p="${i + 1}" title="${x[2]}">${i + 1} ${x[0]} ${x[1]}</span>`).join('')}</div>`;
+function setPhase(B, n) { $$('#ph [data-p]', B).forEach(x => { const k = +x.dataset.p; x.classList.toggle('on', k === n); x.classList.toggle('done', k < n); }); }
+async function getReady(msg, tok) {
+  for (const n of [2, 1]) {
+    if (tok !== SHT.tok) return false;
+    msg.innerHTML = `<span class="cdown">${n}</span><b>Get ready…</b> <span class="ar">استعد…</span>`;
+    beep(660, 130); await sleep(1000);
+  }
+  if (tok !== SHT.tok) return false;
+  msg.innerHTML = '<b>🎤 Go!</b> <span class="ar">ابدأ!</span>';
+  await beep(1047, 260);
+  return tok === SHT.tok;
+}
+function recUI(msg, en, ar, rec, done) {
+  msg.innerHTML = `<div class="recbox"><div>${rec ? '<span class="recdot"></span>' : '🗣️ '}<b>${en}</b> <span class="ar">${ar}</span></div>${rec ? `<div class="vu" aria-hidden="true">${'<i></i>'.repeat(14)}</div>` : ''}<div class="recbar"><i></i></div>${done ? '<button class="btn sm ok rdone">✓ Done</button>' : ''}</div>`;
+}
+function recLoop(msg, sec, tok, auto) {   // progress bar + voice meter; with auto, stops when the student has finished speaking
+  let fin = false, iv = 0, end = () => {};
+  const done = new Promise(r => { end = () => { if (!fin) { fin = true; clearInterval(iv); r(); } }; });
+  const t0 = performance.now(), vu = $$('.vu i', msg), bar = $('.recbar i', msg), dn = $('.rdone', msg); let heard = false, q0 = 0;
+  if (dn) dn.onclick = () => end();
+  iv = setInterval(() => {
+    if (tok !== SHT.tok) return end();
+    const el = (performance.now() - t0) / 1000; if (bar) bar.style.width = Math.min(100, 100 * el / sec) + '%';
+    const lv = Mic.level(), n = Math.min(vu.length, Math.round(Math.min(1, lv / 0.15) * vu.length));
+    vu.forEach((v, i) => { const on = i < n; v.classList.toggle('on', on); v.style.height = (on ? 8 + 20 * (i + 1) / vu.length : 6) + 'px'; });
+    if (auto) { if (lv > 0.025) { heard = true; q0 = 0; } else if (heard) { if (!q0) q0 = performance.now(); else if (performance.now() - q0 > 1300 && el > 1.2) end(); } }
+    if (el >= sec) end();
+  }, 60);
+  return { done, end: () => end() };
+}
 async function analyse(blob) {
   const c = actx(); if (!c || !blob) return null;
   try {
@@ -1290,32 +1403,42 @@ async function analyse(blob) {
     return { segs: m.filter(g => g[1] - g[0] >= 0.08), dur: x.length / sr, peak };
   } catch (e) { return null; }
 }
+const CRIT_AR = { start: 'البداية', speed: 'السرعة', flow: 'الانسياب', voice: 'الصوت' };
 function judge(A, model, mode) {
-  // model.words: [[start,end]...] on the recording's time line; model.turn: echo turn start
-  if (!A) return { items: [{ ok: null, t: 'Your recording is saved, but this browser cannot measure it. Listen and compare.' }] };
-  if (!A.segs.length || A.peak < 0.01) return { items: [{ ok: false, t: 'We could not hear you. Check the microphone and speak a little louder.' }] };
-  const mw = model.words, m0 = mw[0][0], m1 = mw[mw.length - 1][1], s0 = A.segs[0][0], s1 = A.segs[A.segs.length - 1][1], items = [];
+  if (!A) return { na: true };
+  if (!A.segs.length || A.peak < 0.01) return { silent: true };
+  const mw = model.words, m0 = mw[0][0], m1 = mw[mw.length - 1][1], s0 = A.segs[0][0], s1 = A.segs[A.segs.length - 1][1], rows = [];
+  const row = (k, g, title, d, en, ar, x) => rows.push(Object.assign({ k, g, title, d, en, ar }, x || {}));
   if (mode === 'echo') {
-    const lag = s0 - model.turn;
-    items.push(lag <= 1.2 ? { ok: true, t: 'You started soon after the beep. ✓' } : { ok: false, t: `You waited ${lag.toFixed(1)} s after the beep. Try to start sooner.` });
+    const lag = Math.max(0, s0 - (model.turn || 0));
+    if (lag <= 1) row('start', 2, 'Start', `You started ${lag.toFixed(1)} s after the go sound.`);
+    else row('start', lag <= 2 ? 1 : 0, 'Start', `You waited ${lag.toFixed(1)} s after the go sound.`, 'Start speaking right after the go sound.', 'ابدأ الكلام مباشرة بعد صوت البدء.');
   } else {
     const lag = s0 - m0;
-    items.push(Math.abs(lag) <= 0.45 ? { ok: true, t: 'You started on time with the speaker. ✓' } : lag > 0 ? { ok: false, t: `You started ${lag.toFixed(1)} s late. Start with the first word.` } : { ok: false, t: 'You started before the speaker. Wait for the first word.' });
+    if (Math.abs(lag) <= 0.4) row('start', 2, 'Start', 'You started together with the speaker.');
+    else if (lag < 0) row('start', lag < -0.9 ? 0 : 1, 'Start', `You started ${(-lag).toFixed(1)} s before the speaker.`, 'Wait for the speaker’s first word, then go together.', 'انتظر أول كلمة من المتحدث ثم انطلقا معًا.');
+    else row('start', lag <= 0.9 ? 1 : 0, 'Start', `You started ${lag.toFixed(1)} s after the speaker.`, 'Start with the speaker’s first word.', 'ابدأ مع أول كلمة يقولها المتحدث.');
   }
-  const ratio = (s1 - s0) / Math.max(0.3, m1 - m0);
-  items.push(ratio >= 0.8 && ratio <= 1.25 ? { ok: true, t: 'Your speed was close to the speaker’s. ✓' } : ratio > 1.25 ? { ok: false, t: `You took ${Math.round(ratio * 100)}% of the speaker’s time. Try to keep up.` } : { ok: false, t: 'You finished much faster. Did you say every word?' });
-  const longGaps = (arr, min) => arr.slice(1).filter((g, i) => g[0] - arr[i][1] > min).length;
-  const extra = Math.max(0, longGaps(A.segs, 0.5) - longGaps(mw, 0.35));
-  items.push(extra === 0 ? { ok: true, t: 'No extra pauses — your voice kept flowing. ✓' } : { ok: false, t: `${extra} extra pause${extra > 1 ? 's' : ''} in the middle. Keep the words joined.` });
-  if (A.peak < 0.05) items.push({ ok: false, t: 'Your voice was quiet. Speak a little louder.' });
-  return { items, s0, s1 };
+  const you = s1 - s0, sp = Math.max(0.3, m1 - m0), r = you / sp, sx = { you, sp };
+  const sd = `Speaker ${sp.toFixed(1)} s · You ${you.toFixed(1)} s`;
+  if (r >= 0.8 && r <= 1.25) row('speed', 2, 'Speed', sd + ' — the same speed.', '', '', sx);
+  else if (r > 1.25) row('speed', r <= 1.5 ? 1 : 0, 'Speed', sd + ' — slower.', 'You were slower than the speaker. Keep up with the words.', 'كنت أبطأ من المتحدث، حاول أن تجاريه في الكلمات.', sx);
+  else row('speed', r >= 0.65 ? 1 : 0, 'Speed', sd + ' — faster.', 'You finished too fast. Did you say every word? Say them all clearly.', 'أنهيت بسرعة كبيرة؛ هل قلت كل الكلمات؟ قلها كلها بوضوح.', sx);
+  const gaps = (arr, min) => arr.slice(1).filter((g, i) => g[0] - arr[i][1] > min).length;
+  const extra = Math.max(0, gaps(A.segs, 0.5) - gaps(mw, 0.35));
+  if (!extra) row('flow', 2, 'Flow', 'No extra stops — your words kept flowing.');
+  else row('flow', extra === 1 ? 1 : 0, 'Flow', `${extra} extra stop${extra > 1 ? 's' : ''} in the middle of the line.`, 'Join the words together — don’t stop in the middle.', 'صِل الكلمات ببعضها ولا تتوقف في منتصف الجملة.');
+  if (A.peak >= 0.05) row('voice', 2, 'Voice', 'Loud and clear enough.');
+  else row('voice', A.peak >= 0.02 ? 1 : 0, 'Voice', 'Your voice was quiet.', 'Speak louder and hold the device closer to you.', 'تحدّث بصوت أعلى وقرّب الجهاز منك.');
+  const score = Math.round(100 * rows.reduce((t, x) => t + x.g, 0) / (rows.length * 2));
+  return { rows, score, stars: score >= 85 ? 3 : score >= 60 ? 2 : 1, top: rows.find(x => x.g === 0) || rows.find(x => x.g === 1) || null, s0, s1 };
 }
 function rhythmSVG(mw, labels, segs, total) {
   const W = 600, sx = t => 6 + Math.max(0, t) / total * (W - 12);
   const mr = mw.map((w, i) => { const x = sx(w[0]), wd = Math.max(3, sx(w[1]) - x); const lab = wd > 34 ? `<text x="${x + 3}" y="21" font-size="11" fill="#fff">${esc(labels[i] || '')}</text>` : ''; return `<rect x="${x}" y="6" width="${wd}" height="22" rx="5" fill="var(--c)"/>${lab}`; }).join('');
   const yr = (segs || []).map(g => `<rect x="${sx(g[0])}" y="40" width="${Math.max(3, sx(g[1]) - sx(g[0]))}" height="22" rx="5" fill="var(--coral)"/>`).join('');
   return `<svg viewBox="0 0 ${W} 68" class="rhythm" role="img" aria-label="Timing picture"><rect x="0" y="0" width="${W}" height="68" rx="10" fill="#F5F7FC"/>${mr}${yr}</svg>
-    <div class="rl"><span><i style="background:var(--c)"></i>Speaker</span><span><i style="background:var(--coral)"></i>You</span><span class="muted">This picture shows timing and pauses, not pronunciation.</span></div>`;
+    <div class="rl"><span><i style="background:var(--c)"></i>Speaker’s words (top)</span><span><i style="background:var(--coral)"></i>Your voice (bottom)</span><span class="muted">Try to make the two rows match.</span></div>`;
 }
 
 /* --- progress --- */
@@ -1386,15 +1509,15 @@ VIEWS.shadow = m => {
     ${S.mode >= 2 ? `<label class="chip"><input type="checkbox" id="hp" ${set.hp ? 'checked' : ''}> 🎧 I’m using headphones</label>` : ''}
   </div>
   <div id="sbody"></div>
-  <div class="dots" ${S.mode === 4 ? 'hidden' : ''}>${lines.map((x, i) => `<button class="dot ${shState(x.audio)} ${i === S.i ? 'cur' : ''}" data-i="${i}" title="Line ${i + 1}">${i + 1}</button>`).join('')}</div>
+  <div class="dots" ${S.mode === 4 ? 'hidden' : ''}>${lines.map((x, i) => `<button class="dot ${shState(x.audio)} ${i === S.i ? 'cur' : ''}" data-i="${i}" title="Line ${i + 1}${(shData().lines[x.audio] || {}).best ? ' · best ' + shData().lines[x.audio].best + '%' : ''}">${i + 1}</button>`).join('')}</div>
   <p class="muted" style="font-size:.85rem;text-align:center">⚪ new · 🔵 practised · ⭐ mastered (good self-check in Shadow, Blind or Full Run)</p>`;
   bindCrumbs(m, parts);
-  $$('[data-md]', m).forEach(b => b.onclick = () => { S.mode = +b.dataset.md; Store.data.settings.shMode = S.mode; Store.save(); S.fb = null; AU.stop(); VIEWS.shadow(m); });
+  $$('[data-md]', m).forEach(b => b.onclick = () => { SHT.tok++; S.mode = +b.dataset.md; Store.data.settings.shMode = S.mode; Store.save(); S.fb = null; AU.stop(); VIEWS.shadow(m); });
   $$('#rt button', m).forEach(b => b.onclick = () => { S.rate = +b.dataset.r; VIEWS.shadow(m); });
   $$('#lp button', m).forEach(b => b.onclick = () => { S.loop = +b.dataset.l; VIEWS.shadow(m); });
   const who = $('#who', m); if (who) who.onchange = () => { S.who = who.value; S.i = 0; S.fb = null; VIEWS.shadow(m); };
   const hp = $('#hp', m); if (hp) hp.onchange = () => { Store.data.settings.hp = hp.checked; Store.save(); };
-  $$('[data-i]', m).forEach(b => b.onclick = () => { S.i = +b.dataset.i; S.fb = null; AU.stop(); VIEWS.shadow(m); });
+  $$('[data-i]', m).forEach(b => b.onclick = () => { SHT.tok++; S.i = +b.dataset.i; S.fb = null; AU.stop(); VIEWS.shadow(m); });
   const B = $('#sbody', m);
   if (S.mode === 4) return shFullRun(B, lines, m);
   const hints = soundHints(l.text);
@@ -1409,8 +1532,8 @@ VIEWS.shadow = m => {
   karaoke(kt, l.audio, l.text);
   const wt = wordTimes(l.audio, l.text);
   $$('.kw', kt).forEach((s, i) => s.onclick = () => { const w = wt.times[i]; if (w) AU.range(clip, w[0], w[1], Math.min(S.rate, 1)); });
-  $('#pv', B).onclick = () => { S.i--; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
-  $('#nx', B).onclick = () => { S.i++; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
+  $('#pv', B).onclick = () => { SHT.tok++; S.i--; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
+  $('#nx', B).onclick = () => { SHT.tok++; S.i++; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
   const mwRec = off => (wt.has ? wt.times.filter(Boolean) : [[0.1, 1]]).map(w => [off + w[0] / S.rate, off + w[1] / S.rate]);
   const labels = wt.ws.filter((w, i) => wt.times[i]);
   const lineSec = () => { const SPR = window.LSP_SPRITES, sp = SPR && SPR[l.audio]; return ((sp ? sp[2] - sp[1] : (TM[l.audio] ? TM[l.audio][TM[l.audio].length - 1][1] + 0.15 : 3))) / S.rate; };
@@ -1420,53 +1543,79 @@ VIEWS.shadow = m => {
     $('#pall', B).onclick = async () => { for (let k = S.i; k < lines.length; k++) { if (k !== S.i) { S.i = k; VIEWS.shadow(m); } const ok = await AU.one(clipOf(lines[k]), S.rate); if (!ok) return; shTime(lineSec()); await sleep(600); } };
     $('#st', B).onclick = () => AU.stop();
   } else {
-    const label = { 1: '🔁 Start Echo', 2: '🗣️ Shadow now', 3: '🙈 Shadow blind' }[S.mode];
-    act.innerHTML = `<button class="btn band" id="go">${label}</button><button class="btn sec" id="hear">▶ Listen first</button><button class="btn sec" id="st">⏹</button>`;
-    $('#hear', B).onclick = () => AU.one(clip, S.rate);
-    $('#st', B).onclick = () => { AU.stop(); Mic.stop(); msg.textContent = ''; };
-    $('#go', B).onclick = async () => {
-      AU.stop(); actx(); $('#go', B).disabled = true; S.fb = null; $('#fb', B).innerHTML = '';
+    const label = { 1: '🔁 Start Echo', 2: '🗣️ Start Shadow', 3: '🙈 Start Blind Shadow' }[S.mode];
+    act.innerHTML = `<button class="btn band" id="go">${label}</button><button class="btn sec" id="hear">▶ Listen</button><button class="btn sec" id="st">⏹ Stop</button>`;
+    act.insertAdjacentHTML('beforebegin', PHASES);
+    const goB = $('#go', B);
+    $('#hear', B).onclick = () => { SHT.tok++; AU.one(clip, S.rate); };
+    $('#st', B).onclick = () => { SHT.tok++; AU.stop(); Mic.stop(); msg.textContent = ''; setPhase(B, 0); goB.disabled = false; };
+    goB.onclick = async () => {
+      AU.stop(); actx(); const tok = ++SHT.tok; goB.disabled = true; S.fb = null; $('#fb', B).innerHTML = '';
+      const quit = () => { if (tok === SHT.tok) { msg.textContent = ''; setPhase(B, 0); } goB.disabled = false; };
       const rec = !choral && await Mic.open();
-      if (!rec && !choral) msg.innerHTML = '🎤 Microphone not available — practise aloud; there will be no recording.';
-      let blob = null, model = null;
+      // 1. listen first
+      setPhase(B, 1);
+      msg.innerHTML = '👂 <b>Listen first.</b> <span class="ar">استمع أولًا.</span>' + (rec || choral ? '' : '<br><span class="muted" style="font-size:.9rem">🎤 Microphone not available — practise aloud; there will be no recording.</span>');
+      const heard = await AU.one(clip, S.rate); if (!heard || tok !== SHT.tok) return quit();
+      shTime(lineSec());
+      // 2. get ready: 2 seconds with a sound each second, then the go sound
+      setPhase(B, 2); if (!(await getReady(msg, tok))) return quit();
+      // 3. speak (recording)
+      setPhase(B, 3); let blob = null, model = null;
       if (S.mode === 1) {
-        msg.textContent = '👂 Listen…'; const ok = await AU.one(clip, S.rate); if (!ok) { $('#go', B).disabled = false; return; }
-        await beep(880, 160); if (rec) await Mic.start(); const tStart = performance.now();
-        const sec = Math.max(2, lineSec() * 1.35 + 0.8); msg.innerHTML = `🎤 Your turn! <b id="cd">${Math.ceil(sec)}</b>s <button class="btn sm ok" id="done">✓ Done</button>`;
-        await new Promise(res => { let left = Math.ceil(sec); const iv = setInterval(() => { left--; const cd = $('#cd', B); if (cd) cd.textContent = Math.max(0, left); if (left <= 0) { clearInterval(iv); res(); } }, 1000); const dn = $('#done', B); if (dn) dn.onclick = () => { clearInterval(iv); res(); }; });
-        if (rec) { blob = await Mic.stop(); model = { words: mwRec(0.15), turn: (tStart - Mic.t0) / 1000 }; }
-        shTime(lineSec() * 2);
+        if (rec) await Mic.start(); const tGo = performance.now();
+        recUI(msg, 'Your turn — say the line!', 'دورك، قل الجملة!', rec, true);
+        await recLoop(msg, Math.max(3, lineSec() * 1.5 + 1.2), tok, rec).done;
+        if (tok !== SHT.tok) return quit();
+        if (rec) { blob = await Mic.stop(); model = { words: mwRec(0), turn: Math.max(0, (tGo - Mic.t0) / 1000) }; }
+        shTime(lineSec());
       } else {
-        for (const f of [440, 440, 440]) { msg.textContent = '…'; await beep(f, 110); await sleep(300); }
-        msg.textContent = S.mode === 3 ? '🙈 Shadow now — no text!' : '🗣️ Shadow now!';
         if (rec) await Mic.start();
+        recUI(msg, S.mode === 3 ? 'Shadow now — no text!' : 'Speak with the speaker!', S.mode === 3 ? 'ظلّل الآن دون نص!' : 'تحدّث مع المتحدث الآن!', rec, false);
+        const R = recLoop(msg, lineSec() + 1.2, tok, false);
         let tPlay = performance.now(); AU.el.addEventListener('playing', () => { tPlay = performance.now(); }, { once: true });
-        const ok = await AU.one(clip, S.rate); await sleep(700);
+        const ok = await AU.one(clip, S.rate); await sleep(700); R.end();
         if (rec) { blob = await Mic.stop(); model = { words: mwRec((tPlay - Mic.t0) / 1000) }; }
-        if (!ok) { $('#go', B).disabled = false; return; }
+        if (!ok || tok !== SHT.tok) return quit();
         shTime(lineSec());
         if (S.mode === 3) { S.revealed = true; kt.classList.remove('blind'); }
       }
-      msg.textContent = '';
+      beep(523, 160);
+      // 4. result
+      setPhase(B, 4); msg.textContent = '';
       shSave(l.audio, { lvl: S.mode });
       S.fb = { blob, model, A: blob ? await analyse(blob) : null };
       shFeedback($('#fb', B), l, labels, S.mode, rec, () => VIEWS.shadow(m));
-      $('#go', B).disabled = false;
+      goB.disabled = false; goB.textContent = '↻ Try again';
+      try { $('#fb', B).scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } catch (e) {}
     };
-    if (S.fb) shFeedback($('#fb', B), l, labels, S.mode, !!S.fb.blob, () => VIEWS.shadow(m));
+    if (S.fb) { setPhase(B, 4); goB.textContent = '↻ Try again'; shFeedback($('#fb', B), l, labels, S.mode, !!S.fb.blob, () => VIEWS.shadow(m)); }
   }
 };
 function shFeedback(box, l, labels, mode, rec, rerender) {
   const F = S.fb; const md = SH_MODES[mode].k; let url = null;
-  let html = `<div class="card fbcard"><h3>How did it go?</h3>`;
+  let html = `<div class="card fbcard">`;
   if (rec && F.blob) {
     url = URL.createObjectURL(F.blob);
     const J = judge(F.A, F.model, md);
-    const total = Math.max(F.A ? F.A.dur : 0, F.model.words[F.model.words.length - 1][1] + 0.4);
-    html += `<ul class="mlist">${J.items.map(x => `<li class="${x.ok === true ? 'ok' : x.ok === false ? 'no' : ''}">${esc(x.t)}</li>`).join('')}</ul>
-      ${F.A ? rhythmSVG(F.model.words, labels, F.A.segs, total) : ''}
+    if (J.silent) html += `<div class="fbtop"><div class="fbstars">🎤</div><div><h3 style="margin:0">We could not hear you</h3><span class="ar">لم نسمع صوتك</span></div></div>
+      <div class="tipbox">💡 Check that the microphone is allowed, then speak louder, close to the device.<span class="ar ar-block">تأكد من السماح للميكروفون، ثم تحدّث بصوت أعلى بالقرب من الجهاز.</span></div>`;
+    else if (J.na) html += `<h3>Your recording is ready</h3><p class="muted">This device cannot measure it. Listen and compare.</p>`;
+    else {
+      const [en, ar] = J.stars === 3 ? ['Excellent!', 'ممتاز!'] : J.stars === 2 ? ['Good — nearly there!', 'جيد، اقتربت!'] : ['Keep practising!', 'واصل التدريب!'];
+      const bars = r => { const mx = Math.max(r.sp, r.you); return `<span class="sbars"><span style="width:${Math.round(100 * r.sp / mx)}%;background:var(--c)" title="Speaker"></span><span style="width:${Math.round(100 * r.you / mx)}%;background:var(--coral)" title="You"></span></span>`; };
+      html += `<div class="fbtop"><div class="fbstars" role="img" aria-label="${J.stars} of 3 stars">${'★'.repeat(J.stars)}<span class="off">${'★'.repeat(3 - J.stars)}</span></div><div><h3 style="margin:0">${en}</h3><span class="ar">${ar}</span></div><div class="fbscore">${J.score}%</div></div>
+      <div class="crit">${J.rows.map(r => `<div class="crow g${r.g}"><span class="ci">${['🔴', '🟡', '✅'][r.g]}</span><b>${r.title}<span class="ar ar-block" style="font-weight:600;font-size:.8rem">${CRIT_AR[r.k]}</span></b><span class="cd">${esc(r.d)}${r.k === 'speed' ? bars(r) : ''}</span></div>`).join('')}</div>
+      ${J.top ? `<div class="tipbox">💡 Next time: ${esc(J.top.en)}<span class="ar ar-block">${esc(J.top.ar)}</span></div>` : `<div class="tipbox">🏆 Great work! Try the next line, or a faster speed.<span class="ar ar-block">عمل رائع! جرّب الجملة التالية أو سرعة أعلى.</span></div>`}`;
+      if (!F.scored) { F.scored = true; const d = shData(); (l.ids || [l.audio]).forEach(a => { const o = d.lines[a] || (d.lines[a] = { lvl: -1, n: 0 }); o.best = Math.max(o.best || 0, J.score); }); Store.save(); }
+    }
+    let mw = F.model.words;
+    if (md === 'echo' && F.A && F.A.segs.length) { const off = F.A.segs[0][0] - mw[0][0]; mw = mw.map(w => [w[0] + off, w[1] + off]); }
+    const total = Math.max(F.A ? F.A.dur : 0, mw[mw.length - 1][1] + 0.4);
+    html += `${F.A && !J.silent ? rhythmSVG(mw, labels, F.A.segs, total) : ''}
       <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn sm sec" id="mine">▶ My voice</button><button class="btn sm sec" id="mod">🔊 Speaker</button>${md !== 'echo' ? '<button class="btn sm sec" id="both">🎧 Both together</button>' : ''}${SRec ? '<button class="btn sm sec" id="wcb">🎯 Word check (online)</button>' : ''}</div><div class="wc" id="wc"></div>
-      ${!Store.data.settings.hp && md !== 'echo' ? '<p class="muted" style="font-size:.85rem">Without headphones, the microphone may also hear the speaker, so these measures can be less exact.</p>' : ''}`;
+      ${!Store.data.settings.hp && md !== 'echo' ? '<p class="honest">Without headphones, the microphone may also hear the speaker, so the start and speed can look better than they were.</p>' : ''}
+      <p class="honest">The app measures start, speed, flow and loudness. It does not grade pronunciation: check your sounds below, and with your teacher.<span class="ar ar-block">يقيس التطبيق البداية والسرعة والانسياب وارتفاع الصوت، ولا يقيّم النطق؛ قيّم أصواتك بنفسك أدناه ومع معلمك.</span></p>`;
   } else html += `<p class="muted">No recording this time. Check yourself honestly below.</p>`;
   html += `<div style="margin-top:12px"><b>Check yourself:</b> <span class="ar">قيّم نفسك بصدق</span>
     <div class="pairrow" style="margin-top:8px">${[['r', '🎵 Rhythm like the speaker'], ['s', '🔤 Clear sounds'], ['f', '🌊 Smooth, no stops']].map(([k, t]) => `<button class="chip selfc" data-k="${k}">${t}</button>`).join('')}</div>
@@ -1491,28 +1640,46 @@ function shFeedback(box, l, labels, mode, rec, rerender) {
 }
 function shFullRun(B, lines, m) {
   const choral = !!Store.data.settings.classmode;
-  B.innerHTML = `<div class="card ${choral ? 'choral' : ''}"><div class="ctrls" style="justify-content:flex-start"><button class="btn band" id="go">🎬 Start Full Run</button><button class="btn sec" id="st">⏹ Stop</button></div><p id="msg" class="shmsg"></p>
+  B.innerHTML = `<div class="card ${choral ? 'choral' : ''}"><div class="ctrls" style="justify-content:flex-start"><button class="btn band" id="go">🎬 Start Full Run</button><button class="btn sec" id="st">⏹ Stop</button></div>${PHASES}<p id="msg" class="shmsg"></p>
     <div id="fl">${lines.map((l, i) => `<div class="tline" data-l="${i}">${avatar(l.sp, l.name)}<span style="flex:1"><span class="who" style="color:${SPC[l.sp]}">${esc(l.name)}</span><br><span class="ktext sm" id="k${i}">${wordsOf(l.text).map((w, j) => `<span class="kw" data-w="${j}">${esc(w)}</span>`).join(' ')}</span></span></div>`).join('')}</div></div><div id="fb"></div>`;
-  const nodes = $$('[data-l]', B), msg = $('#msg', B);
+  const nodes = $$('[data-l]', B), msg = $('#msg', B), goB = $('#go', B);
   lines.forEach((l, i) => karaoke($('#k' + i, B), l.audio, l.text));
-  $('#st', B).onclick = () => { AU.stop(); Mic.stop(); msg.textContent = ''; };
-  $('#go', B).onclick = async () => {
-    actx(); const rec = !choral && await Mic.open(); if (!rec && !choral) msg.textContent = '🎤 Microphone not available — shadow aloud without recording.';
-    for (const f of [440, 440, 440]) { await beep(f, 110); await sleep(300); }
-    msg.textContent = '🎬 Go! Shadow every line.'; if (rec) await Mic.start();
+  const mark = i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0 && nodes[i]) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } };
+  const secOf = l => ((TM[l.audio] ? TM[l.audio][TM[l.audio].length - 1][1] + 0.15 : 3)) / S.rate;
+  $('#st', B).onclick = () => { SHT.tok++; AU.stop(); Mic.stop(); msg.textContent = ''; setPhase(B, 0); mark(-1); goB.disabled = false; };
+  goB.onclick = async () => {
+    AU.stop(); actx(); const tok = ++SHT.tok; goB.disabled = true; $('#fb', B).innerHTML = '';
+    const quit = () => { if (tok === SHT.tok) { msg.textContent = ''; setPhase(B, 0); mark(-1); } goB.disabled = false; };
+    const rec = !choral && await Mic.open();
+    // 1. listen to the whole conversation first (can be skipped)
+    setPhase(B, 1); let skipped = false;
+    msg.innerHTML = '👂 <b>Listen to the whole conversation first.</b> <span class="ar">استمع إلى المحادثة كاملة أولًا.</span> <button class="btn sm sec" id="skip">⏭ Skip</button>' + (rec || choral ? '' : '<br><span class="muted" style="font-size:.9rem">🎤 Microphone not available — shadow aloud without recording.</span>');
+    $('#skip', B).onclick = () => { skipped = true; AU.stop(); };
+    const heard = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: mark }); mark(-1);
+    if (tok !== SHT.tok || (!heard && !skipped)) return quit();
+    // 2. get ready
+    setPhase(B, 2); if (!(await getReady(msg, tok))) return quit();
+    // 3. shadow every line (recording)
+    setPhase(B, 3); if (rec) await Mic.start();
+    recUI(msg, 'Shadow every line!', 'ظلّل كل الجمل!', rec, false);
+    const R = recLoop(msg, lines.reduce((t, l) => t + secOf(l) + 0.5, 0.6), tok, false);
     const starts = []; const t0 = performance.now();
-    const ok = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); starts[i] = (performance.now() - (rec ? Mic.t0 : t0)) / 1000 + 0.05; } } });
-    await sleep(600); const blob = rec ? await Mic.stop() : null; msg.textContent = '';
-    if (!ok) return;
+    const ok = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: i => { mark(i); if (i >= 0) starts[i] = (performance.now() - (rec ? Mic.t0 : t0)) / 1000 + 0.05; } });
+    await sleep(600); R.end(); const blob = rec ? await Mic.stop() : null; mark(-1);
+    if (!ok || tok !== SHT.tok) return quit();
+    beep(523, 160);
+    // 4. result
+    setPhase(B, 4); msg.textContent = '';
     shTime((performance.now() - t0) / 1000);
     lines.forEach(l => shSave(l.audio, { lvl: 4 }));
     const mw = [], labels = [];
     lines.forEach((l, i) => { const wt = wordTimes(l.audio, l.text); wt.times.forEach((w, j) => { if (w) { mw.push([starts[i] + w[0] / S.rate, starts[i] + w[1] / S.rate]); labels.push(wt.ws[j]); } }); });
     S.fb = { blob, model: { words: mw }, A: blob ? await analyse(blob) : null };
-    shFeedback($('#fb', B), { audio: lines[0].audio, text: lines.map(x => x.text).join(' '), sp: lines[0].sp }, labels, 4, rec, () => VIEWS.shadow(m));
-    const sv = $('#sv', B); const orig = sv.onclick; sv.onclick = () => { const good = $$('.selfc.on', B).length === 3; lines.forEach(l => shSave(l.audio, { lvl: 4, good: good || (shData().lines[l.audio] || {}).good })); $('#svm', B).textContent = good ? '⭐ All lines mastered!' : 'Saved.'; if (good) confetti(); setTimeout(() => VIEWS.shadow(m), 900); };
+    shFeedback($('#fb', B), { audio: lines[0].audio, ids: lines.map(x => x.audio), text: lines.map(x => x.text).join(' '), sp: lines[0].sp }, labels, 4, rec, () => VIEWS.shadow(m));
+    const sv = $('#sv', B); sv.onclick = () => { const good = $$('.selfc.on', B).length === 3; lines.forEach(l => shSave(l.audio, { lvl: 4, good: good || (shData().lines[l.audio] || {}).good })); $('#svm', B).textContent = good ? '⭐ All lines mastered!' : 'Saved.'; if (good) confetti(); setTimeout(() => VIEWS.shadow(m), 900); };
     const bb = $('#both', B); if (bb) bb.remove();
     const md = $('#mod', B); if (md) md.onclick = () => AU.list(lines.map(clipOf), { rate: S.rate, gap: 500 });
+    goB.disabled = false; goB.textContent = '↻ Try again';
   };
 }
 

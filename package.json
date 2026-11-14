@@ -1,6 +1,6 @@
 {
   "name": "listen-up-speak-out",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Listen Up! Speak Out! - elementary listening and speaking program (Grades 3-6) for web, Android, iOS and Windows",
   "main": "electron/main.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "mac": "npm run build:www && electron-builder --mac",
     "linux": "npm run build:www && electron-builder --linux AppImage"
   },
-  "author": "Waleed Awadallah Yussuf",
+  "author": "Mr. Waleed Youssef",
   "license": "UNLICENSED",
   "devDependencies": {
     "@capacitor/android": "^8.6.2",
@@ -32,7 +32,7 @@
   "build": {
     "appId": "com.mrwaleedyoussif.listenupspeakout",
     "productName": "Listen Up! Speak Out!",
-    "copyright": "\u00a9 2026 Waleed Awadallah Yussuf",
+    "copyright": "\u00a9 2026 Mr. Waleed Youssef",
     "directories": {
       "output": "dist",
       "buildResources": "build-res"

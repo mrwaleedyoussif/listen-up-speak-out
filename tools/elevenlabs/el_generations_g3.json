@@ -1,0 +1,19 @@
+{"flow_id": "Qu91CmMomGs8lPIodfX6",
+ "batches": {
+  "g3-NARRATOR-1": {"node": "InoGWsqbKBm4EoTBY22H", "session": "ktgds4eRKkbUGd1DI5tp", "generation": "YCkD7aGrfV8fq71BTBGs"},
+  "g3-NARRATOR-2": {"node": "afkfGuM65vyzInzdukFy", "session": "4KgJBPAKQKhbMkMQuNqn", "generation": "F8TG4Q9Bb22ABQufBR0q"},
+  "g3-SAMI-1": {"node": "6uR5x2CO7tyUJQiSMxuj", "session": "emEIvN0cU7khuSX1TZLX", "generation": "gJEMzg7sFrWHCPjEueRU"},
+  "g3-SAMI-2": {"node": "t6sMniUYRQnbq8k2sIQv", "session": "o7Up9pUTv9SVniBvooH5", "generation": "2i4I5Ynn9p31NTHODNxz"},
+  "g3-BEN-1": {"node": "h93CbZh4ELdcw5QyF0X6", "session": "xzp8WVQeQKLyaZKYLrtU", "generation": "p01rPdHsv6H3ikvYJ4ha"},
+  "g3-BEN-2": {"node": "chvMLoV5dU6V6qdfY2CB", "session": "Gvm3YuF8pA5eJXINMgi3", "generation": "gQk8UnTeDyIv2h9htQPS"},
+  "g3-ADAM-1": {"node": "Wq4OdhyUg3wLKhXPrqB5", "session": "uKTRapYQ1evSGWuB9zWB", "generation": "WFunvgllE3uJb7ptEkEO"},
+  "g3-GRANDPA-1": {"node": "A7qFvTtXujHuGlupFxUI", "session": "tyN6vVumDp2AWahaSwnF", "generation": "kEly0lTsHbjaED0tjnAo"},
+  "g3-NOOR-1": {"node": "Svjlfcx7oqFGbTLcVaaK", "session": "hckEGb81ofuXn4wamTwr", "generation": "BnkrCqvBLxt62QsiUijN"},
+  "g3-MR_HASSAN-1": {"node": "tewFohGC2w0fguH2o8Bs", "session": "yQTb7BhTO0WbvCHPvd1c", "generation": "QmpbzwsowZ1jYSrghYbl"},
+  "g3-DAD-1": {"node": "TLMfrWz2pDD0qRIRG1hM", "session": "VIPQlkBONtJI9oN1a1tf", "generation": "GjrOE6O9Ux07rYBGzG2f"},
+  "g3-MOM-1": {"node": "UgvbBRE7KHyXrQxdZUEr", "session": "GyPafl9pRDS605ygDLBU", "generation": "U5yLtyAvJaJnC1kG6CRS"},
+  "g3-YUSUF-1": {"node": "9jI0uW80kOZdc4EFBvqe", "session": "f5IvtZ8fupLfbK7uW8fd", "generation": "Ai67HP5jJJO7JnhvWbsR"},
+  "g3-LINA-1": {"node": "ZurHK4X0c0RmKjroVrIn", "session": "uWtkQHpSPF0LmpVMXMG9", "generation": "KdrmQrawl3IayAQmD6BL"},
+  "g3-MAN-1": {"node": "Q36Gdjr4hute9Y4wCR8n", "session": "JBf2MzgICZj42au14Zj6", "generation": "d6G2YPQRU5GvTk3lZgUq"},
+  "g3-WOMAN-1": {"node": "RK3GH3xbOGzVoChfhw7j", "session": "NB8AyVXVNis3MCJQ783O", "generation": "xPyQKCd3tjhJ48lSDGpj"}
+ }}

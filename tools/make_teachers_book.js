@@ -4,8 +4,10 @@
 const fs = require('fs');
 const {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, Footer, Header, PageNumber,
-  PageBreak, LevelFormat, TabStopType, BorderStyle, TableOfContents, ShadingType
+  PageBreak, LevelFormat, TabStopType, BorderStyle, TableOfContents, ShadingType, ImageRun
 } = require('docx');
+const IMG = f => fs.readFileSync('/home/claude/brand/' + f);
+const img = (f, w, h) => new ImageRun({ type: 'png', data: IMG(f), transformation: { width: w, height: h } });
 
 const ROOT = '/home/claude/lsp';
 const P = JSON.parse(fs.readFileSync(`${ROOT}/build/program.json`, 'utf8'));
@@ -62,16 +64,27 @@ const manifest = JSON.parse(fs.readFileSync(`${ROOT}/build/manifest.json`, 'utf8
 
 // ================= COVER =================
 push(
-  para([r('')], { after: 1600 }),
+  para([r('')], { after: 300 }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 240 }, children: [img('emblem_600.png', 150, 150)] }),
   para([r('Listen Up! Speak Out!', { size: 72, bold: true, color: '1B4FA3' })], { align: AlignmentType.CENTER, after: 200 }),
   para([r('Elementary Listening & Speaking Program', { size: 40, color: 'E0502F', bold: true })], { align: AlignmentType.CENTER, after: 120 }),
   para([r("Teacher's Book", { size: 44, bold: true })], { align: AlignmentType.CENTER, after: 400 }),
   para([r('Grades 3–6  ·  CEFR A1 → A2+  ·  24 units', { size: 32 })], { align: AlignmentType.CENTER, after: 120 }),
   para([r('72 listening lessons · 48 speaking lessons · 2,181 audio clips', { size: 28, color: '4B5568' })], { align: AlignmentType.CENTER, after: 600 }),
   para([r('برنامج متكامل لتنمية مهارتي الاستماع والتحدث للمرحلة الابتدائية', { rtl: true, size: 32, color: '1B4FA3' })], { align: AlignmentType.CENTER, rtl: true, after: 120 }),
-  para([r('دليل المعلم', { rtl: true, size: 32, bold: true })], { align: AlignmentType.CENTER, rtl: true, after: 1400 }),
-  para([r('Prepared by: Mr. Waleed Awadallah Yussuf', { size: 30, bold: true })], { align: AlignmentType.CENTER, after: 60 }),
-  para([r('English Language Teaching · Curriculum Design', { size: 26, color: '4B5568' })], { align: AlignmentType.CENTER }),
+  para([r('دليل المعلم', { rtl: true, size: 32, bold: true })], { align: AlignmentType.CENTER, rtl: true, after: 500 }),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 120 }, children: [img('photo_circle.png', 128, 128)] }),
+  para([r('Designed by Mr. Waleed Youssef', { size: 34, bold: true, color: '1D3F9E' })], { align: AlignmentType.CENTER, after: 40 }),
+  para([r('English Teacher & Curriculum Designer', { size: 26, color: '4B5568' })], { align: AlignmentType.CENTER, after: 40 }),
+  para([r('تصميم وإعداد: أ. وليد يوسف', { rtl: true, size: 28, color: '1D3F9E', bold: true })], { align: AlignmentType.CENTER, rtl: true }),
+  pb(),
+  // about the designer
+  h(HeadingLevel.HEADING_1, 'About the Designer'),
+  new Paragraph({ alignment: AlignmentType.CENTER, spacing: { after: 200 }, children: [img('photo_circle.png', 170, 170), new TextRun({ text: '      ' }), img('seal_400.png', 140, 140)] }),
+  para([r('Mr. Waleed Youssef', { size: 40, bold: true, color: '1D3F9E' })], { align: AlignmentType.CENTER, after: 60 }),
+  para([r('English Teacher & Curriculum Designer', { size: 28, color: '4B5568' })], { align: AlignmentType.CENTER, after: 300 }),
+  p('Mr. Waleed Youssef is an English language teacher, a trainer of STEP and IELTS candidates, and a curriculum and materials designer. He designed Listen Up! Speak Out! so that young learners listen with confidence and speak with joy: real voices, clear tasks, games, shadowing and full Arabic support, in one program that works on the classroom board, on tablets and phones, and at home.'),
+  ar('الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم برنامج Listen Up! Speak Out! ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة: أصوات حقيقية، ومهام واضحة، وألعاب، وتظليل، ودعم كامل باللغة العربية، في برنامج واحد يعمل على سبورة الفصل والأجهزة اللوحية والهواتف وفي المنزل.'),
   pb()
 );
 
@@ -124,8 +137,8 @@ push(h(HeadingLevel.HEADING_2, '1. Overview'),
 const nPlat = newNum();
 push(h(HeadingLevel.HEADING_1, 'Part B. Using the Platform and the Audio'),
   h(HeadingLevel.HEADING_2, '4. Getting started'),
-  numbered('Copy the whole program folder to the computer or tablet. Keep index.html, data.js and the audio folder together.', nPlat),
-  numbered('Open index.html in Chrome or Edge. No internet is needed (fonts and the optional Word check use the internet when available).', nPlat),
+  numbered('Install the program the way that suits each device: the web app (https://mrwaleedyoussif.github.io/listen-up-speak-out/, then "Install"), the Android app (.apk) or the Windows app (.exe) from the Releases page, or the program folder opened in Chrome or Edge. On iPhone and iPad, open the web app in Safari and choose Share → Add to Home Screen. The install guide (INSTALL.md) gives every step in English and Arabic.', nPlat),
+  numbered('The Android and Windows apps contain all the audio and work with no internet. In the web app, press Download next to a grade on the Home page to save its audio for offline use.', nPlat),
   numbered('Each student adds his name and class on the home page, or uses Guest. Progress is saved on that device.', nPlat),
   numbered('Choose a grade, then a unit. Lessons can be done in any order, but the suggested order is Listening 1–3, then Speaking 1–2, then the games and the Unit Check.', nPlat),
   numbered('On the classroom screen, switch on Class mode (🧑‍🏫). Each lesson then shows a Teacher card with the Kagan structures and the teaching tip from this book.', nPlat),
@@ -148,27 +161,29 @@ push(h(HeadingLevel.HEADING_1, 'Part B. Using the Platform and the Audio'),
   h(HeadingLevel.HEADING_2, '8. Recording and the Word check'),
   p('Recording uses the device microphone and works when the platform is opened from its folder in Chrome or Edge (the browser asks for permission once). Students listen to their own voice and then to the model, and notice the differences. If the microphone is blocked — for example inside some shared links — students can tap "Use my device recorder" or simply speak aloud. The optional Word check (Chrome with internet) shows which words the browser recognised. It checks words only and is not a pronunciation score; your judgement and the rubric in Part D remain the assessment.'),
   h(HeadingLevel.HEADING_2, '9. Teacher dashboard'),
-  p('The 📊 button opens the dashboard: every student on the device, lessons completed per grade, stars and the Unit Check average. Results can be downloaded as a CSV file or copied and pasted into Excel or Google Sheets.'),
+  p('The 📊 button opens the dashboard: every student on the device, lessons completed per grade, stars and the Unit Check average. Results can be downloaded as a CSV file or copied and pasted into Excel or Google Sheets. "Back up all students" saves every student’s progress in one file (or copies it), and "Restore a backup" brings it back on another device or after reinstalling the app.'),
   h(HeadingLevel.HEADING_2, '10. The audio files'),
   p('The audio folder is organised by grade, unit and lesson. For example, audio/g4/u2/l3/ contains Grade 4, Unit 2, Listening 3: one clip per line (01.mp3, 02.mp3…), the vocabulary words (v1.mp3–v6.mp3) and track.mp3, the full recording with natural pauses for classroom speakers. Speaking folders (s1, s2) also contain the chunks (c1–c5) and the Sound Check items (p1a/p1b or i1–i9).'),
-  p('The draft audio was made with an open-source neural voice so that the program works immediately. To use ElevenLabs voices, open the elevenlabs folder: add your API key to a file named .env, then run RUN_ON_WINDOWS.bat (or the Python script) one grade at a time. The whole program is about 80,000 characters (about 40,000 credits with the Flash model). The script keeps the same file names, skips clips that are already done and rebuilds the full tracks. Full instructions are in elevenlabs/README_ElevenLabs.md.'),
-  ar('لإعادة إنتاج الأصوات بأصوات ElevenLabs: ضع مفتاحك في ملف .env داخل مجلد elevenlabs، ثم شغّل RUN_ON_WINDOWS.bat لكل صف على حدة. يبقى المفتاح على جهازك فقط.'),
+  p('The recordings are being re-made with ElevenLabs voices, one grade at a time, starting with Grade 3. They are generated inside the program designer’s ElevenLabs account and then cut into the program’s clips; the app itself never connects to ElevenLabs, and the file names stay the same, so lessons do not change. Every clip starts with a short silence of about 0.3 seconds and the app keeps the sound output awake, so speakers, Bluetooth devices and phones never cut the first sound. Every clip is also checked with speech recognition against its script.'),
+  ar('يُعاد تسجيل الصوتيات بأصوات ElevenLabs صفًّا بعد صف بدءًا من الصف الثالث، داخل حساب مصمّم البرنامج، ثم تُقسَّم إلى مقاطع البرنامج. لا يتصل التطبيق نفسه بـ ElevenLabs، وتبقى أسماء الملفات كما هي. يبدأ كل مقطع بصمت قصير حتى لا تضيع بداية الصوت في السماعات والأجهزة.'),
   h(HeadingLevel.HEADING_2, '11. The Shadowing Studio'),
   p('Shadowing means listening to a recording and speaking with it at the same time, copying its sounds, stress, rhythm and intonation. It joins listening and speaking in one activity and is especially useful for Arabic-speaking learners, because English rhythm (strong and weak beats, linking, reduced words) is very different from Arabic. The Studio (🎙️ on the home page) turns every recording in the program — all 72 listening scripts and 48 model conversations — into shadowing material.'),
   ar('التظليل يعني الاستماع إلى تسجيل والتحدث معه في الوقت نفسه، مع تقليد الأصوات والنبر والإيقاع والنغمة. وهو مفيد جدًا للمتعلمين العرب لأن إيقاع الإنجليزية يختلف كثيرًا عن إيقاع العربية.'),
   b('The five steps', { keepNext: true }),
   bullet([r('1. Listen & Read: ', { bold: true }), r('each word lights up at the moment it is spoken. Students follow with their eyes and can tap any word to hear it alone. Use "×3" to hear a line three times.')]),
-  bullet([r('2. Echo: ', { bold: true }), r('students hear the whole line, then repeat it after a beep. The app gives a timed turn and can record it. This is the bridge from repetition to real shadowing.')]),
-  bullet([r('3. Shadow: ', { bold: true }), r('after a 3-beep count-in, students speak at the same time as the speaker while the words light up.')]),
+  bullet([r('2. Echo: ', { bold: true }), r('students listen first, then a 2-second countdown with a sound each second and a "go" sound; the app records while the student says the line alone. A live voice meter shows that the microphone hears him, and the recording stops by itself when he has finished. This is the bridge from repetition to real shadowing.')]),
+  bullet([r('3. Shadow: ', { bold: true }), r('students listen first, then the same 2-second countdown; the line plays again and students speak at the same time as the speaker while the words light up.')]),
   bullet([r('4. Blind Shadow: ', { bold: true }), r('the same, but the text is hidden until the end, so students rely on their ears.')]),
-  bullet([r('5. Full Run: ', { bold: true }), r('students shadow a whole conversation or script without stopping, like a performance.')]),
+  bullet([r('5. Full Run: ', { bold: true }), r('students listen to the whole conversation (or press Skip), then after the countdown they shadow every line without stopping, like a performance.')]),
+  p('A strip above the buttons always shows where the student is: 1 Listen → 2 Get ready → 3 Speak → 4 Result. Stop ends the routine at any moment.'),
+  ar('في كل خطوة تسجيل: يستمع الطالب أولًا، ثم عدّ تنازلي لمدة ثانيتين مع صوت تنبيه، ثم يبدأ التسجيل. ويظهر شريط يبيّن المرحلة: استمع ← استعد ← تحدّث ← النتيجة.'),
   b('Tools on every line', { keepNext: true }),
   bullet('Four speeds (0.7×, 0.85×, normal, 1.15×) without changing the voice pitch.'),
   bullet('"Only Sami’s lines" (or any character): students shadow one role in a dialogue.'),
   bullet('Sound hints for Arabic speakers appear automatically when a line contains /p/, /v/, "th" (ث or ذ), a word starting with two consonants, or an -ed ending, in English and Arabic.'),
   bullet('Daily 5: five lines chosen from the unit the student worked on most recently, avoiding lines already mastered.'),
   b('What the feedback measures — and what it does not', { keepNext: true }),
-  p('After a recording, the app compares the timing of the student’s voice with the timing of the recording. It reports whether the student started on time, whether his speaking time was close to the speaker’s, whether he added long pauses, and whether his voice was too quiet. A timing picture shows the speaker’s words as blue blocks and the student’s voice as orange blocks. These are timing and fluency measures only; the app does not claim to score pronunciation. Pronunciation is judged by the student’s self-check (rhythm, clear sounds, smoothness) and by you, listening to the recording with "My voice", "Speaker" and "Both together". A line counts as mastered when the student gives himself all three self-checks in Shadow, Blind Shadow or Full Run.'),
+  p('After a recording, the app shows a clear score card: one to three stars, a percentage and four rows marked green (good), yellow (nearly) or red (work on this). Start: did the student begin on time (right after the go sound in Echo, with the speaker’s first word in Shadow)? Speed: the speaker’s time and the student’s time, side by side as two bars. Flow: did he add extra stops in the middle? Voice: was it loud enough? Under the rows, one tip says the most important thing to do next, in English and Arabic. The best score for each line is saved and shown on the line buttons. A timing picture shows the speaker’s words (top row) and the student’s voice (bottom row). These are timing and fluency measures only; the app does not claim to score pronunciation. Pronunciation is judged by the student’s self-check (rhythm, clear sounds, smoothness) and by you, listening to the recording with "My voice", "Speaker" and "Both together". A line counts as mastered when the student gives himself all three self-checks in Shadow, Blind Shadow or Full Run.'),
   p('The word timings come from the voice engine itself (and from ElevenLabs’ own timestamps after re-voicing), so the highlighting follows the voice closely, within a few hundredths of a second.'),
   b('Headphones and privacy', { keepNext: true }),
   p('For steps 3–5, students should wear headphones; otherwise the microphone also hears the speaker and the timing measures become less exact. Recordings are kept only in the device’s memory during the session and are deleted when the student leaves the Studio; nothing is uploaded. The optional "Word check (online)" button uses the browser’s online speech service (Google in Chrome), so use it only where your school’s policy and parents allow.'),
@@ -326,7 +341,7 @@ push(p('Checks carried out: every answer key was generated from the same data as
 
 // ================= DOCUMENT =================
 const doc = new Document({
-  creator: 'Waleed Awadallah Yussuf', title: "Listen Up! Speak Out! — Teacher's Book",
+  creator: 'Mr. Waleed Youssef', title: "Listen Up! Speak Out! — Teacher's Book",
   features: { updateFields: true },
   styles: {
     default: { document: { run: { font: FONT, size: SZ } } },
@@ -345,7 +360,7 @@ const doc = new Document({
   sections: [{
     properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 850, right: 850, bottom: 850, left: 850, header: 420, footer: 420 } } },
     headers: { default: new Header({ children: [new Paragraph({ alignment: AlignmentType.RIGHT, children: [new TextRun({ text: "Listen Up! Speak Out! — Teacher's Book", font: FONT, size: 20, color: '7A8499' })] })] }) },
-    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ children: ['Page ', PageNumber.CURRENT, ' of ', PageNumber.TOTAL_PAGES], font: FONT, size: 20, color: '7A8499' })] })] }) },
+    footers: { default: new Footer({ children: [new Paragraph({ alignment: AlignmentType.CENTER, children: [new TextRun({ children: ['Designed by Mr. Waleed Youssef  ·  Page ', PageNumber.CURRENT, ' of ', PageNumber.TOTAL_PAGES], font: FONT, size: 20, color: '7A8499' })] })] }) },
     children: out
   }]
 });

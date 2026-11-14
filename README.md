@@ -1,6 +1,6 @@
 # Listen Up! Speak Out!
 
-Elementary listening & speaking program for **Grades 3–6 (CEFR A1 → A2+)** by Mr. Waleed Yussuf: 24 units, 72 listening lessons, 48 speaking lessons, pronunciation games, Unit Checks, a Shadowing Studio with word-by-word highlighting and recording, a teacher dashboard and Arabic support.
+Elementary listening & speaking program for **Grades 3–6 (CEFR A1 → A2+)** designed by Mr. Waleed Youssef: 24 units, 72 listening lessons, 48 speaking lessons, pronunciation games, Unit Checks, a Shadowing Studio with word-by-word highlighting and recording, a teacher dashboard and Arabic support.
 
 - **Open the web app:** https://mrwaleedyoussif.github.io/listen-up-speak-out/
 - **Download the apps (Android, Windows):** [Releases](https://github.com/mrwaleedyoussif/listen-up-speak-out/releases/latest)
@@ -24,4 +24,4 @@ Local commands (Node 22, Python 3):
 - `npm run win`: build the Windows installer (on Windows).
 - `npm run sync`: copy `www` into the Android and iOS projects (then open them in Android Studio or Xcode).
 
-© 2026 Waleed Awadallah Yussuf. All rights reserved.
+Designed by Mr. Waleed Youssef. © 2026 Mr. Waleed Youssef. All rights reserved.

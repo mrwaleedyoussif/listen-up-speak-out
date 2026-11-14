@@ -51,7 +51,7 @@ In class: **F11** switches full screen, and **Ctrl +** / **Ctrl −** zoom in an
 3. For a new numbered version, change `"version"` in `package.json` (for example `1.0.0` → `1.1.0`).
 4. Commit and push to `main`. GitHub then builds everything automatically (the **Actions** tab shows progress, about 15–25 minutes). The web app updates itself, and the new files appear on the Releases page.
 
-**Better voices with ElevenLabs:** on your PC run `tools/elevenlabs/RUN_ON_WINDOWS.bat` (see `tools/elevenlabs/README_ElevenLabs.md`). The script finds `www/audio` by itself. Then do steps 2–4.
+**Voices:** the program's recordings are made with ElevenLabs voices inside Mr. Waleed Youssef's ElevenLabs account, one grade at a time (Grade 3 first, the other grades as credits renew). They are cut into the program's clips and checked with speech recognition (`tools/elevenlabs/el_pipeline.py`). The app itself never connects to ElevenLabs. After new recordings are added, do steps 2–4.
 
 ## 6. Publishing to the stores (optional)
 
@@ -122,7 +122,7 @@ Note: APKs signed with the private key cannot install over the shared-key APKs f
 3. لإصدار رقم جديد غيّر `"version"` في ملف `package.json`.
 4. ارفع التعديل إلى `main`، فيبني GitHub كل النسخ تلقائيًا خلال 15 إلى 25 دقيقة (تابعها من تبويب **Actions**)، ويتحدّث تطبيق الويب، وتظهر الملفات الجديدة في صفحة الإصدارات.
 
-**أصوات ElevenLabs الأفضل:** شغّل على حاسوبك `tools/elevenlabs/RUN_ON_WINDOWS.bat`، ثم نفّذ الخطوات ٢ إلى ٤.
+**الأصوات:** تُسجَّل صوتيات البرنامج بأصوات ElevenLabs داخل حساب الأستاذ وليد يوسف، صفًّا بعد صف (الصف الثالث أولًا)، ثم تُقسَّم إلى مقاطع البرنامج وتُفحص بالتعرّف على الكلام. لا يتصل التطبيق نفسه بـ ElevenLabs.
 
 ## ٦. النشر في المتاجر (اختياري)
 
