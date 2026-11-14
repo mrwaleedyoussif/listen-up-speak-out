@@ -1,6 +1,6 @@
 {
   "name": "listen-up-speak-out",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Listen Up! Speak Out! - elementary listening and speaking program (Grades 3-6) for web, Android, iOS and Windows",
   "main": "electron/main.js",
   "scripts": {

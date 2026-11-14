@@ -1,0 +1,227 @@
+[
+ {
+  "kind": "right",
+  "text": "Great job!",
+  "heard": "great job",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.9,
+  "kb": 5.9
+ },
+ {
+  "kind": "right",
+  "text": "Well done!",
+  "heard": "well done",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.75,
+  "kb": 5.0
+ },
+ {
+  "kind": "right",
+  "text": "Excellent!",
+  "heard": "excellent",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.77,
+  "kb": 5.2
+ },
+ {
+  "kind": "right",
+  "text": "You got it!",
+  "heard": "you got it",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.82,
+  "kb": 5.4
+ },
+ {
+  "kind": "right",
+  "text": "That's right!",
+  "heard": "that's right",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.83,
+  "kb": 5.4
+ },
+ {
+  "kind": "right",
+  "text": "Super!",
+  "heard": "super",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.67,
+  "kb": 4.5
+ },
+ {
+  "kind": "right",
+  "text": "Brilliant!",
+  "heard": "brilliant",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.76,
+  "kb": 5.0
+ },
+ {
+  "kind": "right",
+  "text": "Perfect!",
+  "heard": "perfect",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.73,
+  "kb": 4.9
+ },
+ {
+  "kind": "right",
+  "text": "Awesome!",
+  "heard": "awesome",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.69,
+  "kb": 4.6
+ },
+ {
+  "kind": "right",
+  "text": "Nice work!",
+  "heard": "nice work",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.88,
+  "kb": 5.7
+ },
+ {
+  "kind": "wrong",
+  "text": "Oops! Not this time.",
+  "heard": "oops not this time",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.27,
+  "kb": 8.0
+ },
+ {
+  "kind": "wrong",
+  "text": "Nice try!",
+  "heard": "nice try",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.88,
+  "kb": 5.7
+ },
+ {
+  "kind": "wrong",
+  "text": "Almost!",
+  "heard": "almost",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.75,
+  "kb": 5.0
+ },
+ {
+  "kind": "wrong",
+  "text": "Not quite.",
+  "heard": "not quite",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.86,
+  "kb": 5.6
+ },
+ {
+  "kind": "wrong",
+  "text": "Keep going!",
+  "heard": "keep going",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.86,
+  "kb": 5.6
+ },
+ {
+  "kind": "wrong",
+  "text": "Don't give up!",
+  "heard": "don't give up",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.87,
+  "kb": 5.7
+ },
+ {
+  "kind": "celeb",
+  "text": "Amazing! You did it!",
+  "heard": "amazing you did it",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.38,
+  "kb": 8.7
+ },
+ {
+  "kind": "celeb",
+  "text": "Hurray! Well done!",
+  "heard": "hooray well done",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.22,
+  "kb": 7.7
+ },
+ {
+  "kind": "celeb",
+  "text": "Fantastic work!",
+  "heard": "fantastic work",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.17,
+  "kb": 7.4
+ },
+ {
+  "kind": "celeb",
+  "text": "You're a star!",
+  "heard": "you're a star",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 0.88,
+  "kb": 5.7
+ },
+ {
+  "kind": "celeb",
+  "text": "Congratulations!",
+  "heard": "congratulations",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.24,
+  "kb": 7.8
+ },
+ {
+  "kind": "celeb",
+  "text": "Wow! You're amazing!",
+  "heard": "wow you're amazing",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.13,
+  "kb": 7.3
+ },
+ {
+  "kind": "try",
+  "text": "Good try! Practise and try again.",
+  "heard": "good try practise and try again",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 2.12,
+  "kb": 13.0
+ },
+ {
+  "kind": "try",
+  "text": "Keep practising. You can do it!",
+  "heard": "keep practising you can do it",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.85,
+  "kb": 11.5
+ },
+ {
+  "kind": "try",
+  "text": "You're getting better. Try again!",
+  "heard": "you're getting better try again",
+  "first_ok": true,
+  "coverage": 1.0,
+  "sec": 1.73,
+  "kb": 10.8
+ }
+]

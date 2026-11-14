@@ -226,6 +226,23 @@ input[type=text]:focus{border-color:var(--c);outline:none}
 .confetti{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
 .confetti i{position:absolute;top:-20px;width:10px;height:14px;border-radius:3px;animation:fall 1.8s ease-in forwards}
 @keyframes fall{to{transform:translateY(105vh) rotate(540deg);opacity:.9}}
+.confetti i.c{width:11px;height:11px;border-radius:50%}.confetti i.s{width:6px;height:18px;border-radius:2px}
+.confetti i.d{animation-name:fall2;animation-duration:2.4s;animation-timing-function:cubic-bezier(.25,.6,.5,1)}
+@keyframes fall2{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(var(--dx),108vh) rotate(var(--rot));opacity:.85}}
+.celebrate{position:fixed;inset:0;display:grid;place-items:center;z-index:60;pointer-events:none}
+.cbadge{background:#fff;border-radius:28px;padding:20px 34px 18px;text-align:center;border:4px solid #FFC233;box-shadow:0 22px 60px rgba(20,30,60,.32);display:flex;flex-direction:column;align-items:center;gap:2px;max-width:86vw;animation:cpop .55s cubic-bezier(.2,1.6,.4,1) both}
+.cbadge .cstar{font-size:3.6rem;line-height:1.1;animation:cwob .9s ease-in-out .35s 2}
+.cbadge b{font:800 1.8rem/1.2 var(--fh);color:#1D2433}.cbadge .ar{font-size:1.15rem;color:#56607A}
+.cbadge .cst{color:#FFB400;font-size:1.5rem;letter-spacing:4px}
+.celebrate.out .cbadge{animation:cout .45s ease-in forwards}
+@keyframes cpop{from{transform:scale(.3);opacity:0}to{transform:scale(1);opacity:1}}
+@keyframes cout{to{transform:scale(.7) translateY(-40px);opacity:0}}
+@keyframes cwob{0%,100%{transform:rotate(0)}25%{transform:rotate(-14deg) scale(1.15)}75%{transform:rotate(14deg) scale(1.15)}}
+@keyframes rbump{40%{transform:scale(1.07)}}
+@keyframes rshake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
+.pick4 button.right,.bigchoice.right,.opt.right.just{animation:rbump .35s ease-out}
+.pick4 button.wrong,.bigchoice.wrong{animation:rshake .4s ease-in-out}
+@media (prefers-reduced-motion:reduce){.confetti{display:none}.cbadge,.cbadge .cstar,.pick4 button,.bigchoice{animation:none!important}}
 
 /* teacher card */
 .tcard{background:#FFF8EC;border:2px solid #FFD98A;border-radius:18px;padding:14px 16px;margin:12px 0}
@@ -369,6 +386,7 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 <div id="app"><div class="wrap"><p style="padding:40px;text-align:center">Loading… If this message stays, make sure <b>data.js</b> is in the same folder as this page.</p></div></div>
 <script src="capacitor.js"></script>
 <script src="img/pics/index.js"></script>
+<script src="sfx/reactions.js"></script>
 <script src="data.js"></script>
 <script src="audio/timings.js"></script>
 <script>
@@ -391,7 +409,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.2.0';
+const APP_VER = '1.3.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -531,13 +549,13 @@ const AU = {
     });
   },
   async one(c, rate, node) {
-    this.stop(); const t = this.token; if (node) node.classList.add('playing');
+    RX.hush(); this.stop(); const t = this.token; if (node) node.classList.add('playing');
     await this.clip(c, rate);
     if (t === this.token && node) node.classList.remove('playing');
     return t === this.token;
   },
   async list(items, o = {}) {
-    this.stop(); const t = this.token; const gap = o.gap == null ? 650 : o.gap;
+    RX.hush(); this.stop(); const t = this.token; const gap = o.gap == null ? 650 : o.gap;
     for (let i = o.from || 0; i < items.length; i++) {
       if (t !== this.token) return false;
       o.onLine && o.onLine(i);
@@ -629,10 +647,83 @@ function gradeStats(g) {
   gr.units.forEach(u => { lessonList(u).forEach(x => { total++; const p = Store.get(x.L.id); if (p && p.done) { done++; stars += p.stars || 0; } }); });
   return { done, total, stars };
 }
-function confetti() {
-  const c = document.createElement('div'); c.className = 'confetti'; const cols = ['#FF6B4A', '#FFC233', '#2F7BEA', '#1FA463', '#A855F7'];
-  for (let i = 0; i < 60; i++) { const s = document.createElement('i'); s.style.left = Math.random() * 100 + 'vw'; s.style.background = cols[i % 5]; s.style.animationDelay = Math.random() * .6 + 's'; c.appendChild(s); }
-  document.body.appendChild(c); setTimeout(() => c.remove(), 2600);
+function confetti(big) {
+  const c = document.createElement('div'); c.className = 'confetti'; const cols = ['#FF6B4A', '#FFC233', '#2F7BEA', '#1FA463', '#A855F7', '#FF5FA2', '#2DD4BF'];
+  const n = big ? 130 : 60;
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement('i'); s.style.left = Math.random() * 100 + 'vw'; s.style.background = cols[i % cols.length]; s.style.animationDelay = Math.random() * (big ? .9 : .6) + 's';
+    if (big) { s.className = 'd ' + ['', 'c', 's'][i % 3]; s.style.setProperty('--dx', (Math.random() * 30 - 15) + 'vw'); s.style.setProperty('--rot', (Math.random() * 900 - 450) + 'deg'); }
+    c.appendChild(s);
+  }
+  document.body.appendChild(c); setTimeout(() => c.remove(), big ? 3600 : 2600);
+}
+/* ---------- Audio reactions (v1.3) ----------
+   Right answer: a bright chime and a short word of praise. Wrong answer: a soft, friendly sound and a word of
+   encouragement. A task finished well: fanfare, confetti, a big badge and a spoken celebration.
+   The sounds are made by the app (Web Audio); the spoken words are short clips in sfx/reactions.js.
+   Teachers can switch all reaction sounds off with the 🔔 button. */
+const RX_AR = { 'Amazing! You did it!': 'رائع! لقد نجحت!', 'Hurray! Well done!': 'مرحى! أحسنت!', 'Fantastic work!': 'عمل رائع!', "You're a star!": 'أنت نجم!', 'Congratulations!': 'تهانينا!', "Wow! You're amazing!": 'واو! أنت مذهل!' };
+const RX = {
+  bufs: {}, last: {}, src: null, g: null,
+  on() { return Store.data.settings.rx !== false; },
+  out() { const c = actx(); if (!c) return null; if (!this.g) { this.g = c.createGain(); this.g.gain.value = 0.9; this.g.connect(c.destination); } return c; },
+  tone(f, t, d, o = {}) {
+    const c = this.out(); if (!c) return;
+    try {
+      const t0 = c.currentTime + t, os = c.createOscillator(), g = c.createGain(), v = o.v || 0.2;
+      os.type = o.type || 'sine'; os.frequency.setValueAtTime(f, t0); if (o.to) os.frequency.exponentialRampToValueAtTime(o.to, t0 + d);
+      g.gain.setValueAtTime(0.0001, t0); g.gain.exponentialRampToValueAtTime(v, t0 + (o.a || 0.008)); g.gain.exponentialRampToValueAtTime(0.0001, t0 + d);
+      os.connect(g); g.connect(this.g); os.start(t0); os.stop(t0 + d + 0.05);
+    } catch (e) {}
+  },
+  bell(f, t, d, v) { this.tone(f, t, d, { v }); this.tone(f * 2.01, t, d * 0.6, { v: v * 0.3 }); this.tone(f * 3.01, t, d * 0.35, { v: v * 0.1 }); },
+  sfx(kind) {
+    if (!this.on() || !this.out()) return;
+    if (kind === 'right') { this.bell(1046.5, 0, 0.32, 0.15); this.bell(1568, 0.1, 0.55, 0.15); }
+    else if (kind === 'wrong') { this.tone(330, 0, 0.2, { type: 'triangle', v: 0.17, to: 290 }); this.tone(247, 0.18, 0.34, { type: 'triangle', v: 0.17, to: 208 }); }
+    else if (kind === 'try') { this.tone(392, 0, 0.24, { type: 'triangle', v: 0.14 }); this.tone(523.25, 0.17, 0.42, { type: 'triangle', v: 0.14 }); }
+    else if (kind === 'celeb') {
+      [523.25, 659.25, 783.99].forEach((f, i) => this.bell(f, i * 0.11, 0.3, 0.13));
+      [523.25, 659.25, 783.99, 1046.5].forEach(f => this.tone(f, 0.34, 1.25, { type: 'triangle', v: 0.06, a: 0.02 }));
+      this.bell(1046.5, 0.34, 1.0, 0.13);
+      for (let i = 0; i < 10; i++) this.tone(1900 + Math.random() * 2300, 0.5 + i * 0.085, 0.16, { v: 0.045 });
+    }
+  },
+  load(kind, i) {
+    const k = kind + i; if (this.bufs[k]) return this.bufs[k];
+    const c = this.out(), it = window.LSP_RX && window.LSP_RX[kind] && window.LSP_RX[kind][i]; if (!c || !it) return Promise.resolve(null);
+    return this.bufs[k] = new Promise(res => {
+      try { const bin = atob(it.a), u = new Uint8Array(bin.length); for (let j = 0; j < bin.length; j++) u[j] = bin.charCodeAt(j);
+        const pr = c.decodeAudioData(u.buffer, res, () => res(null)); if (pr && pr.catch) pr.catch(() => res(null)); } catch (e) { res(null); }
+    });
+  },
+  warm() { if (this.warmed || !window.LSP_RX) return; this.warmed = true; Object.keys(window.LSP_RX).forEach(k => window.LSP_RX[k].forEach((_, i) => this.load(k, i))); },
+  pick(kind) { const L = (window.LSP_RX && window.LSP_RX[kind]) || []; if (!L.length) return -1; let i; do { i = Math.floor(Math.random() * L.length); } while (L.length > 1 && i === this.last[kind]); this.last[kind] = i; return i; },
+  hush() { if (this.src) { try { this.src.stop(); } catch (e) {} this.src = null; } },
+  async say(kind, i) {
+    if (!this.on()) return; if (i == null) i = this.pick(kind); if (i < 0) return;
+    const b = await this.load(kind, i); const c = this.out(); if (!b || !c) return;
+    this.hush(); const s = c.createBufferSource(); s.buffer = b; s.connect(this.g); this.src = s;
+    return new Promise(res => { s.onended = () => { if (this.src === s) this.src = null; res(); }; try { s.start(); } catch (e) { res(); } setTimeout(res, b.duration * 1000 + 250); });
+  },
+  // a right or wrong answer: sound, then a short spoken reaction; resolves when it has finished
+  async answer(ok) { if (!this.on()) return; AU.stop(); this.sfx(ok ? 'right' : 'wrong'); await sleep(ok ? 280 : 420); await this.say(ok ? 'right' : 'wrong'); },
+  async praise() { if (!this.on()) return; this.sfx('right'); await sleep(280); await this.say('right'); },
+  async encourage() { if (!this.on()) return; this.sfx('try'); await sleep(450); await this.say('try'); },
+  // a finished task with score r (0..1): celebrate from `hi`, praise from `mid`, otherwise encourage
+  done(r, hi = 0.9, mid = 0.7, msg) { if (this.on()) AU.stop(); return r >= hi ? celebrate(msg) : r >= mid ? this.praise() : this.encourage(); }
+};
+// msg = [English, Arabic] for the badge; without it the badge shows the spoken celebration
+function celebrate(msg, stars) {
+  confetti(true);
+  const i = RX.pick('celeb'), said = i >= 0 ? window.LSP_RX.celeb[i].t : 'Well done!';
+  const m = msg || [said, RX_AR[said] || 'أحسنت!'];
+  $$('.celebrate').forEach(x => x.remove());
+  const d = document.createElement('div'); d.className = 'celebrate'; d.setAttribute('role', 'status');
+  d.innerHTML = `<div class="cbadge"><span class="cstar">🏆</span>${stars ? `<span class="cst">${'★'.repeat(stars)}</span>` : ''}<b>${esc(m[0])}</b><span class="ar">${esc(m[1])}</span></div>`;
+  document.body.appendChild(d); setTimeout(() => d.classList.add('out'), 2300); setTimeout(() => d.remove(), 2800);
+  if (!RX.on()) return Promise.resolve();
+  RX.sfx('celeb'); return sleep(700).then(() => RX.say('celeb', i));
 }
 function modal(html, onOk, okLabel) {
   const m = document.createElement('div'); m.className = 'modal';
@@ -698,12 +789,14 @@ function render() {
     <span class="sp"></span>
     ${g ? `<button class="chip ${arOn(g) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     <button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>
+    <button class="chip ${RX.on() ? 'on' : ''}" id="rxT" title="Sounds for right and wrong answers" aria-pressed="${RX.on()}">${RX.on() ? '🔔' : '🔕'} <span class="hide-sm">Sounds</span></button>
     <button class="chip" data-go="home" title="Change student">👤 ${esc(me.name)}${me.cls ? ' · ' + esc(me.cls) : ''}</button>
     <button class="iconbtn" data-go="teacher" title="Teacher dashboard" aria-label="Teacher dashboard">📊</button>
   </div></header>
   <div class="wrap" id="main"></div>`;
   $$('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
   const ar = $('#arT'); if (ar) ar.onclick = () => { const s = Store.data.settings.ar = Store.data.settings.ar || {}; s[g] = !arOn(g); Store.save(); document.body.classList.toggle('noar', !arOn(g)); ar.classList.toggle('on', arOn(g)); };
+  $('#rxT').onclick = () => { const on = !RX.on(); Store.data.settings.rx = on; Store.save(); const b = $('#rxT'); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.firstChild.textContent = on ? '🔔 ' : '🔕 '; if (on) RX.praise(); else RX.hush(); };
   $('#cmT').onclick = () => { Store.data.settings.classmode = !Store.data.settings.classmode; Store.save(); const keep = Object.assign({}, S); render(); };
   (VIEWS[S.view] || VIEWS.home)($('#main'));
 }
@@ -855,7 +948,7 @@ VIEWS.listen = m => {
   const next = $('#nextB', m);
   next.onclick = () => {
     if (S.step < steps.length - 1) { S.step++; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); }
-    else { const r = S.best || 0; Store.rec(L.id, { done: true, stars: starsFor(r), best: r }); confetti(); go('unit', { g: S.g, u: S.u }); }
+    else { const r = S.best || 0; Store.rec(L.id, { done: true, stars: starsFor(r), best: r }); celebrate(['Lesson complete!', 'أنهيت الدرس!'], starsFor(r)); go('unit', { g: S.g, u: S.u }); }
   };
   const lines = L.script;
   if (S.step === 0) {
@@ -964,7 +1057,7 @@ function renderTasks(P, L) {
     S.checked = true; S.everChecked = true; S.warned = false;
     const r = S.res.filter(Boolean).length / tasks.length; S.best = Math.max(S.best || 0, r);
     Store.rec(L.id, { stars: starsFor(S.best), best: S.best });
-    if (r >= .9) confetti();
+    RX.done(r, .9, .7, r === 1 ? ['Perfect score!', 'علامة كاملة!'] : null);
     renderTasks(P, L); P.scrollIntoView({ block: 'start' });
   };
   const rt = $('#retry', P);
@@ -979,7 +1072,7 @@ VIEWS.speak = m => {
   const lines = L.model;
   $('#nextB', m).onclick = () => {
     if (S.step < steps.length - 1) { S.step++; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); }
-    else { const prev = Store.get(L.id) || {}; const r = Math.max(S.sbest || 0, prev.best || 0); Store.rec(L.id, { done: true, stars: Math.max(starsFor(r), S.roleDone ? 1 : 0), best: r }); confetti(); go('unit', { g: S.g, u: S.u }); }
+    else { const prev = Store.get(L.id) || {}; const r = Math.max(S.sbest || 0, prev.best || 0); Store.rec(L.id, { done: true, stars: Math.max(starsFor(r), S.roleDone ? 1 : 0), best: r }); celebrate(['Lesson complete!', 'أنهيت الدرس!'], Math.max(starsFor(r), S.roleDone ? 1 : 0)); go('unit', { g: S.g, u: S.u }); }
   };
   if (S.step === 0) {
     P.innerHTML = instr(1, 'model') + `<div class="ctrls" style="justify-content:flex-start;margin-bottom:10px"><button class="btn band" id="pA">▶ Play conversation</button><span class="seg" id="spd"><button data-r="0.8">🐢 Slow</button><button data-r="1" class="on">Normal</button></span><button class="btn sm sec" id="sA">⏹</button></div>
@@ -1049,7 +1142,7 @@ function renderSound(P, L) {
   }
   const Q = S.sq;
   if (Q.k >= Q.q.length) {
-    const r = Q.res.filter(Boolean).length / Q.q.length; S.sbest = Math.max(S.sbest || 0, r); Store.rec(L.id, { stars: starsFor(r), best: r }); if (r >= .9) confetti();
+    const r = Q.res.filter(Boolean).length / Q.q.length; S.sbest = Math.max(S.sbest || 0, r); Store.rec(L.id, { stars: starsFor(r), best: r }); if (!Q.cel) { Q.cel = true; RX.done(r, .9, .7, r >= .9 ? ['Super ears!', 'أذنان رائعتان!'] : null); }
     P.innerHTML = instr(3, 'sound') + `<div class="scorebox"><span class="big">${Q.res.filter(Boolean).length}/${Q.q.length}</span>${starHTML(starsFor(r))}<span style="flex:1">${r >= .9 ? 'Super ears! 👂✨' : r >= .7 ? 'Great job! Keep practising.' : 'These sounds are tricky. Listen to the pairs again and try once more.'}</span><button class="btn sec" id="againQ">↺ Try again</button></div>`;
     $('#againQ', P).onclick = () => { S.sq = null; renderSound(P, L); };
     return;
@@ -1069,7 +1162,7 @@ function renderSound(P, L) {
     b.classList.add(c.ok ? 'right' : 'wrong'); if (!c.ok) $$('[data-ch]', P)[choices.findIndex(x => x.ok)].classList.add('right');
     $('#qfb', P).innerHTML = c.ok ? '<span style="color:var(--ok)">✓ Correct!</span>' : `<span style="color:var(--bad)">✗ It was “${esc(choices.find(x => x.ok).label)}”.</span>` + (s.type === 'sort' ? ` <span class="muted">(${esc(s.items[it.i].text)})</span>` : '');
     Q.res.push(c.ok);
-    await sleep(c.ok ? 900 : 1900);
+    await Promise.all([sleep(c.ok ? 900 : 1900), RX.answer(c.ok)]);
     if (S.sq !== Q) return; Q.k++; Q.answered = false; renderSound(P, L); if (Q.k < Q.q.length) playQ();
   });
 }
@@ -1098,7 +1191,7 @@ function renderRole(P, L) {
       })
     } : clipOf(l));
     const ok = await AU.list(items, { gap: 350, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } } });
-    if (ok) { S.roleDone = true; $('#rmsg', P).innerHTML = '🎉 Well done! Now swap roles and try again.'; }
+    if (ok) { S.roleDone = true; $('#rmsg', P).innerHTML = '🎉 Well done! Now swap roles and try again.'; RX.praise(); }
   };
 }
 
@@ -1130,7 +1223,7 @@ VIEWS.game = m => {
   }
   const st = S.st;
   const finish = () => {
-    const r = st.res.filter(Boolean).length / st.rounds.length; Store.rec(u.id + S.game, { stars: starsFor(r), best: r, done: true }); if (r >= .7) confetti();
+    const r = st.res.filter(Boolean).length / st.rounds.length; Store.rec(u.id + S.game, { stars: starsFor(r), best: r, done: true }); if (!st.cel) { st.cel = true; RX.done(r, .7, .5, r >= .7 ? [r === 1 ? 'Perfect game!' : 'Great game!', r === 1 ? 'لعبة مثالية!' : 'لعبة رائعة!'] : null); }
     P.innerHTML = `<div class="card" style="text-align:center"><h2 style="font-size:2rem">🏆 ${st.score} points</h2><p>${st.res.filter(Boolean).length} of ${st.rounds.length} correct</p>${starHTML(starsFor(r))}
       <div class="ctrls" style="margin-top:14px"><button class="btn band" id="again">↺ Play again</button><button class="btn sec" id="back">Back to unit</button></div></div>`;
     $('#again', P).onclick = () => go('game', { g: S.g, u: S.u, game: S.game });
@@ -1139,7 +1232,7 @@ VIEWS.game = m => {
   if (st.k >= st.rounds.length) return finish();
   const R = st.rounds[st.k];
   const hud = `<div class="hud"><span>Round ${st.k + 1}/${st.rounds.length}</span><span>⭐ ${st.score}</span><span>🔥 ${st.streak}</span></div>`;
-  const nextRound = async ok => { st.res.push(ok); if (ok) { st.streak++; st.score += 10 + Math.min(st.streak - 1, 5) * 2; } else st.streak = 0; await sleep(ok ? 900 : 2000); if (S.st !== st) return; st.k++; st.locked = false; VIEWS.game(m); };
+  const nextRound = async (ok, after) => { st.res.push(ok); if (ok) { st.streak++; st.score += 10 + Math.min(st.streak - 1, 5) * 2; } else st.streak = 0; const t0 = performance.now(); await RX.answer(ok); if (after && S.st === st) await after(); const left = (ok ? 900 : 2000) - (performance.now() - t0); if (left > 0) await sleep(left); if (S.st !== st) return; st.k++; st.locked = false; VIEWS.game(m); };
   if (S.game === 'catch' || S.game === 'who') {
     const isC = S.game === 'catch';
     const play = () => isC ? AU.one(clipOf(R.v)) : AU.one(clipOf(R.x));
@@ -1161,7 +1254,7 @@ VIEWS.game = m => {
     $('#sp', P).onclick = () => AU.stop();
     $$('[data-k]', P).forEach(b => b.onclick = () => { if (st.locked) return; const k = +b.dataset.k, p = R.pick.indexOf(k); if (p >= 0) R.pick.splice(p, 1); else R.pick.push(k); VIEWS.game(m); });
     $('#rs', P).onclick = () => { if (st.locked) return; R.pick = []; VIEWS.game(m); };
-    $('#ck', P).onclick = () => { if (st.locked) return; st.locked = true; const ok = R.pick.join() === '0,1,2,3'.slice(0, R.seg.length * 2 - 1); $('#fb', P).innerHTML = ok ? '<span style="color:var(--ok)">✓ Perfect order!</span>' : '<span style="color:var(--bad)">✗ Not quite. Listen to the right order…</span>'; if (!ok) AU.list(R.seg.map(clipOf), { gap: 400 }); nextRound(ok); };
+    $('#ck', P).onclick = () => { if (st.locked) return; st.locked = true; const ok = R.pick.join() === '0,1,2,3'.slice(0, R.seg.length * 2 - 1); $('#fb', P).innerHTML = ok ? '<span style="color:var(--ok)">✓ Perfect order!</span>' : '<span style="color:var(--bad)">✗ Not quite. Listen to the right order…</span>'; nextRound(ok, ok ? null : () => AU.list(R.seg.map(clipOf), { gap: 400 })); };
   }
 };
 
@@ -1185,7 +1278,7 @@ VIEWS.check = m => {
   const C = S.ck;
   if (C.k >= C.items.length) {
     const sc = C.items.filter((it, i) => C.ans[i] === it.ans).length, r = sc / C.items.length;
-    Store.rec(u.id + 'check', { stars: starsFor(r), best: r, done: true }); if (r >= .7) confetti();
+    Store.rec(u.id + 'check', { stars: starsFor(r), best: r, done: true }); if (!C.cel) { C.cel = true; RX.done(r, .7, .7, ['You passed the Unit Check!', 'نجحت في اختبار الوحدة!']); }
     P.innerHTML = `<div class="scorebox"><span class="big">${Math.round(r * 100)}%</span>${starHTML(starsFor(r))}<span style="flex:1">${sc} of ${C.items.length} correct. ${r >= .7 ? 'You passed the Unit Check! 🎉' : 'Practise the unit lessons and try again.'}</span>
       ${r >= .7 ? '<button class="btn" id="cert">🏅 My certificate</button>' : ''}<button class="btn sec" id="again">↺ Try again</button></div>
       <div class="card"><h3>Review</h3>${C.items.map((it, i) => `<div class="task ${C.ans[i] === it.ans ? 'ok' : 'no'}" style="margin:10px 0 0"><div class="q"><span class="num">${i + 1}</span>${esc(it.q)} <button class="btn sm sec" data-rp="${i}">🔊</button></div><div class="opts">${it.opts.map((o, j) => `<span class="opt ${j === it.ans ? 'right' : (C.ans[i] === j ? 'wrong' : '')}"><span class="l">${LET[j]})</span>${esc(o)}</span>`).join('')}</div>${it.kind !== 'word' ? `<div class="muted" style="margin-top:6px;font-size:.9rem">“${esc(it.clip.text)}”</div>` : ''}</div>`).join('')}</div>`;
@@ -1242,6 +1335,7 @@ VIEWS.teacher = m => {
     <li><b>Listening lessons (6 steps):</b> Words → Predict → Listen (twice) → Tasks → Script → Speak. The script opens only after the tasks are checked.</li>
     <li><b>Speaking lessons (6 steps):</b> Listen → Useful language → Sound Check (pronunciation) → Shadowing → Role-play → Your turn + self-check.</li>
     <li><b>Games and Unit Check:</b> three games per unit recycle the unit audio; the Unit Check gives a certificate at 70%.</li>
+    <li><b>Sounds (🔔):</b> a chime and a spoken word of praise for right answers, a soft sound and a word of encouragement for wrong ones, and a celebration (fanfare, confetti, trophy) when a task is finished well. Press 🔔 to switch them off, for example during a quiet test.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
     <li><b>Arabic support (ع):</b> on by default in Grades 3–4 and off in Grades 5–6. Students can switch it for their grade.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
@@ -1334,11 +1428,11 @@ const Warm = {
     try { const o = c.createOscillator(), g = c.createGain(); o.frequency.value = 40; g.gain.value = 0.00001; o.connect(g); g.connect(c.destination); o.start(); this.on = true; } catch (e) {}
   }
 };
-document.addEventListener('pointerdown', () => Warm.start(), { capture: true });
+document.addEventListener('pointerdown', () => { Warm.start(); RX.warm(); }, { capture: true });
 document.addEventListener('keydown', () => Warm.start(), { capture: true });
 document.addEventListener('visibilitychange', () => { if (!ACX) return; try { document.hidden ? ACX.suspend() : ACX.resume(); } catch (e) {} });
 AU.range = function (c, a, b, rate) {
-  this.stop(); const tok = this.token, el = this.el, SPR = window.LSP_SPRITES, sp = SPR && SPR[c.src];
+  RX.hush(); this.stop(); const tok = this.token, el = this.el, SPR = window.LSP_SPRITES, sp = SPR && SPR[c.src];
   const base = sp ? sp[1] : 0, url = sp ? sp[0] : 'audio/' + c.src;
   this.cur = c.src; this.base = base; el.onerror = null; el.onended = null;
   return new Promise(res => {
@@ -1631,7 +1725,7 @@ function shFeedback(box, l, labels, mode, rec, rerender) {
       html += `<div class="fbtop"><div class="fbstars" role="img" aria-label="${J.stars} of 3 stars">${'★'.repeat(J.stars)}<span class="off">${'★'.repeat(3 - J.stars)}</span></div><div><h3 style="margin:0">${en}</h3><span class="ar">${ar}</span></div><div class="fbscore">${J.score}%</div></div>
       <div class="crit">${J.rows.map(r => `<div class="crow g${r.g}"><span class="ci">${['🔴', '🟡', '✅'][r.g]}</span><b>${r.title}<span class="ar ar-block" style="font-weight:600;font-size:.8rem">${CRIT_AR[r.k]}</span></b><span class="cd">${esc(r.d)}${r.k === 'speed' ? bars(r) : ''}</span></div>`).join('')}</div>
       ${J.top ? `<div class="tipbox">💡 Next time: ${esc(J.top.en)}<span class="ar ar-block">${esc(J.top.ar)}</span></div>` : `<div class="tipbox">🏆 Great work! Try the next line, or a faster speed.<span class="ar ar-block">عمل رائع! جرّب الجملة التالية أو سرعة أعلى.</span></div>`}`;
-      if (!F.scored) { F.scored = true; const d = shData(); (l.ids || [l.audio]).forEach(a => { const o = d.lines[a] || (d.lines[a] = { lvl: -1, n: 0 }); o.best = Math.max(o.best || 0, J.score); }); Store.save(); }
+      if (!F.scored) { F.scored = true; if (J.stars === 3) celebrate(null, 3); else if (J.stars === 2) RX.praise(); else RX.encourage(); const d = shData(); (l.ids || [l.audio]).forEach(a => { const o = d.lines[a] || (d.lines[a] = { lvl: -1, n: 0 }); o.best = Math.max(o.best || 0, J.score); }); Store.save(); }
     }
     let mw = F.model.words;
     if (md === 'echo' && F.A && F.A.segs.length) { const off = F.A.segs[0][0] - mw[0][0]; mw = mw.map(w => [w[0] + off, w[1] + off]); }
@@ -1645,7 +1739,7 @@ function shFeedback(box, l, labels, mode, rec, rerender) {
     <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn sm ok" id="sv">Save</button><span class="muted" id="svm"></span></div></div></div>`;
   box.innerHTML = html;
   const sel = {}; $$('.selfc', box).forEach(b => b.onclick = () => { sel[b.dataset.k] = !sel[b.dataset.k]; b.classList.toggle('on', sel[b.dataset.k]); });
-  $('#sv', box).onclick = () => { const good = sel.r && sel.s && sel.f; shSave(l.audio, { lvl: mode, good: good || (shData().lines[l.audio] || {}).good }); $('#svm', box).textContent = good && mode >= 2 ? '⭐ Line mastered!' : 'Saved.'; if (good && mode >= 2) confetti(); setTimeout(rerender, 900); };
+  $('#sv', box).onclick = () => { const good = sel.r && sel.s && sel.f; shSave(l.audio, { lvl: mode, good: good || (shData().lines[l.audio] || {}).good }); $('#svm', box).textContent = good && mode >= 2 ? '⭐ Line mastered!' : 'Saved.'; if (good && mode >= 2) celebrate(['Line mastered!', 'أتقنت الجملة!']); setTimeout(rerender, 900); };
   if (url) {
     const mine = new Audio(url);
     $('#mine', box).onclick = () => { AU.stop(); mine.currentTime = 0; mine.play().catch(() => {}); };
@@ -1701,7 +1795,7 @@ function shFullRun(B, lines, m) {
     lines.forEach((l, i) => { const wt = wordTimes(l.audio, l.text); wt.times.forEach((w, j) => { if (w) { mw.push([starts[i] + w[0] / S.rate, starts[i] + w[1] / S.rate]); labels.push(wt.ws[j]); } }); });
     S.fb = { blob, model: { words: mw }, A: blob ? await analyse(blob) : null };
     shFeedback($('#fb', B), { audio: lines[0].audio, ids: lines.map(x => x.audio), text: lines.map(x => x.text).join(' '), sp: lines[0].sp }, labels, 4, rec, () => VIEWS.shadow(m));
-    const sv = $('#sv', B); sv.onclick = () => { const good = $$('.selfc.on', B).length === 3; lines.forEach(l => shSave(l.audio, { lvl: 4, good: good || (shData().lines[l.audio] || {}).good })); $('#svm', B).textContent = good ? '⭐ All lines mastered!' : 'Saved.'; if (good) confetti(); setTimeout(() => VIEWS.shadow(m), 900); };
+    const sv = $('#sv', B); sv.onclick = () => { const good = $$('.selfc.on', B).length === 3; lines.forEach(l => shSave(l.audio, { lvl: 4, good: good || (shData().lines[l.audio] || {}).good })); $('#svm', B).textContent = good ? '⭐ All lines mastered!' : 'Saved.'; if (good) celebrate(['All lines mastered!', 'أتقنت كل الجمل!']); setTimeout(() => VIEWS.shadow(m), 900); };
     const bb = $('#both', B); if (bb) bb.remove();
     const md = $('#mod', B); if (md) md.onclick = () => AU.list(lines.map(clipOf), { rate: S.rate, gap: 500 });
     goB.disabled = false; goB.textContent = '↻ Try again';
