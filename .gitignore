@@ -1,0 +1,15 @@
+node_modules/
+dist/
+build-out/
+*.log
+.DS_Store
+.env
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+ios/App/build/
+ios/DerivedData/
+ios/App/Pods/
+www/.lsp-build
