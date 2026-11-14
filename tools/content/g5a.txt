@@ -1,0 +1,489 @@
+#GRADE 5
+level: A2
+band: Forest
+speed: 0.96
+
+@UNIT 1 | Free Time and Hobbies | وقت الفراغ والهوايات | 🎨
+goals: I can talk about my hobbies and interests. | I can make, accept and refuse suggestions. | I can understand an interview and a simple plan.
+
+@LISTEN 1 | Hobby Week | Listening for key details about people | الاستماع إلى التفاصيل الأساسية عن الأشخاص
+kagan: Timed Pair Share | Corners
+vocab: hobby | هواية | 🎯 | My hobby is taking photos.
+vocab: free time | وقت الفراغ | ⏳ | What do you do in your free time?
+vocab: camera | كاميرا | 📷 | My uncle gave me an old camera.
+vocab: be into | يهتم كثيرًا بـ | 💙 | I'm really into cooking.
+vocab: model | مجسّم | 🏗️ | I'm building a model of a tower.
+vocab: adventure | مغامرة | 🗺️ | I love adventure stories.
+predict: Four students talk about their hobbies during Hobby Week. What hobbies are popular with boys your age? |
+tip: Each speaker gives three things: the hobby, how it started, and one detail. Make three notes for each person. | يذكر كل متحدث ثلاثة أشياء: الهواية، وكيف بدأت، وتفصيلًا عنها. دوّن ثلاث ملاحظات لكل شخص.
+script:
+NARRATOR: It's Hobby Week at school. Four students talk about their hobbies.
+YUSUF: I'm Yusuf. In my free time, I like taking photos. I started two years ago, when my uncle gave me his old camera. My favorite photos are of the birds in our garden.
+ADAM: Hi, I'm Adam. I'm really into cooking. Every Friday, I help my mom make lunch for the whole family. Last week, I made chicken kabsa on my own, and everybody loved it!
+BEN: Hello! I'm Ben. My hobby is building models. At the moment, I'm making a model of the Kingdom Centre in Riyadh. It has more than three hundred small pieces, so it's taking a long time.
+SAMI: I'm Sami. I love reading, especially adventure stories. I usually read for thirty minutes before bed. This month, I'm reading a book about a boy who sails around the world.
+NARRATOR: Which hobby do you like best?
+end
+mcq: Who gave Yusuf his first camera? | *his uncle | his father | his teacher | his grandpa
+mcq: What did Adam cook on his own last week? | *chicken kabsa | pizza | fish | pancakes
+mcq: Why is Ben's model taking a long time? | *It has more than three hundred pieces. | He's very busy at school. | He lost some pieces. | It's his first model.
+mcq: What is Sami's book about? | *a boy who sails around the world | a boy who builds a tower | birds in a garden | a famous cook
+tf: Yusuf likes taking photos of birds. | T
+tf: Sami reads for an hour before bed. | F
+gap: Yusuf started his hobby ___ years ago. | two, 2
+gap: Ben is making a model of the Kingdom ___ in Riyadh. | Centre, Center
+speak: Tell your group about your hobby: what it is, how you started and why you like it. | My hobby is ___. I started when ___. I like it because ___.
+teach: Before listening, students rank four hobbies (photography, cooking, model building, reading) from most to least interesting. After listening, they re-rank and explain any change.
+
+@LISTEN 2 | A Young Chess Champion | Listening to an interview | الاستماع إلى مقابلة
+kagan: Three-Step Interview | Numbered Heads Together
+vocab: champion | بطل | 🏆 | He's the junior chess champion.
+vocab: championship | بطولة | 🥇 | He won the national championship.
+vocab: practice | يتدرّب | ♟️ | He practices for two hours a day.
+vocab: final | المباراة النهائية | 🏁 | The final lasted three hours.
+vocab: give up | يستسلم | 🏳️ | I didn't give up.
+vocab: patient | صبور | ⏳ | Be patient and learn from your mistakes.
+predict: A radio host interviews a young chess champion. What questions do you think she asks him? |
+tip: In interviews, the question tells you what comes next. Read the task questions first and wait for the host's matching question. | في المقابلات يخبرك السؤال بما سيأتي بعده. اقرأ الأسئلة أولًا وانتظر سؤال المذيعة المطابق.
+script:
+WOMAN[Radio Host]: Welcome back to Young Stars Radio. With me today is Faris. He's eleven years old, and last month he won the National Junior Chess Championship. Congratulations, Faris!
+YUSUF[Faris]: Thank you! I'm still very excited.
+WOMAN[Radio Host]: When did you start playing chess?
+YUSUF[Faris]: When I was six. My grandfather taught me. We played every evening after dinner.
+WOMAN[Radio Host]: How many hours do you practice now?
+YUSUF[Faris]: About two hours a day on school days, and four hours at the weekend. I also solve chess puzzles on my tablet.
+WOMAN[Radio Host]: That's a lot! What was the hardest game in the championship?
+YUSUF[Faris]: The final. It lasted nearly three hours! I was losing at first, but I didn't give up.
+WOMAN[Radio Host]: What advice do you have for young players?
+YUSUF[Faris]: Be patient, and learn from your mistakes. Every time I lose, I learn something new.
+WOMAN[Radio Host]: Wonderful advice. Good luck in the Asian Championship next year!
+end
+mcq: How old is Faris? | *eleven | six | twelve | nine
+mcq: Who taught Faris to play chess? | *his grandfather | his father | his teacher | his older brother
+mcq: How long does he practice on school days? | *about two hours | about four hours | about three hours | about one hour
+mcq: What does Faris say about the final? | *He was losing at first, but he didn't give up. | It was very easy. | It lasted one hour. | He lost the game.
+tf: Faris thinks you should never make mistakes. | F
+tf: Faris solves chess puzzles on his tablet. | T
+gap: The final lasted nearly ___ hours. | three, 3
+gap: Next year, Faris is playing in the ___ Championship. | Asian
+speak: Interview your partner about something he is good at. | When did you start ___? How often do you practice? What advice do you have?
+teach: Play the radio host with a real student "champion" from your class (football, Quran recitation, drawing). Real interviews make the language memorable.
+
+@LISTEN 3 | Planning Club Day | Completing notes | إكمال الملاحظات
+kagan: RallyCoach | Numbered Heads Together
+vocab: plan | خطة | 📋 | Let's finish the plan.
+vocab: opening | الافتتاح | 🎉 | The opening is at eight o'clock.
+vocab: principal | مدير المدرسة | 👨‍💼 | The principal is going to give a speech.
+vocab: speech | كلمة / خطاب | 🎤 | He gives a short speech.
+vocab: competition | مسابقة | 🏅 | After the break, there's a competition.
+vocab: prize | جائزة | 🎁 | The best club wins a prize.
+predict: A teacher and two students are planning a school Club Day. What do they need to plan? |
+tip: Before listening, look at the gaps. Is the missing word a time, a number, a place or a name? | قبل الاستماع انظر إلى الفراغات: هل الكلمة الناقصة وقت أم عدد أم مكان أم اسم؟
+script:
+MR_HASSAN: Okay, team. We need to finish the plan for Club Day next Tuesday. Let's start with the times.
+SAMI: The opening is at eight o'clock in the school hall. The principal is going to give a short speech.
+MR_HASSAN: Good. What's next?
+BEN: From eight thirty to ten, students can visit the clubs. The Art Club is in Room 12, and the Science Club is in the lab.
+MR_HASSAN: And the Chess Club?
+SAMI: The Chess Club is in the library this year, because Room 5 is too small.
+MR_HASSAN: Right. At ten o'clock, there's a break. Ben, did you order the snacks?
+BEN: Yes, I did. We have juice and sandwiches for two hundred students.
+MR_HASSAN: Excellent. After the break, there's the big competition. Each club has fifteen minutes to show its best work.
+SAMI: And at the end, we give the prizes. The best club wins a trip to the science museum!
+MR_HASSAN: Perfect. I think we're ready.
+end
+mcq: When is Club Day? | *next Tuesday | next Thursday | this Tuesday | next Sunday
+mcq: Who gives a speech at the opening? | *the principal | Mr. Hassan | Sami | the science teacher
+mcq: Why is the Chess Club in the library? | *Room 5 is too small. | The library is quiet. | The lab is busy. | The hall is closed.
+mcq: What does the best club win? | *a trip to the science museum | a new computer | two hundred riyals | free snacks
+tf: The Science Club is in Room 12. | F
+tf: Ben ordered snacks for two hundred students. | T
+gap: Students can visit the clubs from eight thirty to ___ o'clock. | ten, 10
+gap: Each club has ___ minutes to show its best work. | fifteen, 15
+speak: Plan a class event with your group. Agree on the time, the place and one activity. | Let's start at ___. The ___ is in ___. After that, ___.
+teach: Give students a blank timetable outline before the second listening. Completing it is real note-taking practice for later exams such as STEP and IELTS.
+
+@SPEAK 1 | I'm Really Into Football | Talking about hobbies and interests | التحدث عن الهوايات والاهتمامات
+kagan: Find Someone Who | Inside-Outside Circle
+model:
+ADAM: Ben, what do you do in your free time?
+BEN: I'm really into football. I play with a club near my house.
+ADAM: Cool! How often do you play?
+BEN: Three times a week. What about you? What are you interested in?
+ADAM: I'm interested in cooking. I love looking at recipe books and trying new food.
+BEN: That's great! What's the best thing you can cook?
+ADAM: I make a really good pasta. You should come and try it!
+BEN: I'd love to! Maybe I can teach you some football tricks too.
+end
+roles: ADAM | BEN
+chunks: What do you do in your free time? = ماذا تفعل في وقت فراغك؟ | I'm really into ___. = أنا مهتم جدًا بـ ___. | I'm interested in ___. = أنا مهتم بـ ___. | How often do you ___? = كم مرة ___؟ | I'd love to! = يسعدني ذلك!
+sound: sort | Short /ʊ/ like "book" or long /uː/ like "moon"? | /ʊ/ book ; /uː/ moon | /ʊ/ is short with relaxed lips (book, good). /uː/ is long — push your lips forward, as if you're blowing out a candle (moon, food). | الصوت /ʊ/ قصير والشفتان مرتخيتان كما في book وgood، أما /uː/ فطويل مع دفع الشفتين إلى الأمام كأنك تطفئ شمعة كما في moon وfood.
+item: football | /ʊ/
+item: food | /uː/
+item: cook | /ʊ/
+item: school | /uː/
+item: look | /ʊ/
+item: pool | /uː/
+item: good | /ʊ/
+item: soon | /uː/
+task: Find two classmates who share a hobby with you. Ask how often they do it and why they like it. | What are you into? — I'm into ___. — Me too! How often do you ___?
+cando: I can talk about my hobbies and interests. | I can ask follow-up questions. | I can hear short /ʊ/ and long /uː/.
+teach: Follow-up questions keep a conversation alive. Award a point every time a student asks a second question after the first answer.
+
+@SPEAK 2 | Why Don't We...? | Making and responding to suggestions | تقديم الاقتراحات والرد عليها
+kagan: Talking Chips | Mix-Pair-Share
+model:
+SAMI: It's Thursday! What shall we do this weekend?
+YUSUF: Why don't we go to the go-kart track?
+SAMI: Hmm, it's very expensive. How about going to the new library? It has a gaming room.
+YUSUF: I'd like to see it, but I'd prefer to do something outside. The weather is lovely.
+SAMI: Okay. Let's go cycling in Al-Rudaf Park, then.
+YUSUF: Great idea! Shall we ask Adam to come?
+SAMI: Yes. And we could have a picnic after cycling.
+YUSUF: Perfect. I'll bring some sandwiches.
+end
+roles: SAMI | YUSUF
+chunks: Why don't we ___? = لماذا لا ___؟ | How about ___ing? = ما رأيك في ___؟ | Let's ___. = هيا ___. | Shall we ___? = هل ___؟ | I'd prefer to ___. = أفضّل أن ___.
+sound: pairs | "I like" or "I'd like"? | "I'd" is the short form of "I would". It sounds like "I" with a tiny /d/ at the end. Listen carefully, because the meaning changes: "I like tea" (always) — "I'd like tea" (now, please). | كلمة I'd اختصار I would، وتُنطق مثل I مع صوت /d/ صغير في آخرها. انتبه فالمعنى يتغير: I like tea تعني أحب الشاي دائمًا، وI'd like tea تعني أريد شايًا الآن.
+pair: I like tea. | I'd like tea.
+pair: We go by car. | We'd go by car.
+pair: I like to swim. | I'd like to swim.
+pair: They play outside. | They'd play outside.
+pair: I love a picnic. | I'd love a picnic.
+task: Plan a weekend with your group. Make two suggestions, refuse one politely, then agree on a plan. | Why don't we ___? — Hmm, ___. How about ___? — Great idea!
+cando: I can make suggestions. | I can say no politely and suggest something else. | I can hear "I like" and "I'd like".
+teach: Teach the polite "Hmm, ..." before a refusal. Students practise saying no with a reason ("it's very expensive") instead of a flat "No".
+
+@CHECK
+check: L1#3 | When does Adam help his mom? | *every Friday | every evening | on Saturdays | after school
+check: L1#5 | When does Sami usually read? | *before bed | after school | in the morning | at the weekend
+check: L2#4 | When did Faris and his grandfather play? | *every evening after dinner | every morning | at the weekend | after school
+check: L3#2 | Where is the opening? | *in the school hall | in the library | in the lab | in Room 12
+
+@UNIT 2 | Travel and Transport | السفر والمواصلات | ✈️
+goals: I can understand travel announcements. | I can compare ways to travel. | I can buy a ticket and ask about times.
+
+@LISTEN 1 | At the Airport | Listening to announcements | الاستماع إلى الإعلانات
+kagan: Showdown | RallyCoach
+vocab: flight | رحلة جوية | ✈️ | Our flight is delayed.
+vocab: gate | بوابة | 🚪 | The flight leaves from Gate 9.
+vocab: boarding pass | بطاقة صعود الطائرة | 🎫 | Have your boarding pass ready.
+vocab: delayed | متأخّر | ⏰ | The flight is delayed by forty-five minutes.
+vocab: departure | المغادرة | 🛫 | The new departure time is six o'clock.
+vocab: passenger | مسافر / راكب | 🧳 | Passengers, please don't leave your bags.
+predict: Sami's family is at the airport. What kind of announcements do you hear at an airport? |
+tip: Announcements repeat key information. If you miss a number the first time, wait — it often comes again. | تكرر الإعلانات المعلومات المهمة. إذا فاتك رقم في المرة الأولى فانتظر، فغالبًا سيتكرر.
+script:
+ANNOUNCER: Good afternoon, ladies and gentlemen. Flight {SV 1025|S V ten twenty-five} to Riyadh is now boarding at Gate 14.
+ANNOUNCER: Passengers for Flight {SV 1025|S V ten twenty-five}, please have your boarding pass ready.
+DAD: That's not our flight. We're going to Dubai.
+NOOR: Look, Dad! The screen says our flight is delayed.
+DAD: You're right. It was at five fifteen, but now it's at six o'clock.
+ANNOUNCER: Attention, please. Flight {EK 818|E K eight one eight} to Dubai is delayed by forty-five minutes because of bad weather. The new departure time is six o'clock, from Gate 9.
+SAMI: We have time! Can we get something to eat?
+DAD: Okay, but we need to be at the gate by half past five. Let's find a café near Gate 9.
+ANNOUNCER: A reminder to all passengers: please do not leave your bags alone in the airport.
+NOOR: Sami, don't forget your backpack!
+end
+mcq: Where is Flight SV 1025 going? | *to Riyadh | to Dubai | to Jeddah | to London
+mcq: Why is the Dubai flight delayed? | *bad weather | a problem with the plane | a busy airport | the pilot is late
+mcq: How long is the delay? | *forty-five minutes | fifteen minutes | one hour | thirty minutes
+mcq: What does Noor remind Sami to take? | *his backpack | his boarding pass | his phone | his ticket
+tf: Flight SV 1025 is boarding at Gate 14. | T
+tf: The family must be at the gate by six o'clock. | F
+gap: The new departure time for the Dubai flight is ___. | six o'clock, 6:00, six, 6, 6 o'clock
+gap: The Dubai flight leaves from Gate ___. | nine, 9
+speak: You are an airport announcer. Announce a flight to your partner; he writes the details. | Flight ___ to ___ is now boarding at Gate ___. It's delayed by ___ minutes.
+teach: Show a picture of a real departures board before listening and teach "boarding", "delayed" and "gate" from it. The family must be at the gate by half past five, not six — a classic exam trap.
+
+@LISTEN 2 | How Do You Get to School? | Listening and comparing | الاستماع والمقارنة
+kagan: Line-Ups | Numbered Heads Together
+vocab: journey | رحلة / مشوار | 🛣️ | Adam has the longest journey.
+vocab: take (time) | يستغرق | ⏱️ | It takes fifteen minutes.
+vocab: traffic | زحمة المرور | 🚗 | There's always traffic near the school.
+vocab: close | قريب | 📍 | We live very close to school.
+vocab: the slowest | الأبطأ | 🐢 | The bus is the slowest way.
+vocab: the cheapest | الأرخص | 💲 | Walking is the cheapest way.
+predict: Four boys say how they get to school. Which way is the fastest? Which is the healthiest? |
+tip: Listen for comparing words: the slowest, the cheapest, the shortest. They help you answer "who" questions. | استمع لكلمات المقارنة مثل the slowest وthe cheapest وthe shortest، فهي تساعدك في الإجابة عن أسئلة "من".
+script:
+MR_HASSAN: For our math project, let's find out how everyone gets to school. Ben, you first.
+BEN: I ride my bike. It takes about fifteen minutes. I love it because it's good exercise, and the mornings in Taif are cool.
+MR_HASSAN: Very healthy! Adam?
+ADAM: I come by school bus. It's the slowest way — thirty-five minutes! But it's fun, because I chat with my friends.
+MR_HASSAN: And you, Yusuf?
+YUSUF: I walk with my older brother. We live very close, so it only takes ten minutes. It's the cheapest way, too!
+MR_HASSAN: Sami?
+SAMI: My dad drives me. Without traffic, it's twelve minutes, but there's always traffic near the school, so it usually takes twenty minutes.
+MR_HASSAN: Interesting! So, who has the shortest journey?
+BEN: Yusuf does! And Adam has the longest.
+end
+mcq: Why does Ben like riding his bike? | *It's good exercise, and the mornings are cool. | It's the fastest way. | His friends ride bikes too. | It's cheaper than the bus.
+mcq: How long is Adam's journey? | *thirty-five minutes | fifteen minutes | twenty minutes | ten minutes
+mcq: Who does Yusuf walk with? | *his older brother | his dad | Sami | his friends
+mcq: Why does Sami's journey usually take twenty minutes? | *There's always traffic near the school. | His dad drives slowly. | They live far away. | They stop at a shop.
+tf: Adam thinks the bus is boring. | F
+tf: Yusuf has the shortest journey. | T
+gap: Without traffic, Sami's journey takes ___ minutes. | twelve, 12
+gap: The class is finding out about transport for their ___ project. | math, maths, mathematics
+speak: Ask three classmates how they get to school and how long it takes. Who has the longest journey? | How do you get to school? — I ___. — How long does it take? — It takes ___ minutes.
+teach: Turn the class answers into a quick bar graph on the board. Students describe it: "Most students come by car. The bus is the slowest."
+
+@LISTEN 3 | A Trip to AlUla | Listening to travel plans | الاستماع إلى خطط السفر
+kagan: Line-Ups | Think-Pair-Share
+vocab: ancient | قديم / أثري | 🏺 | Hegra is an ancient city.
+vocab: tomb | مقبرة منحوتة | ⚱️ | There are more than one hundred tombs.
+vocab: rock | صخرة | 🪨 | The tombs are cut into the rocks.
+vocab: sunset | غروب الشمس | 🌇 | We can watch the sunset.
+vocab: sunrise | شروق الشمس | 🌅 | The view at sunrise is amazing.
+vocab: hot-air balloon | منطاد | 🎈 | We're going on a hot-air balloon ride.
+predict: Sami's family is planning a trip to AlUla. What do you know about AlUla? |
+tip: Future plans often use "We're ___ing" with a time: On Thursday, we're visiting... Write each day and its plan. | تُعبَّر الخطط المستقبلية بصيغة We're ___ing مع وقت محدد مثل On Thursday, we're visiting... اكتب كل يوم وخطته.
+script:
+DAD: Okay, everyone, here's the plan for our trip to AlUla next week.
+NOOR: How do we get there?
+DAD: We're flying from Taif to Madinah on Wednesday morning. Then we're driving to AlUla. The drive takes about four hours.
+SAMI: What are we going to see?
+DAD: On Thursday, we're visiting Hegra. It's an ancient city with more than one hundred tombs cut into the rocks. It's about two thousand years old!
+NOOR: Wow! Can we see Elephant Rock too?
+DAD: Yes, on Thursday evening. It looks just like an elephant. We can watch the sunset there.
+SAMI: What about Friday?
+DAD: On Friday, we're going on a hot-air balloon ride over the desert. We need to wake up at five o'clock in the morning!
+NOOR: Five o'clock? That's so early!
+DAD: Trust me. The view at sunrise is amazing. Then, on Saturday, we fly home.
+end
+mcq: How do they get from Madinah to AlUla? | *by car | by plane | by train | by bus
+mcq: How old is Hegra? | *about two thousand years old | about two hundred years old | about one hundred years old | about one thousand years old
+mcq: When can they watch the sunset at Elephant Rock? | *on Thursday evening | on Wednesday evening | on Friday morning | on Saturday
+mcq: Why do they need to wake up at five o'clock on Friday? | *for a hot-air balloon ride | to catch a plane | to visit Hegra | to drive home
+tf: The drive to AlUla takes about four hours. | T
+tf: Dad says the view at sunrise is amazing. | T
+gap: Hegra has more than one hundred ___ cut into the rocks. | tombs
+gap: The family flies home on ___. | Saturday
+order: They fly to Madinah and drive to AlUla. | They visit Hegra. | They watch the sunset at Elephant Rock. | They go on a balloon ride.
+speak: Plan a three-day trip to a place in Saudi Arabia. Tell your partner your plan. | On the first day, we're ___. On the second day, we're ___. On the last day, ___.
+teach: Show photos of Hegra and Elephant Rock before listening. This is a good moment to talk about Saudi heritage sites and why we protect them.
+
+@SPEAK 1 | Two Tickets, Please | Buying a ticket | شراء تذكرة
+kagan: RallyCoach | Inside-Outside Circle
+model:
+WOMAN[Ticket Officer]: Good morning. Welcome to Jeddah Station. How can I help you?
+SAMI: Good morning. I'd like two tickets to Madinah, please.
+WOMAN[Ticket Officer]: Single or return?
+SAMI: Return, please. We're coming back on Sunday.
+WOMAN[Ticket Officer]: The next train leaves at ten thirty. Is that okay?
+SAMI: Yes, that's fine. How long does the journey take?
+WOMAN[Ticket Officer]: About two hours. Here are your tickets. Your train leaves from platform three.
+SAMI: Thank you. Where can I get information about hotels in Madinah?
+WOMAN[Ticket Officer]: The information desk is next to the main entrance.
+end
+roles: SAMI | WOMAN
+chunks: I'd like two tickets to ___, please. = أريد تذكرتين إلى ___ من فضلك. | Single or return? = ذهاب فقط أم ذهاب وعودة؟ | How long does the journey take? = كم تستغرق الرحلة؟ | Which platform is it? = من أي رصيف؟ | Where's the information desk? = أين مكتب الاستعلامات؟
+sound: sort | Where is the strong beat in -tion words? | Oo ; oOo ; ooOo | In words ending in -tion, the strong beat is always just before -tion: STA-tion, di-REC-tion, des-ti-NA-tion. | في الكلمات المنتهية بـ -tion يقع المقطع القوي دائمًا قبل -tion مباشرةً، مثل STA-tion وdi-REC-tion وdes-ti-NA-tion.
+item: station | Oo
+item: direction | oOo
+item: destination | ooOo
+item: nation | Oo
+item: connection | oOo
+item: information | ooOo
+item: question | Oo
+item: vacation | oOo
+item: reservation | ooOo
+task: Role-play at a train station or a bus station. Buy a ticket and ask two questions. | I'd like a ___ ticket to ___. — What time does it leave? — Which platform?
+cando: I can buy a ticket. | I can ask about times and platforms. | I can stress -tion words correctly.
+teach: Give students the rule as a "secret code": the strong beat is always right before -tion. They can now stress hundreds of words correctly.
+
+@SPEAK 2 | Car or Plane? | Comparing and giving opinions | المقارنة وإبداء الرأي
+kagan: Think-Pair-Share | Corners
+model:
+NOOR: Lina, which is better for a trip to Riyadh: the car or the plane?
+LINA: I think the plane is better. It's much faster than the car.
+NOOR: That's true, but the plane is more expensive.
+LINA: Yes, and the car is more comfortable. You can stop when you're hungry!
+NOOR: But the journey by car is very long — about nine hours!
+LINA: Nine hours? That's the worst! I prefer the plane, even if it's more expensive.
+NOOR: Okay, the plane is the best for long trips. But for short trips, the car is easier.
+LINA: I agree with you!
+end
+roles: NOOR | LINA
+chunks: Which is better, ___ or ___? = أيهما أفضل، ___ أم ___؟ | It's much faster than ___. = إنه أسرع بكثير من ___. | It's more expensive. = إنه أغلى. | That's true, but ___. = هذا صحيح، لكن ___. | I agree with you! = أوافقك الرأي!
+sound: sort | /ɜː/ like "bird" or /ɑː/ like "car"? | /ɜː/ bird ; /ɑː/ car | /ɜː/ (bird, first) is made in the middle of your mouth with relaxed lips. /ɑː/ (car, far) is made with a wide-open mouth, deep in the throat. | الصوت /ɜː/ كما في bird وfirst يخرج من وسط الفم والشفتان مرتخيتان، أما /ɑː/ كما في car وfar فيخرج والفم مفتوح واسعًا من عمق الحلق.
+item: first | /ɜː/
+item: car | /ɑː/
+item: journey | /ɜː/
+item: far | /ɑː/
+item: world | /ɜː/
+item: start | /ɑː/
+item: turn | /ɜː/
+item: park | /ɑː/
+task: Compare two ways to travel to a city you know. Give three reasons for your choice. | I prefer ___ because it's ___er than ___. It's also more ___.
+cando: I can compare two things. | I can agree and disagree politely. | I can hear /ɜː/ and /ɑː/.
+teach: Put "car" and "plane" signs in two corners. Students walk to their choice and prepare three reasons with their corner group before a short class debate.
+
+@CHECK
+check: L1#8 | Where do they want to eat? | *at a café near Gate 9 | at a restaurant near Gate 14 | on the plane | at home
+check: L1#9 | What must passengers not do? | *leave their bags alone | eat at the gate | use their phones | run in the airport
+check: L2#4 | Why does Adam like the bus? | *He chats with his friends. | It's fast. | It's cheap. | It's quiet.
+check: L3#3 | When do they fly to Madinah? | *on Wednesday morning | on Thursday evening | on Friday morning | on Saturday
+
+@UNIT 3 | Stories from the Past | قصص من الماضي | 📜
+goals: I can follow and retell a story. | I can ask and answer questions about the past. | I can understand dates and facts about a famous person.
+
+@LISTEN 1 | The Lost Camel | Following a story and making inferences | تتبع قصة واستنتاج المعاني
+kagan: Think-Pair-Share | RoundRobin
+vocab: merchant | تاجر | 🧔 | The merchant lost a camel.
+vocab: desert | صحراء | 🏜️ | He was crossing the desert.
+vocab: blind | أعمى | 🙈 | The camel was blind in one eye.
+vocab: judge | قاضٍ | ⚖️ | They went to the judge.
+vocab: thief | لص | 🦹 | The brothers were not thieves.
+vocab: oasis | واحة | 🌴 | They found the camel near the oasis.
+predict: This is an old Arab story about a lost camel and three clever brothers. How can someone describe a camel without seeing it? |
+tip: Stories have clues. Listen to the answers to "How did you know?" — they explain the clues. | للقصص دلائل. استمع للإجابة عن سؤال "How did you know?" فهي تشرح الدلائل.
+script:
+NARRATOR: Long ago, a merchant was crossing the desert with his camels. One morning, he woke up and saw that one camel was missing. He walked for hours, and then he met three brothers sitting under a palm tree.
+MAN[Merchant]: Excuse me! Did you see a camel? I lost one of my camels last night.
+MR_HASSAN[First Brother]: Was your camel blind in one eye?
+MAN[Merchant]: Yes, it was!
+DAD[Second Brother]: Was it carrying honey on one side and wheat on the other side?
+MAN[Merchant]: Yes! So you saw it! Where is it?
+ANNOUNCER[Third Brother]: We didn't see your camel.
+NARRATOR: The merchant was angry. He thought the brothers had his camel, so he took them to the judge.
+GRANDPA[Judge]: How did you know about the camel?
+MR_HASSAN[First Brother]: The camel ate the grass on only one side of the road. So it could only see with one eye.
+DAD[Second Brother]: We saw flies on one side of the road. Flies love honey. And on the other side, birds were eating wheat.
+NARRATOR: The judge smiled. The brothers were clever, not thieves. The merchant said sorry, and the brothers helped him find his camel near the oasis.
+end
+mcq: Where did the merchant meet the brothers? | *under a palm tree | at the market | near the oasis | at the judge's house
+mcq: How did the first brother know the camel was blind in one eye? | *It ate grass on only one side of the road. | He saw the camel's face. | The merchant told him. | It walked into a tree.
+mcq: Why were there flies on one side of the road? | *The camel was carrying honey. | There was water there. | The camel was sick. | There was a dead bird.
+mcq: Why was the merchant angry? | *He thought the brothers had his camel. | The brothers didn't help him. | He was tired and hungry. | The judge was late.
+tf: The brothers saw the camel. | F
+tf: The judge thought the brothers were clever. | T
+gap: The camel was carrying honey and ___. | wheat
+gap: In the end, they found the camel near the ___. | oasis
+order: The merchant lost a camel. | He met three brothers. | They went to the judge. | They found the camel.
+speak: Retell the story to your partner in five sentences. Use first, then, after that and in the end. | First, ___. Then, ___. After that, ___. In the end, ___.
+teach: Stop the track after line 7 and ask: "Did the brothers see the camel? How do they know so much?" Let groups predict before they hear the explanation. This builds inference skills.
+
+@LISTEN 2 | A School Trip Surprise | Listening for reasons in a story | الاستماع إلى الأسباب في قصة
+kagan: Timed Pair Share | Showdown
+vocab: mountain road | طريق جبلي | 🛣️ | The bus stopped on the mountain road.
+vocab: engine | محرّك | ⚙️ | There was a problem with the engine.
+vocab: wait | ينتظر | ⏳ | We waited for almost an hour.
+vocab: tractor | جرّار زراعي | 🚜 | A farmer arrived with a tractor.
+vocab: bumpy | وعر ومهتزّ | 〰️ | The ride was slow and bumpy.
+vocab: rose water | ماء الورد | 🌹 | We learned how they make rose water.
+predict: Adam's class went on a school trip, but something unexpected happened. What do you think it was? |
+tip: For "why" questions, listen for "because", "so" and "there was a problem with...". | في أسئلة "لماذا" استمع لكلمات مثل because وso وthere was a problem with...
+script:
+ADAM: Last month, our class went on a trip to a rose farm in Al-Hada.
+ADAM: We left school at seven thirty. Everyone was excited, and we played word games on the bus.
+ADAM: But after twenty minutes, the bus stopped on the mountain road. There was a problem with the engine!
+ADAM: Mr. Hassan called the farm, and we waited by the road for almost an hour. It was cold, so we put on our jackets.
+ADAM: Then we heard a loud noise. A farmer arrived with a big tractor and a trailer! He drove us to the farm. It was slow and bumpy, but it was the best part of the day.
+ADAM: At the farm, we learned how they make rose water. We picked roses, and each student took home a small bottle of rose oil for his mom.
+ADAM: We got back to school at two o'clock — late, but very happy.
+end
+mcq: Where did the class go? | *to a rose farm in Al-Hada | to a museum in Taif | to a factory in Jeddah | to a zoo
+mcq: Why did the bus stop? | *There was a problem with the engine. | The road was closed. | It was too cold. | A student was sick.
+mcq: How did the class get to the farm? | *A farmer drove them on a tractor and trailer. | They walked. | Another bus came. | Their parents drove them.
+mcq: What did each student take home? | *a small bottle of rose oil | some roses | some rose water | a photo
+tf: The students waited for almost an hour. | T
+tf: Adam thought the tractor ride was the worst part of the day. | F
+gap: The class left school at seven ___. | thirty, 30
+gap: They got back to school at ___ o'clock. | two, 2
+speak: Tell your partner about a trip when something unexpected happened. | Last ___, we went to ___. Suddenly, ___. In the end, ___.
+teach: Taif's roses and rose water are a source of local pride. Bring a small bottle of rose water to class; the smell makes the story real.
+
+@LISTEN 3 | Ibn Battuta's Journey | Listening for dates and facts | الاستماع إلى التواريخ والحقائق
+kagan: Numbered Heads Together | Fan-N-Pick
+vocab: traveler | رحّالة | 🧭 | Ibn Battuta was a famous traveler.
+vocab: born | وُلِد | 👶 | He was born in Tangier.
+vocab: Hajj | الحج | 🕋 | He left home to go on Hajj.
+vocab: cross | يعبُر | 🐪 | He crossed deserts on camels.
+vocab: dangerous | خطير | ⚠️ | His journeys were dangerous.
+vocab: sink (sank) | تغرق (غرقت) | 🚢 | His ship sank near India.
+predict: Ibn Battuta was a famous traveler from long ago. What was traveling like seven hundred years ago? |
+tip: Write numbers and dates as digits while you listen: 1304, 21, 24, 40. Then check them with a partner. | اكتب الأعداد والتواريخ بالأرقام أثناء الاستماع، ثم راجعها مع زميلك.
+script:
+MS_GREEN: Today, we're learning about a famous traveler: Ibn Battuta. He was born in Tangier, in Morocco, in {1304|thirteen oh four}.
+MS_GREEN: When he was twenty-one years old, he left home to go on Hajj to Makkah. He planned to travel for a year or two, but he didn't come home for almost twenty-four years!
+MS_GREEN: He traveled to more than forty countries, including Egypt, India and China. He crossed deserts on camels and seas on wooden ships.
+MS_GREEN: His journeys were very dangerous. Once, his ship sank near India, and he lost everything he had.
+MS_GREEN: He traveled about one hundred and twenty thousand kilometers. That's three times around the world!
+MS_GREEN: When he finally returned to Morocco, the Sultan asked him to tell his stories. A writer wrote them down in a famous book called Ar-Rihla, which means "The Journey".
+end
+mcq: Where was Ibn Battuta born? | *in Tangier, Morocco | in Makkah | in Cairo, Egypt | in India
+mcq: Why did he first leave home? | *to go on Hajj to Makkah | to find a job | to visit China | to buy a ship
+mcq: What happened near India? | *His ship sank. | He got married. | He found treasure. | He met the Sultan.
+mcq: Who asked him to tell his stories? | *the Sultan | his family | a ship captain | his teacher
+tf: Ibn Battuta planned to travel for twenty-four years. | F
+tf: He traveled to more than forty countries. | T
+gap: Ibn Battuta was born in ___. | 1304, thirteen oh four
+gap: He traveled about one hundred and twenty thousand ___. | kilometers, kilometres, km
+speak: Tell your partner about a place you want to travel to and why. | I'd like to travel to ___ because ___. I want to see ___.
+teach: Use a world map: students trace Ibn Battuta's route with string from Morocco to Makkah, India and China. Connect the lesson to the Arabic tradition of travel writing.
+
+@SPEAK 1 | Guess What Happened! | Telling a short story | سرد قصة قصيرة
+kagan: Timed Pair Share | Inside-Outside Circle
+model:
+BEN: Guess what happened to me yesterday!
+SAMI: What? Tell me!
+BEN: Well, first, I walked to the shop to buy some milk. Then I wanted to cross the road, so I waited at the traffic lights.
+SAMI: Okay...
+BEN: Suddenly, a small cat jumped onto my shoulder from a wall!
+SAMI: No way! What did you do?
+BEN: I shouted, and I dropped my bag! But the cat just looked at me and started to purr.
+SAMI: Ha ha! What happened in the end?
+BEN: In the end, I carried it home, and now it's our new pet!
+end
+roles: BEN | SAMI
+chunks: Guess what happened! = خمّن ماذا حدث! | Suddenly, ___. = فجأةً، ___. | No way! = غير معقول! | What happened in the end? = ماذا حدث في النهاية؟ | In the end, ___. = في النهاية، ___.
+sound: sort | One beat or two beats? | 1 beat ; 2 beats | Most -ed verbs do NOT add a beat: walked = 1, jumped = 1. We add a beat only after t or d: wanted = 2, shouted = 2. | معظم أفعال -ed لا تضيف مقطعًا: walked مقطع واحد وjumped مقطع واحد. نضيف مقطعًا فقط بعد t أو d مثل wanted وshouted.
+item: walked | 1
+item: wanted | 2
+item: jumped | 1
+item: shouted | 2
+item: dropped | 1
+item: waited | 2
+item: looked | 1
+item: landed | 2
+task: Tell your partner a short story (true or invented). Use four past verbs and the story words. Your partner reacts. | Guess what happened! First, ___. Then, ___. Suddenly, ___. In the end, ___.
+cando: I can tell a short story in the past. | I can react to a story. | I can say -ed verbs with the right number of beats.
+teach: Good listeners react! Teach "No way!", "Really?" and "What happened next?" and require partners to use at least two reactions during each story.
+
+@SPEAK 2 | When Did You First...? | Asking questions about the past | طرح أسئلة عن الماضي
+kagan: Three-Step Interview | Team Interview
+model:
+NOOR: Grandpa, when did you first travel by plane?
+GRANDPA: Let me think... It was in nineteen seventy-five. I was twenty years old.
+NOOR: Where did you go?
+GRANDPA: I went to Riyadh for a new job.
+NOOR: Did you feel scared?
+GRANDPA: Yes, I did! I held my seat very tightly.
+NOOR: What did you eat on the plane?
+GRANDPA: They gave us dates and Arabic coffee. It was delicious.
+NOOR: Did you like flying?
+GRANDPA: In the end, yes. I looked out of the window the whole time!
+end
+roles: NOOR | GRANDPA
+chunks: When did you first ___? = متى ___ لأول مرة؟ | Where did you go? = إلى أين ذهبت؟ | Did you feel scared? = هل شعرت بالخوف؟ | What did you eat? = ماذا أكلت؟ | Did you like it? = هل أعجبك ذلك؟
+sound: sort | How many words? | 3 words ; 4 words ; 5 words | In fast questions, "did you" often sounds like "didja", and the words join together. Count carefully! | في الأسئلة السريعة تُنطق did you غالبًا مثل "didja" وتتصل الكلمات ببعضها. عُدّ بعناية!
+item: Did you go? | 3
+item: What did he say? | 4
+item: Where did you go yesterday? | 5
+item: Did they win? | 3
+item: When did it start? | 4
+item: Who did you see there? | 5
+item: Was it good? | 3
+item: Did you like it? | 4
+item: What did you buy there? | 5
+task: Interview an older person in your family about a "first time" (first car, first trip, first school day). Report back to the class. | When did you first ___? Where did you ___? How did you feel?
+cando: I can ask questions about the past. | I can answer with past verbs. | I can hear "did you" in fast questions.
+teach: Students prepare their interview questions in class and record the answers at home (with permission). Listening to family stories is authentic, meaningful practice.
+
+@CHECK
+check: L1#1 | When did the merchant notice that a camel was missing? | *one morning | one evening | at night | at lunchtime
+check: L1#11 | What were the birds eating? | *wheat | honey | grass | dates
+check: L2#2 | What did the students do on the bus? | *They played word games. | They slept. | They read books. | They watched a film.
+check: L3#6 | What does "Ar-Rihla" mean? | *The Journey | The Traveler | The Sultan | The Ship

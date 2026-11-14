@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Listen Up! Speak Out! — Elementary Listening & Speaking Program</title>
+<meta name="description" content="Listening and speaking program for Grades 3–6 (CEFR A1 → A2+): real audio, listening tasks, pronunciation games, shadowing and role-plays, with Arabic support.">
+<meta name="theme-color" content="#2F7BEA">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Listen Up!">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="stylesheet" href="fonts.css">
+<style>
+:root{
+  --ink:#1D2433; --ink2:#4B5568; --muted:#7A8499; --line:#E3E7F0; --bg:#F5F7FC; --card:#FFFFFF;
+  --coral:#FF6B4A; --coral-d:#E0502F; --sun:#FFC233; --ok:#1FA463; --ok-l:#E2F7EC; --bad:#E5484D; --bad-l:#FDECEC;
+  --c:#2F7BEA; --cl:#E3EEFF; --cd:#1B4FA3;
+  --r:18px; --sh:0 6px 20px rgba(29,36,51,.08); --sh2:0 2px 8px rgba(29,36,51,.06);
+  --fh:"Baloo 2","Trebuchet MS","Segoe UI",system-ui,sans-serif;
+  --fb:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  --fa:"Tajawal","Segoe UI","Geeza Pro","Arial",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--fb);color:var(--ink);background:var(--bg);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
+body.classmode{font-size:20px}
+button{font-family:inherit;font-size:inherit;color:inherit;cursor:pointer;border:none;background:none}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--fh);margin:0;line-height:1.15;letter-spacing:-.01em}
+.ar{font-family:var(--fa);direction:rtl;text-align:right;unicode-bidi:isolate;color:#3D4A63;font-size:.95em;line-height:1.7}
+.ar-block{display:block;margin-top:.35rem}
+.noar .ar{display:none!important}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px 60px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(8px);border-bottom:1px solid var(--line)}
+.top .in{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:10px;padding:9px 18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--fh);font-weight:800;font-size:1.15rem;color:var(--ink)}
+.brand svg{width:38px;height:38px;flex:none}
+.brand small{display:block;font-family:var(--fb);font-weight:600;font-size:.72rem;color:var(--muted);letter-spacing:.02em;margin-top:-3px}
+.sp{flex:1}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);font-weight:700;font-size:.88rem;white-space:nowrap}
+.chip.on{background:var(--cl);border-color:var(--c);color:var(--cd)}
+.iconbtn{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line);font-size:1.15rem}
+.iconbtn:hover,.chip:hover{border-color:var(--c)}
+
+/* generic */
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:20px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.g4{grid-template-columns:repeat(auto-fill,minmax(170px,1fr))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:14px;font-weight:800;background:var(--coral);color:#fff;box-shadow:0 4px 0 var(--coral-d);transition:transform .08s}
+.btn:active{transform:translateY(2px);box-shadow:0 2px 0 var(--coral-d)}
+.btn.sec{background:#fff;color:var(--ink);border:2px solid var(--line);box-shadow:0 3px 0 var(--line)}
+.btn.band{background:var(--c);box-shadow:0 4px 0 var(--cd)}
+.btn.ok{background:var(--ok);box-shadow:0 4px 0 #157a48}
+.btn.sm{padding:8px 13px;font-size:.9rem;border-radius:11px}
+.btn[disabled]{opacity:.45;pointer-events:none}
+.muted{color:var(--muted)}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;background:var(--cl);color:var(--cd);font-weight:800;font-size:.78rem;letter-spacing:.02em}
+.stars{color:var(--sun);letter-spacing:2px;font-size:1.05rem;white-space:nowrap}
+.stars .off{color:#D9DEE8}
+.crumbs{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:18px 0 10px;font-weight:700;font-size:.9rem}
+.crumbs button{color:var(--c)}
+.crumbs span{color:var(--muted)}
+.section-title{display:flex;align-items:center;gap:10px;margin:26px 0 12px}
+.section-title h2{font-size:1.5rem}
+
+/* hero */
+.hero{margin-top:18px;border-radius:26px;padding:28px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(120deg,#2F7BEA 0%,#6A4CE0 55%,#FF6B4A 120%)}
+.hero h1{font-size:clamp(2rem,4.6vw,3.1rem);font-weight:800}
+.hero p{margin:.4rem 0 0;font-size:1.05rem;opacity:.95;max-width:620px}
+.hero .bubbles{position:absolute;right:-30px;top:-30px;width:260px;opacity:.18}
+.profiles{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.prof{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:16px;background:#fff;border:2px solid var(--line);font-weight:800}
+.prof .av{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800}
+.prof.cur{border-color:var(--ok);background:var(--ok-l)}
+input[type=text]{font:inherit;padding:11px 14px;border-radius:12px;border:2px solid var(--line);background:#fff;min-width:0}
+input[type=text]:focus{border-color:var(--c);outline:none}
+
+/* grade cards */
+.gcard{border-radius:22px;padding:20px;color:#fff;position:relative;overflow:hidden;text-align:left;min-height:178px;display:flex;flex-direction:column;box-shadow:var(--sh)}
+.gcard h3{font-size:1.7rem}
+.gcard .lv{font-weight:800;opacity:.92}
+.gcard .em{position:absolute;right:14px;top:8px;font-size:3.4rem;opacity:.9}
+.gcard .bar{height:8px;border-radius:99px;background:rgba(255,255,255,.3);margin-top:auto}
+.gcard .bar i{display:block;height:100%;border-radius:99px;background:#fff}
+.gcard .meta{font-size:.85rem;font-weight:700;margin-top:6px;opacity:.95}
+
+/* unit cards */
+.ucard{display:flex;flex-direction:column;gap:8px;text-align:left;border:2px solid transparent}
+.ucard:hover{border-color:var(--c)}
+.ucard .uh{display:flex;gap:12px;align-items:center}
+.ucard .ue{width:54px;height:54px;border-radius:16px;background:var(--cl);display:grid;place-items:center;font-size:1.8rem;flex:none}
+.ucard h3{font-size:1.2rem}
+.lesson-list{display:grid;gap:10px}
+.lrow{display:flex;align-items:center;gap:12px;padding:13px 15px;border-radius:15px;background:#fff;border:2px solid var(--line);text-align:left;width:100%}
+.lrow:hover{border-color:var(--c)}
+.lrow .ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-size:1.3rem;flex:none;background:var(--cl)}
+.lrow .tx{flex:1;min-width:0}
+.lrow .tx b{display:block;font-size:1.02rem}
+.lrow .tx small{color:var(--muted);font-weight:600}
+.lrow.done{border-color:#BDE8D0;background:#FAFFFC}
+
+/* lesson shell */
+.lhead{border-radius:22px;padding:20px 22px;background:var(--c);color:#fff;margin-top:6px}
+.lhead h1{font-size:clamp(1.5rem,3.5vw,2.1rem)}
+.lhead .k{font-weight:800;opacity:.9;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+.lhead .ar{color:#fff;opacity:.95}
+.steps{display:flex;gap:6px;overflow-x:auto;padding:12px 2px 6px;scrollbar-width:none}
+.steps button{flex:none;padding:8px 13px;border-radius:999px;background:#fff;border:2px solid var(--line);font-weight:800;font-size:.86rem;color:var(--ink2)}
+.steps button.cur{background:var(--c);color:#fff;border-color:var(--c)}
+.steps button.dn{border-color:#BDE8D0;color:var(--ok)}
+.panel{margin-top:8px}
+.instr{display:flex;gap:12px;align-items:flex-start;background:var(--cl);border-radius:16px;padding:13px 16px;margin-bottom:16px}
+.instr>div{flex:1;min-width:0}
+.instr .n{width:34px;height:34px;border-radius:10px;background:var(--c);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.instr b{font-size:1.05rem}
+.navrow{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+
+/* vocab */
+.vcard{background:#fff;border-radius:18px;box-shadow:var(--sh2);border:2px solid var(--line);padding:16px;text-align:center;display:flex;flex-direction:column;gap:6px;align-items:center}
+.vcard:hover{border-color:var(--c)}
+.vcard .em{font-size:2.6rem;line-height:1.1;min-height:48px}
+.vcard .w{font-family:var(--fh);font-weight:800;font-size:1.35rem}
+.vcard .ex{font-size:.9rem;color:var(--ink2)}
+.vcard.playing{border-color:var(--sun);box-shadow:0 0 0 4px rgba(255,194,51,.35)}
+
+/* player */
+.player{background:#fff;border-radius:22px;box-shadow:var(--sh);padding:22px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.bigplay{width:96px;height:96px;border-radius:50%;background:var(--c);color:#fff;font-size:2.3rem;display:grid;place-items:center;box-shadow:0 6px 0 var(--cd)}
+.bigplay:active{transform:translateY(3px);box-shadow:0 3px 0 var(--cd)}
+.wave{display:flex;gap:4px;align-items:center;height:36px}
+.wave i{width:6px;border-radius:4px;background:var(--cl);height:10px;transition:height .2s}
+.player.on .wave i{background:var(--c);animation:wv 1s ease-in-out infinite}
+.wave i:nth-child(2){animation-delay:.1s}.wave i:nth-child(3){animation-delay:.2s}.wave i:nth-child(4){animation-delay:.3s}.wave i:nth-child(5){animation-delay:.4s}.wave i:nth-child(6){animation-delay:.5s}.wave i:nth-child(7){animation-delay:.6s}
+@keyframes wv{0%,100%{height:8px}50%{height:34px}}
+.prog{width:100%;max-width:520px;height:10px;border-radius:99px;background:var(--cl);overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:var(--c);transition:width .3s}
+.ctrls{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.seg{display:inline-flex;border:2px solid var(--line);border-radius:12px;overflow:hidden}
+.seg button{padding:7px 12px;font-weight:800;font-size:.86rem;background:#fff}
+.seg button.on{background:var(--c);color:#fff}
+.plays{font-weight:800;color:var(--muted);font-size:.9rem}
+
+/* tasks */
+.task{background:#fff;border-radius:18px;border:2px solid var(--line);padding:16px 18px;margin-bottom:12px}
+.task .q{font-weight:800;font-size:1.06rem;margin-bottom:10px}
+.task .q .num{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;background:var(--cl);color:var(--cd);margin-right:8px;font-size:.9rem}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{padding:10px 14px;border-radius:13px;border:2px solid var(--line);background:#fff;font-weight:400;text-align:left;display:flex;gap:8px;align-items:baseline}
+.opt .l{font-weight:800;color:var(--c)}
+.opt:hover{border-color:var(--c)}
+.opt.sel{border-color:var(--c);background:var(--cl)}
+.opt.right{border-color:var(--ok);background:var(--ok-l)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-l)}
+.task.ok{border-color:#BDE8D0}.task.no{border-color:#F5C2C3}
+.fb{margin-top:8px;font-weight:800;font-size:.92rem}
+.fb.ok{color:var(--ok)}.fb.no{color:var(--bad)}
+.gapin{width:150px;display:inline-block;margin:0 4px}
+.ochips{display:flex;flex-direction:column;gap:8px}
+.ochip{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:13px;border:2px dashed var(--line);background:#fff;text-align:left}
+.ochip .o{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-weight:800;flex:none;color:#fff}
+.ochip.picked{border-style:solid;border-color:var(--c)}
+.ochip.picked .o{background:var(--c);border-color:var(--c)}
+.scorebox{display:flex;align-items:center;gap:16px;flex-wrap:wrap;background:#fff;border-radius:18px;box-shadow:var(--sh);padding:16px 20px;margin:14px 0}
+.scorebox .big{font-family:var(--fh);font-size:2.4rem;font-weight:800;color:var(--c)}
+
+/* transcript */
+.tline{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:14px;cursor:pointer;border:2px solid transparent;width:100%;text-align:left}
+.tline:hover{background:var(--cl)}
+.tline.playing{background:#FFF7DD;border-color:var(--sun)}
+.tline.me{background:#FFF0EC;border-color:var(--coral)}
+.tline.playing,.tline.me.playing{background:#FFF7DD;border-color:var(--sun);box-shadow:0 0 0 4px rgba(255,194,51,.35)}
+#rmsg:not(:empty){position:sticky;bottom:12px;background:#fff;border:3px solid var(--coral);border-radius:16px;padding:12px 16px;box-shadow:var(--sh);display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;color:var(--ink)}
+.vgrid{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+.av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;flex:none;font-size:.95rem}
+.tline .who{font-weight:800;font-size:.85rem}
+.tline .say{font-size:1.04rem}
+.hidden-line{filter:blur(6px);user-select:none}
+
+/* recorder */
+.rec{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px;border-radius:16px;background:var(--bg);border:2px solid var(--line)}
+.rec .dot{width:12px;height:12px;border-radius:50%;background:var(--bad);display:none}
+.rec.live .dot{display:inline-block;animation:pulse 1s infinite}
+@keyframes pulse{50%{opacity:.25}}
+.rec .note{font-size:.82rem;color:var(--muted);flex-basis:100%}
+.wc{flex-basis:100%;font-size:.95rem}
+.wc .hit{background:var(--ok-l);color:#11724a;border-radius:6px;padding:0 4px;font-weight:800}
+.wc .miss{background:var(--bad-l);color:#B4262B;border-radius:6px;padding:0 4px}
+
+/* chunks */
+.chunk{display:flex;gap:12px;align-items:center;padding:13px 15px;border-radius:15px;background:#fff;border:2px solid var(--line);text-align:left;width:100%}
+.chunk.playing{border-color:var(--sun);background:#FFF9E6}
+.chunk .pl{width:40px;height:40px;border-radius:50%;background:var(--c);color:#fff;display:grid;place-items:center;flex:none}
+.chunk b{font-size:1.05rem}
+
+/* sound check */
+.pairrow{display:flex;gap:8px;flex-wrap:wrap}
+.bigchoice{flex:1;min-width:140px;padding:18px;border-radius:18px;border:3px solid var(--line);background:#fff;font-family:var(--fh);font-weight:800;font-size:1.4rem}
+.bigchoice:hover{border-color:var(--c)}
+.bigchoice.right{border-color:var(--ok);background:var(--ok-l)}
+.bigchoice.wrong{border-color:var(--bad);background:var(--bad-l)}
+.round{font-weight:800;color:var(--muted)}
+.meter{display:flex;gap:4px;flex-wrap:wrap}
+.meter i{width:14px;height:14px;border-radius:4px;background:var(--line)}
+.meter i.ok{background:var(--ok)}.meter i.no{background:var(--bad)}
+
+/* games */
+.gtile{border-radius:20px;padding:18px;background:#fff;box-shadow:var(--sh);border:2px solid transparent;text-align:left;display:flex;flex-direction:column;gap:6px}
+.gtile:hover{border-color:var(--c)}
+.gtile .em{font-size:2.4rem}
+.hud{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;font-weight:800}
+.hud span{background:#fff;border:2px solid var(--line);border-radius:12px;padding:6px 12px}
+.pick4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%}
+.pick4 button{padding:16px 10px;border-radius:18px;border:3px solid var(--line);background:#fff;font-weight:800;font-size:1.05rem;display:flex;flex-direction:column;align-items:center;gap:4px}
+.pick4 button .em{font-size:2.2rem}
+.pick4 button.right{border-color:var(--ok);background:var(--ok-l)}
+.pick4 button.wrong{border-color:var(--bad);background:var(--bad-l)}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.confetti i{position:absolute;top:-20px;width:10px;height:14px;border-radius:3px;animation:fall 1.8s ease-in forwards}
+@keyframes fall{to{transform:translateY(105vh) rotate(540deg);opacity:.9}}
+
+/* teacher card */
+.tcard{background:#FFF8EC;border:2px solid #FFD98A;border-radius:18px;padding:14px 16px;margin:12px 0}
+.tcard h4{font-size:1.05rem;margin-bottom:4px}
+.kag{background:#fff;border-radius:16px;border:2px solid var(--line);padding:14px 16px}
+.kag ol{margin:6px 0 0 18px;padding:0}
+.kag li{margin:2px 0}
+
+/* certificate */
+.cert{background:#fff;border-radius:22px;padding:34px;text-align:center;border:10px solid var(--cl);outline:3px solid var(--c);outline-offset:-22px;max-width:760px;margin:20px auto}
+.cert h1{font-size:2.4rem;color:var(--cd)}
+.cert .nm{font-family:var(--fh);font-size:2.2rem;font-weight:800;margin:12px 0;color:var(--coral)}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(20,25,40,.45);display:grid;place-items:center;z-index:60;padding:18px}
+.modal .card{max-width:460px;width:100%}
+
+.foot{text-align:center;color:var(--muted);font-size:.82rem;margin-top:40px}
+.selfrow{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed var(--line)}
+.faces button{font-size:1.6rem;padding:2px 6px;border-radius:10px;opacity:.45}
+.faces button.on{opacity:1;background:var(--cl)}
+.ktext{font-family:var(--fh);font-size:1.75rem;font-weight:700;line-height:1.75;margin:.6rem 0}
+.ktext.sm{font-size:1.12rem;font-weight:600;margin:0}
+.kw{border-radius:7px;padding:0 3px;cursor:pointer;transition:background .08s,color .08s}
+.kw:hover{background:var(--cl)}.kw.on{background:var(--sun);color:#1D2433}.kw.past{color:var(--cd)}
+.ktext.blind .kw{filter:blur(8px)}
+.choral .ktext{font-size:2.8rem}.choral .ktext.sm{font-size:1.6rem}
+.hints{display:flex;flex-wrap:wrap;gap:8px}
+.hint{background:#F1ECFF;border-radius:12px;padding:6px 10px;font-size:.88rem;font-weight:700;color:#4630A8}
+.shmsg{min-height:1.6em;font-weight:800;text-align:center;font-size:1.1rem;margin:.5rem 0 0}
+.dots{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:18px 0 6px}
+.dot{width:34px;height:34px;border-radius:50%;border:2px solid var(--line);background:#fff;font-weight:800;font-size:.85rem}
+.dot.pr{background:var(--cl);border-color:var(--c)}.dot.ms{background:var(--sun);border-color:#E0A800}
+.dot.cur{outline:3px solid var(--coral);outline-offset:2px}
+.mlist{list-style:none;padding:0;margin:.4rem 0}.mlist li{padding:5px 0 5px 26px;position:relative}
+.mlist li.ok::before{content:'✓';position:absolute;left:4px;color:var(--ok);font-weight:800}
+.mlist li.no::before{content:'➜';position:absolute;left:2px;color:var(--coral);font-weight:800}
+.rhythm{width:100%;height:auto;margin-top:8px}
+.rl{display:flex;gap:14px;flex-wrap:wrap;font-size:.82rem;margin-top:4px}
+.rl i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:4px;vertical-align:-1px}
+.chip.selfc.on{background:var(--ok-l);border-color:var(--ok);color:#11724a}
+select.chip{font:inherit;font-weight:700;font-size:.88rem}
+.studio-card{display:flex;gap:18px;align-items:center;flex-wrap:wrap;background:linear-gradient(120deg,#FFF1EA,#fff 70%);border:2px solid #FFD3C4;text-align:left;width:100%}
+.studio-card .big{font-size:3rem}
+@media (max-width:640px){
+  .ktext{font-size:1.4rem}.choral .ktext{font-size:2rem}
+  .top .in{padding:8px 12px;gap:6px}.brand>span{display:none}.hide-sm{display:none!important}.chip{padding:6px 9px}
+  .wrap{padding:0 12px 50px}.card{padding:16px}.hero{padding:22px}
+  .opt{flex:1 1 100%}
+  .vgrid{grid-template-columns:repeat(2,1fr)}.pick4{grid-template-columns:repeat(2,1fr)}
+}
+@media print{.top,.noprint{display:none!important}body{background:#fff}.cert{margin:0 auto;box-shadow:none}}
+/* ---- app editions: safe areas, toast, offline panel ---- */
+.top{padding-top:var(--safe-area-inset-top,env(safe-area-inset-top,0px))}
+.top .in{padding-left:max(18px,var(--safe-area-inset-left,env(safe-area-inset-left,0px)));padding-right:max(18px,var(--safe-area-inset-right,env(safe-area-inset-right,0px)))}
+.wrap{padding-bottom:calc(60px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)))}
+@media (max-width:640px){.top .in{padding-left:max(12px,var(--safe-area-inset-left,env(safe-area-inset-left,0px)));padding-right:max(12px,var(--safe-area-inset-right,env(safe-area-inset-right,0px)))}.wrap{padding-bottom:calc(50px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)))}}
+.toast{position:fixed;left:50%;bottom:calc(18px + var(--safe-area-inset-bottom,env(safe-area-inset-bottom,0px)));transform:translateX(-50%);z-index:80;background:#1D2433;color:#fff;padding:10px 12px 10px 16px;border-radius:16px;box-shadow:0 12px 30px rgba(20,30,60,.3);display:flex;gap:12px;align-items:center;font-weight:700;max-width:calc(100vw - 24px)}
+.toast .btn{padding:8px 14px}
+.appbox{margin-top:16px}
+a.btn{text-decoration:none}
+.appbox h3{font-size:1.2rem}
+.approw{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.dlrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 0;border-top:1px solid var(--line)}
+.dlrow:first-of-type{border-top:none}
+.dlrow b{min-width:86px}
+.dlbar{flex:1 1 120px;height:10px;border-radius:99px;background:var(--line);overflow:hidden}
+.dlbar i{display:block;height:100%;width:0;background:var(--c);transition:width .2s}
+.dlrow .st{font-weight:700;font-size:.88rem;color:var(--muted);min-width:110px}
+.dlrow .st.ok{color:#1F8A4C}
+.steps-ios{margin:.5rem 0 0;padding-left:20px}
+textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px solid var(--line);border-radius:12px;padding:10px}
+</style>
+</head>
+<body>
+<div id="app"><div class="wrap"><p style="padding:40px;text-align:center">Loading… If this message stays, make sure <b>data.js</b> is in the same folder as this page.</p></div></div>
+<script src="capacitor.js"></script>
+<script src="data.js"></script>
+<script src="audio/timings.js"></script>
+<script>
+'use strict';
+/* =========================================================
+   Listen Up! Speak Out! — Elementary Listening & Speaking Program
+   Grades 3–6 · CEFR A1 → A2+ · Offline-ready single-page app
+   ========================================================= */
+const D = window.LSP_DATA;
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pickN = (a, n) => shuffle(a).slice(0, n);
+const LET = ['a', 'b', 'c', 'd'];
+
+/* ---------- Edition / platform ---------- */
+const APP_VER = '1.0.0';
+const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
+const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
+document.documentElement.dataset.plat = PLAT;
+const copyText = t => (navigator.clipboard && window.isSecureContext ? navigator.clipboard.writeText(t) : Promise.reject(0)).catch(() => new Promise((ok, no) => {
+  const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
+  document.body.appendChild(ta); ta.select(); let r = false; try { r = document.execCommand('copy'); } catch (e) {} ta.remove(); r ? ok() : no();
+}));
+function saveFile(name, text, type) {
+  if (NATIVE || window.LSP_SPRITES) return false;
+  try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); return true; } catch (e) { return false; }
+}
+
+const BANDS = {
+  3: { name: 'Sky', c: '#2F7BEA', l: '#E3EEFF', d: '#1B4FA3', em: '☁️', grad: 'linear-gradient(135deg,#4C9BFF,#2F7BEA)' },
+  4: { name: 'Ocean', c: '#0E9C99', l: '#DCF5F3', d: '#08706E', em: '🌊', grad: 'linear-gradient(135deg,#2CC5BE,#0E9C99)' },
+  5: { name: 'Forest', c: '#2E9B4E', l: '#E2F5E7', d: '#1D6B34', em: '🌳', grad: 'linear-gradient(135deg,#55C26F,#2E9B4E)' },
+  6: { name: 'Summit', c: '#6A4CE0', l: '#ECE7FF', d: '#4630A8', em: '🏔️', grad: 'linear-gradient(135deg,#8E72FF,#6A4CE0)' }
+};
+const SPC = { NARRATOR:'#64748B', SAMI:'#2F7BEA', NOOR:'#E2558C', BEN:'#F08A24', ADAM:'#16A34A', LINA:'#A855F7', YUSUF:'#0EA5E9', MR_HASSAN:'#334155', MS_GREEN:'#059669', MOM:'#DB2777', DAD:'#1D4ED8', GRANDPA:'#92400E', MAN:'#475569', WOMAN:'#9333EA', ANNOUNCER:'#B45309' };
+const LOGO = `<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="2" y="2" width="60" height="60" rx="18" fill="#2F7BEA"/><path d="M14 22a8 8 0 0 1 8-8h20a8 8 0 0 1 8 8v12a8 8 0 0 1-8 8H30l-9 8v-8h1a8 8 0 0 1-8-8z" fill="#fff"/><g fill="#FF6B4A"><rect x="23" y="24" width="3.5" height="8" rx="1.7"/><rect x="29" y="20" width="3.5" height="16" rx="1.7"/><rect x="35" y="23" width="3.5" height="10" rx="1.7"/><rect x="41" y="26" width="3.5" height="4" rx="1.7"/></g><circle cx="50" cy="14" r="6" fill="#FFC233"/></svg>`;
+
+/* ---------- Instructions (English + Arabic) ---------- */
+const T = {
+  words: ['Learn the key words. Tap a card to hear it.', 'تعلّم الكلمات المهمة. اضغط على البطاقة لتسمعها.'],
+  predict: ['Think before you listen. Talk with a partner.', 'فكّر قبل أن تستمع، وتحدّث مع زميلك.'],
+  listen: ['Listen to the recording. Listen twice!', 'استمع إلى التسجيل مرتين!'],
+  tasks: ['Answer the questions. Then press Check.', 'أجب عن الأسئلة ثم اضغط "تحقّق".'],
+  script: ['Read and listen. Tap any line to hear it again.', 'اقرأ واستمع. اضغط على أي سطر لتسمعه مرة أخرى.'],
+  speak: ['Now it’s your turn to speak!', 'حان دورك الآن للتحدث!'],
+  model: ['Listen to the conversation. Tap a line to hear it.', 'استمع إلى المحادثة. اضغط على أي سطر لتسمعه.'],
+  chunks: ['Useful language: listen and repeat.', 'عبارات مفيدة: استمع وردّد.'],
+  sound: ['Sound Check: listen carefully and choose.', 'اختبار الأصوات: استمع جيدًا واختر.'],
+  shadow: ['Shadowing: listen, then say it the same way. Record and compare.', 'التظليل: استمع ثم قلها بالطريقة نفسها. سجّل صوتك وقارن.'],
+  role: ['Role-play: choose your part. The app plays the other person.', 'لعب الأدوار: اختر دورك، والتطبيق يؤدي دور الشخص الآخر.'],
+  task: ['Your turn: speak with a partner, then check yourself.', 'دورك: تحدّث مع زميلك ثم قيّم نفسك.'],
+  mcq: ['Listen and choose the correct answer.', 'استمع واختر الإجابة الصحيحة.'],
+  tf: ['True or false?', 'صح أم خطأ؟'],
+  order: ['Put them in order. Tap 1, 2, 3, 4.', 'رتّبها بالضغط عليها بالترتيب 1، 2، 3، 4.'],
+  gap: ['Complete with a word or number from the recording.', 'أكمل بكلمة أو رقم من التسجيل.']
+};
+
+/* ---------- Kagan structures library ---------- */
+const KAGAN = {
+  'RallyRobin': ['Pairs take turns saying answers aloud, back and forth.', ['Teacher gives a topic with many answers.', 'Partner A says one answer.', 'Partner B says another answer.', 'Continue taking turns until time is up.'], 'تبادل شفهي للإجابات بين زميلين بالدور.'],
+  'RoundRobin': ['Team members take turns sharing aloud.', ['Teacher asks a question.', 'Student 1 shares an answer.', 'Each team member shares in turn, clockwise.', 'The team listens without interrupting.'], 'كل أعضاء الفريق يشاركون شفهيًا بالدور.'],
+  'Timed Pair Share': ['Each partner speaks for a set time while the other listens.', ['Teacher gives a topic and a time (e.g., 30 seconds).', 'Partner A speaks; Partner B listens.', 'Partner B says "Thank you for sharing" and gives one comment.', 'Switch roles.'], 'كل زميل يتحدث لوقت محدد والآخر يستمع ثم يتبادلان.'],
+  'Think-Pair-Share': ['Students think alone, discuss in pairs, then share with the class.', ['Teacher asks a question and gives think time.', 'Partners discuss their ideas.', 'Selected pairs share with the class.'], 'تفكير فردي ثم نقاش ثنائي ثم مشاركة مع الصف.'],
+  'Inside-Outside Circle': ['Students in two circles face a partner, talk, then rotate.', ['Make an inner and an outer circle facing each other.', 'Partners ask and answer (or practise a dialogue).', 'Teacher says "Rotate!" – the outer circle moves one step.', 'Repeat with the new partner.'], 'دائرتان متقابلتان، يتحاور الزميلان ثم تدور الدائرة الخارجية.'],
+  'Quiz-Quiz-Trade': ['Students quiz each other with cards, trade cards and find new partners.', ['Each student has a question card.', 'Partner A asks, B answers; A coaches or praises.', 'Switch roles.', 'Trade cards and find a new partner.'], 'يسأل الطلاب بعضهم ببطاقات ثم يتبادلونها ويبحثون عن زميل جديد.'],
+  'Mix-Pair-Share': ['Students mix around the room, pair up and share.', ['Students walk around the room (music or a signal).', 'Teacher says "Pair!" – students pair with the nearest classmate.', 'Teacher asks a question; partners share.', 'Repeat.'], 'يتجول الطلاب ثم يتزاوجون عند الإشارة ويتشاركون الإجابة.'],
+  'Numbered Heads Together': ['Team members put their heads together; the teacher calls a number to answer.', ['Each student in a team has a number (1–4).', 'Teacher asks a question.', 'Students think alone, then put heads together so everyone knows the answer.', 'Teacher calls a number; that student answers.'], 'يتشاور الفريق في الإجابة ثم يجيب الطالب صاحب الرقم الذي يختاره المعلم.'],
+  'Find Someone Who': ['Students circulate to find classmates who match descriptions.', ['Each student gets a sheet of prompts.', 'Students find a partner and ask one question.', 'If the answer is yes, the partner signs.', 'Find a new partner. Continue until the sheet is complete.'], 'يتجول الطلاب للبحث عن زملاء تنطبق عليهم عبارات الورقة.'],
+  'RallyCoach': ['Partners take turns: one solves, the other coaches and praises.', ['Partner A does the first item aloud.', 'Partner B watches, coaches if needed and praises.', 'Partner B does the next item; A coaches.', 'Continue taking turns.'], 'زميل يحل وآخر يدرّب ويشجّع، ثم يتبادلان الأدوار.'],
+  'Stand Up–Hand Up–Pair Up': ['Students stand, raise a hand and pair with someone nearby.', ['Teacher says "Stand up, hand up, pair up!"', 'Students find a partner with a raised hand and high-five.', 'Teacher gives a question; partners discuss.', 'Repeat with new partners.'], 'يقف الطلاب ويرفعون أيديهم ويختارون زميلًا قريبًا للنقاش.'],
+  'Showdown': ['Team members write answers alone, then reveal them together.', ['Teacher (or a captain) reads a question.', 'Everyone writes an answer on a mini-board, alone.', 'Captain says "Showdown!" – everyone shows their answers.', 'The team checks, coaches and celebrates.'], 'يكتب كل عضو إجابته منفردًا ثم يكشفونها معًا ويناقشونها.'],
+  'Talking Chips': ['Students put in a chip each time they speak, so everyone participates equally.', ['Each student gets 2–3 chips (or pens).', 'To speak, a student places a chip in the center.', 'Students can’t speak again until everyone has used a chip.', 'Collect the chips and repeat.'], 'يضع الطالب قطعة كلما تحدّث لضمان مشاركة الجميع بالتساوي.'],
+  'Fan-N-Pick': ['Students rotate roles: fan the cards, pick, answer and praise.', ['Student 1 fans the question cards.', 'Student 2 picks a card and reads the question.', 'Student 3 answers.', 'Student 4 praises or coaches. Rotate roles.'], 'يتناوب الطلاب أدوار عرض البطاقات والقراءة والإجابة والتشجيع.'],
+  'Three-Step Interview': ['Pairs interview each other, then share their partner’s answers with the team.', ['Partner A interviews Partner B.', 'Partner B interviews Partner A.', 'Each student shares what the partner said with the team.'], 'مقابلة متبادلة بين زميلين ثم نقل إجابات الزميل للفريق.'],
+  'Line-Ups': ['Students line up in order and then talk with a neighbor.', ['Teacher gives a criterion (e.g., the time you get up).', 'Students talk to each other to find their place in the line.', 'Check the line together.', 'Fold the line to make pairs and discuss.'], 'يصطف الطلاب بحسب معيار ثم يتحاورون مع زميل مجاور.'],
+  'Corners': ['Students go to the corner that matches their choice and discuss.', ['Teacher announces corner choices.', 'Students think, write their choice, then go to that corner.', 'Pairs in the corner discuss reasons.', 'Corners share with the class.'], 'يذهب الطلاب إلى الركن الذي يمثّل اختيارهم ويناقشون أسبابهم.'],
+  'Mix-Freeze-Group': ['Students mix, freeze, then form groups by a number.', ['Students mix around the room.', 'Teacher says "Freeze!"', 'Teacher asks a question with a number answer.', 'Students form groups of that size, then discuss.'], 'يتجول الطلاب ثم يتوقفون ويكوّنون مجموعات بعدد الإجابة.'],
+  'Team Interview': ['Each team member stands and is interviewed by the team.', ['Student 1 stands.', 'Teammates ask him questions for a set time.', 'He sits; the next student stands.', 'Continue until everyone is interviewed.'], 'يقف كل عضو بدوره ويجيب عن أسئلة فريقه.'],
+  'Carousel Feedback': ['Teams rotate to other teams’ work and leave feedback.', ['Each team displays its work.', 'Teams rotate to the next display.', 'They discuss and write one praise and one question.', 'Rotate until teams return to their own work.'], 'تتنقل الفرق بين أعمال الفرق الأخرى وتترك تعليقًا وسؤالًا.']
+};
+
+/* ---------- Storage ---------- */
+const Store = {
+  key: 'lsp_v1',
+  data: { profiles: {}, current: null, settings: {} },
+  load() {
+    try { const t = localStorage.getItem(this.key); if (t) this.data = JSON.parse(t); } catch (e) {}
+    this.data.profiles = this.data.profiles || {}; this.data.settings = this.data.settings || {};
+    if (!this.data.profiles.guest) this.data.profiles.guest = { id: 'guest', name: 'Guest', cls: '', progress: {} };
+    if (!this.data.current || !this.data.profiles[this.data.current]) this.data.current = 'guest';
+  },
+  save() { try { localStorage.setItem(this.key, JSON.stringify(this.data)); } catch (e) {} },
+  me() { return this.data.profiles[this.data.current]; },
+  get(id) { const p = this.me(); return (p.progress && p.progress[id]) || null; },
+  rec(id, val) {
+    const p = this.me(); p.progress = p.progress || {};
+    const o = p.progress[id] || {};
+    p.progress[id] = Object.assign({}, o, val, { stars: Math.max(o.stars || 0, val.stars || 0), best: Math.max(o.best || 0, val.best || 0), ts: Date.now(), tries: (o.tries || 0) + 1 });
+    this.save();
+  }
+};
+const starsFor = r => r >= 0.9 ? 3 : r >= 0.7 ? 2 : r >= 0.4 ? 1 : 0;
+const starHTML = n => `<span class="stars" aria-label="${n} of 3 stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(3 - n)}</span></span>`;
+const arOn = g => { const s = Store.data.settings.ar || {}; return g in s ? s[g] : (g <= 4); };
+
+/* ---------- Audio engine ---------- */
+const AU = {
+  el: new Audio(), token: 0, rate: 1,
+  stop() {
+    this.token++;
+    try { this.el.pause(); } catch (e) {}
+    try { if (window.speechSynthesis) speechSynthesis.cancel(); } catch (e) {}
+    $$('.playing').forEach(x => x.classList.remove('playing'));
+    $$('.player.on').forEach(x => x.classList.remove('on'));
+  },
+  tts(text, rate) {
+    return new Promise(res => {
+      try {
+        if (!window.speechSynthesis || !text) return res(false);
+        const u = new SpeechSynthesisUtterance(text); u.lang = 'en-US'; u.rate = (rate || 1) * 0.9;
+        u.onend = () => res(true); u.onerror = () => res(false); speechSynthesis.speak(u);
+      } catch (e) { res(false); }
+    });
+  },
+  spr(sp, c, rate) {
+    return new Promise(res => {
+      const el = this.el, tok = this.token; let done = false, tm = null;
+      const fin = v => { if (!done) { done = true; if (tm) clearTimeout(tm); res(v); } };
+      const fall = () => { if (!done) this.tts(c.text, rate).then(fin); };
+      const go2 = () => {
+        try { el.currentTime = sp[1]; } catch (e) {}
+        el.playbackRate = rate || this.rate; try { el.preservesPitch = true; } catch (e) {}
+        const p = el.play(); if (p && p.catch) p.catch(err => { if (err && err.name === 'AbortError') return; fall(); });
+        tm = setTimeout(() => { if (tok === this.token && !done) { el.pause(); fin(true); } }, (sp[2] - sp[1]) / (rate || 1) * 1000 + 80);
+      };
+      el.onended = () => fin(true); el.onerror = fall; this.cur = c.src; this.base = sp[1];
+      if (!el.src || !el.src.endsWith(sp[0])) { el.onloadedmetadata = () => { el.onloadedmetadata = null; go2(); }; el.src = sp[0]; el.load(); }
+      else go2();
+    });
+  },
+  clip(c, rate) {
+    const SPR = window.LSP_SPRITES; if (SPR && SPR[c.src]) return this.spr(SPR[c.src], c, rate);
+    return new Promise(res => {
+      const el = this.el; let done = false, fell = false; const fin = v => { if (!done) { done = true; res(v); } };
+      const fall = () => { if (fell || done) return; fell = true; this.tts(c.text, rate).then(fin); };
+      el.onended = () => fin(true);
+      el.onerror = fall;
+      this.cur = c.src; this.base = 0;
+      el.src = 'audio/' + c.src; el.playbackRate = rate || this.rate;
+      try { el.preservesPitch = true; } catch (e) {}
+      const p = el.play(); if (p && p.catch) p.catch(err => { if (err && err.name === 'AbortError') return; fall(); });
+    });
+  },
+  async one(c, rate, node) {
+    this.stop(); const t = this.token; if (node) node.classList.add('playing');
+    await this.clip(c, rate);
+    if (t === this.token && node) node.classList.remove('playing');
+    return t === this.token;
+  },
+  async list(items, o = {}) {
+    this.stop(); const t = this.token; const gap = o.gap == null ? 650 : o.gap;
+    for (let i = o.from || 0; i < items.length; i++) {
+      if (t !== this.token) return false;
+      o.onLine && o.onLine(i);
+      if (items[i].wait) { await items[i].wait(); }
+      else { await this.clip(items[i], o.rate); }
+      if (t !== this.token) return false;
+      await sleep(gap);
+    }
+    if (t === this.token) o.onLine && o.onLine(-1);
+    return t === this.token;
+  }
+};
+const clipOf = x => ({ src: x.audio, text: x.text || x.w || x.en });
+
+/* ---------- Recorder ---------- */
+const SRec = (PLAT === 'electron' || PLAT === 'android') ? null : (window.SpeechRecognition || window.webkitSpeechRecognition);
+const canMic = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+const Active = { rec: null };
+function stopAllRec() { if (Active.rec) { try { Active.rec.kill(); } catch (e) {} Active.rec = null; } }
+function normWords(s) { return String(s).toLowerCase().replace(/[’']/g, "'").replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(w => w && w !== '…'); }
+function mountRecorder(box, o) {
+  // o: { model: clip|null, target: text|null, label }
+  let mr = null, stream = null, chunks = [], url = null, live = false;
+  box.classList.add('rec');
+  box.innerHTML = `<span class="dot"></span>
+    <button class="btn sm" data-r="rec">🎙️ ${esc(o.label || 'Record')}</button>
+    <button class="btn sm sec" data-r="mine" disabled>▶ My voice</button>
+    ${o.model ? '<button class="btn sm sec" data-r="model">🔊 Model</button>' : ''}
+    ${(o.target && SRec) ? '<button class="btn sm sec" data-r="wc">🎯 Word check (online)</button>' : ''}
+    <label class="btn sm sec" data-r="file" style="display:none">📁 Use my device recorder<input type="file" accept="audio/*" capture style="display:none"></label>
+    <div class="note"></div><div class="wc"></div>`;
+  const B = k => box.querySelector(`[data-r="${k}"]`), note = box.querySelector('.note'), wc = box.querySelector('.wc');
+  const fallback = msg => {
+    B('rec').style.display = 'none'; B('file').style.display = 'inline-flex';
+    note.textContent = msg || 'Live recording is not available here. Record with your device, or say it aloud and compare with the model.';
+  };
+  if (!canMic) fallback();
+  const self = {
+    kill() { try { if (mr && mr.state !== 'inactive') mr.stop(); } catch (e) {} try { stream && stream.getTracks().forEach(t => t.stop()); } catch (e) {} live = false; box.classList.remove('live'); }
+  };
+  B('rec').onclick = async () => {
+    if (live) { mr.stop(); return; }
+    AU.stop(); stopAllRec();
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mr = new MediaRecorder(stream); chunks = [];
+      mr.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+      mr.onstop = () => {
+        const b = new Blob(chunks, { type: mr.mimeType || 'audio/webm' });
+        if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(b);
+        try { stream.getTracks().forEach(t => t.stop()); } catch (e) {}
+        live = false; box.classList.remove('live'); B('rec').innerHTML = '🎙️ Record again'; B('mine').disabled = false;
+        note.textContent = 'Listen to your voice, then the model. What sounds different?';
+        o.onDone && o.onDone();
+      };
+      mr.start(); live = true; Active.rec = self; box.classList.add('live'); B('rec').innerHTML = '⏹ Stop'; note.textContent = 'Recording… speak now.';
+    } catch (e) { fallback('Microphone permission was not given. You can use your device recorder instead, or say it aloud.'); }
+  };
+  const fi = box.querySelector('input[type=file]');
+  fi.onchange = () => { const f = fi.files && fi.files[0]; if (!f) return; if (url) URL.revokeObjectURL(url); url = URL.createObjectURL(f); B('mine').disabled = false; note.textContent = 'Recording loaded. Listen and compare.'; o.onDone && o.onDone(); };
+  B('mine').onclick = () => { if (!url) return; AU.stop(); AU.el.src = url; AU.el.playbackRate = 1; AU.el.play().catch(() => {}); };
+  if (o.model) B('model').onclick = () => AU.one(o.model);
+  if (o.target && SRec && B('wc')) B('wc').onclick = () => {
+    AU.stop();
+    try {
+      const r = new SRec(); r.lang = 'en-US'; r.interimResults = false; r.maxAlternatives = 3;
+      wc.innerHTML = '<span class="muted">Listening… say the sentence.</span>';
+      r.onresult = e => {
+        const heard = new Set(); for (const a of e.results[0]) normWords(a.transcript).forEach(w => heard.add(w));
+        const tw = normWords(o.target); let hit = 0;
+        wc.innerHTML = '<b>Word check:</b> ' + tw.map(w => { const h = heard.has(w); if (h) hit++; return `<span class="${h ? 'hit' : 'miss'}">${esc(w)}</span>`; }).join(' ') +
+          ` <span class="muted">(${hit}/${tw.length} words recognised — this checks words only, not pronunciation)</span>`;
+      };
+      r.onerror = ev => { wc.innerHTML = `<span class="muted">Word check is not available now (${esc(ev.error)}). It needs Chrome and an internet connection.</span>`; };
+      r.start();
+    } catch (e) { wc.innerHTML = '<span class="muted">Word check is not available in this browser.</span>'; }
+  };
+  return self;
+}
+
+/* ---------- Helpers for data ---------- */
+const G = g => D.grades.find(x => x.grade === g);
+const U = (g, u) => G(g).units.find(x => x.n === u);
+const avatar = (sp, name) => `<span class="av" style="background:${SPC[sp] || '#64748B'}">${esc((name || '?').replace(/^(Mr\.|Ms\.)\s*/, '')[0])}</span>`;
+function setBand(g) { const b = BANDS[g]; const r = document.documentElement.style; r.setProperty('--c', b ? b.c : '#2F7BEA'); r.setProperty('--cl', b ? b.l : '#E3EEFF'); r.setProperty('--cd', b ? b.d : '#1B4FA3'); }
+function lessonList(unit) { return [...unit.listen.map(l => ({ kind: 'listen', L: l })), ...unit.speak.map(s => ({ kind: 'speak', L: s }))]; }
+function gradeStats(g) {
+  const gr = G(g); let done = 0, stars = 0, total = 0;
+  gr.units.forEach(u => { lessonList(u).forEach(x => { total++; const p = Store.get(x.L.id); if (p && p.done) { done++; stars += p.stars || 0; } }); });
+  return { done, total, stars };
+}
+function confetti() {
+  const c = document.createElement('div'); c.className = 'confetti'; const cols = ['#FF6B4A', '#FFC233', '#2F7BEA', '#1FA463', '#A855F7'];
+  for (let i = 0; i < 60; i++) { const s = document.createElement('i'); s.style.left = Math.random() * 100 + 'vw'; s.style.background = cols[i % 5]; s.style.animationDelay = Math.random() * .6 + 's'; c.appendChild(s); }
+  document.body.appendChild(c); setTimeout(() => c.remove(), 2600);
+}
+function modal(html, onOk, okLabel) {
+  const m = document.createElement('div'); m.className = 'modal';
+  m.innerHTML = `<div class="card">${html}<div class="navrow"><button class="btn sec" data-m="no">Cancel</button><button class="btn" data-m="ok">${esc(okLabel || 'OK')}</button></div></div>`;
+  document.body.appendChild(m);
+  m.querySelector('[data-m=no]').onclick = () => m.remove();
+  m.querySelector('[data-m=ok]').onclick = () => { m.remove(); onOk && onOk(); };
+}
+
+/* ---------- App state & navigation ---------- */
+const S = { view: 'home' };
+function go(view, p = {}) {
+  const prev = S.view;
+  AU.stop(); stopAllRec(); if (view !== 'shadow') { try { Mic.close(); } catch (e) {} }
+  if (view === 'shadow' && prev === 'studio' && !p.upTo) p = Object.assign({}, p, { upTo: 'studio' });
+  for (const k of Object.keys(S)) delete S[k];
+  Object.assign(S, { view }, p);
+  render(); window.scrollTo({ top: 0 });
+  Nav.sync();
+}
+/* One history entry guards every screen except Home, so the phone's Back button,
+   the swipe-back gesture and the browser's Back button go UP one level instead of leaving the app. */
+const Nav = {
+  armed: false, skip: 0,
+  sync() {
+    try {
+      if (S.view !== 'home' && !this.armed) { history.pushState({ lsp: 1 }, ''); this.armed = true; }
+      else if (S.view === 'home' && this.armed) { this.armed = false; this.skip++; history.back(); }
+    } catch (e) {}
+  },
+  up() {
+    const mo = document.querySelector('.modal'); if (mo) { mo.remove(); return true; }
+    const v = S.view;
+    if (v === 'home') return false;
+    if ((v === 'listen' || v === 'speak') && S.step > 0) { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); return true; }
+    if (v === 'grade' || v === 'teacher' || v === 'studio') go('home');
+    else if (v === 'unit') go('grade', { g: S.g });
+    else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
+    else if (S.g && S.u) go('unit', { g: S.g, u: S.u });
+    else go('home');
+    return true;
+  }
+};
+if (NATIVE && window.Capacitor && Capacitor.registerPlugin) {   // Android hardware Back button
+  try {
+    const AppP = Capacitor.registerPlugin('App');
+    AppP.addListener('backButton', () => { if (!Nav.up()) AppP.exitApp(); });
+  } catch (e) {}
+}
+window.addEventListener('popstate', () => {
+  if (Nav.skip) { Nav.skip--; return; }
+  Nav.armed = false;
+  if (Nav.up()) Nav.sync();
+});
+function render() {
+  const g = S.g || null; setBand(g);
+  document.body.classList.toggle('noar', g ? !arOn(g) : false);
+  document.body.classList.toggle('classmode', !!Store.data.settings.classmode);
+  const me = Store.me();
+  $('#app').innerHTML = `
+  <header class="top"><div class="in">
+    <button class="brand" data-go="home" aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>Listening & Speaking · Grades 3–6</small></span></button>
+    <span class="sp"></span>
+    ${g ? `<button class="chip ${arOn(g) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
+    <button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>
+    <button class="chip" data-go="home" title="Change student">👤 ${esc(me.name)}${me.cls ? ' · ' + esc(me.cls) : ''}</button>
+    <button class="iconbtn" data-go="teacher" title="Teacher dashboard" aria-label="Teacher dashboard">📊</button>
+  </div></header>
+  <div class="wrap" id="main"></div>`;
+  $$('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
+  const ar = $('#arT'); if (ar) ar.onclick = () => { const s = Store.data.settings.ar = Store.data.settings.ar || {}; s[g] = !arOn(g); Store.save(); document.body.classList.toggle('noar', !arOn(g)); ar.classList.toggle('on', arOn(g)); };
+  $('#cmT').onclick = () => { Store.data.settings.classmode = !Store.data.settings.classmode; Store.save(); const keep = Object.assign({}, S); render(); };
+  (VIEWS[S.view] || VIEWS.home)($('#main'));
+}
+function crumbs(parts) {
+  return `<nav class="crumbs noprint">${parts.map((p, i) => i < parts.length - 1 ? `<button data-crumb="${i}">${esc(p[0])}</button><span>›</span>` : `<b>${esc(p[0])}</b>`).join('')}</nav>`;
+}
+function bindCrumbs(m, parts) { $$('[data-crumb]', m).forEach(b => b.onclick = () => parts[+b.dataset.crumb][1]()); }
+function teacherCard(L) {
+  if (!Store.data.settings.classmode) return '';
+  const ks = (L.kagan || []).map(k => { const K = KAGAN[k]; return K ? `<div class="kag"><b>${esc(k)}</b> — ${esc(K[0])}<ol>${K[1].map(s => `<li>${esc(s)}</li>`).join('')}</ol><span class="ar ar-block">${esc(K[2])}</span></div>` : ''; }).join('');
+  return `<div class="tcard"><h4>🧑‍🏫 Teacher card</h4><p style="margin:.2rem 0 .6rem">${esc(L.teach)}</p><div class="grid g2">${ks}</div></div>`;
+}
+const instr = (n, key, extra) => `<div class="instr"><span class="n">${n}</span><div><b>${esc(T[key][0])}</b>${extra || ''}<span class="ar ar-block">${esc(T[key][1])}</span></div></div>`;
+
+/* =============== VIEWS =============== */
+const VIEWS = {};
+
+VIEWS.home = m => {
+  const P = Store.data.profiles, me = Store.me();
+  const profs = Object.values(P).filter(p => p.id !== 'guest');
+  const col = n => ['#2F7BEA', '#E2558C', '#F08A24', '#16A34A', '#A855F7', '#0EA5E9'][(n.charCodeAt(0) || 0) % 6];
+  m.innerHTML = `
+  <section class="hero">
+    <svg class="bubbles" viewBox="0 0 200 200"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="150" cy="110" r="40" fill="#fff"/><circle cx="90" cy="160" r="26" fill="#fff"/></svg>
+    <span class="pill" style="background:rgba(255,255,255,.22);color:#fff">Elementary · Grades 3–6 · CEFR A1 → A2+</span>
+    <h1 style="margin-top:10px">Listen Up! Speak Out!</h1>
+    <p>A complete listening and speaking program: real audio, smart listening tasks, pronunciation games, shadowing and role-plays — with Arabic support.</p>
+    <p class="ar" style="color:#fff;text-align:left;direction:rtl">برنامج متكامل لتنمية مهارتي الاستماع والتحدث للمرحلة الابتدائية</p>
+  </section>
+  <section class="card" style="margin-top:16px">
+    <h2 style="font-size:1.35rem">Who is learning today?</h2>
+    <div class="profiles">
+      ${profs.map(p => `<button class="prof ${p.id === me.id ? 'cur' : ''}" data-prof="${esc(p.id)}"><span class="av" style="background:${col(p.name)}">${esc(p.name[0] || '?')}</span>${esc(p.name)}${p.cls ? `<span class="muted" style="font-weight:700">· ${esc(p.cls)}</span>` : ''}</button>`).join('')}
+      <button class="prof ${me.id === 'guest' ? 'cur' : ''}" data-prof="guest"><span class="av" style="background:#94A3B8">G</span>Guest</button>
+    </div>
+    <form id="newP" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px">
+      <input type="text" id="pn" placeholder="Student name" maxlength="30" aria-label="Student name" style="flex:2 1 180px">
+      <input type="text" id="pc" placeholder="Class (e.g., 4B)" maxlength="12" aria-label="Class" style="flex:1 1 110px">
+      <button class="btn" type="submit">➕ Add student</button>
+    </form>
+    <p class="muted" style="margin:.6rem 0 0;font-size:.88rem">Progress is saved on this device for each student.</p>
+  </section>
+  <div class="section-title"><h2>Choose your level</h2></div>
+  <section class="grid g2">
+    ${D.grades.map(gr => { const b = BANDS[gr.grade], s = gradeStats(gr.grade); return `
+      <button class="gcard" style="background:${b.grad}" data-grade="${gr.grade}">
+        <span class="em">${b.em}</span>
+        <span class="lv">${esc(b.name)} Level · CEFR ${esc(gr.level)}</span>
+        <h3>Grade ${gr.grade}</h3>
+        <span style="font-weight:700;opacity:.95;margin:.2rem 0 .8rem">${gr.units.map(u => u.emoji).join(' ')}</span>
+        <span class="bar"><i style="width:${Math.round(100 * s.done / s.total)}%"></i></span>
+        <span class="meta">${s.done}/${s.total} lessons · ★ ${s.stars}</span>
+      </button>`; }).join('')}
+  </section>
+  <div class="section-title"><h2>Practise speaking</h2></div>
+  <button class="card studio-card" id="toStudio"><span class="big">🎙️</span><span style="flex:1"><h3 style="font-size:1.45rem">Shadowing Studio</h3>
+    <span>Listen, then speak <b>with</b> the speaker: words light up as they are spoken. 5 steps from Listen &amp; Read to Full Run, with recording and timing feedback.</span>
+    <span class="ar ar-block">استوديو التظليل: استمع وتحدّث مع المتحدث في الوقت نفسه، مع تسجيل صوتك وتغذية راجعة.</span></span>
+    <span class="hud"><span>⏱️ ${shStats().min} min</span><span>⭐ ${shStats().mastered}</span><span>🔥 ${shStats().streak}</span></span></button>
+  <div id="appBox"></div>
+  <p class="foot">Listen Up! Speak Out! · Designed for Mr. Waleed Yussuf · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}</p>`;
+  if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
+  $$('[data-prof]', m).forEach(b => b.onclick = () => { Store.data.current = b.dataset.prof; Store.save(); render(); });
+  $('#newP', m).onsubmit = e => {
+    e.preventDefault(); const n = $('#pn', m).value.trim(); if (!n) { $('#pn', m).focus(); return; }
+    const id = 'p' + Date.now().toString(36); Store.data.profiles[id] = { id, name: n, cls: $('#pc', m).value.trim(), progress: {}, created: Date.now() };
+    Store.data.current = id; Store.save(); render();
+  };
+  $$('[data-grade]', m).forEach(b => b.onclick = () => go('grade', { g: +b.dataset.grade }));
+  $('#toStudio', m).onclick = () => go('studio');
+};
+
+VIEWS.grade = m => {
+  const gr = G(S.g), b = BANDS[S.g];
+  const parts = [['Home', () => go('home')], [`Grade ${S.g}`]];
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead" style="background:${b.grad}"><span class="k">${esc(b.name)} Level · CEFR ${esc(gr.level)}</span><h1>Grade ${S.g}: 6 units</h1>
+    <p style="margin:.3rem 0 0;opacity:.95">Each unit: 3 listening lessons, 2 speaking lessons, 3 games and a Unit Check.</p></section>
+  <section class="grid g2" style="margin-top:16px">
+    ${gr.units.map(u => { const ls = lessonList(u); const dn = ls.filter(x => (Store.get(x.L.id) || {}).done).length; const st = ls.reduce((a, x) => a + ((Store.get(x.L.id) || {}).stars || 0), 0); const ck = Store.get(u.id + 'check');
+      return `<button class="card ucard" data-unit="${u.n}">
+        <div class="uh"><span class="ue">${u.emoji}</span><div><span class="pill">Unit ${u.n}</span><h3>${esc(u.title)}</h3><span class="ar">${esc(u.ar)}</span></div></div>
+        <span class="muted" style="font-size:.9rem">${u.goals.map(esc).join(' · ')}</span>
+        <span style="display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:.9rem"><span>${dn}/5 lessons · ★ ${st}</span><span>${ck ? '🏅 Check ' + Math.round(ck.best * 100) + '%' : ''}</span></span>
+      </button>`; }).join('')}
+  </section>`;
+  bindCrumbs(m, parts);
+  $$('[data-unit]', m).forEach(x => x.onclick = () => go('unit', { g: S.g, u: +x.dataset.unit }));
+};
+
+VIEWS.unit = m => {
+  const u = U(S.g, S.u);
+  const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`]];
+  const row = (x) => { const p = Store.get(x.L.id) || {}; const isL = x.kind === 'listen';
+    return `<button class="lrow ${p.done ? 'done' : ''}" data-les="${x.L.id}"><span class="ic">${isL ? '🎧' : '🗣️'}</span><span class="tx"><small>${isL ? 'Listening ' + x.L.n : 'Speaking ' + x.L.n} · ${esc(isL ? x.L.skill : x.L.func)}</small><b>${esc(x.L.title)}</b><span class="ar">${esc(isL ? x.L.skill_ar : x.L.func_ar)}</span></span>${starHTML(p.stars || 0)}</button>`; };
+  const gm = (k, em, t, d) => { const p = Store.get(u.id + k) || {}; return `<button class="gtile" data-game="${k}"><span class="em">${em}</span><b>${t}</b><span class="muted" style="font-size:.9rem">${d}</span>${starHTML(p.stars || 0)}</button>`; };
+  const ck = Store.get(u.id + 'check') || {};
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead"><span class="k">Grade ${S.g} · Unit ${u.n}</span><h1>${u.emoji} ${esc(u.title)}</h1><span class="ar">${esc(u.ar)}</span>
+    <ul style="margin:.6rem 0 0;padding-left:20px">${u.goals.map(g => `<li>${esc(g)}</li>`).join('')}</ul></section>
+  <div class="section-title"><h2>🎧 Listening</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'listen').map(row).join('')}</div>
+  <div class="section-title"><h2>🗣️ Speaking</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'speak').map(row).join('')}</div>
+  <div class="section-title"><h2>🎮 Games</h2></div>
+  <div class="grid g3">${gm('catch', '🎯', 'Sound Catcher', 'Hear a word and catch the right picture.')}${gm('who', '🕵️', 'Who Said It?', 'Hear a sentence. Who said it?')}${gm('lineup', '🧩', 'Line Up', 'Listen and put the conversation in order.')}</div>
+  <div class="section-title"><h2>🎙️ Shadowing</h2></div>
+  <div class="grid g3">${shTracks(S.g, u.n).map(t => `<button class="gtile" data-sh="${t.key}"><span class="em">${t.icon}</span><b>${esc(t.title)}</b><span class="muted" style="font-size:.9rem">${t.lines.length} lines · ⭐ ${t.lines.filter(l => shState(l.audio) === 'ms').length} mastered</span></button>`).join('')}</div>
+  <div class="section-title"><h2>🏅 Unit Check</h2></div>
+  <button class="lrow" id="ucheck"><span class="ic">🏅</span><span class="tx"><small>10 listening questions · certificate at 70%</small><b>Unit ${u.n} Check</b></span>${ck.best != null ? `<b>${Math.round(ck.best * 100)}%</b>` : ''} ${starHTML(ck.stars || 0)}</button>`;
+  bindCrumbs(m, parts);
+  $$('[data-les]', m).forEach(b => b.onclick = () => { const id = b.dataset.les; const L = [...u.listen, ...u.speak].find(x => x.id === id); go(L.kind === 'listen' ? 'listen' : 'speak', { g: S.g, u: S.u, id, step: 0 }); });
+  $$('[data-game]', m).forEach(b => b.onclick = () => go('game', { g: S.g, u: S.u, game: b.dataset.game }));
+  $('#ucheck', m).onclick = () => go('check', { g: S.g, u: S.u });
+  $$('[data-sh]', m).forEach(b => b.onclick = () => go('shadow', { g: S.g, u: S.u, src: b.dataset.sh }));
+};
+
+function lessonShell(m, L, steps, title) {
+  const u = U(S.g, S.u);
+  const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], [title]];
+  S.seen = S.seen || {}; S.seen[S.step] = true;
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead"><span class="k">${L.kind === 'listen' ? '🎧 Listening ' + L.n : '🗣️ Speaking ' + L.n} · ${esc(L.kind === 'listen' ? L.skill : L.func)}</span><h1>${esc(L.title)}</h1><span class="ar">${esc(L.kind === 'listen' ? L.skill_ar : L.func_ar)}</span></section>
+  <nav class="steps noprint">${steps.map((s, i) => `<button class="${i === S.step ? 'cur' : ''} ${S.seen[i] && i !== S.step ? 'dn' : ''}" data-step="${i}">${i + 1}. ${esc(s)}</button>`).join('')}</nav>
+  ${teacherCard(L)}
+  <section class="panel" id="panel"></section>
+  <div class="navrow noprint"><button class="btn sec" id="prevB" ${S.step === 0 ? 'disabled' : ''}>← Back</button><button class="btn band" id="nextB">${S.step === steps.length - 1 ? 'Finish ✓' : 'Next →'}</button></div>`;
+  bindCrumbs(m, parts);
+  $$('[data-step]', m).forEach(b => b.onclick = () => { S.step = +b.dataset.step; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); });
+  $('#prevB', m).onclick = () => { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); };
+  return $('#panel', m);
+}
+const findLesson = () => { const u = U(S.g, S.u); return [...u.listen, ...u.speak].find(x => x.id === S.id); };
+
+/* ---------- Listening lesson ---------- */
+VIEWS.listen = m => {
+  const L = findLesson(); const steps = ['Words', 'Predict', 'Listen', 'Tasks', 'Script', 'Speak'];
+  const P = lessonShell(m, L, steps, 'Listening ' + L.n);
+  S.ans = S.ans || {}; S.ord = S.ord || {}; S.plays = S.plays || 0;
+  const next = $('#nextB', m);
+  next.onclick = () => {
+    if (S.step < steps.length - 1) { S.step++; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); }
+    else { const r = S.best || 0; Store.rec(L.id, { done: true, stars: starsFor(r), best: r }); confetti(); go('unit', { g: S.g, u: S.u }); }
+  };
+  const lines = L.script;
+  if (S.step === 0) {
+    P.innerHTML = instr(1, 'words') + `<div class="vgrid">${L.vocab.map((v, i) => `<button class="vcard" data-v="${i}"><span class="em">${v.emoji || '🔤'}</span><span class="w">${esc(v.w)}</span><span class="ar">${esc(v.ar)}</span><span class="ex">${esc(v.ex)}</span></button>`).join('')}</div>
+      <div class="ctrls" style="margin-top:14px"><button class="btn sec" id="allV">🔁 Hear all words</button></div>`;
+    $$('[data-v]', P).forEach(b => b.onclick = () => AU.one(clipOf(L.vocab[+b.dataset.v]), 1, b));
+    $('#allV', P).onclick = () => { const cards = $$('[data-v]', P); AU.list(L.vocab.map(clipOf), { gap: 900, onLine: i => { cards.forEach(c => c.classList.remove('playing')); if (i >= 0) cards[i].classList.add('playing'); } }); };
+  }
+  if (S.step === 1) {
+    P.innerHTML = instr(2, 'predict') + `<div class="card"><h3 style="font-size:1.35rem">🤔 ${esc(L.predict.en)}</h3>${L.predict.ar ? `<p class="ar">${esc(L.predict.ar)}</p>` : ''}</div>
+      <div class="card" style="margin-top:14px;background:#FFF8EC;box-shadow:none;border:2px solid #FFD98A"><b>💡 Listening tip</b><p style="margin:.3rem 0 0">${esc(L.tip.en)}</p>${L.tip.ar ? `<p class="ar" style="margin:.3rem 0 0">${esc(L.tip.ar)}</p>` : ''}</div>
+      <div class="card" style="margin-top:14px"><b>Look at the questions before you listen:</b><ul style="margin:.4rem 0 0;padding-left:20px">${L.tasks.filter(t => t.type === 'mcq').slice(0, 3).map(t => `<li>${esc(t.q)}</li>`).join('')}</ul></div>`;
+  }
+  if (S.step === 2) {
+    P.innerHTML = instr(3, 'listen') + `<div class="player" id="pl"><div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="bigplay" id="pp" aria-label="Play">▶</button>
+      <div class="prog"><i id="pg"></i></div><div class="plays" id="pinfo">Played ${S.plays} time${S.plays === 1 ? '' : 's'}</div>
+      <div class="ctrls"><span class="seg" id="spd"><button data-r="0.8">🐢 Slow</button><button data-r="1" class="on">Normal</button></span><button class="btn sm sec" id="stopB">⏹ Stop</button></div></div>
+      <p class="muted" style="text-align:center;margin-top:12px">Listen once for the main idea. Listen again for details. Then go to <b>Tasks</b>.</p>`;
+    let rate = 1; $$('#spd button', P).forEach(b => b.onclick = () => { rate = +b.dataset.r; $$('#spd button', P).forEach(x => x.classList.toggle('on', x === b)); });
+    const pl = $('#pl', P), pg = $('#pg', P);
+    $('#pp', P).onclick = async () => {
+      $('#pp', P).textContent = '♪';
+      const ok = await AU.list(lines.map(clipOf), { rate, gap: 700, onLine: i => { pl.classList.add('on'); pg.style.width = (i < 0 ? 100 : Math.round(100 * i / lines.length)) + '%'; } });
+      pl.classList.remove('on'); $('#pp', P).textContent = '▶';
+      if (ok) { S.plays++; $('#pinfo', P).textContent = `Played ${S.plays} time${S.plays === 1 ? '' : 's'} ✓`; }
+    };
+    $('#stopB', P).onclick = () => { AU.stop(); $('#pp', P).textContent = '▶'; };
+  }
+  if (S.step === 3) renderTasks(P, L);
+  if (S.step === 4) {
+    if (!S.checked && !S.everChecked) {
+      P.innerHTML = instr(5, 'script') + `<div class="card" style="text-align:center"><h3>🔒 Finish the tasks first</h3><p>Answer the questions and press <b>Check</b> to open the script.</p><button class="btn band" id="toT">Go to Tasks</button></div>`;
+      $('#toT', P).onclick = () => { S.step = 3; render(); };
+    } else {
+      P.innerHTML = instr(5, 'script') + `<div class="ctrls" style="justify-content:flex-start;margin-bottom:10px"><button class="btn sm band" id="playAll">▶ Play with script</button><button class="btn sm sec" id="stopS">⏹ Stop</button><button class="btn sm" id="toSh">🎙️ Shadow this script</button></div>
+        <div class="card" style="padding:10px">${lines.map((l, i) => `<button class="tline" data-l="${i}">${avatar(l.sp, l.name)}<span><span class="who" style="color:${SPC[l.sp]}">${esc(l.name)}</span><br><span class="say">${esc(l.text)}</span></span></button>`).join('')}</div>`;
+      const nodes = $$('[data-l]', P);
+      nodes.forEach(n => n.onclick = () => AU.one(clipOf(lines[+n.dataset.l]), 1, n));
+      $('#playAll', P).onclick = () => AU.list(lines.map(clipOf), { onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } } });
+      $('#stopS', P).onclick = () => AU.stop();
+      $('#toSh', P).onclick = () => go('shadow', { g: S.g, u: S.u, src: 'l' + L.n });
+    }
+  }
+  if (S.step === 5) {
+    P.innerHTML = instr(6, 'speak') + `<div class="card"><h3 style="font-size:1.3rem">🗣️ ${esc(L.speak.prompt)}</h3>${L.speak.frame ? `<p style="font-size:1.1rem;background:var(--cl);border-radius:12px;padding:10px 14px">${esc(L.speak.frame)}</p>` : ''}<div id="rb" style="margin-top:10px"></div></div>
+      ${S.best != null || Store.get(L.id) ? `<div class="scorebox">${starHTML(starsFor(S.best != null ? S.best : (Store.get(L.id) || {}).best || 0))}<span>Press <b>Finish ✓</b> to save this lesson.</span></div>` : ''}`;
+    mountRecorder($('#rb', P), { label: 'Record my answer' });
+  }
+};
+
+function renderTasks(P, L) {
+  const tasks = L.tasks;
+  let n = 0;
+  const html = tasks.map((t, i) => {
+    n++;
+    const a = S.ans[i], res = S.res && S.res[i];
+    const cls = S.checked ? (res ? 'ok' : 'no') : '';
+    let body = '';
+    if (t.type === 'mcq') {
+      body = `<div class="q"><span class="num">${n}</span>${esc(t.q)}</div><div class="opts">${t.opts.map((o, j) => {
+        let c = a === j ? 'sel' : ''; if (S.checked) { if (j === t.ans) c = 'right'; else if (a === j) c = 'wrong'; }
+        return `<button class="opt ${c}" data-t="${i}" data-o="${j}" ${S.checked ? 'disabled' : ''}><span class="l">${LET[j]})</span><span>${esc(o)}</span></button>`; }).join('')}</div>`;
+    } else if (t.type === 'tf') {
+      body = `<div class="q"><span class="num">${n}</span>${esc(t.s)}</div><div class="opts">${[true, false].map(v => {
+        let c = a === v ? 'sel' : ''; if (S.checked) { if (v === t.ans) c = 'right'; else if (a === v) c = 'wrong'; }
+        return `<button class="opt ${c}" data-t="${i}" data-o="${v ? 'T' : 'F'}" ${S.checked ? 'disabled' : ''}><b>${v ? 'True' : 'False'}</b> <span class="ar">${v ? 'صح' : 'خطأ'}</span></button>`; }).join('')}</div>`;
+    } else if (t.type === 'order') {
+      if (!S.ord[i]) S.ord[i] = { show: shuffle(t.items.map((_, k) => k)), pick: [] };
+      const O = S.ord[i];
+      body = `<div class="q"><span class="num">${n}</span>Put these in the order you hear them.</div><div class="ochips">${O.show.map(k => { const pos = O.pick.indexOf(k);
+        return `<button class="ochip ${pos >= 0 ? 'picked' : ''}" data-t="${i}" data-k="${k}" ${S.checked ? 'disabled' : ''}><span class="o">${pos >= 0 ? pos + 1 : ''}</span>${esc(t.items[k])}</button>`; }).join('')}</div>
+        ${S.checked ? '' : `<button class="btn sm sec" data-reset="${i}" style="margin-top:8px">↺ Reset order</button>`}
+        ${S.checked && !res ? `<div class="fb no">Correct order: ${t.items.map((x, k) => (k + 1) + '. ' + esc(x)).join(' → ')}</div>` : ''}`;
+    } else if (t.type === 'gap') {
+      const [pre, post] = t.s.split('___');
+      body = `<div class="q"><span class="num">${n}</span>${esc(pre)}<input type="text" class="gapin" data-gap="${i}" value="${esc(a || '')}" ${S.checked ? 'disabled' : ''} aria-label="answer" autocomplete="off" autocapitalize="off" spellcheck="false">${esc(post || '')}</div>
+        ${S.checked && !res ? `<div class="fb no">Answer: ${esc(t.ans[0])}</div>` : ''}`;
+    }
+    const fb = S.checked ? `<div class="fb ${res ? 'ok' : 'no'}">${res ? '✓ Correct!' : (t.type === 'mcq' || t.type === 'tf' ? '✗ Not quite — the correct answer is shown in green.' : '✗ Not quite.')}</div>` : '';
+    return `<div class="task ${cls}">${body}${(t.type === 'mcq' || t.type === 'tf') ? fb : (S.checked && res ? fb : '')}</div>`;
+  }).join('');
+  const groups = [...new Set(tasks.map(t => t.type))].map(k => `<b>${esc(T[k][0])}</b> <span class="ar">${esc(T[k][1])}</span>`).join('<br>');
+  const sc = S.res ? S.res.filter(Boolean).length : 0;
+  P.innerHTML = instr(4, 'tasks', `<div style="font-size:.9rem;margin-top:4px">${groups}</div>`) +
+    `<div class="ctrls" style="justify-content:flex-start;margin-bottom:10px"><button class="btn sm sec" id="replay">🔊 Play the recording again</button><button class="btn sm sec" id="stopT">⏹</button></div>` + html +
+    (S.checked ? `<div class="scorebox"><span class="big">${sc}/${tasks.length}</span>${starHTML(starsFor(sc / tasks.length))}<span style="flex:1">${sc === tasks.length ? 'Excellent! Perfect score! 🎉' : sc / tasks.length >= .7 ? 'Great listening! Check the script to see what you missed.' : 'Good try! Listen again and try the wrong ones.'}</span>${sc < tasks.length ? '<button class="btn sec" id="retry">↺ Try wrong ones again</button>' : ''}<button class="btn band" id="toScript">Read the script →</button></div>`
+      : `<div class="navrow" style="justify-content:flex-end"><button class="btn ok" id="checkB">✓ Check my answers</button></div>`);
+  $('#replay', P).onclick = () => AU.list(L.script.map(clipOf), { gap: 700 });
+  $('#stopT', P).onclick = () => AU.stop();
+  $$('.opt[data-t]', P).forEach(b => b.onclick = () => { const i = +b.dataset.t, t = tasks[i]; S.ans[i] = t.type === 'tf' ? b.dataset.o === 'T' : +b.dataset.o; renderTasks(P, L); });
+  $$('.ochip', P).forEach(b => b.onclick = () => { const i = +b.dataset.t, k = +b.dataset.k, O = S.ord[i]; const p = O.pick.indexOf(k); if (p >= 0) O.pick.splice(p, 1); else O.pick.push(k); renderTasks(P, L); });
+  $$('[data-reset]', P).forEach(b => b.onclick = () => { S.ord[+b.dataset.reset].pick = []; renderTasks(P, L); });
+  $$('[data-gap]', P).forEach(inp => inp.oninput = () => { S.ans[+inp.dataset.gap] = inp.value; });
+  const ck = $('#checkB', P);
+  if (ck) ck.onclick = () => {
+    const missing = tasks.findIndex((t, i) => t.type === 'order' ? S.ord[i].pick.length < t.items.length : (S.ans[i] == null || S.ans[i] === ''));
+    if (missing >= 0 && !S.warned) { S.warned = true; ck.textContent = 'Some answers are empty — press again to check'; return; }
+    S.res = tasks.map((t, i) => {
+      if (t.type === 'mcq') return S.ans[i] === t.ans;
+      if (t.type === 'tf') return S.ans[i] === t.ans;
+      if (t.type === 'order') return S.ord[i].pick.join(',') === t.items.map((_, k) => k).join(',');
+      if (t.type === 'gap') { const v = normWords(S.ans[i] || '').join(' '); return t.ans.some(x => normWords(x).join(' ') === v); }
+      return false;
+    });
+    S.checked = true; S.everChecked = true; S.warned = false;
+    const r = S.res.filter(Boolean).length / tasks.length; S.best = Math.max(S.best || 0, r);
+    Store.rec(L.id, { stars: starsFor(S.best), best: S.best });
+    if (r >= .9) confetti();
+    renderTasks(P, L); P.scrollIntoView({ block: 'start' });
+  };
+  const rt = $('#retry', P);
+  if (rt) rt.onclick = () => { tasks.forEach((t, i) => { if (!S.res[i]) { if (t.type === 'order') S.ord[i].pick = []; else delete S.ans[i]; } }); S.checked = false; renderTasks(P, L); };
+  const ts = $('#toScript', P); if (ts) ts.onclick = () => { S.step = 4; render(); window.scrollTo({ top: 0 }); };
+}
+
+/* ---------- Speaking lesson ---------- */
+VIEWS.speak = m => {
+  const L = findLesson(); const steps = ['Listen', 'Useful language', 'Sound Check', 'Shadowing', 'Role-play', 'Your turn'];
+  const P = lessonShell(m, L, steps, 'Speaking ' + L.n);
+  const lines = L.model;
+  $('#nextB', m).onclick = () => {
+    if (S.step < steps.length - 1) { S.step++; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); }
+    else { const prev = Store.get(L.id) || {}; const r = Math.max(S.sbest || 0, prev.best || 0); Store.rec(L.id, { done: true, stars: Math.max(starsFor(r), S.roleDone ? 1 : 0), best: r }); confetti(); go('unit', { g: S.g, u: S.u }); }
+  };
+  if (S.step === 0) {
+    P.innerHTML = instr(1, 'model') + `<div class="ctrls" style="justify-content:flex-start;margin-bottom:10px"><button class="btn band" id="pA">▶ Play conversation</button><span class="seg" id="spd"><button data-r="0.8">🐢 Slow</button><button data-r="1" class="on">Normal</button></span><button class="btn sm sec" id="sA">⏹</button></div>
+      <div class="card" style="padding:10px">${lines.map((l, i) => `<button class="tline" data-l="${i}">${avatar(l.sp, l.name)}<span><span class="who" style="color:${SPC[l.sp]}">${esc(l.name)}</span><br><span class="say">${esc(l.text)}</span></span></button>`).join('')}</div>`;
+    let rate = 1; $$('#spd button', P).forEach(b => b.onclick = () => { rate = +b.dataset.r; $$('#spd button', P).forEach(x => x.classList.toggle('on', x === b)); });
+    const nodes = $$('[data-l]', P);
+    nodes.forEach(n => n.onclick = () => AU.one(clipOf(lines[+n.dataset.l]), rate, n));
+    $('#pA', P).onclick = () => AU.list(lines.map(clipOf), { rate, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) nodes[i].classList.add('playing'); } });
+    $('#sA', P).onclick = () => AU.stop();
+  }
+  if (S.step === 1) {
+    P.innerHTML = instr(2, 'chunks') + `<div class="lesson-list">${L.chunks.map((c, i) => `<button class="chunk" data-c="${i}"><span class="pl">▶</span><span style="flex:1"><b>${esc(c.en)}</b>${c.ar ? `<span class="ar ar-block">${esc(c.ar)}</span>` : ''}</span></button>`).join('')}</div>
+      <div class="ctrls" style="margin-top:14px"><button class="btn band" id="rep">🔁 Listen and repeat (pauses for you)</button><button class="btn sec" id="sC">⏹</button></div>`;
+    const nodes = $$('[data-c]', P);
+    nodes.forEach(n => n.onclick = () => AU.one(clipOf(L.chunks[+n.dataset.c]), 1, n));
+    $('#rep', P).onclick = () => { const items = []; L.chunks.forEach(c => { items.push(clipOf(c)); items.push({ wait: () => sleep(Math.max(1800, c.en.split(' ').length * 550)) }); });
+      AU.list(items, { gap: 250, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) nodes[Math.floor(i / 2)].classList.add('playing'); } }); };
+    $('#sC', P).onclick = () => AU.stop();
+  }
+  if (S.step === 2) renderSound(P, L);
+  if (S.step === 3) {
+    S.sh = S.sh || 0; const i = S.sh, l = lines[i];
+    P.innerHTML = instr(4, 'shadow') + `<div class="card" style="text-align:center"><div class="round">Line ${i + 1} of ${lines.length}</div>
+      <div style="display:flex;justify-content:center;align-items:center;gap:12px;margin:12px 0">${avatar(l.sp, l.name)}<b style="color:${SPC[l.sp]}">${esc(l.name)}</b></div>
+      <p style="font-family:var(--fh);font-size:1.6rem;font-weight:700;margin:.2rem 0 1rem">${esc(l.text)}</p>
+      <div class="ctrls"><button class="btn band" id="hear">🔊 Listen</button><span class="seg" id="spd"><button data-r="0.75">🐢 Slow</button><button data-r="1" class="on">Normal</button></span></div>
+      <div id="rb" style="margin:14px auto 0;max-width:640px;justify-content:center"></div>
+      <div class="navrow"><button class="btn sm sec" id="shP" ${i === 0 ? 'disabled' : ''}>← Previous line</button><button class="btn sm band" id="shN" ${i === lines.length - 1 ? 'disabled' : ''}>Next line →</button></div></div>
+      <p class="muted" style="text-align:center">Tip: say it at the <b>same time</b> as the speaker for real shadowing. Copy the rhythm and the music of the sentence.</p>
+      <div class="ctrls"><button class="btn" id="toSh">🎙️ Open the Shadowing Studio (5 steps, timing feedback)</button></div>`;
+    let rate = 1; $$('#spd button', P).forEach(b => b.onclick = () => { rate = +b.dataset.r; $$('#spd button', P).forEach(x => x.classList.toggle('on', x === b)); });
+    $('#hear', P).onclick = () => AU.one(clipOf(l), rate);
+    mountRecorder($('#rb', P), { model: clipOf(l), target: l.text, label: 'Record' });
+    $('#shP', P).onclick = () => { S.sh--; render(); };
+    $('#shN', P).onclick = () => { S.sh++; render(); };
+    $('#toSh', P).onclick = () => go('shadow', { g: S.g, u: S.u, src: 's' + L.n });
+  }
+  if (S.step === 4) renderRole(P, L);
+  if (S.step === 5) {
+    S.self = S.self || {};
+    P.innerHTML = instr(6, 'task') + `<div class="card"><h3 style="font-size:1.3rem">🗣️ ${esc(L.task.prompt)}</h3>${L.task.frame ? `<p style="font-size:1.1rem;background:var(--cl);border-radius:12px;padding:10px 14px">${esc(L.task.frame)}</p>` : ''}<div id="rb" style="margin-top:10px"></div></div>
+      <div class="card" style="margin-top:14px"><h3>✅ Check yourself</h3>${L.cando.map((c, i) => `<div class="selfrow"><span>${esc(c)}</span><span class="faces">${['😟', '🙂', '🤩'].map((f, k) => `<button data-sc="${i}" data-v="${k}" class="${S.self[i] === k ? 'on' : ''}" aria-label="${['not yet', 'with help', 'yes, I can'][k]}">${f}</button>`).join('')}</span></div>`).join('')}
+      <p class="muted" style="font-size:.85rem;margin:.6rem 0 0">😟 Not yet · 🙂 With help · 🤩 Yes, I can!</p></div>`;
+    mountRecorder($('#rb', P), { label: 'Record my answer' });
+    $$('[data-sc]', P).forEach(b => b.onclick = () => { S.self[+b.dataset.sc] = +b.dataset.v; $$(`[data-sc="${b.dataset.sc}"]`, P).forEach(x => x.classList.toggle('on', x === b)); });
+  }
+};
+
+function renderSound(P, L) {
+  const s = L.sound; S.sq = S.sq || null;
+  const playQ = () => { const Q = S.sq; if (!Q) return; const it = Q.q[Q.k]; if (!it) return; if (s.type === 'pairs') AU.one({ src: s.audio[it.i][it.side], text: s.pairs[it.i][it.side] }); else AU.one(clipOf(s.items[it.i])); };
+  const intro = `<div class="card"><h3 style="font-size:1.3rem">🔉 ${esc(s.title)}</h3><p style="margin:.4rem 0">${esc(s.en)}</p><p class="ar">${esc(s.ar)}</p></div>`;
+  if (!S.sq) {
+    let ex = '';
+    if (s.type === 'pairs') ex = `<div class="card" style="margin-top:14px"><b>Listen to each pair first:</b><div class="grid g3" style="margin-top:10px">${s.pairs.map((p, i) => `<div class="pairrow"><button class="btn sm sec" data-pa="${i}" data-side="0">🔊 ${esc(p[0])}</button><button class="btn sm sec" data-pa="${i}" data-side="1">🔊 ${esc(p[1])}</button></div>`).join('')}</div></div>`;
+    else ex = `<div class="card" style="margin-top:14px"><b>The groups:</b><div class="pairrow" style="margin-top:8px">${s.cats.map(c => `<span class="chip">${esc(c.label)}</span>`).join('')}</div><p class="muted" style="margin:.6rem 0 0">You will hear ${s.items.length} words or sentences. Choose the right group for each one.</p></div>`;
+    const prev = Store.get(L.id) || {};
+    P.innerHTML = instr(3, 'sound') + intro + ex + `<div class="ctrls" style="margin-top:16px"><button class="btn band" id="startQ">▶ Start Sound Check</button></div>${prev.best ? `<p class="muted" style="text-align:center">Best score: ${Math.round(prev.best * 100)}%</p>` : ''}`;
+    $$('[data-pa]', P).forEach(b => b.onclick = () => AU.one({ src: s.audio[+b.dataset.pa][+b.dataset.side], text: s.pairs[+b.dataset.pa][+b.dataset.side] }, 1, b));
+    $('#startQ', P).onclick = () => {
+      let q;
+      if (s.type === 'pairs') { q = []; for (let r = 0; r < 10; r++) { const i = r % s.pairs.length; q.push({ i, side: Math.random() < .5 ? 0 : 1 }); } q = shuffle(q); }
+      else q = shuffle(s.items.map((it, i) => ({ i })));
+      S.sq = { q, k: 0, res: [], answered: false }; renderSound(P, L); playQ();
+    };
+    return;
+  }
+  const Q = S.sq;
+  if (Q.k >= Q.q.length) {
+    const r = Q.res.filter(Boolean).length / Q.q.length; S.sbest = Math.max(S.sbest || 0, r); Store.rec(L.id, { stars: starsFor(r), best: r }); if (r >= .9) confetti();
+    P.innerHTML = instr(3, 'sound') + `<div class="scorebox"><span class="big">${Q.res.filter(Boolean).length}/${Q.q.length}</span>${starHTML(starsFor(r))}<span style="flex:1">${r >= .9 ? 'Super ears! 👂✨' : r >= .7 ? 'Great job! Keep practising.' : 'These sounds are tricky. Listen to the pairs again and try once more.'}</span><button class="btn sec" id="againQ">↺ Try again</button></div>`;
+    $('#againQ', P).onclick = () => { S.sq = null; renderSound(P, L); };
+    return;
+  }
+  const it = Q.q[Q.k];
+  const choices = s.type === 'pairs' ? s.pairs[it.i].map((w, j) => ({ label: w, ok: j === it.side })) : s.cats.map(c => ({ label: c.label, ok: c.key === s.items[it.i].key }));
+  P.innerHTML = instr(3, 'sound') + `<div class="card" style="text-align:center"><div class="round">Question ${Q.k + 1} of ${Q.q.length}</div>
+    <div class="meter" style="justify-content:center;margin:8px 0">${Q.q.map((_, j) => `<i class="${j < Q.res.length ? (Q.res[j] ? 'ok' : 'no') : ''}"></i>`).join('')}</div>
+    <button class="bigplay" id="pq" style="margin:10px auto" aria-label="Play again">🔊</button>
+    <p style="font-weight:800">${s.type === 'pairs' ? 'Which one do you hear?' : 'Which group is it?'}</p>
+    <div class="pairrow">${choices.map((c, j) => `<button class="bigchoice" data-ch="${j}">${esc(c.label)}</button>`).join('')}</div>
+    <p id="qfb" style="min-height:1.6em;font-weight:800"></p>
+    ${Q.answered ? '' : ''}</div>`;
+  $('#pq', P).onclick = playQ;
+  $$('[data-ch]', P).forEach(b => b.onclick = async () => {
+    if (Q.answered) return; Q.answered = true; const c = choices[+b.dataset.ch];
+    b.classList.add(c.ok ? 'right' : 'wrong'); if (!c.ok) $$('[data-ch]', P)[choices.findIndex(x => x.ok)].classList.add('right');
+    $('#qfb', P).innerHTML = c.ok ? '<span style="color:var(--ok)">✓ Correct!</span>' : `<span style="color:var(--bad)">✗ It was “${esc(choices.find(x => x.ok).label)}”.</span>` + (s.type === 'sort' ? ` <span class="muted">(${esc(s.items[it.i].text)})</span>` : '');
+    Q.res.push(c.ok);
+    await sleep(c.ok ? 900 : 1900);
+    if (S.sq !== Q) return; Q.k++; Q.answered = false; renderSound(P, L); if (Q.k < Q.q.length) playQ();
+  });
+}
+
+function renderRole(P, L) {
+  const lines = L.model, roles = L.roles;
+  const nameOf = sp => (lines.find(l => l.sp === sp) || {}).name || sp;
+  S.role = S.role || null; S.showText = S.showText !== false;
+  P.innerHTML = instr(5, 'role') + `<div class="card"><b>Choose your part:</b><div class="pairrow" style="margin-top:10px">${roles.map(r => `<button class="bigchoice ${S.role === r ? 'right' : ''}" data-role="${r}"><span style="display:flex;align-items:center;justify-content:center;gap:10px">${avatar(r, nameOf(r))} ${esc(nameOf(r))}</span></button>`).join('')}</div>
+    <label style="display:flex;gap:8px;align-items:center;margin-top:12px;font-weight:700"><input type="checkbox" id="stx" ${S.showText ? 'checked' : ''}> Show my lines (turn off for a challenge!)</label></div>
+    <div class="ctrls" style="margin:14px 0"><button class="btn band" id="go" ${S.role ? '' : 'disabled'}>▶ Start role-play</button><button class="btn sec" id="stopR">⏹ Stop</button></div>
+    <div class="card" style="padding:10px" id="rl">${lines.map((l, i) => `<div class="tline ${l.sp === S.role ? 'me' : ''}" data-l="${i}">${avatar(l.sp, l.name)}<span style="flex:1"><span class="who" style="color:${SPC[l.sp]}">${esc(l.name)}${l.sp === S.role ? ' — YOU' : ''}</span><br><span class="say ${l.sp === S.role && !S.showText ? 'hidden-line' : ''}">${esc(l.text)}</span></span></div>`).join('')}</div>
+    <p class="muted" id="rmsg" style="text-align:center;font-weight:800"></p>`;
+  $$('[data-role]', P).forEach(b => b.onclick = () => { S.role = b.dataset.role; renderRole(P, L); });
+  $('#stx', P).onchange = e => { S.showText = e.target.checked; renderRole(P, L); };
+  $('#stopR', P).onclick = () => { AU.stop(); $('#rmsg', P).textContent = ''; };
+  const nodes = $$('[data-l]', P);
+  $('#go', P).onclick = async () => {
+    const items = lines.map((l, i) => l.sp === S.role ? {
+      wait: () => new Promise(res => {
+        const n = nodes[i]; const sec = Math.max(2.5, l.text.split(' ').length * 0.55 + 1.2);
+        const msg = $('#rmsg', P); let left = Math.ceil(sec); const btn = document.createElement('button'); btn.className = 'btn sm ok'; btn.textContent = '✓ Done';
+        msg.innerHTML = `🎤 Your turn! Say your line… <span id="cd">${left}</span>s `; msg.appendChild(btn);
+        const iv = setInterval(() => { left--; const cd = $('#cd', P); if (cd) cd.textContent = Math.max(0, left); if (left <= 0) { clearInterval(iv); msg.textContent = ''; res(); } }, 1000);
+        btn.onclick = () => { clearInterval(iv); msg.textContent = ''; res(); };
+      })
+    } : clipOf(l));
+    const ok = await AU.list(items, { gap: 350, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } } });
+    if (ok) { S.roleDone = true; $('#rmsg', P).innerHTML = '🎉 Well done! Now swap roles and try again.'; }
+  };
+}
+
+/* ---------- Games ---------- */
+function unitPools(u) {
+  const vocab = u.listen.flatMap(l => l.vocab);
+  const linesAll = [];
+  u.listen.forEach(l => l.script.forEach(x => linesAll.push({ ...x, from: l })));
+  u.speak.forEach(s => s.model.forEach(x => linesAll.push({ ...x, from: s })));
+  const nSp = les => new Set((les.script || les.model).filter(y => y.sp !== 'NARRATOR').map(y => y.name)).size;
+  const who = linesAll.filter(x => x.sp !== 'NARRATOR' && x.text.split(' ').length >= 4 && nSp(x.from) >= 2);
+  const dialogs = [...u.speak.map(s => s.model), ...u.listen.map(l => l.script.filter(y => y.sp !== 'NARRATOR'))].filter(d => d.length >= 4 && new Set(d.map(y => y.name)).size >= 2);
+  const people = [...new Map(linesAll.filter(x => x.sp !== 'NARRATOR').map(x => [x.name, { name: x.name, sp: x.sp }])).values()];
+  const whoOpts = x => shuffle([{ name: x.name, sp: x.sp }, ...pickN(people.filter(p => p.sp !== x.sp && p.name !== x.name), 3)]);
+  return { vocab, who, dialogs, whoOpts };
+}
+VIEWS.game = m => {
+  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Game']];
+  const name = { catch: '🎯 Sound Catcher', who: '🕵️ Who Said It?', lineup: '🧩 Line Up' }[S.game];
+  m.innerHTML = crumbs(parts) + `<section class="lhead"><span class="k">Unit ${u.n} game</span><h1>${name}</h1></section><section class="panel" id="panel" style="margin-top:14px"></section>`;
+  bindCrumbs(m, parts);
+  const P = $('#panel', m); const pools = unitPools(u);
+  if (!S.st) {
+    let rounds;
+    if (S.game === 'catch') rounds = pickN(pools.vocab, 10).map(v => ({ v, opts: shuffle([v, ...pickN(pools.vocab.filter(x => x.w !== v.w), 3)]) }));
+    if (S.game === 'who') rounds = pickN(pools.who, 8).map(x => ({ x, opts: pools.whoOpts(x) }));
+    if (S.game === 'lineup') rounds = pickN(pools.dialogs, 3).map(L => { const st = Math.floor(Math.random() * Math.max(1, L.length - 3)); const seg = L.slice(st, st + 4); return { seg, show: shuffle(seg.map((_, k) => k)), pick: [] }; });
+    S.st = { rounds, k: 0, score: 0, streak: 0, res: [], locked: false };
+  }
+  const st = S.st;
+  const finish = () => {
+    const r = st.res.filter(Boolean).length / st.rounds.length; Store.rec(u.id + S.game, { stars: starsFor(r), best: r, done: true }); if (r >= .7) confetti();
+    P.innerHTML = `<div class="card" style="text-align:center"><h2 style="font-size:2rem">🏆 ${st.score} points</h2><p>${st.res.filter(Boolean).length} of ${st.rounds.length} correct</p>${starHTML(starsFor(r))}
+      <div class="ctrls" style="margin-top:14px"><button class="btn band" id="again">↺ Play again</button><button class="btn sec" id="back">Back to unit</button></div></div>`;
+    $('#again', P).onclick = () => go('game', { g: S.g, u: S.u, game: S.game });
+    $('#back', P).onclick = () => go('unit', { g: S.g, u: S.u });
+  };
+  if (st.k >= st.rounds.length) return finish();
+  const R = st.rounds[st.k];
+  const hud = `<div class="hud"><span>Round ${st.k + 1}/${st.rounds.length}</span><span>⭐ ${st.score}</span><span>🔥 ${st.streak}</span></div>`;
+  const nextRound = async ok => { st.res.push(ok); if (ok) { st.streak++; st.score += 10 + Math.min(st.streak - 1, 5) * 2; } else st.streak = 0; await sleep(ok ? 900 : 2000); if (S.st !== st) return; st.k++; st.locked = false; VIEWS.game(m); };
+  if (S.game === 'catch' || S.game === 'who') {
+    const isC = S.game === 'catch';
+    const play = () => isC ? AU.one(clipOf(R.v)) : AU.one(clipOf(R.x));
+    P.innerHTML = `<div class="player">${hud}<button class="bigplay" id="pp">🔊</button><b>${isC ? 'Which word do you hear?' : 'Who said this?'}</b>
+      <div class="pick4">${R.opts.map((o, j) => isC ? `<button data-o="${j}"><span class="em">${o.emoji || '🔤'}</span>${esc(o.w)}</button>` : `<button data-o="${j}"><span class="em">${avatar(o.sp, o.name)}</span>${esc(o.name)}</button>`).join('')}</div><p id="fb" style="min-height:1.6em;font-weight:800;text-align:center"></p></div>`;
+    $('#pp', P).onclick = play; play();
+    $$('[data-o]', P).forEach(b => b.onclick = () => {
+      if (st.locked) return; st.locked = true; const o = R.opts[+b.dataset.o]; const ok = isC ? o.w === R.v.w : o.name === R.x.name;
+      b.classList.add(ok ? 'right' : 'wrong'); if (!ok) $$('[data-o]', P)[R.opts.findIndex(x => isC ? x.w === R.v.w : x.name === R.x.name)].classList.add('right');
+      $('#fb', P).innerHTML = (ok ? '<span style="color:var(--ok)">✓ Yes!</span> ' : '<span style="color:var(--bad)">✗ Not this time.</span> ') + (isC ? '' : `<span class="muted">“${esc(R.x.text)}”</span>`);
+      nextRound(ok);
+    });
+  }
+  if (S.game === 'lineup') {
+    P.innerHTML = `<div class="player">${hud}<div class="ctrls"><button class="btn band" id="pp">🔊 Listen to the conversation</button><button class="btn sm sec" id="sp">⏹</button></div><b>Tap the lines in the order you hear them.</b>
+      <div class="ochips" style="width:100%">${R.show.map(k => { const pos = R.pick.indexOf(k); return `<button class="ochip ${pos >= 0 ? 'picked' : ''}" data-k="${k}">${'<span class="o">' + (pos >= 0 ? pos + 1 : '') + '</span>'}${avatar(R.seg[k].sp, R.seg[k].name)}<span>${esc(R.seg[k].text)}</span></button>`; }).join('')}</div>
+      <div class="ctrls"><button class="btn sm sec" id="rs">↺ Reset</button><button class="btn ok" id="ck" ${R.pick.length < R.seg.length ? 'disabled' : ''}>✓ Check</button></div><p id="fb" style="min-height:1.6em;font-weight:800"></p></div>`;
+    $('#pp', P).onclick = () => AU.list(R.seg.map(clipOf), { gap: 500 });
+    $('#sp', P).onclick = () => AU.stop();
+    $$('[data-k]', P).forEach(b => b.onclick = () => { if (st.locked) return; const k = +b.dataset.k, p = R.pick.indexOf(k); if (p >= 0) R.pick.splice(p, 1); else R.pick.push(k); VIEWS.game(m); });
+    $('#rs', P).onclick = () => { if (st.locked) return; R.pick = []; VIEWS.game(m); };
+    $('#ck', P).onclick = () => { if (st.locked) return; st.locked = true; const ok = R.pick.join() === '0,1,2,3'.slice(0, R.seg.length * 2 - 1); $('#fb', P).innerHTML = ok ? '<span style="color:var(--ok)">✓ Perfect order!</span>' : '<span style="color:var(--bad)">✗ Not quite. Listen to the right order…</span>'; if (!ok) AU.list(R.seg.map(clipOf), { gap: 400 }); nextRound(ok); };
+  }
+};
+
+/* ---------- Unit Check ---------- */
+VIEWS.check = m => {
+  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Unit Check']];
+  m.innerHTML = crumbs(parts) + `<section class="lhead"><span class="k">🏅 Unit ${u.n} Check</span><h1>${esc(u.title)}</h1><p style="margin:.3rem 0 0">10 questions. Listen carefully — you can play each recording twice.</p></section><section class="panel" id="panel" style="margin-top:14px"></section>`;
+  bindCrumbs(m, parts);
+  const P = $('#panel', m); const pools = unitPools(u);
+  if (!S.ck) {
+    const items = [];
+    u.check.forEach(c => items.push({ kind: 'line', clip: { src: c.audio, text: c.line }, q: c.q, opts: c.opts, ans: c.ans }));
+    pickN(pools.vocab, 3).forEach(v => { const opts = shuffle([v, ...pickN(pools.vocab.filter(x => x.w !== v.w), 3)]); items.push({ kind: 'word', clip: clipOf(v), q: 'Which word do you hear?', opts: opts.map(o => (o.emoji ? o.emoji + ' ' : '') + o.w), ans: opts.indexOf(v) }); });
+    const usedA = new Set(u.check.map(c => c.audio));
+    pickN(pools.who.filter(x => !usedA.has(x.audio)), 3).forEach(x => {
+      const names = pools.whoOpts(x).map(o => o.name);
+      items.push({ kind: 'who', clip: clipOf(x), q: 'Who said this?', opts: names, ans: names.indexOf(x.name) });
+    });
+    S.ck = { items: items.slice(0, 10), k: 0, ans: [], plays: {} };
+  }
+  const C = S.ck;
+  if (C.k >= C.items.length) {
+    const sc = C.items.filter((it, i) => C.ans[i] === it.ans).length, r = sc / C.items.length;
+    Store.rec(u.id + 'check', { stars: starsFor(r), best: r, done: true }); if (r >= .7) confetti();
+    P.innerHTML = `<div class="scorebox"><span class="big">${Math.round(r * 100)}%</span>${starHTML(starsFor(r))}<span style="flex:1">${sc} of ${C.items.length} correct. ${r >= .7 ? 'You passed the Unit Check! 🎉' : 'Practise the unit lessons and try again.'}</span>
+      ${r >= .7 ? '<button class="btn" id="cert">🏅 My certificate</button>' : ''}<button class="btn sec" id="again">↺ Try again</button></div>
+      <div class="card"><h3>Review</h3>${C.items.map((it, i) => `<div class="task ${C.ans[i] === it.ans ? 'ok' : 'no'}" style="margin:10px 0 0"><div class="q"><span class="num">${i + 1}</span>${esc(it.q)} <button class="btn sm sec" data-rp="${i}">🔊</button></div><div class="opts">${it.opts.map((o, j) => `<span class="opt ${j === it.ans ? 'right' : (C.ans[i] === j ? 'wrong' : '')}"><span class="l">${LET[j]})</span>${esc(o)}</span>`).join('')}</div>${it.kind !== 'word' ? `<div class="muted" style="margin-top:6px;font-size:.9rem">“${esc(it.clip.text)}”</div>` : ''}</div>`).join('')}</div>`;
+    $$('[data-rp]', P).forEach(b => b.onclick = () => AU.one(C.items[+b.dataset.rp].clip));
+    $('#again', P).onclick = () => go('check', { g: S.g, u: S.u });
+    const ce = $('#cert', P); if (ce) ce.onclick = () => go('cert', { g: S.g, u: S.u, pct: Math.round(r * 100) });
+    return;
+  }
+  const it = C.items[C.k]; C.plays[C.k] = C.plays[C.k] || 0;
+  P.innerHTML = `<div class="card"><div class="round">Question ${C.k + 1} of ${C.items.length}</div>
+    <div class="meter" style="margin:8px 0">${C.items.map((_, j) => `<i class="${j < C.k ? 'ok' : ''}"></i>`).join('')}</div>
+    <div style="display:flex;align-items:center;gap:14px;margin:10px 0"><button class="bigplay" id="pp" style="width:72px;height:72px;font-size:1.7rem">🔊</button><span class="plays" id="pc">${2 - C.plays[C.k]} play${2 - C.plays[C.k] === 1 ? '' : 's'} left</span></div>
+    <div class="task" style="border:none;padding:0"><div class="q">${esc(it.q)}</div><div class="opts">${it.opts.map((o, j) => `<button class="opt ${C.ans[C.k] === j ? 'sel' : ''}" data-o="${j}"><span class="l">${LET[j]})</span><span>${esc(o)}</span></button>`).join('')}</div></div>
+    <div class="navrow" style="justify-content:flex-end"><button class="btn band" id="nx" ${C.ans[C.k] == null ? 'disabled' : ''}>${C.k === C.items.length - 1 ? 'Finish ✓' : 'Next →'}</button></div></div>`;
+  $('#pp', P).onclick = () => { if (C.plays[C.k] >= 2) return; C.plays[C.k]++; $('#pc', P).textContent = `${2 - C.plays[C.k]} play${2 - C.plays[C.k] === 1 ? '' : 's'} left`; AU.one(it.clip); };
+  $$('[data-o]', P).forEach(b => b.onclick = () => { C.ans[C.k] = +b.dataset.o; $$('[data-o]', P).forEach(x => x.classList.toggle('sel', x === b)); $('#nx', P).disabled = false; });
+  $('#nx', P).onclick = () => { AU.stop(); C.k++; VIEWS.check(m); };
+};
+
+VIEWS.cert = m => {
+  const u = U(S.g, S.u), me = Store.me(), b = BANDS[S.g];
+  m.innerHTML = `<div class="cert"><div style="font-size:3rem">🏅</div><h1>Certificate of Achievement</h1><p>This certificate is proudly presented to</p><div class="nm">${esc(me.name)}</div>
+    <p>for successfully completing<br><b style="font-size:1.25rem">Grade ${S.g} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>Listen Up! Speak Out!</b> (${esc(b.name)} Level, CEFR ${esc(G(S.g).level)})</p>
+    <p style="font-size:1.3rem;font-weight:800;color:var(--ok)">Unit Check score: ${S.pct}%</p><p class="muted">${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}${me.cls ? ' · Class ' + esc(me.cls) : ''}</p>
+    <p style="margin-top:26px">______________________<br><span class="muted">Teacher</span></p></div>
+    <div class="ctrls noprint"><button class="btn" id="pr">🖨️ Print</button><button class="btn sec" id="bk">Back to unit</button></div>`;
+  $('#pr', m).onclick = () => { try { window.print(); } catch (e) {} };
+  $('#bk', m).onclick = () => go('unit', { g: S.g, u: S.u });
+};
+
+/* ---------- Teacher dashboard ---------- */
+VIEWS.teacher = m => {
+  const P = Store.data.profiles; const list = Object.values(P);
+  const row = p => {
+    const old = Store.data.current; Store.data.current = p.id;
+    const per = D.grades.map(gr => { const s = gradeStats(gr.grade); const cks = gr.units.map(u => (Store.get(u.id + 'check') || {}).best).filter(x => x != null); return { g: gr.grade, ...s, ck: cks.length ? Math.round(100 * cks.reduce((a, b) => a + b, 0) / cks.length) : null }; });
+    Store.data.current = old; return { p, per };
+  };
+  const rows = list.map(row);
+  m.innerHTML = crumbs([['Home', () => go('home')], ['Teacher dashboard']]) + `
+  <section class="lhead"><span class="k">Teacher</span><h1>📊 Teacher dashboard</h1><p style="margin:.3rem 0 0">Progress of the students who use this device or browser.</p></section>
+  <div class="section-title"><h2>Students on this device</h2></div>
+  <div class="grid g2">${rows.map(({ p, per }) => `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3>${esc(p.name)} <span class="muted" style="font-size:.9rem">${esc(p.cls || '')}</span></h3>${p.id !== 'guest' ? `<button class="btn sm sec" data-del="${esc(p.id)}">🗑️</button>` : ''}</div>
+    ${(() => { const t = shStats(p); return `<div class="selfrow"><span><b>🎙️ Shadowing</b></span><span>${t.min} min · ${t.lines} lines · ⭐ ${t.mastered} · 🔥 ${t.streak} days</span></div>`; })()}
+    ${per.map(x => `<div class="selfrow"><span><b>Grade ${x.g}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}</div>`).join('') || '<p>No students yet.</p>'}</div>
+  <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="csv">⬇️ Download CSV</button>'}<button class="btn sec" id="cp">📋 Copy results</button>${navigator.share ? '<button class="btn sec" id="shr">📤 Share</button>' : ''}<span class="muted" id="cpm"></span></div>
+  <div class="section-title"><h2>Back up or move students</h2></div>
+  <div class="card"><p style="margin-top:0">Save every student's progress in one backup, then restore it on another device or after reinstalling the app.</p>
+    <p class="ar ar-block">احفظ تقدّم جميع الطلاب في نسخة احتياطية واحدة، ثم استعدها على جهاز آخر أو بعد إعادة تثبيت التطبيق.</p>
+    <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn" id="bkS">💾 Back up all students</button><button class="btn sec" id="bkR">♻️ Restore a backup</button><span class="muted" id="bkm"></span></div></div>
+  <div class="section-title"><h2>How to use the program</h2></div>
+  <div class="card"><ol style="margin:0;padding-left:20px">
+    <li><b>Listening lessons (6 steps):</b> Words → Predict → Listen (twice) → Tasks → Script → Speak. The script opens only after the tasks are checked.</li>
+    <li><b>Speaking lessons (6 steps):</b> Listen → Useful language → Sound Check (pronunciation) → Shadowing → Role-play → Your turn + self-check.</li>
+    <li><b>Games and Unit Check:</b> three games per unit recycle the unit audio; the Unit Check gives a certificate at 70%.</li>
+    <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
+    <li><b>Arabic support (ع):</b> on by default in Grades 3–4 and off in Grades 5–6. Students can switch it for their grade.</li>
+    <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
+    <li><b>Recording:</b> works in Chrome or Edge when the program is opened from its folder. If the microphone is blocked, students can use their device recorder or speak aloud.</li>
+  </ol></div>
+  <div class="section-title"><h2>Kagan structures used in the program</h2></div>
+  <div class="grid g2">${Object.entries(KAGAN).map(([k, v]) => `<div class="kag"><b>${esc(k)}</b> — ${esc(v[0])}<ol>${v[1].map(s => `<li>${esc(s)}</li>`).join('')}</ol><span class="ar ar-block">${esc(v[2])}</span></div>`).join('')}</div>`;
+  bindCrumbs(m, [['Home', () => go('home')], ['Teacher']]);
+  $$('[data-del]', m).forEach(b => b.onclick = () => modal(`<h3>Delete this student?</h3><p>All saved progress for <b>${esc(P[b.dataset.del].name)}</b> on this device will be removed.</p>`, () => { delete P[b.dataset.del]; if (!P[Store.data.current]) Store.data.current = 'guest'; Store.save(); render(); }, 'Delete'));
+  const csv = () => { const L = ['Student,Class,Grade,Lessons done,Lessons total,Stars,Unit Check average %,Shadowing minutes,Lines mastered,Streak days']; rows.forEach(({ p, per }) => { const t = shStats(p); per.forEach(x => L.push([p.name, p.cls || '', x.g, x.done, x.total, x.stars, x.ck == null ? '' : x.ck, t.min, t.mastered, t.streak].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','))); }); return L.join('\n'); };
+  if ($('#csv', m)) $('#csv', m).onclick = () => { if (!saveFile('listen-up-speak-out-progress.csv', '﻿' + csv(), 'text/csv')) $('#cpm', m).textContent = 'Download is blocked here — use Copy.'; };
+  $('#cp', m).onclick = () => { copyText(csv()).then(() => $('#cpm', m).textContent = 'Copied! Paste into Excel or Google Sheets.', () => $('#cpm', m).textContent = 'Copy is not allowed here.'); };
+  if ($('#shr', m)) $('#shr', m).onclick = () => { navigator.share({ title: 'Listen Up! Speak Out! — progress', text: csv() }).catch(() => {}); };
+  const bkText = () => JSON.stringify({ app: 'listen-up-speak-out', backup: 1, saved: new Date().toISOString(), data: Store.data });
+  $('#bkS', m).onclick = () => {
+    const name = 'listen-up-backup-' + new Date().toISOString().slice(0, 10) + '.json', t = bkText();
+    if (saveFile(name, t, 'application/json')) { $('#bkm', m).textContent = 'Backup saved: ' + name; return; }
+    if (navigator.share) { navigator.share({ title: name, text: t }).then(() => $('#bkm', m).textContent = 'Backup shared.', () => copyText(t).then(() => $('#bkm', m).textContent = 'Backup copied — paste it into a note or e-mail and keep it.')); return; }
+    copyText(t).then(() => $('#bkm', m).textContent = 'Backup copied — paste it into a note or e-mail and keep it.', () => $('#bkm', m).textContent = 'Could not save the backup here.');
+  };
+  $('#bkR', m).onclick = () => {
+    modal(`<h3>Restore a backup</h3><p>Choose a backup file, or paste the backup text. <b>This replaces all students on this device.</b></p><p class="ar ar-block">اختر ملف النسخة الاحتياطية أو الصق نصّها. سيحلّ ذلك محلّ جميع الطلاب على هذا الجهاز.</p>
+      <input type="file" id="bkF" accept=".json,application/json,text/plain" style="margin:6px 0 10px"><textarea class="bk" id="bkT" placeholder='{"app":"listen-up-speak-out", …}'></textarea><p class="muted" id="bkE" style="margin:.4rem 0 0"></p>`, null, 'Restore');
+    const mo = document.querySelector('.modal'), ok = mo.querySelector('[data-m=ok]'), ta = mo.querySelector('#bkT');
+    mo.querySelector('#bkF').onchange = e => { const f = e.target.files[0]; if (f) f.text().then(t => { ta.value = t; }); };
+    ok.onclick = () => {
+      let o = null; try { o = JSON.parse(ta.value.trim()); } catch (e) {}
+      if (!o || o.app !== 'listen-up-speak-out' || !o.data || typeof o.data.profiles !== 'object') { mo.querySelector('#bkE').textContent = 'This is not a Listen Up! Speak Out! backup.'; return; }
+      Store.data = o.data; Store.save(); Store.load(); mo.remove(); go('teacher');
+    };
+  };
+};
+
+/* =====================================================================
+   SHADOWING STUDIO — 5-stage shadowing with word-by-word highlighting,
+   recording, honest timing feedback and Arabic-speaker sound hints
+   ===================================================================== */
+const TM = window.LSP_TIMINGS || {};
+const SH_MODES = [
+  { k: 'read', icon: '👂', name: 'Listen & Read', en: 'Listen and follow the words as they light up. Tap any word to hear it again.', ar: 'استمع وتابع الكلمات وهي تُضاء. اضغط على أي كلمة لتسمعها مرة أخرى.' },
+  { k: 'echo', icon: '🔁', name: 'Echo', en: 'Listen to the whole line. After the beep, say it in the same way.', ar: 'استمع إلى الجملة كاملة، وبعد الصافرة قلها بالطريقة نفسها.' },
+  { k: 'shadow', icon: '🗣️', name: 'Shadow', en: 'Speak at the same time as the speaker. Follow the words as they light up.', ar: 'تحدّث في الوقت نفسه مع المتحدث، وتابع الكلمات المضاءة.' },
+  { k: 'blind', icon: '🙈', name: 'Blind Shadow', en: 'Shadow without the text — use only your ears! The text appears after you finish.', ar: 'ظلّل دون النص واعتمد على أذنيك فقط! يظهر النص بعد أن تنتهي.' },
+  { k: 'run', icon: '🎬', name: 'Full Run', en: 'Shadow all the lines without stopping, like a real conversation.', ar: 'ظلّل جميع الجمل دون توقف، كأنها محادثة حقيقية.' }
+];
+const VOICED_TH = /^(the|this|that|these|those|they|them|their|theirs|there|then|than|though|with|without|mother|father|brother|other|another|together|weather|clothes|gather|smooth|breathe|rather|either|neither)$/;
+
+function wordsOf(t) { return String(t).split(/\s+/).filter(Boolean); }
+const spoken = w => /[A-Za-z0-9]/.test(w);
+function wordTimes(src, text) {
+  const ws = wordsOf(text), idx = ws.map((w, i) => spoken(w) ? i : -1).filter(i => i >= 0), out = ws.map(() => null);
+  const sp = TM[src];
+  if (!sp || !sp.length || !idx.length) return { ws, times: out, has: false };
+  if (sp.length === idx.length) idx.forEach((wi, k) => out[wi] = sp[k]);
+  else {
+    const a = sp[0][0], b = sp[sp.length - 1][1], len = wi => ws[wi].replace(/[^A-Za-z0-9]/g, '').length + 1;
+    const L = idx.reduce((s, wi) => s + len(wi), 0); let t = a;
+    idx.forEach(wi => { const d = (b - a) * len(wi) / L; out[wi] = [t, t + d * 0.9]; t += d; });
+  }
+  return { ws, times: out, has: true };
+}
+function soundHints(text) {
+  const H = [], seen = new Set(), add = (k, en, ar) => { if (!seen.has(k) && H.length < 2) { seen.add(k); H.push({ en, ar }); } };
+  for (const raw of wordsOf(text)) {
+    const w = raw.toLowerCase().replace(/[^a-z']/g, '');
+    if (!w) continue;
+    if (/p/.test(w) && !/ph/.test(w)) add('p', `/p/ in “${w}”: a puff of air, no voice.`, `صوت /p/ في “${w}”: دفعة هواء بلا صوت.`);
+    if (/v/.test(w)) add('v', `/v/ in “${w}”: top teeth on your lip, with voice.`, `صوت /v/ في “${w}”: الأسنان على الشفة مع الصوت.`);
+    if (/th/.test(w)) { if (VOICED_TH.test(w)) add('dh', `“${w}”: tongue between teeth, with voice — like ذ.`, `“${w}”: اللسان بين الأسنان مع الصوت مثل الذال.`); else add('th', `“${w}”: tongue between teeth, only air — like ث.`, `“${w}”: اللسان بين الأسنان مع الهواء فقط مثل الثاء.`); }
+    if (/^(spr|str|scr|spl|sp|st|sk|sc[^h]|sm|sn|sl|sw|pl|pr|bl|br|cl|cr|fl|fr|gl|gr|tr|dr|tw)/.test(w)) add('cl', `“${w}” starts with two consonants — no extra vowel before it.`, `تبدأ “${w}” بحرفين ساكنين — لا تضف حركة قبلها.`);
+    if (/[a-z]{3,}ed$/.test(w) && !/(need|feed|speed|seed|bleed|weed|hundred)$/.test(w)) add('ed', `-ed in “${w}”: listen — is it /t/, /d/ or /ɪd/?`, `نهاية -ed في “${w}”: هل هي /t/ أم /d/ أم /ɪd/؟`);
+  }
+  return H;
+}
+
+/* --- audio helpers --- */
+let ACX = null;
+function actx() { if (!ACX) { try { ACX = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) {} } if (ACX && ACX.state === 'suspended') ACX.resume(); return ACX; }
+function beep(f = 880, ms = 140) {
+  const c = actx(); if (!c) return sleep(ms);
+  try { const o = c.createOscillator(), g = c.createGain(); o.frequency.value = f; g.gain.value = 0.18; o.connect(g); g.connect(c.destination); o.start(); g.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + ms / 1000); o.stop(c.currentTime + ms / 1000 + 0.03); } catch (e) {}
+  return sleep(ms);
+}
+AU.range = function (c, a, b, rate) {
+  this.stop(); const tok = this.token, el = this.el, SPR = window.LSP_SPRITES, sp = SPR && SPR[c.src];
+  const base = sp ? sp[1] : 0, url = sp ? sp[0] : 'audio/' + c.src;
+  this.cur = c.src; this.base = base; el.onerror = null; el.onended = null;
+  return new Promise(res => {
+    const go2 = () => { try { el.currentTime = base + Math.max(0, a - 0.03); } catch (e) {} el.playbackRate = rate || 1; const p = el.play(); if (p && p.catch) p.catch(() => {}); setTimeout(() => { if (tok === this.token) el.pause(); res(); }, (b - a + 0.08) / (rate || 1) * 1000); };
+    if (!el.src || !el.src.endsWith(url)) { el.onloadedmetadata = () => { el.onloadedmetadata = null; go2(); }; el.src = url; el.load(); } else go2();
+  });
+};
+function karaoke(box, src, text) {
+  const { times, has } = wordTimes(src, text), spans = $$('.kw', box); let raf = 0;
+  const tick = () => {
+    if (!document.body.contains(box)) return;
+    if (AU.cur === src && !AU.el.paused) {
+      const t = AU.el.currentTime - (AU.base || 0);
+      let tm = times;
+      if (!has) { const SPR = window.LSP_SPRITES, sp = SPR && SPR[src]; const d = sp ? sp[2] - sp[1] : AU.el.duration; if (d) { const n = spans.length; tm = spans.map((_, i) => [0.1 + (d - 0.2) * i / n, 0.1 + (d - 0.2) * (i + 1) / n]); } }
+      spans.forEach((s, i) => { const w = tm[i]; if (!w) return; s.classList.toggle('on', t >= w[0] - 0.03 && t < w[1] + 0.04); s.classList.toggle('past', t >= w[1] + 0.04); });
+    }
+    raf = requestAnimationFrame(tick);
+  };
+  raf = requestAnimationFrame(tick);
+  return () => { cancelAnimationFrame(raf); spans.forEach(s => s.classList.remove('on', 'past')); };
+}
+
+/* --- microphone for the studio --- */
+const Mic = {
+  stream: null, mr: null, chunks: [], t0: 0,
+  async open() {
+    if (this.stream && this.stream.active) return true; if (!canMic) return false;
+    try { this.stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true } }); return true; } catch (e) { return false; }
+  },
+  start() { return new Promise(res => { this.chunks = []; this.mr = new MediaRecorder(this.stream); this.mr.ondataavailable = e => { if (e.data && e.data.size) this.chunks.push(e.data); }; this.mr.onstart = () => { this.t0 = performance.now(); res(); }; this.mr.start(); }); },
+  stop() { return new Promise(res => { if (!this.mr || this.mr.state === 'inactive') return res(null); this.mr.onstop = () => res(new Blob(this.chunks, { type: this.mr.mimeType || 'audio/webm' })); this.mr.stop(); }); },
+  close() { try { if (this.mr && this.mr.state !== 'inactive') this.mr.stop(); } catch (e) {} try { this.stream && this.stream.getTracks().forEach(t => t.stop()); } catch (e) {} this.stream = null; }
+};
+async function analyse(blob) {
+  const c = actx(); if (!c || !blob) return null;
+  try {
+    const buf = await c.decodeAudioData(await blob.arrayBuffer()); const x = buf.getChannelData(0), sr = buf.sampleRate, fr = Math.round(sr * 0.02), env = [];
+    for (let i = 0; i + fr <= x.length; i += fr) { let s = 0; for (let j = i; j < i + fr; j++) s += x[j] * x[j]; env.push(Math.sqrt(s / fr)); }
+    const so = env.slice().sort((a, b) => a - b), noise = so[Math.floor(so.length * 0.15)] || 0, peak = so[so.length - 1] || 0;
+    const thr = Math.max(noise * 2.5, peak * 0.12, 0.004); const segs = []; let s = -1;
+    env.forEach((v, i) => { if (v > thr && s < 0) s = i; if ((v <= thr || i === env.length - 1) && s >= 0) { segs.push([s * 0.02, i * 0.02]); s = -1; } });
+    const m = []; segs.forEach(g => { if (m.length && g[0] - m[m.length - 1][1] < 0.15) m[m.length - 1][1] = g[1]; else m.push(g.slice()); });
+    return { segs: m.filter(g => g[1] - g[0] >= 0.08), dur: x.length / sr, peak };
+  } catch (e) { return null; }
+}
+function judge(A, model, mode) {
+  // model.words: [[start,end]...] on the recording's time line; model.turn: echo turn start
+  if (!A) return { items: [{ ok: null, t: 'Your recording is saved, but this browser cannot measure it. Listen and compare.' }] };
+  if (!A.segs.length || A.peak < 0.01) return { items: [{ ok: false, t: 'We could not hear you. Check the microphone and speak a little louder.' }] };
+  const mw = model.words, m0 = mw[0][0], m1 = mw[mw.length - 1][1], s0 = A.segs[0][0], s1 = A.segs[A.segs.length - 1][1], items = [];
+  if (mode === 'echo') {
+    const lag = s0 - model.turn;
+    items.push(lag <= 1.2 ? { ok: true, t: 'You started soon after the beep. ✓' } : { ok: false, t: `You waited ${lag.toFixed(1)} s after the beep. Try to start sooner.` });
+  } else {
+    const lag = s0 - m0;
+    items.push(Math.abs(lag) <= 0.45 ? { ok: true, t: 'You started on time with the speaker. ✓' } : lag > 0 ? { ok: false, t: `You started ${lag.toFixed(1)} s late. Start with the first word.` } : { ok: false, t: 'You started before the speaker. Wait for the first word.' });
+  }
+  const ratio = (s1 - s0) / Math.max(0.3, m1 - m0);
+  items.push(ratio >= 0.8 && ratio <= 1.25 ? { ok: true, t: 'Your speed was close to the speaker’s. ✓' } : ratio > 1.25 ? { ok: false, t: `You took ${Math.round(ratio * 100)}% of the speaker’s time. Try to keep up.` } : { ok: false, t: 'You finished much faster. Did you say every word?' });
+  const longGaps = (arr, min) => arr.slice(1).filter((g, i) => g[0] - arr[i][1] > min).length;
+  const extra = Math.max(0, longGaps(A.segs, 0.5) - longGaps(mw, 0.35));
+  items.push(extra === 0 ? { ok: true, t: 'No extra pauses — your voice kept flowing. ✓' } : { ok: false, t: `${extra} extra pause${extra > 1 ? 's' : ''} in the middle. Keep the words joined.` });
+  if (A.peak < 0.05) items.push({ ok: false, t: 'Your voice was quiet. Speak a little louder.' });
+  return { items, s0, s1 };
+}
+function rhythmSVG(mw, labels, segs, total) {
+  const W = 600, sx = t => 6 + Math.max(0, t) / total * (W - 12);
+  const mr = mw.map((w, i) => { const x = sx(w[0]), wd = Math.max(3, sx(w[1]) - x); const lab = wd > 34 ? `<text x="${x + 3}" y="21" font-size="11" fill="#fff">${esc(labels[i] || '')}</text>` : ''; return `<rect x="${x}" y="6" width="${wd}" height="22" rx="5" fill="var(--c)"/>${lab}`; }).join('');
+  const yr = (segs || []).map(g => `<rect x="${sx(g[0])}" y="40" width="${Math.max(3, sx(g[1]) - sx(g[0]))}" height="22" rx="5" fill="var(--coral)"/>`).join('');
+  return `<svg viewBox="0 0 ${W} 68" class="rhythm" role="img" aria-label="Timing picture"><rect x="0" y="0" width="${W}" height="68" rx="10" fill="#F5F7FC"/>${mr}${yr}</svg>
+    <div class="rl"><span><i style="background:var(--c)"></i>Speaker</span><span><i style="background:var(--coral)"></i>You</span><span class="muted">This picture shows timing and pauses, not pronunciation.</span></div>`;
+}
+
+/* --- progress --- */
+const today = () => new Date().toISOString().slice(0, 10);
+function shData() { const p = Store.me(); p.shadow = p.shadow || { lines: {}, sec: 0, days: {} }; return p.shadow; }
+function shSave(src, upd) { const d = shData(), o = d.lines[src] || { lvl: -1, n: 0 }; d.lines[src] = Object.assign(o, upd, { lvl: Math.max(o.lvl, upd.lvl == null ? -1 : upd.lvl), n: o.n + 1 }); Store.save(); }
+function shTime(sec) { const d = shData(); d.sec = (d.sec || 0) + sec; d.days[today()] = (d.days[today()] || 0) + sec; Store.save(); }
+const shState = src => { const o = shData().lines[src]; return !o ? '' : (o.good && o.lvl >= 2) ? 'ms' : 'pr'; };
+function shStats(p) {
+  const d = (p || Store.me()).shadow || { lines: {}, sec: 0, days: {} };
+  let streak = 0; for (let i = 0; i < 365; i++) { const k = new Date(Date.now() - i * 864e5).toISOString().slice(0, 10); if (d.days[k]) streak++; else if (i > 0) break; }
+  return { min: Math.round((d.sec || 0) / 60), lines: Object.keys(d.lines).length, mastered: Object.values(d.lines).filter(o => o.good && o.lvl >= 2).length, streak };
+}
+
+/* --- tracks --- */
+function shTracks(g, u) {
+  const U0 = U(g, u);
+  return [...U0.listen.map(L => ({ key: 'l' + L.n, title: `Listening ${L.n}: ${L.title}`, lines: L.script, icon: '🎧' })), ...U0.speak.map(Sp => ({ key: 's' + Sp.n, title: `Speaking ${Sp.n}: ${Sp.title}`, lines: Sp.model, icon: '🗣️' }))];
+}
+function shDaily(g) {
+  const gr = G(g); let best = gr.units[0], bt = 0;
+  gr.units.forEach(u0 => lessonList(u0).forEach(x => { const p = Store.get(x.L.id); if (p && p.ts > bt) { bt = p.ts; best = u0; } }));
+  const pool = shTracks(g, best.n).flatMap(t => t.lines).filter(l => l.sp !== 'NARRATOR' && wordsOf(l.text).length >= 4 && wordsOf(l.text).length <= 16 && shState(l.audio) !== 'ms');
+  return { u: best.n, lines: pickN(pool.length >= 5 ? pool : shTracks(g, best.n).flatMap(t => t.lines).filter(l => l.sp !== 'NARRATOR'), 5) };
+}
+
+/* --- Studio hub --- */
+VIEWS.studio = m => {
+  S.g = S.g || Store.data.settings.shG || 3; setBand(S.g);
+  const st = shStats(), gr = G(S.g);
+  m.innerHTML = crumbs([['Home', () => go('home')], ['Shadowing Studio']]) + `
+  <section class="lhead" style="background:linear-gradient(120deg,var(--c),#FF6B4A)"><span class="k">🎙️ Shadowing Studio</span><h1>Speak like the speaker!</h1>
+    <p style="margin:.3rem 0 0;max-width:720px">Shadowing means listening to English and speaking <b>with</b> it, copying the sounds, the rhythm and the music. Practise a little every day.</p>
+    <p class="ar" style="color:#fff">التظليل يعني أن تستمع إلى الإنجليزية وتتحدث معها في الوقت نفسه، مقلّدًا الأصوات والإيقاع والنغمة. تدرّب قليلًا كل يوم.</p></section>
+  <div class="hud" style="margin:14px 0"><span>⏱️ ${st.min} min</span><span>🗣️ ${st.lines} lines practised</span><span>⭐ ${st.mastered} mastered</span><span>🔥 ${st.streak}-day streak</span></div>
+  <div class="card"><b>The 5 steps of shadowing</b><div class="grid g3" style="margin-top:10px">${SH_MODES.map((x, i) => `<div class="kag"><b>${i + 1}. ${x.icon} ${esc(x.name)}</b><br><span style="font-size:.92rem">${esc(x.en)}</span><span class="ar ar-block">${esc(x.ar)}</span></div>`).join('')}</div>
+    <p class="muted" style="margin:.8rem 0 0">🎧 Use headphones for steps 3–5, so the microphone hears only you.</p></div>
+  <div class="section-title"><h2>Choose your grade</h2></div>
+  <div class="seg" id="gsel">${D.grades.map(x => `<button data-g="${x.grade}" class="${x.grade === S.g ? 'on' : ''}">Grade ${x.grade}</button>`).join('')}</div>
+  <div class="ctrls" style="justify-content:flex-start;margin-top:14px"><button class="btn" id="daily">⚡ Daily 5 — five lines for today</button></div>
+  <div class="grid g2" style="margin-top:16px">${gr.units.map(u0 => { const tr = shTracks(S.g, u0.n); const all = tr.flatMap(t => t.lines); const ms = all.filter(l => shState(l.audio) === 'ms').length;
+    return `<div class="card"><div class="uh" style="display:flex;gap:10px;align-items:center"><span class="ue" style="width:46px;height:46px;border-radius:14px;background:var(--cl);display:grid;place-items:center;font-size:1.5rem">${u0.emoji}</span><div><span class="pill">Unit ${u0.n}</span><h3 style="font-size:1.1rem">${esc(u0.title)}</h3></div></div>
+      <div class="lesson-list" style="margin-top:10px">${tr.map(t => { const d = t.lines.filter(l => shState(l.audio) === 'ms').length; return `<button class="lrow" data-tr="${u0.n}|${t.key}" style="padding:9px 12px"><span class="ic" style="width:34px;height:34px">${t.icon}</span><span class="tx"><b style="font-size:.95rem">${esc(t.title)}</b><small>${t.lines.length} lines · ⭐ ${d}</small></span></button>`; }).join('')}</div>
+      <div class="muted" style="font-size:.85rem;margin-top:8px">⭐ ${ms}/${all.length} lines mastered</div></div>`; }).join('')}</div>`;
+  bindCrumbs(m, [['Home', () => go('home')], ['Studio']]);
+  $$('#gsel button', m).forEach(b => b.onclick = () => { Store.data.settings.shG = +b.dataset.g; Store.save(); go('studio', { g: +b.dataset.g }); });
+  $$('[data-tr]', m).forEach(b => b.onclick = () => { const [u0, key] = b.dataset.tr.split('|'); go('shadow', { g: S.g, u: +u0, src: key }); });
+  $('#daily', m).onclick = () => { const d = shDaily(S.g); go('shadow', { g: S.g, u: d.u, src: 'daily', dl: d.lines }); };
+};
+
+/* --- Studio session --- */
+VIEWS.shadow = m => {
+  const set = Store.data.settings; S.mode = S.mode == null ? (set.shMode || 0) : S.mode; S.i = S.i || 0; S.rate = S.rate || 1; S.loop = S.loop || 1; S.who = S.who || '';
+  const u0 = U(S.g, S.u); let title, all;
+  if (S.src === 'daily') { title = '⚡ Daily 5'; all = S.dl; } else { const t = shTracks(S.g, S.u).find(x => x.key === S.src); title = t.title; all = t.lines; }
+  const people = [...new Map(all.filter(l => l.sp !== 'NARRATOR').map(l => [l.sp, l.name])).entries()];
+  const lines = S.who ? all.filter(l => l.sp === S.who) : all; if (S.i >= lines.length) S.i = 0;
+  const l = lines[S.i], md = SH_MODES[S.mode], choral = !!set.classmode;
+  const parts = [['Home', () => go('home')], ['Studio', () => go('studio', { g: S.g })], [`Unit ${u0.n}`]];
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead"><span class="k">🎙️ Shadowing Studio · Grade ${S.g} · Unit ${u0.n}</span><h1>${esc(title)}</h1></section>
+  <nav class="steps">${SH_MODES.map((x, i) => `<button class="${i === S.mode ? 'cur' : ''}" data-md="${i}">${i + 1}. ${x.icon} ${esc(x.name)}</button>`).join('')}</nav>
+  <div class="instr"><span class="n">${md.icon}</span><div><b>${esc(md.en)}</b><span class="ar ar-block">${esc(md.ar)}</span></div></div>
+  <div class="ctrls" style="justify-content:flex-start;margin-bottom:12px">
+    <span class="seg" id="rt">${[0.7, 0.85, 1, 1.15].map(r => `<button data-r="${r}" class="${r === S.rate ? 'on' : ''}">${r === 1 ? 'Normal' : r + '×'}</button>`).join('')}</span>
+    ${S.mode === 0 ? `<span class="seg" id="lp"><button data-l="1" class="${S.loop === 1 ? 'on' : ''}">Play once</button><button data-l="3" class="${S.loop === 3 ? 'on' : ''}">🔁 ×3</button></span>` : ''}
+    ${people.length > 1 && S.src !== 'daily' ? `<select id="who" class="chip" aria-label="Lines to practise"><option value="">All lines</option>${people.map(([k, n]) => `<option value="${k}" ${S.who === k ? 'selected' : ''}>Only ${esc(n)}’s lines</option>`).join('')}</select>` : ''}
+    ${S.mode >= 2 ? `<label class="chip"><input type="checkbox" id="hp" ${set.hp ? 'checked' : ''}> 🎧 I’m using headphones</label>` : ''}
+  </div>
+  <div id="sbody"></div>
+  <div class="dots" ${S.mode === 4 ? 'hidden' : ''}>${lines.map((x, i) => `<button class="dot ${shState(x.audio)} ${i === S.i ? 'cur' : ''}" data-i="${i}" title="Line ${i + 1}">${i + 1}</button>`).join('')}</div>
+  <p class="muted" style="font-size:.85rem;text-align:center">⚪ new · 🔵 practised · ⭐ mastered (good self-check in Shadow, Blind or Full Run)</p>`;
+  bindCrumbs(m, parts);
+  $$('[data-md]', m).forEach(b => b.onclick = () => { S.mode = +b.dataset.md; Store.data.settings.shMode = S.mode; Store.save(); S.fb = null; AU.stop(); VIEWS.shadow(m); });
+  $$('#rt button', m).forEach(b => b.onclick = () => { S.rate = +b.dataset.r; VIEWS.shadow(m); });
+  $$('#lp button', m).forEach(b => b.onclick = () => { S.loop = +b.dataset.l; VIEWS.shadow(m); });
+  const who = $('#who', m); if (who) who.onchange = () => { S.who = who.value; S.i = 0; S.fb = null; VIEWS.shadow(m); };
+  const hp = $('#hp', m); if (hp) hp.onchange = () => { Store.data.settings.hp = hp.checked; Store.save(); };
+  $$('[data-i]', m).forEach(b => b.onclick = () => { S.i = +b.dataset.i; S.fb = null; AU.stop(); VIEWS.shadow(m); });
+  const B = $('#sbody', m);
+  if (S.mode === 4) return shFullRun(B, lines, m);
+  const hints = soundHints(l.text);
+  B.innerHTML = `<div class="card shcard ${choral ? 'choral' : ''}">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span class="round">Line ${S.i + 1} of ${lines.length}</span><span style="display:flex;gap:8px;align-items:center">${avatar(l.sp, l.name)}<b style="color:${SPC[l.sp]}">${esc(l.name)}</b></span></div>
+    <p class="ktext ${S.mode === 3 && !S.revealed ? 'blind' : ''}" id="kt">${wordsOf(l.text).map((w, i) => `<span class="kw" data-w="${i}">${esc(w)}</span>`).join(' ')}</p>
+    ${hints.length && S.mode !== 3 ? `<div class="hints">${hints.map(h => `<span class="hint">🔤 ${esc(h.en)}<span class="ar ar-block">${esc(h.ar)}</span></span>`).join('')}</div>` : ''}
+    <div class="ctrls" id="act" style="margin-top:12px"></div><p id="msg" class="shmsg"></p></div>
+    <div id="fb"></div>
+    <div class="navrow"><button class="btn sm sec" id="pv" ${S.i === 0 ? 'disabled' : ''}>← Previous</button><button class="btn sm band" id="nx" ${S.i === lines.length - 1 ? 'disabled' : ''}>Next line →</button></div>`;
+  const kt = $('#kt', B), msg = $('#msg', B), act = $('#act', B), clip = clipOf(l);
+  karaoke(kt, l.audio, l.text);
+  const wt = wordTimes(l.audio, l.text);
+  $$('.kw', kt).forEach((s, i) => s.onclick = () => { const w = wt.times[i]; if (w) AU.range(clip, w[0], w[1], Math.min(S.rate, 1)); });
+  $('#pv', B).onclick = () => { S.i--; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
+  $('#nx', B).onclick = () => { S.i++; S.fb = null; S.revealed = false; AU.stop(); VIEWS.shadow(m); };
+  const mwRec = off => (wt.has ? wt.times.filter(Boolean) : [[0.1, 1]]).map(w => [off + w[0] / S.rate, off + w[1] / S.rate]);
+  const labels = wt.ws.filter((w, i) => wt.times[i]);
+  const lineSec = () => { const SPR = window.LSP_SPRITES, sp = SPR && SPR[l.audio]; return ((sp ? sp[2] - sp[1] : (TM[l.audio] ? TM[l.audio][TM[l.audio].length - 1][1] + 0.15 : 3))) / S.rate; };
+  if (S.mode === 0) {
+    act.innerHTML = `<button class="btn band" id="p1">▶ Listen</button><button class="btn sec" id="pall">▶ Play all lines</button><button class="btn sec" id="st">⏹</button>`;
+    $('#p1', B).onclick = async () => { for (let k = 0; k < S.loop; k++) { const ok = await AU.one(clip, S.rate); if (!ok) return; shTime(lineSec()); if (k < S.loop - 1) await sleep(700); } shSave(l.audio, { lvl: 0 }); };
+    $('#pall', B).onclick = async () => { for (let k = S.i; k < lines.length; k++) { if (k !== S.i) { S.i = k; VIEWS.shadow(m); } const ok = await AU.one(clipOf(lines[k]), S.rate); if (!ok) return; shTime(lineSec()); await sleep(600); } };
+    $('#st', B).onclick = () => AU.stop();
+  } else {
+    const label = { 1: '🔁 Start Echo', 2: '🗣️ Shadow now', 3: '🙈 Shadow blind' }[S.mode];
+    act.innerHTML = `<button class="btn band" id="go">${label}</button><button class="btn sec" id="hear">▶ Listen first</button><button class="btn sec" id="st">⏹</button>`;
+    $('#hear', B).onclick = () => AU.one(clip, S.rate);
+    $('#st', B).onclick = () => { AU.stop(); Mic.stop(); msg.textContent = ''; };
+    $('#go', B).onclick = async () => {
+      AU.stop(); actx(); $('#go', B).disabled = true; S.fb = null; $('#fb', B).innerHTML = '';
+      const rec = !choral && await Mic.open();
+      if (!rec && !choral) msg.innerHTML = '🎤 Microphone not available — practise aloud; there will be no recording.';
+      let blob = null, model = null;
+      if (S.mode === 1) {
+        msg.textContent = '👂 Listen…'; const ok = await AU.one(clip, S.rate); if (!ok) { $('#go', B).disabled = false; return; }
+        await beep(880, 160); if (rec) await Mic.start(); const tStart = performance.now();
+        const sec = Math.max(2, lineSec() * 1.35 + 0.8); msg.innerHTML = `🎤 Your turn! <b id="cd">${Math.ceil(sec)}</b>s <button class="btn sm ok" id="done">✓ Done</button>`;
+        await new Promise(res => { let left = Math.ceil(sec); const iv = setInterval(() => { left--; const cd = $('#cd', B); if (cd) cd.textContent = Math.max(0, left); if (left <= 0) { clearInterval(iv); res(); } }, 1000); const dn = $('#done', B); if (dn) dn.onclick = () => { clearInterval(iv); res(); }; });
+        if (rec) { blob = await Mic.stop(); model = { words: mwRec(0.15), turn: (tStart - Mic.t0) / 1000 }; }
+        shTime(lineSec() * 2);
+      } else {
+        for (const f of [440, 440, 440]) { msg.textContent = '…'; await beep(f, 110); await sleep(300); }
+        msg.textContent = S.mode === 3 ? '🙈 Shadow now — no text!' : '🗣️ Shadow now!';
+        if (rec) await Mic.start();
+        let tPlay = performance.now(); AU.el.addEventListener('playing', () => { tPlay = performance.now(); }, { once: true });
+        const ok = await AU.one(clip, S.rate); await sleep(700);
+        if (rec) { blob = await Mic.stop(); model = { words: mwRec((tPlay - Mic.t0) / 1000) }; }
+        if (!ok) { $('#go', B).disabled = false; return; }
+        shTime(lineSec());
+        if (S.mode === 3) { S.revealed = true; kt.classList.remove('blind'); }
+      }
+      msg.textContent = '';
+      shSave(l.audio, { lvl: S.mode });
+      S.fb = { blob, model, A: blob ? await analyse(blob) : null };
+      shFeedback($('#fb', B), l, labels, S.mode, rec, () => VIEWS.shadow(m));
+      $('#go', B).disabled = false;
+    };
+    if (S.fb) shFeedback($('#fb', B), l, labels, S.mode, !!S.fb.blob, () => VIEWS.shadow(m));
+  }
+};
+function shFeedback(box, l, labels, mode, rec, rerender) {
+  const F = S.fb; const md = SH_MODES[mode].k; let url = null;
+  let html = `<div class="card fbcard"><h3>How did it go?</h3>`;
+  if (rec && F.blob) {
+    url = URL.createObjectURL(F.blob);
+    const J = judge(F.A, F.model, md);
+    const total = Math.max(F.A ? F.A.dur : 0, F.model.words[F.model.words.length - 1][1] + 0.4);
+    html += `<ul class="mlist">${J.items.map(x => `<li class="${x.ok === true ? 'ok' : x.ok === false ? 'no' : ''}">${esc(x.t)}</li>`).join('')}</ul>
+      ${F.A ? rhythmSVG(F.model.words, labels, F.A.segs, total) : ''}
+      <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn sm sec" id="mine">▶ My voice</button><button class="btn sm sec" id="mod">🔊 Speaker</button>${md !== 'echo' ? '<button class="btn sm sec" id="both">🎧 Both together</button>' : ''}${SRec ? '<button class="btn sm sec" id="wcb">🎯 Word check (online)</button>' : ''}</div><div class="wc" id="wc"></div>
+      ${!Store.data.settings.hp && md !== 'echo' ? '<p class="muted" style="font-size:.85rem">Without headphones, the microphone may also hear the speaker, so these measures can be less exact.</p>' : ''}`;
+  } else html += `<p class="muted">No recording this time. Check yourself honestly below.</p>`;
+  html += `<div style="margin-top:12px"><b>Check yourself:</b> <span class="ar">قيّم نفسك بصدق</span>
+    <div class="pairrow" style="margin-top:8px">${[['r', '🎵 Rhythm like the speaker'], ['s', '🔤 Clear sounds'], ['f', '🌊 Smooth, no stops']].map(([k, t]) => `<button class="chip selfc" data-k="${k}">${t}</button>`).join('')}</div>
+    <div class="ctrls" style="justify-content:flex-start;margin-top:10px"><button class="btn sm ok" id="sv">Save</button><span class="muted" id="svm"></span></div></div></div>`;
+  box.innerHTML = html;
+  const sel = {}; $$('.selfc', box).forEach(b => b.onclick = () => { sel[b.dataset.k] = !sel[b.dataset.k]; b.classList.toggle('on', sel[b.dataset.k]); });
+  $('#sv', box).onclick = () => { const good = sel.r && sel.s && sel.f; shSave(l.audio, { lvl: mode, good: good || (shData().lines[l.audio] || {}).good }); $('#svm', box).textContent = good && mode >= 2 ? '⭐ Line mastered!' : 'Saved.'; if (good && mode >= 2) confetti(); setTimeout(rerender, 900); };
+  if (url) {
+    const mine = new Audio(url);
+    $('#mine', box).onclick = () => { AU.stop(); mine.currentTime = 0; mine.play().catch(() => {}); };
+    $('#mod', box).onclick = () => { mine.pause(); AU.one(clipOf(l), S.rate); };
+    const bb = $('#both', box); if (bb) bb.onclick = () => { AU.stop(); mine.currentTime = 0; mine.play().catch(() => {}); const off = F.model.words[0][0] - (TM[l.audio] ? TM[l.audio][0][0] / S.rate : 0); setTimeout(() => AU.one(clipOf(l), S.rate), Math.max(0, off) * 1000); };
+    const wb = $('#wcb', box); if (wb) wb.onclick = () => {
+      const wc = $('#wc', box);
+      try { const r = new SRec(); r.lang = 'en-US'; r.maxAlternatives = 3; wc.innerHTML = '<span class="muted">Say the line now…</span>';
+        r.onresult = e => { const heard = new Set(); for (const a of e.results[0]) normWords(a.transcript).forEach(w => heard.add(w)); const tw = normWords(l.text); let hit = 0;
+          wc.innerHTML = '<b>Word check:</b> ' + tw.map(w => { const h = heard.has(w); if (h) hit++; return `<span class="${h ? 'hit' : 'miss'}">${esc(w)}</span>`; }).join(' ') + ` <span class="muted">(${hit}/${tw.length} words recognised — words only, not pronunciation)</span>`; };
+        r.onerror = ev => { wc.innerHTML = `<span class="muted">Word check is not available now (${esc(ev.error)}). It needs Chrome and internet.</span>`; }; r.start();
+      } catch (e) { wc.innerHTML = '<span class="muted">Word check is not available in this browser.</span>'; }
+    };
+  }
+}
+function shFullRun(B, lines, m) {
+  const choral = !!Store.data.settings.classmode;
+  B.innerHTML = `<div class="card ${choral ? 'choral' : ''}"><div class="ctrls" style="justify-content:flex-start"><button class="btn band" id="go">🎬 Start Full Run</button><button class="btn sec" id="st">⏹ Stop</button></div><p id="msg" class="shmsg"></p>
+    <div id="fl">${lines.map((l, i) => `<div class="tline" data-l="${i}">${avatar(l.sp, l.name)}<span style="flex:1"><span class="who" style="color:${SPC[l.sp]}">${esc(l.name)}</span><br><span class="ktext sm" id="k${i}">${wordsOf(l.text).map((w, j) => `<span class="kw" data-w="${j}">${esc(w)}</span>`).join(' ')}</span></span></div>`).join('')}</div></div><div id="fb"></div>`;
+  const nodes = $$('[data-l]', B), msg = $('#msg', B);
+  lines.forEach((l, i) => karaoke($('#k' + i, B), l.audio, l.text));
+  $('#st', B).onclick = () => { AU.stop(); Mic.stop(); msg.textContent = ''; };
+  $('#go', B).onclick = async () => {
+    actx(); const rec = !choral && await Mic.open(); if (!rec && !choral) msg.textContent = '🎤 Microphone not available — shadow aloud without recording.';
+    for (const f of [440, 440, 440]) { await beep(f, 110); await sleep(300); }
+    msg.textContent = '🎬 Go! Shadow every line.'; if (rec) await Mic.start();
+    const starts = []; const t0 = performance.now();
+    const ok = await AU.list(lines.map(clipOf), { rate: S.rate, gap: 500, onLine: i => { nodes.forEach(x => x.classList.remove('playing')); if (i >= 0) { nodes[i].classList.add('playing'); nodes[i].scrollIntoView({ block: 'nearest', behavior: 'smooth' }); starts[i] = (performance.now() - (rec ? Mic.t0 : t0)) / 1000 + 0.05; } } });
+    await sleep(600); const blob = rec ? await Mic.stop() : null; msg.textContent = '';
+    if (!ok) return;
+    shTime((performance.now() - t0) / 1000);
+    lines.forEach(l => shSave(l.audio, { lvl: 4 }));
+    const mw = [], labels = [];
+    lines.forEach((l, i) => { const wt = wordTimes(l.audio, l.text); wt.times.forEach((w, j) => { if (w) { mw.push([starts[i] + w[0] / S.rate, starts[i] + w[1] / S.rate]); labels.push(wt.ws[j]); } }); });
+    S.fb = { blob, model: { words: mw }, A: blob ? await analyse(blob) : null };
+    shFeedback($('#fb', B), { audio: lines[0].audio, text: lines.map(x => x.text).join(' '), sp: lines[0].sp }, labels, 4, rec, () => VIEWS.shadow(m));
+    const sv = $('#sv', B); const orig = sv.onclick; sv.onclick = () => { const good = $$('.selfc.on', B).length === 3; lines.forEach(l => shSave(l.audio, { lvl: 4, good: good || (shData().lines[l.audio] || {}).good })); $('#svm', B).textContent = good ? '⭐ All lines mastered!' : 'Saved.'; if (good) confetti(); setTimeout(() => VIEWS.shadow(m), 900); };
+    const bb = $('#both', B); if (bb) bb.remove();
+    const md = $('#mod', B); if (md) md.onclick = () => AU.list(lines.map(clipOf), { rate: S.rate, gap: 500 });
+  };
+}
+
+/* ---------- Bidi: keep English phrases inside Arabic text in the right order ---------- */
+const LATRE = /[A-Za-z\/][A-Za-z0-9\/ '’\-…:ːˈɪʊəæʌɑɔɜθðʃʒŋ.?!]*[A-Za-z0-9\/ːɪʊəæʌɑɔɜθðʃʒŋ]/g;
+function bidiFix(root) {
+  $$('.ar:not([data-bx])', root).forEach(el => {
+    el.dataset.bx = '1'; if (el.children.length) return;
+    const t = el.textContent; let h = '', last = 0; t.replace(LATRE, (m, i) => { h += esc(t.slice(last, i)) + '<bdi dir="ltr">' + esc(m) + '</bdi>'; last = i + m.length; return m; });
+    if (last) el.innerHTML = h + esc(t.slice(last));
+  });
+}
+new MutationObserver(() => bidiFix(document)).observe(document.getElementById('app'), { childList: true, subtree: true });
+
+/* ---------- Boot ---------- */
+if (!D) { document.getElementById('app').innerHTML = '<div class="wrap"><p style="padding:40px">data.js is missing. Keep index.html, data.js and the audio folder together.</p></div>'; }
+else { Store.load(); render(); }
+</script>
+<script src="pwa.js"></script>
+</body>
+</html>

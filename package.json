@@ -1,0 +1,102 @@
+{
+  "name": "listen-up-speak-out",
+  "version": "1.0.0",
+  "description": "Listen Up! Speak Out! - elementary listening and speaking program (Grades 3-6) for web, Android, iOS and Windows",
+  "main": "electron/main.js",
+  "scripts": {
+    "build:www": "python3 tools/app/build_www.py",
+    "start": "electron .",
+    "sync": "npm run build:www && npx cap sync",
+    "android": "npm run sync && cd android && ./gradlew assembleDebug",
+    "win": "npm run build:www && electron-builder --win --x64",
+    "mac": "npm run build:www && electron-builder --mac",
+    "linux": "npm run build:www && electron-builder --linux AppImage"
+  },
+  "author": "Waleed Awadallah Yussuf",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@capacitor/android": "^8.6.2",
+    "@capacitor/app": "^8.1.2",
+    "@capacitor/assets": "^4.0.0",
+    "@capacitor/cli": "^8.6.2",
+    "@capacitor/core": "^8.6.2",
+    "@capacitor/ios": "^8.6.2",
+    "@capacitor/splash-screen": "^8.0.2",
+    "@fontsource/baloo-2": "^5.3.0",
+    "@fontsource/nunito": "^5.3.0",
+    "@fontsource/tajawal": "^5.3.0",
+    "electron": "^45.3.2",
+    "electron-builder": "^26.18.0"
+  },
+  "private": true,
+  "build": {
+    "appId": "com.mrwaleedyoussif.listenupspeakout",
+    "productName": "Listen Up! Speak Out!",
+    "copyright": "\u00a9 2026 Waleed Awadallah Yussuf",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build-res"
+    },
+    "files": [
+      "electron/**",
+      "www/**",
+      "build-res/icon.*",
+      "!www/**/*.src"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build-res/icon.ico",
+      "artifactName": "Listen-Up-Speak-Out-${version}-${arch}-${target}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Listen Up! Speak Out!",
+      "installerLanguages": [
+        "en_US",
+        "ar_SA"
+      ],
+      "multiLanguageInstaller": true,
+      "artifactName": "Listen-Up-Speak-Out-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "Listen-Up-Speak-Out-Portable-${version}.${ext}"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.education",
+      "icon": "build-res/icon.png"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Education",
+      "icon": "build-res/icon.png"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrwaleedyoussif/listen-up-speak-out.git"
+  }
+}

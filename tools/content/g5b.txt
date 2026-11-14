@@ -1,0 +1,464 @@
+#GRADE 5
+
+@UNIT 4 | Our Amazing Planet | كوكبنا المدهش | 🌍
+goals: I can compare animals, places and things. | I can describe a place and say what it's famous for. | I can understand facts in a documentary and a quiz.
+
+@LISTEN 1 | Desert Life | Listening for facts and reasons | الاستماع إلى الحقائق والأسباب
+kagan: Numbered Heads Together | RallyRobin
+vocab: oryx | المها العربي | 🦌 | The Arabian oryx is white.
+vocab: horns | قرون | 🦬 | It has long, straight horns.
+vocab: reflect | يعكس | 🪞 | Its white coat reflects the sun.
+vocab: heat | الحرارة | 🔥 | Big ears help it to lose heat.
+vocab: hunt | يصطاد | 🎯 | The fox hunts at night.
+vocab: protect | يحمي | 🛡️ | Long eyelashes protect its eyes.
+predict: The desert is very hot and dry. How do animals live there? |
+tip: Listen for comparing words like hotter, smaller, bigger and the most. They often answer "why" and "how" questions. | استمع لكلمات المقارنة مثل hotter وsmaller وbigger وthe most، فهي غالبًا تجيب عن أسئلة لماذا وكيف.
+script:
+NARRATOR: The Arabian Desert is one of the hottest places on Earth. In summer, the sand can be hotter than seventy degrees! But many animals live here. How do they do it?
+NARRATOR: The Arabian oryx is a beautiful white animal with long, straight horns. Its white coat reflects the sun, so it stays cooler than darker animals. The oryx can live for weeks without drinking. It gets water from the plants it eats.
+NARRATOR: The fennec fox is smaller than a cat, but its ears are bigger than its face! Its big ears help it to lose heat. It sleeps underground in the day, where it's cooler, and it hunts at night.
+NARRATOR: The camel is the most famous desert animal. It can drink more than one hundred liters of water in ten minutes. Its long eyelashes protect its eyes from the sand.
+NARRATOR: In {1972|nineteen seventy-two}, the Arabian oryx almost disappeared from the wild. Today, thanks to protection programs, there are more than a thousand oryx in the wild again.
+end
+mcq: How hot can the desert sand be in summer? | *more than seventy degrees | about forty degrees | about fifty degrees | one hundred degrees
+mcq: Why does the oryx stay cooler than darker animals? | *Its white coat reflects the sun. | It sleeps in the day. | It drinks a lot of water. | It lives underground.
+mcq: Where does the fennec fox sleep in the day? | *underground | under a tree | in the sun | near water
+mcq: What protects the camel's eyes? | *its long eyelashes | its big ears | its white coat | its long neck
+tf: The fennec fox is bigger than a cat. | F
+tf: The oryx gets water from the plants it eats. | T
+gap: A camel can drink more than one hundred ___ of water in ten minutes. | liters, litres, l
+gap: In ___, the Arabian oryx almost disappeared from the wild. | 1972, nineteen seventy-two
+speak: Choose a desert animal. Tell your partner two ways it survives in the desert. | The ___ can ___. Its ___ helps it to ___.
+teach: Show a photo of the Arabian oryx. Explain that Saudi Arabia protects it in nature reserves — a good link to caring for our environment and wildlife.
+
+@LISTEN 2 | Planet Quiz | Listening for superlatives | الاستماع إلى صيغ التفضيل
+kagan: Showdown | Numbered Heads Together
+vocab: the largest | الأكبر | 🌊 | The Pacific is the largest ocean.
+vocab: ocean | محيط | 🌐 | What is the largest ocean?
+vocab: the longest | الأطول | 📏 | The Nile is the longest river.
+vocab: river | نهر | 🏞️ | The river is about six thousand kilometers long.
+vocab: planet | كوكب | 🪐 | Venus is the hottest planet.
+vocab: the smallest | الأصغر | 🐦 | The hummingbird is the smallest bird.
+predict: Two boys answer questions in a quiz about our planet. Do you know the largest ocean or the longest river? |
+tip: Quiz questions often give two choices: "Is it A or B?" Listen to which choice the player says and whether the host says "correct". | غالبًا ما تعطي أسئلة المسابقات خيارين: Is it A or B? استمع للخيار الذي يقوله المتسابق، ولما إذا قالت المذيعة correct.
+script:
+WOMAN[Quiz Host]: Welcome to Planet Quiz! Our players today are Ben and Yusuf. Question one, for Ben: what is the largest ocean in the world?
+BEN: I think it's the Pacific Ocean.
+WOMAN[Quiz Host]: Correct! Yusuf, question two: what is the longest river in the world? Is it the Amazon or the Nile?
+YUSUF: It's the Nile. It's about six thousand six hundred kilometers long.
+WOMAN[Quiz Host]: That's right! Ben, question three: which is the hottest planet, Mercury or Venus?
+BEN: Mercury, because it's the closest to the sun.
+WOMAN[Quiz Host]: Oh, sorry, Ben! It's Venus. Its thick clouds keep the heat in. Yusuf, here's a bonus question. What is the smallest bird in the world?
+YUSUF: The hummingbird! Some hummingbirds are only five centimeters long.
+WOMAN[Quiz Host]: Excellent! So, the final score: Ben has one point, and Yusuf has three points. Yusuf is our winner today!
+end
+mcq: What is the largest ocean in the world? | *the Pacific Ocean | the Atlantic Ocean | the Indian Ocean | the Arctic Ocean
+mcq: Why did Ben choose Mercury? | *It's the closest planet to the sun. | It's the biggest planet. | It has thick clouds. | It's his favorite planet.
+mcq: Why is Venus the hottest planet? | *Its thick clouds keep the heat in. | It's the closest to the sun. | It's the biggest planet. | It has no water.
+mcq: Who wins the quiz? | *Yusuf | Ben | nobody | the host
+tf: The quiz says the Nile is the longest river in the world. | T
+tf: Ben answered all his questions correctly. | F
+gap: Some hummingbirds are only ___ centimeters long. | five, 5
+gap: The Nile is about six thousand six hundred ___ long. | kilometers, kilometres, km
+speak: Write three "biggest, smallest or longest" quiz questions. Ask your partner. | What is the ___est ___ in the world? — I think it's ___.
+teach: Ben's mistake is a great teaching moment: the closest planet is not the hottest. Ask "Why was Ben wrong?" to practise explaining reasons.
+
+@LISTEN 3 | Under the Red Sea | Completing notes from a talk | إكمال الملاحظات من محاضرة
+kagan: RallyCoach | Talking Chips
+vocab: coral reef | الشعاب المرجانية | 🪸 | The coral reef is beautiful.
+vocab: tiny | صغير جدًا | 🔬 | Coral is made of tiny animals.
+vocab: poisonous | سامّ | ☠️ | The lionfish has poisonous spines.
+vocab: pollution | التلوّث | 🏭 | Pollution is dangerous for the reef.
+vocab: turtle | سلحفاة | 🐢 | Let's go and see the turtles.
+vocab: in danger | في خطر | ⚠️ | Coral reefs are in danger.
+predict: A guide talks to students at a marine center in Jeddah. What lives under the Red Sea? |
+tip: Read the gaps before listening. Numbers and nouns are the most common missing words in note completion. | اقرأ الفراغات قبل الاستماع. الأعداد والأسماء هي أكثر الكلمات الناقصة شيوعًا في تمارين إكمال الملاحظات.
+script:
+MAN[Guide]: Welcome to the Red Sea Marine Center. The Red Sea is about two thousand two hundred kilometers long, and it's home to more than one thousand two hundred kinds of fish.
+MAN[Guide]: The most important part of the Red Sea is the coral reef. Coral looks like colorful rocks or plants, but it's actually made of tiny animals!
+MAN[Guide]: Red Sea coral is special. It can live in warmer water than most coral in the world. Scientists from many countries come here to study it.
+MAN[Guide]: Some of the fish you can see here are the clownfish, the parrotfish and the lionfish. Be careful with the lionfish — it has poisonous spines!
+MAN[Guide]: Coral reefs are in danger because of pollution and plastic. One plastic bag can kill a sea turtle, because the turtle thinks it's a jellyfish.
+MAN[Guide]: So please, never leave rubbish on the beach. Now, let's go and see the turtles!
+end
+mcq: What is coral made of? | *tiny animals | colorful rocks | sea plants | sand
+mcq: Why do scientists come to study Red Sea coral? | *It can live in warmer water than most coral. | It's the biggest coral in the world. | It's very old. | It changes color at night.
+mcq: Which fish has poisonous spines? | *the lionfish | the clownfish | the parrotfish | the jellyfish
+mcq: Why can a plastic bag kill a sea turtle? | *The turtle thinks it's a jellyfish. | The bag is poisonous. | The bag hits the turtle. | The turtle can't see it.
+tf: Coral is a kind of plant. | F
+tf: Coral reefs are in danger because of fishing boats only. | F
+gap: The Red Sea is about two thousand two hundred ___ long. | kilometers, kilometres, km
+gap: After the talk, the students are going to see the ___. | turtles
+speak: Plan a poster: "Protect the Red Sea". Tell your partner three rules. | Never ___. Always ___. Don't ___ because ___.
+teach: Coral "looks like" a plant but "is actually" an animal — teach "actually" as a signal word that corrects a wrong idea. Students write a class promise about plastic and the beach.
+
+@SPEAK 1 | Which One Is Better? | Comparing things | مقارنة الأشياء
+kagan: RallyCoach | Think-Pair-Share
+model:
+SAMI: Look at these two phones. Which one should we buy for Grandpa?
+NOOR: This one is bigger. Grandpa can see the screen better.
+SAMI: True. But it's heavier than the small one.
+NOOR: The small one is lighter, but the buttons are smaller too.
+SAMI: Hmm. Which one is cheaper?
+NOOR: The big one is cheaper — only four hundred riyals.
+SAMI: Then the big phone is better for Grandpa. It's cheaper and easier to use.
+NOOR: I agree. Let's buy the big one!
+end
+roles: SAMI | NOOR
+chunks: This one is bigger. = هذا أكبر. | It's heavier than ___. = إنه أثقل من ___. | Which one is cheaper? = أيهما أرخص؟ | It's easier to use. = إنه أسهل في الاستخدام. | I agree. = أوافق.
+sound: pairs | tall or taller? | The -er ending is very weak: /ə/. "Taller" sounds like "tall-uh". Listen carefully for this small sound at the end — it changes the meaning! | نهاية -er ضعيفة جدًا وتُنطق /ə/، فتبدو taller مثل "tall-uh". استمع جيدًا لهذا الصوت الصغير في النهاية، فهو يغيّر المعنى!
+pair: The camel is fast. | The camel is faster.
+pair: It's hot today. | It's hotter today.
+pair: This tree is tall. | This tree is taller.
+pair: The river is long. | The river is longer.
+pair: My bag is big. | My bag is bigger.
+task: Bring two pictures (two phones, two cars or two animals). Compare them with your partner and choose the better one. | The ___ is ___er than the ___. But the ___ is more ___. I think ___ is better.
+cando: I can compare two things. | I can explain my choice. | I can hear the weak -er ending.
+teach: The weak /ə/ is the most common sound in English. Draw a small "uh" face on the board and point to it every time students hear the -er ending.
+
+@SPEAK 2 | It's Famous for Its Mountains | Describing a place | وصف مكان
+kagan: Timed Pair Share | Carousel Feedback
+model:
+BEN: Adam, you visited Abha last summer. What was it like?
+ADAM: It was amazing! It's a beautiful city in the mountains.
+BEN: Is it famous for anything?
+ADAM: Yes, it's famous for its green mountains and its colorful houses. There's also a cable car with an incredible view.
+BEN: Was the weather hot?
+ADAM: No, it was cool and foggy. It's much cooler than Riyadh in summer.
+BEN: What's the best thing to do there?
+ADAM: You must visit the old village of Rijal Almaa. It's really interesting.
+BEN: It sounds wonderful. I'd love to go!
+end
+roles: BEN | ADAM
+chunks: What was it like? = كيف كان؟ | It's famous for ___. = إنه مشهور بـ ___. | There's a ___ with an incredible view. = يوجد ___ بإطلالة مذهلة. | You must visit ___. = يجب أن تزور ___. | It sounds wonderful! = يبدو ذلك رائعًا!
+sound: sort | a-MA-zing or BEAU-ti-ful? | oOo ; Ooo | Describing words have one strong beat. a-MA-zing has it in the middle (oOo). BEAU-ti-ful has it at the start (Ooo). | لصفات الوصف مقطع قوي واحد. في a-MA-zing يكون في الوسط (oOo)، وفي BEAU-ti-ful يكون في البداية (Ooo).
+item: amazing | oOo
+item: beautiful | Ooo
+item: important | oOo
+item: dangerous | Ooo
+item: enormous | oOo
+item: wonderful | Ooo
+item: delicious | oOo
+item: popular | Ooo
+task: Describe a place you visited to your group. Say what it's famous for and what visitors must do. | Last ___, I visited ___. It's famous for ___. It's ___ and ___. You must ___.
+cando: I can describe a place. | I can recommend things to do. | I can stress describing words correctly.
+teach: Students make a "travel postcard" with a drawing and three sentences, then do Carousel Feedback: groups walk around and leave one kind comment and one question on each postcard.
+
+@CHECK
+check: L1#2 | How long can the oryx live without drinking? | *for weeks | for days | for months | for hours
+check: L1#3 | When does the fennec fox hunt? | *at night | in the morning | at noon | in the afternoon
+check: L2#9 | How many points does Ben have at the end? | *one | two | three | none
+check: L3#4 | Which fish does the guide NOT mention? | *the swordfish | the clownfish | the parrotfish | the lionfish
+
+@UNIT 5 | Jobs and Future Plans | المهن وخطط المستقبل | 👩‍🚀
+goals: I can describe jobs and what people do. | I can talk about my future plans with "going to". | I can understand people talking about their work.
+
+@LISTEN 1 | Guess the Job | Making inferences from clues | الاستنتاج من الدلائل
+kagan: Showdown | Fan-N-Pick
+vocab: look after | يعتني بـ | 🤲 | I look after sick children.
+vocab: calm | هادئ | 😌 | I help them feel calm.
+vocab: control tower | برج المراقبة | 🗼 | I talk to the control tower.
+vocab: design | يصمّم | ✏️ | I design buildings and bridges.
+vocab: building site | موقع بناء | 🏗️ | I visit building sites.
+vocab: safety | السلامة | 🦺 | Safety is the most important part of my job.
+predict: Four people describe their jobs, but they don't say the job's name. What clues can help you guess? |
+tip: Don't wait for the name of the job. Collect clues: the place of work, the tools, the people they help. | لا تنتظر اسم المهنة. اجمع الدلائل: مكان العمل، والأدوات، والأشخاص الذين يساعدونهم.
+script:
+NARRATOR: Listen to four people talking about their jobs. Can you guess what each job is?
+NARRATOR: Speaker one.
+WOMAN[Speaker 1]: I work in a hospital, but I'm not a doctor. I look after children when they are sick. I check their temperature, give them their medicine and help them feel calm. I often work at night.
+NARRATOR: Speaker two.
+MAN[Speaker 2]: My office is in the sky! I check the weather before every flight, and I talk to the control tower. Last week, I flew from Jeddah to Kuala Lumpur.
+NARRATOR: Speaker three.
+DAD[Speaker 3]: I design buildings and bridges. I use a computer to draw plans, and I visit building sites to check the work. Safety is the most important part of my job.
+NARRATOR: Speaker four.
+MS_GREEN[Speaker 4]: My patients can't tell me where it hurts! I take care of cats, dogs, horses and sometimes camels. Yesterday, I helped a cat with a broken leg.
+end
+mcq: What is speaker one's job? | *a nurse | a doctor | a teacher | a pharmacist
+mcq: What is speaker two's job? | *a pilot | a weather presenter | a travel agent | a flight attendant
+mcq: What is speaker three's job? | *an engineer | an artist | a builder | a computer programmer
+mcq: What is speaker four's job? | *a vet | a farmer | a zookeeper | a doctor
+tf: Speaker two flew to Kuala Lumpur last week. | T
+tf: Speaker three says money is the most important part of the job. | F
+gap: Speaker one often works at ___. | night
+gap: Yesterday, speaker four helped a cat with a broken ___. | leg
+speak: Describe a job without saying its name. Your group guesses. | I work in/at ___. I use ___. I help ___. What's my job?
+teach: Ask "Which word told you?" after each speaker: "office in the sky" → pilot, "patients can't tell me where it hurts" → vet. Students learn to collect clues instead of waiting for one key word.
+
+@LISTEN 2 | Career Day | Listening to talks and answers | الاستماع إلى العروض والإجابات
+kagan: Three-Step Interview | Numbered Heads Together
+vocab: career | مهنة / مسيرة مهنية | 💼 | Welcome to Career Day!
+vocab: software engineer | مهندس برمجيات | 💻 | He's a software engineer.
+vocab: solve problems | يحلّ المشكلات | 🧩 | You need to love solving problems.
+vocab: firefighter | رجل إطفاء | 🧑‍🚒 | Captain Nasser is a firefighter.
+vocab: accident | حادث | 🚑 | We help people in car accidents.
+vocab: smoke alarm | جهاز إنذار الدخان | 🚨 | Make sure your home has a smoke alarm.
+predict: Two visitors come to school for Career Day. What questions would you like to ask them? |
+tip: Each visitor answers a student's question. Listen to the question first, then focus on the answer that follows. | يجيب كل زائر عن سؤال من أحد الطلاب. استمع للسؤال أولًا ثم ركّز على الإجابة التي تليه.
+script:
+MR_HASSAN: Good morning, boys. Welcome to Career Day! Our first visitor is Mr. Turki. He's a software engineer.
+MAN[Mr. Turki]: Thank you. I make apps for phones. My team is making an app that helps farmers know when to water their plants. To do my job, you need to be good at math, and you need to love solving problems.
+YUSUF: How many hours do you work every day?
+MAN[Mr. Turki]: About eight hours. But I can work from home two days a week.
+MR_HASSAN: Thank you, Mr. Turki. Our second visitor is Captain Nasser. He's a firefighter.
+DAD[Captain Nasser]: Hello, everyone! Being a firefighter isn't only about fires. We also help people in car accidents and floods. We train every day to stay strong and fast.
+ADAM: Is it dangerous?
+DAD[Captain Nasser]: Sometimes. That's why teamwork is so important. We always work together and look after each other.
+SAMI: How can we stay safe at home?
+DAD[Captain Nasser]: Great question! Never play with matches, and make sure your home has a smoke alarm. And remember the emergency number: {998|nine nine eight}.
+end
+mcq: What does Mr. Turki make? | *apps for phones | computers | farm machines | websites for schools
+mcq: What does his team's new app help farmers do? | *know when to water their plants | sell their vegetables | find new workers | check the weather in other countries
+mcq: How many days a week can Mr. Turki work from home? | *two | eight | five | one
+mcq: Why is teamwork so important for firefighters? | *Their job is sometimes dangerous. | They work long hours. | They have many fire trucks. | They travel a lot.
+tf: Firefighters only help with fires. | F
+tf: Captain Nasser's team trains every day. | T
+gap: To be a software engineer, you need to be good at ___. | math, maths, mathematics
+gap: The emergency number is ___. | 998, nine nine eight
+speak: You are a visitor at Career Day. Tell the class about your job. Your classmates ask questions. | I'm a ___. In my job, I ___. To do this job, you need to ___.
+teach: Make sure every student knows the Saudi Civil Defense emergency number, 998. Invite a parent with an interesting job to visit after this lesson.
+
+@LISTEN 3 | My Future Plans | Listening for plans and intentions | الاستماع إلى الخطط والنوايا
+kagan: Mix-Pair-Share | RoundRobin
+vocab: future | المستقبل | 🔮 | What are you going to be in the future?
+vocab: marine biologist | عالم أحياء بحرية | 🐠 | I'm going to be a marine biologist.
+vocab: course | دورة تدريبية | 📘 | I'm going to take a computer course.
+vocab: company | شركة | 🏢 | I'm going to start my own company.
+vocab: ambitious | طموح | 🚀 | That's very ambitious!
+vocab: dream | حلم | 💭 | Big dreams need hard work.
+predict: Three boys talk about their plans for the summer and for the future. What are your plans? |
+tip: Listen for two time frames: "this summer" (soon) and "in the future" (when they're older). Make two notes for each boy. | استمع لإطارين زمنيين: this summer أي قريبًا، وin the future أي عندما يكبرون. دوّن ملاحظتين لكل ولد.
+script:
+MS_GREEN: Right, class, our topic today is plans. Ben, what are you going to do this summer?
+BEN: I'm going to visit my grandma in London. We're going to stay for three weeks. And I'm going to see the Science Museum again!
+MS_GREEN: Lovely. And what about the future? What are you going to be?
+BEN: I'm going to be a marine biologist, because I love the sea. I'm going to study the coral reefs in the Red Sea.
+MS_GREEN: Great. Yusuf?
+YUSUF: This summer, I'm going to take a computer course. I'm going to learn how to make games. In the future, I'm going to start my own game company!
+MS_GREEN: How ambitious! Sami?
+SAMI: I'm not going to travel this summer. I'm going to help my grandpa on his farm and learn about plants. In the future, I'm going to be a doctor, like my dad.
+MS_GREEN: Wonderful plans, boys. Remember: big dreams need hard work!
+end
+mcq: How long is Ben going to stay in London? | *three weeks | three months | two weeks | one month
+mcq: Why does Ben want to be a marine biologist? | *He loves the sea. | His grandma is a scientist. | He likes London. | He wants to travel.
+mcq: What is Yusuf going to learn this summer? | *how to make games | how to fix computers | how to swim | how to cook
+mcq: What is Sami's dad's job? | *He's a doctor. | He's a farmer. | He's an engineer. | He's a teacher.
+tf: Sami is going to travel this summer. | F
+tf: Yusuf wants to start his own company. | T
+gap: Ben is going to see the ___ Museum again. | Science
+gap: Ms. Green says big dreams need hard ___. | work
+speak: Tell your partner about your plans for this summer and for the future. | This summer, I'm going to ___. In the future, I'm going to be a ___ because ___.
+teach: Students make a "Future Me" card with a drawing and two "going to" sentences, then display the cards on a class wall. Return to them at the end of the year.
+
+@SPEAK 1 | What Does Your Uncle Do? | Talking about jobs | التحدث عن المهن
+kagan: Inside-Outside Circle | Three-Step Interview
+model:
+LINA: Noor, what does your uncle do?
+NOOR: He's a journalist. He writes news stories for a newspaper in Jeddah.
+LINA: Wow! Does he enjoy his job?
+NOOR: Yes, he loves it. He meets interesting people every day. What about your aunt?
+LINA: She's a judge. She works in a big building in the city.
+NOOR: That sounds like a serious job!
+LINA: It is. She has to read lots of documents. But she's very fair and kind.
+NOOR: I'd like a job like that one day.
+end
+roles: LINA | NOOR
+chunks: What does your uncle do? = ماذا يعمل عمّك؟ | He's a journalist. = إنه صحفي. | Does he enjoy his job? = هل يستمتع بعمله؟ | She works in ___. = إنها تعمل في ___. | I'd like a job like that. = أودّ أن أعمل في وظيفة كهذه.
+sound: pairs | /dʒ/ or /j/? | /dʒ/ (jam) is like the Arabic ج in Fusha — your tongue touches the top of your mouth. /j/ (yam) is like ي — your tongue doesn't touch. Some Gulf speakers say ي for ج, so practise both! | الصوت /dʒ/ كما في jam يشبه الجيم الفصحى ويلمس فيه اللسان سقف الفم، أما /j/ كما في yam فيشبه الياء ولا يلمس اللسان سقف الفم. بعض المتحدثين في الخليج ينطقون الجيم ياءً، فتدرّب على الصوتين!
+pair: jam | yam
+pair: jet | yet
+pair: joke | yolk
+pair: Jess | yes
+pair: juice | use
+task: Interview your partner about two people in his family and their jobs. | What does your ___ do? — He's/She's a ___. — Does he/she enjoy it? — ___.
+cando: I can ask and talk about jobs. | I can say what people do in their jobs. | I can hear /dʒ/ and /j/.
+teach: Use the Arabic anchor: "jam" starts like جمل, "yam" starts like يمين. Students say both Arabic words first, then the English pair.
+
+@SPEAK 2 | What Are You Going to Be? | Talking about future plans | التحدث عن خطط المستقبل
+kagan: Mix-Pair-Share | Talking Chips
+model:
+YUSUF: Sami, what are you going to be when you grow up?
+SAMI: I'm going to be a doctor. I want to help people.
+YUSUF: That's a great career. You'll need to study for many years.
+SAMI: I know! What about you?
+YUSUF: I'm going to be an engineer. I'm going to build the tallest tower in the world, here in Saudi Arabia!
+SAMI: Ha ha! That's a big dream. Where are you going to study?
+YUSUF: Maybe at a university in Riyadh, or maybe abroad. I'm not sure yet.
+SAMI: Well, good luck! Let's meet here in twenty years and see!
+end
+roles: YUSUF | SAMI
+chunks: What are you going to be? = ماذا ستصبح؟ | I'm going to be a ___. = سأصبح ___. | I want to help people. = أريد أن أساعد الناس. | I'm not sure yet. = لست متأكدًا بعد. | Good luck! = بالتوفيق!
+sound: pairs | /ɪə/ or /eə/? | /ɪə/ (here, fear) starts with "i". /eə/ (hair, fair) starts with "e", and your mouth is more open. | يبدأ الصوت /ɪə/ كما في here وfear بـ i، أما /eə/ كما في hair وfair فيبدأ بـ e والفم أكثر انفتاحًا.
+pair: here | hair
+pair: fear | fair
+pair: dear | dare
+pair: cheer | chair
+pair: steer | stair
+task: Mix-Pair-Share: ask three classmates about their future plans. Report one interesting plan to the class. | What are you going to be? — I'm going to be a ___. — Why? — Because ___.
+cando: I can talk about my future plans. | I can give reasons for my plans. | I can hear /ɪə/ and /eə/.
+teach: Encourage big dreams linked to Saudi Arabia's future: new cities, space, renewable energy, tourism. Ask "How will your job help our country?"
+
+@CHECK
+check: L1#5 | What does speaker two check before every flight? | *the weather | the tickets | the passengers | the food
+check: L1#9 | Which animal does speaker four NOT mention? | *sheep | cats | horses | camels
+check: L2#10 | What should children never play with? | *matches | phones | knives | balls
+check: L3#8 | What is Sami going to learn about this summer? | *plants | computers | the sea | animals
+
+@UNIT 6 | Inventions and Technology | الاختراعات والتقنية | 💡
+goals: I can understand a presentation about inventions. | I can explain how something works. | I can give and support my opinion about technology.
+
+@LISTEN 1 | Inventions That Changed the World | Following a presentation | متابعة عرض تقديمي
+kagan: Line-Ups | Numbered Heads Together
+vocab: invention | اختراع | 💡 | Paper is a great invention.
+vocab: invent | يخترع | 🛠️ | Paper was invented in China.
+vocab: printing press | آلة الطباعة | 🖨️ | Gutenberg made the printing press.
+vocab: share | يشارك / يتبادل | 🤝 | Paper helped people share ideas.
+vocab: billion | مليار | 🔢 | Five billion people use the internet.
+vocab: change the world | يغيّر العالم | 🌍 | Four inventions changed the world.
+predict: Ben gives a presentation about four inventions that changed the world. Which inventions do you think he chooses? |
+tip: Presentations have signpost words: the first, the second, the third, the last. They help you follow the order. | تحتوي العروض على كلمات إرشادية مثل the first وthe second وthe third وthe last، فهي تساعدك على تتبّع الترتيب.
+script:
+BEN: Good morning, everyone. My presentation is about four inventions that changed the world.
+BEN: The first invention is paper. It was invented in China about two thousand years ago. Before paper, people wrote on stone, wood and animal skins.
+BEN: The second is the printing press. A German man called Gutenberg made it in about {1440|fourteen forty}. Books became cheaper, and more people learned to read.
+BEN: The third is the telephone. In {1876|eighteen seventy-six}, Alexander Graham Bell made the first phone call. He said, "Come here, I want to see you."
+BEN: The last invention is the internet. It started in the {1960s|nineteen sixties}, but most people only started using it in the {1990s|nineteen nineties}. Today, more than five billion people use it!
+BEN: Which invention is the most important? I think it's paper, because without paper, people couldn't share ideas for hundreds of years. What do you think?
+end
+mcq: Where was paper invented? | *in China | in Germany | in Egypt | in England
+mcq: What happened after the printing press was invented? | *Books became cheaper. | People stopped writing. | Paper became expensive. | Phones became popular.
+mcq: When did most people start using the internet? | *in the 1990s | in the 1960s | in 1876 | in the 2000s
+mcq: Why does Ben think paper is the most important invention? | *It helped people share ideas for hundreds of years. | It's the oldest invention. | It's very cheap. | It comes from China.
+tf: Before paper, people wrote on stone and wood. | T
+tf: Bell made the first phone call in 1440. | F
+gap: The printing press was made by a man called ___. | Gutenberg
+gap: Today, more than five ___ people use the internet. | billion
+order: paper | the printing press | the telephone | the internet
+speak: Which invention do you think is the most important? Tell your group and give two reasons. | I think ___ is the most important invention because ___. Also, ___.
+teach: Mention Muslim inventors too — for example, Al-Jazari's machines and the paper mills of Baghdad. Students can research one Muslim inventor for homework and present it in the next lesson.
+
+@LISTEN 2 | Staying Safe Online | Listening for advice | الاستماع إلى النصائح
+kagan: RallyRobin | Numbered Heads Together
+vocab: online | على الإنترنت | 🌐 | We need to be careful online.
+vocab: password | كلمة المرور | 🔑 | Never share your password.
+vocab: personal information | معلومات شخصية | 🪪 | Don't share personal information.
+vocab: screenshot | لقطة شاشة | 📱 | Take a screenshot and show an adult.
+vocab: post | ينشر | 📤 | Think before you post.
+vocab: delete | يحذف | 🗑️ | It's difficult to delete a photo forever.
+predict: Ms. Green gives tips about staying safe on the internet. What tips do you already know? |
+tip: Count the tips on your fingers as you listen: number one, number two... One tip comes after a student's question. | عُدّ النصائح على أصابعك أثناء الاستماع. إحدى النصائح تأتي بعد سؤال أحد الطلاب.
+script:
+MS_GREEN: Today, we're talking about staying safe online. The internet is amazing, but we need to be careful. Here are my top tips.
+MS_GREEN: Tip number one: never share your password, not even with your best friend. Only your parents should know it.
+MS_GREEN: Tip number two: don't share personal information, like your address, your school or your phone number, with people you don't know.
+BEN: What if someone sends me a mean message?
+MS_GREEN: Good question, Ben. Don't answer it. Take a screenshot and show it to a parent or a teacher. That's tip number three.
+MS_GREEN: Tip number four: think before you post. Once a photo is online, it's very difficult to delete it forever.
+ADAM: How long should we use screens every day?
+MS_GREEN: Many doctors say children your age should spend no more than two hours a day on screens for fun. So, tip number five: take breaks, go outside and play!
+end
+mcq: Who should know your password? | *only your parents | your best friend | your teacher | nobody at all
+mcq: What should you do if someone sends you a mean message? | *Take a screenshot and show an adult. | Answer the message. | Delete your account. | Send a mean message back.
+mcq: Why should you think before you post a photo? | *It's very difficult to delete it forever. | Photos are expensive. | It takes a long time. | Your friends might copy it.
+mcq: How much screen time for fun does Ms. Green suggest? | *no more than two hours a day | no more than four hours a day | no more than one hour a week | no more than three hours a day
+tf: You can share your address with people you don't know online. | F
+tf: Ms. Green gives five tips. | T
+gap: Never share your ___, not even with your best friend. | password
+gap: Tip five is to take ___ and go outside. | breaks
+speak: Make an "Online Safety Poster" with your partner. Agree on your top three rules. | Rule one: never ___. Rule two: always ___. Rule three: if ___, ___.
+teach: This is an important safeguarding lesson. Remind students who they can talk to at school if something online worries them, and that asking for help is always the right thing to do.
+
+@LISTEN 3 | The Robot Competition | Listening for specific information | الاستماع إلى معلومات محددة
+kagan: Three-Step Interview | Showdown
+vocab: robot | روبوت | 🤖 | Our robot is called Sahm.
+vocab: elderly | كبار السن | 👴 | It helps elderly people.
+vocab: screen | شاشة | 🖥️ | Sahm has a small screen.
+vocab: speaker | مكبّر صوت | 🔊 | We changed the speaker.
+vocab: on time | في الوقت المحدد | ⏰ | They take their medicine on time.
+vocab: judges | لجنة التحكيم | ⚖️ | The judges will announce the winners.
+predict: Sami and Yusuf are in a robot competition. What kind of robot do you think they built? |
+tip: Gap answers are often said only once. Listen for days, times and names, and write them quickly in short form. | غالبًا ما تُقال إجابات الفراغات مرة واحدة. استمع للأيام والأوقات والأسماء واكتبها بسرعة بشكل مختصر.
+script:
+ANNOUNCER: Welcome to the final of the Young Inventors Robot Competition! Ten school teams built robots that help people in everyday life.
+ANNOUNCER: Our next team is from Taif: Sami and Yusuf. Tell us about your robot.
+YUSUF: Our robot is called Sahm. It helps elderly people take their medicine on time.
+SAMI: Sahm has a small screen and a speaker. At medicine time, it says, "It's time for your medicine," and it opens the right box.
+ANNOUNCER: Brilliant! How long did it take to build?
+YUSUF: Three months. We worked on it every Tuesday and Thursday after school.
+ANNOUNCER: What was the most difficult part?
+SAMI: The voice. At first, it was too quiet, so we changed the speaker. Now it's loud and clear.
+ANNOUNCER: And who gave you the idea?
+YUSUF: Sami's grandpa! He sometimes forgets his medicine, so we wanted to help him.
+ANNOUNCER: What a kind idea. The judges will announce the winners at four o'clock. Good luck!
+end
+mcq: What do all the robots in the competition do? | *help people in everyday life | play football | clean schools | teach English
+mcq: What does Sahm help elderly people do? | *take their medicine on time | walk safely | cook food | read books
+mcq: What was the problem with the voice at first? | *It was too quiet. | It was too loud. | It was too fast. | It was in the wrong language.
+mcq: Who gave the boys the idea? | *Sami's grandpa | their teacher | Yusuf's mom | a doctor
+tf: Ten teams are in the final. | T
+tf: The boys built the robot in three weeks. | F
+gap: The boys worked on the robot every Tuesday and ___. | Thursday, Thursdays
+gap: The winners will be announced at ___ o'clock. | four, 4
+speak: Invent a robot that helps people. Tell your group what it does and who it helps. | My robot is called ___. It helps ___ to ___. It has ___.
+teach: "Judges" here are the people who choose the winners — compare with the judge in the camel story (Unit 3). One word, two contexts.
+
+@SPEAK 1 | How Does It Work? | Explaining how to use something | شرح طريقة استخدام شيء ما
+kagan: RallyCoach | Stand Up–Hand Up–Pair Up
+model:
+GRANDPA: Sami, can you help me with this new tablet? How does it work?
+SAMI: Sure, Grandpa. First, press this button on the top to turn it on.
+GRANDPA: Okay. It's on. What next?
+SAMI: Next, touch the picture of the camera. Then you can make a video call.
+GRANDPA: Like this? Oh, I can see Noor!
+SAMI: Yes! When you finish, touch the red button to stop the call.
+GRANDPA: That's so simple. Thank you, Sami. You're a good teacher!
+SAMI: You're welcome, Grandpa. Call me if you have any problems.
+end
+roles: SAMI | GRANDPA
+chunks: How does it work? = كيف يعمل؟ | First, press this button. = أولًا، اضغط هذا الزر. | Next, touch the ___. = بعد ذلك، المس ___. | When you finish, ___. = عندما تنتهي، ___. | That's so simple! = هذا سهل جدًا!
+sound: sort | /ɑ/ like "clock" or /ʌ/ like "cup"? | /ɑ/ clock ; /ʌ/ cup | /ɑ/ (clock, stop) is long, with a wide-open mouth. /ʌ/ (cup, button) is short, with a relaxed mouth. | الصوت /ɑ/ كما في clock وstop طويل والفم مفتوح واسعًا، أما /ʌ/ كما في cup وbutton فقصير والفم مرتخٍ.
+item: clock | /ɑ/
+item: button | /ʌ/
+item: box | /ɑ/
+item: plug | /ʌ/
+item: shop | /ɑ/
+item: sun | /ʌ/
+item: stop | /ɑ/
+item: touch | /ʌ/
+task: Explain to your partner how to use something (a phone app, a microwave, a game). Use sequence words. | First, ___. Next, ___. Then, ___. When you finish, ___.
+cando: I can explain how something works. | I can give instructions in order. | I can hear /ɑ/ and /ʌ/.
+teach: Bring a real object (a stopwatch, a calculator). One partner explains and the other follows the instructions exactly — if the instructions are unclear, the device doesn't work!
+
+@SPEAK 2 | In My Opinion... | Giving and supporting opinions | إبداء الرأي ودعمه
+kagan: Talking Chips | Corners
+model:
+BEN: Adam, what do you think about tablets in class?
+ADAM: I think they're really useful. We can find information quickly.
+BEN: I agree, but in my opinion, books are better for reading long stories.
+ADAM: That's a good point. But tablets are lighter than ten books in your bag!
+BEN: Ha ha, that's true! What about robots in schools?
+ADAM: Hmm, I don't think robots can be good teachers. A teacher understands how we feel.
+BEN: I agree with you. Robots can help, but people are more important.
+ADAM: Exactly!
+end
+roles: BEN | ADAM
+chunks: What do you think about ___? = ما رأيك في ___؟ | I think ___. = أعتقد أن ___. | In my opinion, ___. = في رأيي، ___. | That's a good point. = هذه نقطة جيدة. | I don't think ___. = لا أعتقد أن ___.
+sound: sort | How many words? | 4 words ; 5 words ; 6 words | When we give opinions quickly, words link together: "I think it's an amazing idea" sounds like one smooth line. Count the words you hear. | عندما نعبّر عن آرائنا بسرعة تتصل الكلمات ببعضها، فتبدو الجملة سطرًا واحدًا متصلًا. عدّ الكلمات التي تسمعها.
+item: I think it's useful. | 4
+item: I don't agree with you. | 5
+item: I think it's a good idea. | 6
+item: It's an amazing idea. | 4
+item: In my opinion, it's great. | 5
+item: We should use it at school. | 6
+item: That's a great point. | 4
+item: Robots can help us learn. | 5
+item: Tablets are good for learning English. | 6
+task: Discuss with your group: "Should every student have a tablet at school?" Each person gives an opinion and a reason. | I think ___ because ___. — I agree / I don't agree, because ___.
+cando: I can give my opinion with a reason. | I can agree and disagree politely. | I can hear words that link together.
+teach: With Talking Chips, each student puts a chip in the middle when he speaks; nobody speaks twice until everyone has used a chip. This gives quieter students a guaranteed turn.
+
+@CHECK
+check: L1#4 | What did Bell say in the first phone call? | *Come here, I want to see you. | Hello, can you hear me? | This is amazing! | Good morning!
+check: L2#3 | Which of these is personal information? | *your address | your favorite color | the weather | your teacher's name
+check: L3#2 | Where are Sami and Yusuf from? | *Taif | Riyadh | Jeddah | Abha
+check: L3#4 | What does Sahm say at medicine time? | *It's time for your medicine. | Good morning! | Please drink water. | Call the doctor.

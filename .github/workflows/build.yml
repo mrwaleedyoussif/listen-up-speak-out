@@ -1,7 +1,185 @@
 name: Build apps
-on: workflow_dispatch
+
+# Every push to main builds:
+#   • the web app (GitHub Pages)            → https://mrwaleedyoussif.github.io/listen-up-speak-out/
+#   • the Android app (.apk, + .aab when a private key is set)
+#   • the Windows app (installer + portable .exe)
+#   • the iPhone/iPad app (unsigned .ipa, to sign with an Apple developer account)
+# and puts the app files on the Releases page (version from package.json).
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/**', 'tools/content/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  hello:
+  version:
     runs-on: ubuntu-latest
+    outputs:
+      name: ${{ steps.v.outputs.name }}
+      code: ${{ steps.v.outputs.code }}
     steps:
-      - run: echo "setup"
+      - uses: actions/checkout@v4
+      - id: v
+        run: |
+          echo "name=$(node -p "require('./package.json').version")" >> "$GITHUB_OUTPUT"
+          echo "code=$((100 + GITHUB_RUN_NUMBER))" >> "$GITHUB_OUTPUT"
+
+  web:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/app/build_www.py
+      - uses: actions/configure-pages@v5
+        continue-on-error: true
+        with:
+          enablement: true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: www
+      - id: deploy
+        uses: actions/deploy-pages@v4
+
+  android:
+    needs: version
+    runs-on: ubuntu-latest
+    env:
+      LSP_VERSION_NAME: ${{ needs.version.outputs.name }}
+      LSP_VERSION_CODE: ${{ needs.version.outputs.code }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - uses: gradle/actions/setup-gradle@v4
+      - run: npm ci
+        env:
+          ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+      - run: python3 tools/app/build_www.py && npx cap sync android
+      - name: Private signing key (optional)
+        env:
+          KS_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        if: env.KS_B64 != ''
+        run: |
+          echo "$KS_B64" | base64 -d > "$RUNNER_TEMP/release.keystore"
+          echo "LSP_KEYSTORE=$RUNNER_TEMP/release.keystore" >> "$GITHUB_ENV"
+          echo "LSP_KEYSTORE_PASSWORD=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}" >> "$GITHUB_ENV"
+          echo "LSP_KEY_ALIAS=${{ secrets.ANDROID_KEY_ALIAS }}" >> "$GITHUB_ENV"
+          echo "LSP_KEY_PASSWORD=${{ secrets.ANDROID_KEY_PASSWORD }}" >> "$GITHUB_ENV"
+      - name: Build APK (and Play Store bundle when a private key is set)
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          if [ -n "$LSP_KEYSTORE" ]; then ./gradlew --no-daemon assembleRelease bundleRelease; else ./gradlew --no-daemon assembleRelease; fi
+      - name: Collect
+        run: |
+          mkdir -p out
+          cp android/app/build/outputs/apk/release/app-release.apk "out/Listen-Up-Speak-Out-${LSP_VERSION_NAME}.apk"
+          if [ -f android/app/build/outputs/bundle/release/app-release.aab ]; then cp android/app/build/outputs/bundle/release/app-release.aab "out/Listen-Up-Speak-Out-${LSP_VERSION_NAME}-play-store.aab"; fi
+          ls -la out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: android
+          path: out/*
+          retention-days: 30
+
+  windows:
+    needs: version
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: python tools/app/build_www.py
+      - run: npx electron-builder --win --x64 --publish never
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: |
+            dist/Listen-Up-Speak-Out-Setup-*.exe
+            dist/Listen-Up-Speak-Out-Portable-*.exe
+          retention-days: 30
+
+  ios:
+    needs: version
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        env:
+          ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+      - run: python3 tools/app/build_www.py && npx cap sync ios
+      - name: Build (unsigned)
+        run: |
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Release \
+            -sdk iphoneos -destination 'generic/platform=iOS' -derivedDataPath build-ios \
+            MARKETING_VERSION=${{ needs.version.outputs.name }} CURRENT_PROJECT_VERSION=${{ needs.version.outputs.code }} \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" build
+          mkdir -p out/Payload
+          cp -R build-ios/Build/Products/Release-iphoneos/App.app out/Payload/
+          cd out && zip -qry "Listen-Up-Speak-Out-${{ needs.version.outputs.name }}-iOS-unsigned.ipa" Payload && rm -rf Payload && ls -la
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ios
+          path: out/*.ipa
+          retention-days: 30
+
+  release:
+    needs: [version, android, windows, ios]
+    if: ${{ !cancelled() && (needs.android.result == 'success' || needs.windows.result == 'success' || needs.ios.result == 'success') }}
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: v${{ needs.version.outputs.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: files
+          merge-multiple: true
+      - name: Publish to the Releases page
+        run: |
+          ls -la files
+          cat > notes.md <<'EOF'
+          **Listen Up! Speak Out!** – Grades 3–6 listening & speaking program (build ${{ needs.version.outputs.code }}).
+
+          - **Android phones & tablets:** `Listen-Up-Speak-Out-${{ needs.version.outputs.name }}.apk`
+          - **Windows PCs:** `Listen-Up-Speak-Out-Setup-${{ needs.version.outputs.name }}.exe` (installer) or `Listen-Up-Speak-Out-Portable-${{ needs.version.outputs.name }}.exe` (no installation)
+          - **iPhone & iPad:** open https://mrwaleedyoussif.github.io/listen-up-speak-out/ in Safari → Share → Add to Home Screen. The `.ipa` file is only for signing with an Apple developer account.
+
+          Install steps (English & Arabic): see INSTALL.md in the repository.
+          EOF
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" files/* --clobber
+            gh release edit "$TAG" --notes-file notes.md
+          else
+            gh release create "$TAG" files/* --title "Listen Up! Speak Out! $TAG" --notes-file notes.md --target "$GITHUB_SHA"
+          fi

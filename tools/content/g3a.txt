@@ -1,0 +1,487 @@
+#GRADE 3
+level: A1
+band: Sky
+speed: 0.88
+
+@UNIT 1 | Hello, Friends! | مرحبًا يا أصدقاء! | 👋
+goals: I can say hello and introduce myself. | I can understand names, spelling and numbers to 20. | I can follow simple classroom instructions.
+
+@LISTEN 1 | Nice to Meet You | Listening for names and spelling | الاستماع إلى الأسماء وتهجئتها
+kagan: RallyRobin | Think-Pair-Share
+vocab: name | اسم | 🏷️ | What's your name?
+vocab: spell | يتهجّى | 🔤 | How do you spell that?
+vocab: friend | صديق | 🤝 | Adam is my friend.
+vocab: class | فصل دراسي | 🏫 | I'm in class 3A.
+vocab: teacher | معلّم / معلّمة | 🧑‍🏫 | My teacher is Mr. Hassan.
+vocab: bell | جرس | 🔔 | The bell rings at seven.
+predict: Two boys meet on the first day of school. What do they say first? | ولدان يلتقيان في أول يوم دراسي. ماذا يقولان أولًا؟
+tip: Names are often spelled letter by letter. Write each letter you hear. | تُهجّأ الأسماء غالبًا حرفًا حرفًا. اكتب كل حرف تسمعه.
+script:
+NARRATOR: It is the first day of school. Sami meets a new boy in the playground.
+SAMI: Hello! I'm Sami. What's your name?
+BEN: Hi, Sami. My name is Ben.
+SAMI: Ben? How do you spell that?
+BEN: {B-E-N|B. E. N.}. Ben.
+SAMI: Nice to meet you, Ben. Are you in class 3A?
+BEN: No, I'm in class 3B. My teacher is Ms. Green.
+SAMI: Oh! My sister Noor knows Ms. Green. Look, that's my friend Adam.
+ADAM: Hi! I'm Adam. {A-D-A-M|A. D. A. M.}.
+BEN: Nice to meet you, Adam.
+NARRATOR: The bell rings. The boys go to class.
+end
+mcq: What is the new boy's name? | *Ben | Sami | Adam | Dan
+mcq: How does Ben spell his name? | *B-E-N | B-E-A-N | P-E-N | B-A-N
+mcq: Which class is Ben in? | *3B | 3A | 3C | 4B
+mcq: Who is Ms. Green? | *Ben's teacher | Sami's sister | Adam's mother | Sami's teacher
+tf: Sami and Ben meet in the playground. | T
+tf: Noor is Sami's sister. | T
+tf: The boys go home after the bell. | F
+order: Sami says hello to Ben. | Ben spells his name. | Adam says hi. | The boys go to class.
+speak: Say hello to your partner. Say your name and spell it. | Hello! I'm ___. That's ___, ___, ___.
+teach: Before listening, spell your own name aloud and let the class write the letters in the air. After the tasks, replay lines 5 and 9 so students write the letters on mini-whiteboards.
+
+@LISTEN 2 | How Old Are You? | Listening for numbers 1 to 20 | الاستماع إلى الأعداد من 1 إلى 20
+kagan: Numbered Heads Together | RallyRobin
+vocab: farm | مزرعة | 🚜 | Grandpa has a farm.
+vocab: sheep | خروف / خراف | 🐑 | There are twelve sheep.
+vocab: chicken | دجاجة | 🐔 | The chicken is brown.
+vocab: goat | ماعز | 🐐 | The baby goat is small.
+vocab: count | يعدّ | 🔢 | Let's count the animals.
+vocab: How old...? | كم عمر...؟ | 🎂 | How old are you?
+predict: Sami and Noor visit Grandpa's farm. What animals can they see? How many? | يزور سامي ونور مزرعة الجد. ما الحيوانات التي يرونها؟ وكم عددها؟
+tip: Listen carefully to the end of numbers: thir-TEEN, four-TEEN, fif-TEEN. | استمع جيدًا لنهاية الأعداد مثل: thirteen وfourteen وfifteen.
+script:
+NARRATOR: Sami and Noor visit Grandpa's farm in Taif.
+GRANDPA: Welcome, children! Sami, how old are you now?
+SAMI: I'm nine, Grandpa.
+GRANDPA: Nine! You're so tall. And Noor, how old are you?
+NOOR: I'm seven. My birthday is next month.
+GRANDPA: Let's count the animals. How many sheep can you see?
+SAMI: One, two, three, four... There are twelve sheep!
+GRANDPA: Good. And how many chickens?
+NOOR: I can see fifteen chickens. Ten are brown and five are white.
+GRANDPA: Very good! Now, how many baby goats are there?
+SAMI: There are three baby goats. They're so small!
+GRANDPA: Come inside now. Grandma has fresh bread for you.
+end
+mcq: How old is Sami? | *nine | seven | twelve | three
+mcq: How many sheep are there? | *twelve | fifteen | ten | twenty
+mcq: How many chickens are white? | *five | ten | fifteen | three
+mcq: Where is Grandpa's farm? | *in Taif | in Riyadh | in Jeddah | in London
+tf: Noor is seven years old. | T
+tf: There are three baby goats. | T
+tf: Grandma has cake for the children. | F
+order: Grandpa says welcome. | Sami counts the sheep. | Noor counts the chickens. | Grandpa asks them to come inside.
+speak: Ask your partner: How old are you? How many people are in your family? | I'm ___ years old. There are ___ people in my family.
+teach: Numbers 11 to 20 are tricky. Before listening, play Number Clap: say a number up to 10 and students clap that many times; then write the teens on the board and drill the strong ending -TEEN.
+
+@LISTEN 3 | My New Class | Following classroom instructions | اتباع التعليمات الصفية
+kagan: Stand Up–Hand Up–Pair Up | RallyCoach
+vocab: sit down | يجلس | 🪑 | Please sit down.
+vocab: stand up | يقف | 🧍 | Stand up, please.
+vocab: open | يفتح | 📖 | Open your book.
+vocab: close | يغلق | 📕 | Close your book.
+vocab: point to | يشير إلى | 👉 | Point to the door.
+vocab: page | صفحة | 📄 | Look at page six.
+predict: It is the first lesson with a new teacher. What does the teacher ask the boys to do? | إنه الدرس الأول مع معلم جديد. ماذا يطلب المعلم من الأولاد أن يفعلوا؟
+tip: Listen for the action words at the start: sit, open, point, stand. Do the action in your head. | استمع إلى أفعال الأوامر في بداية الجملة مثل: sit وopen وpoint وstand، وتخيّل أنك تنفذها.
+script:
+MR_HASSAN: Good morning, boys. Welcome to class 3A. I'm Mr. Hassan.
+SAMI: Good morning, Mr. Hassan!
+MR_HASSAN: Please sit down. Now, open your bags and take out your English book.
+MR_HASSAN: Open your book to page six. Page six. Look at the picture.
+ADAM: Sorry, Mr. Hassan. I don't have my book.
+MR_HASSAN: That's okay, Adam. Look with Sami today.
+MR_HASSAN: Now, listen and point. Point to the door. Good. Point to the window. Great!
+MR_HASSAN: Stand up, please. Turn around. Now sit down and close your book.
+SAMI: Is it time for a game?
+MR_HASSAN: Yes! Put up your hand if you are ready.
+end
+mcq: What is the teacher's name? | *Mr. Hassan | Ms. Green | Mr. Adam | Mr. Sami
+mcq: Which page do the boys open? | *page six | page sixteen | page seven | page two
+mcq: What does Adam not have? | *his English book | his bag | his pencil | his chair
+mcq: What do the boys point to first? | *the door | the window | the picture | the board
+tf: Adam looks at Sami's book. | T
+tf: The boys stand up and turn around. | T
+tf: At the end, the boys open their books. | F
+order: The boys sit down. | They open their books to page six. | They point to the door and the window. | They stand up and turn around.
+speak: Give your partner three instructions. Your partner does them. | Please ___. Open your ___. Point to the ___.
+teach: After the tasks, play "Mr. Hassan Says": students move only when the instruction starts with "please". This turns listening into total physical response and checks understanding without speaking pressure.
+
+@SPEAK 1 | Hello and Goodbye | Greeting people and introducing yourself | إلقاء التحية والتعريف بالنفس
+kagan: Inside-Outside Circle | RallyRobin
+model:
+SAMI: Hello! Good morning!
+BEN: Good morning! I'm Ben. What's your name?
+SAMI: My name is Sami. How are you, Ben?
+BEN: I'm fine, thank you. And you?
+SAMI: I'm great, thanks! Nice to meet you.
+BEN: Nice to meet you too.
+SAMI: Oh, the bell! Goodbye, Ben!
+BEN: Bye, Sami! See you tomorrow!
+end
+roles: SAMI | BEN
+chunks: Good morning! = صباح الخير! | How are you? = كيف حالك؟ | I'm fine, thank you. = أنا بخير، شكرًا لك. | Nice to meet you. = تشرفت بمعرفتك. | See you tomorrow! = أراك غدًا!
+sound: pairs | /p/ or /b/? | Arabic has no /p/ sound. For /p/, close your lips and push out a puff of air with no voice. For /b/, close your lips and use your voice. | لا يوجد صوت /p/ في العربية. لنطق /p/ أغلق شفتيك ثم أخرج دفعة هواء قوية بدون صوت، أما /b/ فننطقه مع اهتزاز الصوت.
+pair: pen | Ben
+pair: pat | bat
+pair: pie | buy
+pair: park | bark
+pair: pin | bin
+task: Meet three classmates. Say hello, say your name and ask how they are. | Hello! I'm ___. How are you? — I'm ___, thanks. Nice to meet you!
+cando: I can say hello and goodbye. | I can say my name and ask a name. | I can say the /p/ sound clearly.
+teach: Hold a tissue in front of your mouth: it moves for /p/ but not for /b/. Let pairs test each other with the tissue before the Sound Check.
+
+@SPEAK 2 | This Is My Friend | Introducing other people | تقديم الآخرين والتعريف بهم
+kagan: Three-Step Interview | Mix-Pair-Share
+model:
+SAMI: Dad, this is my new friend. His name is Ben.
+DAD: Hello, Ben. Nice to meet you. How old are you?
+BEN: I'm nine. I'm in class 3B.
+DAD: Are you from Taif?
+BEN: No, I'm not. I'm from London.
+DAD: Do you like Taif?
+BEN: Yes, I do! It's beautiful.
+SAMI: Ben, this is my sister. Her name is Noor.
+NOOR: Hi, Ben! Welcome to our house!
+BEN: Thank you, Noor. Nice to meet you.
+end
+roles: SAMI | BEN
+chunks: This is my friend, ___. = هذا صديقي ___. | His name is ___. = اسمه ___. | Her name is ___. = اسمها ___. | Where are you from? = من أين أنت؟ | I'm from ___. = أنا من ___.
+sound: pairs | He's or she's? | "He's" starts with a soft /h/ — just breathe out. "She's" starts with /ʃ/ — like the Arabic ش. Listen and choose. | تبدأ He's بصوت /h/ الخفيف مثل خروج النفس، وتبدأ She's بصوت /ʃ/ مثل حرف الشين. استمع واختر.
+pair: He's nine. | She's nine.
+pair: He's my friend. | She's my friend.
+pair: He's from Taif. | She's from Taif.
+pair: He's tall. | She's tall.
+pair: He's here. | She's here.
+task: Introduce your partner to your group. Say his name, his age and one more thing. | This is ___. He's ___ years old. He's from ___. He likes ___.
+cando: I can introduce a friend. | I can use his and her. | I can hear "he's" and "she's".
+teach: Before the role-play, model the gesture of an open palm towards the person you introduce. Introductions feel natural when students look at both people.
+
+@CHECK
+check: L1#8 | Who knows Ms. Green? | *Noor | Adam | Ben | Mr. Hassan
+check: L2#4 | What does Grandpa say about Sami? | *He's tall. | He's small. | He's seven. | He's hungry.
+check: L2#5 | When is Noor's birthday? | *next month | next week | today | tomorrow
+check: L3#10 | What must the boys do if they are ready? | *put up their hands | stand up | close their books | open the door
+
+@UNIT 2 | My Family and Home | عائلتي وبيتي | 🏠
+goals: I can talk about my family. | I can say where things are. | I can understand people describing rooms.
+
+@LISTEN 1 | This Is My Family | Listening for key words | الاستماع إلى الكلمات المفتاحية
+kagan: Timed Pair Share | Talking Chips
+vocab: family | عائلة | 👨‍👩‍👧‍👦 | I have a big family.
+vocab: photo | صورة | 📷 | Look at this photo.
+vocab: dad | أب | 👨 | My dad is a doctor.
+vocab: mom | أم | 👩 | My mom is a teacher.
+vocab: brother | أخ | 👦 | My baby brother is one.
+vocab: sister | أخت | 👧 | My sister has a cat.
+predict: Sami shows Ben a family photo. Who is in the photo? | يُري سامي صديقه بن صورة لعائلته. من في الصورة؟
+tip: Listen for family words: dad, mom, grandpa, brother, sister. Then listen for one more detail about each person. | استمع لكلمات العائلة مثل dad وmom وgrandpa وbrother وsister، ثم استمع لمعلومة إضافية عن كل شخص.
+script:
+SAMI: Look, Ben. This is a photo of my family.
+BEN: Wow, it's a big family! Who is this man?
+SAMI: That's my dad. He's a doctor.
+BEN: And who is the woman next to him?
+SAMI: That's my mom. She's a teacher.
+BEN: Who is the old man with the white hair?
+SAMI: That's my grandpa. He has a farm.
+BEN: Is this baby your brother?
+SAMI: Yes! That's my baby brother, Fahd. He's one year old.
+BEN: And the girl with the cat?
+SAMI: That's my sister, Noor. It's Noor's cat. Its name is Snow.
+BEN: I have one sister. I don't have a brother.
+end
+mcq: Who is the doctor? | *Sami's dad | Sami's mom | Sami's grandpa | Ben's dad
+mcq: What is Sami's mom's job? | *teacher | doctor | farmer | driver
+mcq: How old is Fahd? | *one | nine | seven | two
+mcq: What is the cat's name? | *Snow | Noor | Fahd | Sky
+tf: Sami's grandpa has white hair. | T
+tf: Ben has a brother. | F
+tf: The cat is Sami's cat. | F
+order: Sami shows the photo. | Sami talks about his dad. | Sami talks about his baby brother. | Ben talks about his family.
+speak: Draw your family or show a photo. Tell your partner who is who. | This is my ___. He's / She's ___.
+teach: Ask students to bring a family photo or draw one. During Timed Pair Share, partner B must ask one follow-up question: "How old is he?" or "What's her job?"
+
+@LISTEN 2 | Where Is the Cat? | Listening for places and positions | الاستماع إلى الأماكن والمواقع
+kagan: RallyCoach | Showdown
+vocab: in | في / داخل | 📥 | The cat is in the box.
+vocab: on | على | 🔝 | The ball is on the sofa.
+vocab: under | تحت | ⬇️ | Look under the bed.
+vocab: next to | بجانب | ↔️ | The bowl is next to the fridge.
+vocab: behind | خلف | 🚪 | The box is behind the door.
+vocab: sofa | أريكة | 🛋️ | Dad sits on the sofa.
+predict: Noor can't find her cat, Snow. Where can a cat hide in a house? | لا تستطيع نور أن تجد قطتها سنو. أين يمكن أن تختبئ قطة في البيت؟
+tip: Place words are short: in, on, under, next to, behind. Listen for the word before "the". | كلمات المكان قصيرة مثل in وon وunder وnext to وbehind. استمع للكلمة التي تأتي قبل the.
+script:
+NOOR: Mom! Where is Snow? I can't find her.
+MOM: Is she in your bedroom?
+NOOR: No, she isn't. I looked under my bed.
+MOM: Is she on the sofa in the living room?
+NOOR: No. There's only a ball on the sofa.
+MOM: Look in the kitchen. Snow likes the kitchen.
+NOOR: She isn't in the kitchen. But her food bowl is next to the fridge.
+MOM: Shh! Listen! What's that sound?
+NOOR: I can hear her! She's in the box behind the door!
+MOM: Oh, Snow! You're in Dad's new shoe box!
+NOOR: Silly cat! Come on, Snow. It's dinner time.
+end
+mcq: Where does Noor look first? | *under her bed | on the sofa | in the kitchen | behind the door
+mcq: What is on the sofa? | *a ball | the cat | a box | a bowl
+mcq: Where is the food bowl? | *next to the fridge | under the bed | on the sofa | behind the door
+mcq: Where is Snow at the end? | *in a box behind the door | under the bed | in the kitchen | on the sofa
+tf: Snow likes the kitchen. | T
+tf: The box is Mom's shoe box. | F
+tf: Noor hears the cat. | T
+order: Noor looks in her bedroom. | Mom asks about the sofa. | Noor looks in the kitchen. | Noor finds Snow in a box.
+speak: Hide a small toy in a picture of a house. Your partner asks where it is. | Is it in / on / under the ___? Yes, it is. / No, it isn't.
+teach: Use a real box and a soft toy before listening. Put the toy in, on, under, next to and behind the box while students say the word. This gives meaning before sound.
+
+@LISTEN 3 | Rooms in My House | Listening for details | الاستماع إلى التفاصيل
+kagan: Fan-N-Pick | RoundRobin
+vocab: house | بيت | 🏠 | Our house has five rooms.
+vocab: kitchen | مطبخ | 🍳 | Mom is in the kitchen.
+vocab: bedroom | غرفة نوم | 🛏️ | My bedroom is blue.
+vocab: bathroom | حمّام | 🛁 | The bathroom is small.
+vocab: living room | غرفة الجلوس | 🛋️ | Grandpa is in the living room.
+vocab: garden | حديقة المنزل | 🌳 | Dad is in the garden.
+predict: Sami shows us his house. Which rooms do you think we can see? | يُرينا سامي بيته. ما الغرف التي تتوقع أن نراها؟
+tip: Each time Sami says "This is...", a new room starts. Listen for who is in each room and its color. | كلما قال سامي "This is..." تبدأ غرفة جديدة. استمع لمن في كل غرفة وللونها.
+script:
+NARRATOR: This is Sami's house. It has five rooms. Let's go inside.
+SAMI: Hi! This is our living room. Grandpa is here with his newspaper.
+SAMI: This is the kitchen. Mom is here. Mmm, it smells good!
+SAMI: This is the bathroom. It's small and white.
+SAMI: Upstairs, there are two bedrooms. This is Noor's bedroom. It's pink and purple. Noor is here with her cat.
+SAMI: And this is my bedroom. It's blue. I have a desk, a bed and a big window.
+SAMI: Where's Dad? Oh, he's in the garden with Fahd.
+NARRATOR: What a nice house!
+end
+mcq: How many rooms are in Sami's house? | *five | four | two | six
+mcq: Where is Grandpa? | *in the living room | in the kitchen | in the garden | in the bedroom
+mcq: What color is Sami's bedroom? | *blue | pink | white | purple
+mcq: Who is in the garden? | *Dad and Fahd | Mom and Noor | Grandpa | Noor and her cat
+tf: The bathroom is big and white. | F
+tf: Noor's bedroom is upstairs. | T
+tf: Sami has a big window in his bedroom. | T
+order: the living room | the kitchen | the bathroom | Noor's bedroom
+speak: Draw your home. Tell your partner about two rooms. | This is the ___. It's ___. My ___ is here.
+teach: Give each pair a blank house outline. During the first listening they only label the rooms; during the second they draw the people. Two clear purposes make two listenings meaningful.
+
+@SPEAK 1 | Talking About My Family | Describing your family | وصف العائلة
+kagan: Inside-Outside Circle | Find Someone Who
+model:
+ADAM: Sami, do you have a big family?
+SAMI: Yes, I do. There are six people in my family.
+ADAM: Six! Who are they?
+SAMI: My mom, my dad, my grandpa, my sister, my baby brother and me. Oh, and our cat!
+ADAM: Ha ha! I have a small family. My mom, my dad and me.
+SAMI: Do you have a brother or a sister?
+ADAM: No, I don't. But I have five cousins!
+SAMI: Five cousins? That's fun!
+ADAM: Yes, we play football every Friday.
+end
+roles: ADAM | SAMI
+chunks: Do you have a brother? = هل لديك أخ؟ | I have one sister. = لديّ أخت واحدة. | There are five people in my family. = في عائلتي خمسة أشخاص. | Who are they? = من هم؟ | That's fun! = هذا ممتع!
+sound: pairs | /f/ or /v/? | Put your top teeth on your bottom lip. /f/ is only air. /v/ uses your voice — feel the buzz on your lip! | ضع أسنانك العليا على شفتك السفلى. /f/ هواء فقط، أما /v/ فيُنطق مع صوت وتشعر باهتزاز على شفتك.
+pair: fan | van
+pair: ferry | very
+pair: leaf | leave
+pair: few | view
+pair: safe | save
+task: Tell your group about your family. Use numbers. | There are ___ people in my family. I have ___. My ___ is ___.
+cando: I can talk about my family. | I can ask "Do you have a ...?" | I can say /f/ and /v/ correctly.
+teach: Students put a finger on their throat: no buzz for /f/, buzz for /v/. Many Arabic speakers say /f/ for both, so praise every clear /v/.
+
+@SPEAK 2 | Where Is My Bag? | Asking and saying where things are | السؤال عن مكان الأشياء والإجابة
+kagan: RallyRobin | Mix-Freeze-Group
+model:
+NOOR: Mom, where's my school bag?
+MOM: Is it in your bedroom?
+NOOR: No, it isn't. I can't find it!
+MOM: Look! It's under the table in the kitchen.
+NOOR: Oh, thank you! And where are my books?
+MOM: They're on the sofa, next to Dad's phone.
+NOOR: Thanks, Mom! Where's my water bottle?
+MOM: It's in your bag, Noor.
+NOOR: Oh! Silly me!
+end
+roles: NOOR | MOM
+chunks: Where's my bag? = أين حقيبتي؟ | It's under the table. = إنها تحت الطاولة. | Where are my books? = أين كتبي؟ | They're on the sofa. = إنها على الأريكة. | I can't find it. = لا أستطيع أن أجدها.
+sound: sort | Strong beat first or second? | Oo ; oO | English words have one strong beat. TA-ble has the strong beat first (Oo). be-HIND has it second (oO). | في الكلمة الإنجليزية مقطع واحد قوي. في TA-ble يأتي المقطع القوي أولًا (Oo)، وفي be-HIND يأتي ثانيًا (oO).
+item: table | Oo
+item: behind | oO
+item: kitchen | Oo
+item: between | oO
+item: under | Oo
+item: around | oO
+item: sofa | Oo
+item: upstairs | oO
+task: Hide a pencil in the classroom. Your partner asks questions to find it. | Where's the pencil? Is it ___ the ___? — Yes, it is. / No, it isn't.
+cando: I can ask where things are. | I can say where things are. | I can hear the strong beat in a word.
+teach: Clap the beats: one big clap for the strong beat and one small clap for the weak beat. Students clap before they choose Oo or oO.
+
+@CHECK
+check: L1#7 | What does Grandpa have? | *a farm | a cat | a shop | a car
+check: L2#11 | What time is it at the end? | *dinner time | lunch time | bed time | school time
+check: L3#2 | What does Grandpa have with him? | *a newspaper | a book | a phone | a cat
+check: L3#5 | What colors is Noor's bedroom? | *pink and purple | blue and white | pink and white | purple and blue
+
+@UNIT 3 | At School | في المدرسة | 🎒
+goals: I can name school things and colors. | I can ask for things politely. | I can understand school days and subjects.
+
+@LISTEN 1 | Lost and Found | Listening for colors and objects | الاستماع إلى الألوان والأشياء
+kagan: Quiz-Quiz-Trade | RallyRobin
+vocab: ruler | مسطرة | 📏 | My ruler is yellow.
+vocab: pencil case | مقلمة | 🖍️ | The pencil case is red.
+vocab: water bottle | قارورة ماء | 🥤 | My water bottle is blue.
+vocab: eraser | ممحاة | 🧽 | I need an eraser.
+vocab: notebook | دفتر | 📓 | My name is on my notebook.
+vocab: lost and found | صندوق المفقودات | 📦 | Look in the lost and found box.
+predict: The teacher has a box of lost things. What things do children often lose at school? | لدى المعلم صندوق فيه أشياء مفقودة. ما الأشياء التي يفقدها الأطفال عادةً في المدرسة؟
+tip: Listen for a color + a thing together: a green ruler, a red pencil case. Then listen for who says "It's mine!" | استمع إلى اللون مع الشيء معًا مثل a green ruler، ثم استمع لمن يقول "It's mine!" أي إنه لي.
+script:
+MR_HASSAN: Boys, look at this box. It's the lost and found box. Whose things are these?
+MR_HASSAN: Here's a green ruler. Is it yours, Adam?
+ADAM: No, Mr. Hassan. My ruler is yellow.
+MR_HASSAN: Okay. Here's a red pencil case. Whose is it?
+BEN: It's mine! Thank you, Mr. Hassan.
+MR_HASSAN: And here's a blue water bottle with a star on it.
+SAMI: That's my water bottle! Thank you.
+MR_HASSAN: There are two more things: a black eraser and an orange notebook.
+ADAM: The orange notebook is mine. My name is on it.
+MR_HASSAN: Great. The green ruler and the black eraser stay in the box.
+end
+mcq: What color is Adam's ruler? | *yellow | green | black | orange
+mcq: What is Ben's? | *the red pencil case | the green ruler | the blue water bottle | the black eraser
+mcq: What is on Sami's water bottle? | *a star | his name | a cat | a flower
+mcq: How does Adam know the notebook is his? | *His name is on it. | It is yellow. | It has a star on it. | Mr. Hassan tells him.
+tf: The pencil case is red. | T
+tf: Sami's water bottle is green. | F
+tf: Nobody takes the black eraser. | T
+order: the green ruler | the red pencil case | the blue water bottle | the orange notebook
+speak: Show your partner three things from your bag. Say the color. | This is my ___. It's ___.
+teach: Make a real "lost and found" box with classroom objects. After listening, students play the teacher: one holds up an object and says "Here's a ___. Whose is it?"
+
+@LISTEN 2 | Can I Borrow a Pencil? | Listening for what people need | الاستماع إلى ما يحتاجه الناس
+kagan: RallyCoach | Stand Up–Hand Up–Pair Up
+vocab: borrow | يستعير | 🤲 | Can I borrow a pencil?
+vocab: pencil | قلم رصاص | ✏️ | Here's a pencil.
+vocab: sharpener | برّاية | 🔄 | I don't have a sharpener.
+vocab: paper | ورق | 📄 | Can I have some paper?
+vocab: draw | يرسم | 🖍️ | We need to draw a tree.
+vocab: Here you are. | تفضّل. | 🫴 | Sure. Here you are.
+predict: Ben forgets some things at home. What can he do? | نسي بن بعض أشيائه في البيت. ماذا يمكنه أن يفعل؟
+tip: Polite questions start with "Can I...?". Listen for the thing after "borrow", "use" or "have". | الطلبات المهذبة تبدأ بـ "Can I...?". استمع للشيء الذي يأتي بعد borrow أو use أو have.
+script:
+BEN: Adam, can I borrow a pencil, please?
+ADAM: Sure. Here you are.
+BEN: Thanks! Oh no, I don't have a sharpener.
+ADAM: Sorry, I don't have one. Ask Yusuf.
+BEN: Yusuf, can I use your sharpener, please?
+YUSUF: Of course. Here you are.
+BEN: Thank you. And can I have some paper too?
+YUSUF: Yes. One page or two?
+BEN: Two, please. We need to draw a big tree.
+YUSUF: Do you need colors too?
+BEN: No, thanks. I have my colors. Thank you, Yusuf!
+end
+mcq: What does Ben borrow from Adam? | *a pencil | a sharpener | some paper | some colors
+mcq: Who has a sharpener? | *Yusuf | Adam | Ben | Sami
+mcq: How many pages of paper does Ben take? | *two | one | three | four
+mcq: What do they need to draw? | *a big tree | a big house | a small cat | a school
+tf: Adam has a sharpener. | F
+tf: Ben needs colors from Yusuf. | F
+tf: Ben says thank you to Yusuf. | T
+order: Ben borrows a pencil. | Ben asks for a sharpener. | Ben asks for paper. | Ben says he has his colors.
+speak: Ask your partner for three things. Say please and thank you. | Can I borrow your ___, please? — Sure. Here you are. — Thank you!
+teach: Point out that English speakers almost always add "please" and "thank you". Award a "Polite Point" every time you hear both during the pair practice.
+
+@LISTEN 3 | My Favorite Subject | Listening for days of the week | الاستماع إلى أيام الأسبوع
+kagan: Corners | Timed Pair Share
+vocab: subject | مادة دراسية | 📚 | My favorite subject is science.
+vocab: science | العلوم | 🔬 | We have science on Sunday.
+vocab: art | التربية الفنية | 🎨 | I like art.
+vocab: P.E. | التربية البدنية | ⚽ | We play football in P.E.
+vocab: favorite | مفضّل | ⭐ | What's your favorite subject?
+vocab: every day | كل يوم | 📅 | We have English every day.
+predict: Sami and Ben talk about their school subjects. Which subjects do you think they like? | يتحدث سامي وبن عن موادهما الدراسية. ما المواد التي تتوقع أنهما يحبانها؟
+tip: Our school week is Sunday to Thursday. Listen for a day after the word "on": on Monday, on Thursday. | أسبوعنا الدراسي من الأحد إلى الخميس. استمع لاسم اليوم بعد كلمة on مثل on Monday.
+script:
+BEN: Sami, what's your favorite subject?
+SAMI: I love science! We have science on Sunday and Tuesday.
+BEN: I like science too. But my favorite subject is {P.E.|P. E.}
+SAMI: When do we have {P.E.|P. E.}?
+BEN: On Monday and Thursday. On Thursday we play football!
+SAMI: Great! What about art?
+BEN: Art is on Wednesday. I like art. I can draw animals.
+SAMI: And English? We have English every day!
+BEN: Yes! Five days a week. English is fun.
+end
+mcq: What is Sami's favorite subject? | *science | P.E. | art | English
+mcq: When do they have P.E.? | *on Monday and Thursday | on Sunday and Tuesday | on Wednesday | every day
+mcq: What can Ben draw? | *animals | trees | houses | cars
+mcq: How many days a week do they have English? | *five | two | three | four
+tf: They have science on Sunday. | T
+tf: Art is on Thursday. | F
+tf: Ben likes art. | T
+order: Sami talks about science. | Ben talks about P.E. | They talk about art. | They talk about English.
+speak: Tell your partner your favorite subject and the day you have it. | My favorite subject is ___. We have it on ___.
+teach: Put subject names in the four corners of the room. Students walk to their favorite subject and tell the corner group why, using "I like it because it's fun / interesting".
+
+@SPEAK 1 | Can I Have..., Please? | Asking for things politely | طلب الأشياء بأدب
+kagan: Inside-Outside Circle | RallyRobin
+model:
+SAMI: Excuse me, Mr. Hassan. Can I have a sheet of paper, please?
+MR_HASSAN: Sure, Sami. Here you are.
+SAMI: Thank you. Can I use the green marker, please?
+MR_HASSAN: Sorry, Sami. Adam has the green marker. You can use the blue one.
+SAMI: That's okay. Can I sit next to the window, please?
+MR_HASSAN: Yes, you can.
+SAMI: Thank you very much, Mr. Hassan.
+MR_HASSAN: You're welcome.
+end
+roles: SAMI | MR_HASSAN
+chunks: Excuse me. = عفوًا. | Can I have ___, please? = هل يمكنني الحصول على ___ من فضلك؟ | Can I use ___? = هل يمكنني استخدام ___؟ | Thank you very much. = شكرًا جزيلًا. | You're welcome. = على الرحب والسعة.
+sound: pairs | Short /ɪ/ or long /iː/? | /ɪ/ is short and relaxed, like in "sit". /iː/ is long — smile and stretch it, like in "seat". | الصوت /ɪ/ قصير ومرتخٍ كما في sit، أما /iː/ فطويل؛ ابتسم ومدّه كما في seat.
+pair: sit | seat
+pair: ship | sheep
+pair: bin | bean
+pair: fill | feel
+pair: hit | heat
+task: Ask three classmates politely for things. They say yes or sorry. | Excuse me, can I have ___, please? — Here you are. / Sorry, ___.
+cando: I can ask for things politely. | I can answer "Here you are" or "Sorry". | I can hear short /ɪ/ and long /iː/.
+teach: Ask students to smile wide for /iː/ (sheep) and relax their face for /ɪ/ (ship). A mirror or a phone camera helps them see the difference.
+
+@SPEAK 2 | What's in Your Bag? | Describing things | وصف الأشياء
+kagan: Fan-N-Pick | Talking Chips
+model:
+ADAM: Ben, what's in your bag today?
+BEN: I have two books, three pens and a big red pencil case.
+ADAM: What's in your pencil case?
+BEN: Pencils, erasers and some colors. Look, my colors are new!
+ADAM: Nice! I have a lunch box with two sandwiches and some grapes.
+BEN: Yum! Do you have any juice boxes?
+ADAM: Yes, two juice boxes. Do you want one?
+BEN: Yes, please! Thank you, Adam.
+end
+roles: ADAM | BEN
+chunks: What's in your bag? = ماذا يوجد في حقيبتك؟ | I have two books. = لديّ كتابان. | It's big and red. = إنه كبير وأحمر. | Do you want one? = هل تريد واحدًا؟ | Yes, please! = نعم، من فضلك!
+sound: sort | Plural -s: /s/, /z/ or /ɪz/? | /s/ books ; /z/ pens ; /ɪz/ boxes | Plural -s has three sounds. After k, p, t it is /s/ (books). After most other sounds it is /z/ (pens). After s, x, sh, ch it is /ɪz/ — an extra beat (boxes). | لنهاية الجمع -s ثلاثة أصوات: /s/ بعد k وp وt مثل books، و/z/ بعد معظم الأصوات الأخرى مثل pens، و/ɪz/ مع مقطع إضافي بعد s وx وsh وch مثل boxes.
+item: cats | /s/
+item: bags | /z/
+item: buses | /ɪz/
+item: desks | /s/
+item: chairs | /z/
+item: watches | /ɪz/
+item: grapes | /s/
+item: pencils | /z/
+item: classes | /ɪz/
+task: Describe something in your bag. Your partner guesses what it is. | It's ___ and ___. I use it to ___. What is it?
+cando: I can describe things with color and size. | I can talk about more than one thing. | I can say plural -s endings.
+teach: Write the three endings on cards: /s/ /z/ /ɪz/. Students hold up a card for each word before they check on the platform.
+
+@CHECK
+check: L1#1 | What is the box? | *the lost and found box | a lunch box | a pencil box | a toy box
+check: L2#4 | What does Adam tell Ben? | *Ask Yusuf. | Ask Mr. Hassan. | Here you are. | Use my colors.
+check: L3#5 | What do the boys do in P.E. on Thursday? | *play football | draw animals | read books | swim
+check: L3#9 | What does Ben say about English? | *It's fun. | It's hard. | It's boring. | It's on Monday.

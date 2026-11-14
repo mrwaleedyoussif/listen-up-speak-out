@@ -1,0 +1,485 @@
+#GRADE 4
+level: A1+
+band: Ocean
+speed: 0.92
+
+@UNIT 1 | People Around Us | الناس من حولنا | 🧑‍🤝‍🧑
+goals: I can describe what people look like and what they are like. | I can say what people are doing now. | I can understand people talking about neighbors and family.
+
+@LISTEN 1 | Which One Is Sami? | Listening to identify people | الاستماع لتحديد الأشخاص
+kagan: Showdown | RallyRobin
+vocab: tall | طويل القامة | 📏 | Yusuf is tall.
+vocab: glasses | نظارة | 👓 | He wears glasses.
+vocab: short hair | شعر قصير | 💇 | Sami has short black hair.
+vocab: cap | قبعة | 🧢 | Adam always wears a cap.
+vocab: smile | ابتسامة | 😊 | He has a big smile.
+vocab: wave | يلوّح بيده | 👋 | He's waving at us.
+predict: Ben's mom wants to know which boy is Sami. How can Ben describe him? | تريد والدة بن أن تعرف من هو سامي. كيف يمكن أن يصفه بن؟
+tip: Listen for "has" and "is": He has short hair. He is tall. Each detail helps you find the right person. | استمع لكلمتي has وis مثل: He has short hair وHe is tall. كل تفصيل يساعدك على معرفة الشخص الصحيح.
+script:
+WOMAN[Ben's Mom]: Ben, which boy is your best friend, Sami?
+BEN: Look, Mom. He's over there, next to the gate.
+WOMAN[Ben's Mom]: There are three boys next to the gate. Is he the tall boy with glasses?
+BEN: No, that's Yusuf. Sami isn't very tall. He has short black hair and brown eyes.
+WOMAN[Ben's Mom]: Is he the boy with the red cap?
+BEN: No, that's Adam. Adam always wears a cap. Sami has a big smile. He's wearing a blue jacket, and he's carrying a green bag.
+WOMAN[Ben's Mom]: Oh, I can see him now. He's waving at us!
+BEN: Yes! Hi, Sami! Mom, can Sami come to our house on Thursday?
+WOMAN[Ben's Mom]: Of course he can. Let's ask his mom.
+end
+mcq: Where are the three boys? | *next to the gate | in the playground | on the bus | in the classroom
+mcq: Who is the tall boy with glasses? | *Yusuf | Sami | Adam | Ben
+mcq: What does Sami look like? | *short black hair and brown eyes | tall with glasses | red cap and long hair | long brown hair
+mcq: What is Sami wearing? | *a blue jacket | a red cap | glasses | a green jacket
+tf: Sami is very tall. | F
+tf: Adam always wears a cap. | T
+gap: Ben wants Sami to come to his house on ___. | Thursday
+order: Ben's mom asks about Sami. | They talk about Yusuf. | They talk about Adam. | Sami waves at them.
+speak: Describe a classmate. Your partner guesses who it is. | He has ___ hair. He's ___. He's wearing ___.
+teach: Before listening, show drawings of three boys and ask "Who has glasses? Who has a cap?" This pre-teaches the exact language of the task. Remind students to describe kindly — never make fun of how someone looks.
+
+@LISTEN 2 | Our Neighbors | Listening for jobs and personality | الاستماع إلى المهن والصفات الشخصية
+kagan: Timed Pair Share | Talking Chips
+vocab: neighbor | جار | 🏘️ | Mr. Saleh is our neighbor.
+vocab: next door | في البيت المجاور | 🚪 | He lives next door.
+vocab: baker | خبّاز | 🥖 | The baker makes fresh bread.
+vocab: nurse | ممرّضة / ممرّض | 🩺 | She's a nurse at the hospital.
+vocab: kind | لطيف وطيّب | 💛 | He's very kind.
+vocab: jokes | نكات | 😂 | He tells funny jokes.
+predict: Noor talks about her neighbors. What jobs can neighbors have? | تتحدث نور عن جيرانها. ما المهن التي يمكن أن يعمل بها الجيران؟
+tip: Listen for "He's a..." or "She's a..." for jobs, and words like kind or funny for personality. | استمع إلى He's a... وShe's a... لمعرفة المهنة، وإلى كلمات مثل kind وfunny لمعرفة الصفات.
+script:
+LINA: Noor, who lives next door to you?
+NOOR: Mr. Saleh lives next door. He's a baker. Every morning, he gives us fresh bread. He's very kind.
+LINA: That's nice! Who lives across the street?
+NOOR: Mrs. Huda. She's a nurse at the hospital. She works at night, so we play quietly in the afternoon.
+LINA: Oh, I see. Is there anyone funny on your street?
+NOOR: Yes! Uncle Majed. He's a taxi driver. He tells funny jokes, and he knows every street in Taif!
+LINA: Ha ha! Who is your favorite neighbor?
+NOOR: Old Mrs. Amal. She's eighty years old. She has a beautiful garden with roses. On Saturdays, I help her water the flowers.
+end
+mcq: What is Mr. Saleh's job? | *baker | nurse | taxi driver | farmer
+mcq: Why do the children play quietly in the afternoon? | *Mrs. Huda works at night. | Mr. Saleh is busy. | Uncle Majed is driving. | Mrs. Amal is sick.
+mcq: What does Uncle Majed tell? | *funny jokes | stories about roses | the time | the news
+mcq: How old is Mrs. Amal? | *eighty | eighteen | seventy | ninety
+tf: Mr. Saleh gives the family fresh bread. | T
+tf: Noor helps Mrs. Amal on Fridays. | F
+gap: Mrs. Amal has a beautiful garden with ___. | roses
+order: Mr. Saleh | Mrs. Huda | Uncle Majed | Mrs. Amal
+speak: Tell your partner about one neighbor or one person on your street. | ___ lives ___. He's/She's a ___. He's/She's very ___.
+teach: Question 2 needs a small inference: Mrs. Huda works at night, so she sleeps in the day. Ask "Why quietly?" and let students explain in English or Arabic. Discuss being good neighbors, a value we share.
+
+@LISTEN 3 | A Family Photo | Listening for actions happening now | الاستماع إلى أفعال تحدث الآن
+kagan: Fan-N-Pick | Think-Pair-Share
+vocab: beach | شاطئ | 🏖️ | We're at the beach.
+vocab: barbecue | شواية | 🍖 | Dad is cooking fish on the barbecue.
+vocab: umbrella | مظلّة | ⛱️ | He's reading under the umbrella.
+vocab: sandcastle | قلعة رملية | 🏰 | They're building a sandcastle.
+vocab: take a photo | يلتقط صورة | 📸 | I'm taking the photo.
+vocab: ice cream | آيس كريم (مثلّجات) | 🍦 | Fahd is eating ice cream.
+predict: Sami shows Ben a photo of a family day. What are the people doing? | يُري سامي صديقه بن صورة من يوم عائلي. ماذا يفعل الأشخاص في الصورة؟
+tip: Actions happening now use -ing: cooking, reading, building. Listen for the person, then the -ing word. | الأفعال التي تحدث الآن تنتهي بـ -ing مثل cooking وreading. استمع إلى اسم الشخص ثم إلى الفعل المنتهي بـ -ing.
+script:
+BEN: Sami, is this the photo from your family trip to Jeddah?
+SAMI: Yes! We're at the beach. Look, my dad is cooking fish on the barbecue.
+BEN: And who is that? The man who is reading a book under the umbrella?
+SAMI: That's my uncle Faisal. He's always reading!
+BEN: Ha ha. What are Noor and Lina doing?
+SAMI: They're building a big sandcastle. Lina is Noor's best friend. She came with us.
+BEN: And where are you?
+SAMI: I'm not in this photo. I'm taking the photo! But Fahd is here. He's sitting with Mom, and he's eating ice cream.
+BEN: It looks like a great day!
+SAMI: It was!
+end
+mcq: Where is Sami's family in the photo? | *at the beach in Jeddah | at a park in Taif | at Grandpa's farm | at a restaurant
+mcq: What is Dad doing? | *cooking fish | reading a book | swimming | taking a photo
+mcq: Who is reading under the umbrella? | *Uncle Faisal | Dad | Grandpa | Sami
+mcq: Why isn't Sami in the photo? | *He's taking the photo. | He's swimming. | He's at home. | He's eating.
+tf: Noor and Lina are building a sandcastle. | T
+tf: Fahd is sitting with Mom. | T
+gap: Fahd is eating ___. | ice cream, an ice cream
+order: Dad | Uncle Faisal | Noor and Lina | Fahd and Mom
+speak: Bring or draw a family photo. Tell your partner what each person is doing. | In this photo, my ___ is ___ing. My ___ is ___ing.
+teach: Show a busy picture (a beach or a park) and play "I spy someone who is ...ing" before listening. It activates the -ing form and the vocabulary at the same time.
+
+@SPEAK 1 | Who's That? | Describing people | وصف الأشخاص
+kagan: Inside-Outside Circle | Three-Step Interview
+model:
+ADAM: Ben, who are those boys in the picture?
+BEN: They're my cousins from London. This is Harry and that's Jack.
+ADAM: They look the same! Are they twins?
+BEN: Yes, they are. But Harry has curly hair and Jack has straight hair.
+ADAM: Oh, I see. And who is the girl with them?
+BEN: That's their sister, Emma. She's thirteen.
+ADAM: What are they like?
+BEN: They're really funny and friendly. They're coming to Taif next month!
+ADAM: That's great!
+end
+roles: ADAM | BEN
+chunks: Who's that? = من ذاك؟ | He has curly hair. = لديه شعر مجعّد. | She has straight hair. = لديها شعر مستقيم. | What are they like? = كيف هي شخصياتهم؟ | They look the same. = إنهم يبدون متشابهين.
+sound: pairs | /ð/ or /d/? | For /ð/ (they), put your tongue between your teeth and use your voice — like ذ in Arabic. For /d/ (day), your tongue touches the place behind your top teeth. | لنطق /ð/ كما في they ضع لسانك بين أسنانك مع إخراج الصوت مثل حرف الذال، أما /d/ كما في day فيلمس اللسان ما خلف الأسنان العليا.
+pair: they | day
+pair: then | den
+pair: those | doze
+pair: there | dare
+pair: though | dough
+task: Bring a photo of people you know (or a picture from a magazine). Describe two people to your partner. | This is ___. He/She has ___ hair and ___ eyes. He/She is very ___.
+cando: I can describe what people look like. | I can describe what people are like. | I can say /ð/ in this, that and they.
+teach: The Arabic letter ذ is a perfect anchor for /ð/. Write "ذ = this, that, they, those" on the board and keep it there for the whole unit.
+
+@SPEAK 2 | What Are You Doing? | Talking about actions now | التحدث عن أفعال تحدث الآن
+kagan: Mix-Freeze-Group | RallyRobin
+model:
+MOM: Hi, Sami. It's Mom. I'm at the supermarket. What's everyone doing?
+SAMI: Hi, Mom! Noor is doing her homework in her room.
+MOM: Good. And Fahd?
+SAMI: He's sleeping. Grandpa is watching him.
+MOM: And what are you doing?
+SAMI: I'm helping Dad. We're washing the car!
+MOM: Wow, thank you! Do you need anything from the supermarket?
+SAMI: Yes, please. Can you buy some apples?
+MOM: Okay. See you soon!
+end
+roles: MOM | SAMI
+chunks: What's everyone doing? = ماذا يفعل الجميع؟ | She's doing her homework. = إنها تحلّ واجبها. | He's sleeping. = إنه نائم. | We're washing the car. = نحن نغسل السيارة. | See you soon! = أراك قريبًا!
+sound: pairs | /ŋ/ or /n/? | For /ŋ/ (sing), the back of your tongue touches the top of your mouth and the sound goes through your nose. Don't add /g/ at the end: say "sing", not "sing-g". | لنطق /ŋ/ كما في sing يلمس مؤخر اللسان سقف الفم ويخرج الصوت من الأنف. لا تضف صوت /g/ في النهاية: قل sing وليس sing-g.
+pair: thing | thin
+pair: sing | sin
+pair: wing | win
+pair: rang | ran
+pair: bang | ban
+task: Mime an action. Your group asks questions to guess it. | Are you ___ing? — Yes, I am. / No, I'm not.
+cando: I can say what people are doing now. | I can ask "What are you doing?" | I can say -ing without adding /g/.
+teach: Students hum "nnn" and then "ŋŋŋ" with their mouths open — the tongue moves back for /ŋ/. Keep the ending soft: no /g/ "kick" at the end.
+
+@CHECK
+check: L1#6 | What color is Sami's bag? | *green | blue | red | black
+check: L1#9 | What does Ben's mom want to do? | *ask Sami's mom | call Sami's dad | drive Sami home | buy a cap
+check: L2#6 | What does Uncle Majed know? | *every street in Taif | every baker in Taif | every shop in Jeddah | every school in Taif
+check: L3#6 | Who is Lina? | *Noor's best friend | Sami's cousin | Ben's sister | Uncle Faisal's daughter
+
+@UNIT 2 | Around My Town | في مدينتي | 🏙️
+goals: I can name places in town. | I can ask for and follow directions. | I can understand announcements with times and floors.
+
+@LISTEN 1 | Where Are They Going? | Listening for clues | الاستماع إلى الدلائل
+kagan: Numbered Heads Together | Showdown
+vocab: library | مكتبة | 📚 | I need books from the library.
+vocab: dentist | طبيب أسنان | 🦷 | I need to see the dentist.
+vocab: supermarket | سوبرماركت | 🏬 | We buy food at the supermarket.
+vocab: trolley | عربة التسوّق | 🛒 | Let's take a trolley.
+vocab: mosque | مسجد | 🕌 | Let's walk to the mosque.
+vocab: museum | متحف | 🏛️ | The museum has dinosaur bones.
+predict: Five people are going to different places in town. What places in town can you name? | خمسة أشخاص يذهبون إلى أماكن مختلفة في المدينة. ما الأماكن التي تعرف أسماءها؟
+tip: The speakers don't always say the place. Listen for clues: books → library, toothache → dentist. | لا يذكر المتحدثون اسم المكان دائمًا. استمع إلى الدلائل: books تدل على المكتبة، وtoothache تدل على طبيب الأسنان.
+script:
+NARRATOR: Listen to five people. Where is each person going?
+NARRATOR: Number one.
+YUSUF: Mom, I need some books for my project. Can we go there after school? It's quiet, and there are thousands of books.
+NARRATOR: Number two.
+DAD: I have a bad toothache. I need to see the dentist at ten o'clock.
+NARRATOR: Number three.
+LINA: We need bread, milk and some vegetables for dinner. Let's take a trolley.
+NARRATOR: Number four.
+GRANDPA: It's almost time for the Dhuhr prayer. Let's walk there together, Sami.
+NARRATOR: Number five.
+ADAM: I want to see the old swords and the dinosaur bones. Is it open on Saturday?
+end
+mcq: Where is Yusuf going? | *to the library | to the bookshop | to school | to the museum
+mcq: Where is Dad going? | *to the dentist | to the hospital | to the pharmacy | to work
+mcq: Where is Lina going? | *to the supermarket | to the bakery | to a restaurant | to the market
+mcq: Where are Grandpa and Sami going? | *to the mosque | to the park | to the farm | to the market
+tf: Dad has a stomachache. | F
+tf: Adam wants to see old swords and dinosaur bones. | T
+gap: Adam wants to visit on ___. | Saturday
+order: the library | the dentist | the supermarket | the mosque
+speak: Give your partner a clue. Your partner guesses the place. | I need ___. Where am I going? — You're going to the ___.
+teach: This is the first inference task in the program. After each item, ask "Which words helped you?" and write the clue words on the board next to each place.
+
+@LISTEN 2 | How Do I Get There? | Following directions | اتباع الاتجاهات
+kagan: RallyCoach | Stand Up–Hand Up–Pair Up
+vocab: go straight | امشِ إلى الأمام | ⬆️ | Go straight along King Faisal Street.
+vocab: turn left | انعطف يسارًا | ⬅️ | Turn left at the park.
+vocab: turn right | انعطف يمينًا | ➡️ | Turn right after the mosque.
+vocab: past | مرورًا بـ | 🚶 | Walk past the bakery.
+vocab: on the left | على اليسار | 👈 | The mosque is on your left.
+vocab: bus stop | موقف الحافلات | 🚏 | I'm at the bus stop.
+predict: Ben is going to Sami's house for the first time. How can Sami help him on the phone? | يذهب بن إلى بيت سامي لأول مرة. كيف يمكن أن يساعده سامي عبر الهاتف؟
+tip: Use your finger on an imaginary map. Move it every time you hear go, turn, walk or past. | استخدم إصبعك على خريطة متخيّلة، وحرّكه كلما سمعت go أو turn أو walk أو past.
+script:
+BEN: Hi, Sami. I'm at the bus stop on King Faisal Street. How do I get to your house?
+SAMI: Easy! Go straight along King Faisal Street. You can see a big mosque on your left.
+BEN: Okay, I can see the mosque.
+SAMI: Good. Turn right after the mosque. That's Rose Street.
+BEN: Turn right... okay. I'm on Rose Street now.
+SAMI: Walk past the bakery and the pharmacy. Then turn left at the park.
+BEN: Past the bakery, past the pharmacy, turn left at the park. Done!
+SAMI: Our house is the third house on the right. It has a green door.
+BEN: I can see it! I'm next to your door now.
+SAMI: Great! I'm coming down!
+end
+mcq: Where is Ben at the start? | *at the bus stop | at the park | at the mosque | at the bakery
+mcq: What is on Ben's left on King Faisal Street? | *a big mosque | the park | a bakery | a pharmacy
+mcq: Where does Ben turn left? | *at the park | after the mosque | at the bakery | at the bus stop
+mcq: Which house is Sami's? | *the third house on the right | the first house on the left | the house next to the park | the house next to the bakery
+tf: Ben turns right after the mosque. | T
+tf: Sami's house has a red door. | F
+gap: After the mosque, Ben walks along ___ Street. | Rose
+order: Go straight along King Faisal Street. | Turn right after the mosque. | Walk past the bakery and the pharmacy. | Turn left at the park.
+speak: Draw a simple map. Give your partner directions from school to your house. | Go straight. Turn left/right at the ___. It's on the left/right.
+teach: Practise left and right physically first: everyone stands and turns when you say "Turn left!" Then students draw Ben's route on a simple street map during the second listening.
+
+@LISTEN 3 | A Visit to the Museum | Listening to announcements | الاستماع إلى الإعلانات
+kagan: Numbered Heads Together | RoundRobin
+vocab: visitor | زائر | 🧳 | Welcome, visitors!
+vocab: floor | طابق | 🏢 | The Space Room is on the first floor.
+vocab: ground floor | الطابق الأرضي | ⬇️ | The café is on the ground floor.
+vocab: dinosaur | ديناصور | 🦖 | Don't touch the dinosaur bones.
+vocab: free | مجّاني | 🆓 | Children can visit for free.
+vocab: Don't touch. | لا تلمس. | 🚫 | Please don't touch.
+predict: You are visiting a science museum. What information do you need when you arrive? | أنت تزور متحفًا للعلوم. ما المعلومات التي تحتاجها عند وصولك؟
+tip: Announcements are full of numbers. Write the times and floors as numbers while you listen: 9, 6, 11, 2. | الإعلانات مليئة بالأرقام. اكتب الأوقات وأرقام الطوابق كأرقام أثناء الاستماع.
+script:
+ANNOUNCER: Good morning, visitors, and welcome to the City Science Museum. We are open today from nine o'clock in the morning until six o'clock in the evening.
+ANNOUNCER: On the first floor, you can see the Space Room. There is a show about the planets at eleven o'clock.
+ANNOUNCER: On the second floor, there is the Dinosaur Room. Please don't touch the dinosaur bones.
+ANNOUNCER: Are you hungry? Our café is on the ground floor, next to the gift shop.
+ANNOUNCER: Today is Family Day, so children under twelve can visit for free!
+ANNOUNCER: The robot show starts at two o'clock in the Science Hall. Don't miss it!
+ADAM: Dad, can we see the robot show?
+DAD: Yes, Adam. But first, let's go to the Space Room.
+end
+mcq: What time does the museum close today? | *at six o'clock | at nine o'clock | at two o'clock | at eleven o'clock
+mcq: Where is the Dinosaur Room? | *on the second floor | on the first floor | on the ground floor | next to the café
+mcq: Who can visit for free today? | *children under twelve | everyone | families with babies | children over twelve
+mcq: Where do Adam and Dad go first? | *to the Space Room | to the robot show | to the café | to the Dinosaur Room
+tf: The planet show is at twelve o'clock. | F
+tf: The café is next to the Space Room. | F
+gap: The robot show starts at ___ o'clock. | two, 2
+order: opening times | the Space Room | the Dinosaur Room | the café
+speak: Make a short announcement for our school. Say the opening times and one rule. | Welcome to ___. We are open from ___ to ___. Please don't ___.
+teach: "Free" has two meanings: "not busy" (Grade 3) and "no money" (here). Ask students for one example sentence of each meaning.
+
+@SPEAK 1 | Excuse Me, Where's the Museum? | Asking for directions | السؤال عن الاتجاهات
+kagan: Inside-Outside Circle | RallyCoach
+model:
+SAMI: Excuse me. Where's the museum, please?
+MAN: The museum? Go straight and turn left at the hospital.
+SAMI: Turn left at the hospital. Is it far?
+MAN: No, it isn't. It's about five minutes on foot.
+SAMI: Is it next to the library?
+MAN: Yes, it is. It's opposite the bakery, too.
+SAMI: Thank you very much!
+MAN: You're welcome. Enjoy your visit!
+end
+roles: SAMI | MAN
+chunks: Excuse me, where's the ___? = عفوًا، أين ___؟ | Is it far? = هل هو بعيد؟ | It's five minutes on foot. = إنه على بُعد خمس دقائق سيرًا. | It's opposite the bakery. = إنه مقابل المخبز. | Enjoy your visit! = استمتع بزيارتك!
+sound: sort | HOS-pi-tal or mu-SE-um? | Ooo ; oOo | Long words have one strong beat. HOS-pi-tal has it first (Ooo). mu-SE-um has it in the middle (oOo). | للكلمات الطويلة مقطع قوي واحد. في HOS-pi-tal يكون في البداية (Ooo)، وفي mu-SE-um يكون في الوسط (oOo).
+item: hospital | Ooo
+item: museum | oOo
+item: library | Ooo
+item: apartment | oOo
+item: bakery | Ooo
+item: department | oOo
+item: pharmacy | Ooo
+item: computer | oOo
+task: Use a town map. Ask your partner for directions to three places. | Excuse me, where's the ___? — Go straight and turn ___ at the ___. It's opposite the ___.
+cando: I can ask for directions politely. | I can give simple directions. | I can hear the strong beat in long words.
+teach: Make a big town map on the classroom floor with tape and paper signs. Students walk the route as their partner gives directions.
+
+@SPEAK 2 | Let's Meet at Eleven | Making plans to meet | وضع خطط للقاء
+kagan: Mix-Pair-Share | Timed Pair Share
+model:
+ADAM: Ben, do you want to go to the new park on Saturday?
+BEN: Yes! What time?
+ADAM: Let's meet at ten o'clock.
+BEN: Ten is too early for me. How about eleven?
+ADAM: Okay, eleven o'clock is fine. Where shall we meet?
+BEN: Let's meet at the bus stop near the school.
+ADAM: Good idea. Can Sami come too?
+BEN: Sure! I'll call him tonight.
+ADAM: Great. See you on Saturday!
+end
+roles: ADAM | BEN
+chunks: Do you want to ___? = هل تريد أن ___؟ | Let's meet at ten. = لنلتقِ في العاشرة. | How about eleven? = ما رأيك في الحادية عشرة؟ | Where shall we meet? = أين نلتقي؟ | Good idea! = فكرة جيدة!
+sound: sort | How many words? | 3 words ; 4 words ; 5 words | In fast speech, English words join together: "meet at eight" sounds like one long word. Listen carefully and count the words. (it's = 1 word) | في الكلام السريع تتصل الكلمات ببعضها، فتبدو meet at eight كأنها كلمة واحدة طويلة. استمع جيدًا وعدّ الكلمات (it's كلمة واحدة).
+item: It's at eleven. | 3
+item: Let's meet at eight. | 4
+item: Meet me at the park. | 5
+item: Is it open? | 3
+item: What time is it? | 4
+item: Turn left at the end. | 5
+item: Put it on. | 3
+item: See you at four. | 4
+item: Wait for us at noon. | 5
+task: Plan a weekend activity with your partner. Agree on a day, a time and a place. | Do you want to ___? — Yes! What time? — Let's meet at ___. — Where? — At the ___.
+cando: I can make plans with a friend. | I can suggest a different time. | I can hear words that join together.
+teach: Write "meet_at_eight" with linking marks on the board. Students say it as one smooth word: "mee-ta-teight". Linking makes them sound natural and helps them understand fast speech.
+
+@CHECK
+check: L1#7 | What does Lina want to take? | *a trolley | a basket | a bag | a taxi
+check: L1#9 | How do Grandpa and Sami go there? | *They walk. | They drive. | They take a bus. | They take a taxi.
+check: L2#10 | What does Sami say at the end? | *I'm coming down! | Turn left! | Ring the bell! | Wait at the park!
+check: L3#4 | What is next to the café? | *the gift shop | the Space Room | the Science Hall | the main door
+
+@UNIT 3 | Shopping and Money | التسوّق والنقود | 🛍️
+goals: I can ask about prices and understand numbers to 100. | I can buy things and clothes in a shop. | I can understand prices and offers at a market.
+
+@LISTEN 1 | At the Toy Shop | Listening for prices | الاستماع إلى الأسعار
+kagan: RallyCoach | Quiz-Quiz-Trade
+vocab: present | هدية | 🎁 | Let's buy a present for Fahd.
+vocab: How much...? | بكم...؟ | 💰 | How much is the red car?
+vocab: riyal | ريال | 💵 | It's thirty-five riyals.
+vocab: puzzle | أحجية تركيب | 🧩 | The animal puzzle is cheap.
+vocab: teddy bear | دبّ دمية | 🧸 | The teddy bear is forty-two riyals.
+vocab: change | الباقي (من النقود) | 🪙 | Here's your change.
+predict: Sami and Noor want to buy a present for their little brother. What toys do you think they look at? | يريد سامي ونور شراء هدية لأخيهما الصغير. ما الألعاب التي تتوقع أنهما ينظران إليها؟
+tip: Prices are big numbers. Listen to both parts: thirty-five = 35, forty-two = 42. | الأسعار أعداد كبيرة. استمع إلى الجزأين: thirty-five تعني 35، وforty-two تعني 42.
+script:
+NOOR: Sami, we have fifty riyals. Let's buy a present for Fahd.
+SAMI: Look at this red car. How much is it?
+WOMAN[Shop Assistant]: The red car is thirty-five riyals.
+NOOR: That's a lot. What about the teddy bear?
+WOMAN[Shop Assistant]: The teddy bear is forty-two riyals.
+SAMI: Hmm. And the puzzle with the animals?
+WOMAN[Shop Assistant]: It's only eighteen riyals. It's for children aged two to four.
+NOOR: Fahd is two now. That's perfect!
+SAMI: Can we have the puzzle and a small ball too?
+WOMAN[Shop Assistant]: The small ball is twelve riyals. So that's thirty riyals, please.
+NOOR: Here's fifty riyals.
+WOMAN[Shop Assistant]: Thank you. Here's your change: twenty riyals.
+end
+mcq: How much money do Sami and Noor have? | *fifty riyals | fifteen riyals | forty riyals | thirty riyals
+mcq: How much is the teddy bear? | *forty-two riyals | thirty-five riyals | twenty-four riyals | eighteen riyals
+mcq: What do they buy? | *the puzzle and a small ball | the red car | the teddy bear and a ball | the red car and a puzzle
+mcq: How much change do they get? | *twenty riyals | thirty riyals | twelve riyals | eighteen riyals
+tf: The puzzle is for children aged two to four. | T
+tf: Noor thinks the red car is expensive. | T
+gap: The small ball costs ___ riyals. | twelve, 12
+order: the red car | the teddy bear | the puzzle | the small ball
+speak: Play shop with your partner. Ask about the prices of three things. | How much is the ___? — It's ___ riyals.
+teach: Prepare paper riyal notes. After listening, students "buy" toys from the board and calculate the change in pairs (RallyCoach). Noor's "That's a lot" is a polite way to say something is expensive — teach it as a chunk.
+
+@LISTEN 2 | New Clothes for Eid | Listening for problems and sizes | الاستماع إلى المشكلات والمقاسات
+kagan: Three-Step Interview | RallyRobin
+vocab: thobe | ثوب | 👘 | Let's buy you a new thobe.
+vocab: size | مقاس | 📐 | What size is he?
+vocab: try on | يجرّب (ملابس) | 👕 | Try it on, please.
+vocab: too long | طويل جدًا | 📏 | It's too long.
+vocab: sandals | صندل | 🩴 | Can I have the brown sandals?
+vocab: changing room | غرفة القياس | 🚪 | The changing room is over there.
+predict: Eid is coming. Sami and his dad go to a clothes shop. What do they buy? | العيد قادم، ويذهب سامي ووالده إلى متجر ملابس. ماذا يشتريان؟
+tip: "Too long" and "too big" mean there is a problem. Listen for "too" to find the problem. | عبارات مثل too long وtoo big تعني وجود مشكلة. استمع لكلمة too لتعرف المشكلة.
+script:
+DAD: Sami, Eid is next week. Let's buy you a new thobe.
+MAN[Shop Assistant]: Good evening. Can I help you?
+DAD: Yes, please. We're looking for a white thobe for my son.
+MAN[Shop Assistant]: What size is he?
+DAD: I think he's a size forty-eight.
+MAN[Shop Assistant]: Here you are. You can try it on in the changing room.
+SAMI: Dad, it's too long. I need a smaller size.
+MAN[Shop Assistant]: Try this one. It's size forty-six.
+SAMI: This one is perfect!
+DAD: Great. Do you sell sandals too?
+MAN[Shop Assistant]: Yes, the sandals are over there. We have black and brown.
+SAMI: Can I have the brown sandals, please?
+DAD: Of course. And let's buy a red and white shemagh too.
+end
+mcq: Why do they buy new clothes? | *Eid is next week. | Sami has a party. | School starts tomorrow. | It's Sami's birthday.
+mcq: What is the problem with the first thobe? | *It's too long. | It's too short. | It's the wrong color. | It's too expensive.
+mcq: What size is the perfect thobe? | *forty-six | forty-eight | sixty-four | fourteen
+mcq: What color are Sami's new sandals? | *brown | black | white | red
+tf: The first thobe is size forty-six. | F
+tf: Sami tries the thobe on in the changing room. | T
+gap: Dad also wants to buy a red and white ___. | shemagh, shimagh
+order: Dad and Sami talk about Eid. | Sami tries on a thobe. | Sami gets a smaller size. | Sami chooses sandals.
+speak: Tell your partner what you wear for Eid or for a special day. | For Eid, I wear ___. My favorite is ___.
+teach: Connect the lesson to students' lives: ask what they wore last Eid. Show "too" with real clothes — a big T-shirt on a small student is funny and memorable.
+
+@LISTEN 3 | School Market Day | Listening for prices and offers | الاستماع إلى الأسعار والعروض
+kagan: Corners | Numbered Heads Together
+vocab: sell | يبيع | 🏷️ | Ben is selling books.
+vocab: buy | يشتري | 🛒 | Buy two books and get one free!
+vocab: each | لكلّ واحد | 1️⃣ | They're five riyals each.
+vocab: popular | مرغوب ومحبوب | 🌟 | Our cupcakes are very popular.
+vocab: plant | نبتة | 🪴 | Small plants are eight riyals.
+vocab: money | نقود | 💰 | All the money is for the hospital.
+predict: Your school has a market day. Students sell things to help others. What can they sell? | لدى مدرستك يوم سوق خيري يبيع فيه الطلاب أشياء لمساعدة الآخرين. ماذا يمكنهم أن يبيعوا؟
+tip: Listen for the word "each" after a price: five riyals each means one cupcake costs five riyals. | استمع لكلمة each بعد السعر: five riyals each تعني أن الواحدة بخمسة ريالات.
+script:
+MR_HASSAN: Welcome to our School Market Day! All the money is for the children's hospital.
+MR_HASSAN: At table one, Adam and Yusuf are selling cupcakes. They're five riyals each.
+ADAM: Our chocolate cupcakes are very popular! We only have ten left!
+MR_HASSAN: At table two, Ben is selling old books and comics. Every book is three riyals.
+BEN: Buy two books and get one free!
+MR_HASSAN: At table three, Sami is selling plants. Small plants are eight riyals, and big plants are fifteen riyals.
+SAMI: I grew these plants at home with my grandpa!
+MR_HASSAN: Last year, we made two thousand riyals. Let's make more this year!
+end
+mcq: Who gets the money? | *the children's hospital | the school library | the teachers | the students
+mcq: How much is one cupcake? | *five riyals | three riyals | eight riyals | fifteen riyals
+mcq: What is Ben selling? | *old books and comics | cupcakes | plants | toys
+mcq: How much is a big plant? | *fifteen riyals | eight riyals | fifty riyals | five riyals
+tf: Adam and Yusuf have ten cupcakes left. | T
+tf: Sami bought his plants at a shop. | F
+gap: Last year, the school made two ___ riyals. | thousand
+order: cupcakes | books and comics | plants | last year's money
+speak: Plan your own market table. Say what you sell and the price. | At my table, I'm selling ___. They're ___ riyals each.
+teach: Link the lesson to the value of giving (charity). Groups plan a pretend charity table and present their prices; the class "buys" with paper money and totals the money raised.
+
+@SPEAK 1 | Fifteen or Fifty? | Asking about prices | السؤال عن الأسعار
+kagan: Quiz-Quiz-Trade | RallyCoach
+model:
+NOOR: Excuse me. How much is this notebook?
+WOMAN[Shop Assistant]: It's fifteen riyals.
+NOOR: Fifteen or fifty?
+WOMAN[Shop Assistant]: Fifteen. One, five.
+NOOR: Oh, good! And how much are these colored pens?
+WOMAN[Shop Assistant]: They're thirteen riyals for the small box and thirty riyals for the big box.
+NOOR: I'd like the small box, please.
+WOMAN[Shop Assistant]: So that's twenty-eight riyals, please.
+NOOR: Here you are. Thank you!
+end
+roles: NOOR | WOMAN
+chunks: How much is this ___? = بكم هذا ___؟ | How much are these? = بكم هذه؟ | It's fifteen riyals. = إنه بخمسة عشر ريالًا. | Fifteen or fifty? = خمسة عشر أم خمسون؟ | I'd like the small box. = أريد العلبة الصغيرة.
+sound: pairs | Thirteen or thirty? | In -teen numbers the strong beat is at the end: thir-TEEN. In -ty numbers it is at the start: THIR-ty. Listen for the long "teen" and the final /n/. | في الأعداد المنتهية بـ -teen يكون المقطع القوي في النهاية thir-TEEN، وفي الأعداد المنتهية بـ -ty يكون في البداية THIR-ty. استمع لـ teen الطويلة ولصوت /n/ في آخرها.
+pair: thirteen | thirty
+pair: fourteen | forty
+pair: fifteen | fifty
+pair: sixteen | sixty
+pair: eighteen | eighty
+task: Make price cards for five things. Your partner asks and writes the prices. Then check together. | How much is the ___? — It's ___ riyals. — ___ or ___? — ___!
+cando: I can ask about prices. | I can check a number I'm not sure about. | I can hear -teen and -ty numbers.
+teach: Students tap the strong beat on the desk: tap-TAP for thirTEEN, TAP-tap for THIRty. Checking ("Fifteen or fifty?") is a real-life skill — praise students who use it.
+
+@SPEAK 2 | Can I Try It On? | Buying clothes | شراء الملابس
+kagan: Fan-N-Pick | Inside-Outside Circle
+model:
+MAN[Shop Assistant]: Good afternoon. Can I help you?
+BEN: Yes, please. I'm looking for a football shirt.
+MAN[Shop Assistant]: What size are you?
+BEN: Small, I think.
+MAN[Shop Assistant]: Here's a small one. Do you like this blue one?
+BEN: Yes, I do. Can I try it on?
+MAN[Shop Assistant]: Of course. The changing room is over there.
+BEN: It's a bit big. Do you have an extra small?
+MAN[Shop Assistant]: Yes, here you are.
+BEN: Perfect! I'll take it. How much is it?
+MAN[Shop Assistant]: It's forty-nine riyals.
+end
+roles: BEN | MAN
+chunks: Can I help you? = هل يمكنني مساعدتك؟ | I'm looking for ___. = أبحث عن ___. | Can I try it on? = هل يمكنني تجربته؟ | It's a bit big. = إنه كبير قليلًا. | I'll take it. = سآخذه.
+sound: pairs | /ɜː/ or /ɔː/? | /ɜː/ (shirt) is in the middle of your mouth and your lips are relaxed. /ɔː/ (short) is deeper — make your lips round. | الصوت /ɜː/ كما في shirt يخرج من وسط الفم والشفتان مرتخيتان، أما /ɔː/ كما في short فهو أعمق والشفتان مستديرتان.
+pair: shirt | short
+pair: bird | board
+pair: word | ward
+pair: fur | four
+pair: worm | warm
+task: Role-play buying clothes. Ask for a size and say if it's right. | I'm looking for ___. — What size? — ___. — Can I try it on? — It's a bit ___.
+cando: I can ask for clothes in a shop. | I can say if something is too big or too small. | I can hear /ɜː/ and /ɔː/.
+teach: Bring a few real items of clothing as props. Students sound more natural when they hold the "shirt" and point to the "changing room" in the corner of the classroom.
+
+@CHECK
+check: L1#7 | How much is the animal puzzle? | *eighteen riyals | eighty riyals | twelve riyals | forty-two riyals
+check: L1#8 | How old is Fahd now? | *two | four | one | three
+check: L2#3 | What color thobe does Dad want? | *white | brown | black | blue
+check: L3#5 | What is Ben's special offer? | *Buy two books and get one free. | Buy one book and get one free. | All books are free. | Buy three books for five riyals.

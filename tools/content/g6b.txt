@@ -1,0 +1,489 @@
+#GRADE 6
+
+@UNIT 4 | Saving Our Environment | حماية بيئتنا | ♻️
+goals: I can understand a project report and a talk with numbers and reasons. | I can make predictions about the future. | I can persuade others to take action.
+
+@LISTEN 1 | The Recycling Project | Listening to a report of results | الاستماع إلى تقرير عن النتائج
+kagan: Numbered Heads Together | RallyCoach
+vocab: recycle | يعيد التدوير | ♻️ | We recycle paper and plastic.
+vocab: waste | نفايات / مخلّفات | 🍂 | The green bin is for food waste.
+vocab: weigh | يزن | ⚖️ | Two students weighed the rubbish.
+vocab: assembly | الطابور الصباحي | 🏫 | We talked in the morning assembly.
+vocab: compost | سماد عضوي | 🌱 | We made compost for the garden.
+vocab: canteen | المقصف المدرسي | 🥪 | The bottle bin will be next to the canteen.
+predict: Sami presents the results of his class's recycling project. What do you think the class did? |
+tip: Reports of results use numbers to show change. Listen for "at the beginning", "after" and "by the third month". | تستخدم تقارير النتائج الأعداد لإظهار التغيير. استمع لعبارات مثل at the beginning وafter وby the third month.
+script:
+SAMI: Good morning. Our class started a recycling project three months ago, and today I'd like to share our results.
+SAMI: First, we put three bins in every classroom: blue for paper, yellow for plastic and green for food waste.
+SAMI: Then, every Thursday, two students collected the bins and weighed the rubbish. At the beginning, we only recycled about five kilograms a week.
+SAMI: After we made posters and talked in the morning assembly, things changed. By the third month, we were recycling more than twenty kilograms a week!
+SAMI: We also used the food waste to make compost for the school garden. Our tomatoes have never been bigger!
+SAMI: The biggest problem was plastic bottles. Many students still throw them in the wrong bin. So next term, we're going to put a special bottle bin next to the canteen.
+SAMI: Remember: if every student recycles one bottle a day, our school can save more than ten thousand bottles a year. Thank you!
+end
+mcq: What color is the bin for plastic? | *yellow | blue | green | red
+mcq: How much did they recycle each week at the beginning? | *about five kilograms | about twenty kilograms | about ten kilograms | about two kilograms
+mcq: What helped to change things? | *posters and talks in the morning assembly | prizes for the best class | a visit from the mayor | new rules from the principal
+mcq: What did they make from food waste? | *compost for the school garden | food for animals | new paper | electricity
+mcq: Where will the special bottle bin go? | *next to the canteen | in every classroom | in the school garden | next to the main gate
+tf: Plastic bottles were the easiest thing to recycle. | F
+tf: Two students collected the bins every Thursday. | T
+gap: The project started ___ months ago. | three, 3
+gap: The school can save more than ten ___ bottles a year. | thousand
+speak: Suggest a project to make our school greener. Explain the steps. | First, we could ___. Then, ___. If we ___, we can ___.
+teach: Draw a simple line graph on the board showing 5 kg rising to 20 kg. Ask students to describe it in English: "It went up after the posters."
+
+@LISTEN 2 | Every Drop Counts | Listening to a talk with numbers and reasons | الاستماع إلى محاضرة فيها أعداد وأسباب
+kagan: Talking Chips | Showdown
+vocab: drop | قطرة | 💧 | Every drop counts.
+vocab: desalination | تحلية المياه | 🏭 | Desalination plants take the salt out.
+vocab: tap | صنبور | 🚰 | Turn off the tap.
+vocab: drip | يقطر / يسرّب | 💦 | Fix dripping taps.
+vocab: shower | دُش / استحمام | 🚿 | Take a short shower.
+vocab: on average | في المتوسط | 📊 | On average, one person uses 250 liters a day.
+predict: An engineer from the National Water Company talks about saving water. Why is water so precious in Saudi Arabia? |
+tip: The speaker gives tips with numbers. Match each tip with its number: tap → ?, shower → ?, dripping tap → ?. | تقدّم المتحدثة نصائح مع أرقام. اربط كل نصيحة برقمها.
+script:
+WOMAN[Engineer Huda]: Hello, everyone. I work for the National Water Company. Did you know that Saudi Arabia is one of the driest countries in the world? We have no rivers that flow all year.
+WOMAN[Engineer Huda]: Much of our drinking water comes from the sea. We take the salt out in big desalination plants, and that uses a lot of energy and money.
+WOMAN[Engineer Huda]: That's why every drop counts. Here are some easy ways to save water.
+WOMAN[Engineer Huda]: Turn off the tap while you brush your teeth. This can save up to twelve liters every time!
+WOMAN[Engineer Huda]: Take a short shower instead of a bath. A five-minute shower uses about forty liters, but a bath can use more than one hundred.
+WOMAN[Engineer Huda]: Fix dripping taps. One dripping tap can waste more than fifteen liters a day.
+WOMAN[Engineer Huda]: And when you make wudu, use only the water you need. The Prophet, peace be upon him, taught us not to waste water, even at a flowing river.
+BEN: How much water does one person use in a day here?
+WOMAN[Engineer Huda]: On average, more than two hundred and fifty liters. That's higher than in many countries, so we can all do better.
+end
+mcq: Where does much of Saudi Arabia's drinking water come from? | *the sea | rivers | lakes | rain
+mcq: Why is desalination a problem? | *It uses a lot of energy and money. | It makes the water salty. | It takes many years. | It's bad for fish.
+mcq: How much water can you save by turning off the tap while you brush? | *up to twelve liters | up to forty liters | up to two liters | up to one hundred liters
+mcq: How much water does a five-minute shower use? | *about forty liters | about fourteen liters | about one hundred liters | about twelve liters
+mcq: What does the engineer say about water use in Saudi Arabia? | *It's higher than in many countries. | It's lower than in most countries. | It's the same as everywhere. | It's going down quickly.
+tf: One dripping tap can waste more than fifteen liters a day. | T
+tf: A bath uses less water than a five-minute shower. | F
+gap: Saudi Arabia is one of the ___ countries in the world. | driest
+gap: On average, one person uses more than two hundred and ___ liters a day. | fifty, 50
+speak: Make a family "water promise". Tell your partner three things your family will do. | We will ___. We won't ___. We'll try to ___.
+teach: Link to Islamic values: the Prophet ﷺ taught moderation in water use, even during wudu. Students calculate how much water the class could save in a week if everyone turned off the tap while brushing.
+
+@LISTEN 3 | Planting Trees in Al-Hada | Listening for hidden reasons | الاستماع إلى الأسباب غير المباشرة
+kagan: Three-Step Interview | Mix-Pair-Share
+vocab: volunteer | متطوّع | 🙋 | Volunteers are working in groups.
+vocab: initiative | مبادرة | 🌱 | It's part of the Saudi Green Initiative.
+vocab: tools | أدوات | 🧰 | They'll give us the tools.
+vocab: sunscreen | واقي الشمس | 🧴 | Bring sunscreen.
+vocab: shade | ظلّ | 🌳 | There isn't much shade.
+vocab: pick up | يقلّ (شخصًا بالسيارة) | 🚗 | We'll pick you up at half past six.
+predict: Adam invites Sami to a tree-planting event. What do volunteers need to know before an event like this? |
+tip: Some answers aren't said directly. "Before it gets hot" explains why the event starts early. Listen for reasons hidden in the details. | بعض الإجابات لا تُقال مباشرة. عبارة before it gets hot تشرح سبب البدء مبكرًا. استمع للأسباب المخفية في التفاصيل.
+script:
+ADAM: Hi, Sami! Are you free on Saturday morning?
+SAMI: I think so. Why?
+ADAM: There's a tree-planting event in Al-Hada. It's part of the Saudi Green Initiative. They want to plant ten billion trees across the country!
+SAMI: Ten billion? That's incredible! How many trees are we planting on Saturday?
+ADAM: About five hundred. Volunteers are working in groups of four, and each group plants about twenty trees.
+SAMI: What should I bring?
+ADAM: Wear old clothes and a hat, and bring gloves. They'll give us the tools and water. Oh, and bring sunscreen — there isn't much shade.
+SAMI: What time does it start?
+ADAM: At seven o'clock, before it gets hot. My dad can drive us. We'll pick you up at half past six.
+SAMI: That's early, but okay! I'm sure my grandpa will want to come too. He loves trees.
+ADAM: Great! The more, the better!
+end
+mcq: Where is the tree-planting event? | *in Al-Hada | in Al-Rudaf Park | at the school | in Riyadh
+mcq: How many trees does the Saudi Green Initiative want to plant across the country? | *ten billion | ten million | five hundred | ten thousand
+mcq: How many people are in each group? | *four | twenty | five | ten
+mcq: Why does the event start at seven o'clock? | *to start before it gets hot | because the tools arrive then | because Adam's dad works later | to finish before lunch
+mcq: Why does Sami think Grandpa will want to come? | *He loves trees. | He wants to drive them. | He works for the Green Initiative. | He has a farm in Al-Hada.
+tf: Volunteers must bring their own tools. | F
+tf: Adam's dad will pick Sami up at half past six. | T
+gap: Each group plants about ___ trees. | twenty, 20
+gap: Sami should bring sunscreen because there isn't much ___. | shade
+speak: Invite your partner to a volunteering event. Give the details and answer his questions. | There's a ___ on ___. It starts at ___. Bring ___. Would you like to come?
+teach: The Saudi Green Initiative is a real national project. Ask students whether they have ever planted a tree, and plan a small class planting if possible.
+
+@SPEAK 1 | What Will It Be Like? | Making predictions | التنبؤ بالمستقبل
+kagan: Timed Pair Share | Corners
+model:
+YUSUF: What do you think our city will be like in twenty years?
+SAMI: I think there'll be more trees. The Green Initiative will make Taif greener.
+YUSUF: I hope so! Do you think we'll have flying cars?
+SAMI: Maybe. But I don't think they'll be cheap. Most people will still drive normal cars — electric ones.
+YUSUF: Electric cars will help the air, too. What about schools?
+SAMI: I think students will learn with robots and virtual reality. But we'll still need teachers!
+YUSUF: Definitely. And I'll probably be an engineer by then.
+SAMI: And I'll be your doctor if you work too hard!
+end
+roles: YUSUF | SAMI
+chunks: What do you think ___ will be like? | I think there'll be ___. | I don't think ___ will ___. | Maybe. / Probably. / Definitely. | I hope so!
+sound: pairs | "I go" or "I'll go"? | "I'll" is short for "I will". The /l/ is very small and soft, so it's easy to miss! Listen carefully, because it changes the time: "I go" (every day) — "I'll go" (in the future). | كلمة I'll اختصار I will، وصوت /l/ فيها صغير وخفيف ويسهل أن يفوتك. استمع جيدًا لأنه يغيّر الزمن: I go تعني كل يوم، وI'll go تعني في المستقبل.
+pair: I go by bus. | I'll go by bus.
+pair: We plant trees. | We'll plant trees.
+pair: They recycle paper. | They'll recycle paper.
+pair: You need water. | You'll need water.
+pair: We walk to school. | We'll walk to school.
+task: Make five predictions about life in 2050. Your group says if they agree. | I think ___ will ___. I don't think ___ will ___. — I agree. / I'm not sure, because ___.
+cando: I can make predictions with will and won't. | I can say how sure I am. | I can hear "I'll", "we'll" and "they'll".
+teach: Put "Definitely", "Probably", "Maybe" and "Definitely not" in four corners. Read a prediction; students walk to the corner that shows how sure they are and explain why.
+
+@SPEAK 2 | We Should Use Cloth Bags | Persuading others | إقناع الآخرين
+kagan: Talking Chips | Carousel Feedback
+model:
+LINA: Noor, our class needs to choose a project for Environment Week. Any ideas?
+NOOR: I think we should stop using plastic bags in the school shop. If we sell cloth bags, we can reduce plastic a lot.
+LINA: That's a good idea, but cloth bags cost more money.
+NOOR: True, but they last for years. And if we decorate them, students will want to buy them!
+LINA: You've persuaded me! What about the price?
+NOOR: We could sell them for ten riyals each. It's a fair price, and the money can buy more trees for the garden.
+LINA: Perfect. Let's present the idea to the class tomorrow.
+end
+roles: LINA | NOOR
+chunks: We should ___. | If we ___, we can ___. | That's a good idea, but ___. | True, but ___. | You've persuaded me!
+sound: pairs | Final /s/ or /z/? | At the end of a word, /s/ is only air (price), and /z/ uses your voice (prize). The vowel before /z/ is a little longer, too. | في آخر الكلمة يكون /s/ هواءً فقط كما في price، أما /z/ فيُنطق مع اهتزاز الصوت كما في prize، والحركة قبل /z/ أطول قليلًا.
+pair: price | prize
+pair: rice | rise
+pair: place | plays
+pair: bus | buzz
+pair: peace | peas
+task: Persuade your group to choose your environment project. Give two reasons and answer one objection. | We should ___ because ___. If we ___, we'll ___. — True, but ___.
+cando: I can persuade others with reasons. | I can answer someone who disagrees. | I can hear final /s/ and /z/.
+teach: Good persuaders answer objections. After each pitch, the group must give one "but..." and the speaker must answer it with "True, but...".
+
+@CHECK
+check: L1#5 | What does Sami say about the school tomatoes? | *They have never been bigger. | They are all red. | Students ate them all. | They didn't grow.
+check: L2#1 | Where does the engineer work? | *at the National Water Company | at a hospital | at a school | at a university
+check: L2#7 | What did the Prophet ﷺ teach about water? | *not to waste it, even at a flowing river | to drink it slowly | to share it with animals | to keep it cold
+check: L3#7 | What should Sami wear? | *old clothes and a hat | his school uniform | a sports kit | sandals
+
+@UNIT 5 | Science and Discovery | العلوم والاكتشاف | 🔬
+goals: I can understand facts and explanations in a science talk. | I can follow and give instructions for an experiment. | I can ask for repetition and clarification.
+
+@LISTEN 1 | Journey Through the Solar System | Listening for facts and explanations | الاستماع إلى الحقائق والتفسيرات
+kagan: Numbered Heads Together | Line-Ups
+vocab: solar system | المجموعة الشمسية | 🪐 | Let's travel through the solar system.
+vocab: star | نجم | ⭐ | The Sun is a star.
+vocab: surface | سطح | 🌍 | Earth has liquid water on its surface.
+vocab: soil | تربة | 🟤 | The soil on Mars contains iron.
+vocab: iron | حديد | 🔩 | Iron looks like rust.
+vocab: rings | حلقات | 💍 | Saturn is famous for its rings.
+predict: You are at a planetarium show about the solar system. What facts do you already know about the planets? |
+tip: Science talks give a fact and then a reason or an example. Listen for "because", "which" and "so... that". | تقدّم المحاضرات العلمية حقيقة ثم سببًا أو مثالًا. استمع لكلمات مثل because وwhich وso... that.
+script:
+MOM[Planetarium Host]: Welcome to the planetarium! Sit back, look up, and let's travel through our solar system.
+MOM[Planetarium Host]: At the center is the Sun. It's a star, and it's so big that more than one million Earths could fit inside it!
+MOM[Planetarium Host]: The closest planet to the Sun is Mercury. It's the smallest planet, and one year there lasts only eighty-eight days.
+MOM[Planetarium Host]: Our home, Earth, is the third planet. It's the only planet we know with liquid water on its surface and living things.
+MOM[Planetarium Host]: Mars is called the Red Planet because its soil contains iron, which looks like rust. Scientists hope that humans will travel to Mars one day.
+MOM[Planetarium Host]: Jupiter is the largest planet. It has a giant storm called the Great Red Spot, and that storm is bigger than Earth!
+MOM[Planetarium Host]: Saturn is famous for its beautiful rings, which are made of ice and rock.
+ADAM: Which planets are the coldest?
+MOM[Planetarium Host]: Great question! Uranus and Neptune are the coldest. They can be colder than minus two hundred degrees.
+end
+mcq: How many Earths could fit inside the Sun? | *more than one million | about one thousand | about one hundred | exactly ten thousand
+mcq: How long is one year on Mercury? | *eighty-eight days | eighteen days | eight months | eighty years
+mcq: Why is Mars called the Red Planet? | *Its soil contains iron, which looks like rust. | It's very hot. | It's close to the Sun. | It has red clouds.
+mcq: What is the Great Red Spot? | *a giant storm on Jupiter | a crater on Mars | a ring around Saturn | a hot area on Mercury
+mcq: What are Saturn's rings made of? | *ice and rock | gas and dust | iron and water | sand and ice
+tf: Mercury is the largest planet. | F
+tf: Jupiter's storm is smaller than Earth. | F
+gap: The Sun is a ___. | star
+gap: Uranus and Neptune can be colder than minus two ___ degrees. | hundred
+speak: Choose a planet. Tell your partner three facts about it without saying its name. He guesses. | This planet is ___. It has ___. It's the ___est planet. Which planet is it?
+teach: Make a human solar system: eight students hold planet names and stand in order from a "Sun". Each one says one fact from the talk.
+
+@LISTEN 2 | A Volcano in the Lab | Following the steps of an experiment | اتباع خطوات تجربة علمية
+kagan: RallyCoach | Line-Ups
+vocab: experiment | تجربة | 🧪 | Today, we're doing an experiment.
+vocab: safety glasses | نظارات السلامة | 🥽 | Put on your safety glasses.
+vocab: pour | يصبّ | 🫗 | Pour the vinegar slowly.
+vocab: baking soda | بيكربونات الصوديوم | 🧂 | Add two spoons of baking soda.
+vocab: vinegar | خلّ | 🍶 | Pour half a cup of vinegar.
+vocab: reaction | تفاعل | 💥 | It's a chemical reaction.
+predict: Your teacher is going to show you how to make a model volcano. What do you think you need? |
+tip: Instructions are in order: step one, step two... Listen for the verb at the start of each step: put, pour, add. | تأتي التعليمات بالترتيب: step one وstep two... استمع للفعل في بداية كل خطوة مثل put وpour وadd.
+script:
+MAN[Mr. Faisal]: Today, we're going to make a simple volcano to see a chemical reaction. Please put on your safety glasses first.
+MAN[Mr. Faisal]: Step one: put the small plastic bottle in the middle of the tray. The tray will catch the "lava".
+MAN[Mr. Faisal]: Step two: pour two spoons of baking soda into the bottle. Use the funnel, so you don't make a mess.
+MAN[Mr. Faisal]: Step three: add a few drops of red food coloring and a little dish soap. The soap will make more bubbles.
+MAN[Mr. Faisal]: Step four — and this is the exciting part — slowly pour half a cup of vinegar into the bottle, then step back quickly!
+YUSUF: Wow! It's coming out! Why does it happen?
+MAN[Mr. Faisal]: When vinegar and baking soda mix, they make a gas called carbon dioxide. The gas needs space, so it pushes the liquid up and out of the bottle.
+BEN: Can we do it again with more vinegar?
+MAN[Mr. Faisal]: Yes, but first, write down what you saw in your science notebook. Good scientists always record their results.
+end
+mcq: What must students do first? | *put on their safety glasses | pour the vinegar | add the soap | write in their notebooks
+mcq: Why do they use a tray? | *to catch the "lava" | to keep the bottle warm | to mix the powder | to measure the vinegar
+mcq: Why do they use a funnel? | *so they don't make a mess | so the reaction is faster | to measure the baking soda | to make bubbles
+mcq: What does the dish soap do? | *It makes more bubbles. | It changes the color. | It makes the gas. | It cleans the bottle.
+mcq: What gas do vinegar and baking soda make? | *carbon dioxide | oxygen | steam | hydrogen
+tf: Students should pour the vinegar quickly. | F
+tf: The teacher asks students to record their results before trying again. | T
+gap: Pour two ___ of baking soda into the bottle. | spoons, spoonfuls
+gap: Slowly pour half a cup of ___ into the bottle. | vinegar
+order: Put the bottle on the tray. | Add the baking soda. | Add food coloring and soap. | Pour in the vinegar.
+speak: Explain a simple experiment or recipe to your partner, step by step. | Step one: ___. Step two: ___. Be careful not to ___.
+teach: Do the experiment! It's safe and memorable. Students give the instructions in English while one volunteer follows them exactly.
+
+@LISTEN 3 | A Young Scientist's Discovery | Listening for feelings and reasons | الاستماع إلى المشاعر والأسباب
+kagan: Three-Step Interview | Think-Pair-Share
+vocab: hike | يتنزّه سيرًا في الطبيعة | 🥾 | I was hiking in the mountains.
+vocab: unusual | غير عادي | ❓ | I saw something unusual.
+vocab: lizard | سحلية | 🦎 | It was a small blue lizard.
+vocab: professor | أستاذ جامعي | 👩‍🏫 | A professor called us.
+vocab: record | يسجّل / يوثّق | 📝 | Nobody had recorded it there before.
+vocab: proud | فخور | 🏅 | I felt really proud.
+predict: A twelve-year-old boy made a discovery that excited scientists. What do you think he found? |
+tip: Feelings can change in a story. Listen for "at first" and "then", and for words like shocked, proud and excited. | قد تتغير المشاعر خلال القصة. استمع لعبارتي at first وthen ولكلمات مثل shocked وproud وexcited.
+script:
+ANNOUNCER[Presenter]: Today on Science Today, we're talking to a twelve-year-old with an amazing story. Yusuf, tell us what happened.
+YUSUF: Well, last spring, I was hiking with my family in the mountains near Abha. I always take my camera with me, because I love taking photos of animals.
+ANNOUNCER[Presenter]: And you saw something unusual?
+YUSUF: Yes. I saw a small blue lizard on a rock. I'd never seen one like it before, so I took about twenty photos.
+ANNOUNCER[Presenter]: What did you do next?
+YUSUF: At first, I wasn't sure it was important. But my dad said, "Let's send the photos to the university." Two weeks later, a professor called us. She was very excited!
+ANNOUNCER[Presenter]: Why was she excited?
+YUSUF: Because nobody had recorded this kind of lizard in that area before. Now scientists are going to study it.
+ANNOUNCER[Presenter]: How did you feel?
+YUSUF: Honestly, I was shocked at first! Then I felt really proud. It showed me that you don't have to be an adult to help science.
+ANNOUNCER[Presenter]: Great message. What's next for you?
+YUSUF: The university invited me to join their nature camp this summer. I can't wait!
+end
+mcq: Where was Yusuf hiking? | *in the mountains near Abha | in the desert near Riyadh | on the coast near Jeddah | in a park in Taif
+mcq: Why does Yusuf always take his camera? | *He loves taking photos of animals. | His dad asks him to. | He wants to be a scientist. | He sells his photos.
+mcq: How did Yusuf feel about the lizard at first? | *He wasn't sure it was important. | He was frightened. | He was very excited. | He was bored.
+mcq: Why was the professor excited? | *Nobody had recorded this lizard in that area before. | The lizard was dangerous. | Yusuf's photos were beautiful. | She knew Yusuf's dad.
+mcq: What did the experience teach Yusuf? | *You don't have to be an adult to help science. | Lizards are dangerous. | Photos are more important than science. | Scientists don't listen to children.
+tf: The lizard was blue. | T
+tf: The professor called them two months later. | F
+gap: Yusuf took about ___ photos of the lizard. | twenty, 20
+gap: This summer, Yusuf is going to join the university's nature ___. | camp
+speak: Tell your partner about a time you discovered or learned something surprising. How did you feel? | Once, I ___. At first, I felt ___. Then, ___. I learned that ___.
+teach: This links back to Yusuf's photography hobby in Grade 5. Celebrate "citizen science": students can photograph birds or plants near home and share them with the class.
+
+@SPEAK 1 | How Does a Solar Panel Work? | Describing a process | وصف عملية
+kagan: RallyCoach | Timed Pair Share
+model:
+BEN: Adam, do you know how a solar panel works?
+ADAM: Kind of. First, the sun shines on the panel. The panel is made of special cells.
+BEN: And then?
+ADAM: Then the cells change the sunlight into electricity. After that, the electricity goes through wires into a battery.
+BEN: Why do you need a battery?
+ADAM: So you can use the electricity at night, when there's no sun. Finally, the battery gives power to the lights in the house.
+BEN: That's clever. Saudi Arabia has so much sun — we should use solar energy everywhere!
+ADAM: We already do. There are huge solar farms in the desert!
+end
+roles: BEN | ADAM
+chunks: First, ___. | Then, ___. | After that, ___. | Finally, ___. | That's clever!
+sound: pairs | Short /ɪ/ or long /iː/? | You learned these sounds in Grade 3. Now try harder pairs: "fill" is short and relaxed; "feel" is long — smile and stretch it. | تعلّمت هذين الصوتين في الصف الثالث. جرّب الآن أزواجًا أصعب: fill قصيرة ومرتخية، وfeel طويلة؛ ابتسم ومدّ الصوت.
+pair: fill | feel
+pair: still | steal
+pair: live | leave
+pair: chip | cheap
+pair: rich | reach
+task: Explain a process to your group (how bread is made, how rain forms or how a plant grows). Use four sequence words. | First, ___. Then, ___. After that, ___. Finally, ___.
+cando: I can describe a process in order. | I can explain why each step is needed. | I can hear short /ɪ/ and long /iː/ in harder words.
+teach: Groups draw the process as a four-box comic strip, then explain it using the sequence words while pointing to each box.
+
+@SPEAK 2 | Sorry, Could You Repeat That? | Asking for repetition and clarification | طلب الإعادة والتوضيح
+kagan: Inside-Outside Circle | RallyRobin
+model:
+MAN[Mr. Faisal]: For homework, please read pages forty to forty-five and answer the questions on page fifty.
+SAMI: Sorry, Mr. Faisal. Could you repeat that, please?
+MAN[Mr. Faisal]: Of course. Read pages forty to forty-five.
+SAMI: Did you say forty or fourteen?
+MAN[Mr. Faisal]: Forty. Four, zero.
+SAMI: Thank you. And what do you mean by "a summary"? It's in question three.
+MAN[Mr. Faisal]: A summary is a short version of the text in your own words. About fifty words.
+SAMI: So, I don't copy the sentences from the book?
+MAN[Mr. Faisal]: Exactly. Use your own words. Any other questions?
+SAMI: No, that's clear now. Thanks!
+end
+roles: SAMI | MAN
+chunks: Sorry, could you repeat that, please? | Did you say ___ or ___? | What do you mean by ___? | So, ___? | That's clear now.
+sound: sort | /p/, /b/ or /v/? | /p/ pest ; /b/ best ; /v/ vest | When you're not sure what you heard, check! These three sounds are very close. /p/ is a puff of air, /b/ uses your voice, and /v/ uses your top teeth on your bottom lip. | عندما لا تكون متأكدًا مما سمعت، تحقّق! هذه الأصوات الثلاثة متقاربة جدًا: /p/ دفعة هواء، و/b/ مع اهتزاز الصوت، و/v/ بوضع الأسنان العليا على الشفة السفلى.
+item: vet | /v/
+item: pet | /p/
+item: bet | /b/
+item: van | /v/
+item: pan | /p/
+item: ban | /b/
+item: vest | /v/
+item: pest | /p/
+item: best | /b/
+task: Your partner gives you instructions with numbers and new words. Ask him to repeat and explain. | Sorry, could you repeat that? — Did you say ___ or ___? — What do you mean by ___?
+cando: I can ask someone to repeat. | I can check numbers and meanings. | I can tell /p/, /b/ and /v/ apart.
+teach: Asking for clarification is a strength, not a weakness. Give students a "Clarify" card; anyone who uses a clarification chunk in a real lesson that week earns a class point.
+
+@CHECK
+check: L1#4 | What makes Earth special? | *It has liquid water and living things. | It's the largest planet. | It has rings. | It's the closest to the Sun.
+check: L1#5 | What do scientists hope? | *that humans will travel to Mars one day | that Mars will become green | that Mars has rings | that Jupiter's storm will stop
+check: L2#5 | What should students do after pouring the vinegar? | *step back quickly | stir the bottle | add more soap | close the bottle
+check: L3#6 | Whose idea was it to send the photos to the university? | *Yusuf's dad | Yusuf | the professor | Yusuf's teacher
+
+@UNIT 6 | Celebrations and Cultures | الاحتفالات والثقافات | 🎉
+goals: I can understand talks about national days and festivals. | I can describe a celebration and compare traditions. | I can plan an event and give a short presentation.
+
+@LISTEN 1 | Saudi National Day | Listening for dates and events | الاستماع إلى التواريخ والأحداث
+kagan: Numbered Heads Together | RallyRobin
+vocab: celebrate | يحتفل | 🎉 | We celebrate Saudi National Day.
+vocab: unification | التوحيد | 🤝 | The king announced the unification of the Kingdom.
+vocab: flag | علم | 🏳️ | Green is the color of our flag.
+vocab: fireworks | ألعاب نارية | 🎆 | There are fireworks in many cities.
+vocab: air show | عرض جوي | ✈️ | We watched the air show.
+vocab: play (n.) | مسرحية | 🎭 | Grade 6 will present a short play.
+predict: Mr. Hassan talks about an important national day. What do you know about Saudi National Day? |
+tip: Don't mix up similar facts! Two dates and two events are mentioned. Write each date next to its event. | لا تخلط بين الحقائق المتشابهة! ذُكر تاريخان وحدثان، فاكتب كل تاريخ بجانب حدثه.
+script:
+MR_HASSAN: Next week, on the twenty-third of September, we'll celebrate Saudi National Day. Do you know why we celebrate on this day?
+ADAM: Is it the day King Abdulaziz united the country?
+MR_HASSAN: Exactly. In {1932|nineteen thirty-two}, King Abdulaziz announced the unification of the Kingdom of Saudi Arabia.
+MR_HASSAN: Don't mix it up with Founding Day, which is on the twenty-second of February. Founding Day remembers the first Saudi state in {1727|seventeen twenty-seven}.
+MR_HASSAN: On National Day, you'll see green everywhere — on buildings, cars and clothes. Green is the color of our flag.
+BEN: What do people do to celebrate?
+MR_HASSAN: Families go out together, there are fireworks in many cities, and there are air shows with jets in the sky. Many people also wear traditional clothes.
+MR_HASSAN: At our school, we'll have a special assembly on Thursday morning. Grade 6 will present a short play about the history of the Kingdom, and there will be traditional food for everyone.
+SAMI: Can we wear green?
+MR_HASSAN: Of course! Green T-shirts or green scarves are perfect.
+end
+mcq: When is Saudi National Day? | *on the twenty-third of September | on the twenty-second of February | on the first of January | on the twenty-third of February
+mcq: What happened in 1932? | *King Abdulaziz announced the unification of the Kingdom. | The first Saudi state started. | Diriyah became the capital. | The first school opened.
+mcq: What does Founding Day remember? | *the first Saudi state in 1727 | the unification in 1932 | the first school | the first flag
+mcq: Why do people use green? | *It's the color of the flag. | It's the color of nature. | It's the king's favorite color. | It's a school rule.
+mcq: What will Grade 6 present at the assembly? | *a short play about the history of the Kingdom | a sports show | a science project | a poem competition
+tf: The school assembly will be on Sunday morning. | F
+tf: There are air shows with jets on National Day. | T
+gap: Founding Day is on the twenty-second of ___. | February
+gap: Students can wear green T-shirts or green ___. | scarves, scarfs
+speak: Tell your partner how your family celebrates National Day. | On National Day, my family ___. We usually ___. My favorite part is ___.
+teach: Students often confuse National Day and Founding Day. After listening, write two short lists on the board — "National Day: 23 September, 1932, unification" and "Founding Day: 22 February, 1727, first Saudi state".
+
+@LISTEN 2 | Eid Around the World | Listening for local words and explanations | الاستماع إلى الكلمات المحلية وشرحها
+kagan: Three-Step Interview | Fan-N-Pick
+vocab: forgiveness | المسامحة / طلب العفو | 🤲 | We ask our parents for forgiveness.
+vocab: festival | عيد / مهرجان | 🎊 | It's called the Sugar Festival.
+vocab: respect | احترام | 🙏 | We kiss their hands to show respect.
+vocab: forehead | جبهة | 🧑 | We touch their hands to our foreheads.
+vocab: huge | ضخم | 🐘 | We go to a huge Eid prayer.
+vocab: tradition | تقليد / عادة | 📿 | That's a beautiful tradition.
+predict: Three young Muslims from different countries describe Eid al-Fitr. How do you think Eid is different around the world? |
+tip: Each speaker uses a local word. Listen for the explanation after it: "which means..." or "we call it...". | يستخدم كل متحدث كلمة محلية. استمع للشرح الذي يأتي بعدها مثل which means... أو we call it...
+script:
+WOMAN[Radio Host]: Today on our program, three young Muslims tell us how they celebrate Eid al-Fitr in their countries. Let's start with Aisha, from Indonesia.
+LINA[Aisha]: In Indonesia, we call Eid "Lebaran". Millions of people travel back to their home villages to be with their families. We call this "mudik". On Eid morning, we ask our parents for forgiveness, and we eat ketupat — rice cooked in little baskets made of palm leaves.
+WOMAN[Radio Host]: That sounds lovely. Now, Emre, from Türkiye.
+YUSUF[Emre]: In Türkiye, Eid al-Fitr is also called "{Şeker Bayramı|Sheker Bayramuh}", which means "the Sugar Festival".
+YUSUF[Emre]: Children go from house to house to wish people a happy Eid, and they get sweets and sometimes a little money. We also kiss the hands of older people and touch them to our foreheads to show respect.
+WOMAN[Radio Host]: And finally, Ben, who lives in London.
+BEN: In London, Muslims come from many different countries, so Eid is very colorful! My family goes to a huge Eid prayer in a park. Then we visit friends and eat food from Pakistan, Somalia, Türkiye and Morocco. It's like a world festival!
+WOMAN[Radio Host]: Thank you all. Eid Mubarak, everyone!
+end
+mcq: What do Indonesians call Eid? | *Lebaran | Mudik | Ketupat | Bayram
+mcq: What is "mudik"? | *traveling back to home villages | a special rice dish | asking for forgiveness | a type of sweet
+mcq: What does "Şeker Bayramı" mean? | *the Sugar Festival | the Family Festival | the Rice Festival | the Big Prayer
+mcq: How do children in Türkiye show respect to older people? | *They kiss their hands and touch them to their foreheads. | They give them sweets. | They visit them at night. | They bow to them.
+mcq: Why is Eid in London "very colorful"? | *Muslims come from many different countries. | People only wear colorful clothes. | There are fireworks in the park. | It's always in summer.
+tf: Ketupat is rice cooked in little baskets made of palm leaves. | T
+tf: Ben's family prays the Eid prayer in a mosque. | F
+gap: In Türkiye, children sometimes get sweets and a little ___. | money
+gap: Ben says Eid in London is like a world ___. | festival
+speak: Tell your partner about Eid in your family. Compare it with one country from the recording. | In my family, we ___. In ___, they ___. It's similar / different because ___.
+teach: Find Indonesia, Türkiye and the UK on a map. Students notice that the Muslim world shares Eid but celebrates it in different and beautiful ways.
+
+@LISTEN 3 | Planning the Class Celebration | Following a discussion and its decisions | متابعة نقاش وقراراته
+kagan: Corners | RoundRobin
+vocab: decide | يقرّر | ✅ | Let's decide on the place.
+vocab: choice | اختيار | 🔀 | The garden is the best choice.
+vocab: suggest | يقترح | 💡 | I suggest the school hall.
+vocab: compromise | حلّ وسط | 🤝 | That's a great compromise!
+vocab: balance | توازن | ⚖️ | We need a balance of food.
+vocab: slideshow | عرض صور | 🖼️ | We could show a slideshow.
+predict: A class committee plans an end-of-year celebration. What do they need to decide? |
+tip: In discussions, people suggest, disagree and then decide. Listen for the final decision — it often comes at the end in a summary. | في النقاشات يقترح الناس ويختلفون ثم يقرّرون. استمع للقرار النهائي، فهو غالبًا يأتي في النهاية على شكل ملخّص.
+script:
+SAMI: Okay, everyone, let's plan the end-of-year celebration. We have three things to decide: the place, the food and the activities.
+ADAM: For the place, I think the school garden is the best choice. It's big, and it's nice in the evening.
+YUSUF: But what if it's too hot? I suggest the school hall. It has air conditioning.
+BEN: How about both? We can start in the hall and move to the garden after sunset.
+SAMI: Great compromise! Does everyone agree? Okay. Now, the food.
+YUSUF: Let's ask each student to bring one dish from home. Then we'll have lots of different food.
+ADAM: That's a good idea, but some people might bring only sweets. We need a list, so we get a balance of food.
+SAMI: Agreed. Ben, can you make the list?
+BEN: Sure. I'll send it on the class group by Monday.
+SAMI: Finally, the activities. Any ideas?
+ADAM: A quiz about our year, with prizes!
+YUSUF: And we could show a slideshow of our class photos. I've taken hundreds!
+SAMI: Perfect. So: the hall first, then the garden; a food list from Ben; a quiz; and Yusuf's slideshow. The date is the eighteenth of June. Meeting finished!
+end
+mcq: Why does Adam choose the school garden? | *It's big, and it's nice in the evening. | It has air conditioning. | It's close to the hall. | It's cheap.
+mcq: What is Yusuf worried about? | *It might be too hot in the garden. | There won't be enough food. | The hall is too small. | Nobody will come.
+mcq: What is Ben's compromise? | *Start in the hall and move to the garden after sunset. | Have the party in the morning. | Use only the garden. | Cancel the activities.
+mcq: Why does Adam want a food list? | *to get a balance of food | to save money | to know who is coming | to choose a restaurant
+mcq: What will Yusuf show? | *a slideshow of class photos | a film | a science project | a quiz
+tf: Each student will bring one dish from home. | T
+tf: Sami summarizes the decisions at the end. | T
+gap: Ben will send the list on the class ___ by Monday. | group, chat, group chat
+gap: The celebration is on the eighteenth of ___. | June
+speak: Plan a class celebration with your group. Decide the place, the food and one activity. | I suggest ___. — That's a good idea, but ___. — How about ___? — Agreed!
+teach: Point out Sami's summary at the end — good leaders summarize decisions. Every group must finish its planning with a one-sentence summary.
+
+@SPEAK 1 | How Does Your Family Celebrate? | Describing a celebration | وصف احتفال
+kagan: Inside-Outside Circle | Three-Step Interview
+model:
+BEN: Sami, how does your family celebrate Eid al-Adha?
+SAMI: It's my favorite celebration! On the morning of Eid, we wear new clothes and go to the Eid prayer together.
+BEN: What happens after the prayer?
+SAMI: We visit my grandparents. My whole family gathers at their house — about thirty people!
+BEN: Thirty? That's a lot! What do you eat?
+SAMI: We share a big meal of rice and meat. We also give some of the meat to poor families. It's an important part of Eid al-Adha.
+BEN: That's a beautiful tradition. What's the best part for you?
+SAMI: Being together. Everyone is happy and thankful, and the children play all day.
+end
+roles: BEN | SAMI
+chunks: How does your family celebrate ___? | On the morning of ___, we ___. | My whole family gathers at ___. | It's an important part of ___. | The best part is ___.
+sound: sort | /θ/ like "think" or /ð/ like "this"? | /θ/ think ; /ð/ this | For both sounds, put your tongue between your teeth. /θ/ is only air, like ث. /ð/ uses your voice, like ذ. | في الصوتين يوضع اللسان بين الأسنان. /θ/ هواء فقط مثل الثاء، و/ð/ مع اهتزاز الصوت مثل الذال.
+item: thankful | /θ/
+item: together | /ð/
+item: thirty | /θ/
+item: gather | /ð/
+item: month | /θ/
+item: clothes | /ð/
+item: thousand | /θ/
+item: brother | /ð/
+task: Describe a family celebration to your group. Say what happens, what you eat and what the best part is. | On ___, my family ___. We eat ___. The best part is ___.
+cando: I can describe a celebration and its traditions. | I can ask about other people's celebrations. | I can say /θ/ and /ð/ correctly.
+teach: Students put a hand on their throat: no buzz for /θ/ (thirty), a buzz for /ð/ (together). Celebrating "thankful" and "together" is a nice way to end the program's pronunciation journey.
+
+@SPEAK 2 | Today I'm Going to Talk About... | Giving a short presentation | تقديم عرض قصير
+kagan: Carousel Feedback | Timed Pair Share
+model:
+YUSUF: Good morning, everyone. Today, I'm going to talk about the Taif Rose Festival.
+YUSUF: First, let me tell you when it happens. The festival takes place every spring, usually in April, when the roses bloom.
+YUSUF: Next, I'll explain what visitors can do. They can visit rose farms, watch how rose water is made and buy rose products.
+YUSUF: There are also art shows and activities for children, like painting and making rose crafts.
+YUSUF: Finally, why is it important? The festival helps local farmers, and it shows the world that Taif is the City of Roses.
+YUSUF: To sum up, the Taif Rose Festival is a beautiful celebration of nature and tradition. Thank you for listening. Do you have any questions?
+SAMI: Yes. How many roses does Taif produce?
+YUSUF: Hundreds of millions every year! That's why you can smell roses everywhere in April.
+end
+roles: YUSUF | SAMI
+chunks: Today, I'm going to talk about ___. | First, let me tell you ___. | Next, I'll explain ___. | Finally, ___. | To sum up, ___.
+sound: sort | How many words? | 5 words ; 6 words ; 7 words | In presentations, speak in chunks and pause between them. Listen and count the words in each chunk. | في العروض التقديمية تحدّث على شكل مجموعات كلمات وتوقّف بينها. استمع وعدّ الكلمات في كل مجموعة.
+item: Let me start with history. | 5
+item: I'm going to talk about Eid. | 6
+item: Today I'm going to talk about Eid. | 7
+item: Thank you for listening today. | 5
+item: Do you have any questions now? | 6
+item: First of all, let me show you. | 7
+item: It's a very special day. | 5
+item: To sum up, it's a celebration. | 6
+item: Families visit each other on that day. | 7
+task: Give a one-minute presentation about a celebration or festival. Use the five signpost phrases. | Today, I'm going to talk about ___. First, ___. Next, ___. Finally, ___. To sum up, ___.
+cando: I can give a short, organized presentation. | I can use signpost phrases. | I can speak in clear chunks.
+teach: This is the program's final speaking task. Record the presentations (with permission) and compare them with a recording from Grade 3 or the start of the year, so students can hear their progress.
+
+@CHECK
+check: L1#7 | What do many people wear on National Day? | *traditional clothes | sports clothes | school uniforms | costumes
+check: L2#7 | Which country's food does Ben NOT mention? | *India | Pakistan | Somalia | Morocco
+check: L3#11 | What will the quiz be about? | *their year at school | sports | science | Eid
+check: L3#12 | How many class photos has Yusuf taken? | *hundreds | about twenty | fifty | a thousand

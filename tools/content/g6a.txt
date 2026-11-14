@@ -1,0 +1,475 @@
+#GRADE 6
+level: A2+
+band: Summit
+speed: 1.0
+
+@UNIT 1 | Amazing Places | أماكن مدهشة | 🗺️
+goals: I can talk about my experiences with "Have you ever...?". | I can recommend places and give reasons. | I can understand a tour guide and a documentary with big numbers.
+
+@LISTEN 1 | Young Travelers | Listening for experiences | الاستماع إلى التجارب
+kagan: Find Someone Who | Three-Step Interview
+vocab: abroad | في الخارج | 🌍 | I haven't traveled abroad yet.
+vocab: experience | تجربة | 🎒 | Tell us about your travel experiences.
+vocab: Northern Lights | الشفق القطبي | 🌌 | We saw the Northern Lights.
+vocab: impressive | مثير للإعجاب | 👏 | That's impressive!
+vocab: camp | يخيّم | ⛺ | I've camped in the Empty Quarter.
+vocab: twice | مرتين | ✌️ | I've been there twice.
+predict: Three students talk about places they have visited. Which places in the world would you most like to visit? |
+tip: "I've been" and "I've never" talk about experiences. Listen for "never" and "haven't" — they change the answer! | عبارتا I've been وI've never تتحدثان عن التجارب. انتبه لكلمتي never وhaven't فهما تغيّران الإجابة!
+script:
+WOMAN[Radio Host]: Welcome to Young Travelers. I'm here with three students who love traveling. Noor, which countries have you been to?
+NOOR: I've been to Egypt, Malaysia and Japan. Japan was my favorite. I've never seen such clean streets! And I've tried sushi — it was delicious.
+WOMAN[Radio Host]: Wonderful. Ben, have you ever been somewhere really cold?
+BEN: Yes, I have! I've been to Norway with my family. We saw the Northern Lights. The sky was green and purple. It was the most amazing thing I've ever seen.
+WOMAN[Radio Host]: Wow! Yusuf, what about you?
+YUSUF: I haven't traveled abroad yet, but I've visited many places in Saudi Arabia. I've climbed Jabal Sawda, the highest mountain in the Kingdom, and I've camped in the Empty Quarter.
+WOMAN[Radio Host]: That's impressive! Is there anywhere you haven't been but really want to visit?
+YUSUF: Yes. I've always wanted to see the pyramids in Egypt.
+NOOR: Oh, you must go! I've been there twice.
+end
+mcq: Which country was Noor's favorite? | *Japan | Egypt | Malaysia | Norway
+mcq: What did Ben see in Norway? | *the Northern Lights | the pyramids | a volcano | a snow leopard
+mcq: What colors was the sky in Norway? | *green and purple | blue and pink | red and orange | green and blue
+mcq: Which sentence about Yusuf is true? | *He hasn't traveled abroad yet. | He has been to Egypt twice. | He has never camped. | He has been to Norway.
+mcq: What has Yusuf always wanted to see? | *the pyramids in Egypt | the Northern Lights | the streets of Japan | the Empty Quarter
+tf: Noor has tried sushi. | T
+tf: Noor has been to Egypt once. | F
+gap: Jabal Sawda is the ___ mountain in the Kingdom. | highest
+gap: Yusuf has camped in the Empty ___. | Quarter
+speak: Ask your partner about three experiences. | Have you ever ___? — Yes, I have. I ___ last ___. / No, I haven't, but I'd like to.
+teach: The difference between "Have you ever been...?" (experience, no time) and "When did you go...?" (finished time) is a key A2+ point. Students move from one to the other in their follow-up questions.
+
+@LISTEN 2 | A Tour of Diriyah | Listening to a tour guide | الاستماع إلى مرشد سياحي
+kagan: Numbered Heads Together | Fan-N-Pick
+vocab: capital | عاصمة | 🏛️ | Diriyah was the first capital.
+vocab: district | حيّ | 🏘️ | At-Turaif is the old district.
+vocab: heritage | تراث | 🏺 | It's a World Heritage Site.
+vocab: mud bricks | الطوب الطيني | 🧱 | The buildings are made of mud bricks.
+vocab: damage | يُتلف / يُلحق الضرر | 💥 | The walls are easy to damage.
+vocab: traditional | تقليدي | 🫖 | We'll have traditional coffee.
+predict: A guide shows students around Diriyah, near Riyadh. What do you know about Diriyah? |
+tip: Tour guides give lots of facts and some rules. Listen for "Please..." and "don't..." for the rules. | يقدّم المرشدون حقائق كثيرة وبعض القواعد. استمع لكلمتي Please... وdon't... لمعرفة القواعد.
+script:
+MAN[Tour Guide]: Good morning, everyone, and welcome to Diriyah. My name is Abdullah, and I'm your guide today.
+MAN[Tour Guide]: Diriyah is very important in our history. It was the first capital of the Saudi state, which started almost three hundred years ago, in {1727|seventeen twenty-seven}.
+MAN[Tour Guide]: We're standing in At-Turaif, the old district. In {2010|twenty ten}, UNESCO made it a World Heritage Site.
+MAN[Tour Guide]: Look at the buildings. They're made of mud bricks, which keep the houses cool in summer and warm in winter.
+MAN[Tour Guide]: The tour takes about ninety minutes. First, we'll visit Salwa Palace. Then we'll walk to the museum, where you can see old weapons and coins.
+MAN[Tour Guide]: Please stay with the group, and don't climb on the old walls. They're very old and easy to damage.
+MAN[Tour Guide]: At the end of the tour, there's traditional coffee and dates at the visitor center. Any questions?
+BEN: Can we take photos inside the palace?
+MAN[Tour Guide]: Yes, you can, but please don't use the flash.
+end
+mcq: What was Diriyah in the past? | *the first capital of the Saudi state | a small farming village | a famous market | a port
+mcq: Why are the buildings made of mud bricks? | *They keep the houses cool in summer and warm in winter. | Mud is cheap. | Stone was hard to find. | They are quick to build.
+mcq: Where will the group go first? | *Salwa Palace | the museum | the visitor center | the old walls
+mcq: Why shouldn't visitors climb on the walls? | *They're very old and easy to damage. | They're too high. | They're very hot. | The guide is tired.
+mcq: What can visitors do inside the palace? | *take photos without the flash | eat dates | touch the coins | climb the walls
+tf: The tour takes about two hours. | F
+tf: At-Turaif became a World Heritage Site in 2010. | T
+gap: The first Saudi state started in ___. | 1727, seventeen twenty-seven
+gap: In the museum, you can see old weapons and ___. | coins
+speak: You are a tour guide for a place in your city. Give three facts and one rule. | Welcome to ___. It was built in ___. It's famous for ___. Please don't ___.
+teach: Connect the lesson with Founding Day (22 February), which celebrates the start of the first Saudi state in Diriyah in 1727. Ninety minutes is an hour and a half, not two hours — a useful trap to discuss.
+
+@LISTEN 3 | Wonders of the World | Listening for big numbers | الاستماع إلى الأعداد الكبيرة
+kagan: Showdown | RallyCoach
+vocab: wonder | أعجوبة | 🌟 | The pyramids are a wonder of the world.
+vocab: carve | ينحت | 🪓 | They carved the city into rock.
+vocab: block | كتلة | 🧱 | It has millions of stone blocks.
+vocab: worker | عامل | 👷 | Millions of workers helped.
+vocab: million | مليون | 🔢 | Two point three million blocks.
+vocab: tourist | سائح | 📸 | Millions of tourists visit every year.
+predict: A documentary describes three "wonders of the world". Which famous places do you think it talks about? |
+tip: Big numbers come in parts: twenty-one thousand = 21,000; two point three million = 2,300,000. Write them as digits. | تأتي الأعداد الكبيرة على أجزاء: twenty-one thousand تعني 21,000، وtwo point three million تعني 2,300,000. اكتبها بالأرقام.
+script:
+NARRATOR: Some places are so amazing that people call them "wonders of the world". Let's visit three of them.
+NARRATOR: Our first wonder is the Great Wall of China. With all its parts, it's more than twenty-one thousand kilometers long. It took about two thousand years to build, and millions of workers helped.
+NARRATOR: Our second wonder is the Great Pyramid of Giza, in Egypt. It was built about four thousand five hundred years ago. It was one hundred and forty-six meters tall, and it was the tallest building in the world for almost four thousand years! It has about two point three million stone blocks.
+NARRATOR: Our last wonder is Petra, in Jordan. The Nabataeans carved this city into pink rock about two thousand years ago. They were the same people who built Hegra, in AlUla.
+NARRATOR: Today, millions of tourists visit these places every year. That's why it's so important to protect them for the future.
+end
+mcq: How long did the Great Wall take to build? | *about two thousand years | about two hundred years | about four thousand years | about twenty years
+mcq: How tall was the Great Pyramid? | *one hundred and forty-six meters | four hundred and sixty meters | one hundred and sixty-four meters | forty-six meters
+mcq: For how long was the Great Pyramid the tallest building in the world? | *almost four thousand years | almost two thousand years | almost four hundred years | almost forty years
+mcq: What is Petra carved into? | *pink rock | white stone | sand | mud bricks
+mcq: What connects Petra and Hegra? | *The same people built them. | They are in the same country. | They are as old as the pyramids. | They are both next to the sea.
+tf: The Great Wall is more than twenty-one thousand kilometers long. | T
+tf: Very few tourists visit these places today. | F
+gap: The Great Pyramid has about two point three ___ stone blocks. | million
+gap: Petra was carved by the ___. | Nabataeans
+speak: Which wonder would you like to visit most? Tell your partner why. | I'd most like to visit ___ because ___. I'd like to see ___.
+teach: Before listening, play Number Dictation: say 146, 4,500, 21,000 and 2.3 million; students write them as digits. The link to Hegra recycles Grade 5 (the AlUla trip).
+
+@SPEAK 1 | Have You Ever...? | Talking about experiences | التحدث عن التجارب
+kagan: Find Someone Who | Inside-Outside Circle
+model:
+ADAM: Ben, have you ever been to Abha?
+BEN: Yes, I have. I went there last summer with my family.
+ADAM: Lucky you! Have you ever tried the cable car there?
+BEN: Yes! It was a bit scary, but the view was incredible. Have you ever been on a plane?
+ADAM: No, I haven't. I've never flown anywhere. We always travel by car.
+BEN: Really? You should try it one day. It's much faster.
+ADAM: I'd love to. My dad says we're going to fly to Jeddah in the spring.
+BEN: That's great! You'll love it.
+end
+roles: ADAM | BEN
+chunks: Have you ever been to ___? | Yes, I have. I went there last ___. | No, I haven't. | I've never ___. | You should try it one day.
+sound: sort | How many words? | 5 words ; 6 words ; 7 words | In questions with "have you", the words join and "have" becomes weak: "Have you ever" sounds like "havyu-ever". Count every word you hear. | في الأسئلة التي تبدأ بـ have you تتصل الكلمات وتضعف have، فتُسمع Have you ever مثل "havyu-ever". عُدّ كل كلمة تسمعها.
+item: Have you ever been there? | 5
+item: Have you ever been to Abha? | 6
+item: Have you ever tried the cable car? | 7
+item: I've never been to Jeddah. | 5
+item: I have been there three times. | 6
+item: We have visited it with our family. | 7
+item: Has he tried it yet? | 5
+item: She's never flown on a plane. | 6
+item: I've always wanted to see the sea. | 7
+task: Find Someone Who: walk around and find a classmate for each experience. Ask one more question each time. | Have you ever ___? — Yes, I have. — When did you ___? — Last ___.
+cando: I can ask about experiences with "Have you ever...?" | I can answer and give extra details. | I can hear weak forms in questions.
+teach: The follow-up question is where the grammar changes: "Have you ever...?" → "When did you...?" Model this switch clearly and praise students who make it.
+
+@SPEAK 2 | You Should Visit AlUla | Recommending places | التوصية بزيارة أماكن
+kagan: Timed Pair Share | Carousel Feedback
+model:
+LINA: Noor, my cousin is visiting Saudi Arabia next month. Where should she go?
+NOOR: She should definitely visit AlUla. It's amazing, especially at sunset.
+LINA: What else is worth seeing?
+NOOR: If she likes the sea, I'd recommend the Red Sea coast. The water is clear, and the fish are beautiful.
+LINA: Great idea! And what's the best place to taste traditional food?
+NOOR: Try a restaurant in old Jeddah — Al-Balad. The food is delicious, and the old buildings are wonderful.
+LINA: Thanks, Noor. I'll send her your recommendations today.
+NOOR: Tell her not to wait! Winter is the best time to visit.
+end
+roles: LINA | NOOR
+chunks: Where should she go? | She should definitely visit ___. | What else is worth seeing? | I'd recommend ___. | ___ is the best time to visit.
+sound: pairs | /eɪ/ or /e/? | /eɪ/ (late) is a long sound that moves: e→i. /e/ (let) is short and doesn't move. | الصوت /eɪ/ كما في late طويل ويتحرك من e إلى i، أما /e/ كما في let فقصير ولا يتحرك.
+pair: late | let
+pair: wait | wet
+pair: pain | pen
+pair: sale | sell
+pair: taste | test
+task: Recommend three places in Saudi Arabia to a visitor (your partner). Give a reason for each one. | You should visit ___ because ___. I'd recommend ___. The best time to go is ___.
+cando: I can recommend places. | I can give reasons for my recommendations. | I can hear /eɪ/ and /e/.
+teach: Groups create a "Visit Saudi" mini-guide with three recommendations. During Carousel Feedback, other groups add one more reason to each recommendation.
+
+@CHECK
+check: L1#2 | What did Noor notice in Japan? | *very clean streets | very tall mountains | very cold weather | very old buildings
+check: L2#1 | What is the guide's name? | *Abdullah | Ben | Salwa | Faisal
+check: L2#7 | What can visitors have at the end of the tour? | *coffee and dates | juice and cake | water and fruit | tea and biscuits
+check: L3#2 | Who helped build the Great Wall? | *millions of workers | a few hundred soldiers | only farmers | the Nabataeans
+
+@UNIT 2 | Sports and Teamwork | الرياضة والعمل الجماعي | ⚽
+goals: I can follow a sports commentary. | I can agree and disagree politely. | I can give and understand advice and instructions.
+
+@LISTEN 1 | The Big Match | Following a fast commentary | متابعة تعليق رياضي سريع
+kagan: Showdown | Talking Chips
+vocab: shoot | يسدّد | ⚽ | Sami shoots... and it hits the post!
+vocab: score | يسجّل هدفًا | 🥅 | Omar scores!
+vocab: lead | يتقدّم | 📈 | The Eagles lead one-nil.
+vocab: half-time | الاستراحة بين الشوطين | ⏸️ | It's half-time.
+vocab: crowd | الجمهور | 👥 | The crowd is on its feet.
+vocab: whistle | صافرة | 📣 | There's the final whistle!
+predict: Listen to a radio commentary of a school football final. How do commentators make a match exciting? |
+tip: Commentators speak quickly. Focus on names, the words "scores" and "goal", and the score: one-nil, one-all, two-one. | يتحدث المعلّقون بسرعة. ركّز على الأسماء وعلى كلمتي scores وgoal وعلى النتيجة مثل one-nil وone-all وtwo-one.
+script:
+ANNOUNCER: Good evening, and welcome to the final of the Taif Schools Football Cup! It's the Falcons against the Eagles, and the stadium is full tonight.
+ANNOUNCER: Twenty minutes into the game, and the Falcons have the ball. Yusuf passes to Sami... Sami shoots... Oh, it hits the post! So close!
+ANNOUNCER: Thirty-five minutes now, and the Eagles are attacking. Their captain, Omar, runs past two players... and scores! The Eagles lead one-nil.
+ANNOUNCER: It's half-time. The Falcons look tired, and their coach is not happy.
+ANNOUNCER: The second half has started, and what a change! The Falcons are playing much faster now. Adam crosses the ball... Ben jumps... and heads it in! Goal! It's one-all!
+ANNOUNCER: Only two minutes left. The crowd is on its feet. Sami has the ball again... he dribbles past the goalkeeper... and scores! The Falcons are winning two-one!
+ANNOUNCER: And there's the final whistle! The Falcons are the champions!
+end
+mcq: What happened with Sami's first shot? | *It hit the post. | It was a goal. | The goalkeeper caught it. | It went over the goal.
+mcq: Who scored the first goal of the match? | *Omar | Ben | Sami | Yusuf
+mcq: How did the Falcons look at half-time? | *tired | happy | angry | confident
+mcq: How did Ben score? | *He headed a cross from Adam. | He dribbled past the goalkeeper. | He took a penalty. | He shot from far away.
+mcq: Why is the crowd "on its feet" near the end? | *The game is very exciting. | The game has finished. | People are leaving. | It's half-time.
+tf: The Eagles were winning at half-time. | T
+tf: The Falcons won the match two-one. | T
+gap: The match is the final of the Taif Schools Football ___. | Cup
+gap: Sami scored the winning goal with only ___ minutes left. | two, 2
+speak: Be a commentator! Describe a short moment from a game you know. | ___ has the ball. He passes to ___... he shoots... and scores!
+teach: Question 5 needs inference: "on its feet" means the crowd is standing because the moment is exciting. Ask students to find other clues for excitement in the commentary (So close! What a change!).
+
+@LISTEN 2 | The Coach's Advice | Listening for advice and reasons | الاستماع إلى النصائح وأسبابها
+kagan: RallyRobin | Numbered Heads Together
+vocab: tournament | دورة رياضية | 🏆 | Tomorrow's tournament is important.
+vocab: recover | يستعيد نشاطه | 🔋 | Your body needs sleep to recover.
+vocab: teammate | زميل الفريق | 🤝 | Call your teammate's name.
+vocab: communicate | يتواصل | 💬 | Good teams communicate.
+vocab: referee | حَكَم | 🧑‍⚖️ | Don't argue with the referee.
+vocab: argue | يجادل | 😤 | Never argue in a game.
+predict: A basketball coach gives his team advice before a tournament. What advice do you think he gives? |
+tip: Advice often comes with a reason. After each piece of advice, listen for "so", "because" or a result like "You'll feel...". | غالبًا ما تأتي النصيحة مع سبب. بعد كل نصيحة استمع لكلمات مثل so وbecause أو لنتيجة مثل You'll feel...
+script:
+MAN[Coach Omar]: Okay, team, listen carefully. Tomorrow's tournament is the most important event of the year, so here's my advice.
+MAN[Coach Omar]: First, sleep early tonight. Your body needs at least nine hours of sleep to recover.
+MAN[Coach Omar]: Second, eat a good breakfast — eggs, bread and fruit — but don't eat a big meal just before the game. You'll feel heavy and slow.
+MAN[Coach Omar]: Third, drink water all day. In this hot weather, you can lose more than a liter of water in one game.
+MAN[Coach Omar]: During the game, keep talking to each other. Call your teammate's name before you pass the ball. Good teams communicate.
+MAN[Coach Omar]: And remember: if we lose a point, don't argue with the referee. Stay calm and focus on the next play.
+ADAM: What time should we arrive, Coach?
+MAN[Coach Omar]: Be at the sports hall at eight o'clock. The first game starts at nine, against Al-Faisal School.
+BEN: What if we lose the first game?
+MAN[Coach Omar]: Then we learn from it and play better in the next one. Winning is great, but teamwork is what makes us champions.
+end
+mcq: How many hours of sleep does the coach say players need? | *at least nine | at least seven | at least ten | at least eight
+mcq: Why shouldn't players eat a big meal just before the game? | *They'll feel heavy and slow. | They won't have time. | It's against the rules. | They'll get thirsty.
+mcq: What should players do before they pass the ball? | *call their teammate's name | look at the coach | shout "pass" | wait for the referee
+mcq: What should players do if they lose a point? | *stay calm and focus on the next play | argue with the referee | stop and rest | change their position
+mcq: According to the coach, what makes the team champions? | *teamwork | winning | practice | speed
+tf: Players can lose more than a liter of water in one game. | T
+tf: The first game starts at eight o'clock. | F
+gap: The team's first game is against Al-Faisal ___. | School
+gap: Players should be at the sports ___ at eight o'clock. | hall
+speak: Give advice to a friend before an important day (an exam, a match or a competition). | First, ___. Second, ___. Don't ___, or you'll ___.
+teach: Students list the coach's advice under two headings, "before the game" and "during the game", then add one piece of advice of their own to each list.
+
+@LISTEN 3 | Choosing a Team Captain | Comparing speakers' ideas | المقارنة بين أفكار المتحدثين
+kagan: Corners | Think-Pair-Share
+vocab: captain | قائد الفريق | 🧢 | We're choosing a sports captain.
+vocab: vote | يصوّت | 🗳️ | Listen, and then you'll vote.
+vocab: the key | المفتاح / السرّ | 🔑 | Practice is the key to winning.
+vocab: positive | إيجابي | ➕ | A captain should be positive.
+vocab: organize | ينظّم | 📋 | I want to organize a match.
+vocab: chance | فرصة | 🎲 | Everyone gets a chance to play.
+predict: Three students give speeches because they want to be class sports captain. What makes a good captain? |
+tip: When speakers compete, listen for each person's main idea and write one key word for each: Adam = practice, Yusuf = ?, Ben = ? | عندما يتنافس المتحدثون، استمع للفكرة الرئيسية لكل شخص واكتب كلمة مفتاحية واحدة لكل منهم.
+script:
+MR_HASSAN: Today, we're choosing our class sports captain. Three students want the job. Listen to their speeches, and then you'll vote.
+ADAM: Hello, everyone. I've played football for five years, and I know a lot about the game. As captain, I'll make sure we train hard every week. I believe that practice is the key to winning.
+YUSUF: Hi, everyone. I'm not the best player in our class, but I'm a good listener. A captain needs to understand every player, not only the strongest ones. If you choose me, I'll make sure everyone gets a chance to play.
+BEN: Hello! I think a captain should be positive. When we lose, I'll be the first to say, "Don't worry, we'll do better next time." I also have a plan: I want to organize a match against the teachers at the end of the year!
+MR_HASSAN: Thank you, boys. Now, please write your choice on a piece of paper and put it in the box.
+end
+mcq: How long has Adam played football? | *five years | three years | one year | ten years
+mcq: What does Adam think is the key to winning? | *practice | teamwork | listening | being positive
+mcq: What does Yusuf say about himself? | *He isn't the best player, but he's a good listener. | He's the strongest player. | He has the most experience. | He's very funny.
+mcq: What will Yusuf make sure of? | *Everyone gets a chance to play. | The team trains every day. | The team wins every match. | They play against the teachers.
+mcq: What is Ben's special plan? | *a match against the teachers | a trip to a stadium | new team shirts | extra training on Fridays
+tf: Ben thinks a captain should always win. | F
+tf: The students vote by raising their hands. | F
+gap: Yusuf says a captain needs to understand every ___. | player
+gap: Ben wants to organize the match at the end of the ___. | year
+speak: Who would you vote for? Tell your group and explain why. | I'd vote for ___ because he ___. I think a captain should ___.
+teach: Hold a real class vote after the lesson using the same paper-and-box method. Discuss fair voting and respecting the result — a small lesson in citizenship.
+
+@SPEAK 1 | I See Your Point, But... | Agreeing and disagreeing politely | الموافقة والاعتراض بأدب
+kagan: Corners | Talking Chips
+model:
+SAMI: I think football is the best sport in the world. Do you agree?
+BEN: I see your point, but I don't agree. I think basketball is more exciting. There are more goals — sorry, more points!
+SAMI: Ha ha! Maybe, but football is more popular. Billions of people watch the World Cup.
+BEN: That's true. But popular doesn't always mean better.
+SAMI: Fair enough. What about tennis?
+BEN: I agree with you there — tennis is boring to watch.
+SAMI: Really? I think it's okay, but I won't argue about it!
+BEN: Ha ha. Let's agree that all sports are good for us!
+end
+roles: SAMI | BEN
+chunks: Do you agree? | I see your point, but ___. | That's true. | Fair enough. | I agree with you there.
+sound: pairs | /oʊ/ or /ɑ/? | /oʊ/ (won't, coat) moves from "o" to "u", and your lips get rounder. /ɑ/ (want, cot) is short and open, and your lips don't move. | الصوت /oʊ/ كما في won't وcoat يتحرك من o إلى u وتستدير الشفتان، أما /ɑ/ كما في want وcot فقصير ومفتوح ولا تتحرك الشفتان.
+pair: won't | want
+pair: coat | cot
+pair: note | not
+pair: hope | hop
+pair: road | rod
+task: Debate in groups: "Football is the best sport." Each student agrees or disagrees politely and gives a reason. | I agree because ___. — I see your point, but ___. — That's true, but ___.
+cando: I can agree and disagree politely. | I can give reasons for my opinion. | I can hear "won't" and "want".
+teach: Disagreeing politely is a life skill. Ban "You're wrong!" for the lesson and give a point for every "I see your point, but..." you hear.
+
+@SPEAK 2 | Make Sure You... | Giving instructions and rules | إعطاء التعليمات والقواعد
+kagan: RallyCoach | Stand Up–Hand Up–Pair Up
+model:
+MAN[Coach Omar]: Okay, Yusuf. You're the new referee for the school volleyball match. Are you ready?
+YUSUF: I think so, Coach. What do I need to do?
+MAN[Coach Omar]: First, make sure both teams have six players on the court.
+YUSUF: Six players. Got it.
+MAN[Coach Omar]: Blow the whistle to start every point. And don't forget to count the points out loud.
+YUSUF: What if a player touches the net?
+MAN[Coach Omar]: Then the other team gets the point. And remember, be fair to both teams, even if your friends are playing.
+YUSUF: Of course. Can I use a card if a player is rude?
+MAN[Coach Omar]: Yes, you can. But try to stay calm and explain the rules first.
+YUSUF: Thanks, Coach. I'll do my best!
+end
+roles: YUSUF | MAN
+chunks: Make sure you ___. | Don't forget to ___. | What if ___? | Remember to be fair. | I'll do my best!
+sound: sort | Where's the strong beat? | Oo ; Ooo ; ooO | Sports words have different stress patterns: FOOT-ball (Oo), BAS-ket-ball (Ooo), ref-er-EE (ooO). | لكلمات الرياضة أنماط نبر مختلفة: FOOT-ball بنمط Oo، وBAS-ket-ball بنمط Ooo، وref-er-EE بنمط ooO.
+item: football | Oo
+item: basketball | Ooo
+item: referee | ooO
+item: tennis | Oo
+item: volleyball | Ooo
+item: volunteer | ooO
+item: captain | Oo
+item: champion | Ooo
+item: afternoon | ooO
+task: Explain the rules of a game you know to your partner. Use "make sure", "don't forget" and "if". | In this game, make sure you ___. Don't forget to ___. If ___, ___.
+cando: I can give clear instructions and rules. | I can ask "What if...?" | I can stress sports words correctly.
+teach: Students teach the class a simple playground game in English using only the lesson chunks. The class plays it for two minutes to test whether the instructions were clear.
+
+@CHECK
+check: L1#1 | Which two teams are playing? | *the Falcons and the Eagles | the Falcons and the Lions | the Eagles and the Tigers | the Lions and the Eagles
+check: L1#3 | How many players did Omar run past? | *two | three | one | four
+check: L2#3 | What does the coach recommend for breakfast? | *eggs, bread and fruit | rice and chicken | cereal and milk | dates and coffee
+check: L3#2 | What will Adam make sure of as captain? | *The team trains hard every week. | Everyone gets a chance to play. | The team is always positive. | The team plays the teachers.
+
+@UNIT 3 | Media and News | الإعلام والأخبار | 📻
+goals: I can understand the main idea of news stories. | I can tell facts from opinions. | I can report news and react to it.
+
+@LISTEN 1 | School Radio News | Listening for main ideas | الاستماع إلى الأفكار الرئيسية
+kagan: Numbered Heads Together | Fan-N-Pick
+vocab: top stories | أبرز الأخبار | 📰 | Here are today's top stories.
+vocab: headline | عنوان رئيسي | 🗞️ | Write a headline for each story.
+vocab: beat | يتغلّب على | 🏅 | They beat Al-Faisal School.
+vocab: message | رسالة | 📩 | Here's a message from the school nurse.
+vocab: sign up | يسجّل اسمه | ✍️ | Please sign up before Sunday.
+vocab: water fountain | برّادة مياه | 🚰 | There are water fountains on every floor.
+predict: Two students present the news on the school radio. What kind of news is on a school radio? |
+tip: Each news story starts with a signal: "Our first story", "In sports news", "Next", "And finally". The first sentence after the signal usually gives the main idea. | تبدأ كل قصة إخبارية بإشارة مثل Our first story وIn sports news وNext وAnd finally، والجملة الأولى بعد الإشارة تعطي غالبًا الفكرة الرئيسية.
+script:
+YUSUF: Good morning, and welcome to the School Radio News. I'm Yusuf.
+ADAM: And I'm Adam. Here are today's top stories.
+YUSUF: Our first story: the school library has opened a new reading corner. It has more than five hundred new books in English and Arabic, and some comfortable bean bags. It's open every day during break.
+ADAM: In sports news, our basketball team won the city tournament last Thursday. They beat Al-Faisal School by forty-two points to thirty-eight. Congratulations, team!
+YUSUF: Next, an important message from the school nurse. Because the weather is getting hotter, please bring a water bottle to school every day. There are water fountains on every floor.
+ADAM: And finally, some exciting news: Grade 6 students are planting fifty trees in the school garden next week. If you'd like to help, please sign up with Mr. Hassan before Sunday.
+YUSUF: That's all for today. Have a great day!
+end
+mcq: What is the main idea of the first story? | *The library has a new reading corner. | The library is closed for repairs. | Students must return their books. | The library has new computers.
+mcq: What was the final score of the basketball game? | *forty-two to thirty-eight | thirty-eight to thirty-two | forty-eight to forty-two | forty-two to twenty-eight
+mcq: Why does the nurse want students to bring water bottles? | *The weather is getting hotter. | The water fountains are broken. | It's a new school rule. | Students are often sick.
+mcq: How many trees are Grade 6 students planting? | *fifty | fifteen | five hundred | forty
+mcq: What should students do if they want to help plant trees? | *sign up with Mr. Hassan before Sunday | go to the school garden at break | tell the school nurse | bring a tree from home
+tf: The basketball team lost the tournament. | F
+tf: The reading corner is open every day during break. | T
+gap: The reading corner has more than five ___ new books. | hundred
+gap: There are water fountains on every ___. | floor
+speak: Write and present one news story about your class. | In today's news, ___. This happened ___. ___ said that ___.
+teach: Students write a headline (six words maximum) for each story after listening. Writing headlines trains them to find the main idea quickly.
+
+@LISTEN 2 | The Weekend Forecast | Listening for certainty and possibility | الاستماع إلى ما هو مؤكد وما هو محتمل
+kagan: RallyCoach | Showdown
+vocab: forecast | توقعات الطقس | 📺 | Here's the weather forecast.
+vocab: temperature | درجة الحرارة | 🌡️ | Temperatures will drop at night.
+vocab: drop | ينخفض | 📉 | It will drop to five degrees.
+vocab: dust | غبار | 🌪️ | Strong winds will cause dust.
+vocab: rough | هائج (البحر) | 🌊 | The sea will be rough.
+vocab: flooding | سيول وفيضانات | 💦 | There may be flooding in some valleys.
+predict: A presenter gives the weekend forecast for different parts of Saudi Arabia. Is the weather the same everywhere in winter? |
+tip: Forecasts use "will" and "may". "Will" = sure. "May" = possible. Listen carefully for the difference! | تستخدم توقعات الطقس will وmay. كلمة will تعني أن الأمر مؤكد، وmay تعني أنه محتمل. استمع جيدًا للفرق!
+script:
+WOMAN[Weather Presenter]: Good evening. Here's the weather forecast for the weekend.
+WOMAN[Weather Presenter]: A cold wind from the north will bring cooler temperatures to most of the Kingdom. In Tabuk, temperatures will drop to five degrees at night, and there may be snow on the mountains of Jabal Al-Lawz.
+WOMAN[Weather Presenter]: In Riyadh, it will be sunny but cool, with a high of nineteen degrees. Strong winds in the afternoon will cause dust, so drivers should be careful.
+WOMAN[Weather Presenter]: On the west coast, Jeddah will be warm and humid, with a high of twenty-nine degrees. The sea will be rough on Saturday, so swimming isn't a good idea.
+WOMAN[Weather Presenter]: In the south, Abha and Al-Baha will have heavy rain on Friday afternoon. There may be flooding in some valleys, so please stay away from them.
+WOMAN[Weather Presenter]: Next week, the weather will be warmer again everywhere. Have a lovely weekend!
+end
+mcq: What will bring cooler temperatures? | *a cold wind from the north | rain from the south | clouds from the sea | snow from the west
+mcq: Where may there be snow? | *on the mountains of Jabal Al-Lawz | in Riyadh | in Abha | in Jeddah
+mcq: Why should drivers in Riyadh be careful? | *Strong winds will cause dust. | There will be heavy rain. | The roads will be icy. | It will be foggy.
+mcq: Why isn't swimming in Jeddah a good idea on Saturday? | *The sea will be rough. | It will be too cold. | There will be a storm. | The beaches will be closed.
+mcq: What will the weather be like next week? | *warmer everywhere | colder in the north | rainy in Riyadh | snowy in Tabuk
+tf: The high in Riyadh will be nineteen degrees. | T
+tf: There will be heavy rain in Abha on Saturday morning. | F
+gap: At night in Tabuk, temperatures will drop to ___ degrees. | five, 5
+gap: People should stay away from valleys because there may be ___. | flooding, floods, a flood
+speak: Give a weather forecast for tomorrow in your city. Use "will" and "may". | Tomorrow, it will be ___. There may be ___. People should ___.
+teach: Use a map of Saudi Arabia's regions. Students place weather symbols on each region during the second listening, then present the forecast to their partner. Stress safety: never go near valleys during heavy rain.
+
+@LISTEN 3 | The Science Fair Advert | Telling facts from opinions | التمييز بين الحقائق والآراء
+kagan: Corners | Think-Pair-Share
+vocab: curious | محبّ للمعرفة | 🤔 | Are you curious about the world?
+vocab: fair | معرض | 🎪 | Don't miss the science fair!
+vocab: entry | الدخول | 🎟️ | Entry is free for all students.
+vocab: project | مشروع | 🔬 | There will be eighty projects.
+vocab: virtual reality | الواقع الافتراضي | 🥽 | Try our virtual reality rocket ride.
+vocab: opinion | رأي | 💬 | "Amazing" is an opinion.
+predict: Listen to a radio advert for a science fair. How do adverts try to make people come? |
+tip: Adverts mix facts (dates, prices, places) with opinions (amazing, the best). Facts can be checked; opinions are feelings. | تخلط الإعلانات بين الحقائق مثل التواريخ والأسعار والأماكن، والآراء مثل amazing وthe best. الحقائق يمكن التحقق منها، أما الآراء فهي مشاعر.
+script:
+ANNOUNCER: Are you curious about the world? Do you love asking "How?" and "Why?" Then don't miss the Taif Young Scientists Fair!
+ANNOUNCER: This year's fair is on the fourteenth and fifteenth of March, at the King Fahd Cultural Center. Entry is free for all students.
+NOOR: I went last year, and it was the best day ever! I made my own slime and learned why it's sticky.
+ANNOUNCER: There will be more than eighty projects from schools all over the city, plus live science shows every hour.
+SAMI: The robot show is amazing. You have to see it!
+ANNOUNCER: Visit the space zone and try our virtual reality rocket ride — it's the most exciting ride in town!
+ANNOUNCER: Doors open at four p.m. and close at ten p.m. Bring your family and your questions!
+ANNOUNCER: The Taif Young Scientists Fair: where curious minds come alive!
+end
+mcq: Where is the science fair? | *at the King Fahd Cultural Center | at Sami's school | at the science museum | in Al-Rudaf Park
+mcq: How much does it cost for students? | *It's free. | ten riyals | five riyals | twenty riyals
+mcq: How many projects will there be? | *more than eighty | about eighteen | more than eight | exactly forty
+mcq: Which sentence is an OPINION? | *The robot show is amazing. | Entry is free for all students. | Doors open at four p.m. | There are live shows every hour.
+mcq: What did Noor do at the fair last year? | *She made her own slime. | She rode a rocket. | She built a robot. | She won a prize.
+tf: The fair is on two days. | T
+tf: Noor went to the fair last year. | T
+gap: The fair is in the month of ___. | March
+gap: In the space zone, you can try a virtual reality ___ ride. | rocket
+speak: Make a short radio advert for a school event. Include two facts and one opinion. | Don't miss ___! It's on ___ at ___. It's the most ___ event of the year!
+teach: Students sort the advert's sentences into two lists, "Fact" and "Opinion". This critical-listening skill helps them understand advertising in everyday life.
+
+@SPEAK 1 | Did You Hear the News? | Reporting and reacting to news | نقل الأخبار والتفاعل معها
+kagan: Mix-Pair-Share | RoundRobin
+model:
+BEN: Did you hear the news about our school?
+ADAM: No, what happened?
+BEN: Yesterday, the principal announced that our school won the national reading competition!
+ADAM: Really? That's fantastic! Which students took part?
+BEN: Twenty students from Grade 6. They read more than three hundred books in two months.
+ADAM: Wow! Did they get a prize?
+BEN: Yes, they did. According to Mr. Hassan, the school received ten thousand riyals for the library.
+ADAM: That's great news. I'm going to read more books this term!
+end
+roles: BEN | ADAM
+chunks: Did you hear the news about ___? | What happened? | The principal announced that ___. | According to ___, ___. | That's great news!
+sound: sort | -ed in the news: /t/, /d/ or /ɪd/? | /t/ announced ; /d/ opened ; /ɪd/ reported | News uses many past verbs. Remember the rule: /t/ after voiceless sounds (announced), /d/ after voiced sounds (opened), and /ɪd/ after t or d (reported). | تستخدم الأخبار أفعالًا ماضية كثيرة. تذكّر القاعدة: /t/ بعد الأصوات المهموسة مثل announced، و/d/ بعد الأصوات المجهورة مثل opened، و/ɪd/ بعد t أو d مثل reported.
+item: announced | /t/
+item: opened | /d/
+item: reported | /ɪd/
+item: finished | /t/
+item: arrived | /d/
+item: collected | /ɪd/
+item: helped | /t/
+item: discovered | /d/
+item: celebrated | /ɪd/
+task: Report a piece of real or invented school news to your group. Your group reacts and asks one question. | Did you hear the news? Yesterday, ___. According to ___, ___.
+cando: I can report news. | I can react to news. | I can say -ed endings in news reports.
+teach: "According to..." tells the listener where information comes from. Encourage students to always name their source — the start of good media habits.
+
+@SPEAK 2 | Is That a Fact? | Discussing facts and opinions | مناقشة الحقائق والآراء
+kagan: Think-Pair-Share | Showdown
+model:
+NOOR: Lina, look at this advert. It says, "Sparkle toothpaste is the best toothpaste in the world."
+LINA: Hmm, that's not a fact. That's an opinion.
+NOOR: How do you know?
+LINA: Because nobody can prove that it's the best. A fact is something you can check, like "It costs twelve riyals."
+NOOR: I see. So "Our photographer took this photo in Jeddah" is a fact?
+LINA: Yes, if it's true! But "It's the most beautiful photo ever" is an opinion.
+NOOR: That's interesting. I think I'll check adverts more carefully from now on.
+LINA: Good idea. Don't believe everything you hear!
+end
+roles: NOOR | LINA
+chunks: That's not a fact. | That's an opinion. | How do you know? | You can check it. | Don't believe everything you hear!
+sound: sort | Word families: where's the strong beat? | Ooo ; oOoo ; ooOo | In word families, the strong beat can move! PHO-to-graph (Ooo), pho-TO-gra-pher (oOoo), pho-to-GRA-phic (ooOo). | في عائلات الكلمات قد ينتقل المقطع القوي! PHO-to-graph بنمط Ooo، وpho-TO-gra-pher بنمط oOoo، وpho-to-GRA-phic بنمط ooOo.
+item: photograph | Ooo
+item: photographer | oOoo
+item: photographic | ooOo
+item: history | Ooo
+item: historian | oOoo
+item: energetic | ooOo
+item: energy | Ooo
+item: economy | oOoo
+item: economic | ooOo
+task: Bring an advert (or invent one). Your partner finds one fact and one opinion in it. | This is a fact because you can check it. This is an opinion because ___.
+cando: I can tell the difference between facts and opinions. | I can explain my reasons. | I can hear the strong beat move in word families.
+teach: Showdown: read sentences aloud; every student holds up "F" (fact) or "O" (opinion) at the same time. Discuss any sentence where the class is divided.
+
+@CHECK
+check: L1#3 | What can students sit on in the reading corner? | *comfortable bean bags | new sofas | wooden chairs | soft carpets
+check: L1#4 | When did the basketball team win? | *last Thursday | last Sunday | yesterday | last month
+check: L2#4 | What will the high temperature be in Jeddah? | *twenty-nine degrees | nineteen degrees | twenty-five degrees | thirty-nine degrees
+check: L3#3 | What did Noor learn about slime? | *why it's sticky | how to color it | where it comes from | how to sell it

@@ -1,0 +1,24 @@
+{
+  "appId": "com.mrwaleedyoussif.listenupspeakout",
+  "appName": "Listen Up! Speak Out!",
+  "webDir": "www",
+  "backgroundColor": "#F5F7FC",
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true
+  },
+  "ios": {
+    "contentInset": "never",
+    "backgroundColor": "#F5F7FC",
+    "limitsNavigationsToAppBoundDomains": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 900,
+      "launchAutoHide": true,
+      "backgroundColor": "#F5F7FC",
+      "showSpinner": false,
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+}

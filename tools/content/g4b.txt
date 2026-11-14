@@ -1,0 +1,464 @@
+#GRADE 4
+
+@UNIT 4 | Weather and Clothes | الطقس والملابس | 🌦️
+goals: I can describe the weather. | I can choose clothes for the weather and give reasons. | I can understand a weather report.
+
+@LISTEN 1 | The Weather Report | Listening for information about places | الاستماع إلى معلومات عن الأماكن
+kagan: Showdown | Timed Pair Share
+vocab: weather | طقس | 🌤️ | Here's the weather for tomorrow.
+vocab: sunny | مشمس | ☀️ | It's hot and sunny in Riyadh.
+vocab: cloudy | غائم | ☁️ | It's cool and cloudy in Taif.
+vocab: rain | مطر | 🌧️ | There's rain in the mountains.
+vocab: windy | عاصف / فيه رياح | 🌬️ | It's cold and windy in London.
+vocab: foggy | ضبابي | 🌫️ | It's foggy in Abha.
+predict: Think about a map of Saudi Arabia. Is the weather the same in every city? | فكّر في خريطة المملكة العربية السعودية. هل الطقس متشابه في كل مدينة؟
+tip: Write the city names in a list. Next to each city, draw the weather and write the temperature. | اكتب أسماء المدن في قائمة، وارسم بجانب كل مدينة رمز الطقس واكتب درجة الحرارة.
+script:
+WOMAN[Weather Presenter]: Good evening! Here's the weather for tomorrow, Thursday.
+WOMAN[Weather Presenter]: In Riyadh, it's hot and sunny all day. The temperature is thirty-eight degrees.
+WOMAN[Weather Presenter]: In Jeddah, it's hot and humid. There's a little wind near the sea. Thirty-four degrees.
+WOMAN[Weather Presenter]: In Taif, it's cool and cloudy in the morning. In the afternoon, there's rain in the mountains, so take an umbrella! Twenty-two degrees.
+WOMAN[Weather Presenter]: In Abha, it's foggy in the morning and cold at night. Only fifteen degrees.
+WOMAN[Weather Presenter]: And in London, it's cold and windy, with snow at night. Just two degrees!
+BEN: Snow in London? My grandma lives there! I'm sure she's wearing her coat and gloves now.
+end
+mcq: What is the weather like in Riyadh? | *hot and sunny | cool and cloudy | cold and windy | foggy
+mcq: Where is there rain in the afternoon? | *in Taif | in Riyadh | in Jeddah | in Abha
+mcq: What is the temperature in Abha? | *fifteen degrees | fifty degrees | twenty-two degrees | two degrees
+mcq: Who lives in London? | *Ben's grandma | Ben's cousin | the weather presenter | Ben's teacher
+tf: It is cold and windy in Jeddah. | F
+tf: It is foggy in Abha in the morning. | T
+gap: There is ___ at night in London. | snow
+order: Riyadh | Jeddah | Taif | Abha
+speak: Give a weather report for your city today. | Good morning! Here's the weather in ___. It's ___ and ___. It's ___ degrees.
+teach: Students love presenting the weather. Put a map on the board; after listening, volunteers point and present one city in the presenter's style.
+
+@LISTEN 2 | Packing for Abha | Listening for reasons | الاستماع إلى الأسباب
+kagan: RallyCoach | Talking Chips
+vocab: jacket | سترة | 🧥 | Take your warm jacket.
+vocab: sweater | كنزة صوفية | 🧶 | Take a sweater too.
+vocab: trainers | حذاء رياضي | 👟 | Wear your trainers.
+vocab: warm | دافئ | 🔥 | The blue jacket is warmer.
+vocab: wet | مبلّل | 💧 | It's wet in the mountains.
+vocab: mountains | جبال | ⛰️ | We're walking in the mountains.
+predict: Sami's family is going to Abha. What clothes should he take? | تسافر عائلة سامي إلى أبها. ما الملابس التي يجب أن يأخذها سامي؟
+tip: Listen for "so" — it gives a reason: It's cold, so take your jacket. | استمع لكلمة so لأنها تقدّم سببًا: الجو بارد، لذلك خذ سترتك.
+script:
+SAMI: Mom, we're going to Abha tomorrow. What clothes do I need?
+MOM: It's cold in Abha at night, so take your warm jacket.
+SAMI: My black jacket or my blue jacket?
+MOM: The blue one. It's warmer. And take a sweater too.
+SAMI: Do I need my sandals?
+MOM: No. Take your trainers. We're walking in the mountains, and it's wet there.
+SAMI: Okay. What about my cap?
+MOM: Yes, take your cap. It's sunny in the day. And don't forget your umbrella! It rains a lot in Abha in summer.
+SAMI: Jacket, sweater, trainers, cap, umbrella... My bag is full!
+end
+mcq: Where are they going? | *Abha | Riyadh | Jeddah | London
+mcq: Which jacket does Mom choose? | *the blue one | the black one | the red one | the green one
+mcq: Why does Sami need trainers? | *They are walking in the mountains. | They are going to the beach. | It's very hot. | His sandals are old.
+mcq: Why does Sami need a cap? | *It's sunny in the day. | It's cold at night. | It's windy. | It's raining.
+tf: Mom says it never rains in Abha. | F
+tf: Sami takes his sandals. | F
+gap: Mom tells Sami to take a ___ too. | sweater
+order: the jacket | the sweater | the trainers | the cap
+speak: Your family is going on a trip. Tell your partner what you are taking and why. | I'm taking my ___ because it's ___.
+teach: Bring a small bag and clothes (or pictures). Students "pack" it while listening, then unpack it while retelling Mom's reasons with "because" and "so".
+
+@LISTEN 3 | Four Seasons | Listening for activities in each season | الاستماع إلى الأنشطة في كل فصل
+kagan: Three-Step Interview | Corners
+vocab: season | فصل من فصول السنة | 🍂 | What's your favorite season?
+vocab: spring | الربيع | 🌸 | There are lots of flowers in spring.
+vocab: summer | الصيف | 🌞 | In summer, I go to the beach.
+vocab: autumn | الخريف | 🍁 | The leaves turn red in autumn.
+vocab: winter | الشتاء | ❄️ | It's cold in winter.
+vocab: leaves | أوراق الشجر | 🍃 | The leaves are orange.
+predict: Ben interviews his teacher about the seasons in England. How are they different from the seasons here? | يجري بن مقابلة مع معلمته عن الفصول في إنجلترا. كيف تختلف عن الفصول هنا؟
+tip: Each new question from Ben starts a new season. Listen for the season, then for one activity. | كل سؤال جديد من بن يبدأ فصلًا جديدًا. استمع لاسم الفصل ثم لنشاط واحد.
+script:
+BEN: Ms. Green, can I ask you some questions for my seasons project?
+MS_GREEN: Of course, Ben.
+BEN: What's your favorite season?
+MS_GREEN: I love spring. In England, spring is in March, April and May. The trees are green, and there are lots of flowers.
+BEN: What do you do in summer?
+MS_GREEN: In summer, I go to the beach with my family. It's warm, but it isn't hot like Riyadh!
+BEN: And autumn?
+MS_GREEN: In autumn, the leaves turn red and orange. It's windy, and I like walking in the park.
+BEN: Do you like winter?
+MS_GREEN: Not really. It's cold, and it's dark at four o'clock! But I love drinking hot chocolate by the fire.
+BEN: Thank you, Ms. Green!
+end
+mcq: What is Ms. Green's favorite season? | *spring | summer | autumn | winter
+mcq: What does she do in summer? | *She goes to the beach. | She walks in the park. | She drinks hot chocolate. | She plants flowers.
+mcq: What happens to the leaves in autumn? | *They turn red and orange. | They turn green. | They fall in spring. | They are white with snow.
+mcq: Why doesn't she like winter very much? | *It's cold, and it gets dark early. | It's too hot. | It rains every day. | She can't go to the beach.
+tf: In England, spring is in March, April and May. | T
+tf: Ms. Green says summer in England is hotter than in Riyadh. | F
+gap: In winter, Ms. Green loves drinking hot ___. | chocolate
+order: spring | summer | autumn | winter
+speak: Tell your partner about your favorite season and what you do. | My favorite season is ___. In ___, I ___.
+teach: Compare the seasons in Saudi Arabia and England on a Venn diagram after listening. Mention that American English says "fall" for autumn.
+
+@SPEAK 1 | What's the Weather Like? | Talking about the weather | التحدث عن الطقس
+kagan: RallyRobin | Inside-Outside Circle
+model:
+GRANDPA: Good morning, Noor! What's the weather like today?
+NOOR: It's cold and cloudy, Grandpa. And it's very windy.
+GRANDPA: Is it going to rain?
+NOOR: I think so. The sky is dark grey.
+GRANDPA: Then wear your warm coat when you go out.
+NOOR: Okay. Can we still go for a walk?
+GRANDPA: Yes, but only a short walk. Let's take an umbrella.
+NOOR: I love walking in cold weather!
+end
+roles: GRANDPA | NOOR
+chunks: What's the weather like today? = كيف الطقس اليوم؟ | It's cold and cloudy. = الجو بارد وغائم. | Is it going to rain? = هل ستمطر؟ | I think so. = أظن ذلك. | Wear your warm coat. = البس معطفك الدافئ.
+sound: pairs | /oʊ/ or /ɔː/? | For /oʊ/ (coat), your mouth moves: start with "o" and close to "u". For /ɔː/ (caught), keep your mouth still: one long open sound. | لنطق /oʊ/ كما في coat يتحرك فمك من o إلى u، أما /ɔː/ كما في caught فيبقى الفم ثابتًا في صوت واحد طويل مفتوح.
+pair: coat | caught
+pair: low | law
+pair: boat | bought
+pair: so | saw
+pair: woke | walk
+task: Look out of the window. Describe the weather to your partner, then compare it with yesterday. | Today it's ___. Yesterday it was ___.
+cando: I can ask about the weather. | I can describe the weather. | I can hear /oʊ/ and /ɔː/.
+teach: Students watch their partner's lips: they move and close for /oʊ/ in coat, but stay still and open for /ɔː/ in caught.
+
+@SPEAK 2 | What Shall I Wear? | Asking for and giving advice about clothes | طلب النصيحة حول الملابس وتقديمها
+kagan: Fan-N-Pick | Stand Up–Hand Up–Pair Up
+model:
+SAMI: Ben, we're going to the desert camp on Thursday. What shall I wear?
+BEN: It's cold at night in the desert. Wear a warm sweater and a jacket.
+SAMI: Good idea. And in the day?
+BEN: In the day, it's sunny and hot. Wear a T-shirt and a cap, and bring sunglasses.
+SAMI: Should I wear sandals?
+BEN: No, wear boots. The sand is very hot in the day and very cold at night.
+SAMI: Thanks, Ben. You're a good friend!
+BEN: No problem. Don't forget your gloves!
+end
+roles: SAMI | BEN
+chunks: What shall I wear? = ماذا ألبس؟ | Wear a warm sweater. = البس كنزة دافئة. | Should I wear sandals? = هل ألبس الصندل؟ | Don't forget your gloves! = لا تنسَ قفازيك! | No problem. = لا مشكلة.
+sound: sort | How many beats? | 1 beat ; 2 beats ; 3 beats | Some clothes words end with two or three consonants: clothes, gloves, boots. Don't add a vowel at the end: say "boots", not "bootsa". | تنتهي بعض كلمات الملابس بحرفين ساكنين أو أكثر مثل clothes وgloves وboots. لا تضف حركة في النهاية: قل boots وليس bootsa.
+item: clothes | 1
+item: jacket | 2
+item: sunglasses | 3
+item: gloves | 1
+item: sweater | 2
+item: umbrella | 3
+item: boots | 1
+item: trousers | 2
+item: overcoat | 3
+task: Choose a place (the beach, the desert, the mountains or the city). Your partner tells you what to wear. | We're going to the ___. What shall I wear? — Wear ___ because it's ___.
+cando: I can ask for advice about clothes. | I can give advice with "wear" and "don't forget". | I can say words with consonants at the end.
+teach: Students hold up fingers for the number of beats before they choose. Remind them that "clothes" is one beat — a very common mistake.
+
+@CHECK
+check: L1#1 | Which day is the weather report for? | *Thursday | Wednesday | Friday | today
+check: L1#4 | What does the presenter tell people in Taif to take? | *an umbrella | a coat | sunglasses | gloves
+check: L2#9 | What does Sami say at the end? | *My bag is full! | I'm cold! | Where's my cap? | Let's go now!
+check: L3#1 | Why is Ben asking questions? | *for his seasons project | for a TV show | for a quiz | for his grandma
+
+@UNIT 5 | Weekend Fun | متعة نهاية الأسبوع | 🎡
+goals: I can say where I was and what I did. | I can understand a story about the past. | I can ask about someone's weekend.
+
+@LISTEN 1 | Where Were You? | Listening for places in the past | الاستماع إلى الأماكن في الماضي
+kagan: Mix-Pair-Share | RoundRobin
+vocab: weekend | عطلة نهاية الأسبوع | 🗓️ | How was your weekend?
+vocab: was / were | كان / كانوا | ⏪ | I was at home. We were at the camp.
+vocab: stadium | ملعب | 🏟️ | I was at the football stadium.
+vocab: match | مباراة | ⚽ | The match was exciting.
+vocab: sick | مريض | 🤒 | I was sick on Friday.
+vocab: stars | نجوم | ✨ | We watched the stars.
+predict: It's the first school day of the week. The teacher asks about the weekend. Where do you think the boys were? | إنه أول يوم دراسي في الأسبوع، والمعلم يسأل عن عطلة نهاية الأسبوع. أين تتوقع أن الأولاد كانوا؟
+tip: "Was" and "were" tell us about the past. Listen for the place after "I was at...". | كلمتا was وwere تخبراننا عن الماضي. استمع للمكان بعد I was at...
+script:
+MR_HASSAN: Good morning, boys! How was your weekend? Yusuf, where were you?
+YUSUF: I was at my cousin's house in Makkah. We were there for two days.
+MR_HASSAN: Lovely. And you, Adam?
+ADAM: I was at the football stadium with my dad. The match was exciting, but our team lost.
+MR_HASSAN: Oh no! Ben, what about you?
+BEN: I was at home. I was sick on Friday, so I stayed in bed. I was better on Saturday.
+MR_HASSAN: I'm glad you're better. Sami?
+SAMI: We were at the desert camp! It was cold at night, but it was amazing. We watched the stars.
+MR_HASSAN: Wonderful! I was at home too. I was busy with my garden.
+end
+mcq: Where was Yusuf? | *at his cousin's house in Makkah | at the football stadium | at home | at the desert camp
+mcq: How was the football match? | *exciting | boring | short | easy
+mcq: Why did Ben stay in bed on Friday? | *He was sick. | He was tired. | It was cold. | He was sad.
+mcq: What did Sami's family watch at night? | *the stars | a film | a football match | the sea
+tf: Yusuf was in Makkah for one day. | F
+tf: Adam's team lost the match. | T
+gap: Mr. Hassan was busy with his ___. | garden
+order: Yusuf | Adam | Ben | Sami
+speak: Tell your partner where you were last weekend and how it was. | Last weekend, I was at ___. It was ___.
+teach: Start with your own weekend story ("I was at...") before listening; students guess where you were from your clues.
+
+@LISTEN 2 | A Day at the Beach | Listening for past actions | الاستماع إلى أحداث في الماضي
+kagan: Timed Pair Share | Showdown
+vocab: arrive | يصل | 📍 | We arrived at nine o'clock.
+vocab: waves | أمواج | 🌊 | The waves destroyed our sandcastle.
+vocab: shells | أصداف | 🐚 | I collected twenty shells.
+vocab: collect | يجمع | 🧺 | I collected shells with Mom.
+vocab: delicious | لذيذ | 😋 | The fish was delicious.
+vocab: Corniche | الكورنيش | 🌅 | We walked along the Corniche.
+predict: Noor's family spent a day at the beach in Jeddah. What did they do? | قضت عائلة نور يومًا على شاطئ جدة. ماذا فعلوا؟
+tip: Many past verbs end in -ed: visited, played, cooked. Listen for -ed to know the action is finished. | كثير من أفعال الماضي تنتهي بـ -ed مثل visited وplayed وcooked. استمع إلى -ed لتعرف أن الحدث انتهى.
+script:
+NOOR: Last Friday, my family visited the beach in Jeddah. We arrived at nine o'clock in the morning.
+NOOR: First, Sami and I played in the sand. We started a big sandcastle, but the waves destroyed it!
+NOOR: Then, Dad and Sami swam in the sea, and I collected shells with Mom. I collected twenty shells!
+NOOR: At lunchtime, we cooked fish on the barbecue. It smelled delicious.
+NOOR: In the afternoon, it was very hot, so we rested under the umbrella and watched the boats.
+NOOR: In the evening, we walked along the Corniche, and then we drove home. I was tired but very happy.
+end
+mcq: What time did the family arrive? | *at nine o'clock | at ten o'clock | at noon | at five o'clock
+mcq: What happened to the sandcastle? | *The waves destroyed it. | Fahd broke it. | It was too small. | They finished it.
+mcq: What did Noor do with Mom? | *She collected shells. | She swam in the sea. | She cooked fish. | She watched the boats.
+mcq: What did they do in the evening? | *They walked along the Corniche. | They swam in the sea. | They rested under the umbrella. | They cooked fish.
+tf: Noor collected twenty shells. | T
+tf: The fish smelled delicious. | T
+gap: In the afternoon, they rested under the ___. | umbrella
+order: They played in the sand. | Noor collected shells. | They cooked fish. | They walked along the Corniche.
+speak: Tell your partner about a day out with your family. Use three -ed verbs. | Last ___, we visited ___. We played ___. We watched ___.
+teach: Write the -ed verbs from the script on cards. Students hold up a card when they hear its verb — this also prepares them for the -ed sound lesson.
+
+@LISTEN 3 | Grandpa's Childhood | Listening to a story from the past | الاستماع إلى قصة من الماضي
+kagan: Think-Pair-Share | Line-Ups
+vocab: village | قرية | 🏘️ | I lived in a small village.
+vocab: different | مختلف | 🔄 | Life was very different.
+vocab: pick | يقطف | 🌹 | We picked roses and grapes.
+vocab: famous | مشهور | ⭐ | Taif roses are famous.
+vocab: cloth | قماش | 🧵 | Our ball was made of old cloth.
+vocab: childhood | الطفولة | 👶 | Your childhood was amazing.
+predict: Grandpa talks about his life when he was nine. How was it different from your life? | يتحدث الجد عن حياته عندما كان في التاسعة. كيف كانت مختلفة عن حياتك؟
+tip: Stories follow time: every morning, after school, in the evening. Use these phrases to put the events in order. | تتبع القصص تسلسل الوقت مثل every morning وafter school وin the evening. استخدم هذه العبارات لترتيب الأحداث.
+script:
+SAMI: Grandpa, what was your life like when you were nine?
+GRANDPA: Oh, it was very different, Sami. There was no internet and there were no phones like today.
+GRANDPA: I lived in a small village near Taif. Every morning, I walked to school with my brother. It was three kilometers!
+GRANDPA: After school, I helped my father on the farm. We picked roses and grapes. Taif roses are famous, you know.
+GRANDPA: In the evening, we listened to stories from my grandmother. She told the best stories!
+SAMI: Did you play games?
+GRANDPA: Of course! We played with a ball made of old cloth. We didn't have toys from shops.
+SAMI: Wow. I think your childhood was amazing, Grandpa.
+end
+mcq: Where did Grandpa live? | *in a small village near Taif | in Riyadh | in a big city | on a farm in Abha
+mcq: How did Grandpa go to school? | *He walked with his brother. | He went by bus. | His father drove him. | He rode a bike.
+mcq: What did Grandpa's family pick on the farm? | *roses and grapes | apples and oranges | dates | vegetables
+mcq: What was Grandpa's ball made of? | *old cloth | plastic | paper | leather
+tf: Grandpa had a phone when he was a boy. | F
+tf: Grandpa's grandmother told stories. | T
+gap: The walk to school was three ___. | kilometers, kilometres, km
+order: Grandpa walked to school. | He helped on the farm. | He listened to stories. | He played with a cloth ball.
+speak: Ask a grandparent or an older person about their childhood. Tell your partner one thing. | My grandpa/grandma lived in ___. He/She ___ every day.
+teach: Homework idea: students interview a grandparent with three questions and report back. This builds family connection and real listening outside school.
+
+@SPEAK 1 | Was It Fun? | Asking and answering about the past | السؤال والإجابة عن الماضي
+kagan: Inside-Outside Circle | RallyRobin
+model:
+BEN: Hi, Adam! I called you yesterday. Where were you?
+ADAM: Sorry, Ben. I was at my uncle's house. We were there all day.
+BEN: Was it fun?
+ADAM: Yes, it was! We played football in the garden, and we watched a film.
+BEN: Cool! Were your cousins there?
+ADAM: Yes, they were. We cooked burgers with my uncle.
+BEN: That sounds great. I stayed at home and finished my project.
+ADAM: Oh no! I needed to finish my project too. I forgot!
+end
+roles: BEN | ADAM
+chunks: Where were you? = أين كنت؟ | I was at my uncle's house. = كنت في بيت عمي. | Was it fun? = هل كان ممتعًا؟ | Yes, it was! = نعم، كان كذلك! | That sounds great. = يبدو ذلك رائعًا.
+sound: sort | -ed endings: /t/, /d/ or /ɪd/? | /t/ walked ; /d/ played ; /ɪd/ visited | The -ed ending has three sounds. After sounds like k, p, s, sh and ch it is /t/ (walked). After most other sounds it is /d/ (played). After t or d it is /ɪd/ — an extra beat (visited). | لنهاية -ed ثلاثة أصوات: /t/ بعد أصوات مثل k وp وs وsh وch مثل walked، و/d/ بعد معظم الأصوات الأخرى مثل played، و/ɪd/ مع مقطع إضافي بعد t أو d مثل visited.
+item: watched | /t/
+item: cleaned | /d/
+item: wanted | /ɪd/
+item: jumped | /t/
+item: stayed | /d/
+item: needed | /ɪd/
+item: cooked | /t/
+item: called | /d/
+item: started | /ɪd/
+task: Tell your group about yesterday. Use three verbs with -ed. Your group listens for the endings. | Yesterday, I ___ed ___. Then I ___ed ___.
+cando: I can ask where someone was. | I can talk about the past with was and were. | I can say -ed endings correctly.
+teach: The most common mistake is saying "walk-ed" with two beats. Only /ɪd/ adds a beat. Clap the beats: walked = one clap, visited = three claps.
+
+@SPEAK 2 | How Was Your Weekend? | Talking about your weekend | التحدث عن عطلة نهاية الأسبوع
+kagan: Timed Pair Share | Mix-Pair-Share
+model:
+LINA: Noor, how was your weekend?
+NOOR: It was fun! On Friday, we had lunch at my aunt's house.
+LINA: What did you eat?
+NOOR: We had rice and lamb. It was delicious! What about you?
+LINA: I went to the fun fair with my cousins. We rode the big wheel!
+NOOR: Wow! Were you scared?
+LINA: A little! But it was so much fun. Then we had hot dogs.
+NOOR: Lucky you! Next weekend, let's go together.
+LINA: Yes! That's a great plan.
+end
+roles: LINA | NOOR
+chunks: How was your weekend? = كيف كانت عطلتك؟ | It was fun! = كانت ممتعة! | We had lunch at ___. = تناولنا الغداء في ___. | Were you scared? = هل كنت خائفًا؟ | Lucky you! = يا لك من محظوظ!
+sound: pairs | /ʌ/ or /æ/? | /ʌ/ (cup) is a short sound in the middle of your mouth, like a surprised "uh!". /æ/ (cap) needs a wide mouth with your jaw down. | الصوت /ʌ/ كما في cup قصير يخرج من وسط الفم مثل "أَه" القصيرة، أما /æ/ كما في cap فيحتاج إلى فتح الفم واسعًا مع إنزال الفك.
+pair: cup | cap
+pair: fun | fan
+pair: run | ran
+pair: hut | hat
+pair: bug | bag
+task: Inside-Outside Circle: tell four classmates about your last weekend in thirty seconds each. | Last weekend was ___. On Friday, I ___. On Saturday, I ___.
+cando: I can ask about someone's weekend. | I can talk about my weekend. | I can hear /ʌ/ and /æ/.
+teach: Use a timer for the thirty-second turns. Partners must ask one follow-up question ("Was it fun?" "Were you tired?") before they rotate.
+
+@CHECK
+check: L1#4 | Who was at the stadium with Adam? | *his dad | his brother | his uncle | Sami
+check: L1#8 | What was the weather like at night at the camp? | *cold | hot | rainy | windy
+check: L2#3 | Who swam in the sea? | *Dad and Sami | Noor and Mom | Noor and Sami | Mom and Dad
+check: L3#4 | What does Grandpa say about Taif roses? | *They are famous. | They are small. | They are red. | They are expensive.
+
+@UNIT 6 | Healthy Me | أنا بصحّة جيدة | 💪
+goals: I can say what's wrong and give simple advice. | I can talk about how often I do things. | I can understand results and announcements on Sports Day.
+
+@LISTEN 1 | At the Doctor's | Listening for problems and advice | الاستماع إلى المشكلات والنصائح
+kagan: RallyCoach | Numbered Heads Together
+vocab: What's the matter? | ما المشكلة؟ | 🤕 | What's the matter, Adam?
+vocab: sore throat | التهاب الحلق | 😷 | I have a sore throat.
+vocab: headache | صداع | 🤯 | I have a headache too.
+vocab: fever | حُمّى | 🌡️ | He has a fever at night.
+vocab: rest | يرتاح | 🛌 | You should rest at home.
+vocab: medicine | دواء | 💊 | Take this medicine after meals.
+predict: Adam feels ill. He goes to the doctor with his dad. What do you think is wrong? | يشعر آدم بالمرض فيذهب إلى الطبيبة مع والده. ما الذي تتوقع أنه يعاني منه؟
+tip: The doctor's advice starts with "You should..." or "Take...". Listen for these words to answer the advice questions. | تبدأ نصيحة الطبيبة بـ You should... أو Take... استمع لهذه الكلمات لتجيب عن أسئلة النصائح.
+script:
+WOMAN[Doctor]: Hello, Adam. Come in and sit down. What's the matter?
+ADAM: I have a sore throat, and I have a headache too.
+WOMAN[Doctor]: I'm sorry to hear that. When did it start?
+DAD: It started two days ago. He has a fever at night.
+WOMAN[Doctor]: Let me look. Open your mouth and say "aah". Hmm, your throat is red.
+WOMAN[Doctor]: Don't worry, Adam. It's a cold. You should rest at home for two days and drink lots of warm water.
+ADAM: Can I go to school tomorrow?
+WOMAN[Doctor]: No, not tomorrow. Stay at home. Take this medicine three times a day, after meals.
+DAD: Thank you, Doctor.
+end
+mcq: What is the matter with Adam? | *a sore throat and a headache | a stomachache | a toothache | a broken arm
+mcq: When did it start? | *two days ago | yesterday | last week | this morning
+mcq: What should Adam drink? | *lots of warm water | cold juice | milk | tea with sugar
+mcq: How often should Adam take the medicine? | *three times a day | once a day | two times a day | four times a day
+tf: Adam has a fever at night. | T
+tf: The doctor says Adam can go to school tomorrow. | F
+gap: Adam should take the medicine after ___. | meals
+order: Adam says what the problem is. | Dad says when it started. | The doctor looks at Adam's throat. | The doctor gives medicine.
+speak: Role-play: one student is the doctor and one is the patient. | What's the matter? — I have a ___. — You should ___.
+teach: Teach "I have a + problem" with mime: hold your head (headache), your throat (sore throat), your stomach (stomachache). Students mime when they hear the words.
+
+@LISTEN 2 | Healthy Habits | Listening for how often | الاستماع إلى معدّل التكرار
+kagan: Line-Ups | Find Someone Who
+vocab: healthy | صحّي | 🥗 | How can we be healthy?
+vocab: always | دائمًا | 💯 | Always eat breakfast.
+vocab: sometimes | أحيانًا | 🌗 | I sometimes eat sweets.
+vocab: never | أبدًا | 🚫 | I never drink fizzy drinks.
+vocab: exercise | يمارس الرياضة | 🏃 | How often do you exercise?
+vocab: energy | طاقة | ⚡ | Breakfast gives you energy.
+predict: A student interviews the P.E. teacher on the school radio. What healthy habits do you think the teacher talks about? | يحاور طالبٌ معلمَ التربية البدنية في الإذاعة المدرسية. ما العادات الصحية التي تتوقع أن يتحدث عنها؟
+tip: Listen for how often: always, usually, sometimes, never, twice a week. These words change the meaning a lot! | استمع لكلمات التكرار مثل always وusually وsometimes وnever وtwice a week، فهي تغيّر المعنى كثيرًا!
+script:
+YUSUF: Good morning, everyone! This is School Radio. Today, I'm talking to our P.E. teacher, Coach Omar. Coach, how can we be healthy?
+MAN[Coach Omar]: Great question, Yusuf. First, always eat breakfast. It gives you energy for the day.
+YUSUF: Do you eat sweets?
+MAN[Coach Omar]: Sometimes, at the weekend. But I never drink fizzy drinks. I usually drink water — about eight glasses a day.
+YUSUF: How often do you exercise?
+MAN[Coach Omar]: I run every morning, and I play basketball twice a week, on Mondays and Wednesdays.
+YUSUF: What about sleep?
+MAN[Coach Omar]: Sleep is very important! Children should sleep for ten hours every night. And never play video games before bed.
+YUSUF: Thank you, Coach Omar!
+end
+mcq: Why should you always eat breakfast? | *It gives you energy. | It's delicious. | It's quick. | Your teacher says so.
+mcq: When does Coach Omar eat sweets? | *sometimes, at the weekend | every day | never | after every meal
+mcq: How many glasses of water does he drink a day? | *about eight | about four | about ten | about two
+mcq: How many hours should children sleep? | *ten | eight | six | twelve
+tf: Coach Omar plays basketball every day. | F
+tf: Coach Omar never drinks fizzy drinks. | T
+gap: Coach Omar plays basketball on Mondays and ___. | Wednesdays, Wednesday
+order: breakfast | sweets and drinks | exercise | sleep
+speak: Tell your partner about your healthy and unhealthy habits. | I always ___. I sometimes ___. I never ___.
+teach: Make a "frequency line" on the classroom floor from never (0%) to always (100%). Students stand on the line to show how often they eat vegetables, sleep early or exercise (Line-Ups).
+
+@LISTEN 3 | Sports Day | Listening for results | الاستماع إلى النتائج
+kagan: Numbered Heads Together | Showdown
+vocab: race | سباق | 🏁 | Yusuf won the race.
+vocab: first place | المركز الأول | 🥇 | In first place is Yusuf.
+vocab: team | فريق | 👥 | Ben is in the Green Team.
+vocab: long jump | الوثب الطويل | 🦘 | Sami won the long jump.
+vocab: record | رقم قياسي | 📈 | That's a new school record!
+vocab: points | نقاط | 🔢 | The Blue Team has forty points.
+predict: It's Sports Day at school. What information do you hear from the announcer? | إنه يوم الرياضة في المدرسة. ما المعلومات التي تسمعها من المذيع؟
+tip: Listen for first, second and third, and for team colors. Write the names next to 1st, 2nd and 3rd. | استمع لكلمات first وsecond وthird ولألوان الفرق، واكتب الأسماء بجانب الأول والثاني والثالث.
+script:
+ANNOUNCER: Welcome, everyone, to our school Sports Day!
+ANNOUNCER: Here are the results of the one hundred meter race. In first place, from the Blue Team: Yusuf!
+ANNOUNCER: In second place, from the Red Team: Adam. And in third place, from the Green Team: Ben. Well done, boys!
+ANNOUNCER: Now the long jump. Sami from the Blue Team jumped three meters and ten centimeters! That's a new school record!
+ANNOUNCER: Next is the sack race. Please go to the football field.
+ANNOUNCER: After the sack race, there is a break for juice and fruit near the main gate.
+ANNOUNCER: At the moment, the Blue Team has forty points, the Red Team has thirty-five points and the Green Team has twenty-eight points. Good luck, everyone!
+end
+mcq: Who came first in the race? | *Yusuf | Adam | Ben | Sami
+mcq: Which team is Ben in? | *the Green Team | the Blue Team | the Red Team | the Yellow Team
+mcq: What did Sami do? | *He set a new school record in the long jump. | He won the race. | He came second in the sack race. | He came third in the long jump.
+mcq: Where is the break? | *near the main gate | on the football field | in the classroom | in the gym
+tf: The sack race is in the gym. | F
+tf: The Red Team has the most points. | F
+gap: The Green Team has ___ points. | twenty-eight, 28
+order: the race results | the long jump | the sack race | the break
+speak: Be the announcer! Give the results of a race in your class. | In first place is ___. In second place is ___. In third place is ___.
+teach: After listening, run a thirty-second "mini sports day" in class (for example, who can name the most body parts in thirty seconds) and let students announce the results.
+
+@SPEAK 1 | What's the Matter? | Saying what's wrong and giving advice | قول ما المشكلة وتقديم النصيحة
+kagan: RallyCoach | Inside-Outside Circle
+model:
+MS_GREEN: Ben, you look tired. What's the matter?
+BEN: I have a pain in my eye, Ms. Green. It hurts.
+MS_GREEN: Oh dear. Did you play video games late last night?
+BEN: Yes, I did. I played until eleven o'clock.
+MS_GREEN: That's very late. You should rest your eyes. You shouldn't look at a screen for a long time.
+BEN: Okay. Can I go to the school nurse?
+MS_GREEN: Yes, of course. Take Sami with you.
+BEN: Thank you, Ms. Green. I'll go to bed early tonight.
+end
+roles: MS_GREEN | BEN
+chunks: What's the matter? = ما الأمر؟ | I have a pain in my ___. = عندي ألم في ___. | It hurts. = إنه يؤلمني. | You should rest. = يجب أن ترتاح. | You shouldn't ___. = لا ينبغي أن ___.
+sound: pairs | /eɪ/ or /aɪ/? | /eɪ/ (pain) starts with "e" and moves to "i". /aɪ/ (pine) starts with a wide-open "a" and moves to "i". | يبدأ الصوت /eɪ/ كما في pain بـ e ثم ينتقل إلى i، أما /aɪ/ كما في pine فيبدأ بـ a مفتوحة واسعة ثم ينتقل إلى i.
+pair: pain | pine
+pair: wait | white
+pair: lake | like
+pair: main | mine
+pair: lane | line
+task: Role-play with a partner: one has a health problem, the other gives two pieces of advice. | What's the matter? — I have a ___. — You should ___. You shouldn't ___.
+cando: I can ask "What's the matter?" | I can give advice with should and shouldn't. | I can hear /eɪ/ and /aɪ/.
+teach: Show the mouth opening with your hand: a small opening for /eɪ/ and a big opening for /aɪ/. Students copy it with their own hand under their chin.
+
+@SPEAK 2 | How Often Do You...? | Asking about habits | السؤال عن العادات
+kagan: Find Someone Who | Three-Step Interview
+model:
+ADAM: Sami, let's do our health survey. How often do you eat vegetables?
+SAMI: I eat vegetables every day. My mom makes salad for lunch.
+ADAM: Good! How often do you eat fast food?
+SAMI: Sometimes. Maybe once a week, on Thursday.
+ADAM: How often do you brush your teeth?
+SAMI: Twice a day — in the morning and before bed.
+ADAM: And how often do you exercise?
+SAMI: I swim three times a week. I'm in the swimming club!
+ADAM: Wow! Your answers are very healthy. You get ten out of ten!
+end
+roles: ADAM | SAMI
+chunks: How often do you ___? = كم مرة ___؟ | every day = كل يوم | once a week = مرة في الأسبوع | twice a day = مرتين في اليوم | three times a week = ثلاث مرات في الأسبوع
+sound: pairs | /s/ or /ʃ/? | For /s/ (sip), smile and push air between your teeth: sss. For /ʃ/ (ship), make your lips round and push them forward: shhh. | لنطق /s/ كما في sip ابتسم وادفع الهواء بين أسنانك، ولنطق /ʃ/ كما في ship اجعل شفتيك مستديرتين ومدفوعتين إلى الأمام.
+pair: sip | ship
+pair: see | she
+pair: sort | short
+pair: sell | shell
+pair: save | shave
+task: Do a health survey in your group. Ask four "How often...?" questions and report the results to the class. | How often do you ___? — I ___ every day / once a week / never.
+cando: I can ask "How often...?" | I can talk about my habits. | I can hear /s/ and /ʃ/.
+teach: After the survey, groups report with numbers: "Three students eat vegetables every day." This connects speaking with simple maths and makes reporting meaningful.
+
+@CHECK
+check: L1#5 | What does the doctor ask Adam to say? | *aah | hello | ouch | yes
+check: L1#6 | How long should Adam rest at home? | *two days | one week | three days | one day
+check: L2#8 | What should you never do before bed? | *play video games | drink water | read a book | brush your teeth
+check: L3#6 | What can students have in the break? | *juice and fruit | water and cake | sandwiches | ice cream

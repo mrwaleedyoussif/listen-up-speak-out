@@ -1,0 +1,473 @@
+#GRADE 3
+
+@UNIT 4 | Food I Like | طعام أحبه | 🍎
+goals: I can talk about food I like and don't like. | I can order food politely. | I can understand simple steps in order.
+
+@LISTEN 1 | At the Lunch Table | Listening for likes and dislikes | الاستماع إلى ما يحبه الناس وما لا يحبونه
+kagan: Find Someone Who | RallyRobin
+vocab: lunch box | علبة الغداء | 🍱 | What's in your lunch box?
+vocab: sandwich | شطيرة | 🥪 | I have a cheese sandwich.
+vocab: cheese | جبن | 🧀 | I like cheese.
+vocab: carrot | جزر | 🥕 | Carrots are good for your eyes.
+vocab: dates | تمر | 🌴 | I love dates!
+vocab: dessert | حلوى بعد الطعام | 🍮 | What's for dessert?
+predict: Three boys eat lunch together. What food do you think they have? | ثلاثة أولاد يتناولون الغداء معًا. ما الطعام الذي تتوقع أنهم يحملونه؟
+tip: "I love" and "I like" mean yes. "I don't like" means no. Listen for "don't". | عبارتا I love وI like تعنيان الإعجاب، أما I don't like فتعني عدم الإعجاب. انتبه لكلمة don't.
+script:
+ADAM: Mmm, I love chicken and rice! What's in your lunch box, Ben?
+BEN: A cheese sandwich and an apple. I like cheese, but I don't like apples very much.
+SAMI: I love apples! Do you want my banana? Then I can have your apple.
+BEN: Yes, please! I like bananas.
+ADAM: Sami, do you like carrots?
+SAMI: No, I don't. I don't like carrots at all.
+ADAM: I like carrots. They're good for your eyes!
+BEN: What's for dessert?
+ADAM: My mom made dates for me. Do you want one?
+SAMI: Yes, please! I love dates!
+end
+mcq: What does Adam love? | *chicken and rice | cheese sandwiches | carrots and dates | apples
+mcq: What does Ben not like very much? | *apples | cheese | bananas | dates
+mcq: What does Sami give Ben? | *a banana | an apple | a carrot | a date
+mcq: Why does Adam like carrots? | *They're good for your eyes. | They're sweet. | His mom likes them. | They're orange.
+tf: Sami likes carrots. | F
+tf: Ben has a cheese sandwich. | T
+tf: Adam has dates for dessert. | T
+order: Adam talks about chicken and rice. | Ben gets a banana. | Adam asks about carrots. | Sami takes a date.
+speak: Tell your partner two foods you like and one food you don't like. | I like ___ and ___. I don't like ___.
+teach: Draw a smiley face and a sad face on the board. During the first listening, students show thumbs up or thumbs down for each food they hear.
+
+@LISTEN 2 | Breakfast Time | Listening for food and numbers | الاستماع إلى الأطعمة والكميات
+kagan: Numbered Heads Together | Quiz-Quiz-Trade
+vocab: breakfast | فطور | 🍳 | Breakfast is ready!
+vocab: egg | بيضة | 🥚 | Can I have two eggs?
+vocab: bread | خبز | 🍞 | I like bread with honey.
+vocab: honey | عسل | 🍯 | Here's the honey.
+vocab: milk | حليب | 🥛 | A big glass of milk, please.
+vocab: juice | عصير | 🧃 | Orange juice, please.
+predict: It's Friday morning. Dad makes breakfast for the family. What do they want? | إنه صباح الجمعة، والأب يعدّ الفطور للعائلة. ماذا يريدون أن يأكلوا ويشربوا؟
+tip: Listen for numbers before food: two eggs, one egg. And listen for "or": milk or juice? | استمع للأعداد قبل أسماء الطعام مثل two eggs، واستمع لكلمة or التي تعني الاختيار.
+script:
+DAD: Good morning! It's Friday. I'm making a big breakfast.
+NOOR: Yay! Can I have two eggs, please?
+DAD: Of course. Sami, how many eggs do you want?
+SAMI: Just one egg, please. And some bread with honey.
+DAD: Here's the honey. Noor, do you want milk or orange juice?
+NOOR: Milk, please. A big glass!
+DAD: And you, Sami?
+SAMI: Orange juice, please.
+MOM: I'd like a cup of tea, please. With no sugar.
+DAD: Okay. Two eggs for Noor, one egg for Sami, a big glass of milk, an orange juice and a tea with no sugar. Breakfast is ready!
+end
+mcq: How many eggs does Noor want? | *two | one | three | four
+mcq: What does Sami have with his bread? | *honey | cheese | jam | butter
+mcq: What does Noor drink? | *a big glass of milk | orange juice | tea | water
+mcq: How does Mom like her tea? | *with no sugar | with milk | with honey | with two sugars
+tf: It is Friday morning. | T
+tf: Sami wants two eggs. | F
+tf: Mom makes the breakfast. | F
+order: Noor asks for eggs. | Sami asks for bread with honey. | Noor asks for milk. | Mom asks for tea.
+speak: Tell your partner about your breakfast. | For breakfast, I have ___. I drink ___.
+teach: Make a "breakfast menu" on the board with pictures. Students listen and tick what each person orders in a different color: blue for Noor, green for Sami, red for Mom.
+
+@LISTEN 3 | A Picnic in the Park | Listening for the order of events | الاستماع إلى ترتيب الأحداث
+kagan: Line-Ups | RallyCoach
+vocab: picnic | نزهة | 🌳 | Let's have a picnic.
+vocab: park | حديقة عامة | 🏞️ | We go to the park.
+vocab: blanket | بطانية | 🟫 | Put the blanket on the grass.
+vocab: grass | عشب | 🌱 | The grass is green.
+vocab: basket | سلة | 🧺 | Open the basket.
+vocab: rubbish | قمامة | 🗑️ | Put the rubbish in the bin.
+predict: Grandpa takes the children for a picnic. What do they do first? What do they do last? | يأخذ الجد الأطفال في نزهة. ماذا يفعلون أولًا؟ وماذا يفعلون في النهاية؟
+tip: Order words help you: first, next, then, after lunch. Number the actions 1, 2, 3, 4 as you listen. | كلمات الترتيب تساعدك مثل first وnext وthen وafter lunch. رقّم الأحداث 1، 2، 3، 4 أثناء الاستماع.
+script:
+NARRATOR: It's a sunny Saturday. Grandpa takes Sami and Noor to the park.
+GRANDPA: First, let's find a good place. Look, under that big tree!
+SAMI: Okay. Now, let's put the blanket on the grass.
+GRANDPA: Good. Next, open the basket. What's inside, Noor?
+NOOR: There are sandwiches, oranges and a bottle of water.
+GRANDPA: Let's wash our hands first. Here's some water.
+SAMI: Now can we eat?
+GRANDPA: Yes! Let's eat. Then we can play football.
+NARRATOR: After lunch, they play football. Then they put the rubbish in the bin. What a great day!
+end
+mcq: Where do they sit? | *under a big tree | next to the lake | on a bench | in the car
+mcq: What do they put on the grass? | *a blanket | a basket | a ball | a bag
+mcq: What is NOT in the basket? | *cake | sandwiches | oranges | water
+mcq: What do they do after lunch? | *play football | go home | wash their hands | sleep
+tf: It is a rainy day. | F
+tf: They wash their hands before they eat. | T
+tf: They leave the rubbish on the grass. | F
+order: They find a place under a tree. | They put the blanket on the grass. | They wash their hands. | They play football.
+speak: Tell your partner about a picnic. Use first, then and after that. | First, we ___. Then, we ___. After that, we ___.
+teach: Give each group four picture cards of the picnic steps. They put the cards in order while listening, then retell the picnic using "first, then, after that". Praise anyone who mentions putting the rubbish in the bin.
+
+@SPEAK 1 | Do You Like...? | Asking about likes and dislikes | السؤال عن الأشياء المحبوبة وغير المحبوبة
+kagan: Find Someone Who | Inside-Outside Circle
+model:
+NOOR: Lina, do you like pancakes?
+LINA: Yes, I do! I love pancakes with honey.
+NOOR: Me too! Do you like eggs?
+LINA: No, I don't. I don't like eggs.
+NOOR: Really? I like eggs very much. What about apples?
+LINA: Yes, I do. Red apples are my favorite.
+NOOR: Let's have apples and pancakes for our snack!
+LINA: Great idea!
+end
+roles: NOOR | LINA
+chunks: Do you like ___? = هل تحب ___؟ | Yes, I do. = نعم، أحبه. | No, I don't. = لا، لا أحبه. | ___ is my favorite. = ___ هو المفضّل لديّ. | Great idea! = فكرة رائعة!
+sound: pairs | /e/ or /æ/? | For /e/ (bed), open your mouth a little. For /æ/ (bad), open your mouth wide and drop your jaw. | لنطق /e/ كما في bed افتح فمك قليلًا، ولنطق /æ/ كما في bad افتح فمك واسعًا وأنزل فكّك.
+pair: bed | bad
+pair: pen | pan
+pair: men | man
+pair: said | sad
+pair: head | had
+task: Make a class food survey. Ask five friends about three foods. | Do you like ___? — Yes, I do. / No, I don't.
+cando: I can ask about likes. | I can answer "Yes, I do" or "No, I don't". | I can hear /e/ and /æ/.
+teach: Put a finger under your chin: your jaw drops more for /æ/ than for /e/. Students check their own jaws as they repeat bed–bad.
+
+@SPEAK 2 | I'd Like a Sandwich, Please | Ordering food politely | طلب الطعام بأدب
+kagan: Fan-N-Pick | Mix-Pair-Share
+model:
+MAN[Waiter]: Hello! Are you ready to order?
+SAMI: Yes, please. I'd like a chicken sandwich, please.
+MAN[Waiter]: Anything else?
+SAMI: And a small salad, please.
+MAN[Waiter]: Would you like a drink?
+SAMI: Yes. A strawberry juice, please.
+MAN[Waiter]: Okay. A chicken sandwich, a small salad and a strawberry juice. Is that all?
+SAMI: Yes, thank you.
+MAN[Waiter]: That's twenty-five riyals, please.
+SAMI: Here you are.
+end
+roles: SAMI | MAN
+chunks: I'd like ___, please. = أريد ___ من فضلك. | Anything else? = هل تريد شيئًا آخر؟ | Would you like a drink? = هل تريد مشروبًا؟ | Is that all? = هل هذا كل شيء؟ | That's twenty riyals. = المبلغ عشرون ريالًا.
+sound: sort | How many beats? | 1 beat ; 2 beats ; 3 beats | Some English words start with two consonants, like "sn" or "str". Don't add a vowel before them: say "snack", not "isnack" or "sinack". Listen and count the beats. | تبدأ بعض الكلمات الإنجليزية بحرفين ساكنين مثل sn أو str. لا تضف حركة قبلهما: قل snack وليس isnack أو sinack. استمع وعدّ المقاطع.
+item: snack | 1
+item: salad | 2
+item: strawberry | 3
+item: spoon | 1
+item: sandwich | 2
+item: tomato | 3
+item: plate | 1
+item: smoothie | 2
+item: banana | 3
+task: Role-play a café. One student is the waiter and one is the customer. Then change roles. | I'd like ___, please. — Anything else? — ___. — That's ___ riyals.
+cando: I can order food politely. | I can answer "Anything else?" | I can say words that start with two consonants.
+teach: Set up a "café" with a menu card and toy money. Students take turns as waiter and customer; the waiter must repeat the order back, just like in the model.
+
+@CHECK
+check: L1#8 | What does Ben ask about? | *dessert | drinks | lunch boxes | carrots
+check: L2#8 | What does Sami drink? | *orange juice | milk | tea | water
+check: L3#1 | What day is it? | *Saturday | Friday | Sunday | Monday
+check: L3#5 | What fruit is in the basket? | *oranges | apples | bananas | grapes
+
+@UNIT 5 | Animals Around Us | الحيوانات من حولنا | 🐘
+goals: I can describe animals. | I can talk about what animals and people can do. | I can understand information about a pet.
+
+@LISTEN 1 | At the Zoo | Listening to descriptions | الاستماع إلى الأوصاف
+kagan: Showdown | Think-Pair-Share
+vocab: zoo | حديقة الحيوانات | 🦁 | We visit the zoo.
+vocab: giraffe | زرافة | 🦒 | The giraffe is very tall.
+vocab: elephant | فيل | 🐘 | The elephant has big ears.
+vocab: tiger | نمر | 🐯 | The tiger has stripes.
+vocab: monkey | قرد | 🐒 | The monkey loves bananas.
+vocab: neck | رقبة | 🦒 | It has a long neck.
+predict: A zookeeper describes four animals. Can you guess them before the children do? | يصف حارس حديقة الحيوانات أربعة حيوانات. هل تستطيع أن تخمّنها قبل الأطفال؟
+tip: Listen for describing words: tall, big, small, long, and colors. Guess the animal before you hear its name! | استمع لكلمات الوصف مثل tall وbig وsmall وlong والألوان، وخمّن الحيوان قبل أن تسمع اسمه!
+script:
+MAN[Zookeeper]: Welcome to the zoo, everyone! I'm Mr. Khalid, the zookeeper. Let's see some animals.
+MAN[Zookeeper]: Look at this animal. It's very tall. It has a long neck and brown spots.
+SAMI: It's a giraffe!
+MAN[Zookeeper]: That's right. It eats leaves from the tall trees. Now look over there. This animal is big and grey. It has big ears and a long nose.
+ADAM: An elephant!
+MAN[Zookeeper]: Yes! And this animal is orange and black. It has stripes. Be careful — it's very strong!
+BEN: It's a tiger!
+MAN[Zookeeper]: Good! The last animal is small and funny. It can climb trees and it loves bananas.
+SAMI: A monkey! Can we give it a banana?
+MAN[Zookeeper]: No, sorry. Please don't feed the animals.
+end
+mcq: Which animal has a long neck? | *the giraffe | the elephant | the tiger | the monkey
+mcq: What color is the elephant? | *grey | brown | orange | black
+mcq: Which animal has stripes? | *the tiger | the giraffe | the monkey | the elephant
+mcq: Why can't Sami give the monkey a banana? | *The zookeeper says, "Don't feed the animals." | The monkey doesn't like bananas. | Sami has no bananas. | The monkey is sleeping.
+tf: The giraffe eats leaves. | T
+tf: The monkey is big and grey. | F
+tf: The zookeeper's name is Mr. Khalid. | T
+order: the giraffe | the elephant | the tiger | the monkey
+speak: Choose an animal. Describe it. Your partner guesses. | It's ___. It has ___. What is it?
+teach: Pause the track after each description (lines 2, 4, 6 and 8) and let teams show their guess on mini-whiteboards before the children in the audio say it.
+
+@LISTEN 2 | Animal Quiz | Listening for abilities | الاستماع إلى القدرات
+kagan: Numbered Heads Together | Showdown
+vocab: fly | يطير | 🕊️ | A penguin can't fly.
+vocab: swim | يسبح | 🏊 | It can swim very well.
+vocab: run | يركض | 🏃 | A camel can run fast.
+vocab: jump | يقفز | 🦘 | A kangaroo can jump high.
+vocab: climb | يتسلّق | 🧗 | A fish can't climb.
+vocab: camel | جمل | 🐪 | The camel lives in the desert.
+predict: Two boys are in a TV animal quiz. What questions do you think they hear? | ولدان يشاركان في مسابقة تلفزيونية عن الحيوانات. ما الأسئلة التي تتوقع أنهما يسمعانها؟
+tip: "Can" means yes, "can't" means no. "Can't" is long and strong. | can تعني نعم يستطيع، وcan't تعني لا يستطيع وتُنطق طويلة وقوية.
+script:
+WOMAN[Presenter]: Welcome to Animal Quiz! Today, Adam and Ben are here. Are you ready, boys?
+ADAM: Yes, we are!
+WOMAN[Presenter]: First question, Adam. Can a penguin fly?
+ADAM: No, it can't. But it can swim very well.
+WOMAN[Presenter]: Correct! One point for Adam. Ben, here's your question. Can a camel run fast?
+BEN: Yes, it can! A camel can run fast, and it can walk for many days with no water.
+WOMAN[Presenter]: Excellent! One point for Ben. Adam, which animal can jump very high and has a pocket for its baby?
+ADAM: A kangaroo!
+WOMAN[Presenter]: Yes! Two points for Adam. Last question, Ben. Can a fish climb trees?
+BEN: Ha ha! No, it can't! A fish can't climb.
+WOMAN[Presenter]: Correct! Adam has two points and Ben has two points. It's a draw!
+end
+mcq: What can a penguin do very well? | *swim | fly | climb | jump
+mcq: What can a camel do? | *walk for many days with no water | fly over the desert | climb trees | jump very high
+mcq: Which animal has a pocket for its baby? | *a kangaroo | a camel | a penguin | a monkey
+mcq: Who wins the quiz? | *Nobody. It's a draw. | Adam | Ben | the presenter
+tf: A penguin can fly. | F
+tf: Adam answers the kangaroo question. | T
+tf: Ben gets three points. | F
+order: the penguin question | the camel question | the kangaroo question | the fish question
+speak: Ask your partner three "Can a ...?" quiz questions about animals. | Can a ___ ___? — Yes, it can. / No, it can't.
+teach: Run the class as a quiz show after listening: two teams, one buzzer. The presenter (a student) reads a "Can a ...?" question and the team must answer with "Yes, it can" or "No, it can't".
+
+@LISTEN 3 | My Pet Parrot | Listening for specific information | الاستماع إلى معلومات محددة
+kagan: Three-Step Interview | Talking Chips
+vocab: pet | حيوان أليف | 🐾 | Do you have a pet?
+vocab: parrot | ببغاء | 🦜 | My parrot is green.
+vocab: cage | قفص | 🏠 | I clean his cage.
+vocab: seeds | بذور | 🌻 | He eats seeds.
+vocab: clean | ينظّف | 🧹 | We clean the cage on Fridays.
+vocab: fresh water | ماء نقي | 💧 | He needs fresh water.
+predict: Yusuf talks to his class about his pet. What do you want to know about it? | يتحدث يوسف إلى زملائه عن حيوانه الأليف. ماذا تريد أن تعرف عنه؟
+tip: Before you listen, read the questions. They tell you what to listen for: age, food, days. | اقرأ الأسئلة قبل الاستماع؛ فهي تخبرك بما يجب أن تستمع إليه مثل العمر والطعام والأيام.
+script:
+YUSUF: Hello, everyone. This is my pet. His name is Kiwi. He's a parrot.
+YUSUF: Kiwi is green and yellow. He's two years old. He can say three words: hello, Yusuf, and water!
+YUSUF: Every morning, I give Kiwi food and fresh water. He eats seeds and fruit. His favorite fruit is grapes.
+YUSUF: On Fridays, I clean his cage with my dad.
+MR_HASSAN: Thank you, Yusuf. Does Kiwi sleep at night?
+YUSUF: Yes, he does. We put a blanket on his cage. Then he sleeps.
+MR_HASSAN: Very interesting. Can he fly?
+YUSUF: Yes, he can. He flies in my bedroom for one hour every day.
+end
+mcq: What is Kiwi? | *a parrot | a cat | a fish | a rabbit
+mcq: How old is Kiwi? | *two | three | one | four
+mcq: What is Kiwi's favorite fruit? | *grapes | bananas | apples | oranges
+mcq: When does Yusuf clean the cage? | *on Fridays | every morning | at night | on Mondays
+tf: Kiwi can say three words. | T
+tf: Yusuf cleans the cage with his mom. | F
+tf: Kiwi flies in the garden every day. | F
+order: Yusuf says Kiwi's name. | Yusuf talks about Kiwi's food. | Yusuf talks about the cage. | Yusuf says Kiwi can fly.
+speak: Tell your partner about a pet you have or want. | My pet is a ___. Its name is ___. It eats ___.
+teach: Remind students that pets need care every day. After listening, groups make a "Pet Care Poster" with three sentences: I give it..., I clean..., It sleeps...
+
+@SPEAK 1 | Guess the Animal | Asking yes/no questions in a game | طرح أسئلة نعم/لا في لعبة
+kagan: Inside-Outside Circle | Fan-N-Pick
+model:
+BEN: Let's play a guessing game. I'm thinking of an animal.
+SAMI: Okay. Is it big?
+BEN: Yes, it is. It's very big and it's grey.
+SAMI: Does it have a long nose?
+BEN: No, it doesn't. It has a big mouth and it lives in the water.
+SAMI: Hmm... Is it a hippo?
+BEN: Yes! Only three questions. Great job! Now it's your turn.
+SAMI: Okay. I'm thinking of a bird. It's thin and pink. It stands on one leg.
+BEN: It's a flamingo!
+end
+roles: BEN | SAMI
+chunks: I'm thinking of an animal. = أفكّر في حيوان. | Is it big? = هل هو كبير؟ | Does it have ___? = هل لديه ___؟ | It lives in the water. = إنه يعيش في الماء. | Now it's your turn. = الآن دورك.
+sound: pairs | /θ/ or /s/? | For /θ/ (think), put your tongue between your teeth and blow gently — like ث in Arabic. For /s/ (sink), keep your tongue behind your teeth. | لنطق /θ/ كما في think ضع لسانك بين أسنانك وانفخ برفق مثل حرف الثاء، أما /s/ كما في sink فيبقى اللسان خلف الأسنان.
+pair: think | sink
+pair: thick | sick
+pair: mouth | mouse
+pair: path | pass
+pair: thumb | sum
+task: Play Guess the Animal in your group. Answer only with "Yes, it is / No, it isn't / Yes, it does / No, it doesn't". | Is it ___? Does it have ___? Can it ___?
+cando: I can describe an animal. | I can ask yes/no questions in a game. | I can say /θ/ with my tongue between my teeth.
+teach: Many students change /θ/ to /s/ or /t/. Make it fun: "Show me your tongue!" Students must see their partner's tongue tip for every /θ/ word.
+
+@SPEAK 2 | Can You Swim? | Talking about abilities | التحدث عن القدرات
+kagan: Find Someone Who | RallyRobin
+model:
+LINA: Noor, can you swim?
+NOOR: Yes, I can. I swim every week with my mom.
+LINA: Wow! I can't swim. But I can ride a bike.
+NOOR: Can you ride a bike with no hands?
+LINA: Ha ha! No, I can't! Can you draw?
+NOOR: Yes, I can. I can draw cats and flowers. Can you?
+LINA: No, I can't draw very well. But I can make pancakes with my grandma!
+NOOR: Yum! Can you teach me?
+LINA: Yes, of course!
+end
+roles: LINA | NOOR
+chunks: Can you swim? = هل تستطيع السباحة؟ | Yes, I can. = نعم، أستطيع. | No, I can't. = لا، لا أستطيع. | I can ride a bike. = أستطيع ركوب الدراجة. | Can you teach me? = هل يمكنك أن تعلّمني؟
+sound: pairs | can or can't? | In sentences, "can" is short and weak: /kən/. "Can't" is long and strong, and it ends with /t/. | في الجمل تُنطق can قصيرة وضعيفة /kən/، أما can't فتُنطق طويلة وقوية وتنتهي بصوت /t/.
+pair: I can swim. | I can't swim.
+pair: She can draw. | She can't draw.
+pair: We can jump. | We can't jump.
+pair: He can cook. | He can't cook.
+pair: They can climb. | They can't climb.
+task: Find Someone Who: walk around and find a friend for each ability. | Can you ___? — Yes, I can. / No, I can't.
+cando: I can talk about what I can and can't do. | I can ask "Can you ...?" | I can hear the difference between can and can't.
+teach: Students show an open hand for "can" and a closed fist for "can't" while they listen. This keeps everyone active and shows you who hears the difference.
+
+@CHECK
+check: L1#6 | What does the zookeeper say about the tiger? | *It's very strong. | It's very small. | It's very funny. | It's very tall.
+check: L2#10 | What does Ben say about a fish? | *It can't climb. | It can fly. | It can run fast. | It can jump high.
+check: L3#2 | What colors is Kiwi? | *green and yellow | green and blue | red and yellow | blue and yellow
+check: L3#6 | What do they put on the cage at night? | *a blanket | a box | a towel | a bag
+
+@UNIT 6 | My Day | يومي | ⏰
+goals: I can talk about my daily routine. | I can ask and say the time. | I can understand days and plans after school.
+
+@LISTEN 1 | Time to Get Up! | Listening for times | الاستماع إلى الأوقات
+kagan: Line-Ups | Timed Pair Share
+vocab: get up | يستيقظ وينهض | ⏰ | I get up at six o'clock.
+vocab: get dressed | يرتدي ملابسه | 👕 | I wash my face and get dressed.
+vocab: o'clock | تمامًا (في الساعة) | 🕖 | The bus comes at seven o'clock.
+vocab: half past | والنصف | 🕡 | I have breakfast at half past six.
+vocab: homework | واجب منزلي | 📝 | I do my homework after school.
+vocab: go to bed | يذهب إلى النوم | 🛌 | I go to bed at nine o'clock.
+predict: Sami tells us about his school day. What time do you think he gets up? | يحدثنا سامي عن يومه الدراسي. في أي ساعة تتوقع أنه يستيقظ؟
+tip: Times come after "at": at six o'clock, at half past six. Draw the clock hands as you listen. | يأتي الوقت بعد كلمة at مثل at six o'clock. ارسم عقارب الساعة أثناء الاستماع.
+script:
+SAMI: Hi! I'm Sami. Let me tell you about my school day.
+SAMI: I get up at six o'clock. I wash my face and get dressed.
+SAMI: At half past six, I have breakfast with my family. I usually eat eggs and bread.
+SAMI: The school bus comes at seven o'clock. School starts at half past seven.
+SAMI: We have lunch at twelve o'clock. I get home at two o'clock.
+SAMI: After that, I do my homework and play with Noor.
+SAMI: I have dinner at seven o'clock, and I go to bed at nine o'clock. Good night!
+end
+mcq: What time does Sami get up? | *at six o'clock | at seven o'clock | at half past six | at nine o'clock
+mcq: When does Sami have breakfast? | *at half past six | at six o'clock | at seven o'clock | at half past seven
+mcq: How does Sami go to school? | *by school bus | by car | on foot | by bike
+mcq: What time does Sami go to bed? | *at nine o'clock | at seven o'clock | at eight o'clock | at ten o'clock
+tf: School starts at seven o'clock. | F
+tf: Sami gets home at two o'clock. | T
+tf: Sami plays with Noor after his homework. | T
+order: Sami gets up. | Sami has breakfast. | Sami does his homework. | Sami goes to bed.
+speak: Tell your partner three times in your day. | I get up at ___. I have lunch at ___. I go to bed at ___.
+teach: Give each student a paper clock with movable hands. They show each time as they hear it; you can see at a glance who is following.
+
+@LISTEN 2 | After School | Listening for days and plans | الاستماع إلى الأيام والخطط
+kagan: RallyRobin | Mix-Pair-Share
+vocab: after school | بعد المدرسة | 🏫 | Can you play after school?
+vocab: library | مكتبة | 📚 | I go to the library on Sunday.
+vocab: swimming lessons | دروس السباحة | 🏊 | I have swimming lessons on Monday.
+vocab: visit | يزور | 👵 | I visit my grandma.
+vocab: free | متفرّغ / غير مشغول | 🙌 | Are you free on Wednesday?
+vocab: week | أسبوع | 📅 | I'm busy this week.
+predict: Ben wants to play with Adam after school, but Adam is busy. Which day is good for them? | يريد بن أن يلعب مع آدم بعد المدرسة، لكن آدم مشغول. أي يوم يناسبهما؟
+tip: Make a little chart in your notebook: Sunday, Monday, Tuesday, Wednesday. Write one activity for each day. | ارسم في دفترك قائمة بالأيام: الأحد، الاثنين، الثلاثاء، الأربعاء، واكتب نشاطًا واحدًا لكل يوم.
+script:
+BEN: Adam, can you play after school this week?
+ADAM: Let me think. On Sunday, I go to the library with my brother.
+BEN: What about Monday?
+ADAM: On Monday, I have swimming lessons. And on Tuesday, I visit my grandma.
+BEN: Oh. Are you free on Wednesday?
+ADAM: Yes! I'm free on Wednesday. Let's play football in the park.
+BEN: Great! What time?
+ADAM: At four o'clock. Is that okay?
+BEN: Yes, that's perfect. See you on Wednesday at four!
+end
+mcq: Where does Adam go on Sunday? | *to the library | to the park | to his grandma's house | to swimming lessons
+mcq: When does Adam have swimming lessons? | *on Monday | on Sunday | on Tuesday | on Wednesday
+mcq: What do the boys want to do on Wednesday? | *play football in the park | go to the library | visit Grandma | go swimming
+mcq: What time do they meet? | *at four o'clock | at two o'clock | at five o'clock | at three o'clock
+tf: Adam goes to the library with his brother. | T
+tf: Adam visits his grandma on Monday. | F
+tf: Ben and Adam meet on Thursday. | F
+order: Sunday: the library | Monday: swimming lessons | Tuesday: Grandma | Wednesday: football
+speak: Tell your partner what you do after school on two days. | On ___, I ___. On ___, I ___.
+teach: Ask students to draw a five-day "After School" diary (Sunday to Thursday). Partners compare diaries and find one free day they share, just like Ben and Adam.
+
+@LISTEN 3 | A Busy Saturday | Listening for sequence words | الاستماع إلى كلمات التسلسل
+kagan: Line-Ups | Numbered Heads Together
+vocab: busy | مشغول | 🏃 | Saturday is my busy day.
+vocab: tidy | يرتّب | 🧹 | I tidy my bedroom.
+vocab: first | أولًا | 1️⃣ | First, I tidy my room.
+vocab: then | ثم | ➡️ | Then, I help Mom.
+vocab: mall | مركز تسوّق | 🛍️ | We go to the mall.
+vocab: tired | متعب | 😴 | I'm very tired!
+predict: Noor says Saturday is her busy day. What do you think she does? | تقول نور إن يوم السبت هو يومها المزدحم. ماذا تتوقع أنها تفعل فيه؟
+tip: Listen for time words that start each sentence: first, then, after lunch, in the afternoon, in the evening. | استمع لكلمات الزمن في بداية كل جملة مثل first وthen وafter lunch وin the afternoon وin the evening.
+script:
+NOOR: Saturday is my busy day! First, I tidy my bedroom. I put my toys in the box.
+NOOR: Then, I help Mom in the kitchen. We make pizza for lunch.
+NOOR: After lunch, I read a story with Grandpa. Today the story is about a clever fox.
+NOOR: In the afternoon, we go to the mall. I buy a new notebook for school.
+NOOR: In the evening, I call my friend Lina. We talk for a long time!
+NOOR: Then I have a bath, and I go to bed early. I'm very tired!
+end
+mcq: What does Noor do first? | *She tidies her bedroom. | She makes pizza. | She reads a story. | She goes to the mall.
+mcq: What do Noor and Mom make? | *pizza | pancakes | a cake | sandwiches
+mcq: What is the story about? | *a clever fox | a funny monkey | a big tiger | a small cat
+mcq: What does Noor buy? | *a notebook | a toy | a story book | a bag
+tf: Noor reads with Grandpa after lunch. | T
+tf: Noor goes to the mall in the morning. | F
+tf: Noor goes to bed late. | F
+order: She tidies her bedroom. | She helps Mom in the kitchen. | She goes to the mall. | She calls Lina.
+speak: Tell your partner about your Saturday. Use first and then. | First, I ___. Then, I ___. In the evening, I ___.
+teach: Mime each activity (tidying, cooking, reading, shopping, phoning) and let students say the sequence word that goes with it. Then they retell Noor's day in the correct order.
+
+@SPEAK 1 | What Time Is It? | Asking and telling the time | السؤال عن الوقت والإخبار به
+kagan: Quiz-Quiz-Trade | Inside-Outside Circle
+model:
+SAMI: Excuse me, Dad. What time is it?
+DAD: It's half past three.
+SAMI: Oh no! My chess club starts at four o'clock.
+DAD: Don't worry. It's close. Put on your shoes.
+SAMI: Where's my watch?
+DAD: It's on the chair in the kitchen.
+SAMI: Got it! What time do we leave?
+DAD: In ten minutes.
+SAMI: Okay. I'm ready, Dad! Let's go!
+end
+roles: SAMI | DAD
+chunks: What time is it? = كم الساعة؟ | It's three o'clock. = الساعة الثالثة تمامًا. | It's half past three. = الساعة الثالثة والنصف. | What time do we leave? = متى نغادر؟ | I'm ready! = أنا جاهز!
+sound: pairs | /tʃ/ or /ʃ/? | /tʃ/ (chair) starts with a stop, like "t" + "sh": ch! /ʃ/ (share) is a long soft sound with no stop: shhh. | يبدأ /tʃ/ كما في chair بوقفة قصيرة مثل t ثم sh، أما /ʃ/ كما في share فصوت ناعم ممتد بلا وقفة مثل الشين.
+pair: chair | share
+pair: watch | wash
+pair: chip | ship
+pair: cheap | sheep
+pair: catch | cash
+task: Draw five clocks with different times. Ask your partner "What time is it?" | What time is it? — It's ___ o'clock. / It's half past ___.
+cando: I can ask and say the time. | I can use "o'clock" and "half past". | I can say /tʃ/ and /ʃ/ clearly.
+teach: For /tʃ/, students put their hand in front of their mouth and feel a quick "explosion" of air. For /ʃ/, the air flows softly like a long "shhh".
+
+@SPEAK 2 | My Dad's Day | Talking about another person's routine | التحدث عن روتين شخص آخر
+kagan: Three-Step Interview | RoundRobin
+model:
+ADAM: Ben, what does your dad do?
+BEN: He's a pilot. He flies big planes.
+ADAM: Wow! What time does he get up?
+BEN: He gets up very early, at five o'clock.
+ADAM: Five o'clock! Does he have breakfast?
+BEN: Yes, he does. He drinks coffee and eats toast. Then he drives to the airport.
+ADAM: When does he come home?
+BEN: He comes home late. Sometimes he watches the news and then goes to bed.
+ADAM: He's very busy!
+end
+roles: ADAM | BEN
+chunks: What does your dad do? = ماذا يعمل والدك؟ | What time does he get up? = متى يستيقظ؟ | He gets up at five o'clock. = يستيقظ في الساعة الخامسة. | Does he have breakfast? = هل يتناول الفطور؟ | He comes home late. = يعود إلى البيت متأخرًا.
+sound: sort | He gets, he goes, he watches: /s/, /z/ or /ɪz/? | /s/ gets ; /z/ goes ; /ɪz/ watches | Verbs with he, she and it end in -s. Like plurals, this -s has three sounds. | الأفعال مع he وshe وit تنتهي بـ -s، ولهذه النهاية ثلاثة أصوات مثل الجمع: /s/ و/z/ و/ɪz/.
+item: eats | /s/
+item: plays | /z/
+item: washes | /ɪz/
+item: walks | /s/
+item: reads | /z/
+item: catches | /ɪz/
+item: sleeps | /s/
+item: drives | /z/
+item: fixes | /ɪz/
+task: Interview a partner about someone in his family. Then tell the group. | What time does your ___ get up? — He gets up at ___. He ___ every day.
+cando: I can talk about my day. | I can talk about another person's day. | I can say he/she -s endings.
+teach: Remind students that "he gets" needs the -s. A fun signal: students hiss like a snake "sss" or buzz like a bee "zzz" when they hear the ending.
+
+@CHECK
+check: L1#3 | What does Sami usually eat for breakfast? | *eggs and bread | bread and honey | cheese and bread | eggs and rice
+check: L1#5 | What time does Sami have lunch? | *at twelve o'clock | at two o'clock | at one o'clock | at seven o'clock
+check: L2#9 | What does Ben say at the end? | *See you on Wednesday at four! | See you on Monday! | Let's go to the library! | I'm not free.
+check: L3#1 | Where does Noor put her toys? | *in the box | under the bed | on the shelf | in her bag
