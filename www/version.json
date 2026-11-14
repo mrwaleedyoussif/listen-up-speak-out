@@ -1,20 +1,20 @@
 {
- "version": "1.4.0",
+ "version": "1.5.0",
  "date": "2026-11-14",
  "notes": {
   "en": [
-   "Sign up and sign in: a teacher account with a password, and student accounts with a 4-digit PIN.",
-   "Passwords and PINs are stored only as secure hashes; wrong tries make the user wait; automatic sign-out.",
-   "A new Settings page: sounds, spoken praise, volume, text size, recording speed, animations, shadowing countdown and Arabic support.",
-   "Teacher settings: students, PIN reset, security, encrypted backups and progress reset.",
-   "An update button (🔄) and automatic updates."
+   "New department: MAP Growth Practice for Grades 3–9 (🎯 on the home page).",
+   "Reading for every grade: 6 practice units (78 questions) and 5 full mock exams of 43 questions, with the passage beside the questions.",
+   "Mock exams are scored by goal area (Literary Text, Informational Text, Vocabulary), save answers as you go, and show a full review and what to practise next.",
+   "Language Usage section added; its material is coming soon.",
+   "Teacher dashboard: MAP results for every student, with CSV download and copy."
   ],
   "ar": [
-   "التسجيل والدخول: حساب للمعلم بكلمة مرور، وحسابات للطلاب برمز من 4 أرقام.",
-   "تُحفظ كلمات المرور والرموز كبصمات آمنة فقط، مع انتظار بعد المحاولات الخاطئة وتسجيل خروج تلقائي.",
-   "صفحة إعدادات جديدة: الأصوات، كلمات التشجيع، مستوى الصوت، حجم الخط، سرعة التسجيلات، الحركة، العدّ التنازلي، والدعم بالعربية.",
-   "إعدادات المعلم: الطلاب، إعادة تعيين الرمز، الأمان، النسخ الاحتياطية المشفّرة، ومسح التقدّم.",
-   "زر للتحديث (🔄) وتحديث تلقائي."
+   "قسم جديد: التدريب على اختبار MAP Growth للصفوف 3–9 (🎯 في الصفحة الرئيسية).",
+   "القراءة لكل صف: 6 وحدات تدريب (78 سؤالًا) و5 اختبارات تجريبية كاملة من 43 سؤالًا، والنص بجانب الأسئلة.",
+   "تُصحَّح الاختبارات التجريبية حسب المجال (النص الأدبي، النص المعلوماتي، المفردات)، وتُحفظ الإجابات تلقائيًا، مع مراجعة كاملة وما يجب التدرّب عليه بعدها.",
+   "أُضيف قسم استخدام اللغة، ومادته قريبًا.",
+   "لوحة المعلم: نتائج MAP لكل طالب، مع تنزيلها أو نسخها."
   ]
  },
  "files": {}

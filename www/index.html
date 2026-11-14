@@ -444,6 +444,8 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 <script src="sfx/reactions.js"></script>
 <script src="data.js"></script>
 <script src="audio/timings.js"></script>
+<script src="map/index.js"></script>
+<script src="map.js"></script>
 <script>
 'use strict';
 /* =========================================================
@@ -464,7 +466,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.4.0';
+const APP_VER = '1.5.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -552,7 +554,7 @@ const Store = {
 };
 const starsFor = r => r >= 0.9 ? 3 : r >= 0.7 ? 2 : r >= 0.4 ? 1 : 0;
 const starHTML = n => `<span class="stars" aria-label="${n} of 3 stars">${'★'.repeat(n)}<span class="off">${'★'.repeat(3 - n)}</span></span>`;
-const arOn = g => { const s = Store.data.settings.ar || {}; return g in s ? s[g] : (g <= 4); };
+const arOn = g => { const s = Store.data.settings.ar || {}; return g in s ? s[g] : (parseInt(String(g).replace(/\D/g, ''), 10) <= 4); };
 
 /* ---------- Audio engine ---------- */
 const AU = {
@@ -816,6 +818,9 @@ const Nav = {
     const v = S.view;
     if (v === 'home') return false;
     if ((v === 'listen' || v === 'speak') && S.step > 0) { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); return true; }
+    if (v === 'map') { go('home'); return true; }
+    if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
+    if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk }); else go('mapgrade', { mg: S.mg }); return true; }
     if (v === 'grade' || v === 'teacher' || v === 'studio') go('home');
     else if (v === 'unit') go('grade', { g: S.g });
     else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
@@ -840,15 +845,16 @@ function render() {
   else if (!Auth.user()) { if (S.view !== 'signin') { for (const k of Object.keys(S)) delete S[k]; S.view = 'signin'; } }
   else if (S.view === 'setup' || S.view === 'signin') { for (const k of Object.keys(S)) delete S[k]; S.view = 'home'; }
   const IN = !!Auth.user() && S.view !== 'setup' && S.view !== 'signin', T = Auth.isT();
-  const g = S.g || null; setBand(g);
-  document.body.classList.toggle('noar', g ? !arOn(g) : false);
+  const g = S.g || null; setBand(g); if (S.mg && typeof MAPX !== "undefined") MAPX.band(S.mg);
+  const ak = S.mg ? 'm' + S.mg : g;
+  document.body.classList.toggle('noar', ak ? !arOn(ak) : false);
   document.body.classList.toggle('classmode', !!Store.data.settings.classmode);
   const me = Store.me();
   $('#app').innerHTML = `
   <header class="top"><div class="in">
-    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>by Mr. Waleed Youssef · Grades 3–6</small></span></button>
+    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>by Mr. Waleed Youssef · Grades 3–9</small></span></button>
     <span class="sp"></span>
-    ${IN ? `${g ? `<button class="chip ${arOn(g) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
+    ${IN ? `${ak ? `<button class="chip ${arOn(ak) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     ${T ? `<button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>` : ''}
     <button class="chip ${RX.on() ? 'on' : ''}" id="rxT" title="Sounds for right and wrong answers" aria-pressed="${RX.on()}">${RX.on() ? '🔔' : '🔕'} <span class="hide-sm">Sounds</span></button>
     <button class="chip" id="meT" title="My account">👤 <span class="hide-sm">${esc(me.name)}</span></button>
@@ -858,7 +864,7 @@ function render() {
   </div></header>
   <div class="wrap" id="main"></div>`;
   $$('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
-  const ar = $('#arT'); if (ar) ar.onclick = () => { const s = Store.data.settings.ar = Store.data.settings.ar || {}; s[g] = !arOn(g); Store.save(); document.body.classList.toggle('noar', !arOn(g)); ar.classList.toggle('on', arOn(g)); };
+  const ar = $('#arT'); if (ar) ar.onclick = () => { const s = Store.data.settings.ar = Store.data.settings.ar || {}; s[ak] = !arOn(ak); Store.save(); document.body.classList.toggle('noar', !arOn(ak)); ar.classList.toggle('on', arOn(ak)); };
   const meT = $('#meT'); if (meT) meT.onclick = userMenu;
   $('#updT').onclick = () => Upd.st === 'ready' ? Upd.apply(true) : Upd.panel();
   if ($('#rxT')) $('#rxT').onclick = () => { const on = !RX.on(); Store.data.settings.rx = on; Store.save(); const b = $('#rxT'); b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); b.firstChild.textContent = on ? '🔔 ' : '🔕 '; if (on) RX.praise(); else RX.hush(); };
@@ -910,6 +916,7 @@ VIEWS.home = m => {
         <span class="meta">${s.done}/${s.total} lessons · ★ ${s.stars}</span>
       </button>`; }).join('')}
   </section>
+  ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>MAP Growth practice</h2></div>${MAPX.homeCard()}` : ''}
   <div class="section-title"><h2>Practise speaking</h2></div>
   <button class="card studio-card" id="toStudio"><span class="big">🎙️</span><span style="flex:1"><h3 style="font-size:1.45rem">Shadowing Studio</h3>
     <span>Listen, then speak <b>with</b> the speaker: words light up as they are spoken. 5 steps from Listen &amp; Read to Full Run, with recording and timing feedback.</span>
@@ -923,12 +930,13 @@ VIEWS.home = m => {
       <p class="ar ar-block">الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة.</p></div>
     <img class="ab-seal" src="img/seal.svg" alt="Mr. Waleed Youssef seal" width="112" height="112">
   </section>
-  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
+  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · MAP Growth practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   if ($('#wDash', m)) $('#wDash', m).onclick = () => go('teacher');
   $('#wSet', m).onclick = () => go('settings'); $('#wOut', m).onclick = () => Auth.signOut();
   $$('[data-grade]', m).forEach(b => b.onclick = () => go('grade', { g: +b.dataset.grade }));
   $('#toStudio', m).onclick = () => go('studio');
+  const tm = $('#toMap', m); if (tm) tm.onclick = () => go('map');
 };
 
 VIEWS.grade = m => {
@@ -1376,8 +1384,9 @@ VIEWS.teacher = m => {
   <div class="section-title"><h2>Students on this device</h2></div>
   <div class="grid g2">${rows.map(({ p, per }) => `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3>${esc(p.name)} <span class="muted" style="font-size:.9rem">${esc(p.cls || '')}</span></h3>${p.id !== 'guest' ? `<button class="btn sm sec" data-del="${esc(p.id)}">🗑️</button>` : ''}</div>
     ${(() => { const t = shStats(p); return `<div class="selfrow"><span><b>🎙️ Shadowing</b></span><span>${t.min} min · ${t.lines} lines · ⭐ ${t.mastered} · 🔥 ${t.streak} days</span></div>`; })()}
-    ${per.map(x => `<div class="selfrow"><span><b>Grade ${x.g}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}</div>`).join('') || '<p>No students yet.</p>'}</div>
+    ${per.map(x => `<div class="selfrow"><span><b>Grade ${x.g}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}${typeof MAPX !== "undefined" ? MAPX.dashRows(p) : ''}</div>`).join('') || '<p>No students yet.</p>'}</div>
   <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="csv">⬇️ Download CSV</button>'}<button class="btn sec" id="cp">📋 Copy results</button>${navigator.share ? '<button class="btn sec" id="shr">📤 Share</button>' : ''}<span class="muted" id="cpm"></span></div>
+  ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>🎯 MAP Growth results</h2></div><div class="card"><p style="margin-top:0">Practice sets and mock-exam scores (percentage correct, by goal area) for every student on this device.</p><p class="ar ar-block">نتائج تدريبات واختبارات MAP التجريبية لجميع الطلاب على هذا الجهاز.</p><div class="ctrls" style="justify-content:flex-start;margin-top:10px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="mcsv">⬇️ MAP results (CSV)</button>'}<button class="btn sec" id="mcp">📋 Copy MAP results</button><span class="muted" id="mcpm"></span></div></div>` : ''}
   <div class="section-title"><h2>Back up or move students</h2></div>
   <div class="card"><p style="margin-top:0">Save every student's progress in one backup, then restore it on another device or after reinstalling the app.</p>
     <p class="ar ar-block">احفظ تقدّم جميع الطلاب في نسخة احتياطية واحدة، ثم استعدها على جهاز آخر أو بعد إعادة تثبيت التطبيق.</p>
@@ -1386,6 +1395,7 @@ VIEWS.teacher = m => {
   <div class="card"><ol style="margin:0;padding-left:20px">
     <li><b>Listening lessons (6 steps):</b> Words → Predict → Listen (twice) → Tasks → Script → Speak. The script opens only after the tasks are checked.</li>
     <li><b>Speaking lessons (6 steps):</b> Listen → Useful language → Sound Check (pronunciation) → Shadowing → Role-play → Your turn + self-check.</li>
+    <li><b>MAP Growth practice (🎯):</b> Reading for Grades 3–9 — 6 practice units (78 questions) and 5 full mock exams of 43 questions per grade, scored by goal area (Literary Text, Informational Text, Vocabulary). Mock answers are saved as students go. Language Usage is coming soon.</li>
     <li><b>Games and Unit Check:</b> three games per unit recycle the unit audio; the Unit Check gives a certificate at 70%.</li>
     <li><b>Sounds (🔔):</b> a chime and a spoken word of praise for right answers, a soft sound and a word of encouragement for wrong ones, and a celebration (fanfare, confetti, trophy) when a task is finished well. Press 🔔 to switch them off, for example during a quiet test.</li>
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
@@ -1403,6 +1413,9 @@ VIEWS.teacher = m => {
   if ($('#csv', m)) $('#csv', m).onclick = () => { if (!saveFile('listen-up-speak-out-progress.csv', '﻿' + csv(), 'text/csv')) $('#cpm', m).textContent = 'Download is blocked here — use Copy.'; };
   $('#cp', m).onclick = () => { copyText(csv()).then(() => $('#cpm', m).textContent = 'Copied! Paste into Excel or Google Sheets.', () => $('#cpm', m).textContent = 'Copy is not allowed here.'); };
   if ($('#shr', m)) $('#shr', m).onclick = () => { navigator.share({ title: 'Listen Up! Speak Out! — progress', text: csv() }).catch(() => {}); };
+  if (typeof MAPX !== "undefined") { const mc = () => MAPX.csv(list), say = t => $('#mcpm', m).textContent = t;
+    if ($('#mcsv', m)) $('#mcsv', m).onclick = () => { const t = mc(); if (!t) return say('No MAP results yet.'); if (!saveFile('map-growth-practice-results.csv', '\ufeff' + t, 'text/csv')) say('Download is blocked here — use Copy.'); };
+    $('#mcp', m).onclick = () => { const t = mc(); if (!t) return say('No MAP results yet.'); copyText(t).then(() => say('Copied! Paste into Excel or Google Sheets.'), () => say('Copy is not allowed here.')); }; }
   $('#bkS', m).onclick = () => backupFlow($('#bkm', m));
   $('#bkR', m).onclick = () => restoreFlow();
 };
@@ -2505,7 +2518,7 @@ new MutationObserver(() => bidiFix(document)).observe(document.getElementById('a
 
 /* ---------- Boot ---------- */
 if (!D) { document.getElementById('app').innerHTML = '<div class="wrap"><p style="padding:40px">data.js is missing. Keep index.html, data.js and the audio folder together.</p></div>'; }
-else { Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
+else { if (typeof MAPX !== "undefined") MAPX.register(); Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
 </script>
 <script src="pwa.js"></script>
 </body>

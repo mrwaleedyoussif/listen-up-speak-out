@@ -2,6 +2,8 @@
 
 Elementary listening & speaking program for **Grades 3–6 (CEFR A1 → A2+)** designed by Mr. Waleed Youssef: 24 units, 72 listening lessons, 48 speaking lessons, pronunciation games, Unit Checks, a Shadowing Studio with word-by-word highlighting and recording, a teacher dashboard and Arabic support.
 
+It also has a **MAP Growth Practice** department for **Grades 3–9**: for Reading, every grade has 6 practice units (78 questions) and 5 full mock exams of 43 questions, scored by goal area (Literary Text, Informational Text, Vocabulary). The Language Usage section is ready for its material. All passages and questions are original practice material; they are not NWEA test items, and the app is not made or endorsed by NWEA.
+
 - **Open the web app:** https://mrwaleedyoussif.github.io/listen-up-speak-out/
 - **Download the apps (Android, Windows):** [Releases](https://github.com/mrwaleedyoussif/listen-up-speak-out/releases/latest)
 - **How to install, update and publish (English & Arabic):** [INSTALL.md](INSTALL.md)
@@ -14,6 +16,7 @@ One app, four editions, all from the `www` folder:
 - `android/`, `ios/`: phone and tablet apps ([Capacitor](https://capacitorjs.com)), which put `www` inside a native app.
 - `electron/`: the Windows desktop app ([Electron](https://www.electronjs.org)).
 - `.github/workflows/build.yml`: every push to `main` builds the web app (GitHub Pages), the Android APK, the Windows installer and an unsigned iOS build, and publishes them on the Releases page.
+- `www/map.js`, `www/map/`: the MAP Growth department. Its content files are in `tools/map` (`map_reading_g3.json` … `map_reading_g9.json`; add `map_language_g3.json` … for Language Usage); run `python3 tools/app/build_map_data.py` after changing them.
 - `tools/`: the content pipeline (lesson sources in `tools/content`, audio and timing generators, the Teacher's Book generator) and `tools/elevenlabs` for re-voicing all audio with ElevenLabs.
 
 Local commands (Node 22, Python 3):
