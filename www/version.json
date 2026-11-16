@@ -1,20 +1,20 @@
 {
- "version": "1.5.0",
- "date": "2026-11-14",
+ "version": "1.6.0",
+ "date": "2026-11-16",
  "notes": {
   "en": [
-   "New department: MAP Growth Practice for Grades 3–9 (🎯 on the home page).",
-   "Reading for every grade: 6 practice units (78 questions) and 5 full mock exams of 43 questions, with the passage beside the questions.",
-   "Mock exams are scored by goal area (Literary Text, Informational Text, Vocabulary), save answers as you go, and show a full review and what to practise next.",
-   "Language Usage section added; its material is coming soon.",
-   "Teacher dashboard: MAP results for every student, with CSV download and copy."
+   "MAP Growth Practice: Language Usage material for Grades 3–9 (✍️ tab in the MAP department).",
+   "Every grade: 6 practice units (78 questions) with key terms, and 5 full mock exams of 43 questions — three student drafts with numbered sentences, then Writing, Grammar and Usage, and Mechanics sections.",
+   "Language Usage results are scored by goal area (Writing; Grammar and Usage; Mechanics), with smart editing habits, a full review and what to practise next.",
+   "Questions that quote a sentence now show it on its own line.",
+   "Teacher dashboard and CSV: Language Usage results and goal-area columns."
   ],
   "ar": [
-   "قسم جديد: التدريب على اختبار MAP Growth للصفوف 3–9 (🎯 في الصفحة الرئيسية).",
-   "القراءة لكل صف: 6 وحدات تدريب (78 سؤالًا) و5 اختبارات تجريبية كاملة من 43 سؤالًا، والنص بجانب الأسئلة.",
-   "تُصحَّح الاختبارات التجريبية حسب المجال (النص الأدبي، النص المعلوماتي، المفردات)، وتُحفظ الإجابات تلقائيًا، مع مراجعة كاملة وما يجب التدرّب عليه بعدها.",
-   "أُضيف قسم استخدام اللغة، ومادته قريبًا.",
-   "لوحة المعلم: نتائج MAP لكل طالب، مع تنزيلها أو نسخها."
+   "التدريب على MAP Growth: مادة استخدام اللغة للصفوف 3–9 (تبويب ✍️ في قسم MAP).",
+   "لكل صف: 6 وحدات تدريب (78 سؤالًا) مع مصطلحات مهمة، و5 اختبارات تجريبية كاملة من 43 سؤالًا: ثلاث مسودات بجمل مرقّمة ثم أقسام الكتابة والقواعد وعلامات الترقيم والإملاء.",
+   "تُصحَّح نتائج استخدام اللغة حسب المجال (الكتابة، القواعد والاستخدام، الترقيم والإملاء)، مع عادات التحرير الذكية ومراجعة كاملة وما يجب التدرّب عليه بعدها.",
+   "تظهر الجملة المقتبسة في السؤال في سطر مستقل.",
+   "لوحة المعلم وملف CSV: نتائج استخدام اللغة وأعمدة المجالات."
   ]
  },
  "files": {}

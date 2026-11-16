@@ -1,0 +1,5134 @@
+{
+ "grade": 8,
+ "subject": "Language Usage",
+ "aligned_to": "NWEA MAP Growth Language Usage goal areas (Writing: Write, Revise Texts for Purpose and Audience; Language: Understand, Edit for Grammar, Usage; Language: Understand, Edit for Mechanics) and RIT bands",
+ "note": "All drafts and questions are original practice material written for this school. They are not NWEA test items.",
+ "goals": {
+  "WR": "Writing",
+  "GU": "Grammar and Usage",
+  "ME": "Mechanics"
+ },
+ "units": [
+  {
+   "id": "U1",
+   "title": "Argument: Claims, Opposing Claims, Evidence and Cohesion",
+   "goal": "WR",
+   "skills": [
+    "Introduce a claim and distinguish it from alternate or opposing claims",
+    "Support claims with logical reasoning and relevant evidence from credible sources",
+    "Use words, phrases and clauses to create cohesion and show relationships",
+    "Organize problem-and-solution and cause-and-effect explanations"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "claim",
+     "the arguable position the writer will defend"
+    ],
+    [
+     "opposing claim",
+     "a position that disagrees with the writer and must be recognized and answered"
+    ],
+    [
+     "rebuttal",
+     "the part of an argument that explains why the opposing claim is weaker"
+    ],
+    [
+     "cohesion",
+     "the way sentences and ideas connect so that a text reads as one whole"
+    ],
+    [
+     "relevant evidence",
+     "evidence that directly supports the specific point being made"
+    ],
+    [
+     "problem-and-solution structure",
+     "a way of organizing that describes a problem, its causes and possible solutions"
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": {
+      "title": "AI Tools and Homework",
+      "genre": "draft",
+      "intro": "Rakan is writing an argument essay for his English class. Read his draft and answer the questions.",
+      "paras": [
+       "(1) Artificial intelligence tools can now write essays, solve math problems and summarize books in seconds. (2) Some educators want to ban these tools completely, while others believe students should use them freely. (3) I believe schools should allow AI tools for homework, but only with clear rules. (4) When students use AI to explain difficult ideas, they can learn at their own pace. (5) Copying an AI answer without understanding it teaches nothing. (6) Teachers could require students to describe how they used AI and what they learned. (7) Smartphones were first introduced in the early 2000s. (8) With thoughtful rules, AI can become a tutor rather than a shortcut."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence states Rakan’s claim?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 3",
+        "sentence 4"
+       ],
+       "key": "C",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence should be removed because it is not relevant to the argument?",
+       "options": [
+        "sentence 4",
+        "sentence 5",
+        "sentence 6",
+        "sentence 7"
+       ],
+       "key": "D",
+       "skill": "Identifies a sentence that does not belong",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "How does sentence 2 help the argument?",
+       "options": [
+        "It shows that there are different opinions before the writer states his own.",
+        "It gives evidence that AI tools always produce correct answers for students.",
+        "It explains how AI tools are built and trained by computer engineers.",
+        "It states the conclusion that the whole essay will try to prove."
+       ],
+       "key": "A",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which transition would BEST begin sentence 5 to create cohesion?",
+       "options": [
+        "In the very same way,",
+        "On the other hand,",
+        "As a result,",
+        "For example,"
+       ],
+       "key": "B",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which piece of evidence would BEST support sentence 4?",
+       "options": [
+        "Artificial intelligence has appeared in many science fiction movies and novels over the past fifty years.",
+        "Many technology companies are competing to create the most popular AI tools for people of all ages around the world.",
+        "Some students prefer to do their homework in the evening, while others prefer to do it early in the morning.",
+        "In one study, students who used an AI tutor to review algebra scored higher on a later test than those who did not."
+       ],
+       "key": "D",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which source would be the MOST credible for evidence about AI and learning?",
+       "options": [
+        "a comment on a forum by someone who does not give a name",
+        "a research article from a university’s education department",
+        "a blog written by a company that sells an AI homework app",
+        "a video of a student who says AI is the best invention ever"
+       ],
+       "key": "B",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "Urban Heat Islands",
+      "genre": "draft",
+      "intro": "Joury is writing an informative report about a problem and its solutions. Read her draft and answer the questions.",
+      "paras": [
+       "(1) On a summer afternoon, a city center can be several degrees hotter than the countryside around it. (2) Scientists call this effect an urban heat island. (3) Dark roads and rooftops absorb sunlight during the day and release the heat slowly at night. (4) In addition, cities have fewer trees to provide shade and cool the air. (5) Higher temperatures increase the use of air conditioners, which raises energy costs and pollution. (6) Fortunately, there are several solutions. (7) Some cities are painting rooftops white, planting trees along streets and building parks to bring temperatures down."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "How is Joury’s report mainly organized?",
+       "options": [
+        "by comparing two cities in different parts of the world",
+        "by describing a problem, its causes and possible solutions",
+        "by telling the story of a scientist in the order of events",
+        "by listing the steps for building a new city park"
+       ],
+       "key": "B",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence defines a domain-specific term?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 4",
+        "sentence 6"
+       ],
+       "key": "B",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which transition could replace “In addition” in sentence 4 without changing the meaning?",
+       "options": [
+        "Instead",
+        "However",
+        "Therefore",
+        "Furthermore"
+       ],
+       "key": "D",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of sentence 6?",
+       "options": [
+        "to restate the definition given in sentence 2",
+        "to explain in detail how modern air conditioners work",
+        "to signal a shift from the problem to its solutions",
+        "to give a specific example of a city with an urban heat island"
+       ],
+       "key": "C",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence BEST explains an effect of urban heat islands?",
+       "options": [
+        "sentence 2",
+        "sentence 3",
+        "sentence 5",
+        "sentence 7"
+       ],
+       "key": "C",
+       "skill": "Adds a detail that supports the main idea",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 7?",
+       "options": [
+        "After planting thousands of trees, one city recorded summer street temperatures up to three degrees lower.",
+        "Many people prefer to live in the countryside because it is quieter and has much less traffic.",
+        "Parks are popular places for families to walk, have picnics and play sports together on the weekends and holidays.",
+        "Air conditioners were first invented in the early 1900s to control the humidity inside factories."
+       ],
+       "key": "A",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST conclusion for the report?",
+       "options": [
+        "Summer is the hottest season of the year in most countries in the northern half of the world.",
+        "Scientists use special instruments called thermometers to measure air temperatures accurately.",
+        "Countryside areas often have farms, fields and small villages instead of tall buildings and roads.",
+        "With smart planning, cities can stay cooler, use less energy and become healthier places to live."
+       ],
+       "key": "D",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U2",
+   "title": "Narrative Time Shifts and Research from Several Sources",
+   "goal": "WR",
+   "skills": [
+    "Use transitions to show sequence and to signal shifts in time or setting",
+    "Use flashback, dialogue and precise details to develop experiences",
+    "Gather information from several sources and judge their credibility",
+    "Quote or paraphrase accurately and combine information from more than one source"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "flashback",
+     "a scene that interrupts the story to show an earlier event"
+    ],
+    [
+     "time-shift transition",
+     "a phrase that signals a change in time: years earlier, by the next morning"
+    ],
+    [
+     "setting",
+     "the time and place in which a story happens"
+    ],
+    [
+     "synthesis",
+     "combining information from several sources into one clear explanation"
+    ],
+    [
+     "primary source",
+     "a first-hand account or an original document from the time being studied"
+    ],
+    [
+     "secondary source",
+     "a source that explains or analyzes information that came from other sources"
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": {
+      "title": "The Old Photograph",
+      "genre": "draft",
+      "intro": "Saleh is writing a story. Read his draft and answer the questions.",
+      "paras": [
+       "(1) While cleaning the attic, I found a faded photograph of a boy standing beside a fishing boat. (2) The boy had my grandfather’s wide smile. (3) I was seven years old, sitting on his lap as he told me stories about the sea. (4) He described the storms that rocked his boat and the nights he slept under the stars. (5) I hadn’t thought about those stories in years. (6) Now, holding the photograph, I could almost hear his voice again. (7) I carried it downstairs to show my father."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which word in sentence 6 signals a return to the present?",
+       "options": [
+        "almost",
+        "holding",
+        "Now",
+        "again"
+       ],
+       "key": "C",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which word could replace “carried” in sentence 7 to show how much the photograph meant to Saleh?",
+       "options": [
+        "dropped",
+        "dragged",
+        "tossed",
+        "cradled"
+       ],
+       "key": "D",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which phrase would BEST begin sentence 3 to signal a flashback?",
+       "options": [
+        "As a result of cleaning,",
+        "Suddenly, I remembered a day years earlier:",
+        "At the very same moment, up in the dusty attic,",
+        "For example, in the faded old photograph,"
+       ],
+       "key": "B",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of sentences 3 and 4?",
+       "options": [
+        "to show a memory that explains why the photograph matters",
+        "to show that the narrator is afraid of storms",
+        "to describe how fishing boats are built and repaired",
+        "to explain the real reason why the attic needed to be cleaned"
+       ],
+       "key": "A",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 1 adds the MOST vivid detail about the setting?",
+       "options": [
+        "While cleaning the attic on a Saturday, I found a photograph of a boy that was faded and old.",
+        "While cleaning the attic, which is the room at the very top of our old house, I found a faded old photograph of a boy.",
+        "While cleaning the attic, I found a faded photograph, and it was a photograph of a boy.",
+        "While cleaning the dusty attic, where sunlight slipped through one cracked window, I found a faded photograph."
+       ],
+       "key": "D",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence could be added after sentence 7 to end the story with a meaningful reflection?",
+       "options": [
+        "As my father smiled at the picture, I realized that our family’s stories live on as long as we keep telling them.",
+        "Fishing boats are usually made of wood, metal or fiberglass, depending on their size and how they will be used at sea.",
+        "My father works at a bank in the city, and he usually comes home at six o’clock.",
+        "The attic was full of old boxes, broken chairs and clothes that nobody had worn for years."
+       ],
+       "key": "A",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "Research Notes: The Story of Coffee",
+      "genre": "draft",
+      "intro": "Ghala is writing a report using two sources. Read the sources and her draft, then answer the questions.",
+      "paras": [
+       "**Source A** (a history website run by a university): “Coffee plants grew wild in Ethiopia, but people in Yemen began growing coffee on farms in the 1400s. The Yemeni port of Mocha became the center of the world coffee trade.”",
+       "**Source B** (a blog post with no author named): “Coffee was invented in France in the 1700s, and everyone in the world loved it right away.”",
+       "**Draft**",
+       "(1) Coffee has a long and interesting history. (2) The plant grew wild in Ethiopia. (3) In the 1400s, farmers in Yemen started to grow coffee as a crop. (4) Soon, the port of Mocha became the center of the coffee trade. (5) Coffeehouses then spread to cities such as Cairo and Istanbul. (6) Today, coffee is one of the most popular drinks in the world."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which source is MORE credible?",
+       "options": [
+        "Source B, because it says that everyone in the world loved coffee right away",
+        "Source A, because it was written in the present tense",
+        "Source A, because it comes from a university and gives specific facts",
+        "Source B, because it is shorter and easier to understand quickly"
+       ],
+       "key": "C",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence from the draft is supported by Source A?",
+       "options": [
+        "sentence 1",
+        "sentence 3",
+        "sentence 5",
+        "sentence 6"
+       ],
+       "key": "B",
+       "skill": "Uses notes and facts accurately in writing",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which sentence needs support from another credible source because neither source mentions it?",
+       "options": [
+        "sentence 2",
+        "sentence 3",
+        "sentence 4",
+        "sentence 5"
+       ],
+       "key": "D",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Why should Ghala NOT use Source B?",
+       "options": [
+        "It makes a claim that conflicts with a more credible source.",
+        "It is written about the long history of a very popular drink.",
+        "It uses complete sentences and correct punctuation.",
+        "It mentions a country in Europe instead of Asia."
+       ],
+       "key": "A",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Ghala wants to quote Source A directly in sentence 4. Which revision does this correctly?",
+       "options": [
+        "According to a university history website, the port of Mocha “became the center of the world coffee trade.”",
+        "“According to a university history website,” the port of Mocha became the center of coffee.",
+        "The port of Mocha became the center of the world coffee trade, which is a very interesting fact that I found online.",
+        "According to a website, the port of Mocha became “the center” of the world “coffee trade.”"
+       ],
+       "key": "A",
+       "skill": "Paraphrases or cites a source correctly",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 1 makes a more engaging introduction?",
+       "options": [
+        "Coffee is brown, and it is hot, and people drink it in cups or mugs every day.",
+        "Every morning, millions of people sip a drink whose story began in the hills of Ethiopia.",
+        "This report will tell you about coffee, which is a drink that a lot of people drink.",
+        "Coffee has a history, and the history of coffee is long, interesting and full of history."
+       ],
+       "key": "B",
+       "skill": "Chooses an effective introduction",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which sentence would BEST conclude the report by drawing the ideas together?",
+       "options": [
+        "Some people like to add milk, sugar or spices such as cardamom to their coffee to change its taste and smell.",
+        "Ethiopia is a country in East Africa with mountains, rivers and many farms.",
+        "From wild plants in Ethiopia to cafés around the globe, coffee connects many cultures and centuries.",
+        "Istanbul is a large city that sits on two continents, Europe and Asia."
+       ],
+       "key": "C",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U3",
+   "title": "Verbals: Gerunds, Participles and Infinitives",
+   "goal": "GU",
+   "skills": [
+    "Recognize gerunds, participles and infinitives and explain their function in a sentence",
+    "Use participial phrases correctly and avoid dangling participles",
+    "Use the correct gerund or infinitive after a verb",
+    "Keep verbals parallel in a series"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "verbal",
+     "a verb form used as a noun, an adjective or an adverb"
+    ],
+    [
+     "gerund",
+     "an -ing verb form used as a noun: Swimming is fun."
+    ],
+    [
+     "participle",
+     "a verb form used as an adjective: the broken window, the smiling child"
+    ],
+    [
+     "infinitive",
+     "to + a verb, used as a noun, adjective or adverb: to win"
+    ],
+    [
+     "participial phrase",
+     "a participle with its modifiers: Tired from the trip, we rested."
+    ],
+    [
+     "dangling participle",
+     "a participial phrase with no word in the sentence for it to describe"
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": null,
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "In the sentence “Swimming is my favorite exercise,” what is “Swimming”?",
+       "options": [
+        "a gerund used as the subject",
+        "a participle describing a noun",
+        "the main verb of the sentence",
+        "an infinitive showing purpose"
+       ],
+       "key": "A",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence contains a participle used as an adjective?",
+       "options": [
+        "Skating on ice takes practice.",
+        "The frozen lake sparkled in the sun.",
+        "We want to skate on the lake.",
+        "They froze the water in a small plastic tray."
+       ],
+       "key": "B",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“My sister enjoys ___ stories for children.”",
+       "options": [
+        "wrote",
+        "write",
+        "to write",
+        "writing"
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which words correctly complete the sentence?\n“We decided ___ the museum on Saturday.”",
+       "options": [
+        "visited",
+        "visit",
+        "to visit",
+        "visiting"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a dangling participle?",
+       "options": [
+        "The smell of fresh bread greeted me in the kitchen.",
+        "Walking into the kitchen, the smell of bread was wonderful.",
+        "As I walked into the kitchen, I smelled the fresh bread baking.",
+        "Walking into the kitchen, I smelled fresh bread."
+       ],
+       "key": "B",
+       "skill": "Places modifiers correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "In the sentence “We went to the library to study for the exam,” what does the infinitive phrase do?",
+       "options": [
+        "It describes the noun “library.”",
+        "It names the subject of the sentence.",
+        "It tells when we went to the library.",
+        "It explains why we went to the library."
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "Learning to Skate",
+      "genre": "draft",
+      "intro": "Sultan wrote about learning a new skill. His draft has some mistakes with verbals. Read it and answer the questions.",
+      "paras": [
+       "(1) Last summer, I decided learning to ice skate at the new rink in the mall. (2) At first, I was afraid of falling. (3) Holding the wall tightly, my legs shook with every step. (4) My coach, a patient woman with years of experience, encouraged me to keep trying. (5) She showed me how to bend my knees, to lean forward and pushing with one foot at a time. (6) After a week of practicing, I could glide across the ice without help. (7) Learning something new taught me that fear gets smaller the more you face it."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “decided learning” in sentence 1?",
+       "options": [
+        "decided learned",
+        "decided to learning",
+        "decided learn",
+        "decided to learn"
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a participial phrase correctly?",
+       "options": [
+        "Exhausted from practice, I fell asleep early.",
+        "Exhausted from practice, sleep came quickly.",
+        "Exhausted from practice, my bed looked inviting.",
+        "Exhausted from practice, the night was short."
+       ],
+       "key": "A",
+       "skill": "Places modifiers correctly",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "In sentence 2, what is the function of the gerund “falling”?",
+       "options": [
+        "It is the subject of the sentence.",
+        "It is the main verb of the whole sentence.",
+        "It is the object of the preposition “of.”",
+        "It describes the pronoun “I.”"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Sentence 3 has a dangling participle. Which revision is correct?",
+       "options": [
+        "My legs shook with every step, holding the wall tightly.",
+        "Holding the wall tightly, I felt my legs shake with every step.",
+        "Holding the wall tightly, shaking legs were with every step.",
+        "Holding the wall tightly, my legs were shaking with every step."
+       ],
+       "key": "B",
+       "skill": "Places modifiers correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “pushing” in sentence 5 to keep the series parallel?",
+       "options": [
+        "pushed",
+        "push it",
+        "to push",
+        "pushes"
+       ],
+       "key": "C",
+       "skill": "Uses parallel structure",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "In sentence 6, what is “practicing”?",
+       "options": [
+        "a gerund used as the object of the preposition “of”",
+        "a participle describing the noun “week”",
+        "the main verb of the sentence",
+        "an infinitive showing the purpose of the whole week"
+       ],
+       "key": "A",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "In sentence 7, what is the function of the gerund phrase “Learning something new”?",
+       "options": [
+        "It shows the purpose of the action.",
+        "It is the object of the verb “taught.”",
+        "It describes the noun “fear.”",
+        "It is the subject of the sentence."
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U4",
+   "title": "Active and Passive Voice and Verb Mood",
+   "goal": "GU",
+   "skills": [
+    "Form and use verbs in the active and passive voice",
+    "Form and use the indicative, imperative, interrogative, conditional and subjunctive moods",
+    "Recognize and correct inappropriate shifts in voice and mood",
+    "Choose voice and mood for a purpose, such as emphasis or politeness"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "active voice",
+     "the subject performs the action: The team won the match."
+    ],
+    [
+     "passive voice",
+     "the subject receives the action: The match was won by the team."
+    ],
+    [
+     "indicative mood",
+     "states facts or opinions: The bus leaves at seven."
+    ],
+    [
+     "imperative mood",
+     "gives commands or requests: Close the door, please."
+    ],
+    [
+     "conditional mood",
+     "shows what would happen under a condition: If it rained, we would stay inside."
+    ],
+    [
+     "subjunctive mood",
+     "expresses wishes, demands or situations contrary to fact: I wish I were taller."
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": null,
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence is written in the active voice?",
+       "options": [
+        "The mural was painted by the students.",
+        "The mural has been painted.",
+        "The students painted the mural.",
+        "The mural is being painted now."
+       ],
+       "key": "C",
+       "skill": "Uses active and passive voice",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence is written in the passive voice?",
+       "options": [
+        "The letter was delivered this morning.",
+        "The mail carrier delivered the letter.",
+        "The letter arrived this morning.",
+        "We received the letter this morning."
+       ],
+       "key": "A",
+       "skill": "Uses active and passive voice",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the imperative mood?",
+       "options": [
+        "Did you turn off the lights when you left?",
+        "If you left, you would turn off the lights.",
+        "You turned off the lights when you left.",
+        "Please turn off the lights when you leave."
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“I wish I ___ able to fly.”",
+       "options": [
+        "will be",
+        "were",
+        "was being",
+        "am"
+       ],
+       "key": "B",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in voice?",
+       "options": [
+        "Faisal kicked the ball, and it went into the goal.",
+        "Faisal kicked the ball, and the goal was scored by him.",
+        "The ball was kicked by Faisal, and the goal was scored.",
+        "Faisal kicked the ball and scored the goal."
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in mood?",
+       "options": [
+        "You should read the instructions and then begin the test.",
+        "Read all of the instructions carefully before you begin the test.",
+        "First read the instructions, and then you should begin the test.",
+        "First read the instructions, and then begin the test."
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "Helping in the School Garden",
+      "genre": "draft",
+      "intro": "Wedad wrote instructions for students who will help in the school garden. Her draft has some mistakes. Read it and answer the questions.",
+      "paras": [
+       "(1) Welcome to the school garden team! (2) First, put on gloves before you touch any plants. (3) Then you should water the seedlings gently. (4) The tools must be returned to the shed after each use. (5) If I was the principal, I would make the garden even bigger. (6) The vegetables that we grow are donated to a local food bank. (7) Did you know that last year our garden produced more than two hundred kilograms of tomatoes?"
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the interrogative mood?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 6",
+        "sentence 7"
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Sentence 3 shifts out of the imperative mood. Which revision is correct?",
+       "options": [
+        "Then you water the seedlings gently.",
+        "Then water the seedlings gently.",
+        "Then the seedlings should be watered gently by you.",
+        "Then you would water the seedlings gently."
+       ],
+       "key": "B",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 4 is in the active voice?",
+       "options": [
+        "Return the tools to the shed after each use.",
+        "The tools should be returned to the shed after each use.",
+        "After each use, the tools must be returned to the shed.",
+        "The tools are returned to the shed after each use by students."
+       ],
+       "key": "A",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which word should replace “was” in sentence 5?",
+       "options": [
+        "have been",
+        "am",
+        "were",
+        "be"
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 6 is in the active voice?",
+       "options": [
+        "The vegetables that we grow are given to a local food bank.",
+        "A local food bank is given the vegetables that are grown.",
+        "The vegetables grown by us are donated to a local food bank.",
+        "We donate the vegetables that we grow to a local food bank."
+       ],
+       "key": "D",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Why might Wedad use the passive voice in sentence 6?",
+       "options": [
+        "to ask the reader a question about the vegetables they grow",
+        "to focus on the vegetables rather than on who donates them",
+        "to make the sentence a command for the students",
+        "to show that the action will happen in the future"
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the conditional mood?",
+       "options": [
+        "sentence 2",
+        "sentence 4",
+        "sentence 5",
+        "sentence 7"
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U5",
+   "title": "Commas, Dashes and Ellipses for Pauses, Breaks and Omissions",
+   "goal": "ME",
+   "skills": [
+    "Use a comma, an ellipsis or a dash to show a pause or break",
+    "Use an ellipsis to show that words have been left out of a quotation",
+    "Use dashes to set off an interruption or to emphasize information",
+    "Use commas with interrupters, nonrestrictive elements and introductory elements"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "ellipsis",
+     "three spaced dots (…) that show a pause, a trailing thought or words left out"
+    ],
+    [
+     "dash",
+     "a long mark (—) that shows a sudden break or sets off information with emphasis"
+    ],
+    [
+     "interrupter",
+     "a word or phrase that breaks the flow of a sentence: however, in fact"
+    ],
+    [
+     "omission",
+     "words removed from a quotation, shown with an ellipsis"
+    ],
+    [
+     "nonrestrictive element",
+     "extra information that can be removed without changing the main meaning"
+    ],
+    [
+     "introductory element",
+     "a word, phrase or clause that comes before the main clause"
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": null,
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an ellipsis to show a pause?",
+       "options": [
+        "“I think, no, I’m … sure that’s the answer” said Huda.",
+        "“I think no … I’m sure that’s … the answer,” … said Huda.",
+        "“I think … no, I’m sure that’s the answer,” said Huda.",
+        "“I … think no I’m sure that’s the answer,” said Huda."
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a dash correctly to show a sudden break?",
+       "options": [
+        "I was about—to open the door wait, did you hear that?",
+        "I was about to open the door—wait, did you hear that?",
+        "I was about to—open the door wait did—you hear that?",
+        "I was about to open—the door wait, did you hear that?"
+       ],
+       "key": "B",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly with an interrupter?",
+       "options": [
+        "The test, in fact was easier than we expected.",
+        "The test in fact, was easier than we expected.",
+        "The test in, fact was easier than we expected.",
+        "The test, in fact, was easier than we expected."
+       ],
+       "key": "D",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Read the original quotation.\n“The desert, although it looks empty, is full of life.”\nWhich version correctly shows that words were left out?",
+       "options": [
+        "“The desert … is full of life.”",
+        "“… The desert is … full of … life.”",
+        "“The desert although … it looks empty.”",
+        "“The desert, … is full … of life.”"
+       ],
+       "key": "A",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a dash to emphasize information?",
+       "options": [
+        "Only—one thing could save the game teamwork.",
+        "Only one thing could save the game—teamwork.",
+        "Only one thing could—save the game teamwork.",
+        "Only one thing—could save the game teamwork."
+       ],
+       "key": "B",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "My grandfather—who rarely spoke about his childhood—told us a story.",
+        "My grandfather who rarely spoke about his childhood—told us—a story.",
+        "My grandfather who rarely spoke—about his childhood—told us a story.",
+        "My grandfather—who rarely spoke about his childhood told us a story."
+       ],
+       "key": "A",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "221–230",
+       "goal": "ME"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "The Speech",
+      "genre": "draft",
+      "intro": "Meshal wrote about giving a speech. His draft has some punctuation mistakes. Read it and answer the questions.",
+      "paras": [
+       "(1) The auditorium was silent as I walked to the microphone. (2) I looked at my notes and then I froze. (3) “Good morning … um … teachers and students,” I began. (4) My best friend Talal, who sat in the front row gave me a thumbs-up. (5) I took a deep breath and remembered the advice my teacher had given me—speak slowly and look at the audience. (6) By the end of the speech, the audience was clapping—even the principal! (7) Later, the school newsletter printed part of one line from my speech: “Our voices … can change our school.”"
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 2 uses a dash to show a sudden break?",
+       "options": [
+        "I looked at my notes and—then I froze.",
+        "I looked at my notes—and then I froze.",
+        "I looked—at my notes and then I froze.",
+        "I looked at my—notes and then I froze."
+       ],
+       "key": "B",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "What do the ellipses in sentence 3 show?",
+       "options": [
+        "that the speaker paused and hesitated",
+        "that words were left out of a book",
+        "that the sentence is a question",
+        "that the speaker was shouting"
+       ],
+       "key": "A",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write sentence 4?",
+       "options": [
+        "My best friend Talal, who sat in the front row gave me a thumbs-up.",
+        "My best friend Talal who sat in the front row gave me, a thumbs-up.",
+        "My best friend, Talal who sat in the front row gave me a thumbs-up.",
+        "My best friend Talal, who sat in the front row, gave me a thumbs-up."
+       ],
+       "key": "D",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Why is a dash used in sentence 5?",
+       "options": [
+        "to show that a word has been left out",
+        "to show that the speaker stopped suddenly",
+        "to introduce the advice and emphasize it",
+        "to join two words into one compound word"
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "In sentence 6, what does the dash do?",
+       "options": [
+        "It joins the two parts of a compound adjective.",
+        "It shows that words were left out of a quotation.",
+        "It sets off a surprising detail for emphasis.",
+        "It separates the hours and minutes of a time."
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "After the speech my teacher—smiling proudly shook my hand.",
+        "After the speech, my—teacher smiling proudly—shook my hand.",
+        "After the speech, my teacher smiling—proudly—shook my hand.",
+        "After the speech, my teacher—smiling proudly—shook my hand."
+       ],
+       "key": "D",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "In sentence 7, what does the ellipsis show?",
+       "options": [
+        "that the quotation is a question",
+        "that some words were left out of the quotation",
+        "that the newsletter was printed incorrectly",
+        "that the speaker could not remember the words"
+       ],
+       "key": "B",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "221–230",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "U6",
+   "title": "Semicolons, Colons, Hyphens, Capitalization and Spelling",
+   "goal": "ME",
+   "skills": [
+    "Use semicolons to join closely related independent clauses, including with conjunctive adverbs",
+    "Use colons to introduce lists, explanations and quotations",
+    "Use hyphens in compound adjectives and numbers",
+    "Capitalize proper nouns and titles and spell frequently misspelled words"
+   ],
+   "rit_band": "201–240",
+   "vocab": [
+    [
+     "semicolon",
+     "a mark (;) that joins two closely related independent clauses"
+    ],
+    [
+     "conjunctive adverb",
+     "a word such as however, therefore or moreover that links two clauses"
+    ],
+    [
+     "colon",
+     "a mark (:) that introduces a list, an explanation or a quotation after a complete sentence"
+    ],
+    [
+     "compound adjective",
+     "two or more words joined by hyphens before a noun: a well-known author"
+    ],
+    [
+     "proper noun",
+     "the name of a specific person, place, event or organization"
+    ],
+    [
+     "frequently misspelled words",
+     "words such as necessary, conscientious and competition that are often spelled wrongly"
+    ]
+   ],
+   "practice": [
+    {
+     "set": "A",
+     "passage": null,
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon correctly?",
+       "options": [
+        "The team practiced every day; they won the tournament.",
+        "The team practiced every; day they won the tournament.",
+        "The team; practiced every day they won the tournament.",
+        "The team practiced every day; and they won the tournament."
+       ],
+       "key": "A",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "The coach: gave us one piece of advice never give up.",
+        "The coach gave us one piece of advice: never give up.",
+        "The coach gave: us one piece of advice never give up.",
+        "The coach gave us: one piece of advice never give up."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "The well known author-signed copies of her book.",
+        "The well-known-author signed copies of her book.",
+        "The well known-author signed copies of her book.",
+        "The well-known author signed copies of her book."
+       ],
+       "key": "D",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "In the Summer, we flew from King Khalid International Airport to London.",
+        "In the summer, we flew from king Khalid international airport to London.",
+        "In the summer, we flew from King Khalid International Airport to London.",
+        "In the summer, we flew from King Khalid International airport to london."
+       ],
+       "key": "C",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon and a conjunctive adverb correctly?",
+       "options": [
+        "It was raining; therefore, the match was postponed.",
+        "It was raining, therefore; the match was postponed.",
+        "It was raining; therefore the match, was postponed.",
+        "It was raining therefore, the match was postponed."
+       ],
+       "key": "A",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "consciencious",
+        "concientious",
+        "conscientous",
+        "conscientious"
+       ],
+       "key": "D",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      }
+     ]
+    },
+    {
+     "set": "B",
+     "passage": {
+      "title": "Preparing for the Science Olympiad",
+      "genre": "draft",
+      "intro": "Hamad wrote a report for the school newsletter. His draft has some mistakes. Read it and answer the questions.",
+      "paras": [
+       "(1) Our school’s science team has been preparing for the national science olympiad since September. (2) The team includes five students from grades 7, 8 and 9. (3) They study three subjects biology, chemistry and physics. (4) Practice sessions are long, however, the students say they enjoy them. (5) Last year, our team won a silver medal; this year, they hope to win gold. (6) The team’s coach, a well known chemistry teacher, believes they are ready. (7) The competition will be held in Riyadh in March."
+      ]
+     },
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write “national science olympiad” in sentence 1?",
+       "options": [
+        "National Science Olympiad",
+        "National science Olympiad",
+        "National Science olympiad",
+        "national Science Olympiad"
+       ],
+       "key": "A",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write sentence 3?",
+       "options": [
+        "They study: three subjects biology, chemistry and physics.",
+        "They study three subjects; biology, chemistry and physics.",
+        "They study three subjects, biology: chemistry and physics.",
+        "They study three subjects: biology, chemistry and physics."
+       ],
+       "key": "D",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "How should “well known” in sentence 6 be written?",
+       "options": [
+        "wellknown",
+        "well, known",
+        "well-known",
+        "well-Known"
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "compitition",
+        "competition",
+        "competetion",
+        "compatition"
+       ],
+       "key": "B",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write sentence 4?",
+       "options": [
+        "Practice sessions are long; however, the students say they enjoy them.",
+        "Practice sessions are long, however; the students say they enjoy them.",
+        "Practice sessions are long however, the students say they enjoy them.",
+        "Practice sessions are long, however, the students, say they enjoy them."
+       ],
+       "key": "A",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Why is a semicolon used in sentence 5?",
+       "options": [
+        "to introduce a list of three subjects",
+        "to show that words were left out",
+        "to separate the name of a city from a country",
+        "to join two closely related independent clauses"
+       ],
+       "key": "D",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which sentence about the team is punctuated correctly?",
+       "options": [
+        "The team has three goals to study hard: to work together and to win.",
+        "The team has: three goals to study hard, to work together and to win.",
+        "The team has three goals: to study hard, to work together and to win.",
+        "The team has three goals; to study hard, to work together and to win."
+       ],
+       "key": "C",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "mocks": [
+  {
+   "id": "A",
+   "title": "Mock Exam A",
+   "note": "Full practice test · 43 questions",
+   "sections": [
+    {
+     "passage": {
+      "title": "Urban Farming",
+      "genre": "draft",
+      "intro": "Anas is writing an informative report. Read his draft and answer the questions.",
+      "paras": [
+       "(1) As cities grow, more people are finding ways to grow food without leaving town. (2) Urban farming includes rooftop gardens, community plots and indoor farms. (3) Some indoor farms grow lettuce and herbs in stacked trays under special lights. (4) This method, called vertical farming, uses far less water than traditional farming. (5) Growing food close to where people live reduce the need for long-distance transportation. (6) However urban farms can be expensive to start. (7) Despite this challenge, many cities see urban farming as part of a healthier future."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Where should a comma be added in sentence 6?",
+       "options": [
+        "after “farms”",
+        "after “However”",
+        "after “expensive”",
+        "after “be”"
+       ],
+       "key": "B",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence defines a domain-specific term?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 4",
+        "sentence 7"
+       ],
+       "key": "C",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which phrase in sentence 7 creates cohesion by linking back to sentence 6?",
+       "options": [
+        "Despite this challenge",
+        "many cities",
+        "see urban farming as part",
+        "a healthier future"
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which word should replace “reduce” in sentence 5?",
+       "options": [
+        "have reduced",
+        "reducing",
+        "are reducing",
+        "reduces"
+       ],
+       "key": "D",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which detail would BEST follow sentence 4?",
+       "options": [
+        "Lettuce is a leafy vegetable that is often used in salads and sandwiches around the world today.",
+        "Because water is recycled through the trays, some vertical farms use up to 90 percent less water.",
+        "Traditional farms are usually located in the countryside, far away from busy city streets.",
+        "Lights come in many colors, and some people use colored lights to decorate their homes."
+       ],
+       "key": "B",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of sentence 6?",
+       "options": [
+        "to introduce a challenge before the conclusion",
+        "to give an example of a rooftop garden",
+        "to explain how plants grow under special lights",
+        "to define the term urban farming"
+       ],
+       "key": "A",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "211–220",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "The Robotics Final",
+      "genre": "draft",
+      "intro": "Mazen wrote a story. Read his draft and answer the questions.",
+      "paras": [
+       "(1) With thirty seconds left in the final round, our robot suddenly stopped moving. (2) My teammate Rashed and I stared at the screen in disbelief. (3) Earlier that morning, we had tested every part of the robot twice. (4) Now, the crowd was groaning, and the timer kept counting down. (5) Rashed grabbed the controller, checked the cable and found the problem a loose wire. (6) He pushed it back into place with shaking fingers. (7) The robot rolled forward and dropped the final block into the goal just as the buzzer sounds."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which phrase in sentence 3 signals a shift to an earlier time?",
+       "options": [
+        "we had tested",
+        "twice",
+        "every part of the robot",
+        "Earlier that morning"
+       ],
+       "key": "D",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 8,
+       "type": "multiple-choice",
+       "stem": "Which word in sentence 4 signals a return to the present moment of the story?",
+       "options": [
+        "crowd",
+        "counting",
+        "Now",
+        "groaning"
+       ],
+       "key": "C",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 9,
+       "type": "multiple-choice",
+       "stem": "Which word should replace “sounds” in sentence 7?",
+       "options": [
+        "has sounded",
+        "sounded",
+        "will sound",
+        "sounding"
+       ],
+       "key": "B",
+       "skill": "Avoids inappropriate shifts in verb tense",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 10,
+       "type": "multiple-choice",
+       "stem": "Which detail in sentence 6 shows how nervous Rashed is?",
+       "options": [
+        "pushed it back into place",
+        "it",
+        "with shaking fingers",
+        "He pushed it"
+       ],
+       "key": "C",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 11,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write the end of sentence 5?",
+       "options": [
+        "found: the problem a loose wire.",
+        "found the problem, a loose, wire.",
+        "found the problem; a loose wire.",
+        "found the problem: a loose wire."
+       ],
+       "key": "D",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 12,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST ending for the story?",
+       "options": [
+        "For a moment, nobody moved; then our whole team burst into cheers.",
+        "Loose wires are one of the most common problems that engineers find in machines.",
+        "Robots can be programmed to do many jobs, such as building cars or cleaning floors.",
+        "The competition was held in a large hall with seats for more than five hundred people."
+       ],
+       "key": "A",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "211–220",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "Should Homework Be Graded?",
+      "genre": "draft",
+      "intro": "Ghaida wrote an argument essay. Read her draft and answer the questions.",
+      "paras": [
+       "(1) In many schools, homework counts toward students’ final grades. (2) I believe homework should be used for practice and should not be graded. (3) When homework is graded, students may copy answers just earning points. (4) In contrast, ungraded homework encourages students to try difficult problems without fear of mistakes. (5) Some teachers argue that students will not complete homework unless it is graded. (6) However, teachers can give quick feedback; which shows students that their effort matters. (7) Practice should be a place to learn, not a place to be judged."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 13,
+       "type": "multiple-choice",
+       "stem": "Which sentence states Ghaida’s claim?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 3",
+        "sentence 7"
+       ],
+       "key": "B",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 14,
+       "type": "multiple-choice",
+       "stem": "Which words in sentence 4 show a contrast with sentence 3?",
+       "options": [
+        "ungraded homework",
+        "encourages",
+        "without fear",
+        "In contrast"
+       ],
+       "key": "D",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 15,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “just earning” in sentence 3?",
+       "options": [
+        "just earn",
+        "just earned",
+        "just to earn",
+        "just to earning"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 16,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write the end of sentence 6?",
+       "options": [
+        "quick feedback, which shows students that their effort matters.",
+        "quick feedback which, shows students that their effort matters.",
+        "quick feedback; which shows students that their effort matters.",
+        "quick feedback: which shows students that their effort matters."
+       ],
+       "key": "A",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 17,
+       "type": "multiple-choice",
+       "stem": "How does sentence 6 respond to the opposing claim?",
+       "options": [
+        "It gives a statistic about how many students copy answers.",
+        "It offers another way to motivate students without grades.",
+        "It introduces a new topic about classroom tests.",
+        "It agrees that homework must always be graded."
+       ],
+       "key": "B",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 18,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST strengthen sentence 4?",
+       "options": [
+        "Many students do their homework at the kitchen table after dinner with their families each night.",
+        "Some teachers use red pens to mark mistakes, while others prefer to use green pens.",
+        "A study found that students who practiced without grades attempted more challenging problems.",
+        "Homework has been given to students in schools for more than one hundred years."
+       ],
+       "key": "C",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Writing",
+     "goal": "WR",
+     "items": [
+      {
+       "n": 19,
+       "type": "multiple-choice",
+       "stem": "Which transition BEST creates cohesion between the sentences?\n“The bridge was closed for repairs. ___, drivers had to take a longer route.”",
+       "options": [
+        "Consequently",
+        "Similarly",
+        "For instance",
+        "Nevertheless"
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 20,
+       "type": "multiple-choice",
+       "stem": "Which sentence BEST distinguishes the writer’s claim from an opposing claim?",
+       "options": [
+        "I like animals a lot, and I think that all animals are interesting to learn about.",
+        "Some people visit zoos, and some people visit wildlife sanctuaries on vacations.",
+        "Zoos are places where animals live, and sanctuaries are also places for animals.",
+        "Although some argue that zoos protect animals, wildlife sanctuaries do a better job."
+       ],
+       "key": "D",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 21,
+       "type": "multiple-choice",
+       "stem": "Which revision is the MOST concise?\n“Due to the fact that it was raining, the game was postponed until a later date.”",
+       "options": [
+        "Because it was raining, the game was postponed.",
+        "Due to the fact that it rained, the game was postponed to a later date.",
+        "Because of the fact that it was raining, they postponed the game until later.",
+        "Since it was raining outside, the game was postponed until a later time and date."
+       ],
+       "key": "A",
+       "skill": "Revises to remove wordy or repeated language",
+       "rit_band": "211–220",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Grammar and Usage",
+     "goal": "GU",
+     "items": [
+      {
+       "n": 22,
+       "type": "multiple-choice",
+       "stem": "What is the function of the gerund in this sentence?\n“My brother loves cooking.”",
+       "options": [
+        "It describes the noun “brother.”",
+        "It is the direct object of the verb.",
+        "It is the subject of the sentence.",
+        "It is the main verb of the sentence."
+       ],
+       "key": "B",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 23,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the passive voice?",
+       "options": [
+        "The mayor is opening the new bridge.",
+        "The mayor opened the new bridge.",
+        "The mayor will open the new bridge.",
+        "The new bridge was opened by the mayor."
+       ],
+       "key": "D",
+       "skill": "Uses active and passive voice",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 24,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the imperative mood?",
+       "options": [
+        "Do you bring your notebook to class?",
+        "If you brought your notebook, you would be ready.",
+        "Bring your notebook to every class.",
+        "You bring your notebook to every class."
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 25,
+       "type": "multiple-choice",
+       "stem": "Which words correctly complete the sentence?\n“She refused ___ the offer.”",
+       "options": [
+        "accepting",
+        "to accept",
+        "accept",
+        "accepted"
+       ],
+       "key": "B",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 26,
+       "type": "multiple-choice",
+       "stem": "Which sentence contains a participial phrase?",
+       "options": [
+        "The singer smiled and began her song.",
+        "The singer wanted to sing for the crowd.",
+        "Smiling at the crowd, the singer began her song.",
+        "The singer began her song for the large crowd."
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 27,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“If I ___ you, I would apologize.”",
+       "options": [
+        "were",
+        "am",
+        "will be",
+        "was being"
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 28,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a dangling modifier?",
+       "options": [
+        "As I looked through the telescope, the stars seemed closer.",
+        "The stars seemed closer when I looked through the telescope.",
+        "Looking through the telescope, I saw the stars clearly.",
+        "Looking through the telescope, the stars seemed closer."
+       ],
+       "key": "D",
+       "skill": "Places modifiers correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 29,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in voice?",
+       "options": [
+        "We cleaned the classroom, and the windows were washed by us.",
+        "We cleaned the classroom and washed the windows.",
+        "We cleaned the classroom, and then we washed the windows.",
+        "The classroom was cleaned, and the windows were washed."
+       ],
+       "key": "A",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 30,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The number of students in the club ___ growing.”",
+       "options": [
+        "have been",
+        "is",
+        "were",
+        "are"
+       ],
+       "key": "B",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 31,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses parallel structure?",
+       "options": [
+        "Reading, to write and speaking are important skills.",
+        "To read, writing and speaking are important skills.",
+        "Reading, writing and to speak are important skills.",
+        "Reading, writing and speaking are important skills."
+       ],
+       "key": "D",
+       "skill": "Uses parallel structure",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 32,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses the relative pronoun correctly?",
+       "options": [
+        "The scientist which we interviewed won an award.",
+        "The scientist whose we interviewed won an award.",
+        "The scientist whom we interviewed won an award.",
+        "The scientist who’s we interviewed won an award."
+       ],
+       "key": "C",
+       "skill": "Uses relative pronouns and relative adverbs",
+       "rit_band": "221–230",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Capitalization, Punctuation and Spelling",
+     "goal": "ME",
+     "items": [
+      {
+       "n": 33,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "The museum, however, was closed on Monday.",
+        "The museum however was, closed on Monday.",
+        "The museum however, was closed on Monday.",
+        "The museum, however was closed on Monday."
+       ],
+       "key": "A",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 34,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "My cousin studies at the university of Jeddah.",
+        "My Cousin studies at the University of Jeddah.",
+        "My cousin studies at the University Of Jeddah.",
+        "My cousin studies at the University of Jeddah."
+       ],
+       "key": "D",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 35,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon correctly?",
+       "options": [
+        "Nora loves science her; brother prefers history.",
+        "Nora loves science; her brother prefers history.",
+        "Nora loves science; and her brother prefers history.",
+        "Nora loves; science her brother prefers history."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 36,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an ellipsis to show a pause?",
+       "options": [
+        "… “Well I suppose we could try again,” said Lama.",
+        "“Well I … suppose we could try again” said Lama.",
+        "“Well … I suppose we could try again,” said Lama.",
+        "“Well I suppose … we could … try again” … said Lama."
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 37,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "She is a twelve year old-pianist.",
+        "She is a twelve year-old pianist.",
+        "She is a twelve-year-old pianist.",
+        "She is a twelve-year old pianist."
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 38,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "The sign gave a clear: warning keep out.",
+        "The sign gave a clear warning: keep out.",
+        "The sign: gave a clear warning keep out.",
+        "The sign gave: a clear warning keep out."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 39,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "“Have you finished?” asked the teacher, “time is almost up.”",
+        "“Have you finished,” asked the teacher. “Time is almost up.”",
+        "“Have you finished?” Asked the teacher. “Time is almost up.”",
+        "“Have you finished?” asked the teacher. “Time is almost up.”"
+       ],
+       "key": "D",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 40,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a dash correctly?",
+       "options": [
+        "We packed the essentials—water, food and a map.",
+        "We packed—the essentials water, food and a map.",
+        "We—packed the essentials water, food and a map.",
+        "We packed the essentials water—food and a map."
+       ],
+       "key": "A",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 41,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "recomend",
+        "reccomend",
+        "reccommend",
+        "recommend"
+       ],
+       "key": "D",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 42,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "The old bookstore, which opened in 1975 is closing next month.",
+        "The old bookstore which, opened in 1975 is closing next month.",
+        "The old bookstore, which opened in 1975, is closing next month.",
+        "The old bookstore which opened in 1975, is closing next month."
+       ],
+       "key": "C",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 43,
+       "type": "multiple-choice",
+       "stem": "Read the original sentence.\n“The falcon, a symbol of strength and freedom, is admired across Arabia.”\nWhich version correctly shows that words were left out?",
+       "options": [
+        "“… The falcon is admired … Arabia … .”",
+        "“The falcon … is admired across Arabia.”",
+        "“The falcon, … is admired … across Arabia.”",
+        "“The falcon a symbol … of strength.”"
+       ],
+       "key": "B",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "221–230",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "B",
+   "title": "Mock Exam B",
+   "note": "Full practice test · 43 questions",
+   "sections": [
+    {
+     "passage": {
+      "title": "The Hubble Space Telescope",
+      "genre": "draft",
+      "intro": "Yousef is writing a science report. Read his draft and answer the questions.",
+      "paras": [
+       "(1) Since 1990, the Hubble Space Telescope has orbited Earth about 540 kilometers above the ground. (2) Because it is above the atmosphere, Hubble can take sharper pictures than telescopes on the ground. (3) Soon after its launch however, scientists discovered a problem: its main mirror had been shaped incorrectly. (4) In 1993, astronauts were sent to repair the telescope. (5) After the repair, Hubble’s images became clear and detailed. (6) Its pictures has helped scientists estimate the age of the universe. (7) Today, Hubble is still sending images back to Earth, more than thirty years later."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which sentence explains the cause of Hubble’s sharp pictures?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 4",
+        "sentence 7"
+       ],
+       "key": "B",
+       "skill": "Adds a detail that supports the main idea",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to begin sentence 3?",
+       "options": [
+        "Soon after its launch, however scientists",
+        "Soon after, its launch however scientists",
+        "Soon after its launch, however, scientists",
+        "Soon after its launch however, scientists"
+       ],
+       "key": "C",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “has helped” in sentence 6?",
+       "options": [
+        "have helped",
+        "have help",
+        "having helped",
+        "has help"
+       ],
+       "key": "A",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which sentence could be added after sentence 6 to give a specific example?",
+       "options": [
+        "Telescopes were first used to study the night sky in the early 1600s by scientists in Europe.",
+        "Astronauts must train for many years before they are allowed to travel into space.",
+        "The universe contains planets, stars, galaxies and many other objects in space.",
+        "For example, its Deep Field image revealed thousands of galaxies in a tiny patch of sky."
+       ],
+       "key": "D",
+       "skill": "Adds a detail that supports the main idea",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Why might Yousef have used the passive voice in sentence 4?",
+       "options": [
+        "to show that the repair will happen sometime in the future",
+        "to focus on the repair mission rather than on who sent the astronauts",
+        "to ask the readers a question about the telescope and its broken mirror",
+        "to give a command to the astronauts about how to do the repair"
+       ],
+       "key": "B",
+       "skill": "Keeps a consistent formal style and objective tone",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST conclusion for the report?",
+       "options": [
+        "Earth is the third planet from the sun, and it is the only planet that is known to have life on it.",
+        "Mirrors are used in many everyday objects, including cars, bathrooms and cameras.",
+        "Thanks to Hubble, humans have seen farther into space—and further back in time—than ever before.",
+        "Space is very cold and dark, and there is no air to breathe outside a spacecraft."
+       ],
+       "key": "C",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "A Night in the Desert",
+      "genre": "draft",
+      "intro": "Abdullah is writing a personal narrative. Read his draft and answer the questions.",
+      "paras": [
+       "(1) The first time I camped in the desert, I didn’t expect the night to be so cold. (2) As the sun disappeared, the temperature dropped quickly. (3) My uncle built a fire, and we sat around it, wrapped in thick blankets. (4) Above us, thousands of stars filled the sky. (5) My uncle pointed upward and said “Those stars guided travelers across this desert long before maps existed.” (6) I laid back on the sand and tried to imagine those travelers crossing the dunes by camel. (7) Hours later, I woke to see the sky turning pink."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Where should a comma be added in sentence 5?",
+       "options": [
+        "after “uncle”",
+        "after “upward”",
+        "after “stars”",
+        "after “said”"
+       ],
+       "key": "D",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 8,
+       "type": "multiple-choice",
+       "stem": "Which phrase in sentence 7 signals a shift in time?",
+       "options": [
+        "Hours later",
+        "I woke",
+        "turning pink",
+        "the sky"
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 9,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of the uncle’s words in sentence 5?",
+       "options": [
+        "to explain how to build a campfire safely",
+        "to connect the night sky to the history of the desert",
+        "to warn the narrator about the cold weather at night",
+        "to describe the color of the sky at sunrise"
+       ],
+       "key": "B",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 10,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 4 uses the MOST vivid language?",
+       "options": [
+        "Above us, there were stars, which are balls of gas that are very far away.",
+        "Above us, many stars were in the sky, and the sky had a great number of stars.",
+        "Above us, there were lots and lots of stars in the sky, and they were very nice.",
+        "Above us, the sky glittered with thousands of stars, scattered like spilled sugar."
+       ],
+       "key": "D",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 11,
+       "type": "multiple-choice",
+       "stem": "Which word should replace “laid” in sentence 6?",
+       "options": [
+        "layed",
+        "lain",
+        "lay",
+        "lied"
+       ],
+       "key": "C",
+       "skill": "Forms irregular past-tense and past-participle verbs",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 12,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST ending for the narrative?",
+       "options": [
+        "That night, the desert taught me that even the emptiest places can be full of wonder.",
+        "Camels can travel long distances across the desert without drinking water for days.",
+        "My uncle has a large tent that he uses for camping trips with his friends in winter.",
+        "Deserts can be very hot during the day and very cold at night because sand loses heat."
+       ],
+       "key": "A",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "A Letter to the Editor",
+      "genre": "draft",
+      "intro": "Reem wrote a letter to the editor of a local newspaper. Read her draft and answer the questions.",
+      "paras": [
+       "To the Editor:",
+       "(1) I am writing in response to your recent article about plans to build a new hotel on the Red Sea coast. (2) While new hotels may bring jobs and tourists, the construction could damage the coral reefs near the shore. (3) Coral reefs protect the coastline from storms, and they provide homes for thousands of species. (4) Once damaged, reefs can take decades to recover. (5) I urge the city council requiring a careful environmental study before construction begins. (6) If the hotel is built responsibly both the economy and the environment can benefit.",
+       "Sincerely,",
+       "Reem Al-Ghamdi"
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 13,
+       "type": "multiple-choice",
+       "stem": "What is the main purpose of Reem’s letter?",
+       "options": [
+        "to explain how coral reefs grow in warm ocean water",
+        "to thank the newspaper for printing her favorite article",
+        "to advertise the new hotel to tourists from other countries",
+        "to persuade the council to protect the reefs before building"
+       ],
+       "key": "D",
+       "skill": "Chooses language that fits the purpose and audience",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 14,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “requiring” in sentence 5?",
+       "options": [
+        "to requiring",
+        "requires",
+        "to require",
+        "required"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 15,
+       "type": "multiple-choice",
+       "stem": "Where should a comma be added in sentence 6?",
+       "options": [
+        "after “responsibly”",
+        "after “hotel”",
+        "after “economy”",
+        "after “environment”"
+       ],
+       "key": "A",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 16,
+       "type": "multiple-choice",
+       "stem": "How does sentence 2 strengthen the letter?",
+       "options": [
+        "It gives a statistic about the number of tourists who visit.",
+        "It acknowledges a benefit before presenting a concern.",
+        "It describes the design of the new hotel.",
+        "It explains the history of the Red Sea coast."
+       ],
+       "key": "B",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 17,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the MOST effective closing for the letter?",
+       "options": [
+        "Protecting our reefs today will ensure that future generations can enjoy them too.",
+        "If you do not listen to me, you will regret it for the rest of your lives.",
+        "Hotels are nice, but reefs are nice too, so both of them are nice in their own way.",
+        "I hope you have a good day and that you enjoy reading the rest of the newspaper."
+       ],
+       "key": "A",
+       "skill": "Keeps a consistent formal style and objective tone",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 18,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 3?",
+       "options": [
+        "Hotels usually have restaurants, swimming pools and rooms with views of the sea.",
+        "The Red Sea is more than 2,000 kilometers long and lies between Africa and Asia.",
+        "A marine study found that healthy reefs reduce the energy of storm waves by nearly 97 percent.",
+        "Many tourists enjoy swimming and diving near the colorful coral reefs of the Red Sea every year."
+       ],
+       "key": "C",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Writing",
+     "goal": "WR",
+     "items": [
+      {
+       "n": 19,
+       "type": "multiple-choice",
+       "stem": "Which revision combines the sentences to show a clear relationship?\n“The power went out. We finished the project by candlelight.”",
+       "options": [
+        "The power went out, and we finished the project by candlelight.",
+        "Unless the power went out, we finished the project by candlelight.",
+        "The power went out, or we finished the project by candlelight.",
+        "Although the power went out, we finished the project by candlelight."
+       ],
+       "key": "D",
+       "skill": "Revises a sentence to make the meaning clearer",
+       "rit_band": "201–210",
+       "goal": "WR"
+      },
+      {
+       "n": 20,
+       "type": "multiple-choice",
+       "stem": "Which source would be the MOST credible for a report on earthquakes in the Middle East?",
+       "options": [
+        "a video game that simulates natural disasters",
+        "a report from a national geological survey",
+        "a travel blog about a vacation in the mountains",
+        "a novel about a city destroyed by an earthquake"
+       ],
+       "key": "B",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 21,
+       "type": "multiple-choice",
+       "stem": "Which sentence BEST uses a transition to show a shift in time in a narrative?",
+       "options": [
+        "Three years later, the empty lot had become a busy community garden.",
+        "The empty lot and the garden were both places where people liked to go.",
+        "Gardens need water, sunlight and good soil in order to grow healthy plants.",
+        "The empty lot was empty, and it was also a lot that had nothing in it."
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Grammar and Usage",
+     "goal": "GU",
+     "items": [
+      {
+       "n": 22,
+       "type": "multiple-choice",
+       "stem": "Which sentence contains an infinitive phrase?",
+       "options": [
+        "We finished the mural on Friday.",
+        "Our goal is to finish the mural by Friday.",
+        "The finished mural looked very beautiful in the hall.",
+        "Finishing the mural took all week."
+       ],
+       "key": "B",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 23,
+       "type": "multiple-choice",
+       "stem": "Which sentence is written in the active voice?",
+       "options": [
+        "A special meal was prepared by the chef.",
+        "A special meal has been prepared.",
+        "The meal was being prepared for us.",
+        "The chef prepared a special meal."
+       ],
+       "key": "D",
+       "skill": "Uses active and passive voice",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 24,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a participle as an adjective?",
+       "options": [
+        "Breaking the vase was an accident.",
+        "We tried to fix the vase.",
+        "The broken vase lay on the floor.",
+        "The vase broke into pieces."
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 25,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a misplaced modifier?",
+       "options": [
+        "Wearing a pink dress, the girl fed the cat.",
+        "The girl wearing a pink dress fed the cat.",
+        "The girl, who wore a pink dress, fed the cat.",
+        "The girl fed the cat wearing a pink dress."
+       ],
+       "key": "D",
+       "skill": "Places modifiers correctly",
+       "rit_band": "201–210",
+       "goal": "GU"
+      },
+      {
+       "n": 26,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The boys avoided ___ about the broken window.”",
+       "options": [
+        "talking",
+        "to talk",
+        "talked",
+        "talk"
+       ],
+       "key": "A",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 27,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“Neither the manager nor the employees ___ aware of the problem.”",
+       "options": [
+        "has been",
+        "were",
+        "is",
+        "was"
+       ],
+       "key": "B",
+       "skill": "Uses correlative conjunctions",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 28,
+       "type": "multiple-choice",
+       "stem": "Which revision changes the sentence to the active voice?\n“The prize was won by our class.”",
+       "options": [
+        "The prize was won by us.",
+        "Our class was given the prize.",
+        "Our class won the prize.",
+        "The prize had been won."
+       ],
+       "key": "C",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 29,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the subjunctive mood?",
+       "options": [
+        "Does he study every evening with the teacher?",
+        "The teacher said that he studies every evening.",
+        "The teacher suggested that he study every evening.",
+        "He studied every evening with the teacher."
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 30,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in mood?",
+       "options": [
+        "Open your books, and you should read the first page.",
+        "Open your books and read the first page.",
+        "You should open your books and read the first page.",
+        "Please open your books and read the first page."
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 31,
+       "type": "multiple-choice",
+       "stem": "Which words correctly complete the sentence?\n“If she had left earlier, she ___ the bus.”",
+       "options": [
+        "had caught",
+        "will catch",
+        "would be catching",
+        "would have caught"
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 32,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses parallel structure?",
+       "options": [
+        "The guide told us staying together, to drink water and following the trail.",
+        "The guide told us to stay together, to drink water and to follow the trail.",
+        "The guide told us to stay together, drink water and following the trail.",
+        "The guide told us to stay together, drinking water and to follow the trail."
+       ],
+       "key": "B",
+       "skill": "Uses parallel structure",
+       "rit_band": "231–240",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Capitalization, Punctuation and Spelling",
+     "goal": "ME",
+     "items": [
+      {
+       "n": 33,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "Yes, Sara the meeting has been moved to Tuesday.",
+        "Yes, Sara, the meeting has been moved to Tuesday.",
+        "Yes Sara the meeting, has been moved to Tuesday.",
+        "Yes Sara, the meeting has been moved to Tuesday."
+       ],
+       "key": "B",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 34,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "We read a chapter about the Renaissance in our World history book.",
+        "We read a chapter about the renaissance in our World History book.",
+        "we read a chapter about the Renaissance in our world history book.",
+        "We read a chapter about the Renaissance in our world history book."
+       ],
+       "key": "D",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 35,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an apostrophe correctly?",
+       "options": [
+        "The citys new park opened last week.",
+        "The citys’ new park opened last week.",
+        "The city’s new park opened last week.",
+        "The city’s new park opened last week’s."
+       ],
+       "key": "C",
+       "skill": "Uses apostrophes in contractions and possessives",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 36,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "The festival offers three activities: music, art and storytelling.",
+        "The festival offers three activities music: art and storytelling.",
+        "The festival offers: three activities music, art and storytelling.",
+        "The festival: offers three activities music, art and storytelling."
+       ],
+       "key": "A",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "201–210",
+       "goal": "ME"
+      },
+      {
+       "n": 37,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon correctly?",
+       "options": [
+        "The road was flooded, consequently; we stayed home.",
+        "The road was flooded; consequently, we stayed home.",
+        "The road; was flooded consequently we stayed home.",
+        "The road was flooded consequently, we stayed home."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 38,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a dash to show an interruption?",
+       "options": [
+        "The answer is hold on—let me—check my notes.",
+        "The—answer is hold on, let me check my notes.",
+        "The answer is—hold on, let me check my notes.",
+        "The answer—is hold on, let me check my notes."
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 39,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "The up-to-date map showed every new road.",
+        "The up-to date map showed every new road.",
+        "The up to date-map showed every new road.",
+        "The up to-date map showed every new road."
+       ],
+       "key": "A",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 40,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "“If you need help” said Mr. Adel, “just ask.”",
+        "“If you need help,” said Mr. Adel “just ask.”",
+        "“If you need help,” said Mr. Adel, “Just ask.”",
+        "“If you need help,” said Mr. Adel, “just ask.”"
+       ],
+       "key": "D",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 41,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "acquier",
+        "acquire",
+        "acuire",
+        "aquire"
+       ],
+       "key": "B",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 42,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "Visitors, who arrive after six cannot enter the museum.",
+        "Visitors, who arrive after six, cannot enter the museum.",
+        "Visitors who arrive after six cannot enter the museum.",
+        "Visitors who arrive after six, cannot enter the museum."
+       ],
+       "key": "C",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 43,
+       "type": "multiple-choice",
+       "stem": "Read the original sentence.\n“Our team, which trained for six months, finally won the championship.”\nWhich version correctly shows an omission?",
+       "options": [
+        "“Our team … finally won the championship.”",
+        "“Our team which trained … for six months.”",
+        "“Our team, which … trained … won.”",
+        "“… Our team, … finally, won the … championship.”"
+       ],
+       "key": "A",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "231–240",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C",
+   "title": "Mock Exam C",
+   "note": "Full practice test · 43 questions · harder",
+   "sections": [
+    {
+     "passage": {
+      "title": "How Vaccines Train the Body",
+      "genre": "draft",
+      "intro": "Lama is writing a science report. Read her draft and answer the questions.",
+      "paras": [
+       "(1) The human immune system protects the body from germs such as viruses and bacteria. (2) When a new germ enters the body, the immune system must learn to recognize it. (3) This process can take days; meanwhile, a person may become sick. (4) A vaccine helps by showing the immune system a harmless piece or weakened form of a germ. (5) The body then produces antibodies, which is proteins that recognize and fight the germ. (6) If the real germ appears later the immune system can respond quickly. (7) Because of vaccines, diseases such as polio have become rare in many parts of the world."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "Which word in sentence 3 shows a relationship of time?",
+       "options": [
+        "days",
+        "meanwhile",
+        "process",
+        "sick"
+       ],
+       "key": "B",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence defines a domain-specific term within the sentence?",
+       "options": [
+        "sentence 1",
+        "sentence 3",
+        "sentence 5",
+        "sentence 7"
+       ],
+       "key": "C",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "How is the report mainly organized?",
+       "options": [
+        "by comparing two kinds of diseases",
+        "by arguing that one medicine is best",
+        "by telling a story about one patient",
+        "by explaining a process step by step"
+       ],
+       "key": "D",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “which is” in sentence 5?",
+       "options": [
+        "which are",
+        "which was",
+        "that is",
+        "which be"
+       ],
+       "key": "A",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Where should a comma be added in sentence 6?",
+       "options": [
+        "after “later”",
+        "after “germ”",
+        "after “respond”",
+        "after “system”"
+       ],
+       "key": "A",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST conclusion for the report?",
+       "options": [
+        "Polio is a disease that was once common in many parts of the world in the past.",
+        "By training the body in advance, vaccines prepare it to fight diseases before they can cause harm.",
+        "Bacteria are tiny living things, and some kinds of them are actually very helpful to the human body.",
+        "Doctors and nurses work in hospitals and clinics in every city and town in the country."
+       ],
+       "key": "B",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "The Volunteer Interview",
+      "genre": "draft",
+      "intro": "Nouf wrote a story about an interview. Read her draft and answer the questions.",
+      "paras": [
+       "(1) I arrived at the hospital fifteen minutes early, clutching my application. (2) The volunteer coordinator, a tall woman with kind eyes, invited me into her office. (3) “Why do you want to volunteer here” she asked. (4) For a moment, my mind went blank. (5) Then I remembered the nurse who had comforted my grandmother last year. (6) I told the coordinator about her and explained that I wanted to help others the way she had help us. (7) The coordinator smiled and said, “When can you start?”"
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write sentence 3?",
+       "options": [
+        "“Why do you want to volunteer here,” she asked?",
+        "“Why do you want to volunteer here?” She asked.",
+        "“Why do you want to volunteer here?” she asked.",
+        "“Why do you want to volunteer here.” she asked?"
+       ],
+       "key": "C",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 8,
+       "type": "multiple-choice",
+       "stem": "What is the effect of sentence 4?",
+       "options": [
+        "It explains why the narrator arrived early.",
+        "It shows that the narrator does not really want the volunteer job.",
+        "It describes the coordinator’s office in detail.",
+        "It creates a moment of tension before the narrator answers."
+       ],
+       "key": "D",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 9,
+       "type": "multiple-choice",
+       "stem": "Which detail in sentence 2 helps the reader picture the coordinator?",
+       "options": [
+        "The volunteer coordinator",
+        "a tall woman with kind eyes",
+        "invited me",
+        "into her office"
+       ],
+       "key": "B",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 10,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “had help” in sentence 6?",
+       "options": [
+        "had helping",
+        "have help",
+        "has helped",
+        "had helped"
+       ],
+       "key": "D",
+       "skill": "Uses perfect verb tenses",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 11,
+       "type": "multiple-choice",
+       "stem": "Why does Nouf include the memory in sentence 5?",
+       "options": [
+        "to show that the narrator was late for the interview",
+        "to describe the hospital building and its rooms",
+        "to reveal the narrator’s real reason for volunteering",
+        "to explain how hospitals choose their nurses"
+       ],
+       "key": "C",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 12,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST ending for the story?",
+       "options": [
+        "As I walked out, I realized that one person’s kindness had shaped my own path.",
+        "The coordinator’s office had a large window that looked out over the parking lot.",
+        "My application was two pages long and included my grades and my hobbies.",
+        "Hospitals need volunteers to help with many tasks, such as greeting visitors."
+       ],
+       "key": "A",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "Year-Round School",
+      "genre": "draft",
+      "intro": "Bandar wrote an argument essay. Read his draft and answer the questions.",
+      "paras": [
+       "(1) Some districts have replaced the long summer vacation with a year-round calendar that includes several shorter breaks. (2) Our school should adopt this calendar. (3) During a long summer break, many students forget part of what was learned by them. (4) Shorter, more frequent breaks would allow students to rest without losing as much knowledge. (5) Critics argue that families depend on summer for travel. (6) However, a year-round calendar still includes breaks of several weeks, which can be used for travel. (7) A year-round calendar would help students learn more and it would keep their skills strong."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 13,
+       "type": "multiple-choice",
+       "stem": "Which sentence states Bandar’s claim?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 3",
+        "sentence 5"
+       ],
+       "key": "B",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 14,
+       "type": "multiple-choice",
+       "stem": "Where should a comma be added in sentence 7?",
+       "options": [
+        "after “skills”",
+        "after “calendar”",
+        "after “students”",
+        "after “more”"
+       ],
+       "key": "D",
+       "skill": "Uses a comma before a conjunction in a compound sentence",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 15,
+       "type": "multiple-choice",
+       "stem": "Which transition could replace “However” in sentence 6 without changing the meaning?",
+       "options": [
+        "Nevertheless",
+        "Furthermore",
+        "Similarly",
+        "Therefore"
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 16,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 3 uses the active voice consistently?",
+       "options": [
+        "During a long summer break, what was learned by students is forgotten.",
+        "During a long summer break, many students forget part of what was learned.",
+        "During a long summer break, many students forget part of what they learned.",
+        "During a long summer break, part of what students learned is forgotten by them."
+       ],
+       "key": "C",
+       "skill": "Uses active and passive voice",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 17,
+       "type": "multiple-choice",
+       "stem": "How does sentence 6 respond to the counterclaim in sentence 5?",
+       "options": [
+        "It explains that families could still travel during the shorter breaks.",
+        "It introduces a new claim about school buses and schedules.",
+        "It agrees that summer vacation is the only good time for families to travel.",
+        "It gives evidence that students learn more during the summer."
+       ],
+       "key": "A",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 18,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 3?",
+       "options": [
+        "Some schools have air conditioning, while others use large fans to keep classrooms cool.",
+        "Summer is the warmest season of the year in countries north of the equator.",
+        "Many families like to travel to the beach or the mountains during the long, hot summer months.",
+        "Research shows that students can lose about one month of math learning over a long summer break."
+       ],
+       "key": "D",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Writing",
+     "goal": "WR",
+     "items": [
+      {
+       "n": 19,
+       "type": "multiple-choice",
+       "stem": "Which sentence BEST maintains a formal, objective tone?",
+       "options": [
+        "Obviously, everyone hates long breaks, and the survey totally proves it.",
+        "I think the survey shows stuff about what students like, more or less.",
+        "The survey results suggest that most students prefer shorter breaks.",
+        "The survey was kind of interesting, and the results were pretty cool."
+       ],
+       "key": "C",
+       "skill": "Keeps a consistent formal style and objective tone",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 20,
+       "type": "multiple-choice",
+       "stem": "Which sentence would BEST introduce an essay that explains the causes of desertification?",
+       "options": [
+        "Deserts are hot and dry places where it does not rain very often, sometimes for the whole year.",
+        "Desertification—the process of fertile land turning into desert—has several human and natural causes.",
+        "Many people enjoy visiting the deserts of Arabia to ride camels and to watch the beautiful sunsets.",
+        "Sand is made of tiny pieces of rock that have been broken down over many years."
+       ],
+       "key": "B",
+       "skill": "Chooses an effective introduction",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 21,
+       "type": "multiple-choice",
+       "stem": "Read the sentences from two sources.\nSource 1: “Saudi Arabia is one of the world’s largest producers of dates.”\nSource 2: “Dates are rich in fiber, potassium and natural sugars.”\nWhich sentence BEST combines information from both sources?",
+       "options": [
+        "Saudi Arabia is one of the largest producers of dates, which I personally think are very delicious.",
+        "Dates are a fruit, and Saudi Arabia is a country, and both of them are very important.",
+        "Many people eat dates, but some people do not like the taste of dates at all.",
+        "Saudi Arabia, one of the world’s largest date producers, grows a fruit rich in fiber and potassium."
+       ],
+       "key": "D",
+       "skill": "Paraphrases or cites a source correctly",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Grammar and Usage",
+     "goal": "GU",
+     "items": [
+      {
+       "n": 22,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a gerund as the subject?",
+       "options": [
+        "Hiking in the mountains requires good boots.",
+        "We really enjoy hiking in the high mountains.",
+        "We plan to hike in the mountains.",
+        "The hiking boots were muddy."
+       ],
+       "key": "A",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 23,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the passive voice?",
+       "options": [
+        "We will hear the results tomorrow.",
+        "The results will be announced tomorrow.",
+        "The judges are announcing the results.",
+        "The judges will announce the results tomorrow."
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 24,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The students practiced ___ their speeches.”",
+       "options": [
+        "to deliver",
+        "delivered",
+        "delivering",
+        "deliver"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 25,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a dangling modifier?",
+       "options": [
+        "I fell asleep quickly because I was tired after the journey.",
+        "After the long journey, I was tired and fell asleep quickly.",
+        "Tired after the long journey, sleep came quickly.",
+        "Tired after the long journey, I fell asleep quickly."
+       ],
+       "key": "C",
+       "skill": "Places modifiers correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 26,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the conditional mood?",
+       "options": [
+        "If we left now, we would arrive on time.",
+        "Leave now so you arrive on time.",
+        "We are leaving now to arrive on time.",
+        "Did we leave in time to arrive?"
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 27,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The committee ___ its decision after a long meeting.”",
+       "options": [
+        "have announced",
+        "announcing",
+        "were announcing",
+        "announced"
+       ],
+       "key": "D",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 28,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in voice?",
+       "options": [
+        "The chef cooked the rice while her assistant steamed the vegetables.",
+        "The chef cooked the rice, and the vegetables were steamed by her.",
+        "The rice was cooked, and the vegetables were steamed.",
+        "The chef cooked the rice and steamed the vegetables."
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 29,
+       "type": "multiple-choice",
+       "stem": "Which is the BEST way to combine the sentences using a participial phrase?\n“Sami finished his homework. He went outside to play.”",
+       "options": [
+        "Sami finished his homework, he went outside to play.",
+        "Having finished his homework, outside was where Sami played.",
+        "Finishing outside, Sami went to play his homework.",
+        "Having finished his homework, Sami went outside to play."
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 30,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses parallel structure?",
+       "options": [
+        "The job requires patience, creativity and attention to detail.",
+        "The job requires being patient, creativity and to pay attention.",
+        "The job requires patience, being creative and attention to detail.",
+        "The job requires patience, creative and attentive to detail."
+       ],
+       "key": "A",
+       "skill": "Uses parallel structure",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 31,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses the correct verb form?",
+       "options": [
+        "The sun has already set by the time we arrived.",
+        "The sun had already sat by the time we arrived.",
+        "The sun had already set by the time we arrived.",
+        "The sun had already setted by the time we arrived."
+       ],
+       "key": "C",
+       "skill": "Forms irregular past-tense and past-participle verbs",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 32,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“My parents insisted that my brother ___ home before dark.”",
+       "options": [
+        "was",
+        "be",
+        "is",
+        "will be"
+       ],
+       "key": "B",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "231–240",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Capitalization, Punctuation and Spelling",
+     "goal": "ME",
+     "items": [
+      {
+       "n": 33,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "To tell, the truth I was nervous about the exam.",
+        "To tell the truth I was nervous, about the exam.",
+        "To tell the truth, I was nervous about the exam.",
+        "To tell the truth I was, nervous about the exam."
+       ],
+       "key": "C",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 34,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "The saudi Red Crescent Authority helped families after the flood.",
+        "The Saudi Red Crescent Authority helped families after the flood.",
+        "The Saudi red crescent authority helped families after the flood.",
+        "The Saudi Red Crescent authority helped Families after the flood."
+       ],
+       "key": "B",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 35,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon correctly?",
+       "options": [
+        "Some birds migrate thousands of kilometers; and others stay in one place all year.",
+        "Some birds; migrate thousands of kilometers others stay in one place all year.",
+        "Some birds migrate; thousands of kilometers others stay in one place all year.",
+        "Some birds migrate thousands of kilometers; others stay in one place all year."
+       ],
+       "key": "D",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 36,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an ellipsis correctly to show a pause?",
+       "options": [
+        "“I’m not sure … maybe we should ask the teacher,” said Fahd.",
+        "… “I’m not sure maybe we should ask the teacher,” said Fahd.",
+        "“I’m not sure maybe … we should … ask the teacher” said Fahd.",
+        "“I’m … not sure maybe we should ask … the teacher” … said Fahd."
+       ],
+       "key": "A",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 37,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses dashes correctly?",
+       "options": [
+        "The final—exam worth half of our grade—is next week.",
+        "The final exam—worth half of our grade—is next week.",
+        "The final exam—worth half of our grade is next week.",
+        "The final exam worth—half of our grade—is next week."
+       ],
+       "key": "B",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 38,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "The museum has a world famous collection of ancient-coins.",
+        "The museum has a world famous-collection of ancient coins.",
+        "The museum has a world-famous-collection of ancient coins.",
+        "The museum has a world-famous collection of ancient coins."
+       ],
+       "key": "D",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 39,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "The recipe calls for one secret: ingredient saffron.",
+        "The recipe calls for: one secret ingredient saffron.",
+        "The recipe calls for one secret ingredient: saffron.",
+        "The recipe: calls for one secret ingredient saffron."
+       ],
+       "key": "C",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 40,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "Khaled said, “My father always tells me, ‘Respect is earned.’”",
+        "Khaled said, “My father always tells me, Respect is earned.”",
+        "Khaled said “My father always tells me, ‘Respect is earned.’”",
+        "Khaled said, “My father always tells me, “Respect is earned.””"
+       ],
+       "key": "A",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 41,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses apostrophes correctly?",
+       "options": [
+        "The students’ projects and the teacher’s notes were on the desk.",
+        "The student’s projects and the teachers notes were on the desk.",
+        "The students’s projects and the teachers’ notes were on the desk.",
+        "The students projects and the teacher’s notes were on the desk’s."
+       ],
+       "key": "A",
+       "skill": "Uses apostrophes in contractions and possessives",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 42,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "exaggarate",
+        "egzaggerate",
+        "exagerate",
+        "exaggerate"
+       ],
+       "key": "D",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 43,
+       "type": "multiple-choice",
+       "stem": "Read the original quotation.\n“The Arabian Peninsula, which is the largest peninsula in the world, covers about three million square kilometers.”\nWhich version correctly shows an omission?",
+       "options": [
+        "“The Arabian Peninsula, which is … the largest … covers three million.”",
+        "“The Arabian Peninsula which is the largest … peninsula in the world.”",
+        "“The Arabian Peninsula … covers about three million square kilometers.”",
+        "“… The Arabian Peninsula … which … covers … kilometers.”"
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "231–240",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D",
+   "title": "Mock Exam D",
+   "note": "Full practice test · 43 questions · harder",
+   "sections": [
+    {
+     "passage": {
+      "title": "The Printing Press",
+      "genre": "draft",
+      "intro": "Abdulrahman is writing a history report. Read his draft and answer the questions.",
+      "paras": [
+       "(1) Before the printing press, books were copied by hand, a process that could take months. (2) Around 1440, a german inventor named Johannes Gutenberg developed a press that used movable metal type. (3) Each letter was cast as a separate piece, the pieces could be arranged to form any page. (4) As a result, books could be produced faster and more cheaply than ever before. (5) Within fifty years, millions of books had been printed across Europe. (6) Ideas spread quickly, which helped fuel new discoveries in science. (7) Many historians consider the printing press one of the most important inventions in history."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write the middle of sentence 2?",
+       "options": [
+        "a German inventor named Johannes Gutenberg",
+        "a German Inventor named Johannes Gutenberg",
+        "a german Inventor named johannes Gutenberg",
+        "a german inventor named Johannes Gutenberg"
+       ],
+       "key": "A",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which phrase in sentence 4 shows cause and effect?",
+       "options": [
+        "faster",
+        "more cheaply",
+        "than ever before",
+        "As a result"
+       ],
+       "key": "D",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "What is the correct way to write sentence 3?",
+       "options": [
+        "Each letter was cast as a separate piece, the pieces, could be arranged to form any page.",
+        "Each letter was cast, as a separate piece, the pieces could be arranged to form any page.",
+        "Each letter was cast as a separate piece, so the pieces could be arranged to form any page.",
+        "Each letter was cast as a separate piece the pieces could be arranged to form any page."
+       ],
+       "key": "C",
+       "skill": "Recognizes complete sentences, fragments and run-ons",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "Why might the writer use the passive voice in sentence 1?",
+       "options": [
+        "to give a command to readers about how to copy books by hand",
+        "to focus on the books rather than on the people who copied them",
+        "to ask a question about how long the copying of books took",
+        "to show that the action will happen sometime in the future"
+       ],
+       "key": "B",
+       "skill": "Keeps a consistent formal style and objective tone",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which sentence would BEST follow sentence 6 to give an example?",
+       "options": [
+        "Paper is made from wood pulp, cotton or other plant materials that are pressed flat.",
+        "Many modern books are now read on tablets, phones and electronic reading devices.",
+        "Gutenberg was born in the city of Mainz, which is located on the Rhine River.",
+        "For example, scientists could share their discoveries with readers in many countries."
+       ],
+       "key": "D",
+       "skill": "Adds a detail that supports the main idea",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence would make the BEST introduction to replace sentence 1?",
+       "options": [
+        "This report is about the printing press, which is a machine that prints things on paper.",
+        "I have always liked books, so I decided to write my report about the printing press.",
+        "Imagine waiting months for a single book to be copied—by hand, one letter at a time.",
+        "Books are important, and people have been reading books for a very long time in history."
+       ],
+       "key": "C",
+       "skill": "Chooses an effective introduction",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "The Storm at the Farm",
+      "genre": "draft",
+      "intro": "Ruqayya wrote a story. Read her draft and answer the questions.",
+      "paras": [
+       "(1) The wind had been rising all afternoon, but nobody on my grandfather’s farm expected the storm to hit so suddenly. (2) At five o’clock, the sky turned the color of a bruise. (3) “Get the goats into the barn!” Grandfather shouted. (4) My cousin and I raced across the field, the rain stinging our faces. (5) One small goat refused moving, so I scooped it up in my arms. (6) By the time we reached the barn, we were soaked and shivering. (7) Grandfather counted the goats, and smiled. “Every one of them is safe,” he said."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "Which phrase in sentence 6 signals the passing of time?",
+       "options": [
+        "By the time",
+        "we were soaked",
+        "and shivering",
+        "reached the barn"
+       ],
+       "key": "A",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 8,
+       "type": "multiple-choice",
+       "stem": "Which detail in sentence 4 appeals to the sense of touch?",
+       "options": [
+        "across the field",
+        "the rain stinging our faces",
+        "My cousin and I raced across",
+        "My cousin and I raced"
+       ],
+       "key": "B",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 9,
+       "type": "multiple-choice",
+       "stem": "Which revision of the first sentence in 7 is punctuated correctly?",
+       "options": [
+        "Grandfather, counted the goats and smiled.",
+        "Grandfather counted the goats and smiled.",
+        "Grandfather counted, the goats and smiled.",
+        "Grandfather counted the goats and, smiled."
+       ],
+       "key": "B",
+       "skill": "Uses a comma before a conjunction in a compound sentence",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 10,
+       "type": "multiple-choice",
+       "stem": "What is the effect of the comparison in sentence 2?",
+       "options": [
+        "It explains why the goats were afraid of the rain.",
+        "It tells readers exactly what time the storm began.",
+        "It shows that the narrator was hurt during the storm.",
+        "It helps readers picture the dark, threatening sky."
+       ],
+       "key": "D",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 11,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “refused moving” in sentence 5?",
+       "options": [
+        "refused move",
+        "refused moved",
+        "refused to move",
+        "refused to moving"
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 12,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST ending for the story?",
+       "options": [
+        "That night, as the storm howled outside, I understood why Grandfather loved every animal on his farm.",
+        "Barns are usually built from wood or metal and are used to store hay, tools and animals.",
+        "Storms with strong winds and heavy rain are common in some regions during the spring.",
+        "Goats are very intelligent animals that can learn their own names and come running when they are called."
+       ],
+       "key": "A",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "A Car-Free Downtown",
+      "genre": "draft",
+      "intro": "Wafa wrote an argument essay. Read her draft and answer the questions.",
+      "paras": [
+       "(1) Several cities around the world have closed their downtown streets to cars, and our city should do the same. (2) Without cars, downtown areas become quieter, cleaner and safer for people walking. (3) Shops in car free zones often see more customers because people stay longer when they can walk comfortably. (4) Some business owners worry that customers will not come if they cannot park nearby. (5) However, the city could build parking garages at the edges of downtown and offer free shuttle buses. (6) If the city was to try this plan, it should begin with a one-year trial. (7) A car-free downtown would make our city a more pleasant place to live, work and visit."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 13,
+       "type": "multiple-choice",
+       "stem": "Which sentence states Wafa’s claim?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 4",
+        "sentence 6"
+       ],
+       "key": "A",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 14,
+       "type": "multiple-choice",
+       "stem": "How should “car free” be written in sentence 3?",
+       "options": [
+        "car, free",
+        "carfree",
+        "car-free",
+        "car-Free"
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 15,
+       "type": "multiple-choice",
+       "stem": "Which sentence presents a counterclaim?",
+       "options": [
+        "sentence 2",
+        "sentence 3",
+        "sentence 4",
+        "sentence 5"
+       ],
+       "key": "C",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 16,
+       "type": "multiple-choice",
+       "stem": "Which word should replace “was” in sentence 6?",
+       "options": [
+        "be",
+        "has been",
+        "is",
+        "were"
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 17,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 3?",
+       "options": [
+        "Many people enjoy riding their bicycles in parks on weekends, especially when the weather is cool and sunny.",
+        "A study of car-free shopping streets found that many shops reported higher sales after cars were removed.",
+        "Cars were first sold to the public more than a century ago and have become very common.",
+        "Downtown areas usually have tall office buildings, banks, restaurants and government offices."
+       ],
+       "key": "B",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 18,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of sentence 6?",
+       "options": [
+        "to suggest a careful first step for putting the plan into action",
+        "to admit that the plan has already been tried and has failed in other cities",
+        "to give a statistic about traffic accidents downtown",
+        "to describe the history of the city’s downtown area"
+       ],
+       "key": "A",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Writing",
+     "goal": "WR",
+     "items": [
+      {
+       "n": 19,
+       "type": "multiple-choice",
+       "stem": "Which sentence is the MOST precise?",
+       "options": [
+        "Tons of people showed up to the festival, which was really popular.",
+        "The festival had many visitors, and it was very busy and crowded.",
+        "The festival was a big success, and a whole lot of people came.",
+        "The festival attracted more than 40,000 visitors over three days."
+       ],
+       "key": "D",
+       "skill": "Chooses precise or vivid language",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 20,
+       "type": "multiple-choice",
+       "stem": "Which transition BEST shows the relationship between the sentences?\n“The experiment failed twice. ___, the scientists refused to give up.”",
+       "options": [
+        "For example",
+        "Nevertheless",
+        "Therefore",
+        "Similarly"
+       ],
+       "key": "B",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 21,
+       "type": "multiple-choice",
+       "stem": "A student’s draft says, “Many experts believe that sleep improves memory.” Which revision BEST supports this with a credible, specific source?",
+       "options": [
+        "According to my friend, who always sleeps a lot, sleep is really good for your memory and stuff like that.",
+        "According to a study by university sleep researchers, sleep helps the brain store new memories.",
+        "Everybody knows that sleep is good for memory, so it does not need a source at all.",
+        "A website I found once said that sleep might help memory, but I do not remember where."
+       ],
+       "key": "B",
+       "skill": "Paraphrases or cites a source correctly",
+       "rit_band": "231–240",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Grammar and Usage",
+     "goal": "GU",
+     "items": [
+      {
+       "n": 22,
+       "type": "multiple-choice",
+       "stem": "In the sentence “The crying baby finally fell asleep,” what is “crying”?",
+       "options": [
+        "a gerund used as a subject",
+        "the main verb of the whole sentence",
+        "an infinitive used as a noun",
+        "a participle used as an adjective"
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 23,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the active voice?",
+       "options": [
+        "Three palm trees have been planted.",
+        "The palm trees are being planted today.",
+        "Our neighbor planted three palm trees.",
+        "Three palm trees were planted by our neighbor."
+       ],
+       "key": "C",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 24,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the interrogative mood?",
+       "options": [
+        "Have you ever visited the old souq?",
+        "If you visited the souq, you would love it.",
+        "You have visited the old souq.",
+        "Visit the old souq this weekend."
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 25,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a dangling modifier?",
+       "options": [
+        "After eating lunch, the movie started.",
+        "After eating lunch, we watched a movie.",
+        "The movie started after we ate lunch.",
+        "After we ate lunch, the movie started."
+       ],
+       "key": "A",
+       "skill": "Places modifiers correctly",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 26,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“Each of the paintings in the gallery ___ for sale.”",
+       "options": [
+        "were",
+        "is",
+        "have been",
+        "are"
+       ],
+       "key": "B",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 27,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“We look forward to ___ you at the ceremony.”",
+       "options": [
+        "seen",
+        "saw",
+        "see",
+        "seeing"
+       ],
+       "key": "D",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 28,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in voice?",
+       "options": [
+        "The students wrote the essays, and the teacher graded them.",
+        "The essays were written by the students and graded by the teacher on Monday.",
+        "The students wrote the essays, and then the essays were graded by them.",
+        "The students wrote the essays and then checked them carefully."
+       ],
+       "key": "C",
+       "skill": "Uses active and passive voice",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 29,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“It is important that every student ___ the safety rules.”",
+       "options": [
+        "is following",
+        "follows",
+        "followed",
+        "follow"
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 30,
+       "type": "multiple-choice",
+       "stem": "Which is the BEST way to combine the sentences?\n“The museum was built in 1920. It was renovated last year. It attracts thousands of visitors.”",
+       "options": [
+        "Built in 1920, thousands of visitors are attracted to the renovated museum last year.",
+        "The museum was built in 1920, it was renovated last year, it attracts thousands of visitors.",
+        "Built in 1920 and renovated last year, the museum attracts thousands of visitors.",
+        "The museum, built in 1920, renovated last year, attracts, thousands of visitors."
+       ],
+       "key": "C",
+       "skill": "Combines sentences correctly",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 31,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses parallel structure?",
+       "options": [
+        "She not only sings beautifully but also plays the violin.",
+        "She not only is singing beautifully but also plays violin.",
+        "Not only she sings beautifully but also the violin she plays.",
+        "She not only sings beautifully but also the violin."
+       ],
+       "key": "A",
+       "skill": "Uses parallel structure",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 32,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The book has ___ on the shelf for years without being read.”",
+       "options": [
+        "laid",
+        "lain",
+        "layed",
+        "lay"
+       ],
+       "key": "B",
+       "skill": "Forms irregular past-tense and past-participle verbs",
+       "rit_band": "241–250",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Capitalization, Punctuation and Spelling",
+     "goal": "ME",
+     "items": [
+      {
+       "n": 33,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "On the other hand, the cheaper laptop is slower.",
+        "On, the other hand the cheaper laptop is slower.",
+        "On the other hand the cheaper laptop, is slower.",
+        "On the other, hand the cheaper laptop is slower."
+       ],
+       "key": "A",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 34,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "My Aunt teaches Spanish at Princess Nourah university.",
+        "My aunt teaches spanish at Princess Nourah University.",
+        "My aunt teaches Spanish at princess Nourah university.",
+        "My aunt teaches Spanish at Princess Nourah University."
+       ],
+       "key": "D",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 35,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a semicolon correctly?",
+       "options": [
+        "The bakery opens early moreover it; stays open late.",
+        "The bakery opens; early moreover, it stays open late.",
+        "The bakery opens early; moreover, it stays open late.",
+        "The bakery opens early, moreover; it stays open late."
+       ],
+       "key": "C",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 36,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a dash to show a sudden change of thought?",
+       "options": [
+        "I’ll meet you—at the library no, the café—is better.",
+        "I’ll meet you at the library—no, the café is better.",
+        "I’ll meet—you at the library no, the café is better.",
+        "I’ll meet you at the—library no, the café is better."
+       ],
+       "key": "B",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 37,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "Forty five students-joined the trip.",
+        "Forty five-students joined the trip.",
+        "Forty-five-students joined the trip.",
+        "Forty-five students joined the trip."
+       ],
+       "key": "D",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 38,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "The Hijaz Railway, completed in 1908 connected Damascus and Medina.",
+        "The Hijaz Railway completed in 1908, connected Damascus and Medina.",
+        "The Hijaz Railway, completed in 1908, connected Damascus and Medina.",
+        "The Hijaz Railway completed, in 1908 connected Damascus and Medina."
+       ],
+       "key": "C",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 39,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "“Stop!” the guard shouted. “You can’t enter that area.”",
+        "“Stop,” the guard shouted! “You can’t enter that area.”",
+        "“Stop!” The guard shouted. “You can’t enter that area.”",
+        "“Stop!” the guard shouted, “you can’t enter that area.”"
+       ],
+       "key": "A",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 40,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "Only one: question remained who had taken the key?",
+        "Only one question remained: who had taken the key?",
+        "Only: one question remained who had taken the key?",
+        "Only one question: remained who had taken the key?"
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 41,
+       "type": "multiple-choice",
+       "stem": "Read the original quotation.\n“Reading, which many students enjoy, improves vocabulary and writing skills.”\nWhich version correctly shows an omission?",
+       "options": [
+        "“Reading which many students enjoy … improves skills.”",
+        "“… Reading … which … improves … skills … .”",
+        "“Reading, which … enjoy improves … skills.”",
+        "“Reading … improves vocabulary and writing skills.”"
+       ],
+       "key": "D",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "231–240",
+       "goal": "ME"
+      },
+      {
+       "n": 42,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "millennium",
+        "millenium",
+        "milennium",
+        "millennum"
+       ],
+       "key": "A",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "231–240",
+       "goal": "ME"
+      },
+      {
+       "n": 43,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an apostrophe correctly?",
+       "options": [
+        "My brother’s-in-law car is parked outside.",
+        "My brother-in-law’s car is parked outside.",
+        "My brother-in-laws car is parked outside.",
+        "My brother-in-law’s car is parked outside’s."
+       ],
+       "key": "B",
+       "skill": "Uses apostrophes in contractions and possessives",
+       "rit_band": "241–250",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "E",
+   "title": "Mock Exam E",
+   "note": "Final full practice test · 43 questions · hardest",
+   "sections": [
+    {
+     "passage": {
+      "title": "Rising Sea Levels",
+      "genre": "draft",
+      "intro": "Hessa is writing a science report. Read her draft and answer the questions.",
+      "paras": [
+       "(1) Over the past century, global sea levels have risen by about twenty centimeters. (2) Two main factors are responsible. (3) First, as ocean water warms, it expands and takes up more space. (4) Second, melting glaciers and ice sheets add water to the oceans. (5) Rising seas threaten low lying coastal cities, where millions of people live and work. (6) Some cities is building sea walls and restoring wetlands to protect their shores. (7) Scientists warn that, without action, sea levels could rise much faster this century."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 1,
+       "type": "multiple-choice",
+       "stem": "How is the information in sentences 2–4 organized?",
+       "options": [
+        "by explaining two causes of a problem",
+        "by describing events in a story",
+        "by listing steps to build a sea wall",
+        "by comparing two kinds of oceans"
+       ],
+       "key": "A",
+       "skill": "Puts sentences or events in a logical order",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 2,
+       "type": "multiple-choice",
+       "stem": "Which sentence describes a solution to the problem?",
+       "options": [
+        "sentence 1",
+        "sentence 3",
+        "sentence 5",
+        "sentence 6"
+       ],
+       "key": "D",
+       "skill": "Adds a detail that supports the main idea",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 3,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “is building” in sentence 6?",
+       "options": [
+        "was building",
+        "has built",
+        "are building",
+        "is build"
+       ],
+       "key": "C",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 4,
+       "type": "multiple-choice",
+       "stem": "How should “low lying” be written in sentence 5?",
+       "options": [
+        "lowlying",
+        "low-lying",
+        "low-Lying",
+        "low, lying"
+       ],
+       "key": "B",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 5,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 5?",
+       "options": [
+        "Ocean water is salty because rivers carry dissolved minerals from rocks into the sea.",
+        "Many of the world’s largest cities, including several in Asia and the Middle East, lie near the coast.",
+        "Wetlands are home to many different kinds of birds, fish, frogs and insects that need shallow, calm water.",
+        "Glaciers are large, slow-moving masses of ice that form over many years in cold places."
+       ],
+       "key": "B",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 6,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST conclusion for the report?",
+       "options": [
+        "The ocean is home to countless species, from tiny plankton to enormous blue whales.",
+        "Many people enjoy living near the coast because of the beautiful views of the water.",
+        "Sea walls are often built from concrete, rocks or large bags filled with heavy sand.",
+        "How quickly the seas rise will depend on the choices people make in the coming decades."
+       ],
+       "key": "D",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "The Unexpected Guest",
+      "genre": "draft",
+      "intro": "Ibrahim wrote a story. Read his draft and answer the questions.",
+      "paras": [
+       "(1) The doorbell rang just as we sat down to dinner. (2) My mother frowned; we weren’t expecting anyone. (3) When I opened the door, an elderly man stood on the step, holding a small, worn suitcase. (4) “Is this where the Haddad family lives?” he asked softly. (5) Before I could answer, my father appeared behind me and gasped. (6) “Uncle Yusuf?” he whispered. “We thought we had lost you forever.” (7) Thirty years earlier, my fathers uncle had left the village to find work, and the family has never heard from him again."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 7,
+       "type": "multiple-choice",
+       "stem": "How should “fathers” be written in sentence 7?",
+       "options": [
+        "father’s",
+        "fathers’",
+        "fathers’s",
+        "father’s’"
+       ],
+       "key": "A",
+       "skill": "Uses apostrophes in contractions and possessives",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 8,
+       "type": "multiple-choice",
+       "stem": "Which phrase signals a shift to an earlier time?",
+       "options": [
+        "just as we sat down",
+        "Before I could answer",
+        "Thirty years earlier",
+        "When I opened the door"
+       ],
+       "key": "C",
+       "skill": "Chooses a transition that connects ideas",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 9,
+       "type": "multiple-choice",
+       "stem": "Which detail in sentence 3 hints that the man has traveled a long way?",
+       "options": [
+        "stood on the step",
+        "When I opened the heavy front door",
+        "an elderly man",
+        "holding a small, worn suitcase"
+       ],
+       "key": "D",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 10,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “has never heard” in sentence 7?",
+       "options": [
+        "had never heard",
+        "have never heard",
+        "had never hear",
+        "has never hear"
+       ],
+       "key": "A",
+       "skill": "Uses perfect verb tenses",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 11,
+       "type": "multiple-choice",
+       "stem": "What is the purpose of sentence 7?",
+       "options": [
+        "to show that the narrator does not like unexpected guests",
+        "to give background through a flashback that explains the surprise",
+        "to explain how the man found the family’s new address",
+        "to describe what the family was eating for dinner that night at home"
+       ],
+       "key": "B",
+       "skill": "Uses narrative techniques: dialogue, description and pacing",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 12,
+       "type": "multiple-choice",
+       "stem": "Which sentence would be the BEST ending for the story?",
+       "options": [
+        "The village where my father grew up is in the mountains, far from the city.",
+        "Suitcases come in many sizes, and some have wheels that make them easier to pull.",
+        "That night, the empty chair at our table was finally filled.",
+        "Doorbells were invented in the 1800s and have become common in most homes."
+       ],
+       "key": "C",
+       "skill": "Chooses an effective concluding sentence",
+       "rit_band": "231–240",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": {
+      "title": "Part-Time Jobs for Teenagers",
+      "genre": "draft",
+      "intro": "Yazan wrote an argument essay. Read his draft and answer the questions.",
+      "paras": [
+       "(1) Many teenagers want to earn money, but should they take part-time jobs during the school year? (2) I believe a limited part-time job can benefit students. (3) Working teaches responsibility, time management and money skills. (4) It also gives students experience, that can help them choose a career. (5) Opponents claim that jobs take time away from homework and sleep. (6) This concern is valid; however, limiting work to weekends or to ten hours a week would protect students’ studies. (7) If schools and families would set clear limits, part-time jobs could help teenagers grow."
+      ]
+     },
+     "label": null,
+     "goal": "WR",
+     "items": [
+      {
+       "n": 13,
+       "type": "multiple-choice",
+       "stem": "Which sentence states Yazan’s claim?",
+       "options": [
+        "sentence 1",
+        "sentence 2",
+        "sentence 3",
+        "sentence 5"
+       ],
+       "key": "B",
+       "skill": "States a clear claim or thesis",
+       "rit_band": "211–220",
+       "goal": "WR"
+      },
+      {
+       "n": 14,
+       "type": "multiple-choice",
+       "stem": "Which revision of sentence 4 is punctuated correctly?",
+       "options": [
+        "It also gives students experience that can help them choose a career.",
+        "It also gives students, experience that can help them choose a career.",
+        "It also gives students experience, that can help them, choose a career.",
+        "It also gives, students experience that can help them choose a career."
+       ],
+       "key": "A",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 15,
+       "type": "multiple-choice",
+       "stem": "How does sentence 6 respond to the opposing claim?",
+       "options": [
+        "It rejects the concern completely without giving any reasons.",
+        "It changes the topic to the cost of school supplies.",
+        "It accepts part of the concern and offers a way to address it.",
+        "It agrees that teenagers should never work during school."
+       ],
+       "key": "C",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 16,
+       "type": "multiple-choice",
+       "stem": "What is the effect of beginning the essay with a question in sentence 1?",
+       "options": [
+        "It shows that the writer has not decided on an opinion.",
+        "It gives readers a statistic about teenagers who work.",
+        "It proves that the writer’s claim is completely correct beyond any doubt.",
+        "It invites readers to think about the issue before the claim is stated."
+       ],
+       "key": "D",
+       "skill": "Chooses an effective introduction",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 17,
+       "type": "multiple-choice",
+       "stem": "Which words should replace “would set” in sentence 7?",
+       "options": [
+        "set",
+        "would have set",
+        "setting",
+        "will have set"
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 18,
+       "type": "multiple-choice",
+       "stem": "Which evidence would BEST support sentence 3?",
+       "options": [
+        "Part-time jobs for teenagers include working in shops, restaurants, libraries and offices.",
+        "Many teenagers like to spend the money they earn on clothes, new phones and going out with their friends on weekends.",
+        "A survey of employers found that young workers with part-time jobs developed stronger time-management skills.",
+        "Some teenagers live close to their school, while others take a bus or ride with their parents."
+       ],
+       "key": "C",
+       "skill": "Chooses relevant evidence to support a point",
+       "rit_band": "231–240",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Writing",
+     "goal": "WR",
+     "items": [
+      {
+       "n": 19,
+       "type": "multiple-choice",
+       "stem": "Which sentence BEST introduces a counterclaim in an argument?",
+       "options": [
+        "Online classes use computers, cameras and the internet to connect students.",
+        "Some people argue that online classes are less effective than classes in a classroom.",
+        "In conclusion, online classes are the best way to learn for every student.",
+        "Online classes are a great idea, and I think every student should take them at least once."
+       ],
+       "key": "B",
+       "skill": "Acknowledges and answers an opposing claim",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 20,
+       "type": "multiple-choice",
+       "stem": "Which revision of the sentence is the MOST concise?\n“In the year of 2020, many people all over the world began working from their homes for the first time ever.”",
+       "options": [
+        "During the year of 2020, people all over the world, many of them, began working at home.",
+        "Many people, in the year of 2020, began working from their homes for the very first time ever.",
+        "In the year 2020, a lot of people all over the whole world started working from their homes.",
+        "In 2020, many people worldwide began working from home for the first time."
+       ],
+       "key": "D",
+       "skill": "Revises to remove wordy or repeated language",
+       "rit_band": "221–230",
+       "goal": "WR"
+      },
+      {
+       "n": 21,
+       "type": "multiple-choice",
+       "stem": "A student is researching the effects of social media on teenagers. Which search terms would be the MOST effective?",
+       "options": [
+        "social media effects teenagers sleep study",
+        "how to make a social media account fast",
+        "social media",
+        "teenagers"
+       ],
+       "key": "A",
+       "skill": "Chooses a useful source or research question",
+       "rit_band": "221–230",
+       "goal": "WR"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Grammar and Usage",
+     "goal": "GU",
+     "items": [
+      {
+       "n": 22,
+       "type": "multiple-choice",
+       "stem": "Which sentence is in the passive voice?",
+       "options": [
+        "A farmer discovered the ancient coins.",
+        "The ancient coins were discovered by a farmer.",
+        "A farmer is discovering ancient coins.",
+        "The farmer has discovered some ancient coins."
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "211–220",
+       "goal": "GU"
+      },
+      {
+       "n": 23,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an infinitive as a noun?",
+       "options": [
+        "Travelers walked through the world.",
+        "She has the money to travel the world.",
+        "To travel the world is my dream.",
+        "I saved money to travel the world."
+       ],
+       "key": "C",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 24,
+       "type": "multiple-choice",
+       "stem": "Which sentence has a dangling modifier?",
+       "options": [
+        "Having studied all night, Ali found the test easy.",
+        "Because Ali had studied all night, the test seemed easy.",
+        "Ali found the test easy because he had studied all night.",
+        "Having studied all night, the test seemed easy."
+       ],
+       "key": "D",
+       "skill": "Places modifiers correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 25,
+       "type": "multiple-choice",
+       "stem": "Which sentence has an inappropriate shift in mood?",
+       "options": [
+        "Sign the form and return it by Friday, please.",
+        "You must sign the form and return it to the office by Friday.",
+        "Please sign the form, and you must return it by Friday.",
+        "Please sign the form and return it by Friday."
+       ],
+       "key": "C",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 26,
+       "type": "multiple-choice",
+       "stem": "Which words correctly complete the sentence?\n“The professor, along with her students, ___ the results.”",
+       "options": [
+        "is studying",
+        "are studying",
+        "have studied",
+        "were studying"
+       ],
+       "key": "A",
+       "skill": "Makes subjects and verbs agree",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 27,
+       "type": "multiple-choice",
+       "stem": "Which revision changes the sentence to the active voice?\n“Mistakes were made by the new employees.”",
+       "options": [
+        "Mistakes were made.",
+        "The new employees made mistakes.",
+        "Mistakes had been made by them.",
+        "The new employees were making them."
+       ],
+       "key": "B",
+       "skill": "Uses active and passive voice",
+       "rit_band": "221–230",
+       "goal": "GU"
+      },
+      {
+       "n": 28,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“The coach recommended that she ___ more water during practice.”",
+       "options": [
+        "drinks",
+        "is drinking",
+        "drank",
+        "drink"
+       ],
+       "key": "D",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 29,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a gerund phrase as the object of a preposition?",
+       "options": [
+        "Her solved puzzles hang on the wall.",
+        "She is talented at solving puzzles.",
+        "She wants to solve puzzles.",
+        "Solving puzzles is her talent."
+       ],
+       "key": "B",
+       "skill": "Uses verbals: gerunds, participles and infinitives",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 30,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses parallel structure?",
+       "options": [
+        "Either we leave now or missing the train.",
+        "Either we leave now, or the train missing.",
+        "Either we leave now, or we miss the train.",
+        "Either leaving now or we miss the train."
+       ],
+       "key": "C",
+       "skill": "Uses parallel structure",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 31,
+       "type": "multiple-choice",
+       "stem": "Which word correctly completes the sentence?\n“Hessa ___ her keys on the table before she left.”",
+       "options": [
+        "layed",
+        "lain",
+        "lay",
+        "laid"
+       ],
+       "key": "D",
+       "skill": "Forms irregular past-tense and past-participle verbs",
+       "rit_band": "231–240",
+       "goal": "GU"
+      },
+      {
+       "n": 32,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses the subjunctive mood correctly?",
+       "options": [
+        "If she were taller, she could reach the shelf.",
+        "If she was being taller, she could reach the shelf.",
+        "If she is taller, she could have reached the shelf.",
+        "If she would be taller, she can reach the shelf."
+       ],
+       "key": "A",
+       "skill": "Uses verb moods correctly",
+       "rit_band": "241–250",
+       "goal": "GU"
+      }
+     ]
+    },
+    {
+     "passage": null,
+     "label": "Capitalization, Punctuation and Spelling",
+     "goal": "ME",
+     "items": [
+      {
+       "n": 33,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses commas correctly?",
+       "options": [
+        "By the way, the meeting starts at noon.",
+        "By, the way the meeting starts at noon.",
+        "By the way the meeting, starts at noon.",
+        "By the way the meeting starts, at noon."
+       ],
+       "key": "A",
+       "skill": "Uses a comma after an introductory word, phrase or clause",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 34,
+       "type": "multiple-choice",
+       "stem": "Which sentence is capitalized correctly?",
+       "options": [
+        "The Treaty Of Versailles was signed in 1919.",
+        "the Treaty of Versailles was signed in 1919.",
+        "The treaty of Versailles was signed in 1919.",
+        "The Treaty of Versailles was signed in 1919."
+       ],
+       "key": "D",
+       "skill": "Capitalizes proper nouns, titles and sentence beginnings",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 35,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses a colon correctly?",
+       "options": [
+        "The scientist made: a surprising discovery the fossil was a new species.",
+        "The scientist made a surprising discovery: the fossil was a new species.",
+        "The scientist: made a surprising discovery the fossil was a new species.",
+        "The scientist made a surprising: discovery the fossil was a new species."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "211–220",
+       "goal": "ME"
+      },
+      {
+       "n": 36,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses an ellipsis to show a trailing thought?",
+       "options": [
+        "“If only … we had … left earlier” … Mona sighed.",
+        "“If only we had left … earlier” Mona sighed … .",
+        "“If only we had left earlier …” Mona sighed.",
+        "… “If only we had left earlier” Mona … sighed."
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 37,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses dashes correctly?",
+       "options": [
+        "Three cities—Riyadh, Jeddah and Dammam—hosted the event.",
+        "Three cities—Riyadh, Jeddah and Dammam hosted—the event.",
+        "Three—cities Riyadh, Jeddah and Dammam—hosted the event.",
+        "Three cities Riyadh—Jeddah and Dammam—hosted the event."
+       ],
+       "key": "A",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 38,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "“The question” Dr. Salma explained, “is not whether we can, but whether we should.”",
+        "“The question,” Dr. Salma explained, “Is not whether we can, but whether we should.”",
+        "“The question,” Dr. Salma explained “is not whether we can, but whether we should.”",
+        "“The question,” Dr. Salma explained, “is not whether we can, but whether we should.”"
+       ],
+       "key": "D",
+       "skill": "Punctuates dialogue and quotations",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 39,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses hyphens correctly?",
+       "options": [
+        "The two thirds-majority voted for the plan.",
+        "The two-thirds-majority voted for the plan.",
+        "The two-thirds majority voted for the plan.",
+        "The two thirds majority-voted for the plan."
+       ],
+       "key": "C",
+       "skill": "Uses hyphens and dashes correctly",
+       "rit_band": "221–230",
+       "goal": "ME"
+      },
+      {
+       "n": 40,
+       "type": "multiple-choice",
+       "stem": "Which sentence uses semicolons correctly?",
+       "options": [
+        "The trip included stops in Cairo; Egypt, Amman; Jordan, and Beirut; Lebanon.",
+        "The trip included stops in Cairo, Egypt; Amman, Jordan; and Beirut, Lebanon.",
+        "The trip included stops in Cairo, Egypt, Amman, Jordan; and Beirut, Lebanon.",
+        "The trip included; stops in Cairo, Egypt, Amman, Jordan and Beirut, Lebanon."
+       ],
+       "key": "B",
+       "skill": "Uses semicolons and colons correctly",
+       "rit_band": "231–240",
+       "goal": "ME"
+      },
+      {
+       "n": 41,
+       "type": "multiple-choice",
+       "stem": "Which sentence is punctuated correctly?",
+       "options": [
+        "The athlete who breaks the record, will receive a medal.",
+        "The athlete who breaks the record will receive a medal.",
+        "The athlete, who breaks the record will receive a medal.",
+        "The athlete, who breaks the record, will receive a medal."
+       ],
+       "key": "B",
+       "skill": "Uses commas, parentheses or dashes to set off extra information",
+       "rit_band": "231–240",
+       "goal": "ME"
+      },
+      {
+       "n": 42,
+       "type": "multiple-choice",
+       "stem": "Which word is spelled correctly?",
+       "options": [
+        "perseverance",
+        "perseverence",
+        "persevearance",
+        "perserverance"
+       ],
+       "key": "A",
+       "skill": "Spells grade-level words correctly",
+       "rit_band": "231–240",
+       "goal": "ME"
+      },
+      {
+       "n": 43,
+       "type": "multiple-choice",
+       "stem": "Read the original quotation.\n“Water, which covers most of Earth’s surface, is essential for every living thing.”\nWhich version correctly shows an omission?",
+       "options": [
+        "“Water which covers most … of Earth’s surface.”",
+        "“… Water … which … is … thing … .”",
+        "“Water … is essential for every living thing.”",
+        "“Water, which … covers … essential.”"
+       ],
+       "key": "C",
+       "skill": "Uses an ellipsis or dash to show a pause or break",
+       "rit_band": "241–250",
+       "goal": "ME"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

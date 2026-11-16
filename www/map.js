@@ -19,10 +19,25 @@ const MAPX = (() => {
     8: ['#C2255C', '#FCE8EF', '#8A1742', 'linear-gradient(135deg,#E64C80,#C2255C)', '🏛️'],
     9: ['#1D3F9E', '#E4EAFB', '#132B6E', 'linear-gradient(135deg,#3D63CC,#1D3F9E)', '🎓']
   };
-  const GOALS = { LT: ['Literary Text', 'النص الأدبي', '📖'], IT: ['Informational Text', 'النص المعلوماتي', '📰'], VO: ['Vocabulary', 'المفردات', '🔤'] };
+  const GOALS = { LT: ['Literary Text', 'النص الأدبي', '📖'], IT: ['Informational Text', 'النص المعلوماتي', '📰'], VO: ['Vocabulary', 'المفردات', '🔤'],
+    WR: ['Writing', 'الكتابة', '📝'], GU: ['Grammar and Usage', 'القواعد والاستخدام', '🧩'], ME: ['Mechanics', 'الترقيم والإملاء والحروف الكبيرة', '✏️'] };
   const SUBJ = {
-    reading: { name: 'Reading', ar: 'القراءة', em: '📚', blurb: 'Literary Text, Informational Text and Vocabulary' },
-    language: { name: 'Language Usage', ar: 'استخدام اللغة', em: '✍️', blurb: 'Writing, Grammar and Usage, and Mechanics' }
+    reading: { name: 'Reading', ar: 'القراءة', em: '📚', blurb: 'Literary Text, Informational Text and Vocabulary', goals: ['LT', 'IT', 'VO'],
+      pass: 'Passage', passAr: 'النص', words: ['🔑 Word box', 'كلمات مهمة'], noPass: 'Words in sentences', secIcon: { VO: '🔤' },
+      mockLine: ['43 questions each: 15 Literary Text, 15 Informational Text and 13 Vocabulary, with six passages. No time limit; answers are saved as you go.', '43 سؤالًا لكل اختبار، دون وقت محدد، وتُحفظ إجاباتك تلقائيًا.'],
+      mockFirst: '<b>43 questions:</b> six passages and a vocabulary section — 15 Literary Text, 15 Informational Text and 13 Vocabulary questions.',
+      mockTime: '<b>No time limit.</b> Most students need 50–70 minutes. Read carefully and look back at the passage.',
+      instr: ['Read the passage, then answer the questions. Press <b>Check answers</b> when you finish.', 'اقرأ النص ثم أجب عن الأسئلة، واضغط "تحقّق" عندما تنتهي.'],
+      fb: ['Excellent reading! 🎉', 'Good work. Look at the questions you missed and find the proof in the text.', 'Read the passage again and look for the sentence that proves each answer.'],
+      habitsTitle: ['💡 Smart reading habits', 'عادات القراءة الذكية'] },
+    language: { name: 'Language Usage', ar: 'استخدام اللغة', em: '✍️', blurb: 'Writing, Grammar and Usage, and Mechanics', goals: ['WR', 'GU', 'ME'],
+      pass: 'Draft', passAr: 'المسودة', words: ['🔑 Key terms', 'مصطلحات مهمة'], noPass: 'Single sentences', secIcon: { WR: '📝', GU: '🧩', ME: '✏️' },
+      mockLine: ['43 questions each: 15 Writing, 14 Grammar and Usage and 14 Mechanics — three student drafts, then three short sections of sentences. No time limit; answers are saved as you go.', '43 سؤالًا لكل اختبار: ثلاث مسودات ثم ثلاثة أقسام قصيرة، دون وقت محدد، وتُحفظ إجاباتك تلقائيًا.'],
+      mockFirst: '<b>43 questions:</b> three student drafts with numbered sentences, then three short sections — 15 Writing, 14 Grammar and Usage and 14 Mechanics questions.',
+      mockTime: '<b>No time limit.</b> Most students need 45–60 minutes. Read the whole draft, and read each answer choice back into the sentence.',
+      instr: ['Read the draft (or each sentence), then answer the questions. Press <b>Check answers</b> when you finish.', 'اقرأ المسودة أو الجملة ثم أجب عن الأسئلة، واضغط "تحقّق" عندما تنتهي.'],
+      fb: ['Excellent editing! 🎉', 'Good work. Look at the questions you missed and read each choice back into the sentence.', 'Read the draft again and test each answer choice in the sentence before you choose.'],
+      habitsTitle: ['💡 Smart editing habits', 'عادات التحرير الذكية'] }
   };
   const NUMBERED = new Set(['story', 'informational', 'argument', 'persuasive', 'fable', 'folk tale', 'paired']);
   const LINES = new Set(['chart', 'timetable', 'schedule', 'menu', 'sign', 'label', 'poster', 'advertisement', 'announcement', 'map', 'public service announcement', 'how-to']);
@@ -35,6 +50,23 @@ const MAPX = (() => {
     ['For a word question, read the whole sentence again and try each choice in the sentence.', 'في أسئلة المفردات، أعد قراءة الجملة كاملة وجرّب كل خيار فيها.'],
     ['Take your time. MAP Growth has no time limit; careful reading is worth more than finishing quickly.', 'خذ وقتك؛ اختبار MAP غير محدد بوقت، والقراءة المتأنية أهم من السرعة.']
   ];
+
+  const LHABITS = [
+    ['Read the whole draft once before you answer, so you know what the writer wants to say.', 'اقرأ المسودة كاملة مرة واحدة قبل الإجابة لتفهم ما يريد الكاتب قوله.'],
+    ['When a question names a sentence number, find that sentence and read the sentences before and after it.', 'عندما يذكر السؤال رقم جملة، ابحث عنها واقرأ الجملة التي قبلها والتي بعدها.'],
+    ['Read each answer choice back into the sentence. Choose the one that sounds right and follows the rule.', 'ضع كل خيار في الجملة واقرأها، واختر ما يبدو صحيحًا ويتبع القاعدة.'],
+    ['For a BEST question, more than one choice may be possible. Choose the clearest one that fits the writer’s purpose.', 'في أسئلة BEST قد يصلح أكثر من خيار؛ اختر الأوضح والأنسب لهدف الكاتب.'],
+    ['Look closely at small things: capital letters, commas, apostrophes, quotation marks, end marks and spelling.', 'انتبه للتفاصيل الصغيرة: الحروف الكبيرة والفواصل والفواصل العليا وعلامات التنصيص والإملاء.'],
+    ['Take your time. MAP Growth has no time limit; careful reading is worth more than finishing quickly.', 'خذ وقتك؛ اختبار MAP غير محدد بوقت، والقراءة المتأنية أهم من السرعة.']
+  ];
+  const cur = () => (S.subj === 'language' ? 'language' : 'reading');
+  /* section name in a mock exam: "Passage 2", "Draft 1", "🔤 Vocabulary", "🧩 Grammar and Usage" … */
+  function secName(subj, s, k, short) {
+    if (s.passage) return `${SUBJ[subj].pass} ${k + 1}`;
+    const g = (s.items[0] || {}).g, ic = (SUBJ[subj].secIcon || {})[g] || '🔤';
+    const lab = s.label || (GOALS[g] || ['Vocabulary'])[0];
+    return `${ic} ${short ? lab.replace('Capitalization, Punctuation and Spelling', 'Mechanics') : lab}`;
+  }
 
   /* ---------- data ---------- */
   const IDX = () => window.MAP_INDEX || { reading: GRADES, language: [] };
@@ -103,7 +135,7 @@ const MAPX = (() => {
   function qHTML(it, i, a, review) {
     const ok = review && right(it, a);
     const g = GOALS[it.g] || null;
-    let h = `<div class="task mq ${review ? (ok ? 'ok rv' : 'no rv') : ''}" id="mq${i}"><div class="q"><span class="num">${it.n}</span>${md(it.s)}</div>`;
+    let h = `<div class="task mq ${review ? (ok ? 'ok rv' : 'no rv') : ''}" id="mq${i}"><div class="q"><span class="num">${it.n}</span>${md(it.s).replace(/\n/g, '<br>')}</div>`;
     if (it.t === 'ms') h += `<div class="mhint">Choose <b>TWO</b> answers. <span class="ar">اختر إجابتين.</span></div>`;
     if (it.t === 'tp') {
       h += optsHTML(i, 'a', it.o, j => !!a && a.a === j, keyIdx(it.k), review);
@@ -126,9 +158,10 @@ const MAPX = (() => {
       onChange && onChange(i);
     });
   }
-  const fab = '<button class="mp-fab" id="mFab" hidden>📄 Passage</button>';
+  const fab = '<button class="mp-fab" id="mFab" hidden>📄 <span class="fabt">Text</span></button>';
   function bindFab(m) {
     const b = $('#mFab', m), p = $('#mPass', m); if (!b || !p) return;
+    const t = $('.fabt', b); if (t) t.textContent = SUBJ[cur()].pass;
     b.onclick = () => p.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (!('IntersectionObserver' in window)) return;
     const io = new IntersectionObserver(es => es.forEach(e => { b.hidden = e.isIntersecting || window.innerWidth > 860; }), { threshold: 0 });
@@ -137,7 +170,7 @@ const MAPX = (() => {
   const goalCount = (items, A) => {
     const r = {}; items.forEach((it, i) => { const g = it.g || 'X'; r[g] = r[g] || [0, 0]; r[g][1]++; if (right(it, A[i])) r[g][0]++; }); return r;
   };
-  const crumbsTo = (g, last) => [['Home', () => go('home')], ['MAP Growth', () => go('map')], [`Reading · Grade ${g}`, () => go('mapgrade', { mg: g })], [last]];
+  const crumbsTo = (g, last, subj = cur()) => [['Home', () => go('home')], ['MAP Growth', () => go('map', { subj })], [`${SUBJ[subj].name} · Grade ${g}`, () => go('mapgrade', { mg: g, subj })], [last]];
   const loadingHTML = '<div class="card" style="text-align:center;margin-top:16px"><div style="font-size:2.4rem">⏳</div><p>Loading the practice material… <span class="ar">جارٍ تحميل المادة…</span></p></div>';
   function needData(m, subj, g, again) {
     const d = data(subj, g); if (d) return d;
@@ -175,9 +208,9 @@ const MAPX = (() => {
     <section class="card" style="margin-top:18px"><h3>ℹ️ About MAP Growth and this practice</h3>
       <ul class="mlist">
         <li><b>MAP Growth</b> is a computer-adaptive test: each question gets easier or harder depending on the student’s answers. The result is a <b>RIT score</b>, which shows the student’s level on one scale for every grade.</li>
-        <li>The <b>Reading</b> test reports three goal areas: Literary Text, Informational Text and Vocabulary. Every question here is labelled with its goal area, its skill and the RIT band where the skill appears.</li>
+        <li>The <b>Reading</b> test reports three goal areas: Literary Text, Informational Text and Vocabulary. The <b>Language Usage</b> test reports Writing (revising a draft for its purpose and audience), Grammar and Usage, and Mechanics (capital letters, punctuation and spelling). Every question here is labelled with its goal area, its skill and the RIT band where the skill is usually learned.</li>
         <li>A mock-exam score here is the <b>percentage of questions correct</b>. It is not a RIT score, and it does not predict an exact RIT score.</li>
-        <li>All passages and questions were written by Mr. Waleed Youssef for practice. They are not NWEA test questions. MAP® and MAP Growth™ are trademarks of NWEA; this app is not made or endorsed by NWEA.</li>
+        <li>All passages, drafts and questions were written by Mr. Waleed Youssef for practice. They are not NWEA test questions. MAP® and MAP Growth™ are trademarks of NWEA; this app is not made or endorsed by NWEA.</li>
       </ul>
       <span class="ar ar-block">نتيجة الاختبار التجريبي هي نسبة الإجابات الصحيحة وليست درجة RIT. جميع النصوص والأسئلة من إعداد أ. وليد يوسف للتدريب، وليست أسئلة NWEA.</span></section>`;
     bindCrumbs(m, [['Home', () => go('home')]]);
@@ -203,37 +236,37 @@ const MAPX = (() => {
   };
 
   V.mapgrade = m => {
-    const g = S.mg, subj = 'reading';
+    const g = S.mg, subj = cur(), SJ = SUBJ[subj];
     const d = needData(m, subj, g, () => V.mapgrade(m)); if (!d) return;
-    const parts = [['Home', () => go('home')], ['MAP Growth', () => go('map')], [`Reading · Grade ${g}`]];
+    const parts = [['Home', () => go('home')], ['MAP Growth', () => go('map', { subj })], [`${SJ.name} · Grade ${g}`]];
     const setRow = (u, s) => { const id = u.id + s.set, p = prog(null, pkey(subj, g, id)) || {};
-      return `<button class="lrow ${p.done ? 'done' : ''}" data-set="${u.id}|${s.set}"><span class="ic">${s.set === 'A' ? '📝' : '🧠'}</span><span class="tx"><small>Practice ${s.set} · ${s.items.length} questions</small><b>${esc((s.passage && s.passage.title) || 'Words in sentences')}</b></span>${p.done ? `<span class="mscore">${pct(p.best)}%</span>${starHTML(p.stars || 0)}` : '<span class="muted">Start →</span>'}</button>`; };
+      return `<button class="lrow ${p.done ? 'done' : ''}" data-set="${u.id}|${s.set}"><span class="ic">${s.set === 'A' ? '📝' : '🧠'}</span><span class="tx"><small>Practice ${s.set} · ${s.items.length} questions</small><b>${esc((s.passage && s.passage.title) || SJ.noPass)}</b></span>${p.done ? `<span class="mscore">${pct(p.best)}%</span>${starHTML(p.stars || 0)}` : '<span class="muted">Start →</span>'}</button>`; };
     m.innerHTML = crumbs(parts) + `
-    <section class="lhead" style="background:${COL[g][3]}"><span class="k">MAP Growth · Reading</span><h1>${COL[g][4]} Grade ${g}</h1>
+    <section class="lhead" style="background:${COL[g][3]}"><span class="k">MAP Growth · ${SJ.name}</span><h1>${COL[g][4]} Grade ${g}</h1>
       <p style="margin:.3rem 0 0;opacity:.95">6 practice units (78 questions) and 5 full mock exams (43 questions each), ordered from easier to harder.</p>
       <span class="ar ar-block">6 وحدات تدريب و5 اختبارات تجريبية كاملة، مرتبة من الأسهل إلى الأصعب.</span></section>
-    <details class="card mhab"><summary><b>💡 Smart reading habits</b> <span class="ar">عادات القراءة الذكية</span></summary><ol>${HABITS.map(h => `<li>${esc(h[0])}<span class="ar ar-block">${esc(h[1])}</span></li>`).join('')}</ol></details>
+    <details class="card mhab"><summary><b>${SJ.habitsTitle[0]}</b> <span class="ar">${SJ.habitsTitle[1]}</span></summary><ol>${(subj === 'language' ? LHABITS : HABITS).map(h => `<li>${esc(h[0])}<span class="ar ar-block">${esc(h[1])}</span></li>`).join('')}</ol></details>
     <div class="section-title"><h2>📘 Practice units</h2></div>
     <section class="grid mg2">${d.units.map(u => { const G = GOALS[u.goal] || ['', '', '📘'];
       return `<div class="card munit"><div class="uh"><span class="ue">${G[2]}</span><div><span class="pill">${esc(u.id.replace('U', 'Unit '))} · ${esc(G[0] || u.goal)}</span><h3>${esc(u.title)}</h3><span class="muted" style="font-size:.85rem">RIT ${esc(u.band)}</span></div></div>
         <ul class="msk-list">${u.skills.slice(0, 4).map(s => `<li>${esc(s)}</li>`).join('')}</ul>${u.sets.map(s => setRow(u, s)).join('')}</div>`; }).join('')}</section>
     <div class="section-title"><h2>🎯 Mock exams</h2></div>
-    <p class="muted" style="margin:-4px 0 12px">43 questions each: 15 Literary Text, 15 Informational Text and 13 Vocabulary, with six passages. No time limit; answers are saved as you go. <span class="ar">43 سؤالًا لكل اختبار، دون وقت محدد، وتُحفظ إجاباتك تلقائيًا.</span></p>
+    <p class="muted" style="margin:-4px 0 12px">${SJ.mockLine[0]} <span class="ar">${SJ.mockLine[1]}</span></p>
     <section class="grid g3">${d.mocks.map(M => { const k = pkey(subj, g, 'M' + M.id), p = prog(null, k) || {}, w = prog(null, k + '~wip');
       const nA = w ? Object.keys(w.ans || {}).length : 0;
       return `<button class="card mmock ${p.done ? 'done' : ''}" data-mock="${M.id}"><span class="mm-id">${M.id}</span><b>Mock Exam ${M.id}</b><span class="muted" style="font-size:.88rem">${esc(M.note)}</span>
         <span class="mm-st">${p.done ? `Best <b>${pct(p.best)}%</b> ${starHTML(p.stars || 0)}` : ''}${w ? `<span class="pill">⏸ ${nA}/43 answered</span>` : (p.done ? '' : '<span class="muted">Start →</span>')}</span></button>`; }).join('')}</section>`;
     bindCrumbs(m, parts);
-    $$('[data-set]', m).forEach(b => b.onclick = () => { const [u, s] = b.dataset.set.split('|'); go('mapset', { mg: g, mu: u, ms: s }); });
-    $$('[data-mock]', m).forEach(b => b.onclick = () => go('mapmock', { mg: g, mk: b.dataset.mock }));
+    $$('[data-set]', m).forEach(b => b.onclick = () => { const [u, s] = b.dataset.set.split('|'); go('mapset', { mg: g, mu: u, ms: s, subj }); });
+    $$('[data-mock]', m).forEach(b => b.onclick = () => go('mapmock', { mg: g, mk: b.dataset.mock, subj }));
   };
 
   /* ---------- practice set ---------- */
   V.mapset = m => {
-    const g = S.mg, subj = 'reading';
+    const g = S.mg, subj = cur(), SJ = SUBJ[subj];
     const d = needData(m, subj, g, () => V.mapset(m)); if (!d) return;
     const ui = d.units.findIndex(u => u.id === S.mu), u = d.units[ui], set = u && u.sets.find(s => s.set === S.ms);
-    if (!set) { go('mapgrade', { mg: g }); return; }
+    if (!set) { go('mapgrade', { mg: g, subj }); return; }
     const id = pkey(subj, g, u.id + set.set), items = set.items, G = GOALS[u.goal] || ['', '', ''];
     S.A = S.A || {};
     const parts = crumbsTo(g, `${u.id.replace('U', 'Unit ')} · Practice ${set.set}`);
@@ -242,10 +275,10 @@ const MAPX = (() => {
     m.innerHTML = crumbs(parts) + `
     <section class="lhead"><span class="k">Grade ${g} · ${esc(u.id.replace('U', 'Unit '))} · Practice ${set.set} · ${esc(G[0])}</span><h1>${esc(u.title)}</h1>
       <p style="margin:.3rem 0 0;opacity:.95">${esc(u.skills.join(' · '))}</p></section>
-    ${set.set === 'A' && u.vocab && u.vocab.length ? `<div class="card mwords"><b>🔑 Word box</b> <span class="ar">كلمات مهمة</span><div class="mw">${u.vocab.map(v => `<span class="mwd"><b>${esc(v[0])}</b> — ${esc(v[1])}</span>`).join('')}</div></div>` : ''}
-    <p class="instrline">Read the passage, then answer the questions. Press <b>Check answers</b> when you finish. <span class="ar ar-block">اقرأ النص ثم أجب عن الأسئلة، واضغط "تحقّق" عندما تنتهي.</span></p>
+    ${set.set === 'A' && u.vocab && u.vocab.length ? `<div class="card mwords"><b>${SJ.words[0]}</b> <span class="ar">${SJ.words[1]}</span><div class="mw">${u.vocab.map(v => `<span class="mwd"><b>${esc(v[0])}</b> — ${esc(v[1])}</span>`).join('')}</div></div>` : ''}
+    <p class="instrline">${SJ.instr[0]} <span class="ar ar-block">${SJ.instr[1]}</span></p>
     <div id="mScore"></div>
-    <div class="${set.passage ? 'mp-split' : ''}">${set.passage ? `<aside class="card mp-pass" id="mPass" tabindex="0" aria-label="Passage">${passageHTML(set.passage)}</aside>` : ''}
+    <div class="${set.passage ? 'mp-split' : ''}">${set.passage ? `<aside class="card mp-pass" id="mPass" tabindex="0" aria-label="${SJ.pass}">${passageHTML(set.passage)}</aside>` : ''}
       <div class="mp-qs"><div id="mQs"></div>
         <div class="navrow"><button class="btn sec" id="mBack">← Grade ${g}</button><button class="btn band" id="mChk">✔ Check answers</button></div></div></div>${set.passage ? fab : ''}`;
     bindCrumbs(m, parts); bindFab(m);
@@ -257,13 +290,13 @@ const MAPX = (() => {
       const chk = $('#mChk', m); chk.textContent = rv ? '↺ Try again' : '✔ Check answers';
       if (rv) {
         const sc = items.filter((it, i) => right(it, S.A[i])).length, r = sc / items.length;
-        SC.innerHTML = `<div class="scorebox"><span class="big">${pct(r)}%</span>${starHTML(starsFor(r))}<span style="flex:1">${sc} of ${items.length} correct. ${r >= .8 ? 'Excellent reading! 🎉' : r >= .5 ? 'Good work. Look at the questions you missed and find the proof in the text.' : 'Read the passage again and look for the sentence that proves each answer.'}${best && best.done ? `<br><small class="muted">Best before: ${pct(best.best)}%</small>` : ''}</span>
+        SC.innerHTML = `<div class="scorebox"><span class="big">${pct(r)}%</span>${starHTML(starsFor(r))}<span style="flex:1">${sc} of ${items.length} correct. ${r >= .8 ? SJ.fb[0] : r >= .5 ? SJ.fb[1] : SJ.fb[2]}${best && best.done ? `<br><small class="muted">Best before: ${pct(best.best)}%</small>` : ''}</span>
           ${next ? '<button class="btn band" id="mNext">Next practice →</button>' : ''}</div>`;
-        const nx = $('#mNext', SC); if (nx) nx.onclick = () => go('mapset', Object.assign({ mg: g }, next));
+        const nx = $('#mNext', SC); if (nx) nx.onclick = () => go('mapset', Object.assign({ mg: g, subj }, next));
       } else SC.innerHTML = '';
     };
     paint();
-    $('#mBack', m).onclick = () => go('mapgrade', { mg: g });
+    $('#mBack', m).onclick = () => go('mapgrade', { mg: g, subj });
     $('#mChk', m).onclick = () => {
       if (S.chk) { S.chk = false; S.A = {}; paint(); window.scrollTo({ top: 0 }); return; }
       const todo = items.filter((it, i) => !answered(it, S.A[i])).length;
@@ -279,14 +312,14 @@ const MAPX = (() => {
 
   /* ---------- mock exam ---------- */
   V.mapmock = m => {
-    const g = S.mg, subj = 'reading';
+    const g = S.mg, subj = cur(), SJ = SUBJ[subj];
     const d = needData(m, subj, g, () => V.mapmock(m)); if (!d) return;
-    const M = d.mocks.find(x => x.id === S.mk); if (!M) { go('mapgrade', { mg: g }); return; }
+    const M = d.mocks.find(x => x.id === S.mk); if (!M) { go('mapgrade', { mg: g, subj }); return; }
     const id = pkey(subj, g, 'M' + M.id), wid = id + '~wip', me = Store.me();
     const items = [], secOf = [];
     M.sections.forEach((s, si) => s.items.forEach(it => { items.push(it); secOf.push(si); }));
     const parts = crumbsTo(g, `Mock Exam ${M.id}`);
-    const head = `<section class="lhead"><span class="k">Grade ${g} · MAP Growth Reading</span><h1>🎯 Mock Exam ${M.id}</h1><p style="margin:.3rem 0 0;opacity:.95">${esc(M.note)}</p></section>`;
+    const head = `<section class="lhead"><span class="k">Grade ${g} · MAP Growth ${SJ.name}</span><h1>🎯 Mock Exam ${M.id}</h1><p style="margin:.3rem 0 0;opacity:.95">${esc(M.note)}</p></section>`;
     const pr = () => { me.progress = me.progress || {}; return me.progress; };
     const wip = () => pr()[wid] || null;
 
@@ -294,26 +327,26 @@ const MAPX = (() => {
     if (S.res) {
       const rec = prog(null, id) || {}, A = S.resA || rec.lastAns || {};
       const sc = items.filter((it, i) => right(it, A[i])).length, r = sc / items.length, gc = goalCount(items, A);
-      const weak = Object.keys(GOALS).filter(k => gc[k]).sort((a, b) => gc[a][0] / gc[a][1] - gc[b][0] / gc[b][1])[0];
+      const weak = SJ.goals.filter(k => gc[k]).sort((a, b) => gc[a][0] / gc[a][1] - gc[b][0] / gc[b][1])[0];
       const missed = [...new Set(items.filter((it, i) => !right(it, A[i])).map(it => it.sk))].slice(0, 8);
       const units = d.units.filter(u => u.goal === weak);
       const mins = Math.round((S.resSec != null ? S.resSec : rec.sec || 0) / 60);
       m.innerHTML = crumbs(parts) + head + `
-      <div class="scorebox"><span class="big">${pct(r)}%</span>${starHTML(starsFor(r))}<span style="flex:1"><b>${sc} of ${items.length} correct</b>${mins ? ` · about ${mins} minutes` : ''}<br>${r >= .8 ? 'Outstanding! You are reading at a high level for this test.' : r >= .6 ? 'Good result. Practise your weakest goal area to go higher.' : 'Keep going: practise the units below, then try again.'}<span class="ar ar-block">${r >= .8 ? 'نتيجة ممتازة!' : r >= .6 ? 'نتيجة جيدة، تدرّب على المجال الأضعف.' : 'استمر في التدريب ثم أعد المحاولة.'}</span></span>
+      <div class="scorebox"><span class="big">${pct(r)}%</span>${starHTML(starsFor(r))}<span style="flex:1"><b>${sc} of ${items.length} correct</b>${mins ? ` · about ${mins} minutes` : ''}<br>${r >= .8 ? 'Outstanding! You are working at a high level for this test.' : r >= .6 ? 'Good result. Practise your weakest goal area to go higher.' : 'Keep going: practise the units below, then try again.'}<span class="ar ar-block">${r >= .8 ? 'نتيجة ممتازة!' : r >= .6 ? 'نتيجة جيدة، تدرّب على المجال الأضعف.' : 'استمر في التدريب ثم أعد المحاولة.'}</span></span>
         <button class="btn band" id="mAgain">↺ Take it again</button></div>
       <section class="card"><h3>📊 Results by goal area <span class="ar">النتائج حسب المجال</span></h3>
-        ${Object.entries(GOALS).filter(([k]) => gc[k]).map(([k, v]) => { const [c, n] = gc[k], rr = c / n; return `<div class="mgoal"><span class="mg-l">${v[2]} <b>${v[0]}</b><span class="ar">${v[1]}</span></span><span class="mg-bar"><i style="width:${pct(rr)}%;background:${rr >= .8 ? 'var(--ok)' : rr >= .6 ? 'var(--sun)' : 'var(--bad)'}"></i></span><span class="mg-n">${c}/${n} · ${pct(rr)}%</span></div>`; }).join('')}
+        ${SJ.goals.filter(k => gc[k]).map(k => [k, GOALS[k]]).map(([k, v]) => { const [c, n] = gc[k], rr = c / n; return `<div class="mgoal"><span class="mg-l">${v[2]} <b>${v[0]}</b><span class="ar">${v[1]}</span></span><span class="mg-bar"><i style="width:${pct(rr)}%;background:${rr >= .8 ? 'var(--ok)' : rr >= .6 ? 'var(--sun)' : 'var(--bad)'}"></i></span><span class="mg-n">${c}/${n} · ${pct(rr)}%</span></div>`; }).join('')}
         ${weak && gc[weak][0] < gc[weak][1] ? `<p style="margin:.8rem 0 0"><b>Practise next:</b> ${GOALS[weak][0]} — ${units.map(u => `<button class="linkbtn" data-u="${u.id}">${esc(u.id.replace('U', 'Unit '))}: ${esc(u.title)}</button>`).join(', ')}.</p>` : ''}
         ${missed.length ? `<p style="margin:.6rem 0 0"><b>Skills to work on:</b> ${missed.map(esc).join('; ')}.</p>` : ''}</section>
       <div class="section-title"><h2>🔍 Review your answers <span class="ar">راجع إجاباتك</span></h2></div>
-      ${M.sections.map((s, si) => `<section class="mrev">${s.passage ? `<details class="card mp-det"><summary><b>📄 ${esc(s.passage.title)}</b> <span class="muted">(open the passage)</span></summary>${passageHTML(s.passage)}</details>` : '<h3 style="margin:14px 0 8px">🔤 Vocabulary</h3>'}
+      ${M.sections.map((s, si) => `<section class="mrev">${s.passage ? `<details class="card mp-det"><summary><b>📄 ${esc(s.passage.title)}</b> <span class="muted">(open the ${SJ.pass.toLowerCase()})</span></summary>${passageHTML(s.passage)}</details>` : `<h3 style="margin:14px 0 8px">${esc(secName(subj, s, si))}</h3>`}
         ${items.map((it, i) => secOf[i] === si ? qHTML(it, i, A[i], true) : '').join('')}</section>`).join('')}
       <div class="navrow"><button class="btn sec" id="mBack">← Grade ${g}</button><button class="btn band" id="mAgain2">↺ Take it again</button></div>`;
       bindCrumbs(m, parts);
-      const again = () => { delete pr()[wid]; Store.save(); go('mapmock', { mg: g, mk: M.id, run: true }); };
+      const again = () => { delete pr()[wid]; Store.save(); go('mapmock', { mg: g, mk: M.id, run: true, subj }); };
       $('#mAgain', m).onclick = again; $('#mAgain2', m).onclick = again;
-      $('#mBack', m).onclick = () => go('mapgrade', { mg: g });
-      $$('[data-u]', m).forEach(b => b.onclick = () => go('mapset', { mg: g, mu: b.dataset.u, ms: 'A' }));
+      $('#mBack', m).onclick = () => go('mapgrade', { mg: g, subj });
+      $$('[data-u]', m).forEach(b => b.onclick = () => go('mapset', { mg: g, mu: b.dataset.u, ms: 'A', subj }));
       return;
     }
 
@@ -322,17 +355,17 @@ const MAPX = (() => {
       const w = wip(), rec = prog(null, id), nA = w ? Object.keys(w.ans || {}).length : 0;
       m.innerHTML = crumbs(parts) + head + `
       <section class="card mstart"><h3>Before you start <span class="ar">قبل أن تبدأ</span></h3>
-        <ul class="mlist"><li><b>43 questions:</b> six passages and a vocabulary section — 15 Literary Text, 15 Informational Text and 13 Vocabulary questions.</li>
-          <li><b>No time limit.</b> Most students need 50–70 minutes. Read carefully and look back at the passage.</li>
+        <ul class="mlist"><li>${SJ.mockFirst}</li>
+          <li>${SJ.mockTime}</li>
           <li>Your answers are <b>saved as you go</b>. You can stop and come back later.</li>
           <li>Press <b>Finish</b> to see your score by goal area and review every question.</li></ul>
         <span class="ar ar-block">43 سؤالًا، دون وقت محدد. تُحفظ إجاباتك تلقائيًا، ويمكنك التوقف والعودة لاحقًا. اضغط "إنهاء" لترى نتيجتك.</span>
         ${rec && rec.done ? `<p style="margin:.8rem 0 0">Your best score: <b>${pct(rec.best)}%</b> ${starHTML(rec.stars || 0)} · <button class="linkbtn" id="mLast">see your last result</button></p>` : ''}
         <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${w ? `<button class="btn band" id="mGo">▶ Continue (${nA}/43 answered)</button><button class="btn sec" id="mNew">↺ Start again</button>` : '<button class="btn band" id="mGo">▶ Start the mock exam</button>'}</div></section>`;
       bindCrumbs(m, parts);
-      $('#mGo', m).onclick = () => go('mapmock', { mg: g, mk: M.id, run: true });
-      const nw = $('#mNew', m); if (nw) nw.onclick = () => modal('<h3>Start again?</h3><p>Your saved answers for this mock exam will be cleared.</p><p class="ar ar-block">ستُمسح إجاباتك المحفوظة لهذا الاختبار.</p>', () => { delete pr()[wid]; Store.save(); go('mapmock', { mg: g, mk: M.id, run: true }); }, 'Start again');
-      const ls = $('#mLast', m); if (ls) ls.onclick = () => go('mapmock', { mg: g, mk: M.id, res: true });
+      $('#mGo', m).onclick = () => go('mapmock', { mg: g, mk: M.id, run: true, subj });
+      const nw = $('#mNew', m); if (nw) nw.onclick = () => modal('<h3>Start again?</h3><p>Your saved answers for this mock exam will be cleared.</p><p class="ar ar-block">ستُمسح إجاباتك المحفوظة لهذا الاختبار.</p>', () => { delete pr()[wid]; Store.save(); go('mapmock', { mg: g, mk: M.id, run: true, subj }); }, 'Start again');
+      const ls = $('#mLast', m); if (ls) ls.onclick = () => go('mapmock', { mg: g, mk: M.id, res: true, subj });
       return;
     }
 
@@ -348,8 +381,8 @@ const MAPX = (() => {
       m.innerHTML = crumbs(parts) + `
       <div class="mbar card"><div class="mbar-top"><b>Mock Exam ${M.id}</b><span class="muted">${nA}/43 answered</span><span style="flex:1"></span><button class="btn sm ok" id="mFin">🏁 Finish</button></div>
         <div class="mpal">${items.map((it, i) => `<button class="mpn ${answered(it, A[i]) ? 'a' : ''} ${secOf[i] === si ? 'cur' : ''}" data-j="${i}" aria-label="Question ${it.n}">${it.n}</button>`).join('')}</div>
-        <div class="msecs">${M.sections.map((x, k) => `<button class="mtab sm ${k === si ? 'on' : ''}" data-s="${k}">${x.passage ? 'Passage ' + (k + 1) : '🔤 Vocabulary'}</button>`).join('')}</div></div>
-      <div class="${s.passage ? 'mp-split' : ''}">${s.passage ? `<aside class="card mp-pass" id="mPass" tabindex="0" aria-label="Passage">${passageHTML(s.passage)}</aside>` : ''}
+        <div class="msecs">${M.sections.map((x, k) => `<button class="mtab sm ${k === si ? 'on' : ''}" data-s="${k}">${esc(secName(subj, x, k, true))}</button>`).join('')}</div></div>
+      <div class="${s.passage ? 'mp-split' : ''}">${s.passage ? `<aside class="card mp-pass" id="mPass" tabindex="0" aria-label="${SJ.pass}">${passageHTML(s.passage)}</aside>` : ''}
         <div class="mp-qs">${s.passage ? '' : '<p class="instrline">Read each question carefully and choose the best answer. <span class="ar ar-block">اقرأ كل سؤال بعناية واختر أفضل إجابة.</span></p>'}<div id="mQs">${items.map((it, i) => secOf[i] === si ? qHTML(it, i, A[i], false) : '').join('')}</div>
         <div class="navrow"><button class="btn sec" id="mPrev" ${si === 0 ? 'disabled' : ''}>← Previous</button>${si < nSec - 1 ? '<button class="btn sec" id="mFin2">🏁 Finish</button><button class="btn band" id="mNx">Next →</button>' : '<button class="btn ok" id="mFin2">🏁 Finish</button>'}</div></div></div>${s.passage ? fab : ''}`;
       bindCrumbs(m, parts); bindFab(m);
@@ -367,7 +400,7 @@ const MAPX = (() => {
           const bg = !old.done || r >= (old.best || 0) ? gc : old.bg;
           Store.rec(id, { stars: starsFor(r), best: r, done: true, last: r, lastAns: JSON.parse(JSON.stringify(A)), goals: gc, bg, sec: Math.round(W.sec) });
           const secs = W.sec; delete pr()[wid]; Store.save();
-          go('mapmock', { mg: g, mk: M.id, res: true, resA: A, resSec: secs });
+          go('mapmock', { mg: g, mk: M.id, res: true, resA: A, resSec: secs, subj });
           RX.done(r, .85, .6, r >= .85 ? ['Outstanding result!', 'نتيجة رائعة!'] : null);
         };
         modal(`<h3>Finish the mock exam?</h3><p>You answered <b>${43 - todo} of 43</b> questions.${todo ? ` ${todo} question${todo > 1 ? 's are' : ' is'} not answered yet.` : ''}</p><p class="ar ar-block">أجبت عن ${43 - todo} من 43 سؤالًا. هل تريد إنهاء الاختبار؟</p>`, done, 'Finish');
@@ -383,21 +416,22 @@ const MAPX = (() => {
       return `<div class="selfrow"><span><b>🎯 MAP ${SUBJ[subj].name} G${g}</b> · ${s.sets}/12 sets${s.setAvg != null ? ' (' + pct(s.setAvg) + '%)' : ''}</span><span>${Object.keys(s.mk).length ? 'Mocks: ' + Object.keys(s.mk).sort().map(k => `${k} ${pct(s.mk[k])}%`).join(' · ') : 'no mocks yet'}</span></div>`; }).join('')).join('');
   }
   function csv(profiles) {
-    const L = ['Student,Class,Subject,Grade,Practice sets done (of 12),Practice average %,Mock A %,Mock B %,Mock C %,Mock D %,Mock E %,Mock average %,Literary Text %,Informational Text %,Vocabulary %'];
+    const L = ['Student,Class,Subject,Grade,Practice sets done (of 12),Practice average %,Mock A %,Mock B %,Mock C %,Mock D %,Mock E %,Mock average %,Literary Text %,Informational Text %,Vocabulary %,Writing %,Grammar and Usage %,Mechanics %'];
     profiles.forEach(p => ['reading', 'language'].forEach(subj => GRADES.forEach(g => { const s = gradeSummary(p, subj, g); if (!s.any) return;
       const gp = k => s.goals[k] && s.goals[k][1] ? pct(s.goals[k][0] / s.goals[k][1]) : '';
-      L.push([p.name, p.cls || '', SUBJ[subj].name, g, s.sets, s.setAvg == null ? '' : pct(s.setAvg), ...'ABCDE'.split('').map(k => s.mk[k] == null ? '' : pct(s.mk[k])), s.mockAvg == null ? '' : pct(s.mockAvg), gp('LT'), gp('IT'), gp('VO')]
+      L.push([p.name, p.cls || '', SUBJ[subj].name, g, s.sets, s.setAvg == null ? '' : pct(s.setAvg), ...'ABCDE'.split('').map(k => s.mk[k] == null ? '' : pct(s.mk[k])), s.mockAvg == null ? '' : pct(s.mockAvg), gp('LT'), gp('IT'), gp('VO'), gp('WR'), gp('GU'), gp('ME')]
         .map(v => `"${String(v).replace(/"/g, '""')}"`).join(','));
     })));
     return L.length > 1 ? L.join('\n') : '';
   }
   /* home-page card */
   function homeCard() {
-    const me = Store.me(), done = GRADES.reduce((a, g) => { const s = gradeSummary(me, 'reading', g); return a + s.sets + s.mocks; }, 0);
+    const me = Store.me(), done = ['reading', 'language'].reduce((t, subj) => t + GRADES.reduce((a, g) => { const s = gradeSummary(me, subj, g); return a + s.sets + s.mocks; }, 0), 0);
+    const lu = (IDX().language || []).length;
     return `<button class="card map-card" id="toMap"><span class="big">🎯</span><span style="flex:1"><h3 style="font-size:1.45rem">MAP Growth Practice · Grades 3–9</h3>
-      <span><b>Reading</b>: 6 practice units and 5 full mock exams of 43 questions for every grade, scored by goal area (Literary Text, Informational Text, Vocabulary). <b>Language Usage</b>: coming soon.</span>
-      <span class="ar ar-block">التدريب على اختبار MAP Growth: وحدات تدريب واختبارات تجريبية كاملة في القراءة للصفوف 3–9، واستخدام اللغة قريبًا.</span></span>
-      <span class="hud"><span>📚 7 grades</span><span>✅ ${done}</span></span></button>`;
+      <span><b>Reading</b> and <b>Language Usage</b>${lu ? '' : ' (coming soon)'}: 6 practice units and 5 full mock exams of 43 questions for every grade, scored by goal area.</span>
+      <span class="ar ar-block">التدريب على اختبار MAP Growth: وحدات تدريب واختبارات تجريبية كاملة في القراءة واستخدام اللغة للصفوف 3–9.</span></span>
+      <span class="hud"><span>📚 ${lu ? '2 subjects · ' : ''}7 grades</span><span>✅ ${done}</span></span></button>`;
   }
 
   const CSS = `

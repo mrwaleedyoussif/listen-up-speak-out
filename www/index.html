@@ -466,7 +466,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.5.0';
+const APP_VER = '1.6.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -820,7 +820,7 @@ const Nav = {
     if ((v === 'listen' || v === 'speak') && S.step > 0) { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); return true; }
     if (v === 'map') { go('home'); return true; }
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
-    if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk }); else go('mapgrade', { mg: S.mg }); return true; }
+    if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
     if (v === 'grade' || v === 'teacher' || v === 'studio') go('home');
     else if (v === 'unit') go('grade', { g: S.g });
     else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
@@ -1395,7 +1395,7 @@ VIEWS.teacher = m => {
   <div class="card"><ol style="margin:0;padding-left:20px">
     <li><b>Listening lessons (6 steps):</b> Words → Predict → Listen (twice) → Tasks → Script → Speak. The script opens only after the tasks are checked.</li>
     <li><b>Speaking lessons (6 steps):</b> Listen → Useful language → Sound Check (pronunciation) → Shadowing → Role-play → Your turn + self-check.</li>
-    <li><b>MAP Growth practice (🎯):</b> Reading for Grades 3–9 — 6 practice units (78 questions) and 5 full mock exams of 43 questions per grade, scored by goal area (Literary Text, Informational Text, Vocabulary). Mock answers are saved as students go. Language Usage is coming soon.</li>
+    <li><b>MAP Growth practice (🎯):</b> Reading and Language Usage for Grades 3–9 — per subject and grade, 6 practice units (78 questions) and 5 full mock exams of 43 questions, scored by goal area (Reading: Literary Text, Informational Text, Vocabulary; Language Usage: Writing, Grammar and Usage, Mechanics). Mock answers are saved as students go.</li>
     <li><b>Games and Unit Check:</b> three games per unit recycle the unit audio; the Unit Check gives a certificate at 70%.</li>
     <li><b>Sounds (🔔):</b> a chime and a spoken word of praise for right answers, a soft sound and a word of encouragement for wrong ones, and a celebration (fanfare, confetti, trophy) when a task is finished well. Press 🔔 to switch them off, for example during a quiet test.</li>
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
