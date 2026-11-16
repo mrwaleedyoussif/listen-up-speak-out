@@ -1,4 +1,16 @@
 {
+ "1.7.0": {
+  "en": [
+   "MAP Growth Practice: every grade page now has print copies of the student booklet and the five mock exams, for Reading and Language Usage, as PDF (to print) and Word (to edit).",
+   "In the phone and desktop apps the print copies open in the browser, so the apps stay small.",
+   "Print layout: a question is never split from its answer choices across two pages."
+  ],
+  "ar": [
+   "التدريب على MAP Growth: في صفحة كل صف نسخ للطباعة من كتيّب الطالب والاختبارات التجريبية الخمسة في القراءة واستخدام اللغة، بصيغة PDF للطباعة وWord للتعديل.",
+   "في تطبيقات الهاتف والحاسوب تُفتح نسخ الطباعة في المتصفح، فيبقى حجم التطبيق صغيرًا.",
+   "تنسيق الطباعة: لا ينفصل السؤال عن خياراته بين صفحتين."
+  ]
+ },
  "1.6.0": {
   "en": [
    "MAP Growth Practice: Language Usage material for Grades 3–9 (✍️ tab in the MAP department).",

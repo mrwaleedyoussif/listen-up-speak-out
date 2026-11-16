@@ -15,3 +15,6 @@ ios/App/Pods/
 www/.lsp-build
 __pycache__/
 *.pyc
+
+# print copies are copied into www/ only by the website build
+www/print/

@@ -68,6 +68,20 @@ const MAPX = (() => {
     return `${ic} ${short ? lab.replace('Capitalization, Punctuation and Spelling', 'Mechanics') : lab}`;
   }
 
+  /* printable copies: on the website they come from the same site; the apps open them in the browser */
+  const PRN = () => window.MAP_PRINT || {};
+  const WEB = () => (typeof PLAT === 'undefined' || PLAT === 'web');
+  const prnURL = f => (WEB() ? '' : (typeof SITE !== 'undefined' ? SITE : 'https://mrwaleedyoussif.github.io/listen-up-speak-out/')) + 'print/map/' + f;
+  const mb = b => (b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB');
+  function printHTML(subj, g) {
+    const pr = PRN()[`${subj}_${g}`]; if (!pr) return '';
+    const rows = [['booklet', '📘 Student booklet', 'كتيّب الطالب', '6 practice units · 78 questions'], ['mocks', '🎯 Mock exams A–E', 'الاختبارات التجريبية', '5 exams × 43 questions · answer sheets included']];
+    return `<div class="section-title"><h2>🖨️ Print copies</h2></div>
+    <p class="muted" style="margin:-4px 0 12px">Print the booklets for class or homework, or open them in Word to edit. Answer keys are in the teacher pack. An internet connection is needed. <span class="ar">نسخ للطباعة (PDF) أو للتعديل (Word)؛ يلزم الاتصال بالإنترنت.</span></p>
+    <section class="grid mg2">${rows.filter(r => pr[r[0]]).map(([k, t, ar, sub]) => `<div class="card mprint"><b>${t}</b> <span class="ar">${ar}</span><span class="muted" style="font-size:.88rem">${sub}</span>
+      <span class="mp-btns">${['pdf', 'docx'].filter(x => pr[k][x]).map(x => `<a class="btn sm ${x === 'pdf' ? 'band' : 'sec'}" href="${prnURL(pr[k][x].f)}" target="_blank" rel="noopener"${WEB() ? ` download="${pr[k][x].f}"` : ' data-ext="1"'}>⬇️ ${x === 'pdf' ? 'PDF' : 'Word'} <small>${mb(pr[k][x].b)}</small></a>`).join('')}</span></div>`).join('')}</section>`;
+  }
+
   /* ---------- data ---------- */
   const IDX = () => window.MAP_INDEX || { reading: GRADES, language: [] };
   const has = (subj, g) => (IDX()[subj] || []).includes(g);
@@ -255,8 +269,10 @@ const MAPX = (() => {
     <section class="grid g3">${d.mocks.map(M => { const k = pkey(subj, g, 'M' + M.id), p = prog(null, k) || {}, w = prog(null, k + '~wip');
       const nA = w ? Object.keys(w.ans || {}).length : 0;
       return `<button class="card mmock ${p.done ? 'done' : ''}" data-mock="${M.id}"><span class="mm-id">${M.id}</span><b>Mock Exam ${M.id}</b><span class="muted" style="font-size:.88rem">${esc(M.note)}</span>
-        <span class="mm-st">${p.done ? `Best <b>${pct(p.best)}%</b> ${starHTML(p.stars || 0)}` : ''}${w ? `<span class="pill">⏸ ${nA}/43 answered</span>` : (p.done ? '' : '<span class="muted">Start →</span>')}</span></button>`; }).join('')}</section>`;
+        <span class="mm-st">${p.done ? `Best <b>${pct(p.best)}%</b> ${starHTML(p.stars || 0)}` : ''}${w ? `<span class="pill">⏸ ${nA}/43 answered</span>` : (p.done ? '' : '<span class="muted">Start →</span>')}</span></button>`; }).join('')}</section>
+    ${printHTML(subj, g)}`;
     bindCrumbs(m, parts);
+    $$('a[data-ext]', m).forEach(a => a.onclick = e => { e.preventDefault(); if (typeof openExt === 'function') openExt(a.href); else window.open(a.href, '_blank'); });
     $$('[data-set]', m).forEach(b => b.onclick = () => { const [u, s] = b.dataset.set.split('|'); go('mapset', { mg: g, mu: u, ms: s, subj }); });
     $$('[data-mock]', m).forEach(b => b.onclick = () => go('mapmock', { mg: g, mk: b.dataset.mock, subj }));
   };
@@ -467,6 +483,9 @@ const MAPX = (() => {
 .msk-list{margin:0;padding-left:18px;color:var(--ink2);font-size:.88rem}
 .mscore{font-weight:800;color:var(--cd)}
 .mmock{display:flex;flex-direction:column;gap:4px;text-align:left;border:2px solid transparent;position:relative;min-height:150px}
+.mprint{display:flex;flex-direction:column;gap:4px}
+.mprint .mp-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.mprint .mp-btns small{font-weight:600;opacity:.8}
 .mmock:hover{border-color:var(--c)}
 .mmock.done{border-color:#BDE8D0}
 .mmock .mm-id{position:absolute;right:14px;top:10px;font-family:var(--fh);font-size:2.4rem;font-weight:800;color:var(--cl);-webkit-text-stroke:1.5px var(--c)}

@@ -49,6 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - run: python3 tools/app/build_www.py
+      - run: mkdir -p www/print && cp -r print/map www/print/   # print copies: website only (the apps open them here)
       - run: python3 tools/app/release_info.py "v${{ needs.version.outputs.name }}"
       - uses: actions/configure-pages@v6
         continue-on-error: true

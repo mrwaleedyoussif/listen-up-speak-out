@@ -41,5 +41,16 @@ for f in sorted(glob.glob(os.path.join(SRC, 'map_*_g*.json'))):
     open(os.path.join(OUT, f'{subj}_g{g}.js'), 'w', encoding='utf-8').write(js)
     made.append(f'{subj} G{g}: {n_items} questions'); index.setdefault(subj, []).append(int(g))
 for k in index: index[k] = sorted(index[k])
-open(os.path.join(OUT, 'index.js'), 'w', encoding='utf-8').write('/* Which MAP subjects and grades have material (generated) */\nwindow.MAP_INDEX = ' + json.dumps(index) + ';\n')
+# print copies in print/map/ (repo root): MAP_<Subject>_G<g>_Student_Booklet / _Mock_Exams, .pdf and .docx
+PRINT = os.path.join(ROOT, 'print', 'map')
+prn = {}
+for f in sorted(os.listdir(PRINT)) if os.path.isdir(PRINT) else []:
+    m = re.fullmatch(r'MAP_(Reading|Language)_G(\d)_(Student_Booklet|Mock_Exams)\.(pdf|docx)', f)
+    if m:
+        key = ('reading' if m.group(1) == 'Reading' else 'language') + '_' + m.group(2)
+        kind = 'booklet' if m.group(3) == 'Student_Booklet' else 'mocks'
+        prn.setdefault(key, {}).setdefault(kind, {})[m.group(4)] = {'f': f, 'b': os.path.getsize(os.path.join(PRINT, f))}
+open(os.path.join(OUT, 'index.js'), 'w', encoding='utf-8').write('/* Which MAP subjects and grades have material, and their print copies (generated) */\nwindow.MAP_INDEX = ' + json.dumps(index) + ';\n'
+    + 'window.MAP_PRINT = ' + json.dumps(prn, separators=(',', ':')) + ';\n')
+print('print copies:', sum(len(v) for k in prn.values() for v in k.values()))
 print('\n'.join(made)); print('index:', index)

@@ -2,7 +2,7 @@
 
 Elementary listening & speaking program for **Grades 3–6 (CEFR A1 → A2+)** designed by Mr. Waleed Youssef: 24 units, 72 listening lessons, 48 speaking lessons, pronunciation games, Unit Checks, a Shadowing Studio with word-by-word highlighting and recording, a teacher dashboard and Arabic support.
 
-It also has a **MAP Growth Practice** department for **Grades 3–9**: for Reading and for Language Usage, every grade has 6 practice units (78 questions) and 5 full mock exams of 43 questions, scored by goal area (Reading: Literary Text, Informational Text, Vocabulary; Language Usage: Writing, Grammar and Usage, Mechanics). All passages and questions are original practice material; they are not NWEA test items, and the app is not made or endorsed by NWEA.
+It also has a **MAP Growth Practice** department for **Grades 3–9**: for Reading and for Language Usage, every grade has 6 practice units (78 questions) and 5 full mock exams of 43 questions, scored by goal area (Reading: Literary Text, Informational Text, Vocabulary; Language Usage: Writing, Grammar and Usage, Mechanics). Each grade page also links to print copies (PDF and Word) of the student booklet and the mock exams; the files are in `print/map/` and are published with the website only. All passages and questions are original practice material; they are not NWEA test items, and the app is not made or endorsed by NWEA.
 
 - **Open the web app:** https://mrwaleedyoussif.github.io/listen-up-speak-out/
 - **Download the apps (Android, Windows):** [Releases](https://github.com/mrwaleedyoussif/listen-up-speak-out/releases/latest)
