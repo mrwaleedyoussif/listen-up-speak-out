@@ -1,4 +1,14 @@
 {
+ "1.12.0": {
+  "en": [
+   "New department: STEP Preparation is open with 30 STEP-style mock exams in three sets (Foundation, Intermediate, Exam Standard), 3,000 questions and 390 listening recordings.",
+   "Each exam has the four STEP sections with a timer. After a section you see your score, the question types you missed, and every answer with an explanation and an Arabic hint; listening scripts appear in the review."
+  ],
+  "ar": [
+   "قسم جديد: التحضير لاختبار STEP مفتوح الآن بثلاثين اختبارًا تدريبيًا في ثلاث مجموعات (تأسيسي، متوسط، مستوى الاختبار) و3000 سؤال و390 تسجيلًا للاستماع.",
+   "في كل اختبار أقسام STEP الأربعة مع مؤقّت. بعد كل قسم ترى درجتك وأنواع الأسئلة التي أخطأت فيها وكل إجابة مع شرح وتلميح بالعربية، وتظهر نصوص الاستماع في المراجعة."
+  ]
+ },
  "1.11.1": {
   "en": [
    "The app now opens on the sign-in and sign-up page. The first “Welcome” page is removed; the teacher account is created from the Teacher button on that page."

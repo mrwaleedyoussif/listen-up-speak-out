@@ -1,6 +1,6 @@
 {
   "name": "listen-up-speak-out",
-  "version": "1.11.1",
+  "version": "1.12.0",
   "description": "Listen Up! Speak Out! - elementary listening and speaking program (Grades 3-6) and MAP Growth practice (Grades 3-9) for web, Android, iOS and Windows",
   "main": "electron/main.js",
   "scripts": {

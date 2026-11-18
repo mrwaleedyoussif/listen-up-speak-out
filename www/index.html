@@ -618,8 +618,8 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 }
 @media (prefers-reduced-motion:reduce){.lg,.lg-f,.lg-f::before,.lg-sheen,.bye img{animation:none!important}.brand .b-lg{transition:none}}
 /* ===== v1.11: four open departments, Soon levels ===== */
-@media (min-width:1001px){.depts.n4 .dept{grid-column:span 3}.depts.n4 .dept h3{font-size:1.32rem}}
-.depts-soon{grid-template-columns:repeat(4,1fr)}
+@media (min-width:1001px){.depts.n4 .dept{grid-column:span 3}.depts.n4 .dept h3{font-size:1.32rem}.depts.n5 .dept{grid-column:span 4}.depts.n5 .dept:nth-child(n+4){grid-column:span 6}}
+.depts-soon{grid-template-columns:repeat(3,1fr)}
 @media (max-width:1000px){.depts-soon{grid-template-columns:repeat(2,1fr)}}
 .gcard.soonlv{background:linear-gradient(135deg,#8D97B4,#5C6787);cursor:default;min-height:150px;--b:#5C6787}
 .gcard.soonlv .em{display:none}
@@ -637,6 +637,8 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 <script src="audio/timings.js"></script>
 <script src="map/index.js"></script>
 <script src="map.js"></script>
+<script src="step/index.js"></script>
+<script src="step.js"></script>
 <script>
 'use strict';
 /* =========================================================
@@ -657,7 +659,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.11.1';
+const APP_VER = '1.12.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1023,7 +1025,9 @@ const Nav = {
     const v = S.view;
     if (v === 'home') return false;
     if ((v === 'listen' || v === 'speak') && S.step > 0) { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); return true; }
-    if (v === 'map') { go('home'); return true; }
+    if (v === 'map' || v === 'step') { go('home'); return true; }
+    if (v === 'stepmock') { go('step'); return true; }
+    if (v === 'stepsec') { go('stepmock', { sm: S.sm }); return true; }
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
     if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
     if (v === 'grade') go('ls');
@@ -1126,7 +1130,7 @@ const DEPTS = [
   ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map', 0],
   ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', 'dept', 1],
   ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', 'Levels A1 → C2 · 360 lessons', '#9B6CF6', '#6D3BE0', 'gvx', 0],
-  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', 'dept', 1],
+  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '30 mock exams · 3,000 questions', '#12B5CB', '#0A7C96', 'step', 0],
   ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', 'dept', 1],
   ['ghars', 'Ghars', 'غراس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
 ];
@@ -1148,9 +1152,9 @@ const INTRO = {
   gv: ['Grammar and Vocabulary will give you the rules and the words that every skill needs. Each lesson will explain one point with clear examples in English and Arabic, then give you practice that grows harder little by little.',
     'قسم القواعد والمفردات سيعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس سيشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم يقدّم لك تدريبًا يزداد صعوبة شيئًا فشيئًا.',
     ['One point in each lesson', 'Clear examples', 'Practice from easy to hard']],
-  step: ['STEP Preparation will train you for the Standardized Test of English Proficiency (STEP). You will practise its four parts, then try full practice tests.',
-    'قسم التحضير لاختبار STEP سيدرّبك على اختبار كفايات اللغة الإنجليزية (STEP). ستتدرّب على أقسامه الأربعة، ثم تجرّب اختبارات تدريبية كاملة.',
-    ['Reading comprehension', 'Sentence structure', 'Listening comprehension', 'Compositional analysis']],
+  step: ['This department prepares you for the Standardized Test of English Proficiency (STEP) with 30 full practice exams in three sets: Foundation, Intermediate and Exam Standard. Every exam has the four STEP sections and 100 questions. Take a section with its timer, then review each answer with its question type, an explanation and an Arabic hint.',
+    'هذا القسم يجهّزك لاختبار كفايات اللغة الإنجليزية (STEP) بثلاثين اختبارًا تدريبيًا كاملًا في ثلاث مجموعات: تأسيسي ومتوسط ومستوى الاختبار. في كل اختبار أقسام STEP الأربعة ومئة سؤال. أدِّ القسم مع المؤقّت، ثم راجع كل إجابة مع نوع السؤال وشرح وتلميح بالعربية.',
+    ['Reading comprehension · 40', 'Sentence structure · 30', 'Listening comprehension · 20', 'Composition analysis · 10']],
   ph: ['Phonics will teach you the sounds of English letters and letter groups, so that you can read new words and spell them correctly. You will hear each sound, say it, and join sounds together to make words.',
     'قسم الصوتيات سيعلّمك أصوات الحروف الإنجليزية ومجموعات الحروف، لتقرأ الكلمات الجديدة وتكتبها كتابة صحيحة. ستسمع كل صوت وتنطقه، ثم تدمج الأصوات لتكوّن كلمات.',
     ['Hear the sound', 'Say the sound', 'Blend sounds into words']],
@@ -1200,7 +1204,7 @@ VIEWS.home = m => {
     </div>
   </section>
   <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
-  <section class="depts n${open.length}">${open.map((d, i) => deptCard(d, i, meta[d[0]])).join('')}</section>
+  <section class="depts n${open.length}">${open.map((d, i) => deptCard(d, i, meta[d[0]] || (d[0] === 'step' && typeof STEPX !== 'undefined' ? STEPX.homeMeta() : ''))).join('')}</section>
   <section class="depts-soon">${soon.map((d, i) => deptCard(d, i + open.length)).join('')}</section>
   <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>
   <div id="appBox"></div>
@@ -1735,7 +1739,7 @@ VIEWS.teacher = m => {
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
     <li><b>Updates (🔄):</b> press 🔄 at the top to check for a new version. With automatic updates on, new versions install by themselves.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
-    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels A1 to A2+; B1 to C2 are marked “Soon”), Shadowing, MAP Test or Grammar and Vocabulary (Levels A1 to C2). Reading and Writing, STEP Preparation, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”. Every department opens with a short introduction in English and Arabic.</li>
+    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels A1 to A2+; B1 to C2 are marked “Soon”), Shadowing, MAP Test, Grammar and Vocabulary (Levels A1 to C2) or STEP Preparation (30 mock exams). Reading and Writing, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”. Every department opens with a short introduction in English and Arabic.</li>
     <li><b>Sign in with Google:</b> in the browser version, students can use Gmail or the school's Google e-mail after you add the sign-in key in ⚙️ Settings.</li>
     <li><b>Arabic support (ع):</b> in Listening and Speaking it is on by default in Levels A1 and A1+ and off in Levels A2 and A2+. Students can switch it for their level.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
@@ -2759,7 +2763,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'ls', 'ghars', 'dept', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'ghars', 'dept', 'step', 'stepmock', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());
@@ -2929,7 +2933,7 @@ new MutationObserver(() => bidiFix(document)).observe(document.getElementById('a
 
 /* ---------- Boot ---------- */
 if (!D) { document.getElementById('app').innerHTML = '<div class="wrap"><p style="padding:40px">data.js is missing. Keep index.html, data.js and the audio folder together.</p></div>'; }
-else { if (typeof MAPX !== "undefined") MAPX.register(); Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
+else { if (typeof MAPX !== "undefined") MAPX.register(); if (typeof STEPX !== "undefined") STEPX.register(); Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
 </script>
 <script src="pwa.js"></script>
 </body>
