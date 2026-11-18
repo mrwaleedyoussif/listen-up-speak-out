@@ -1,14 +1,14 @@
 {
- "version": "1.12.0",
- "date": "2026-11-18",
+ "version": "1.12.1",
+ "date": "2026-11-19",
  "notes": {
   "en": [
-   "New department: STEP Preparation is open with 30 STEP-style mock exams in three sets (Foundation, Intermediate, Exam Standard), 3,000 questions and 390 listening recordings.",
-   "Each exam has the four STEP sections with a timer. After a section you see your score, the question types you missed, and every answer with an explanation and an Arabic hint; listening scripts appear in the review."
+   "STEP Preparation now includes the four Foundation booklets: Grammar, Reading, Listening and Composition, from A1 to B2+, with 132 lessons, a 30-question quiz for every lesson and a 50-question review for every unit (4,960 questions).",
+   "In the Listening booklet the device voice reads each recording until recorded audio is added."
   ],
   "ar": [
-   "قسم جديد: التحضير لاختبار STEP مفتوح الآن بثلاثين اختبارًا تدريبيًا في ثلاث مجموعات (تأسيسي، متوسط، مستوى الاختبار) و3000 سؤال و390 تسجيلًا للاستماع.",
-   "في كل اختبار أقسام STEP الأربعة مع مؤقّت. بعد كل قسم ترى درجتك وأنواع الأسئلة التي أخطأت فيها وكل إجابة مع شرح وتلميح بالعربية، وتظهر نصوص الاستماع في المراجعة."
+   "قسم التحضير لاختبار STEP يضم الآن كتيبات التأسيس الأربعة: القواعد والقراءة والاستماع وتحليل الكتابة، من A1 إلى B2+، في 132 درسًا، مع اختبار من 30 سؤالًا لكل درس ومراجعة من 50 سؤالًا لكل وحدة (4960 سؤالًا).",
+   "في كتيب الاستماع يقرأ صوت الجهاز كل تسجيل إلى أن تُضاف التسجيلات الصوتية."
   ]
  },
  "files": {}

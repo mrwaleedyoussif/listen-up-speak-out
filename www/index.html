@@ -638,6 +638,7 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 <script src="map/index.js"></script>
 <script src="map.js"></script>
 <script src="step/index.js"></script>
+<script src="step/books.js"></script>
 <script src="step.js"></script>
 <script>
 'use strict';
@@ -659,7 +660,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.12.0';
+const APP_VER = '1.12.1';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1026,7 +1027,9 @@ const Nav = {
     if (v === 'home') return false;
     if ((v === 'listen' || v === 'speak') && S.step > 0) { S.step--; AU.stop(); stopAllRec(); render(); window.scrollTo({ top: 0 }); return true; }
     if (v === 'map' || v === 'step') { go('home'); return true; }
-    if (v === 'stepmock') { go('step'); return true; }
+    if (v === 'stepmock' || v === 'stepbook') { go('step'); return true; }
+    if (v === 'steplesson' || (v === 'stepquiz' && S.sl === 'rev')) { go('stepbook', { sb: S.sb }); return true; }
+    if (v === 'stepquiz') { go('steplesson', { sb: S.sb, su: S.su, sl: S.sl }); return true; }
     if (v === 'stepsec') { go('stepmock', { sm: S.sm }); return true; }
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
     if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
@@ -1130,7 +1133,7 @@ const DEPTS = [
   ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map', 0],
   ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', 'dept', 1],
   ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', 'Levels A1 → C2 · 360 lessons', '#9B6CF6', '#6D3BE0', 'gvx', 0],
-  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '30 mock exams · 3,000 questions', '#12B5CB', '#0A7C96', 'step', 0],
+  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '4 booklets · 132 lessons · 30 mock exams', '#12B5CB', '#0A7C96', 'step', 0],
   ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', 'dept', 1],
   ['ghars', 'Ghars', 'غراس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
 ];
@@ -1152,8 +1155,8 @@ const INTRO = {
   gv: ['Grammar and Vocabulary will give you the rules and the words that every skill needs. Each lesson will explain one point with clear examples in English and Arabic, then give you practice that grows harder little by little.',
     'قسم القواعد والمفردات سيعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس سيشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم يقدّم لك تدريبًا يزداد صعوبة شيئًا فشيئًا.',
     ['One point in each lesson', 'Clear examples', 'Practice from easy to hard']],
-  step: ['This department prepares you for the Standardized Test of English Proficiency (STEP) with 30 full practice exams in three sets: Foundation, Intermediate and Exam Standard. Every exam has the four STEP sections and 100 questions. Take a section with its timer, then review each answer with its question type, an explanation and an Arabic hint.',
-    'هذا القسم يجهّزك لاختبار كفايات اللغة الإنجليزية (STEP) بثلاثين اختبارًا تدريبيًا كاملًا في ثلاث مجموعات: تأسيسي ومتوسط ومستوى الاختبار. في كل اختبار أقسام STEP الأربعة ومئة سؤال. أدِّ القسم مع المؤقّت، ثم راجع كل إجابة مع نوع السؤال وشرح وتلميح بالعربية.',
+  step: ['This department prepares you for the Standardized Test of English Proficiency (STEP) in two steps. First, the four Foundation booklets (Grammar, Reading, Listening and Composition) teach each skill from A1 to B2+ in 132 lessons, each with a 30-question quiz. Then 30 full mock exams in three sets give you timed practice. Every answer comes with an explanation and an Arabic hint.',
+    'هذا القسم يجهّزك لاختبار كفايات اللغة الإنجليزية (STEP) على مرحلتين: أولًا كتيبات التأسيس الأربعة (القواعد والقراءة والاستماع وتحليل الكتابة) تعلّمك كل مهارة من A1 إلى B2+ في 132 درسًا، ولكل درس اختبار من 30 سؤالًا. ثم 30 اختبارًا تجريبيًا كاملًا في ثلاث مجموعات للتدريب مع المؤقّت. ومع كل إجابة شرح وتلميح بالعربية.',
     ['Reading comprehension · 40', 'Sentence structure · 30', 'Listening comprehension · 20', 'Composition analysis · 10']],
   ph: ['Phonics will teach you the sounds of English letters and letter groups, so that you can read new words and spell them correctly. You will hear each sound, say it, and join sounds together to make words.',
     'قسم الصوتيات سيعلّمك أصوات الحروف الإنجليزية ومجموعات الحروف، لتقرأ الكلمات الجديدة وتكتبها كتابة صحيحة. ستسمع كل صوت وتنطقه، ثم تدمج الأصوات لتكوّن كلمات.',
@@ -2763,7 +2766,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'ls', 'ghars', 'dept', 'step', 'stepmock', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'ghars', 'dept', 'step', 'stepmock', 'stepbook', 'steplesson', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());

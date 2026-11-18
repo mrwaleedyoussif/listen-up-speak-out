@@ -1,4 +1,14 @@
 {
+ "1.12.1": {
+  "en": [
+   "STEP Preparation now includes the four Foundation booklets: Grammar, Reading, Listening and Composition, from A1 to B2+, with 132 lessons, a 30-question quiz for every lesson and a 50-question review for every unit (4,960 questions).",
+   "In the Listening booklet the device voice reads each recording until recorded audio is added."
+  ],
+  "ar": [
+   "قسم التحضير لاختبار STEP يضم الآن كتيبات التأسيس الأربعة: القواعد والقراءة والاستماع وتحليل الكتابة، من A1 إلى B2+، في 132 درسًا، مع اختبار من 30 سؤالًا لكل درس ومراجعة من 50 سؤالًا لكل وحدة (4960 سؤالًا).",
+   "في كتيب الاستماع يقرأ صوت الجهاز كل تسجيل إلى أن تُضاف التسجيلات الصوتية."
+  ]
+ },
  "1.12.0": {
   "en": [
    "New department: STEP Preparation is open with 30 STEP-style mock exams in three sets (Foundation, Intermediate, Exam Standard), 3,000 questions and 390 listening recordings.",
