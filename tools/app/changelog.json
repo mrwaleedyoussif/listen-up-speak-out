@@ -1,4 +1,12 @@
 {
+ "1.10.2": {
+  "en": [
+   "Home banner: Dashboard, Settings, Switch user and “Designed by Waleed Youssef” are now in one row along the bottom of the banner."
+  ],
+  "ar": [
+   "لافتة الصفحة الرئيسية: لوحة المتابعة والإعدادات وتبديل المستخدم و«تصميم وليد يوسف» في صف واحد أسفل اللافتة."
+  ]
+ },
  "1.10.1": {
   "en": [
    "Home banner: the app name and the welcome line are now centred; Settings and Switch user are under the left logo, and “Designed by Waleed Youssef” is under the right logo.",

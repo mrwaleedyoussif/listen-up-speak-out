@@ -571,14 +571,12 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 .lg-r .lg-sheen{animation-delay:2s}
 @keyframes lgSheen{0%{background-position:100% 0}20%,100%{background-position:0 0}}
 /* home banner: logo · text · logo */
-.hub-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto) minmax(0,1fr);align-items:start;gap:26px}
-.hub-side{display:flex;flex-direction:column;align-items:center;gap:12px;width:180px;max-width:100%}
-.hub-l{justify-self:start}.hub-r{justify-self:end}
+.hub-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,auto) minmax(0,1fr);align-items:center;gap:18px 26px}
+.hub-in>.lg-l{justify-self:start}.hub-in>.lg-r{justify-self:end}
+.hub .hub-bar{grid-column:1/-1;justify-content:center;align-items:center;gap:10px;margin-top:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.2)}
 .hub .lg img{height:132px}
 .hub-tx{align-self:center;text-align:center}
 .hub-tx .ar{text-align:center}
-.hub-side .ctrls{flex-direction:column;align-items:stretch;gap:6px;margin-top:0}
-.hub-side .ctrls .btn{justify-content:center}
 .hub .byline.mini{align-self:center}
 .hub .byline.mini .by-tx b{white-space:nowrap}
 .hub-hi{line-height:1.35}
@@ -608,11 +606,12 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 .soonbox{margin-top:16px;text-align:center}
 .soonbox .d-soon{position:static!important;border:2px solid var(--b);margin-bottom:.4rem}
 .soonbox p{margin:.3rem 0 0}.soonbox .btn{margin-top:1rem}
-@media (max-width:900px){.lg img,.hub .lg img{height:112px}.authhero .lg img{height:108px}.hub-in{gap:18px}.authhero{gap:14px}.hub-side{width:156px}.hub .byline.mini{padding:5px 11px 5px 5px;gap:7px}.hub .byline.mini .by-ph{width:30px;height:30px}.hub .byline.mini .by-tx b{font-size:.8rem}}
+@media (max-width:900px){.lg img,.hub .lg img{height:112px}.authhero .lg img{height:108px}.hub-in{gap:18px}.authhero{gap:14px}}
 @media (max-width:640px){
   .hub-in,.authhero{grid-template-columns:1fr 1fr;row-gap:12px}
   .authhero .lg-l{justify-self:start}.authhero .lg-r{justify-self:end;grid-column:2;grid-row:1}
-  .hub-l,.hub-r{justify-self:center;width:auto}.hub-r{grid-column:2;grid-row:1}
+  .hub-in>.lg-r{grid-column:2;grid-row:1}.hub .hub-bar{grid-row:3;gap:8px;padding-top:14px;flex-wrap:nowrap}.hub-bar .bl{display:none}.hub-bar .btn{min-width:44px;justify-content:center;font-size:1.1rem}
+  .hub .byline.mini{padding:5px 11px 5px 5px;gap:7px}.hub .byline.mini .by-ph{width:30px;height:30px}.hub .byline.mini .by-tx b{font-size:.8rem}
   .hub-tx,.ah-tx{grid-column:1/-1;grid-row:2}
   .lg img,.authhero .lg img,.hub .lg img{height:92px}
   .hub-shapes i:nth-child(3),.hub-shapes i:nth-child(8){display:none}
@@ -649,7 +648,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.10.1';
+const APP_VER = '1.10.2';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1171,14 +1170,15 @@ VIEWS.home = m => {
   <section class="hub">
     <div class="hub-shapes" aria-hidden="true">${shapes.map(([l, t, s, k, x, y, d, dl, r]) => `<i style="left:${l};top:${t};--s:${s}px;--k:${k};--x:${x}px;--y:${y}px;--t:${d}s;--d:${dl}s;--r0:${r}deg"></i>`).join('')}</div>
     <div class="hub-in">
-      <div class="hub-side hub-l">${LG('l')}<div class="ctrls">${T ? '<button class="btn sm" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm" id="wSet">⚙️ Settings</button><button class="btn sm" id="wOut">🔁 Switch user</button></div></div>
+      ${LG('l')}
       <div class="hub-tx">
         <span class="pill">Andalus International Schools · Taif Boys</span>
         <h1>${nameFX(true)}<span class="nm-sub">English Language · اللغة الإنجليزية</span></h1>
         <p class="hub-hi">Hello, ${esc(me.name)}! <span class="wave">👋</span> Choose a department to start.</p>
         <p class="ar" style="margin:0">مرحبًا! اختر القسم لتبدأ التعلّم.</p>
       </div>
-      <div class="hub-side hub-r">${LG('r')}<div class="byline mini" title="تصميم وإعداد: وليد يوسف"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="38" height="38"><div class="by-tx"><span class="by-k">Designed by</span><b>Waleed Youssef</b></div></div></div>
+      ${LG('r')}
+      <div class="ctrls hub-bar">${T ? '<button class="btn sm" id="wDash" aria-label="Dashboard" title="Dashboard">📊<span class="bl"> Dashboard</span></button>' : ''}<button class="btn sm" id="wSet" aria-label="Settings" title="Settings">⚙️<span class="bl"> Settings</span></button><button class="btn sm" id="wOut" aria-label="Switch user" title="Switch user">🔁<span class="bl"> Switch user</span></button><div class="byline mini" title="تصميم وإعداد: وليد يوسف"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="38" height="38"><div class="by-tx"><span class="by-k">Designed by</span><b>Waleed Youssef</b></div></div></div>
     </div>
   </section>
   <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
