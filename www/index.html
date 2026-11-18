@@ -657,7 +657,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.11.0';
+const APP_VER = '1.11.1';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1047,8 +1047,8 @@ window.addEventListener('popstate', () => {
   if (Nav.up()) Nav.sync();
 });
 function render() {
-  if (!Auth.ready()) { if (S.view !== 'setup') { for (const k of Object.keys(S)) delete S[k]; S.view = 'setup'; } }
-  else if (!Auth.user()) { if (S.view !== 'signin') { for (const k of Object.keys(S)) delete S[k]; S.view = 'signin'; } }
+  // nobody signed in: the sign-in and sign-up page. The teacher-account form opens from its Teacher button, only while no teacher account exists.
+  if (!Auth.user()) { if (S.view !== 'signin' && !(S.view === 'setup' && !Auth.ready())) { for (const k of Object.keys(S)) delete S[k]; S.view = 'signin'; } }
   else if (S.view === 'setup' || S.view === 'signin') { for (const k of Object.keys(S)) delete S[k]; S.view = 'home'; }
   const IN = !!Auth.user() && S.view !== 'setup' && S.view !== 'signin', T = Auth.isT();
   const g = S.g || null; setBand(g); if (S.mg && typeof MAPX !== "undefined") MAPX.band(S.mg);
@@ -2424,20 +2424,21 @@ async function newPinFlow(who, title) {
 VIEWS.setup = m => {
   const had = Auth.students().length;
   m.innerHTML = `<section class="auth">${AUTH_HERO()}<div class="card">
-    <div class="auth-head"><span class="big wave">👋</span><div><h1>Welcome!</h1><span class="ar">مرحبًا بك في برنامج From Zero To Hero</span></div></div>
-    <p>First, create the <b>teacher or parent account</b>. It protects the teacher dashboard, the settings and the backups. Students then sign up with their name and a 4-digit PIN.${had ? ` <b>Your ${had} student${had === 1 ? '' : 's'} and all progress are kept.</b>` : ''}</p>
-    <p class="ar ar-block">أولًا، أنشئ حساب المعلم أو ولي الأمر. يحمي هذا الحساب لوحة المعلم والإعدادات والنسخ الاحتياطية، ثم يسجّل الطلاب بأسمائهم ورمز من 4 أرقام.</p>
+    <div class="auth-head"><span class="big">🔑</span><div><h1>Create the teacher account</h1><span class="ar">إنشاء حساب المعلم</span></div></div>
+    <p>The <b>teacher or parent account</b> protects the teacher dashboard, the settings and the backups. Students sign up on the first page with their name and a 4-digit PIN.${had ? ` <b>Your ${had} student${had === 1 ? '' : 's'} and all progress are kept.</b>` : ''}</p>
+    <p class="ar ar-block">حساب المعلم أو ولي الأمر يحمي لوحة المعلم والإعدادات والنسخ الاحتياطية. يسجّل الطلاب من الصفحة الأولى بأسمائهم ورمز من 4 أرقام.</p>
     <form id="stF" autocomplete="on" novalidate>
       <div class="field"><label for="stN">Your name <span class="ar">اسمك</span></label><input type="text" id="stN" maxlength="40" autocomplete="name" placeholder="e.g., Waleed Youssef"></div>
       <div class="field"><label for="stU">Username <span class="ar">اسم المستخدم</span></label><input type="text" id="stU" maxlength="24" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="e.g., waleed"><small class="muted">3–24 letters or numbers (a dot, dash or underscore is allowed).</small></div>
       ${pwField('stP', 'Password', 'كلمة المرور', 'new-password')}${meterHTML('stM')}<small class="muted">At least 8 characters, with letters and numbers.</small>
       ${pwField('stP2', 'Type the password again', 'أعد كتابة كلمة المرور', 'new-password')}
       <p class="pinmsg bad" id="stE" role="alert"></p>
-      <button class="btn" type="submit" id="stB">🔐 Create the teacher account</button>
+      <div class="ctrls" style="justify-content:flex-start"><button class="btn" type="submit" id="stB">🔐 Create the teacher account</button><button class="btn sec" type="button" id="stX">← Back <span class="ar">رجوع</span></button></div>
     </form>
     <p class="secnote">🔒 The password is never stored. The app keeps only a salted PBKDF2-SHA256 hash, and all accounts and progress stay on this device. <span class="ar ar-block">لا تُحفظ كلمة المرور نفسها، بل بصمة مشفّرة فقط، وتبقى جميع الحسابات والتقدّم على هذا الجهاز.</span></p>
   </div></section>`;
   bindEyes(m); bindMeter($('#stP', m), $('#stM', m));
+  $('#stX', m).onclick = () => go('signin');
   $('#stF', m).onsubmit = async e => {
     e.preventDefault(); const E = $('#stE', m), n = $('#stN', m).value.trim(), u = $('#stU', m).value.trim(), p = $('#stP', m).value, p2 = $('#stP2', m).value;
     const err = (en, ar) => { E.innerHTML = `${esc(en)} <span class="ar">${esc(ar)}</span>`; };
@@ -2474,9 +2475,9 @@ VIEWS.signin = m => {
   const f = S.cls != null && classes.includes(S.cls) ? S.cls : '';
   const shown = f ? list.filter(p => (p.cls || '') === f) : list;
   m.innerHTML = `<section class="auth wide">${AUTH_HERO()}<div class="card">
-    <div class="auth-head"><span class="big wave">👋</span><div><h1>Who is learning today?</h1><span class="ar">من يتعلّم اليوم؟</span></div></div>
+    <div class="auth-head"><span class="big wave">👋</span><div><h1>Sign in or sign up</h1><span class="ar">سجّل الدخول أو أنشئ حسابًا جديدًا</span></div></div>
     ${S.signedOut ? `<p class="note">🔒 ${esc(S.signedOut)} <span class="ar">تم تسجيل خروجك تلقائيًا.</span></p>` : ''}
-    <p class="muted" style="margin:.2rem 0 0">Tap your name, then type your PIN. <span class="ar">اضغط على اسمك ثم اكتب رمزك.</span></p>
+    <p class="muted" style="margin:.2rem 0 0"><b>Sign in:</b> tap your name, then type your PIN. <b>Sign up:</b> press “New student”. <span class="ar">للدخول: اضغط على اسمك ثم اكتب رمزك. للتسجيل: اضغط «طالب جديد».</span></p>
     ${classes.length > 1 ? `<div class="seg" id="clsF" style="margin-top:12px"><button data-c="" class="${f ? '' : 'on'}">All</button>${classes.map(c => `<button data-c="${esc(c)}" class="${f === c ? 'on' : ''}">${esc(c)}</button>`).join('')}</div>` : ''}
     <div class="ptiles">${shown.map((p, i) => `<button class="ptile" style="--i:${i}" data-sid="${esc(p.id)}">${avHTML(p)}<span>${esc(p.name)}<small>${p.g ? 'Google · ' + esc(p.email) : esc(p.cls || '') + (p.pin ? '' : (p.cls ? ' · ' : '') + 'new PIN')}</small></span></button>`).join('')}
       ${sec.guest ? `<button class="ptile" style="--i:${shown.length}" data-sid="guest">${avHTML({ id: 'guest', name: 'Guest' })}<span>Guest<small>practice only</small></span></button>` : ''}</div>
@@ -2484,14 +2485,14 @@ VIEWS.signin = m => {
     <div class="ctrls" style="justify-content:flex-start;margin-top:16px">
       ${sec.selfSignup ? '<button class="btn pulse" id="suB">➕ New student — sign up <span class="ar" style="color:#fff">تسجيل طالب جديد</span></button>' : '<span class="muted">New student? Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span></span>'}
       ${GSI.can() ? `<button class="btn gbtn" id="gB">${GSI.ICON} Sign in with Google <span class="ar">Gmail أو بريد الأندلس</span></button>` : ''}
-      <button class="btn sec" id="tB">🔑 Teacher sign in <span class="ar">دخول المعلم</span></button>
+      <button class="btn sec" id="tB">${Auth.ready() ? '🔑 Teacher sign in <span class="ar">دخول المعلم</span>' : '🔑 Teacher — create the account <span class="ar">إنشاء حساب المعلم</span>'}</button>
     </div></div>
     <p class="foot">Andalus International Schools · Taif Boys · ${APP} · Designed by Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
   $$('#clsF [data-c]', m).forEach(b => b.onclick = () => { S.cls = b.dataset.c; VIEWS.signin(m); });
   $$('[data-sid]', m).forEach(b => b.onclick = () => studentSignIn(b.dataset.sid));
   const su = $('#suB', m); if (su) su.onclick = signUpFlow;
   const gb = $('#gB', m); if (gb) gb.onclick = () => GSI.open();
-  $('#tB', m).onclick = () => teacherSignIn();
+  $('#tB', m).onclick = () => Auth.ready() ? teacherSignIn() : go('setup');
 };
 
 /* ---------- Sign in with Google (Gmail or the school's Google e-mail) ----------
@@ -2575,6 +2576,8 @@ async function signUpFlow() {
   };
 }
 function teacherSignIn(after) {
+  // no teacher account on this device yet: it is created from the sign-in page
+  if (!Auth.ready()) { Auth.signOut('There is no teacher account yet. Press “Teacher — create the account”.'); render(); return; }
   const T = Auth.A.teacher || {};
   const m = sheet(`<h3>🔑 Teacher sign in <span class="ar">دخول المعلم</span></h3>
     <form id="tiF" novalidate><div class="field"><label for="tiU">Username <span class="ar">اسم المستخدم</span></label><input type="text" id="tiU" maxlength="24" autocomplete="username" autocapitalize="off" spellcheck="false"></div>

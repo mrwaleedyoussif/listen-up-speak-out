@@ -1,4 +1,12 @@
 {
+ "1.11.1": {
+  "en": [
+   "The app now opens on the sign-in and sign-up page. The first “Welcome” page is removed; the teacher account is created from the Teacher button on that page."
+  ],
+  "ar": [
+   "يبدأ البرنامج الآن بصفحة تسجيل الدخول والتسجيل. أُزيلت صفحة «مرحبًا» الأولى، ويُنشأ حساب المعلم من زر المعلم في تلك الصفحة."
+  ]
+ },
  "1.11.0": {
   "en": [
    "New department: Grammar and Vocabulary is open, with 12 steps from A1 to C2 (72 units, 360 lessons), games, exit quizzes, unit and level tests, a placement test and Word Cards.",

@@ -6,8 +6,8 @@
   var d = {}; try { d = JSON.parse(localStorage.getItem('lsp_v1') || '{}') || {}; } catch (e) { d = {}; }
   var auth = d.auth || {}, ses = auth.session || null, ready = !!(auth.teacher && auth.teacher.pw);
   var prof = (d.profiles || {})[ses ? ses.id : (d.current || 'guest')] || { id: 'guest', name: 'Guest', cls: '' };
-  if (ready && !ses) { location.replace('../index.html'); return; }       // accounts are set up and nobody is signed in
-  window.GV_HOST = { uid: prof.id || 'guest', name: prof.name || '', cls: prof.cls || '', role: ses ? ses.role : (ready ? 'student' : 'teacher'), locked: ready };
+  if (!ses) { location.replace('../index.html'); return; }       // nobody is signed in: back to the sign-in page
+  window.GV_HOST = { uid: prof.id || 'guest', name: prof.name || '', cls: prof.cls || '', role: ses.role, locked: true };
   /* keep the main app's idle timer fresh while someone is working here */
   var last = 0;
   function touch() {

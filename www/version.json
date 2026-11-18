@@ -1,18 +1,12 @@
 {
- "version": "1.11.0",
+ "version": "1.11.1",
  "date": "2026-11-18",
  "notes": {
   "en": [
-   "New department: Grammar and Vocabulary is open, with 12 steps from A1 to C2 (72 units, 360 lessons), games, exit quizzes, unit and level tests, a placement test and Word Cards.",
-   "Levels are now named A1, A1+, A2, A2+, B1, B1+, B2, B2+, C1 and C2 in the whole app. Levels that have no lessons yet are marked “Soon”.",
-   "MAP Test: practice is now grouped in RIT units inside each grade (RIT 1 is 151–160, RIT 2 is 161–170, and so on). Mock exams are unchanged. Practice results saved under the old units start again.",
-   "Right answers get an animated cheer with a bright sound; wrong answers get a kind “try again” with a gentle sound."
+   "The app now opens on the sign-in and sign-up page. The first “Welcome” page is removed; the teacher account is created from the Teacher button on that page."
   ],
   "ar": [
-   "قسم جديد: القواعد والمفردات مفتوح الآن، في 12 مرحلة من A1 إلى C2 (72 وحدة و360 درسًا) مع ألعاب واختبارات قصيرة واختبارات للوحدات والمستويات واختبار تحديد المستوى وبطاقات الكلمات.",
-   "أسماء المستويات أصبحت A1 و A1+ و A2 و A2+ و B1 و B1+ و B2 و B2+ و C1 و C2 في كل البرنامج، والمستويات التي لم تُضف دروسها بعد عليها علامة «قريبًا».",
-   "اختبار MAP: التدريب أصبح في وحدات RIT داخل كل صف (RIT 1 من 151 إلى 160، و RIT 2 من 161 إلى 170، وهكذا). الاختبارات التجريبية كما هي، ونتائج التدريب المحفوظة في الوحدات القديمة تبدأ من جديد.",
-   "الإجابة الصحيحة تحصل على احتفال متحرك مع صوت مبهج، والإجابة الخاطئة على تشجيع لطيف «حاول مرة أخرى» مع صوت هادئ."
+   "يبدأ البرنامج الآن بصفحة تسجيل الدخول والتسجيل. أُزيلت صفحة «مرحبًا» الأولى، ويُنشأ حساب المعلم من زر المعلم في تلك الصفحة."
   ]
  },
  "files": {}
