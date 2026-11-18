@@ -562,5 +562,6 @@ const MAPX = (() => {
     Object.assign(VIEWS, V);
     if (!document.getElementById('mapCss')) { const st = document.createElement('style'); st.id = 'mapCss'; st.textContent = CSS; document.head.appendChild(st); }
   }
-  return { register, band, load, dashRows, csv, homeCard, GRADES };
+  const doneCount = () => { const me = Store.me(); return ['reading', 'language'].reduce((t, subj) => t + GRADES.reduce((a, g) => { const s = gradeSummary(me, subj, g); return a + s.sets + s.mocks; }, 0), 0); };
+  return { register, band, load, dashRows, csv, homeCard, doneCount, GRADES };
 })();

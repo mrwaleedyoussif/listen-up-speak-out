@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Listen Up! Speak Out! — by Mr. Waleed Youssef</title>
-<meta name="description" content="Listening and speaking program for Grades 3–6 (CEFR A1 → A2+): real audio, listening tasks, pronunciation games, shadowing and role-plays, with Arabic support. Designed by Mr. Waleed Youssef.">
-<meta name="theme-color" content="#2F7BEA">
+<meta name="description" content="Listen Up! Speak Out! — Andalus International Schools, Taif: Listening and Speaking (Levels 2–5), Shadowing and MAP test practice (Grades 3–9), with Arabic support. Designed by Mr. Waleed Youssef.">
+<meta name="theme-color" content="#2E3074">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
@@ -18,8 +18,8 @@
 <style>
 :root{
   --ink:#1D2433; --ink2:#4B5568; --muted:#7A8499; --line:#E3E7F0; --bg:#F5F7FC; --card:#FFFFFF;
-  --coral:#FF6B4A; --coral-d:#E0502F; --sun:#FFC233; --ok:#1FA463; --ok-l:#E2F7EC; --bad:#E5484D; --bad-l:#FDECEC;
-  --c:#2F7BEA; --cl:#E3EEFF; --cd:#1B4FA3;
+  --coral:#E0566F; --coral-d:#BE3F58; --sun:#F2B330; --ok:#1FA463; --ok-l:#E2F7EC; --bad:#E5484D; --bad-l:#FDECEC;
+  --c:#2E3074; --cl:#E8E9F7; --cd:#1F2052;
   --r:18px; --sh:0 6px 20px rgba(29,36,51,.08); --sh2:0 2px 8px rgba(29,36,51,.06);
   --fh:"Baloo 2","Trebuchet MS","Segoe UI",system-ui,sans-serif;
   --fb:"Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
@@ -435,6 +435,75 @@ img.pic{display:block;object-fit:contain;-webkit-user-drag:none;user-select:none
 .honest{font-size:.82rem;color:var(--muted);margin:.5rem 0 0}
 @media (max-width:640px){.crow{grid-template-columns:30px 1fr}.crow .cd{grid-column:1/-1}.fbscore{font-size:1.7rem}}
 textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px solid var(--line);border-radius:12px;padding:10px}
+
+/* ===== v1.8: school identity, departments hub, motion ===== */
+.top::before{content:"";display:block;height:4px;background:linear-gradient(90deg,#2E3074 0 25%,#E16378 25% 50%,#F2B330 50% 75%,#278FC2 75% 100%)}
+.brand img.b-sch{width:40px;height:40px;flex:none;border-radius:10px;background:#fff;object-fit:contain}
+.auth-head img.b-sch{width:64px;height:64px;flex:none;border-radius:14px;background:#fff;object-fit:contain;box-shadow:var(--sh2)}
+.sch-line{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;font-weight:800;color:#2E3074;margin:14px 0 0;font-size:.92rem}
+.sch-line img{width:26px;height:26px;border-radius:6px}
+.hub{margin-top:18px;border-radius:28px;padding:26px 28px;color:#fff;position:relative;overflow:hidden;background:linear-gradient(120deg,#2E3074 0%,#3A3D9C 40%,#278FC2 100%);background-size:200% 200%;animation:hubBg 14s ease-in-out infinite alternate;box-shadow:0 14px 34px rgba(46,48,116,.28)}
+@keyframes hubBg{to{background-position:100% 50%}}
+.hub-shapes{position:absolute;inset:0;pointer-events:none}
+.hub-shapes i{position:absolute;width:var(--s,34px);height:var(--s,34px);background:var(--k,#F2B330);border-radius:7px;opacity:.5;animation:shp var(--t,9s) ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+@keyframes shp{from{transform:translate(0,0) rotate(var(--r0,0deg))}to{transform:translate(var(--x,18px),var(--y,-24px)) rotate(calc(var(--r0,0deg) + 50deg))}}
+.hub-in{position:relative;z-index:1;display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.hub-logo{flex:none;background:#fff;border-radius:22px;padding:10px 16px;box-shadow:0 12px 30px rgba(10,12,50,.35);animation:breathe 4.5s ease-in-out infinite}
+.hub-logo img{display:block;height:132px;width:auto}
+@keyframes breathe{50%{transform:translateY(-6px)}}
+.hub-tx{flex:1 1 300px;min-width:0}
+.hub-tx .pill{background:rgba(255,255,255,.2);color:#fff}
+.hub-tx h1{font-size:clamp(1.55rem,3.1vw,2.15rem);font-weight:800;margin-top:8px}
+.hub .by-ph{width:80px;height:80px}.hub .by-tx{min-width:0}.hub .by-tx b{font-size:1.2rem}.hub .by-ar{margin-top:5px}
+.hub-hi{font-size:1.12rem;font-weight:800;margin:.35rem 0 0}
+.hub-tx .ar{color:#fff;text-align:left}
+.hub .ctrls{justify-content:flex-start;margin-top:12px}
+.hub .ctrls .btn{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.4);box-shadow:none}
+.hub .ctrls .btn:hover{background:rgba(255,255,255,.28)}
+.depts{display:grid;gap:16px;grid-template-columns:repeat(12,1fr)}
+.dept{grid-column:span 4;position:relative;overflow:hidden;border-radius:24px;padding:20px;min-height:216px;color:#fff;text-align:left;display:flex;flex-direction:column;gap:2px;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 10px 24px rgba(29,36,51,.18);text-shadow:0 1px 2px rgba(0,0,0,.16);animation:dIn .6s cubic-bezier(.2,.9,.25,1.15) backwards;animation-delay:calc(var(--i)*80ms);transition:transform .2s,box-shadow .2s}
+.dept.soon{grid-column:span 3;min-height:158px}
+@keyframes dIn{from{opacity:0;transform:translateY(28px) scale(.93)}}
+.dept::before{content:"";position:absolute;right:-44px;top:-44px;width:176px;height:176px;border-radius:50%;background:rgba(255,255,255,.17);animation:blob 6s ease-in-out infinite alternate;animation-delay:calc(var(--i)*-.7s)}
+.dept::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.3) 50%,transparent 60%);transform:translateX(-120%);animation:shine 6s ease-in-out infinite;animation-delay:calc(var(--i)*.55s);pointer-events:none}
+@keyframes shine{0%,72%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes blob{to{transform:scale(1.28) translate(-14px,12px)}}
+.dept:hover{transform:translateY(-7px) scale(1.02);box-shadow:0 18px 34px rgba(29,36,51,.26)}
+.dept:active{transform:scale(.97)}
+.dept>*{position:relative;z-index:1}
+.d-ic{width:64px;height:64px;border-radius:20px;background:rgba(255,255,255,.24);display:grid;place-items:center;margin-bottom:10px;animation:dFloat 3.4s ease-in-out infinite;animation-delay:calc(var(--i)*-.5s)}
+.d-ic svg{width:34px;height:34px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.d-ic svg text{fill:#fff;stroke:none;font-family:var(--fh);font-weight:800}
+@keyframes dFloat{50%{transform:translateY(-7px) rotate(-6deg)}}
+.d-k{font-weight:800;font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;opacity:.95}
+.dept h3{font-size:1.5rem;line-height:1.15;color:#fff}
+.dept .ar{color:#fff;text-align:left;font-weight:700}
+.d-meta{margin-top:auto;padding-top:10px;display:flex;gap:6px;flex-wrap:wrap;padding-right:48px}
+.d-meta span{background:rgba(255,255,255,.24);border-radius:999px;padding:4px 10px;font-weight:800;font-size:.8rem;text-shadow:none}
+.d-go{position:absolute!important;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--b);display:grid;place-items:center;font-weight:900;font-size:1.25rem;text-shadow:none;transition:transform .2s}
+.dept:hover .d-go{transform:translateX(5px)}
+.d-soon{position:absolute!important;right:12px;top:12px;background:#fff;color:var(--b);border-radius:999px;padding:4px 12px;font-weight:900;font-size:.8rem;display:inline-flex;gap:6px;align-items:center;text-shadow:none}
+.d-soon i{width:8px;height:8px;border-radius:50%;background:var(--b);animation:pulse 1.2s infinite}
+.dept.soon h3{font-size:1.18rem}
+.dept.soon .d-ic{width:54px;height:54px;border-radius:17px}.dept.soon .d-ic svg{width:28px;height:28px}
+.dept.nudge{animation:rshake .4s ease-in-out}
+.soonmsg{min-height:1.6em;text-align:center;font-weight:800;color:#2E3074;margin:12px 0 0}
+.lhead.dhead{display:flex;gap:16px;align-items:center;background:linear-gradient(135deg,var(--a),var(--b))}
+.lhead.dhead .d-ic{margin:0;flex:none}
+.gcard{transition:transform .18s,box-shadow .18s}
+.gcard:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(29,36,51,.2)}
+.gcard:active{transform:scale(.98)}
+.gcard .em{animation:dFloat 3.6s ease-in-out infinite}
+.ucard,.studio-card,.lrow{transition:transform .18s,box-shadow .18s,border-color .18s}
+.ucard:hover,.studio-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(29,36,51,.14)}
+.vin>*{animation:vIn .45s cubic-bezier(.2,.8,.2,1) backwards}
+.vin>*:nth-child(2){animation-delay:.06s}.vin>*:nth-child(3){animation-delay:.12s}.vin>*:nth-child(4){animation-delay:.18s}.vin>*:nth-child(5){animation-delay:.24s}.vin>*:nth-child(n+6){animation-delay:.3s}
+@keyframes vIn{from{opacity:0;transform:translateY(16px)}}
+.vin .gcard,.vin .ucard{animation:dIn .55s cubic-bezier(.2,.9,.25,1.15) backwards}
+.vin .gcard:nth-child(2),.vin .ucard:nth-child(2){animation-delay:.07s}.vin .gcard:nth-child(3),.vin .ucard:nth-child(3){animation-delay:.14s}.vin .gcard:nth-child(4),.vin .ucard:nth-child(4){animation-delay:.21s}.vin .ucard:nth-child(5){animation-delay:.28s}.vin .ucard:nth-child(6){animation-delay:.35s}
+@media (max-width:900px){.dept{grid-column:span 12;min-height:0}.dept.soon{grid-column:span 6;min-height:168px}.hub .byline{flex:1 1 100%}}
+@media (max-width:640px){.lhead.dhead{flex-direction:column;align-items:flex-start;gap:10px}.hub{padding:20px}.hub-logo img{height:96px}.hub-in{gap:14px}.d-soon{font-size:.72rem;padding:3px 9px}}
+@media (prefers-reduced-motion:reduce){.hub,.hub-shapes i,.hub-logo,.dept,.dept::before,.dept::after,.d-ic,.d-soon i,.gcard .em,.vin>*,.vin .gcard,.vin .ucard{animation:none!important}.dept,.gcard,.ucard,.studio-card,.d-go{transition:none!important}}
 </style>
 </head>
 <body>
@@ -466,7 +535,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.7.0';
+const APP_VER = '1.8.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -697,7 +766,7 @@ function mountRecorder(box, o) {
 const G = g => D.grades.find(x => x.grade === g);
 const U = (g, u) => G(g).units.find(x => x.n === u);
 const avatar = (sp, name) => `<span class="av" style="background:${SPC[sp] || '#64748B'}">${esc((name || '?').replace(/^(Mr\.|Ms\.)\s*/, '')[0])}</span>`;
-function setBand(g) { const b = BANDS[g]; const r = document.documentElement.style; r.setProperty('--c', b ? b.c : '#2F7BEA'); r.setProperty('--cl', b ? b.l : '#E3EEFF'); r.setProperty('--cd', b ? b.d : '#1B4FA3'); }
+function setBand(g) { const b = BANDS[g]; const r = document.documentElement.style; r.setProperty('--c', b ? b.c : '#2E3074'); r.setProperty('--cl', b ? b.l : '#E8E9F7'); r.setProperty('--cd', b ? b.d : '#1F2052'); }
 function lessonList(unit) { return [...unit.listen.map(l => ({ kind: 'listen', L: l })), ...unit.speak.map(s => ({ kind: 'speak', L: s }))]; }
 function gradeStats(g) {
   const gr = G(g); let done = 0, stars = 0, total = 0;
@@ -821,7 +890,8 @@ const Nav = {
     if (v === 'map') { go('home'); return true; }
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
     if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
-    if (v === 'grade' || v === 'teacher' || v === 'studio') go('home');
+    if (v === 'grade') go('ls');
+    else if (v === 'ls' || v === 'teacher' || v === 'studio') go('home');
     else if (v === 'unit') go('grade', { g: S.g });
     else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
     else if (S.g && S.u) go('unit', { g: S.g, u: S.u });
@@ -852,7 +922,7 @@ function render() {
   const me = Store.me();
   $('#app').innerHTML = `
   <header class="top"><div class="in">
-    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${LOGO}<span>Listen Up! Speak Out!<small>by Mr. Waleed Youssef · Grades 3–9</small></span></button>
+    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${SCH}<span>Listen Up! Speak Out!<small>Andalus International Schools · Taif</small></span></button>
     <span class="sp"></span>
     ${IN ? `${ak ? `<button class="chip ${arOn(ak) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     ${T ? `<button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>` : ''}
@@ -863,6 +933,7 @@ function render() {
     <button class="iconbtn upd" id="updT" title="Check for updates" aria-label="Check for updates"><span class="ui">🔄</span><i class="dot"></i></button>
   </div></header>
   <div class="wrap" id="main"></div>`;
+  { const vk = [S.view, S.step, S.g, S.u, S.mg, S.subj].join('|'); if (render.vk !== vk) $('#main').classList.add('vin'); render.vk = vk; }
   $$('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
   const ar = $('#arT'); if (ar) ar.onclick = () => { const s = Store.data.settings.ar = Store.data.settings.ar || {}; s[ak] = !arOn(ak); Store.save(); document.body.classList.toggle('noar', !arOn(ak)); ar.classList.toggle('on', arOn(ak)); };
   const meT = $('#meT'); if (meT) meT.onclick = userMenu;
@@ -883,45 +954,67 @@ function teacherCard(L) {
 }
 const instr = (n, key, extra) => `<div class="instr"><span class="n">${n}</span><div><b>${esc(T[key][0])}</b>${extra || ''}<span class="ar ar-block">${esc(T[key][1])}</span></div></div>`;
 
+
+/* ---------- Departments (v1.8) ---------- */
+const lv = g => 'Level ' + (g - 1);                  // Listening and Speaking levels: the four sets are Level 2 … Level 5
+const SCH = '<img class="b-sch" src="img/andalus-shield.png" alt="Andalus International Schools" width="40" height="40">';
+const DIC = {
+  ls: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>',
+  sh: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>',
+  map: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+  rw: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+  gv: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 16 6-12 6 12"/><path d="M8 12h8"/><path d="m16 20 2 2 4-4"/></svg>',
+  step: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></svg>',
+  ph: '<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-size="11.5">abc</text></svg>'
+};
+/* id, English name, Arabic name, line above the name, gradient from → to, view to open (none = coming soon) */
+const DEPTS = [
+  ['ls', 'Listening and Speaking', 'الاستماع والتحدث', 'Levels 2–5 · CEFR A1 → A2+', '#2F9BF0', '#1D5FD6', 'ls'],
+  ['sh', 'Shadowing', 'التظليل (المحاكاة)', 'Listen and speak with the speaker', '#FF7A59', '#E23E78', 'studio'],
+  ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map'],
+  ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', ''],
+  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', '', '#9B6CF6', '#6D3BE0', ''],
+  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', ''],
+  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', '']
+];
+
 /* =============== VIEWS =============== */
 const VIEWS = {};
 
 VIEWS.home = m => {
-  const P = Store.data.profiles, me = Store.me();
-  const profs = Object.values(P).filter(p => p.id !== 'guest');
-  const col = n => ['#2F7BEA', '#E2558C', '#F08A24', '#16A34A', '#A855F7', '#0EA5E9'][(n.charCodeAt(0) || 0) % 6];
+  const me = Store.me(), T = me.id === 'teacher';
+  const lsS = D.grades.reduce((a, gr) => { const s = gradeStats(gr.grade); a.done += s.done; a.total += s.total; a.stars += s.stars; return a; }, { done: 0, total: 0, stars: 0 });
+  const sh = shStats(), mapDone = typeof MAPX !== 'undefined' && MAPX.doneCount ? MAPX.doneCount() : 0;
+  const meta = { ls: [`${lsS.done}/${lsS.total} lessons`, `★ ${lsS.stars}`], sh: [`⏱️ ${sh.min} min`, `⭐ ${sh.mastered}`, `🔥 ${sh.streak}`], map: ['2 subjects · 7 grades', `✅ ${mapDone}`] };
+  const shapes = [['8%', '12%', 30, '#F2B330', 20, -22, 9, 0, 45], ['37%', '5%', 22, '#E16378', -16, 14, 11, -2, 0], ['52%', '8%', 18, '#fff', 14, 20, 8, -1, 45], ['68%', '70%', 40, '#278FC2', -22, -26, 12, -3, 0],
+    ['82%', '14%', 34, '#E16378', 18, 24, 10, -4, 45], ['93%', '58%', 26, '#F2B330', -14, -30, 9, -5, 0], ['60%', '86%', 16, '#fff', 20, -10, 7, -2, 45], ['1.5%', '70%', 20, '#278FC2', 10, 14, 13, -6, 45]];
   m.innerHTML = `
-  <section class="hero">
-    <svg class="bubbles" viewBox="0 0 200 200"><circle cx="60" cy="60" r="50" fill="#fff"/><circle cx="150" cy="110" r="40" fill="#fff"/><circle cx="90" cy="160" r="26" fill="#fff"/></svg>
-    <div class="hero-in"><div class="hero-tx">
-    <span class="pill" style="background:rgba(255,255,255,.22);color:#fff">Elementary · Grades 3–6 · CEFR A1 → A2+</span>
-    <h1 style="margin-top:10px"><span class="hero-logo">${LOGO}</span>Listen Up! Speak Out!</h1>
-    <p>A complete listening and speaking program: real audio, smart listening tasks, pronunciation games, shadowing and role-plays — with Arabic support.</p>
-    <p class="ar" style="color:#fff;text-align:left;direction:rtl">برنامج متكامل لتنمية مهارتي الاستماع والتحدث للمرحلة الابتدائية</p>
-    </div>
-    <div class="byline"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="96" height="96"><div class="by-tx"><span class="by-k">Designed by</span><b>Mr. Waleed Youssef</b><span class="by-t">English Teacher & Curriculum Designer</span><span class="by-ar" lang="ar" dir="rtl">تصميم وإعداد: أ. وليد يوسف</span></div></div>
+  <section class="hub">
+    <div class="hub-shapes" aria-hidden="true">${shapes.map(([l, t, s, k, x, y, d, dl, r]) => `<i style="left:${l};top:${t};--s:${s}px;--k:${k};--x:${x}px;--y:${y}px;--t:${d}s;--d:${dl}s;--r0:${r}deg"></i>`).join('')}</div>
+    <div class="hub-in">
+      <div class="hub-logo"><img src="img/andalus-logo.png" alt="Andalus International Schools" width="107" height="132"></div>
+      <div class="hub-tx">
+        <span class="pill">Andalus International Schools · Taif</span>
+        <h1><span class="hero-logo">${LOGO}</span>Listen Up! Speak Out!</h1>
+        <p class="hub-hi">Hello, ${esc(me.name)}! 👋 Choose a department to start.</p>
+        <p class="ar" style="margin:0">مرحبًا! اختر القسم لتبدأ التعلّم.</p>
+        <div class="ctrls">${T ? '<button class="btn sm" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm" id="wSet">⚙️ Settings</button><button class="btn sm" id="wOut">🔁 Switch user</button></div>
+      </div>
+      <div class="byline"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="96" height="96"><div class="by-tx"><span class="by-k">Designed by</span><b>Mr. Waleed Youssef</b><span class="by-t">English Teacher & Curriculum Designer</span><span class="by-ar" lang="ar" dir="rtl">تصميم وإعداد: أ. وليد يوسف</span></div></div>
     </div>
   </section>
-  <section class="card welcome" style="margin-top:16px">${avHTML(me)}<div style="flex:1 1 220px"><h2>Hello, ${esc(me.name)}! 👋</h2><span class="muted">${me.id === 'teacher' ? 'Teacher account' : me.id === 'guest' ? 'Guest — practice progress is shared on this device' : (me.cls ? 'Class ' + esc(me.cls) + ' · ' : '') + 'your progress is saved on this device'}</span></div>
-    <div class="ctrls">${me.id === 'teacher' ? '<button class="btn sm sec" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm sec" id="wSet">⚙️ Settings</button><button class="btn sm sec" id="wOut">🔁 Switch user</button></div></section>
-  <div class="section-title"><h2>Choose your level</h2></div>
-  <section class="grid g2">
-    ${D.grades.map(gr => { const b = BANDS[gr.grade], s = gradeStats(gr.grade); return `
-      <button class="gcard" style="background:${b.grad}" data-grade="${gr.grade}">
-        <span class="em">${b.em}</span>
-        <span class="lv">${esc(b.name)} Level · CEFR ${esc(gr.level)}</span>
-        <h3>Grade ${gr.grade}</h3>
-        <span style="font-weight:700;opacity:.95;margin:.2rem 0 .8rem">${gr.units.map(u => u.emoji).join(' ')}</span>
-        <span class="bar"><i style="width:${Math.round(100 * s.done / s.total)}%"></i></span>
-        <span class="meta">${s.done}/${s.total} lessons · ★ ${s.stars}</span>
-      </button>`; }).join('')}
+  <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
+  <section class="depts">${DEPTS.map(([id, en, ar, k, a, b, view], i) => `
+    <button class="dept${view ? '' : ' soon'}" style="--a:${a};--b:${b};--i:${i}" data-dept="${id}">
+      ${view ? '' : '<span class="d-soon"><i></i>Soon · قريبًا</span>'}
+      <span class="d-ic">${DIC[id]}</span>
+      ${k ? `<span class="d-k">${esc(k)}</span>` : ''}
+      <h3>${esc(en)}</h3>
+      <span class="ar">${esc(ar)}</span>
+      ${view ? `<span class="d-meta">${meta[id].map(x => `<span>${x}</span>`).join('')}</span><span class="d-go" aria-hidden="true">→</span>` : ''}
+    </button>`).join('')}
   </section>
-  ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>MAP Growth practice</h2></div>${MAPX.homeCard()}` : ''}
-  <div class="section-title"><h2>Practise speaking</h2></div>
-  <button class="card studio-card" id="toStudio"><span class="big">🎙️</span><span style="flex:1"><h3 style="font-size:1.45rem">Shadowing Studio</h3>
-    <span>Listen, then speak <b>with</b> the speaker: words light up as they are spoken. 5 steps from Listen &amp; Read to Full Run, with recording and timing feedback.</span>
-    <span class="ar ar-block">استوديو التظليل: استمع وتحدّث مع المتحدث في الوقت نفسه، مع تسجيل صوتك وتغذية راجعة.</span></span>
-    <span class="hud"><span>⏱️ ${shStats().min} min</span><span>⭐ ${shStats().mastered}</span><span>🔥 ${shStats().streak}</span></span></button>
+  <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>
   <div id="appBox"></div>
   <section class="card about">
     <img class="ab-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="128" height="128">
@@ -930,20 +1023,47 @@ VIEWS.home = m => {
       <p class="ar ar-block">الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة.</p></div>
     <img class="ab-seal" src="img/seal.svg" alt="Mr. Waleed Youssef seal" width="112" height="112">
   </section>
-  <p class="foot"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · 72 listening lessons · 48 speaking lessons · 24 units · MAP Growth practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
+  <p class="sch-line"><img src="img/andalus-shield.png" alt="" width="26" height="26">Andalus International Schools · Taif <span class="ar" style="color:inherit">مدارس الأندلس العالمية</span></p>
+  <p class="foot" style="margin-top:10px"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · Listening and Speaking Levels 2–5 · Shadowing · MAP practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   if ($('#wDash', m)) $('#wDash', m).onclick = () => go('teacher');
   $('#wSet', m).onclick = () => go('settings'); $('#wOut', m).onclick = () => Auth.signOut();
+  $$('[data-dept]', m).forEach(b => b.onclick = () => {
+    const d = DEPTS.find(x => x[0] === b.dataset.dept);
+    if (d[6]) return go(d[6]);
+    b.classList.remove('nudge'); void b.offsetWidth; b.classList.add('nudge');
+    $('#soonMsg', m).innerHTML = `${esc(d[1])} is coming soon. <span class="ar" style="color:inherit">${esc(d[2])}: قريبًا</span>`;
+  });
+};
+
+/* --- Listening and Speaking department: choose a level --- */
+VIEWS.ls = m => {
+  const parts = [['Home', () => go('home')], ['Listening and Speaking']], d = DEPTS[0];
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ls}</span><div><span class="k">Department · Levels 2–5 · CEFR A1 → A2+</span><h1>Listening and Speaking</h1>
+    <p style="margin:.3rem 0 0;opacity:.95;max-width:720px">Real audio, smart listening tasks, pronunciation games and role-plays. Each level has 6 units; each unit has 3 listening lessons, 2 speaking lessons, 3 games and a Unit Check.</p>
+    <p class="ar" style="color:#fff;margin:0">الاستماع والتحدث: تسجيلات حقيقية ومهام استماع وألعاب نطق ولعب أدوار، في أربعة مستويات.</p></div></section>
+  <div class="section-title"><h2>Choose your level</h2><span class="ar" style="font-size:1.05rem;font-weight:800">اختر مستواك</span></div>
+  <section class="grid g2">
+    ${D.grades.map(gr => { const b = BANDS[gr.grade], s = gradeStats(gr.grade); return `
+      <button class="gcard" style="background:${b.grad}" data-grade="${gr.grade}">
+        <span class="em">${b.em}</span>
+        <span class="lv">${esc(b.name)} · CEFR ${esc(gr.level)}</span>
+        <h3>${lv(gr.grade)}</h3>
+        <span style="font-weight:700;opacity:.95;margin:.2rem 0 .8rem">${gr.units.map(u => u.emoji).join(' ')}</span>
+        <span class="bar"><i style="width:${Math.round(100 * s.done / s.total)}%"></i></span>
+        <span class="meta">${s.done}/${s.total} lessons · ★ ${s.stars}</span>
+      </button>`; }).join('')}
+  </section>`;
+  bindCrumbs(m, parts);
   $$('[data-grade]', m).forEach(b => b.onclick = () => go('grade', { g: +b.dataset.grade }));
-  $('#toStudio', m).onclick = () => go('studio');
-  const tm = $('#toMap', m); if (tm) tm.onclick = () => go('map');
 };
 
 VIEWS.grade = m => {
   const gr = G(S.g), b = BANDS[S.g];
-  const parts = [['Home', () => go('home')], [`Grade ${S.g}`]];
+  const parts = [['Home', () => go('home')], ['Listening and Speaking', () => go('ls')], [lv(S.g)]];
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead" style="background:${b.grad}"><span class="k">${esc(b.name)} Level · CEFR ${esc(gr.level)}</span><h1>Grade ${S.g}: 6 units</h1>
+  <section class="lhead" style="background:${b.grad}"><span class="k">${esc(b.name)} · CEFR ${esc(gr.level)}</span><h1>${lv(S.g)}: 6 units</h1>
     <p style="margin:.3rem 0 0;opacity:.95">Each unit: 3 listening lessons, 2 speaking lessons, 3 games and a Unit Check.</p></section>
   <section class="grid g2" style="margin-top:16px">
     ${gr.units.map(u => { const ls = lessonList(u); const dn = ls.filter(x => (Store.get(x.L.id) || {}).done).length; const st = ls.reduce((a, x) => a + ((Store.get(x.L.id) || {}).stars || 0), 0); const ck = Store.get(u.id + 'check');
@@ -959,13 +1079,13 @@ VIEWS.grade = m => {
 
 VIEWS.unit = m => {
   const u = U(S.g, S.u);
-  const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`]];
+  const parts = [['Home', () => go('home')], ['Listening and Speaking', () => go('ls')], [lv(S.g), () => go('grade', { g: S.g })], [`Unit ${u.n}`]];
   const row = (x) => { const p = Store.get(x.L.id) || {}; const isL = x.kind === 'listen';
     return `<button class="lrow ${p.done ? 'done' : ''}" data-les="${x.L.id}"><span class="ic ic-${isL ? 'l' : 's'}${x.L.n}">${isL ? '🎧' : '🗣️'}<i>${x.L.n}</i></span><span class="tx"><small>${isL ? 'Listening ' + x.L.n : 'Speaking ' + x.L.n} · ${esc(isL ? x.L.skill : x.L.func)}</small><b>${esc(x.L.title)}</b><span class="ar">${esc(isL ? x.L.skill_ar : x.L.func_ar)}</span></span>${starHTML(p.stars || 0)}</button>`; };
   const gm = (k, em, t, d) => { const p = Store.get(u.id + k) || {}; return `<button class="gtile" data-game="${k}"><span class="em gem gem-${k}">${em}</span><b>${t}</b><span class="muted" style="font-size:.9rem">${d}</span>${starHTML(p.stars || 0)}</button>`; };
   const ck = Store.get(u.id + 'check') || {};
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead"><span class="k">Grade ${S.g} · Unit ${u.n}</span><h1><span class="hpic">${pic(u.emoji)}</span>${esc(u.title)}</h1><span class="ar">${esc(u.ar)}</span>
+  <section class="lhead"><span class="k">${lv(S.g)} · Unit ${u.n}</span><h1><span class="hpic">${pic(u.emoji)}</span>${esc(u.title)}</h1><span class="ar">${esc(u.ar)}</span>
     <ul style="margin:.6rem 0 0;padding-left:20px">${u.goals.map(g => `<li>${esc(g)}</li>`).join('')}</ul></section>
   <div class="section-title"><h2>🎧 Listening</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'listen').map(row).join('')}</div>
   <div class="section-title"><h2>🗣️ Speaking</h2></div><div class="lesson-list">${lessonList(u).filter(x => x.kind === 'speak').map(row).join('')}</div>
@@ -984,7 +1104,7 @@ VIEWS.unit = m => {
 
 function lessonShell(m, L, steps, title) {
   const u = U(S.g, S.u);
-  const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], [title]];
+  const parts = [['Home', () => go('home')], ['Listening and Speaking', () => go('ls')], [lv(S.g), () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], [title]];
   S.seen = S.seen || {}; S.seen[S.step] = true;
   m.innerHTML = crumbs(parts) + `
   <section class="lhead"><span class="k"><span class="kbadge ic-${L.kind === 'listen' ? 'l' : 's'}${L.n}">${L.kind === 'listen' ? '🎧' : '🗣️'}</span>${L.kind === 'listen' ? 'Listening ' + L.n : 'Speaking ' + L.n} · ${esc(L.kind === 'listen' ? L.skill : L.func)}</span><h1>${esc(L.title)}</h1><span class="ar">${esc(L.kind === 'listen' ? L.skill_ar : L.func_ar)}</span></section>
@@ -1268,7 +1388,7 @@ function unitPools(u) {
   return { vocab, who, dialogs, whoOpts };
 }
 VIEWS.game = m => {
-  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Game']];
+  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], ['Listening and Speaking', () => go('ls')], [lv(S.g), () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Game']];
   const name = { catch: '🎯 Sound Catcher', who: '🕵️ Who Said It?', lineup: '🧩 Line Up' }[S.game];
   m.innerHTML = crumbs(parts) + `<section class="lhead"><span class="k">Unit ${u.n} game</span><h1>${name}</h1></section><section class="panel" id="panel" style="margin-top:14px"></section>`;
   bindCrumbs(m, parts);
@@ -1319,7 +1439,7 @@ VIEWS.game = m => {
 
 /* ---------- Unit Check ---------- */
 VIEWS.check = m => {
-  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], [`Grade ${S.g}`, () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Unit Check']];
+  const u = U(S.g, S.u); const parts = [['Home', () => go('home')], ['Listening and Speaking', () => go('ls')], [lv(S.g), () => go('grade', { g: S.g })], [`Unit ${u.n}`, () => go('unit', { g: S.g, u: S.u })], ['Unit Check']];
   m.innerHTML = crumbs(parts) + `<section class="lhead"><span class="k">🏅 Unit ${u.n} Check</span><h1>${esc(u.title)}</h1><p style="margin:.3rem 0 0">10 questions. Listen carefully — you can play each recording twice.</p></section><section class="panel" id="panel" style="margin-top:14px"></section>`;
   bindCrumbs(m, parts);
   const P = $('#panel', m); const pools = unitPools(u);
@@ -1360,7 +1480,7 @@ VIEWS.check = m => {
 VIEWS.cert = m => {
   const u = U(S.g, S.u), me = Store.me(), b = BANDS[S.g];
   m.innerHTML = `<div class="cert"><div class="cert-logo">${LOGO}</div><h1>Certificate of Achievement</h1><p>This certificate is proudly presented to</p><div class="nm">${esc(me.name)}</div>
-    <p>for successfully completing<br><b style="font-size:1.25rem">Grade ${S.g} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>Listen Up! Speak Out!</b> (${esc(b.name)} Level, CEFR ${esc(G(S.g).level)})</p>
+    <p>for successfully completing<br><b style="font-size:1.25rem">${lv(S.g)} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>Listen Up! Speak Out!</b> (Listening and Speaking, ${esc(b.name)}, CEFR ${esc(G(S.g).level)})</p>
     <p style="font-size:1.3rem;font-weight:800;color:var(--ok)">Unit Check score: ${S.pct}%</p><p class="muted">${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}${me.cls ? ' · Class ' + esc(me.cls) : ''}</p>
     <div class="cert-sign"><div><span class="line"></span><span class="muted">Teacher</span></div><img src="img/seal.svg" alt="Seal of Mr. Waleed Youssef" width="96" height="96"><div><span class="signame">Mr. Waleed Youssef</span><span class="line"></span><span class="muted">Program Designer</span></div></div>
     <p class="cert-foot">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef</p></div>
@@ -1384,7 +1504,7 @@ VIEWS.teacher = m => {
   <div class="section-title"><h2>Students on this device</h2></div>
   <div class="grid g2">${rows.map(({ p, per }) => `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3>${esc(p.name)} <span class="muted" style="font-size:.9rem">${esc(p.cls || '')}</span></h3>${p.id !== 'guest' ? `<button class="btn sm sec" data-del="${esc(p.id)}">🗑️</button>` : ''}</div>
     ${(() => { const t = shStats(p); return `<div class="selfrow"><span><b>🎙️ Shadowing</b></span><span>${t.min} min · ${t.lines} lines · ⭐ ${t.mastered} · 🔥 ${t.streak} days</span></div>`; })()}
-    ${per.map(x => `<div class="selfrow"><span><b>Grade ${x.g}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}${typeof MAPX !== "undefined" ? MAPX.dashRows(p) : ''}</div>`).join('') || '<p>No students yet.</p>'}</div>
+    ${per.map(x => `<div class="selfrow"><span><b>${lv(x.g)}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}${typeof MAPX !== "undefined" ? MAPX.dashRows(p) : ''}</div>`).join('') || '<p>No students yet.</p>'}</div>
   <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="csv">⬇️ Download CSV</button>'}<button class="btn sec" id="cp">📋 Copy results</button>${navigator.share ? '<button class="btn sec" id="shr">📤 Share</button>' : ''}<span class="muted" id="cpm"></span></div>
   ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>🎯 MAP Growth results</h2></div><div class="card"><p style="margin-top:0">Practice sets and mock-exam scores (percentage correct, by goal area) for every student on this device.</p><p class="ar ar-block">نتائج تدريبات واختبارات MAP التجريبية لجميع الطلاب على هذا الجهاز.</p><div class="ctrls" style="justify-content:flex-start;margin-top:10px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="mcsv">⬇️ MAP results (CSV)</button>'}<button class="btn sec" id="mcp">📋 Copy MAP results</button><span class="muted" id="mcpm"></span></div></div>` : ''}
   <div class="section-title"><h2>Back up or move students</h2></div>
@@ -1401,7 +1521,8 @@ VIEWS.teacher = m => {
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
     <li><b>Updates (🔄):</b> press 🔄 at the top to check for a new version. With automatic updates on, new versions install by themselves.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
-    <li><b>Arabic support (ع):</b> on by default in Grades 3–4 and off in Grades 5–6. Students can switch it for their grade.</li>
+    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels 2–5), Shadowing or MAP Test. Reading and Writing, Grammar and Vocabulary, STEP Preparation and Phonics are marked “Soon”.</li>
+    <li><b>Arabic support (ع):</b> in Listening and Speaking it is on by default in Levels 2–3 and off in Levels 4–5. Students can switch it for their level.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
     <li><b>Recording:</b> works in Chrome or Edge when the program is opened from its folder. If the microphone is blocked, students can use their device recorder or speak aloud.</li>
   </ol></div>
@@ -1409,7 +1530,7 @@ VIEWS.teacher = m => {
   <div class="grid g2">${Object.entries(KAGAN).map(([k, v]) => `<div class="kag"><b>${esc(k)}</b> — ${esc(v[0])}<ol>${v[1].map(s => `<li>${esc(s)}</li>`).join('')}</ol><span class="ar ar-block">${esc(v[2])}</span></div>`).join('')}</div>`;
   bindCrumbs(m, [['Home', () => go('home')], ['Teacher']]);
   $$('[data-del]', m).forEach(b => b.onclick = () => modal(`<h3>Delete this student?</h3><p>All saved progress for <b>${esc(P[b.dataset.del].name)}</b> on this device will be removed.</p>`, () => { delete P[b.dataset.del]; if (!P[Store.data.current]) Store.data.current = 'guest'; Store.save(); render(); }, 'Delete'));
-  const csv = () => { const L = ['Student,Class,Grade,Lessons done,Lessons total,Stars,Unit Check average %,Shadowing minutes,Lines mastered,Streak days']; rows.forEach(({ p, per }) => { const t = shStats(p); per.forEach(x => L.push([p.name, p.cls || '', x.g, x.done, x.total, x.stars, x.ck == null ? '' : x.ck, t.min, t.mastered, t.streak].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','))); }); return L.join('\n'); };
+  const csv = () => { const L = ['Student,Class,Listening and Speaking level,Lessons done,Lessons total,Stars,Unit Check average %,Shadowing minutes,Lines mastered,Streak days']; rows.forEach(({ p, per }) => { const t = shStats(p); per.forEach(x => L.push([p.name, p.cls || '', x.g - 1, x.done, x.total, x.stars, x.ck == null ? '' : x.ck, t.min, t.mastered, t.streak].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','))); }); return L.join('\n'); };
   if ($('#csv', m)) $('#csv', m).onclick = () => { if (!saveFile('listen-up-speak-out-progress.csv', '﻿' + csv(), 'text/csv')) $('#cpm', m).textContent = 'Download is blocked here — use Copy.'; };
   $('#cp', m).onclick = () => { copyText(csv()).then(() => $('#cpm', m).textContent = 'Copied! Paste into Excel or Google Sheets.', () => $('#cpm', m).textContent = 'Copy is not allowed here.'); };
   if ($('#shr', m)) $('#shr', m).onclick = () => { navigator.share({ title: 'Listen Up! Speak Out! — progress', text: csv() }).catch(() => {}); };
@@ -1644,8 +1765,8 @@ VIEWS.studio = m => {
   <div class="hud" style="margin:14px 0"><span>⏱️ ${st.min} min</span><span>🗣️ ${st.lines} lines practised</span><span>⭐ ${st.mastered} mastered</span><span>🔥 ${st.streak}-day streak</span></div>
   <div class="card"><b>The 5 steps of shadowing</b><div class="grid g3" style="margin-top:10px">${SH_MODES.map((x, i) => `<div class="kag"><b>${i + 1}. ${x.icon} ${esc(x.name)}</b><br><span style="font-size:.92rem">${esc(x.en)}</span><span class="ar ar-block">${esc(x.ar)}</span></div>`).join('')}</div>
     <p class="muted" style="margin:.8rem 0 0">🔇 In steps 3–5 no sound plays while you record — you hear the line first, then say it with the lighting-up words. <span dir="rtl" lang="ar">لا يُشغَّل أي صوت أثناء التسجيل في الخطوات 3–5.</span></p></div>
-  <div class="section-title"><h2>Choose your grade</h2></div>
-  <div class="seg" id="gsel">${D.grades.map(x => `<button data-g="${x.grade}" class="${x.grade === S.g ? 'on' : ''}">Grade ${x.grade}</button>`).join('')}</div>
+  <div class="section-title"><h2>Choose your level</h2></div>
+  <div class="seg" id="gsel">${D.grades.map(x => `<button data-g="${x.grade}" class="${x.grade === S.g ? 'on' : ''}">${lv(x.grade)}</button>`).join('')}</div>
   <div class="ctrls" style="justify-content:flex-start;margin-top:14px"><button class="btn" id="daily">⚡ Daily 5 — five lines for today</button></div>
   <div class="grid g2" style="margin-top:16px">${gr.units.map(u0 => { const tr = shTracks(S.g, u0.n); const all = tr.flatMap(t => t.lines); const ms = all.filter(l => shState(l.audio) === 'ms').length;
     return `<div class="card"><div class="uh" style="display:flex;gap:10px;align-items:center"><span class="ue" style="width:46px;height:46px;border-radius:14px;background:var(--cl);display:grid;place-items:center;font-size:1.5rem">${pic(u0.emoji)}</span><div><span class="pill">Unit ${u0.n}</span><h3 style="font-size:1.1rem">${esc(u0.title)}</h3></div></div>
@@ -1667,7 +1788,7 @@ VIEWS.shadow = m => {
   const l = lines[S.i], md = SH_MODES[S.mode], choral = !!set.classmode;
   const parts = [['Home', () => go('home')], ['Studio', () => go('studio', { g: S.g })], [`Unit ${u0.n}`]];
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead"><span class="k">🎙️ Shadowing Studio · Grade ${S.g} · Unit ${u0.n}</span><h1>${esc(title)}</h1></section>
+  <section class="lhead"><span class="k">🎙️ Shadowing Studio · ${lv(S.g)} · Unit ${u0.n}</span><h1>${esc(title)}</h1></section>
   <nav class="steps">${SH_MODES.map((x, i) => `<button class="${i === S.mode ? 'cur' : ''}" data-md="${i}">${i + 1}. ${x.icon} ${esc(x.name)}</button>`).join('')}</nav>
   <div class="instr"><span class="n">${md.icon}</span><div><b>${esc(md.en)}</b><span class="ar ar-block">${esc(md.ar)}</span></div></div>
   <div class="ctrls" style="justify-content:flex-start;margin-bottom:12px">
@@ -2080,7 +2201,7 @@ async function newPinFlow(who, title) {
 VIEWS.setup = m => {
   const had = Auth.students().length;
   m.innerHTML = `<section class="auth"><div class="card">
-    <div class="auth-head">${LOGO}<div><h1>Welcome to Listen Up! Speak Out!</h1><span class="ar">مرحبًا بك في برنامج Listen Up! Speak Out!</span></div></div>
+    <div class="auth-head">${SCH}${LOGO}<div><h1>Welcome to Listen Up! Speak Out!</h1><span class="ar">مرحبًا بك في برنامج Listen Up! Speak Out!</span></div></div>
     <p>First, create the <b>teacher or parent account</b>. It protects the teacher dashboard, the settings and the backups. Students then sign up with their name and a 4-digit PIN.${had ? ` <b>Your ${had} student${had === 1 ? '' : 's'} and all progress are kept.</b>` : ''}</p>
     <p class="ar ar-block">أولًا، أنشئ حساب المعلم أو ولي الأمر. يحمي هذا الحساب لوحة المعلم والإعدادات والنسخ الاحتياطية، ثم يسجّل الطلاب بأسمائهم ورمز من 4 أرقام.</p>
     <form id="stF" autocomplete="on" novalidate>
@@ -2130,7 +2251,7 @@ VIEWS.signin = m => {
   const f = S.cls != null && classes.includes(S.cls) ? S.cls : '';
   const shown = f ? list.filter(p => (p.cls || '') === f) : list;
   m.innerHTML = `<section class="auth wide"><div class="card">
-    <div class="auth-head">${LOGO}<div><h1>Who is learning today?</h1><span class="ar">من يتعلّم اليوم؟</span></div></div>
+    <div class="auth-head">${SCH}${LOGO}<div><h1>Who is learning today?</h1><span class="ar">من يتعلّم اليوم؟</span></div></div>
     ${S.signedOut ? `<p class="note">🔒 ${esc(S.signedOut)} <span class="ar">تم تسجيل خروجك تلقائيًا.</span></p>` : ''}
     <p class="muted" style="margin:.2rem 0 0">Tap your name, then type your PIN. <span class="ar">اضغط على اسمك ثم اكتب رمزك.</span></p>
     ${classes.length > 1 ? `<div class="seg" id="clsF" style="margin-top:12px"><button data-c="" class="${f ? '' : 'on'}">All</button>${classes.map(c => `<button data-c="${esc(c)}" class="${f === c ? 'on' : ''}">${esc(c)}</button>`).join('')}</div>` : ''}
@@ -2141,7 +2262,7 @@ VIEWS.signin = m => {
       ${sec.selfSignup ? '<button class="btn" id="suB">➕ New student — sign up <span class="ar" style="color:#fff">تسجيل طالب جديد</span></button>' : '<span class="muted">New student? Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span></span>'}
       <button class="btn sec" id="tB">🔑 Teacher sign in <span class="ar">دخول المعلم</span></button>
     </div></div>
-    <p class="foot">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
+    <p class="foot">Andalus International Schools · Taif · Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
   $$('#clsF [data-c]', m).forEach(b => b.onclick = () => { S.cls = b.dataset.c; VIEWS.signin(m); });
   $$('[data-sid]', m).forEach(b => b.onclick = () => studentSignIn(b.dataset.sid));
   const su = $('#suB', m); if (su) su.onclick = signUpFlow;
@@ -2355,7 +2476,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());

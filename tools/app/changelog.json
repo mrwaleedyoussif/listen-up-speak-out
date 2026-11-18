@@ -1,4 +1,18 @@
 {
+ "1.8.0": {
+  "en": [
+   "New look with the Andalus International Schools identity: the school logo and colours in the header, the home page and the sign-in screens.",
+   "After sign-in the home page is a departments hub: Listening and Speaking, Shadowing and MAP Test are open; Reading and Writing, Grammar and Vocabulary, STEP Preparation and Phonics are marked “Soon”.",
+   "More motion and colour: animated department cards, a moving home banner and smooth page transitions (switched off when the device asks for reduced motion).",
+   "Listening and Speaking now uses levels: the four sets are Level 2 to Level 5 (they were Grades 3 to 6). Lessons, audio and saved progress are unchanged."
+  ],
+  "ar": [
+   "مظهر جديد بهوية مدارس الأندلس العالمية: شعار المدرسة وألوانها في الشريط العلوي والصفحة الرئيسية وشاشات الدخول.",
+   "بعد تسجيل الدخول تظهر صفحة الأقسام: الاستماع والتحدث، والتظليل (المحاكاة)، واختبار MAP متاحة الآن؛ والقراءة والكتابة، والقواعد والمفردات، والتحضير لاختبار STEP، والصوتيات قريبًا.",
+   "حركة وألوان أكثر: بطاقات أقسام متحركة، ولافتة رئيسية متحركة، وانتقالات سلسة بين الصفحات (تتوقف إذا طلب الجهاز تقليل الحركة).",
+   "يستخدم قسم الاستماع والتحدث المستويات الآن: المجموعات الأربع هي المستوى 2 إلى المستوى 5 (كانت الصفوف 3 إلى 6)، دون تغيير في الدروس أو الصوت أو التقدّم المحفوظ."
+  ]
+ },
  "1.7.0": {
   "en": [
    "MAP Growth Practice: every grade page now has print copies of the student booklet and the five mock exams, for Reading and Language Usage, as PDF (to print) and Word (to edit).",
