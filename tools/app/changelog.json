@@ -1,4 +1,18 @@
 {
+ "1.10.0": {
+  "en": [
+   "The school logo now stands on both sides of the home banner and the welcome page.",
+   "The logos move more calmly: they slide in, float slowly, and a light glint passes over them.",
+   "The school line now reads “Andalus International Schools · Taif Boys”.",
+   "Every department opens with a short introduction in English and Arabic. The Soon departments now open a page with their introduction."
+  ],
+  "ar": [
+   "شعار المدرسة يظهر الآن على جانبي لافتة الصفحة الرئيسية وصفحة الترحيب.",
+   "حركة الشعارات أصبحت أهدأ: تدخل بانسياب، وتطفو ببطء، ويمرّ عليها بريق خفيف.",
+   "اسم المدرسة أصبح «Andalus International Schools · Taif Boys» (الطائف بنين).",
+   "كل قسم يبدأ الآن بمقدمة قصيرة بالإنجليزية والعربية، والأقسام القادمة تفتح صفحة فيها مقدمتها."
+  ]
+ },
  "1.9.0": {
   "en": [
    "New name: From Zero To Hero (English Language).",

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>From Zero To Hero (English Language)</title>
-<meta name="description" content="From Zero To Hero (English Language) — Andalus International Schools, Taif: Listening and Speaking (Levels 2–5), Shadowing and MAP test practice (Grades 3–9), with Arabic support. Designed by Waleed Youssef.">
+<meta name="description" content="From Zero To Hero (English Language) — Andalus International Schools, Taif Boys: Listening and Speaking (Levels 2–5), Shadowing and MAP test practice (Grades 3–9), with Arabic support. Designed by Waleed Youssef.">
 <meta name="theme-color" content="#2E3074">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
@@ -506,20 +506,11 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 @media (prefers-reduced-motion:reduce){.hub,.hub-shapes i,.hub-logo,.dept,.dept::before,.dept::after,.d-ic,.d-soon i,.gcard .em,.vin>*,.vin .gcard,.vin .ucard{animation:none!important}.dept,.gcard,.ucard,.studio-card,.d-go{transition:none!important}}
 
 /* ===== v1.9: new name, animated transparent logo, welcome page, sign-out, Ghars, small designer card ===== */
-.brand img.b-sch{background:none;border-radius:0;width:36px;height:42px;animation:logoSway 5s ease-in-out infinite}
-@keyframes logoSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) scale(1.06)}}
 .nm b{color:#E0566F}.nm i{font-style:normal;color:#E8A317}
 .hub .nm b,.authhero .nm b,.bye .nm b{color:#FF8FA3}.hub .nm i,.authhero .nm i,.bye .nm i{color:#FFC94A}
 .nm .ch{display:inline-block;animation:chWave 2.8s ease-in-out infinite;animation-delay:calc(var(--n)*70ms)}
 @keyframes chWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
 .nm-sub{display:block;font-family:var(--fb);font-weight:800;font-size:.42em;letter-spacing:.14em;text-transform:uppercase;opacity:.92;margin-top:2px}
-.hub-logo{background:none;box-shadow:none;padding:0;border-radius:0;animation:logoFloat 4.6s ease-in-out infinite}
-.hub-logo img{height:150px;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
-@keyframes logoFloat{0%,100%{transform:translateY(0) rotate(-2.5deg)}50%{transform:translateY(-10px) rotate(2.5deg)}}
-.logo-ring{position:relative;display:inline-block}
-.logo-ring::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),transparent 68%);animation:ringPulse 3s ease-in-out infinite}
-@keyframes ringPulse{0%,100%{transform:scale(.86);opacity:.55}50%{transform:scale(1.12);opacity:1}}
-.logo-ring img{position:relative}
 .hub .byline.mini{flex:none;padding:6px 14px 6px 6px;gap:9px;border-radius:999px;align-self:flex-end;backdrop-filter:none;box-shadow:none;background:rgba(255,255,255,.13)}
 .hub .byline.mini .by-ph{width:38px;height:38px;border-width:2px;box-shadow:none}
 .hub .byline.mini .by-k{font-size:.58rem;letter-spacing:.1em}
@@ -539,8 +530,7 @@ body.onauth .top{background:rgba(255,255,255,.9)}
 .authfx i{position:absolute;bottom:-70px;width:var(--s);height:var(--s);background:var(--k);border-radius:8px;opacity:.5;transform:rotate(45deg);animation:rise var(--t) linear infinite;animation-delay:var(--d)}
 @keyframes rise{to{transform:translateY(-118vh) rotate(405deg);opacity:0}}
 .auth{position:relative;z-index:1}
-.authhero{text-align:center;color:#fff;margin:6px 0 16px}
-.authhero .logo-ring img{height:128px;width:auto;animation:logoFloat 4.6s ease-in-out infinite;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
+.authhero{text-align:center;color:#fff}
 .authhero h1{font-size:clamp(2rem,6.4vw,3.3rem);font-weight:800;margin-top:10px;text-shadow:0 3px 0 rgba(0,0,0,.14)}
 .authhero .tag{font-weight:800;font-size:1.08rem;margin:.5rem 0 0}
 .authhero .ar{color:#fff;text-align:center;display:block;font-weight:700}
@@ -560,14 +550,66 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 /* sign-out */
 .bye{position:fixed;inset:0;z-index:200;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(125deg,#2E3074,#278FC2 60%,#E0566F 120%);animation:byeAll 1.9s ease-in-out forwards}
 @keyframes byeAll{0%{opacity:0}14%,72%{opacity:1}100%{opacity:0;visibility:hidden}}
-.bye img{height:150px;width:auto;animation:byeLogo 1.9s ease-in-out forwards;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
-@keyframes byeLogo{0%{transform:scale(.4) rotate(-25deg)}22%{transform:scale(1.08) rotate(4deg)}34%,70%{transform:scale(1) rotate(0)}100%{transform:scale(.6) translateY(-80px)}}
 .bye h2{font-size:clamp(1.7rem,5vw,2.6rem);color:#fff;margin-top:14px}
 .bye .ar{color:#fff;text-align:center;display:block;font-size:1.25rem;font-weight:800}
 .bye .wave{font-size:2.6rem;margin-top:6px}
 @media (max-width:1000px){.depts-soon{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:640px){.depts-soon{grid-template-columns:repeat(2,1fr)}.sub2{grid-template-columns:1fr}.hub-logo img{height:104px}.authhero .logo-ring img{height:100px}.hub .byline.mini{align-self:flex-start;flex:none}}
-@media (prefers-reduced-motion:reduce){body.onauth::before,.authfx i,.brand img.b-sch,.hub-logo,.logo-ring::before,.authhero .logo-ring img,.nm .ch,.wave,.btn.pulse,body.onauth .ptile,body.onauth .auth>.card,.bye img{animation:none!important}.authfx{display:none}.bye{animation:byeAll .9s linear forwards}}
+@media (max-width:640px){.depts-soon{grid-template-columns:repeat(2,1fr)}.sub2{grid-template-columns:1fr}.hub .byline.mini{flex:none}}
+@media (prefers-reduced-motion:reduce){body.onauth::before,.authfx i,.nm .ch,.wave,.btn.pulse,body.onauth .ptile,body.onauth .auth>.card,.bye img{animation:none!important}.authfx{display:none}.bye{animation:byeAll .9s linear forwards}}
+/* ===== v1.10: logo on the left and the right, calmer logo motion, department introductions ===== */
+.lg{display:inline-block;flex:none;line-height:0;animation:lgIn 1.1s cubic-bezier(.16,1,.3,1) backwards .1s}
+.lg-l{--from:-26px}.lg-r{--from:26px;animation-delay:.24s}
+@keyframes lgIn{from{opacity:0;transform:translate3d(var(--from,0),0,0) scale(.94)}}
+.lg-f{position:relative;display:inline-block;animation:lgFloat 4.2s ease-in-out infinite alternate;will-change:transform}
+@keyframes lgFloat{from{transform:translate3d(0,3px,0)}to{transform:translate3d(0,-5px,0)}}
+.lg-f::before{content:"";position:absolute;inset:-8% -16%;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.2),transparent);animation:lgGlow 4.2s ease-in-out infinite alternate}
+@keyframes lgGlow{from{opacity:.45}to{opacity:1}}
+.lg img{position:relative;display:block;height:150px;width:auto;filter:drop-shadow(0 12px 20px rgba(8,10,50,.4))}
+/* a light glint crosses the logo every few seconds; the logo's own shape is the mask */
+.lg-sheen{position:absolute;inset:0;pointer-events:none;-webkit-mask:url(img/andalus-logo-light.png) center/contain no-repeat;mask:url(img/andalus-logo-light.png) center/contain no-repeat;
+  background:linear-gradient(112deg,transparent 45.5%,rgba(255,221,130,.95) 50%,transparent 54.5%) no-repeat;background-size:260% 100%;background-position:100% 0;animation:lgSheen 7.5s cubic-bezier(.45,0,.2,1) infinite 1.6s}
+.lg-r .lg-sheen{animation-delay:2s}
+@keyframes lgSheen{0%{background-position:100% 0}20%,100%{background-position:0 0}}
+/* home banner: logo · text · logo */
+.hub-in{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:26px}
+.hub .ctrls{align-items:center}
+.hub .byline.mini{align-self:center;margin-left:auto}
+/* welcome page: logo · name · logo */
+.authhero{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:22px;width:min(900px,calc(100vw - 32px));left:50%;transform:translateX(-50%);margin:14px 0 20px}
+.authhero .lg img{height:132px}
+.authhero h1{margin-top:0}
+/* top bar: the shield keeps still; a glint passes now and then, and it lifts slightly on hover */
+.brand .b-lg{position:relative;display:inline-block;flex:none;line-height:0;transition:transform .4s cubic-bezier(.16,1,.3,1)}
+.brand:hover .b-lg{transform:translate3d(0,-2px,0) scale(1.05)}
+.brand img.b-sch{background:none;border-radius:0;width:36px;height:42px;display:block}
+.brand .lg-sheen{-webkit-mask-image:url(img/andalus-shield.png);mask-image:url(img/andalus-shield.png);background-image:linear-gradient(112deg,transparent 42%,rgba(255,255,255,.9) 50%,transparent 58%);animation-duration:9s;animation-delay:3s}
+/* sign-out: the logo fades in, holds, and fades away */
+.bye img{height:150px;width:auto;filter:drop-shadow(0 12px 20px rgba(8,10,50,.4));animation:byeLogo 1.9s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes byeLogo{0%{opacity:0;transform:translate3d(0,12px,0) scale(.93)}24%,74%{opacity:1;transform:none}100%{opacity:0;transform:translate3d(0,-8px,0) scale(1.03)}}
+/* a short introduction inside every department */
+.intro{position:relative;overflow:hidden;margin-top:16px;padding:18px 22px 18px 30px}
+.intro::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:linear-gradient(var(--a),var(--b))}
+.in-k{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px;font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--b)}
+.in-k .ar{color:inherit;font-size:1rem;letter-spacing:0;font-weight:800}
+.intro p{margin:.35rem 0 0;font-size:1.04rem;line-height:1.65;max-width:880px}
+.intro p.ar{font-size:1.08rem}
+.in-pts{display:flex;flex-wrap:wrap;gap:8px;margin:.9rem 0 0;padding:0;list-style:none}
+.in-pts li{background:var(--cl);color:var(--cd);border-radius:999px;padding:5px 13px;font-weight:700;font-size:.9rem}
+.dept .d-in{display:block;font-weight:600;font-size:.96rem;line-height:1.45;margin-top:.55rem;max-width:40ch}
+.dept .d-in.ar{font-weight:700}
+.soonbox{margin-top:16px;text-align:center}
+.soonbox .d-soon{position:static!important;border:2px solid var(--b);margin-bottom:.4rem}
+.soonbox p{margin:.3rem 0 0}.soonbox .btn{margin-top:1rem}
+@media (max-width:900px){.lg img{height:118px}.authhero .lg img{height:108px}.hub-in{gap:18px}.authhero{gap:14px}}
+@media (max-width:640px){
+  .hub-in,.authhero{grid-template-columns:1fr 1fr;row-gap:12px}
+  .hub-in .lg-l,.authhero .lg-l{justify-self:start}.hub-in .lg-r,.authhero .lg-r{justify-self:end;grid-column:2;grid-row:1}
+  .hub-tx,.ah-tx{grid-column:1/-1;grid-row:2}
+  .lg img,.authhero .lg img{height:92px}
+  .hub .byline.mini{margin-left:0}
+  .hub-shapes i:nth-child(3),.hub-shapes i:nth-child(8){display:none}
+}
+@media (prefers-reduced-motion:reduce){.lg,.lg-f,.lg-f::before,.lg-sheen,.bye img{animation:none!important}.brand .b-lg{transition:none}}
 </style>
 </head>
 <body>
@@ -599,7 +641,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.9.0';
+const APP_VER = '1.10.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -962,7 +1004,7 @@ const Nav = {
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
     if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
     if (v === 'grade') go('ls');
-    else if (v === 'ls' || v === 'ghars' || v === 'teacher' || v === 'studio') go('home');
+    else if (v === 'ls' || v === 'ghars' || v === 'dept' || v === 'teacher' || v === 'studio') go('home');
     else if (v === 'unit') go('grade', { g: S.g });
     else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
     else if (S.g && S.u) go('unit', { g: S.g, u: S.u });
@@ -994,7 +1036,7 @@ function render() {
   const me = Store.me();
   $('#app').innerHTML = `
   <header class="top"><div class="in">
-    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${SCH}<span>${nameFX(false)}<small>English Language · Andalus International Schools · Taif</small></span></button>
+    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${SCH}<span>${nameFX(false)}<small>English Language · Andalus International Schools · Taif Boys</small></span></button>
     <span class="sp"></span>
     ${IN ? `${ak ? `<button class="chip ${arOn(ak) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     ${T ? `<button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>` : ''}
@@ -1030,14 +1072,16 @@ const instr = (n, key, extra) => `<div class="instr"><span class="n">${n}</span>
 /* ---------- Departments (v1.9) ---------- */
 const lv = g => 'Level ' + (g - 1);                  // Listening and Speaking levels: the four sets are Level 2 … Level 5
 const APP = 'From Zero To Hero';
-const SCH = '<img class="b-sch" src="img/andalus-shield.png" alt="Andalus International Schools" width="36" height="42">';
+const SCH = '<span class="b-lg"><img class="b-sch" src="img/andalus-shield.png" alt="Andalus International Schools" width="36" height="42"><i class="lg-sheen" aria-hidden="true"></i></span>';
+/* the school logo for dark banners; side 'l' or 'r' (the right one is decoration for screen readers) */
+const LG = side => `<span class="lg lg-${side}"${side === 'r' ? ' aria-hidden="true"' : ''}><span class="lg-f"><img src="img/andalus-logo-light.png" alt="${side === 'r' ? '' : 'Andalus International Schools'}" width="121" height="150"><i class="lg-sheen" aria-hidden="true"></i></span></span>`;
 /* the app name with coloured, waving letters */
 const nameFX = (wave) => { let n = 0; const w = (t, tag) => { const s = wave ? [...t].map(c => `<span class="ch" style="--n:${n++}">${c}</span>`).join('') : t; return tag ? `<${tag}>${s}</${tag}>` : s; };
   return `<span class="nm" aria-label="${APP}">${w('From')} ${w('Zero', 'b')} ${w('To')} ${w('Hero', 'i')}</span>`; };
 const fxShapes = n => `<div class="authfx" aria-hidden="true">${Array.from({ length: n }, (_, i) => `<i style="left:${(i * 37 + 5) % 97}%;--s:${14 + (i * 13) % 30}px;--k:${['#F2B330', '#E16378', '#fff', '#7FD0F5'][i % 4]};--t:${9 + (i * 5) % 9}s;--d:-${(i * 3) % 14}s"></i>`).join('')}</div>`;
-const AUTH_HERO = () => `${fxShapes(14)}<div class="authhero"><span class="logo-ring"><img src="img/andalus-logo-light.png" alt="Andalus International Schools" width="104" height="128"></span>
+const AUTH_HERO = () => `${fxShapes(14)}<div class="authhero">${LG('l')}<div class="ah-tx">
   <h1>${nameFX(true)}<span class="nm-sub">English Language · اللغة الإنجليزية</span></h1>
-  <p class="tag">Start from zero. Become a hero! 🚀</p><span class="ar">ابدأ من الصفر وكن بطلًا!</span></div>`;
+  <p class="tag">Start from zero. Become a hero! 🚀</p><span class="ar">ابدأ من الصفر وكن بطلًا!</span></div>${LG('r')}</div>`;
 const DIC = {
   ls: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>',
   sh: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>',
@@ -1055,20 +1099,51 @@ const DEPTS = [
   ['ls', 'Listening and Speaking', 'الاستماع والتحدث', 'Levels 2–5 · CEFR A1 → A2+', '#2F9BF0', '#1D5FD6', 'ls', 0],
   ['sh', 'Shadowing', 'المحاكاة', 'Listen and speak with the speaker', '#FF7A59', '#E23E78', 'studio', 0],
   ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map', 0],
-  ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', '', 1],
-  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', '', '#9B6CF6', '#6D3BE0', '', 1],
-  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', '', 1],
-  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', '', 1],
+  ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', 'dept', 1],
+  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', '', '#9B6CF6', '#6D3BE0', 'dept', 1],
+  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', 'dept', 1],
+  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', 'dept', 1],
   ['ghars', 'Ghars', 'غراس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
 ];
 const GHARS = [['wl', 'Wordline', '', '#12B5CB', '#0A7C96'], ['pa', 'Performing Art', 'الفنون الأدائية', '#F0569C', '#C92671']];
-const deptCard = ([id, en, ar, k, a, b, view, soon], i, meta) => `
+/* A short introduction for each department: English, Arabic, a few key points */
+const INTRO = {
+  ls: ['Train your ears and your voice. In every unit you listen to short recordings of everyday English and answer listening tasks, then you speak in pronunciation games and role-plays. Start with Level 2 and move up one level at a time.',
+    'درّب أذنك وصوتك. في كل وحدة تستمع إلى تسجيلات قصيرة من الإنجليزية اليومية وتجيب عن مهام الاستماع، ثم تتحدث في ألعاب النطق ولعب الأدوار. ابدأ بالمستوى 2 ثم انتقل مستوى بعد مستوى.',
+    ['6 units in each level', '3 listening lessons and 2 speaking lessons in each unit', '3 games and a Unit Check']],
+  sh: ['Shadowing means listening to English and speaking with it at the same moment, copying the sounds, the rhythm and the music of the voice. It trains clear pronunciation and smooth, confident speech. Follow the five steps below and practise for a few minutes every day.',
+    'المحاكاة تعني أن تستمع إلى الإنجليزية وتتحدث معها في اللحظة نفسها، مقلّدًا الأصوات والإيقاع ونغمة الصوت. وهي تدرّبك على النطق الواضح والكلام السلس الواثق. اتبع الخطوات الخمس أدناه وتدرّب بضع دقائق كل يوم.',
+    ['5 steps', 'Levels 2–5', 'Daily 5: five lines for today']],
+  map: ['MAP Growth is a computer test that measures your level in Reading and in Language Usage and reports it as a RIT score. This department gets you ready for it: choose the subject and your grade, work through the practice units, then sit a full mock exam and see your result in each goal area.',
+    'اختبار MAP Growth اختبار على الحاسوب يقيس مستواك في القراءة واستخدام اللغة ويعطيك درجة RIT. هذا القسم يجهّزك له: اختر المادة وصفّك، وتدرّب على الوحدات، ثم أدِّ اختبارًا تجريبيًا كاملًا واعرف نتيجتك في كل مجال.',
+    ['Reading and Language Usage', 'Grades 3–9', 'Practice units and full mock exams']],
+  rw: ['Reading and Writing will take you from short, simple texts to clear paragraphs of your own. You will read and understand a text, learn its new words, and then write step by step with a model to follow.',
+    'قسم القراءة والكتابة سيأخذك من النصوص القصيرة البسيطة إلى كتابة فقرات واضحة بنفسك. ستقرأ النص وتفهمه، وتتعلم كلماته الجديدة، ثم تكتب خطوة بخطوة مع نموذج تتبعه.',
+    ['Read and understand', 'New words from the text', 'Write step by step']],
+  gv: ['Grammar and Vocabulary will give you the rules and the words that every skill needs. Each lesson will explain one point with clear examples in English and Arabic, then give you practice that grows harder little by little.',
+    'قسم القواعد والمفردات سيعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس سيشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم يقدّم لك تدريبًا يزداد صعوبة شيئًا فشيئًا.',
+    ['One point in each lesson', 'Clear examples', 'Practice from easy to hard']],
+  step: ['STEP Preparation will train you for the Standardized Test of English Proficiency (STEP). You will practise its four parts, then try full practice tests.',
+    'قسم التحضير لاختبار STEP سيدرّبك على اختبار كفايات اللغة الإنجليزية (STEP). ستتدرّب على أقسامه الأربعة، ثم تجرّب اختبارات تدريبية كاملة.',
+    ['Reading comprehension', 'Sentence structure', 'Listening comprehension', 'Compositional analysis']],
+  ph: ['Phonics will teach you the sounds of English letters and letter groups, so that you can read new words and spell them correctly. You will hear each sound, say it, and join sounds together to make words.',
+    'قسم الصوتيات سيعلّمك أصوات الحروف الإنجليزية ومجموعات الحروف، لتقرأ الكلمات الجديدة وتكتبها كتابة صحيحة. ستسمع كل صوت وتنطقه، ثم تدمج الأصوات لتكوّن كلمات.',
+    ['Hear the sound', 'Say the sound', 'Blend sounds into words']],
+  ghars: ['Ghars will bring two programmes together in one place: Wordline and Performing Art. Each programme will have its own activities here.',
+    'قسم غراس سيجمع برنامجين في مكان واحد: Wordline والفنون الأدائية. وسيكون لكل برنامج أنشطته الخاصة هنا.', []],
+  wl: ['Wordline will be a programme about words: learning new words, saying them and using them.', 'برنامج عن الكلمات: تعلّم كلمات جديدة ونطقها واستخدامها.'],
+  pa: ['Performing Art will let students use English on stage, in short plays, role-plays and presentations.', 'استخدام الإنجليزية على المسرح في مسرحيات قصيرة ولعب أدوار وعروض تقديمية.']
+};
+const introCard = id => { const [en, ar, pts] = INTRO[id], d = DEPTS.find(x => x[0] === id) || [];
+  return `<section class="card intro" style="--a:${d[4] || 'var(--c)'};--b:${d[5] || 'var(--cd)'}"><span class="in-k">Introduction <span class="ar">مقدمة</span></span>
+    <p>${esc(en)}</p><p class="ar ar-block">${esc(ar)}</p>${pts && pts.length ? `<ul class="in-pts">${pts.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</section>`; };
+const deptCard = ([id, en, ar, k, a, b, view, soon], i, meta, tx) => `
     <button class="dept${soon ? ' soon' : ''}" style="--a:${a};--b:${b};--i:${i}" data-dept="${id}">
       ${soon ? '<span class="d-soon"><i></i>Soon · قريبًا</span>' : ''}
       <span class="d-ic">${DIC[id]}</span>
       ${k ? `<span class="d-k">${esc(k)}</span>` : ''}
       <h3>${esc(en)}</h3>
-      ${ar ? `<span class="ar">${esc(ar)}</span>` : ''}
+      ${ar ? `<span class="ar">${esc(ar)}</span>` : ''}${tx ? `<span class="d-in">${esc(tx[0])}</span><span class="d-in ar">${esc(tx[1])}</span>` : ''}
       ${meta ? `<span class="d-meta">${meta.map(x => `<span>${x}</span>`).join('')}</span>` : ''}${view ? '<span class="d-go" aria-hidden="true">→</span>' : ''}
     </button>`;
 let ENTER = false;   // set at sign-in: the home page then plays the entrance sound once
@@ -1081,22 +1156,22 @@ VIEWS.home = m => {
   const lsS = D.grades.reduce((a, gr) => { const s = gradeStats(gr.grade); a.done += s.done; a.total += s.total; a.stars += s.stars; return a; }, { done: 0, total: 0, stars: 0 });
   const sh = shStats(), mapDone = typeof MAPX !== 'undefined' && MAPX.doneCount ? MAPX.doneCount() : 0;
   const meta = { ls: [`${lsS.done}/${lsS.total} lessons`, `★ ${lsS.stars}`], sh: [`⏱️ ${sh.min} min`, `⭐ ${sh.mastered}`, `🔥 ${sh.streak}`], map: ['2 subjects · 7 grades', `✅ ${mapDone}`] };
-  const shapes = [['8%', '12%', 30, '#F2B330', 20, -22, 9, 0, 45], ['37%', '5%', 22, '#E16378', -16, 14, 11, -2, 0], ['52%', '8%', 18, '#fff', 14, 20, 8, -1, 45], ['68%', '70%', 40, '#278FC2', -22, -26, 12, -3, 0],
-    ['82%', '14%', 34, '#E16378', 18, 24, 10, -4, 45], ['93%', '58%', 26, '#F2B330', -14, -30, 9, -5, 0], ['60%', '86%', 16, '#fff', 20, -10, 7, -2, 45], ['1.5%', '70%', 20, '#278FC2', 10, 14, 13, -6, 45]];
+  const shapes = [['30%', '-4%', 26, '#F2B330', 16, 14, 9, 0, 45], ['47%', '6%', 18, '#fff', -14, 12, 11, -2, 0], ['62%', '14%', 30, '#E16378', 12, 18, 10, -1, 45], ['73%', '38%', 22, '#F2B330', -16, -18, 12, -3, 0],
+    ['56%', '78%', 34, '#278FC2', 16, -14, 10, -4, 45], ['40%', '88%', 16, '#fff', 18, -10, 9, -5, 0], ['17%', '84%', 20, '#278FC2', 14, 8, 13, -6, 45], ['78%', '4%', 20, '#E16378', -12, 10, 8, -2, 0]];
   const open = DEPTS.filter(d => !d[7]), soon = DEPTS.filter(d => d[7]);
   m.innerHTML = `
   <section class="hub">
     <div class="hub-shapes" aria-hidden="true">${shapes.map(([l, t, s, k, x, y, d, dl, r]) => `<i style="left:${l};top:${t};--s:${s}px;--k:${k};--x:${x}px;--y:${y}px;--t:${d}s;--d:${dl}s;--r0:${r}deg"></i>`).join('')}</div>
     <div class="hub-in">
-      <div class="hub-logo logo-ring"><img src="img/andalus-logo-light.png" alt="Andalus International Schools" width="121" height="150"></div>
+      ${LG('l')}
       <div class="hub-tx">
-        <span class="pill">Andalus International Schools · Taif</span>
+        <span class="pill">Andalus International Schools · Taif Boys</span>
         <h1>${nameFX(true)}<span class="nm-sub">English Language · اللغة الإنجليزية</span></h1>
         <p class="hub-hi">Hello, ${esc(me.name)}! <span class="wave">👋</span> Choose a department to start.</p>
         <p class="ar" style="margin:0">مرحبًا! اختر القسم لتبدأ التعلّم.</p>
-        <div class="ctrls">${T ? '<button class="btn sm" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm" id="wSet">⚙️ Settings</button><button class="btn sm" id="wOut">🔁 Switch user</button></div>
+        <div class="ctrls">${T ? '<button class="btn sm" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm" id="wSet">⚙️ Settings</button><button class="btn sm" id="wOut">🔁 Switch user</button><div class="byline mini" title="تصميم وإعداد: وليد يوسف"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="38" height="38"><div class="by-tx"><span class="by-k">Designed by</span><b>Waleed Youssef</b></div></div></div>
       </div>
-      <div class="byline mini" title="تصميم وإعداد: وليد يوسف"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="38" height="38"><div class="by-tx"><span class="by-k">Designed by</span><b>Waleed Youssef</b></div></div>
+      ${LG('r')}
     </div>
   </section>
   <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
@@ -1111,28 +1186,39 @@ VIEWS.home = m => {
       <p class="ar ar-block">وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليأخذ متعلّمي الإنجليزية من كلماتهم الأولى إلى استخدام اللغة بثقة.</p></div>
     <img class="ab-seal" src="img/seal.svg" alt="Waleed Youssef seal" width="112" height="112">
   </section>
-  <p class="sch-line"><img src="img/andalus-shield.png" alt="" width="23" height="26">Andalus International Schools · Taif <span class="ar" style="color:inherit">مدارس الأندلس العالمية</span></p>
+  <p class="sch-line"><img src="img/andalus-shield.png" alt="" width="23" height="26">Andalus International Schools · Taif Boys <span class="ar" style="color:inherit">مدارس الأندلس العالمية · الطائف بنين</span></p>
   <p class="foot" style="margin-top:10px"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">${APP} (English Language) · Designed by Waleed Youssef · Listening and Speaking Levels 2–5 · Shadowing · MAP practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   if ($('#wDash', m)) $('#wDash', m).onclick = () => go('teacher');
   $('#wSet', m).onclick = () => go('settings'); $('#wOut', m).onclick = () => Auth.signOut();
   $$('[data-dept]', m).forEach(b => b.onclick = () => {
     const d = DEPTS.find(x => x[0] === b.dataset.dept);
-    if (d[6]) return go(d[6]);
-    b.classList.remove('nudge'); void b.offsetWidth; b.classList.add('nudge');
-    $('#soonMsg', m).innerHTML = `${esc(d[1])} is coming soon. <span class="ar" style="color:inherit">${esc(d[2])}: قريبًا</span>`;
+    go(d[6], d[6] === 'dept' ? { dp: d[0] } : {});
   });
   if (ENTER) { ENTER = false; setTimeout(() => RX.sfx('enter'), 180); }
+};
+
+/* --- a department that is coming soon: its introduction and a note --- */
+VIEWS.dept = m => {
+  const d = DEPTS.find(x => x[0] === S.dp && x[6] === 'dept'); if (!d) return go('home');
+  const parts = [['Home', () => go('home')], [d[1]]];
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC[d[0]]}</span><div><span class="k">Department · coming soon</span><h1>${esc(d[1])} <span class="ar" style="color:#fff;font-size:.8em">${esc(d[2])}</span></h1></div></section>
+  ${introCard(d[0])}
+  <section class="card soonbox" style="--b:${d[5]}"><span class="d-soon"><i></i>Soon · قريبًا</span>
+    <p><b>This department is being prepared.</b> It will open here in a coming update.</p>
+    <p class="ar" style="text-align:center">هذا القسم قيد الإعداد، وسيُفتح هنا في تحديث قادم.</p>
+    <button class="btn" id="dBack">← Back to the departments <span class="ar" style="color:inherit">العودة إلى الأقسام</span></button></section>`;
+  bindCrumbs(m, parts); $('#dBack', m).onclick = () => go('home');
 };
 
 /* --- Ghars department (coming soon): Wordline and Performing Art --- */
 VIEWS.ghars = m => {
   const parts = [['Home', () => go('home')], ['Ghars']], d = DEPTS.find(x => x[0] === 'ghars');
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ghars}</span><div><span class="k">Department · coming soon</span><h1>Ghars <span class="ar" style="color:#fff;font-size:.8em">غراس</span></h1>
-    <p style="margin:.3rem 0 0;opacity:.95">Two programmes will open here: Wordline and Performing Art.</p>
-    <p class="ar" style="color:#fff;margin:0">برنامجان قريبًا في هذا القسم.</p></div></section>
-  <section class="sub2">${GHARS.map(([id, en, ar, a, b], i) => deptCard([id, en, ar, '', a, b, '', 1], i)).join('')}</section>
+  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ghars}</span><div><span class="k">Department · coming soon</span><h1>Ghars <span class="ar" style="color:#fff;font-size:.8em">غراس</span></h1></div></section>
+  ${introCard('ghars')}
+  <section class="sub2">${GHARS.map(([id, en, ar, a, b], i) => deptCard([id, en, ar, '', a, b, '', 1], i, null, INTRO[id])).join('')}</section>
   <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>`;
   bindCrumbs(m, parts);
   $$('[data-dept]', m).forEach(b => b.onclick = () => { const g = GHARS.find(x => x[0] === b.dataset.dept); b.classList.remove('nudge'); void b.offsetWidth; b.classList.add('nudge'); $('#soonMsg', m).textContent = g[1] + ' is coming soon.'; });
@@ -1142,9 +1228,8 @@ VIEWS.ghars = m => {
 VIEWS.ls = m => {
   const parts = [['Home', () => go('home')], ['Listening and Speaking']], d = DEPTS[0];
   m.innerHTML = crumbs(parts) + `
-  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ls}</span><div><span class="k">Department · Levels 2–5 · CEFR A1 → A2+</span><h1>Listening and Speaking</h1>
-    <p style="margin:.3rem 0 0;opacity:.95;max-width:720px">Real audio, smart listening tasks, pronunciation games and role-plays. Each level has 6 units; each unit has 3 listening lessons, 2 speaking lessons, 3 games and a Unit Check.</p>
-    <p class="ar" style="color:#fff;margin:0">الاستماع والتحدث: تسجيلات حقيقية ومهام استماع وألعاب نطق ولعب أدوار، في أربعة مستويات.</p></div></section>
+  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ls}</span><div><span class="k">Department · Levels 2–5 · CEFR A1 → A2+</span><h1>Listening and Speaking <span class="ar" style="color:#fff;font-size:.8em">الاستماع والتحدث</span></h1></div></section>
+  ${introCard('ls')}
   <div class="section-title"><h2>Choose your level</h2><span class="ar" style="font-size:1.05rem;font-weight:800">اختر مستواك</span></div>
   <section class="grid g2">
     ${D.grades.map(gr => { const b = BANDS[gr.grade], s = gradeStats(gr.grade); return `
@@ -1623,7 +1708,7 @@ VIEWS.teacher = m => {
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
     <li><b>Updates (🔄):</b> press 🔄 at the top to check for a new version. With automatic updates on, new versions install by themselves.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
-    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels 2–5), Shadowing or MAP Test. Reading and Writing, Grammar and Vocabulary, STEP Preparation, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”.</li>
+    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels 2–5), Shadowing or MAP Test. Reading and Writing, Grammar and Vocabulary, STEP Preparation, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”. Every department opens with a short introduction in English and Arabic.</li>
     <li><b>Sign in with Google:</b> in the browser version, students can use Gmail or the school's Google e-mail after you add the sign-in key in ⚙️ Settings.</li>
     <li><b>Arabic support (ع):</b> in Listening and Speaking it is on by default in Levels 2–3 and off in Levels 4–5. Students can switch it for their level.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
@@ -1862,9 +1947,8 @@ VIEWS.studio = m => {
   S.g = S.g || Store.data.settings.shG || 3; setBand(S.g);
   const st = shStats(), gr = G(S.g);
   m.innerHTML = crumbs([['Home', () => go('home')], ['Shadowing Studio']]) + `
-  <section class="lhead" style="background:linear-gradient(120deg,var(--c),#FF6B4A)"><span class="k">🎙️ Shadowing Studio</span><h1>Speak like the speaker!</h1>
-    <p style="margin:.3rem 0 0;max-width:720px">Shadowing means listening to English and speaking <b>with</b> it, copying the sounds, the rhythm and the music. Practise a little every day.</p>
-    <p class="ar" style="color:#fff">المحاكاة تعني أن تستمع إلى الإنجليزية وتتحدث معها في الوقت نفسه، مقلّدًا الأصوات والإيقاع والنغمة. تدرّب قليلًا كل يوم.</p></section>
+  <section class="lhead" style="background:linear-gradient(120deg,var(--c),#FF6B4A)"><span class="k">🎙️ Shadowing Studio</span><h1>Speak like the speaker! <span class="ar" style="color:#fff;font-size:.8em">المحاكاة</span></h1></section>
+  ${introCard('sh')}
   <div class="hud" style="margin:14px 0"><span>⏱️ ${st.min} min</span><span>🗣️ ${st.lines} lines practised</span><span>⭐ ${st.mastered} mastered</span><span>🔥 ${st.streak}-day streak</span></div>
   <div class="card"><b>The 5 steps of shadowing</b><div class="grid g3" style="margin-top:10px">${SH_MODES.map((x, i) => `<div class="kag"><b>${i + 1}. ${x.icon} ${esc(x.name)}</b><br><span style="font-size:.92rem">${esc(x.en)}</span><span class="ar ar-block">${esc(x.ar)}</span></div>`).join('')}</div>
     <p class="muted" style="margin:.8rem 0 0">🔇 In steps 3–5 no sound plays while you record — you hear the line first, then say it with the lighting-up words. <span dir="rtl" lang="ar">لا يُشغَّل أي صوت أثناء التسجيل في الخطوات 3–5.</span></p></div>
@@ -2375,7 +2459,7 @@ VIEWS.signin = m => {
       ${GSI.can() ? `<button class="btn gbtn" id="gB">${GSI.ICON} Sign in with Google <span class="ar">Gmail أو بريد الأندلس</span></button>` : ''}
       <button class="btn sec" id="tB">🔑 Teacher sign in <span class="ar">دخول المعلم</span></button>
     </div></div>
-    <p class="foot">Andalus International Schools · Taif · ${APP} · Designed by Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
+    <p class="foot">Andalus International Schools · Taif Boys · ${APP} · Designed by Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
   $$('#clsF [data-c]', m).forEach(b => b.onclick = () => { S.cls = b.dataset.c; VIEWS.signin(m); });
   $$('[data-sid]', m).forEach(b => b.onclick = () => studentSignIn(b.dataset.sid));
   const su = $('#suB', m); if (su) su.onclick = signUpFlow;
@@ -2645,7 +2729,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'ls', 'ghars', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'ghars', 'dept', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());

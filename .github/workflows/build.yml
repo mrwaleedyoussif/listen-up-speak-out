@@ -180,7 +180,7 @@ jobs:
         run: |
           ls -la files
           cat > notes.md <<'EOF'
-          **From Zero To Hero (English Language)** – Andalus International Schools, Taif (build ${{ needs.version.outputs.code }}).
+          **From Zero To Hero (English Language)** – Andalus International Schools, Taif Boys (build ${{ needs.version.outputs.code }}).
 
           - **Android phones & tablets:** `Listen-Up-Speak-Out-${{ needs.version.outputs.name }}.apk`
           - **Windows PCs:** `Listen-Up-Speak-Out-Setup-${{ needs.version.outputs.name }}.exe` (installer) or `Listen-Up-Speak-Out-Portable-${{ needs.version.outputs.name }}.exe` (no installation)

@@ -214,9 +214,8 @@ const MAPX = (() => {
   V.map = m => {
     const subj = S.subj === 'language' ? 'language' : 'reading', me = Store.me();
     m.innerHTML = crumbs([['Home', () => go('home')], ['MAP Growth']]) + `
-    <section class="lhead map-head"><span class="k">MAP Growth practice · Grades 3–9</span><h1>🎯 MAP Growth Practice</h1>
-      <p style="margin:.3rem 0 0;opacity:.95">Practice units and full mock exams for the MAP Growth Reading and Language Usage tests, written to the MAP goal areas and RIT bands.</p>
-      <span class="ar ar-block">تدريب على اختبار MAP Growth في القراءة واستخدام اللغة للصفوف من الثالث إلى التاسع.</span></section>
+    <section class="lhead map-head"><span class="k">MAP Growth practice · Grades 3–9</span><h1>🎯 MAP Growth Practice <span class="ar" style="color:#fff;font-size:.8em">اختبار MAP</span></h1></section>
+    ${introCard('map')}
     <div class="mtabs" role="tablist">${Object.entries(SUBJ).map(([k, v]) => `<button role="tab" class="mtab ${k === subj ? 'on' : ''}" data-subj="${k}" aria-selected="${k === subj}">${v.em} ${v.name}<span class="ar">${v.ar}</span>${(IDX()[k] || []).length ? '' : '<small>Coming soon</small>'}</button>`).join('')}</div>
     <div id="mBody"></div>
     <section class="card" style="margin-top:18px"><h3>ℹ️ About MAP Growth and this practice</h3>
@@ -226,7 +225,7 @@ const MAPX = (() => {
         <li>A mock-exam score here is the <b>percentage of questions correct</b>. It is not a RIT score, and it does not predict an exact RIT score.</li>
         <li>All passages, drafts and questions were written by Waleed Youssef for practice. They are not NWEA test questions. MAP® and MAP Growth™ are trademarks of NWEA; this app is not made or endorsed by NWEA.</li>
       </ul>
-      <span class="ar ar-block">نتيجة الاختبار التجريبي هي نسبة الإجابات الصحيحة وليست درجة RIT. جميع النصوص والأسئلة من إعداد أ. وليد يوسف للتدريب، وليست أسئلة NWEA.</span></section>`;
+      <span class="ar ar-block">نتيجة الاختبار التجريبي هي نسبة الإجابات الصحيحة وليست درجة RIT. جميع النصوص والأسئلة من إعداد وليد يوسف للتدريب، وليست أسئلة NWEA.</span></section>`;
     bindCrumbs(m, [['Home', () => go('home')]]);
     $$('[data-subj]', m).forEach(b => b.onclick = () => { S.subj = b.dataset.subj; V.map(m); });
     const B = $('#mBody', m), avail = IDX()[subj] || [];

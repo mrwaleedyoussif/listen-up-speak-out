@@ -2,7 +2,7 @@
 
 *Formerly “Listen Up! Speak Out!”. The repository, app id and download file names keep the old name so that installed apps update normally and keep their saved accounts.*
 
-English learning app for **Andalus International Schools – Taif**, designed by Waleed Youssef. After sign-in the home page is a departments hub: **Listening and Speaking** (Levels 2–5, CEFR A1 → A2+), **Shadowing** and **MAP Test** are open; Reading and Writing, Grammar and Vocabulary, STEP Preparation, Phonics and Ghars (Wordline, Performing Art) are marked “Soon”. In the browser version students can also sign in with Google (Gmail or the school e-mail) once the teacher adds an OAuth client ID in Settings.
+English learning app for **Andalus International Schools – Taif Boys**, designed by Waleed Youssef. After sign-in the home page is a departments hub: **Listening and Speaking** (Levels 2–5, CEFR A1 → A2+), **Shadowing** and **MAP Test** are open; Reading and Writing, Grammar and Vocabulary, STEP Preparation, Phonics and Ghars (Wordline, Performing Art) are marked “Soon”. In the browser version students can also sign in with Google (Gmail or the school e-mail) once the teacher adds an OAuth client ID in Settings.
 
 Listening and Speaking (the four levels were Grades 3–6 before v1.8; lesson ids and audio folders still use `g3`…`g6`): 24 units, 72 listening lessons, 48 speaking lessons, pronunciation games, Unit Checks, a Shadowing Studio with word-by-word highlighting and recording, a teacher dashboard and Arabic support.
 
