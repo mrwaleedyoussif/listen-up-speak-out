@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Listen Up! Speak Out! — by Mr. Waleed Youssef</title>
-<meta name="description" content="Listen Up! Speak Out! — Andalus International Schools, Taif: Listening and Speaking (Levels 2–5), Shadowing and MAP test practice (Grades 3–9), with Arabic support. Designed by Mr. Waleed Youssef.">
+<title>From Zero To Hero (English Language)</title>
+<meta name="description" content="From Zero To Hero (English Language) — Andalus International Schools, Taif: Listening and Speaking (Levels 2–5), Shadowing and MAP test practice (Grades 3–9), with Arabic support. Designed by Waleed Youssef.">
 <meta name="theme-color" content="#2E3074">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
@@ -12,7 +12,7 @@
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Listen Up!">
+<meta name="apple-mobile-web-app-title" content="Zero To Hero">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <link rel="stylesheet" href="fonts.css">
 <style>
@@ -504,6 +504,70 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 @media (max-width:900px){.dept{grid-column:span 12;min-height:0}.dept.soon{grid-column:span 6;min-height:168px}.hub .byline{flex:1 1 100%}}
 @media (max-width:640px){.lhead.dhead{flex-direction:column;align-items:flex-start;gap:10px}.hub{padding:20px}.hub-logo img{height:96px}.hub-in{gap:14px}.d-soon{font-size:.72rem;padding:3px 9px}}
 @media (prefers-reduced-motion:reduce){.hub,.hub-shapes i,.hub-logo,.dept,.dept::before,.dept::after,.d-ic,.d-soon i,.gcard .em,.vin>*,.vin .gcard,.vin .ucard{animation:none!important}.dept,.gcard,.ucard,.studio-card,.d-go{transition:none!important}}
+
+/* ===== v1.9: new name, animated transparent logo, welcome page, sign-out, Ghars, small designer card ===== */
+.brand img.b-sch{background:none;border-radius:0;width:36px;height:42px;animation:logoSway 5s ease-in-out infinite}
+@keyframes logoSway{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg) scale(1.06)}}
+.nm b{color:#E0566F}.nm i{font-style:normal;color:#E8A317}
+.hub .nm b,.authhero .nm b,.bye .nm b{color:#FF8FA3}.hub .nm i,.authhero .nm i,.bye .nm i{color:#FFC94A}
+.nm .ch{display:inline-block;animation:chWave 2.8s ease-in-out infinite;animation-delay:calc(var(--n)*70ms)}
+@keyframes chWave{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-9px)}}
+.nm-sub{display:block;font-family:var(--fb);font-weight:800;font-size:.42em;letter-spacing:.14em;text-transform:uppercase;opacity:.92;margin-top:2px}
+.hub-logo{background:none;box-shadow:none;padding:0;border-radius:0;animation:logoFloat 4.6s ease-in-out infinite}
+.hub-logo img{height:150px;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
+@keyframes logoFloat{0%,100%{transform:translateY(0) rotate(-2.5deg)}50%{transform:translateY(-10px) rotate(2.5deg)}}
+.logo-ring{position:relative;display:inline-block}
+.logo-ring::before{content:"";position:absolute;inset:-14px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.28),transparent 68%);animation:ringPulse 3s ease-in-out infinite}
+@keyframes ringPulse{0%,100%{transform:scale(.86);opacity:.55}50%{transform:scale(1.12);opacity:1}}
+.logo-ring img{position:relative}
+.hub .byline.mini{flex:none;padding:6px 14px 6px 6px;gap:9px;border-radius:999px;align-self:flex-end;backdrop-filter:none;box-shadow:none;background:rgba(255,255,255,.13)}
+.hub .byline.mini .by-ph{width:38px;height:38px;border-width:2px;box-shadow:none}
+.hub .byline.mini .by-k{font-size:.58rem;letter-spacing:.1em}
+.hub .byline.mini .by-tx b{font-size:.9rem;line-height:1.1}
+.depts-soon{display:grid;gap:14px;grid-template-columns:repeat(5,1fr);margin-top:16px}
+.depts-soon .dept.soon{grid-column:auto}
+.dept.soon .d-go{width:34px;height:34px;font-size:1.05rem;right:12px;bottom:12px}
+.sub2{display:grid;gap:16px;grid-template-columns:repeat(2,1fr);margin-top:16px}
+.sub2 .dept.soon{grid-column:auto;min-height:190px}
+/* welcome (first run and sign-in) */
+body.onauth{background:#2E3074;min-height:100vh}
+body.onauth::before{content:"";position:fixed;inset:0;z-index:0;background:linear-gradient(125deg,#2E3074,#3B3FA6 30%,#278FC2 62%,#E0566F 105%);background-size:240% 240%;animation:hubBg 16s ease-in-out infinite alternate}
+body.onauth #app{position:relative;z-index:1}
+.auth>.card,.authhero,.auth>.foot{position:relative;z-index:1}
+body.onauth .top{background:rgba(255,255,255,.9)}
+.authfx{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.authfx i{position:absolute;bottom:-70px;width:var(--s);height:var(--s);background:var(--k);border-radius:8px;opacity:.5;transform:rotate(45deg);animation:rise var(--t) linear infinite;animation-delay:var(--d)}
+@keyframes rise{to{transform:translateY(-118vh) rotate(405deg);opacity:0}}
+.auth{position:relative;z-index:1}
+.authhero{text-align:center;color:#fff;margin:6px 0 16px}
+.authhero .logo-ring img{height:128px;width:auto;animation:logoFloat 4.6s ease-in-out infinite;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
+.authhero h1{font-size:clamp(2rem,6.4vw,3.3rem);font-weight:800;margin-top:10px;text-shadow:0 3px 0 rgba(0,0,0,.14)}
+.authhero .tag{font-weight:800;font-size:1.08rem;margin:.5rem 0 0}
+.authhero .ar{color:#fff;text-align:center;display:block;font-weight:700}
+body.onauth .auth>.card{background:rgba(255,255,255,.96);border-radius:26px;box-shadow:0 22px 50px rgba(10,12,60,.34);animation:cardUp .7s cubic-bezier(.2,.9,.25,1.12) backwards .12s}
+@keyframes cardUp{from{opacity:0;transform:translateY(40px) scale(.95)}}
+body.onauth .foot{color:#fff;opacity:.92}
+.wave{display:inline-block;transform-origin:70% 80%;animation:waveH 1.9s ease-in-out infinite}
+@keyframes waveH{0%,55%,100%{transform:rotate(0)}10%,30%{transform:rotate(18deg)}20%,40%{transform:rotate(-10deg)}}
+body.onauth .ptile{animation:dIn .5s cubic-bezier(.2,.9,.25,1.15) backwards;animation-delay:calc(var(--i,0)*55ms + .3s);transition:transform .16s,box-shadow .16s,border-color .16s}
+body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10px 22px rgba(46,48,116,.22)}
+.ptile small{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:118px}
+.btn.pulse{animation:btnPulse 2.2s ease-in-out infinite}
+@keyframes btnPulse{0%,100%{box-shadow:0 4px 0 var(--coral-d),0 0 0 0 rgba(224,86,111,.5)}50%{box-shadow:0 4px 0 var(--coral-d),0 0 0 12px rgba(224,86,111,0)}}
+.gbtn{background:#fff!important;color:#1F1F1F!important;border:2px solid #DADCE0;box-shadow:0 4px 0 #C6C9CE!important;gap:10px}
+.gbtn svg{width:20px;height:20px;flex:none}
+.gbox{min-height:48px;display:flex;justify-content:center;margin:14px 0 6px}
+/* sign-out */
+.bye{position:fixed;inset:0;z-index:200;display:grid;place-items:center;text-align:center;color:#fff;background:linear-gradient(125deg,#2E3074,#278FC2 60%,#E0566F 120%);animation:byeAll 1.9s ease-in-out forwards}
+@keyframes byeAll{0%{opacity:0}14%,72%{opacity:1}100%{opacity:0;visibility:hidden}}
+.bye img{height:150px;width:auto;animation:byeLogo 1.9s ease-in-out forwards;filter:drop-shadow(0 10px 18px rgba(8,10,50,.45))}
+@keyframes byeLogo{0%{transform:scale(.4) rotate(-25deg)}22%{transform:scale(1.08) rotate(4deg)}34%,70%{transform:scale(1) rotate(0)}100%{transform:scale(.6) translateY(-80px)}}
+.bye h2{font-size:clamp(1.7rem,5vw,2.6rem);color:#fff;margin-top:14px}
+.bye .ar{color:#fff;text-align:center;display:block;font-size:1.25rem;font-weight:800}
+.bye .wave{font-size:2.6rem;margin-top:6px}
+@media (max-width:1000px){.depts-soon{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.depts-soon{grid-template-columns:repeat(2,1fr)}.sub2{grid-template-columns:1fr}.hub-logo img{height:104px}.authhero .logo-ring img{height:100px}.hub .byline.mini{align-self:flex-start;flex:none}}
+@media (prefers-reduced-motion:reduce){body.onauth::before,.authfx i,.brand img.b-sch,.hub-logo,.logo-ring::before,.authhero .logo-ring img,.nm .ch,.wave,.btn.pulse,body.onauth .ptile,body.onauth .auth>.card,.bye img{animation:none!important}.authfx{display:none}.bye{animation:byeAll .9s linear forwards}}
 </style>
 </head>
 <body>
@@ -518,7 +582,7 @@ textarea.bk{width:100%;min-height:120px;font:inherit;font-size:.85rem;border:1px
 <script>
 'use strict';
 /* =========================================================
-   Listen Up! Speak Out! — Elementary Listening & Speaking Program
+   From Zero To Hero — Elementary Listening & Speaking Program
    Grades 3–6 · CEFR A1 → A2+ · Offline-ready single-page app
    ========================================================= */
 const D = window.LSP_DATA;
@@ -535,7 +599,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.8.0';
+const APP_VER = '1.9.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -568,7 +632,7 @@ const T = {
   model: ['Listen to the conversation. Tap a line to hear it.', 'استمع إلى المحادثة. اضغط على أي سطر لتسمعه.'],
   chunks: ['Useful language: listen and repeat.', 'عبارات مفيدة: استمع وردّد.'],
   sound: ['Sound Check: listen carefully and choose.', 'اختبار الأصوات: استمع جيدًا واختر.'],
-  shadow: ['Shadowing: listen, then say it the same way. Record and compare.', 'التظليل: استمع ثم قلها بالطريقة نفسها. سجّل صوتك وقارن.'],
+  shadow: ['Shadowing: listen, then say it the same way. Record and compare.', 'المحاكاة: استمع ثم قلها بالطريقة نفسها. سجّل صوتك وقارن.'],
   role: ['Role-play: choose your part. The app plays the other person.', 'لعب الأدوار: اختر دورك، والتطبيق يؤدي دور الشخص الآخر.'],
   task: ['Your turn: speak with a partner, then check yourself.', 'دورك: تحدّث مع زميلك ثم قيّم نفسك.'],
   mcq: ['Listen and choose the correct answer.', 'استمع واختر الإجابة الصحيحة.'],
@@ -809,6 +873,13 @@ const RX = {
     if (kind === 'right') { this.bell(1046.5, 0, 0.32, 0.15); this.bell(1568, 0.1, 0.55, 0.15); }
     else if (kind === 'wrong') { this.tone(330, 0, 0.2, { type: 'triangle', v: 0.17, to: 290 }); this.tone(247, 0.18, 0.34, { type: 'triangle', v: 0.17, to: 208 }); }
     else if (kind === 'try') { this.tone(392, 0, 0.24, { type: 'triangle', v: 0.14 }); this.tone(523.25, 0.17, 0.42, { type: 'triangle', v: 0.14 }); }
+    else if (kind === 'enter') {      // entrance: a bright rising phrase with a sparkle
+      [523.25, 659.25, 783.99, 1046.5].forEach((f, i) => this.bell(f, i * 0.12, 0.34, 0.13));
+      [659.25, 783.99, 1046.5, 1318.5].forEach(f => this.tone(f, 0.5, 1.1, { type: 'triangle', v: 0.055, a: 0.03 }));
+      this.bell(1568, 0.5, 0.9, 0.12);
+      for (let i = 0; i < 7; i++) this.tone(2000 + Math.random() * 2200, 0.62 + i * 0.07, 0.14, { v: 0.04 });
+    }
+    else if (kind === 'leave') { [783.99, 659.25, 523.25].forEach((f, i) => this.bell(f, i * 0.14, 0.4, 0.12)); this.tone(392, 0.42, 0.7, { type: 'triangle', v: 0.06, a: 0.03 }); }
     else if (kind === 'celeb') {
       [523.25, 659.25, 783.99].forEach((f, i) => this.bell(f, i * 0.11, 0.3, 0.13));
       [523.25, 659.25, 783.99, 1046.5].forEach(f => this.tone(f, 0.34, 1.25, { type: 'triangle', v: 0.06, a: 0.02 }));
@@ -891,7 +962,7 @@ const Nav = {
     if (v === 'mapgrade') { go('map', { subj: S.subj }); return true; }
     if (v === 'mapset' || v === 'mapmock') { if (v === 'mapmock' && (S.run || S.res)) go('mapmock', { mg: S.mg, mk: S.mk, subj: S.subj }); else go('mapgrade', { mg: S.mg, subj: S.subj }); return true; }
     if (v === 'grade') go('ls');
-    else if (v === 'ls' || v === 'teacher' || v === 'studio') go('home');
+    else if (v === 'ls' || v === 'ghars' || v === 'teacher' || v === 'studio') go('home');
     else if (v === 'unit') go('grade', { g: S.g });
     else if (v === 'shadow' && S.upTo === 'studio') go('studio', { g: S.g });
     else if (S.g && S.u) go('unit', { g: S.g, u: S.u });
@@ -919,10 +990,11 @@ function render() {
   const ak = S.mg ? 'm' + S.mg : g;
   document.body.classList.toggle('noar', ak ? !arOn(ak) : false);
   document.body.classList.toggle('classmode', !!Store.data.settings.classmode);
+  document.body.classList.toggle('onauth', !IN); if (S.view !== 'home') ENTER = false;
   const me = Store.me();
   $('#app').innerHTML = `
   <header class="top"><div class="in">
-    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${SCH}<span>Listen Up! Speak Out!<small>Andalus International Schools · Taif</small></span></button>
+    <button class="brand" ${IN ? 'data-go="home"' : ''} aria-label="Home">${SCH}<span>${nameFX(false)}<small>English Language · Andalus International Schools · Taif</small></span></button>
     <span class="sp"></span>
     ${IN ? `${ak ? `<button class="chip ${arOn(ak) ? 'on' : ''}" id="arT" title="Arabic support">ع <span class="hide-sm">Arabic</span></button>` : ''}
     ${T ? `<button class="chip ${Store.data.settings.classmode ? 'on' : ''}" id="cmT" title="Teacher / class mode">🧑‍🏫 <span class="hide-sm">Class mode</span></button>` : ''}
@@ -955,9 +1027,17 @@ function teacherCard(L) {
 const instr = (n, key, extra) => `<div class="instr"><span class="n">${n}</span><div><b>${esc(T[key][0])}</b>${extra || ''}<span class="ar ar-block">${esc(T[key][1])}</span></div></div>`;
 
 
-/* ---------- Departments (v1.8) ---------- */
+/* ---------- Departments (v1.9) ---------- */
 const lv = g => 'Level ' + (g - 1);                  // Listening and Speaking levels: the four sets are Level 2 … Level 5
-const SCH = '<img class="b-sch" src="img/andalus-shield.png" alt="Andalus International Schools" width="40" height="40">';
+const APP = 'From Zero To Hero';
+const SCH = '<img class="b-sch" src="img/andalus-shield.png" alt="Andalus International Schools" width="36" height="42">';
+/* the app name with coloured, waving letters */
+const nameFX = (wave) => { let n = 0; const w = (t, tag) => { const s = wave ? [...t].map(c => `<span class="ch" style="--n:${n++}">${c}</span>`).join('') : t; return tag ? `<${tag}>${s}</${tag}>` : s; };
+  return `<span class="nm" aria-label="${APP}">${w('From')} ${w('Zero', 'b')} ${w('To')} ${w('Hero', 'i')}</span>`; };
+const fxShapes = n => `<div class="authfx" aria-hidden="true">${Array.from({ length: n }, (_, i) => `<i style="left:${(i * 37 + 5) % 97}%;--s:${14 + (i * 13) % 30}px;--k:${['#F2B330', '#E16378', '#fff', '#7FD0F5'][i % 4]};--t:${9 + (i * 5) % 9}s;--d:-${(i * 3) % 14}s"></i>`).join('')}</div>`;
+const AUTH_HERO = () => `${fxShapes(14)}<div class="authhero"><span class="logo-ring"><img src="img/andalus-logo-light.png" alt="Andalus International Schools" width="104" height="128"></span>
+  <h1>${nameFX(true)}<span class="nm-sub">English Language · اللغة الإنجليزية</span></h1>
+  <p class="tag">Start from zero. Become a hero! 🚀</p><span class="ar">ابدأ من الصفر وكن بطلًا!</span></div>`;
 const DIC = {
   ls: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>',
   sh: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></svg>',
@@ -965,18 +1045,33 @@ const DIC = {
   rw: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
   gv: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 16 6-12 6 12"/><path d="M8 12h8"/><path d="m16 20 2 2 4-4"/></svg>',
   step: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></svg>',
-  ph: '<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-size="11.5">abc</text></svg>'
+  ph: '<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="16.5" text-anchor="middle" font-size="11.5">abc</text></svg>',
+  ghars: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9"/><path d="M12 12C12 8 9 5 4 5c0 5 3 7 8 7Z"/><path d="M12 14c0-3 3-6 8-6 0 4-3 6-8 6Z"/><path d="M7 21h10"/></svg>',
+  wl: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h13"/><circle cx="19" cy="12" r="2"/></svg>',
+  pa: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v7a7 7 0 0 1-14 0Z"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13c1.6 1.6 4.4 1.6 6 0"/></svg>'
 };
-/* id, English name, Arabic name, line above the name, gradient from → to, view to open (none = coming soon) */
+/* id, English name, Arabic name, line above the name, gradient from → to, view to open, coming soon? */
 const DEPTS = [
-  ['ls', 'Listening and Speaking', 'الاستماع والتحدث', 'Levels 2–5 · CEFR A1 → A2+', '#2F9BF0', '#1D5FD6', 'ls'],
-  ['sh', 'Shadowing', 'التظليل (المحاكاة)', 'Listen and speak with the speaker', '#FF7A59', '#E23E78', 'studio'],
-  ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map'],
-  ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', ''],
-  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', '', '#9B6CF6', '#6D3BE0', ''],
-  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', ''],
-  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', '']
+  ['ls', 'Listening and Speaking', 'الاستماع والتحدث', 'Levels 2–5 · CEFR A1 → A2+', '#2F9BF0', '#1D5FD6', 'ls', 0],
+  ['sh', 'Shadowing', 'المحاكاة', 'Listen and speak with the speaker', '#FF7A59', '#E23E78', 'studio', 0],
+  ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map', 0],
+  ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', '', 1],
+  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', '', '#9B6CF6', '#6D3BE0', '', 1],
+  ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '', '#12B5CB', '#0A7C96', '', 1],
+  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', '', 1],
+  ['ghars', 'Ghars', 'غراس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
 ];
+const GHARS = [['wl', 'Wordline', '', '#12B5CB', '#0A7C96'], ['pa', 'Performing Art', 'الفنون الأدائية', '#F0569C', '#C92671']];
+const deptCard = ([id, en, ar, k, a, b, view, soon], i, meta) => `
+    <button class="dept${soon ? ' soon' : ''}" style="--a:${a};--b:${b};--i:${i}" data-dept="${id}">
+      ${soon ? '<span class="d-soon"><i></i>Soon · قريبًا</span>' : ''}
+      <span class="d-ic">${DIC[id]}</span>
+      ${k ? `<span class="d-k">${esc(k)}</span>` : ''}
+      <h3>${esc(en)}</h3>
+      ${ar ? `<span class="ar">${esc(ar)}</span>` : ''}
+      ${meta ? `<span class="d-meta">${meta.map(x => `<span>${x}</span>`).join('')}</span>` : ''}${view ? '<span class="d-go" aria-hidden="true">→</span>' : ''}
+    </button>`;
+let ENTER = false;   // set at sign-in: the home page then plays the entrance sound once
 
 /* =============== VIEWS =============== */
 const VIEWS = {};
@@ -988,43 +1083,36 @@ VIEWS.home = m => {
   const meta = { ls: [`${lsS.done}/${lsS.total} lessons`, `★ ${lsS.stars}`], sh: [`⏱️ ${sh.min} min`, `⭐ ${sh.mastered}`, `🔥 ${sh.streak}`], map: ['2 subjects · 7 grades', `✅ ${mapDone}`] };
   const shapes = [['8%', '12%', 30, '#F2B330', 20, -22, 9, 0, 45], ['37%', '5%', 22, '#E16378', -16, 14, 11, -2, 0], ['52%', '8%', 18, '#fff', 14, 20, 8, -1, 45], ['68%', '70%', 40, '#278FC2', -22, -26, 12, -3, 0],
     ['82%', '14%', 34, '#E16378', 18, 24, 10, -4, 45], ['93%', '58%', 26, '#F2B330', -14, -30, 9, -5, 0], ['60%', '86%', 16, '#fff', 20, -10, 7, -2, 45], ['1.5%', '70%', 20, '#278FC2', 10, 14, 13, -6, 45]];
+  const open = DEPTS.filter(d => !d[7]), soon = DEPTS.filter(d => d[7]);
   m.innerHTML = `
   <section class="hub">
     <div class="hub-shapes" aria-hidden="true">${shapes.map(([l, t, s, k, x, y, d, dl, r]) => `<i style="left:${l};top:${t};--s:${s}px;--k:${k};--x:${x}px;--y:${y}px;--t:${d}s;--d:${dl}s;--r0:${r}deg"></i>`).join('')}</div>
     <div class="hub-in">
-      <div class="hub-logo"><img src="img/andalus-logo.png" alt="Andalus International Schools" width="107" height="132"></div>
+      <div class="hub-logo logo-ring"><img src="img/andalus-logo-light.png" alt="Andalus International Schools" width="121" height="150"></div>
       <div class="hub-tx">
         <span class="pill">Andalus International Schools · Taif</span>
-        <h1><span class="hero-logo">${LOGO}</span>Listen Up! Speak Out!</h1>
-        <p class="hub-hi">Hello, ${esc(me.name)}! 👋 Choose a department to start.</p>
+        <h1>${nameFX(true)}<span class="nm-sub">English Language · اللغة الإنجليزية</span></h1>
+        <p class="hub-hi">Hello, ${esc(me.name)}! <span class="wave">👋</span> Choose a department to start.</p>
         <p class="ar" style="margin:0">مرحبًا! اختر القسم لتبدأ التعلّم.</p>
         <div class="ctrls">${T ? '<button class="btn sm" id="wDash">📊 Dashboard</button>' : ''}<button class="btn sm" id="wSet">⚙️ Settings</button><button class="btn sm" id="wOut">🔁 Switch user</button></div>
       </div>
-      <div class="byline"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="96" height="96"><div class="by-tx"><span class="by-k">Designed by</span><b>Mr. Waleed Youssef</b><span class="by-t">English Teacher & Curriculum Designer</span><span class="by-ar" lang="ar" dir="rtl">تصميم وإعداد: أ. وليد يوسف</span></div></div>
+      <div class="byline mini" title="تصميم وإعداد: وليد يوسف"><img class="by-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="38" height="38"><div class="by-tx"><span class="by-k">Designed by</span><b>Waleed Youssef</b></div></div>
     </div>
   </section>
   <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
-  <section class="depts">${DEPTS.map(([id, en, ar, k, a, b, view], i) => `
-    <button class="dept${view ? '' : ' soon'}" style="--a:${a};--b:${b};--i:${i}" data-dept="${id}">
-      ${view ? '' : '<span class="d-soon"><i></i>Soon · قريبًا</span>'}
-      <span class="d-ic">${DIC[id]}</span>
-      ${k ? `<span class="d-k">${esc(k)}</span>` : ''}
-      <h3>${esc(en)}</h3>
-      <span class="ar">${esc(ar)}</span>
-      ${view ? `<span class="d-meta">${meta[id].map(x => `<span>${x}</span>`).join('')}</span><span class="d-go" aria-hidden="true">→</span>` : ''}
-    </button>`).join('')}
-  </section>
+  <section class="depts">${open.map((d, i) => deptCard(d, i, meta[d[0]])).join('')}</section>
+  <section class="depts-soon">${soon.map((d, i) => deptCard(d, i + open.length)).join('')}</section>
   <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>
   <div id="appBox"></div>
   <section class="card about">
-    <img class="ab-ph" src="img/waleed-youssef.jpg" alt="Mr. Waleed Youssef" width="128" height="128">
-    <div class="ab-tx"><span class="by-k" style="color:var(--muted)">About the designer</span><h3>Mr. Waleed Youssef</h3>
-      <p>Mr. Waleed Youssef is an English language teacher, a trainer of STEP and IELTS candidates, and a curriculum and materials designer. He created <b>Listen Up! Speak Out!</b> so that young learners listen with confidence and speak with joy.</p>
-      <p class="ar ar-block">الأستاذ وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليستمع المتعلّمون الصغار بثقة ويتحدّثوا بمتعة.</p></div>
-    <img class="ab-seal" src="img/seal.svg" alt="Mr. Waleed Youssef seal" width="112" height="112">
+    <img class="ab-ph" src="img/waleed-youssef.jpg" alt="Waleed Youssef" width="128" height="128">
+    <div class="ab-tx"><span class="by-k" style="color:var(--muted)">About the designer</span><h3>Waleed Youssef</h3>
+      <p>Waleed Youssef is an English language teacher, a trainer of STEP and IELTS candidates, and a curriculum and materials designer. He created <b>${APP}</b> to take learners of English from their first words to confident use of the language.</p>
+      <p class="ar ar-block">وليد يوسف معلّم لغة إنجليزية، ومدرّب لاختبارَي STEP وIELTS، ومصمّم مناهج ومواد تعليمية. صمّم هذا البرنامج ليأخذ متعلّمي الإنجليزية من كلماتهم الأولى إلى استخدام اللغة بثقة.</p></div>
+    <img class="ab-seal" src="img/seal.svg" alt="Waleed Youssef seal" width="112" height="112">
   </section>
-  <p class="sch-line"><img src="img/andalus-shield.png" alt="" width="26" height="26">Andalus International Schools · Taif <span class="ar" style="color:inherit">مدارس الأندلس العالمية</span></p>
-  <p class="foot" style="margin-top:10px"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · Listening and Speaking Levels 2–5 · Shadowing · MAP practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
+  <p class="sch-line"><img src="img/andalus-shield.png" alt="" width="23" height="26">Andalus International Schools · Taif <span class="ar" style="color:inherit">مدارس الأندلس العالمية</span></p>
+  <p class="foot" style="margin-top:10px"><img src="img/seal.svg" alt="" width="22" height="22" style="vertical-align:-6px;margin-right:6px">${APP} (English Language) · Designed by Waleed Youssef · Listening and Speaking Levels 2–5 · Shadowing · MAP practice for Grades 3–9 · v${APP_VER}<br><span style="font-size:.75rem">Pictures: Fluent Emoji © Microsoft (MIT licence)</span></p>`;
   if (window.LSP_PWA) LSP_PWA.box($('#appBox', m));
   if ($('#wDash', m)) $('#wDash', m).onclick = () => go('teacher');
   $('#wSet', m).onclick = () => go('settings'); $('#wOut', m).onclick = () => Auth.signOut();
@@ -1034,6 +1122,20 @@ VIEWS.home = m => {
     b.classList.remove('nudge'); void b.offsetWidth; b.classList.add('nudge');
     $('#soonMsg', m).innerHTML = `${esc(d[1])} is coming soon. <span class="ar" style="color:inherit">${esc(d[2])}: قريبًا</span>`;
   });
+  if (ENTER) { ENTER = false; setTimeout(() => RX.sfx('enter'), 180); }
+};
+
+/* --- Ghars department (coming soon): Wordline and Performing Art --- */
+VIEWS.ghars = m => {
+  const parts = [['Home', () => go('home')], ['Ghars']], d = DEPTS.find(x => x[0] === 'ghars');
+  m.innerHTML = crumbs(parts) + `
+  <section class="lhead dhead" style="--a:${d[4]};--b:${d[5]}"><span class="d-ic">${DIC.ghars}</span><div><span class="k">Department · coming soon</span><h1>Ghars <span class="ar" style="color:#fff;font-size:.8em">غراس</span></h1>
+    <p style="margin:.3rem 0 0;opacity:.95">Two programmes will open here: Wordline and Performing Art.</p>
+    <p class="ar" style="color:#fff;margin:0">برنامجان قريبًا في هذا القسم.</p></div></section>
+  <section class="sub2">${GHARS.map(([id, en, ar, a, b], i) => deptCard([id, en, ar, '', a, b, '', 1], i)).join('')}</section>
+  <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>`;
+  bindCrumbs(m, parts);
+  $$('[data-dept]', m).forEach(b => b.onclick = () => { const g = GHARS.find(x => x[0] === b.dataset.dept); b.classList.remove('nudge'); void b.offsetWidth; b.classList.add('nudge'); $('#soonMsg', m).textContent = g[1] + ' is coming soon.'; });
 };
 
 /* --- Listening and Speaking department: choose a level --- */
@@ -1480,10 +1582,10 @@ VIEWS.check = m => {
 VIEWS.cert = m => {
   const u = U(S.g, S.u), me = Store.me(), b = BANDS[S.g];
   m.innerHTML = `<div class="cert"><div class="cert-logo">${LOGO}</div><h1>Certificate of Achievement</h1><p>This certificate is proudly presented to</p><div class="nm">${esc(me.name)}</div>
-    <p>for successfully completing<br><b style="font-size:1.25rem">${lv(S.g)} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>Listen Up! Speak Out!</b> (Listening and Speaking, ${esc(b.name)}, CEFR ${esc(G(S.g).level)})</p>
+    <p>for successfully completing<br><b style="font-size:1.25rem">${lv(S.g)} · Unit ${u.n}: ${esc(u.title)}</b><br>in <b>From Zero To Hero</b> (Listening and Speaking, ${esc(b.name)}, CEFR ${esc(G(S.g).level)})</p>
     <p style="font-size:1.3rem;font-weight:800;color:var(--ok)">Unit Check score: ${S.pct}%</p><p class="muted">${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}${me.cls ? ' · Class ' + esc(me.cls) : ''}</p>
-    <div class="cert-sign"><div><span class="line"></span><span class="muted">Teacher</span></div><img src="img/seal.svg" alt="Seal of Mr. Waleed Youssef" width="96" height="96"><div><span class="signame">Mr. Waleed Youssef</span><span class="line"></span><span class="muted">Program Designer</span></div></div>
-    <p class="cert-foot">Listen Up! Speak Out! · Designed by Mr. Waleed Youssef</p></div>
+    <div class="cert-sign"><div><span class="line"></span><span class="muted">Teacher</span></div><img src="img/seal.svg" alt="Seal of Waleed Youssef" width="96" height="96"><div><span class="signame">Waleed Youssef</span><span class="line"></span><span class="muted">Program Designer</span></div></div>
+    <p class="cert-foot">From Zero To Hero · Designed by Waleed Youssef</p></div>
     <div class="ctrls noprint"><button class="btn" id="pr">🖨️ Print</button><button class="btn sec" id="bk">Back to unit</button></div>`;
   $('#pr', m).onclick = () => { try { window.print(); } catch (e) {} };
   $('#bk', m).onclick = () => go('unit', { g: S.g, u: S.u });
@@ -1521,7 +1623,8 @@ VIEWS.teacher = m => {
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
     <li><b>Updates (🔄):</b> press 🔄 at the top to check for a new version. With automatic updates on, new versions install by themselves.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
-    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels 2–5), Shadowing or MAP Test. Reading and Writing, Grammar and Vocabulary, STEP Preparation and Phonics are marked “Soon”.</li>
+    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels 2–5), Shadowing or MAP Test. Reading and Writing, Grammar and Vocabulary, STEP Preparation, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”.</li>
+    <li><b>Sign in with Google:</b> in the browser version, students can use Gmail or the school's Google e-mail after you add the sign-in key in ⚙️ Settings.</li>
     <li><b>Arabic support (ع):</b> in Listening and Speaking it is on by default in Levels 2–3 and off in Levels 4–5. Students can switch it for their level.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>
     <li><b>Recording:</b> works in Chrome or Edge when the program is opened from its folder. If the microphone is blocked, students can use their device recorder or speak aloud.</li>
@@ -1533,7 +1636,7 @@ VIEWS.teacher = m => {
   const csv = () => { const L = ['Student,Class,Listening and Speaking level,Lessons done,Lessons total,Stars,Unit Check average %,Shadowing minutes,Lines mastered,Streak days']; rows.forEach(({ p, per }) => { const t = shStats(p); per.forEach(x => L.push([p.name, p.cls || '', x.g - 1, x.done, x.total, x.stars, x.ck == null ? '' : x.ck, t.min, t.mastered, t.streak].map(v => `"${String(v).replace(/"/g, '""')}"`).join(','))); }); return L.join('\n'); };
   if ($('#csv', m)) $('#csv', m).onclick = () => { if (!saveFile('listen-up-speak-out-progress.csv', '﻿' + csv(), 'text/csv')) $('#cpm', m).textContent = 'Download is blocked here — use Copy.'; };
   $('#cp', m).onclick = () => { copyText(csv()).then(() => $('#cpm', m).textContent = 'Copied! Paste into Excel or Google Sheets.', () => $('#cpm', m).textContent = 'Copy is not allowed here.'); };
-  if ($('#shr', m)) $('#shr', m).onclick = () => { navigator.share({ title: 'Listen Up! Speak Out! — progress', text: csv() }).catch(() => {}); };
+  if ($('#shr', m)) $('#shr', m).onclick = () => { navigator.share({ title: 'From Zero To Hero — progress', text: csv() }).catch(() => {}); };
   if (typeof MAPX !== "undefined") { const mc = () => MAPX.csv(list), say = t => $('#mcpm', m).textContent = t;
     if ($('#mcsv', m)) $('#mcsv', m).onclick = () => { const t = mc(); if (!t) return say('No MAP results yet.'); if (!saveFile('map-growth-practice-results.csv', '\ufeff' + t, 'text/csv')) say('Download is blocked here — use Copy.'); };
     $('#mcp', m).onclick = () => { const t = mc(); if (!t) return say('No MAP results yet.'); copyText(t).then(() => say('Copied! Paste into Excel or Google Sheets.'), () => say('Copy is not allowed here.')); }; }
@@ -1761,7 +1864,7 @@ VIEWS.studio = m => {
   m.innerHTML = crumbs([['Home', () => go('home')], ['Shadowing Studio']]) + `
   <section class="lhead" style="background:linear-gradient(120deg,var(--c),#FF6B4A)"><span class="k">🎙️ Shadowing Studio</span><h1>Speak like the speaker!</h1>
     <p style="margin:.3rem 0 0;max-width:720px">Shadowing means listening to English and speaking <b>with</b> it, copying the sounds, the rhythm and the music. Practise a little every day.</p>
-    <p class="ar" style="color:#fff">التظليل يعني أن تستمع إلى الإنجليزية وتتحدث معها في الوقت نفسه، مقلّدًا الأصوات والإيقاع والنغمة. تدرّب قليلًا كل يوم.</p></section>
+    <p class="ar" style="color:#fff">المحاكاة تعني أن تستمع إلى الإنجليزية وتتحدث معها في الوقت نفسه، مقلّدًا الأصوات والإيقاع والنغمة. تدرّب قليلًا كل يوم.</p></section>
   <div class="hud" style="margin:14px 0"><span>⏱️ ${st.min} min</span><span>🗣️ ${st.lines} lines practised</span><span>⭐ ${st.mastered} mastered</span><span>🔥 ${st.streak}-day streak</span></div>
   <div class="card"><b>The 5 steps of shadowing</b><div class="grid g3" style="margin-top:10px">${SH_MODES.map((x, i) => `<div class="kag"><b>${i + 1}. ${x.icon} ${esc(x.name)}</b><br><span style="font-size:.92rem">${esc(x.en)}</span><span class="ar ar-block">${esc(x.ar)}</span></div>`).join('')}</div>
     <p class="muted" style="margin:.8rem 0 0">🔇 In steps 3–5 no sound plays while you record — you hear the line first, then say it with the lighting-up words. <span dir="rtl" lang="ar">لا يُشغَّل أي صوت أثناء التسجيل في الخطوات 3–5.</span></p></div>
@@ -2057,6 +2160,15 @@ const Cfg = {
   }
 };
 
+/* ---------- Sign-out animation ---------- */
+function byeFX(who) {
+  document.querySelectorAll('.bye').forEach(x => x.remove());
+  const d = document.createElement('div'); d.className = 'bye'; d.setAttribute('aria-hidden', 'true');
+  d.innerHTML = `<div><img src="img/andalus-logo-light.png" alt="" width="121" height="150"><h2>See you soon${who.id === 'guest' ? '' : ', ' + esc(who.name)}!</h2><span class="ar">إلى اللقاء!</span><div class="wave">👋</div><p style="margin:.6rem 0 0;font-weight:800">${nameFX(false)}</p></div>`;
+  document.body.appendChild(d); setTimeout(() => d.remove(), 2000);
+  setTimeout(() => RX.sfx('leave'), 60);
+}
+
 /* ---------- Accounts ---------- */
 const ITER = { pass: 600000, pin: 100000, code: 100000 };
 const T_AR = { four: 'اكتب 4 أرقام.', same: 'لا تستخدم الرقم نفسه 4 مرات.', seq: 'لا تستخدم أرقامًا متتالية مثل 1234.' };
@@ -2066,8 +2178,8 @@ const Auth = {
   user() { const s = this.A.session; return s && Store.data.profiles[s.id] ? Store.data.profiles[s.id] : null; },
   role() { const s = this.A.session; return s ? s.role : null; },
   isT() { return this.role() === 'teacher' && !!this.user(); },
-  start(id, role) { const now = Date.now(); this.A.session = { id, role, at: now, last: now }; Store.data.current = id; delete this.A.fails[id]; Store.save(); },
-  signOut(why) { AU.stop(); stopAllRec(); RX.hush(); this.A.session = null; Store.data.current = 'guest'; Store.save(); S.signedOut = why || ''; for (const k of Object.keys(S)) if (k !== 'signedOut') delete S[k]; S.view = 'signin'; render(); },
+  start(id, role) { ENTER = true; const now = Date.now(); this.A.session = { id, role, at: now, last: now }; Store.data.current = id; delete this.A.fails[id]; Store.save(); },
+  signOut(why) { const who = this.user(); if (!why && who) byeFX(who); AU.stop(); stopAllRec(); RX.hush(); this.A.session = null; Store.data.current = 'guest'; Store.save(); S.signedOut = why || ''; for (const k of Object.keys(S)) if (k !== 'signedOut') delete S[k]; S.view = 'signin'; render(); },
   locked(id) { const f = this.A.fails[id]; return f && f.until > Date.now() ? Math.ceil((f.until - Date.now()) / 1000) : 0; },
   fail(id, teacher) {
     const f = this.A.fails[id] || (this.A.fails[id] = { n: 0, until: 0 }); f.n++;
@@ -2200,12 +2312,12 @@ async function newPinFlow(who, title) {
 /* ---------- First run: create the teacher (or parent) account ---------- */
 VIEWS.setup = m => {
   const had = Auth.students().length;
-  m.innerHTML = `<section class="auth"><div class="card">
-    <div class="auth-head">${SCH}${LOGO}<div><h1>Welcome to Listen Up! Speak Out!</h1><span class="ar">مرحبًا بك في برنامج Listen Up! Speak Out!</span></div></div>
+  m.innerHTML = `<section class="auth">${AUTH_HERO()}<div class="card">
+    <div class="auth-head"><span class="big wave">👋</span><div><h1>Welcome!</h1><span class="ar">مرحبًا بك في برنامج From Zero To Hero</span></div></div>
     <p>First, create the <b>teacher or parent account</b>. It protects the teacher dashboard, the settings and the backups. Students then sign up with their name and a 4-digit PIN.${had ? ` <b>Your ${had} student${had === 1 ? '' : 's'} and all progress are kept.</b>` : ''}</p>
     <p class="ar ar-block">أولًا، أنشئ حساب المعلم أو ولي الأمر. يحمي هذا الحساب لوحة المعلم والإعدادات والنسخ الاحتياطية، ثم يسجّل الطلاب بأسمائهم ورمز من 4 أرقام.</p>
     <form id="stF" autocomplete="on" novalidate>
-      <div class="field"><label for="stN">Your name <span class="ar">اسمك</span></label><input type="text" id="stN" maxlength="40" autocomplete="name" placeholder="e.g., Mr. Waleed Youssef"></div>
+      <div class="field"><label for="stN">Your name <span class="ar">اسمك</span></label><input type="text" id="stN" maxlength="40" autocomplete="name" placeholder="e.g., Waleed Youssef"></div>
       <div class="field"><label for="stU">Username <span class="ar">اسم المستخدم</span></label><input type="text" id="stU" maxlength="24" autocomplete="username" autocapitalize="off" spellcheck="false" placeholder="e.g., waleed"><small class="muted">3–24 letters or numbers (a dot, dash or underscore is allowed).</small></div>
       ${pwField('stP', 'Password', 'كلمة المرور', 'new-password')}${meterHTML('stM')}<small class="muted">At least 8 characters, with letters and numbers.</small>
       ${pwField('stP2', 'Type the password again', 'أعد كتابة كلمة المرور', 'new-password')}
@@ -2238,7 +2350,7 @@ function showRecovery(m, code, next) {
     <label class="chk"><input type="checkbox" id="rcOk"> I have saved my recovery code. <span class="ar">حفظتُ رمز الاسترداد.</span></label>
     <div class="navrow" style="justify-content:flex-end"><button class="btn" id="rcN" disabled>Continue →</button></div>
   </div></section>`;
-  const txt = `Listen Up! Speak Out! — teacher recovery code\n${code}\nKeep this code private. Created ${new Date().toLocaleString()}.`;
+  const txt = `From Zero To Hero — teacher recovery code\n${code}\nKeep this code private. Created ${new Date().toLocaleString()}.`;
   $('#rcC', m).onclick = () => copyText(code).then(() => $('#rcm', m).textContent = 'Copied.', () => $('#rcm', m).textContent = 'Copy is not allowed here — write it down.');
   $('#rcS', m).onclick = () => { if (saveFile('listen-up-recovery-code.txt', txt, 'text/plain')) $('#rcm', m).textContent = 'Saved.'; else $('#rcm', m).textContent = 'Saving is blocked here — write it down.'; };
   $('#rcOk', m).onchange = e => { $('#rcN', m).disabled = !e.target.checked; };
@@ -2250,27 +2362,84 @@ VIEWS.signin = m => {
   const sec = Cfg.sec(), list = Auth.students(), classes = [...new Set(list.map(p => p.cls || ''))].filter(Boolean).sort();
   const f = S.cls != null && classes.includes(S.cls) ? S.cls : '';
   const shown = f ? list.filter(p => (p.cls || '') === f) : list;
-  m.innerHTML = `<section class="auth wide"><div class="card">
-    <div class="auth-head">${SCH}${LOGO}<div><h1>Who is learning today?</h1><span class="ar">من يتعلّم اليوم؟</span></div></div>
+  m.innerHTML = `<section class="auth wide">${AUTH_HERO()}<div class="card">
+    <div class="auth-head"><span class="big wave">👋</span><div><h1>Who is learning today?</h1><span class="ar">من يتعلّم اليوم؟</span></div></div>
     ${S.signedOut ? `<p class="note">🔒 ${esc(S.signedOut)} <span class="ar">تم تسجيل خروجك تلقائيًا.</span></p>` : ''}
     <p class="muted" style="margin:.2rem 0 0">Tap your name, then type your PIN. <span class="ar">اضغط على اسمك ثم اكتب رمزك.</span></p>
     ${classes.length > 1 ? `<div class="seg" id="clsF" style="margin-top:12px"><button data-c="" class="${f ? '' : 'on'}">All</button>${classes.map(c => `<button data-c="${esc(c)}" class="${f === c ? 'on' : ''}">${esc(c)}</button>`).join('')}</div>` : ''}
-    <div class="ptiles">${shown.map(p => `<button class="ptile" data-sid="${esc(p.id)}">${avHTML(p)}<span>${esc(p.name)}<small>${esc(p.cls || '')}${p.pin ? '' : (p.cls ? ' · ' : '') + 'new PIN'}</small></span></button>`).join('')}
-      ${sec.guest ? `<button class="ptile" data-sid="guest">${avHTML({ id: 'guest', name: 'Guest' })}<span>Guest<small>practice only</small></span></button>` : ''}</div>
+    <div class="ptiles">${shown.map((p, i) => `<button class="ptile" style="--i:${i}" data-sid="${esc(p.id)}">${avHTML(p)}<span>${esc(p.name)}<small>${p.g ? 'Google · ' + esc(p.email) : esc(p.cls || '') + (p.pin ? '' : (p.cls ? ' · ' : '') + 'new PIN')}</small></span></button>`).join('')}
+      ${sec.guest ? `<button class="ptile" style="--i:${shown.length}" data-sid="guest">${avHTML({ id: 'guest', name: 'Guest' })}<span>Guest<small>practice only</small></span></button>` : ''}</div>
     ${list.length ? '' : '<p class="muted" style="margin-top:12px">No students yet. Press “New student” to sign up. <span class="ar">لا يوجد طلاب بعد. اضغط «طالب جديد» للتسجيل.</span></p>'}
     <div class="ctrls" style="justify-content:flex-start;margin-top:16px">
-      ${sec.selfSignup ? '<button class="btn" id="suB">➕ New student — sign up <span class="ar" style="color:#fff">تسجيل طالب جديد</span></button>' : '<span class="muted">New student? Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span></span>'}
+      ${sec.selfSignup ? '<button class="btn pulse" id="suB">➕ New student — sign up <span class="ar" style="color:#fff">تسجيل طالب جديد</span></button>' : '<span class="muted">New student? Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span></span>'}
+      ${GSI.can() ? `<button class="btn gbtn" id="gB">${GSI.ICON} Sign in with Google <span class="ar">Gmail أو بريد الأندلس</span></button>` : ''}
       <button class="btn sec" id="tB">🔑 Teacher sign in <span class="ar">دخول المعلم</span></button>
     </div></div>
-    <p class="foot">Andalus International Schools · Taif · Listen Up! Speak Out! · Designed by Mr. Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
+    <p class="foot">Andalus International Schools · Taif · ${APP} · Designed by Waleed Youssef · v${APP_VER} · 🔒 accounts stay on this device</p></section>`;
   $$('#clsF [data-c]', m).forEach(b => b.onclick = () => { S.cls = b.dataset.c; VIEWS.signin(m); });
   $$('[data-sid]', m).forEach(b => b.onclick = () => studentSignIn(b.dataset.sid));
   const su = $('#suB', m); if (su) su.onclick = signUpFlow;
+  const gb = $('#gB', m); if (gb) gb.onclick = () => GSI.open();
   $('#tB', m).onclick = () => teacherSignIn();
+};
+
+/* ---------- Sign in with Google (Gmail or the school's Google e-mail) ----------
+   The app has no server. Google's own sign-in button (Google Identity Services) confirms who the user is and
+   hands the page a signed ID token; the app reads the name and e-mail from it and opens (or creates) the
+   matching account on this device. Only the browser version can use it: Google blocks sign-in inside app web views.
+   The teacher pastes the Google "client ID" in Settings. */
+const GSI = {
+  ICON: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.6 24.6c0-1.6-.1-3.1-.4-4.6H24v9.1h12.7c-.6 3-2.2 5.5-4.7 7.2l7.6 5.9c4.5-4.1 7-10.2 7-17.6z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.500 0 20.100 0 24s1 7.500 2.600 10.800l7.900-6.200z"/><path fill="#34A853" d="M24 48c6.300 0 11.700-2.100 15.600-5.700l-7.600-5.900c-2.100 1.400-4.800 2.300-8 2.300-6.300 0-11.600-4.100-13.500-9.900l-7.900 6.200C6.500 42.600 14.600 48 24 48z"/></svg>',
+  cfg() { return Object.assign({ cid: '', domains: 'gmail.com' }, Store.data.settings.gsi || {}); },
+  put(k, v) { const s = Store.data.settings.gsi = Store.data.settings.gsi || {}; s[k] = v; Store.save(); },
+  can() { return PLAT === 'web' && /^https?:$/.test(location.protocol); },
+  domains() { return this.cfg().domains.toLowerCase().split(/[\s,;]+/).map(d => d.replace(/^@/, '')).filter(Boolean); },
+  load() { return this.lib || (this.lib = new Promise((ok, no) => { if (window.google && google.accounts && google.accounts.id) return ok(); const s = document.createElement('script'); s.src = 'https://accounts.google.com/gsi/client'; s.async = true; s.onload = () => ok(); s.onerror = () => { this.lib = null; no(new Error('offline')); }; document.head.appendChild(s); })); },
+  parse(jwt) { try { const b = String(jwt).split('.')[1].replace(/-/g, '+').replace(/_/g, '/'); return JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(b + '==='.slice((b.length + 3) % 4)), c => c.charCodeAt(0)))); } catch (e) { return null; } },
+  /* returns [English, Arabic] when the account cannot be used, or null when it is fine */
+  check(p) {
+    const c = this.cfg(), now = Date.now() / 1000;
+    if (!p || !p.email || p.aud !== c.cid || !/^(https:\/\/)?accounts\.google\.com$/.test(p.iss || '') || !(p.exp > now - 60)) return ['Google could not confirm this account. Try again.', 'تعذّر تأكيد الحساب. حاول مرة أخرى.'];
+    if (p.email_verified === false) return ['This e-mail address is not verified by Google.', 'هذا البريد غير مؤكَّد لدى Google.'];
+    const d = this.domains(), dom = p.email.toLowerCase().split('@')[1];
+    if (d.length && !d.includes(dom)) return [`Use a ${d.map(x => '@' + x).join(' or ')} account. (${p.email} is not allowed.)`, 'استخدم حساب Gmail أو بريد المدرسة.'];
+    return null;
+  },
+  /* the token came back from Google: open the matching account, or make it */
+  done(resp, m) {
+    const p = this.parse(resp && resp.credential), bad = this.check(p), E = m && $('#gE', m);
+    if (bad) { if (E) E.innerHTML = `${esc(bad[0])} <span class="ar">${esc(bad[1])}</span>`; return false; }
+    const email = p.email.toLowerCase(), P = Store.data.profiles;
+    let u = Object.values(P).find(x => (x.email || '').toLowerCase() === email && x.id !== 'teacher' && x.id !== 'guest');
+    if (!u) {
+      if (!Cfg.sec().selfSignup) { if (E) E.innerHTML = 'This e-mail is not on the class list. Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span>'; return false; }
+      const id = 'p' + Date.now().toString(36) + [...Sec.rnd(2)].map(x => x.toString(16).padStart(2, '0')).join('');
+      u = P[id] = { id, name: String(p.name || email.split('@')[0]).slice(0, 40), cls: '', email, g: true, progress: {}, created: Date.now() };
+    }
+    u.g = true; Auth.start(u.id, 'student'); if (m) m.remove(); go('home'); return true;
+  },
+  open(hint) {
+    const c = this.cfg();
+    if (!c.cid) { const m = sheet(`<h3>${this.ICON.replace('<svg', '<svg style="width:22px;height:22px;vertical-align:-4px"')} Sign in with Google</h3><p>Google sign-in is not switched on yet. The teacher adds the Google sign-in key in <b>⚙️ Settings → Sign in with Google</b>.</p><p class="ar ar-block">لم يُفعَّل الدخول عبر Google بعد. يضيف المعلم مفتاح الدخول من الإعدادات.</p><div class="navrow" style="justify-content:flex-end"><button class="btn" id="gX">OK</button></div>`); $('#gX', m).onclick = () => m.remove(); return; }
+    const d = this.domains();
+    const m = sheet(`<h3>Sign in with Google <span class="ar">الدخول عبر Google</span></h3>
+      <p class="muted" style="margin:.3rem 0 0">Use your ${d.length ? d.map(x => '<b>@' + esc(x) + '</b>').join(' or ') : 'Google'} account.${hint ? ' (' + esc(hint) + ')' : ''} <span class="ar">استخدم حساب Gmail أو بريد المدرسة.</span></p>
+      <div class="gbox" id="gBox"><span class="muted">Opening Google…</span></div>
+      <p class="pinmsg bad" id="gE" role="alert"></p>
+      <p class="secnote">🔒 Google confirms your name and e-mail. Your lessons and progress stay on this device. <span class="ar ar-block">يؤكّد Google اسمك وبريدك فقط، ويبقى تقدّمك على هذا الجهاز.</span></p>
+      <div class="navrow" style="justify-content:flex-end"><button class="btn sec" id="gX">Cancel</button></div>`);
+    $('#gX', m).onclick = () => m.remove();
+    this.load().then(() => {
+      if (!document.body.contains(m)) return;
+      google.accounts.id.initialize({ client_id: c.cid, callback: r => this.done(r, m), auto_select: false, ux_mode: 'popup', login_hint: hint || undefined });
+      const box = $('#gBox', m); box.innerHTML = ''; google.accounts.id.renderButton(box, { theme: 'outline', size: 'large', shape: 'pill', text: 'signin_with', width: 280 });
+    }).catch(() => { const E = $('#gE', m); if (E) { $('#gBox', m).innerHTML = ''; E.innerHTML = 'Google could not be reached. Check the internet and try again. <span class="ar">تعذّر الاتصال بـ Google. تحقّق من الإنترنت.</span>'; } });
+  }
 };
 async function studentSignIn(id) {
   if (id === 'guest') { if (Auth.guestIn()) go('home'); return; }
   const p = Store.data.profiles[id]; if (!p) return;
+  if (p.g && GSI.can()) return GSI.open(p.email);
   if (!p.pin) {   // first sign-in after an update, or the teacher reset the PIN
     const pin = await newPinFlow(p, `Hello ${p.name}! Choose your PIN`); if (!pin) return;
     await Auth.setPin(id, pin); Auth.start(id, 'student'); go('home'); return;
@@ -2476,7 +2645,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'ls', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'ghars', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());
@@ -2508,7 +2677,7 @@ VIEWS.settings = m => {
     ${tgl('sMo', Cfg.get('motion'), 'Animations and confetti', 'الحركة والقصاصات الملونة', 'Turn off for a calmer screen.')}
     <div class="srow"><span class="lbl"><b>Arabic support</b><span class="ar ar-block">الدعم باللغة العربية</span></span><span class="seg" id="sAr">${[3, 4, 5, 6].map(g => `<button data-g="${g}" class="${(g in ar ? ar[g] : g <= 4) ? 'on' : ''}">G${g}</button>`).join('')}</span></div>
   </section>
-  <section class="card setcard"><h3>🎙️ Shadowing <span class="ar">التظليل</span></h3>
+  <section class="card setcard"><h3>🎙️ Shadowing <span class="ar">المحاكاة</span></h3>
     ${segRow('sCd', 'Countdown before you speak', 'العدّ التنازلي قبل التحدث', [[2, '2 s'], [3, '3 s'], [5, '5 s']], Cfg.get('cd'), 'More time helps younger students get ready.')}
   </section>
   <section class="card setcard" id="acct"><h3>🔐 My account <span class="ar">حسابي</span></h3>
@@ -2528,14 +2697,20 @@ VIEWS.settings = m => {
     ${segRow('sId', 'Sign students out after no activity', 'تسجيل خروج الطلاب بعد عدم النشاط', [[0, 'Never'], [10, '10 min'], [20, '20 min'], [30, '30 min'], [60, '60 min']], sec.idle)}
     ${segRow('sTi', 'Lock the teacher account after no activity', 'قفل حساب المعلم بعد عدم النشاط', [[5, '5 min'], [10, '10 min'], [20, '20 min'], [60, '60 min'], [0, 'Never']], sec.tidle)}
     <p class="secnote">🔒 Passwords and PINs are kept only as salted PBKDF2-SHA256 hashes. After 5 wrong tries the app makes the user wait, and the wait doubles each time. <span class="ar ar-block">تُحفظ كلمات المرور والرموز كبصمات مشفّرة فقط، وبعد 5 محاولات خاطئة يجب الانتظار، ويتضاعف وقت الانتظار في كل مرة.</span></p>`)}
+  ${tcard('🔑', 'Sign in with Google', 'الدخول عبر Google', `<p style="margin:.2rem 0 .6rem">Students can sign in with <b>Gmail</b> or the school's Google e-mail instead of a PIN. It works in the browser version of the app. Progress still stays on each device.</p>
+    <p class="ar ar-block">يستطيع الطلاب الدخول ببريد Gmail أو بريد المدرسة بدلًا من الرمز، في نسخة المتصفح فقط، ويبقى التقدّم على كل جهاز.</p>
+    <div class="field"><label for="gCid">Google sign-in key (OAuth client ID) <span class="ar">مفتاح الدخول</span></label><input type="text" id="gCid" maxlength="120" autocomplete="off" spellcheck="false" placeholder="1234567890-abc….apps.googleusercontent.com" value="${esc(GSI.cfg().cid)}"></div>
+    <div class="field"><label for="gDom">Allowed e-mail endings <span class="ar">نطاقات البريد المسموح بها</span></label><input type="text" id="gDom" maxlength="120" autocomplete="off" spellcheck="false" placeholder="gmail.com, your-school.edu.sa" value="${esc(GSI.cfg().domains)}"><small class="muted">Separate with commas. Leave empty to allow any Google account.</small></div>
+    <div class="ctrls" style="justify-content:flex-start"><button class="btn sm" id="gSave">💾 Save</button><span class="muted" id="gMsg"></span></div>
+    <details style="margin-top:10px"><summary><b>How to get the key (once, free)</b></summary><ol style="margin:.5rem 0 0;padding-left:20px"><li>Open <b>console.cloud.google.com</b> with your Google account and create a project.</li><li>Open <b>APIs &amp; Services → OAuth consent screen</b>: choose <b>External</b>, type the app name and your e-mail, then press <b>Publish app</b>.</li><li>Open <b>Credentials → Create credentials → OAuth client ID → Web application</b>.</li><li>Under <b>Authorized JavaScript origins</b> add <b>${esc(location.origin.startsWith('http') ? location.origin : 'https://mrwaleedyoussif.github.io')}</b>.</li><li>Copy the <b>Client ID</b>, paste it above and press Save.</li></ol></details>`)}
   ${tcard('👥', 'Students', 'الطلاب', `${studs.length ? studs.map(p => `<div class="srow"><span class="lbl" style="display:flex;align-items:center;gap:10px">${avHTML(p)}<span><b>${esc(p.name)}</b><small>${esc(p.cls || 'no class')} · ${p.pin ? 'PIN set' : 'no PIN yet'}${Auth.locked(p.id) ? ' · locked' : ''}</small></span></span><span class="ctrls"><button class="btn sm sec" data-rp="${esc(p.id)}">🔑 Reset PIN</button><button class="btn sm sec" data-rn="${esc(p.id)}">✏️</button><button class="btn sm sec" data-dl="${esc(p.id)}" aria-label="Delete">🗑️</button></span></div>`).join('') : '<p class="muted">No students yet.</p>'}
     <form id="adF" class="addrow" novalidate><input type="text" id="adN" maxlength="30" placeholder="Student name" aria-label="Student name"><input type="text" id="adC" maxlength="12" placeholder="Class" aria-label="Class"><button class="btn sm" type="submit">➕ Add student</button></form>
     <p class="muted" style="font-size:.85rem;margin:.4rem 0 0">A student you add chooses a PIN at the first sign-in. “Reset PIN” lets a student choose a new one.</p><p class="pinmsg bad" id="adE"></p>`)}
   ${tcard('💾', 'Data', 'البيانات', `<div class="srow"><span class="lbl"><b>Back up all students</b><small>The backup file is encrypted with the teacher password.</small><span class="ar ar-block">نسخة احتياطية مشفّرة بكلمة مرور المعلم.</span></span><span class="ctrls"><button class="btn sm" id="dBk">💾 Back up</button><button class="btn sm sec" id="dRs">♻️ Restore</button></span></div>
     <div class="srow"><span class="lbl"><b>Reset all progress</b><small>Keeps the accounts; removes stars, scores and shadowing records.</small><span class="ar ar-block">يحذف التقدّم ويحتفظ بالحسابات.</span></span><button class="btn sm sec" id="dRz">🧹 Reset</button></div><p class="muted" id="dM"></p>`)}
   <section class="card setcard"><h3>ℹ️ About and privacy <span class="ar">حول البرنامج والخصوصية</span></h3>
-    <p style="margin-top:.3rem"><b>Listen Up! Speak Out!</b> v${APP_VER} · designed by Mr. Waleed Youssef.</p>
-    <p>All accounts, recordings and progress stay on this device. Nothing is uploaded. Recordings are deleted when you leave the Shadowing Studio. <span class="ar ar-block">تبقى جميع الحسابات والتسجيلات والتقدّم على هذا الجهاز، ولا يُرفع أي شيء.</span></p>
+    <p style="margin-top:.3rem"><b>From Zero To Hero</b> v${APP_VER} · designed by Waleed Youssef.</p>
+    <p>All accounts, recordings and progress stay on this device. Nothing is uploaded. If Google sign-in is used, Google confirms the student's name and e-mail, and the app keeps them on this device only. Recordings are deleted when you leave the Shadowing Studio. <span class="ar ar-block">تبقى جميع الحسابات والتسجيلات والتقدّم على هذا الجهاز، ولا يُرفع أي شيء.</span></p>
     <p class="muted" style="font-size:.85rem">Pictures: Fluent Emoji © Microsoft (MIT licence). Fonts: Baloo 2, Nunito, Tajawal (OFL).</p></section>
   </div>`;
   bindCrumbs(m, [['Home', () => go('home')], ['Settings']]);
@@ -2559,6 +2734,7 @@ VIEWS.settings = m => {
   if (T) {
     on('sCm', v => { Store.data.settings.classmode = v; Store.save(); render(); });
     on('sSu', v => Cfg.putSec('selfSignup', v)); on('sGu', v => Cfg.putSec('guest', v));
+    { const gs = $('#gSave', m); if (gs) gs.onclick = () => { const cid = $('#gCid', m).value.trim(), G = $('#gMsg', m); if (cid && !/^[\w-]+\.apps\.googleusercontent\.com$/.test(cid)) { G.textContent = 'The key should end with .apps.googleusercontent.com'; return; } GSI.put('cid', cid); GSI.put('domains', $('#gDom', m).value.trim()); G.textContent = cid ? 'Saved. The Google button is now on the sign-in page (browser version).' : 'Saved. Google sign-in is off.'; }; }
     seg('sId', v => Cfg.putSec('idle', +v)); seg('sTi', v => Cfg.putSec('tidle', +v));
     $('#aName', m).onclick = () => { const mm = sheet(`<h3>✏️ Your name</h3><input type="text" id="nmI" maxlength="40" value="${esc(Auth.A.teacher.name)}" style="width:100%"><div class="navrow"><button class="btn sec" data-x>Cancel</button><button class="btn" data-s>Save</button></div>`); $('[data-x]', mm).onclick = () => mm.remove(); $('[data-s]', mm).onclick = () => { const v = $('#nmI', mm).value.trim(); if (v.length < 2) return; Auth.A.teacher.name = v; Store.data.profiles.teacher.name = v; Store.save(); mm.remove(); render(); }; };
     $('#aPass', m).onclick = () => changePassFlow();
@@ -2612,13 +2788,13 @@ function restoreFlow() {
   $('#bkF', m).onchange = e => { const f = e.target.files[0]; if (f) f.text().then(t => { ta.value = t; look(); }); };
   ta.oninput = look; $('[data-x]', m).onclick = () => m.remove();
   $('[data-ok]', m).onclick = async () => {
-    const o = parse(); if (!o || o.app !== 'listen-up-speak-out') { E.textContent = 'This is not a Listen Up! Speak Out! backup.'; return; }
+    const o = parse(); if (!o || o.app !== 'listen-up-speak-out') { E.textContent = 'This is not a From Zero To Hero backup.'; return; }
     let data = o.data;
     if (o.enc) {
       if (!Sec.subtle()) { E.textContent = 'This browser cannot open encrypted backups. Use the app or Chrome/Edge.'; return; }
       try { data = JSON.parse(await Sec.open(o.enc, $('#bkP', m).value)); } catch (e) { E.innerHTML = 'Wrong password, or the backup is damaged. <span class="ar">كلمة مرور خاطئة أو ملف تالف.</span>'; return; }
     }
-    if (!data || typeof data.profiles !== 'object') { E.textContent = 'This is not a Listen Up! Speak Out! backup.'; return; }
+    if (!data || typeof data.profiles !== 'object') { E.textContent = 'This is not a From Zero To Hero backup.'; return; }
     const keepAuth = Store.data.auth;
     if (!(data.auth && data.auth.teacher)) data.auth = keepAuth;     // a backup from version 1.3 or older: keep this device's teacher account
     data.auth.fails = {}; Store.data = data; Store.save(); Store.load();

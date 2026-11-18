@@ -1,4 +1,22 @@
 {
+ "1.9.0": {
+  "en": [
+   "New name: From Zero To Hero (English Language).",
+   "The school logo now has no white background and moves gently; the welcome and sign-in pages are colourful and animated, with a goodbye animation at sign-out.",
+   "An entrance sound plays when you sign in (it follows the 🔔 Sounds button).",
+   "New department: Ghars (Soon), with Wordline and Performing Art inside it.",
+   "Sign in with Google: in the browser version, students can use Gmail or the school e-mail after the teacher adds the sign-in key in Settings.",
+   "The “Designed by” card is smaller, and Shadowing is now المحاكاة in Arabic."
+  ],
+  "ar": [
+   "اسم جديد: From Zero To Hero (اللغة الإنجليزية).",
+   "شعار المدرسة الآن بلا خلفية بيضاء ويتحرك بلطف، وصفحتا الترحيب والدخول ملوّنتان ومتحركتان، مع حركة وداع عند تسجيل الخروج.",
+   "يُشغَّل صوت ترحيب عند الدخول (يتبع زر الأصوات 🔔).",
+   "قسم جديد: غراس (قريبًا)، وبداخله Wordline والفنون الأدائية.",
+   "الدخول عبر Google: في نسخة المتصفح يستطيع الطلاب استخدام Gmail أو بريد المدرسة بعد أن يضيف المعلم مفتاح الدخول من الإعدادات.",
+   "بطاقة «تصميم» أصغر، واسم قسم Shadowing بالعربية أصبح «المحاكاة»."
+  ]
+ },
  "1.8.0": {
   "en": [
    "New look with the Andalus International Schools identity: the school logo and colours in the header, the home page and the sign-in screens.",

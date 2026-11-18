@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Listen Up! records your voice in the Shadowing Studio and speaking tasks so you can hear yourself. Recordings stay on this device.</string>
+	<string>Zero To Hero records your voice in the Shadowing Studio and speaking tasks so you can hear yourself. Recordings stay on this device.</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>The optional Word check listens to the line you say and shows which words were recognised.</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>Listen Up!</string>
+        <string>Zero To Hero</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

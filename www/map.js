@@ -1,9 +1,9 @@
 /* =====================================================================
-   Listen Up! Speak Out! — MAP GROWTH DEPARTMENT
+   From Zero To Hero — MAP GROWTH DEPARTMENT
    Practice for the NWEA MAP Growth Reading and Language Usage tests, Grades 3–9:
    six practice units and five full mock exams (43 questions) per grade, scored by goal area.
    Content: www/map/<subject>_g<grade>.js (made by tools/app/build_map_data.py), loaded one grade at a time.
-   All passages and questions are original practice material by Mr. Waleed Youssef; they are not NWEA items.
+   All passages and questions are original practice material by Waleed Youssef; they are not NWEA items.
    Loaded before the main app script; the main script calls MAPX.register() before its first render,
    and these functions use the app's helpers (go, render, Store, VIEWS, esc …) only when they run.
    ===================================================================== */
@@ -224,7 +224,7 @@ const MAPX = (() => {
         <li><b>MAP Growth</b> is a computer-adaptive test: each question gets easier or harder depending on the student’s answers. The result is a <b>RIT score</b>, which shows the student’s level on one scale for every grade.</li>
         <li>The <b>Reading</b> test reports three goal areas: Literary Text, Informational Text and Vocabulary. The <b>Language Usage</b> test reports Writing (revising a draft for its purpose and audience), Grammar and Usage, and Mechanics (capital letters, punctuation and spelling). Every question here is labelled with its goal area, its skill and the RIT band where the skill is usually learned.</li>
         <li>A mock-exam score here is the <b>percentage of questions correct</b>. It is not a RIT score, and it does not predict an exact RIT score.</li>
-        <li>All passages, drafts and questions were written by Mr. Waleed Youssef for practice. They are not NWEA test questions. MAP® and MAP Growth™ are trademarks of NWEA; this app is not made or endorsed by NWEA.</li>
+        <li>All passages, drafts and questions were written by Waleed Youssef for practice. They are not NWEA test questions. MAP® and MAP Growth™ are trademarks of NWEA; this app is not made or endorsed by NWEA.</li>
       </ul>
       <span class="ar ar-block">نتيجة الاختبار التجريبي هي نسبة الإجابات الصحيحة وليست درجة RIT. جميع النصوص والأسئلة من إعداد أ. وليد يوسف للتدريب، وليست أسئلة NWEA.</span></section>`;
     bindCrumbs(m, [['Home', () => go('home')]]);

@@ -1,6 +1,6 @@
 {
   "name": "listen-up-speak-out",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Listen Up! Speak Out! - elementary listening and speaking program (Grades 3-6) and MAP Growth practice (Grades 3-9) for web, Android, iOS and Windows",
   "main": "electron/main.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "mac": "npm run build:www && electron-builder --mac",
     "linux": "npm run build:www && electron-builder --linux AppImage"
   },
-  "author": "Mr. Waleed Youssef",
+  "author": "Waleed Youssef",
   "license": "UNLICENSED",
   "devDependencies": {
     "@capacitor/android": "^8.6.2",
@@ -32,7 +32,7 @@
   "build": {
     "appId": "com.mrwaleedyoussif.listenupspeakout",
     "productName": "Listen Up! Speak Out!",
-    "copyright": "© 2026 Mr. Waleed Youssef",
+    "copyright": "© 2026 Waleed Youssef",
     "directories": {
       "output": "dist",
       "buildResources": "build-res"
@@ -69,7 +69,7 @@
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "Listen Up! Speak Out!",
+      "shortcutName": "From Zero To Hero",
       "installerLanguages": [
         "en_US",
         "ar_SA"

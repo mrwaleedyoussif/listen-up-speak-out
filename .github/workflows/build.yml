@@ -180,7 +180,7 @@ jobs:
         run: |
           ls -la files
           cat > notes.md <<'EOF'
-          **Listen Up! Speak Out!** – Grades 3–6 listening & speaking program (build ${{ needs.version.outputs.code }}).
+          **From Zero To Hero (English Language)** – Andalus International Schools, Taif (build ${{ needs.version.outputs.code }}).
 
           - **Android phones & tablets:** `Listen-Up-Speak-Out-${{ needs.version.outputs.name }}.apk`
           - **Windows PCs:** `Listen-Up-Speak-Out-Setup-${{ needs.version.outputs.name }}.exe` (installer) or `Listen-Up-Speak-Out-Portable-${{ needs.version.outputs.name }}.exe` (no installation)
@@ -193,5 +193,5 @@ jobs:
             gh release upload "$TAG" files/* --clobber
             gh release edit "$TAG" --notes-file notes.md
           else
-            gh release create "$TAG" files/* --title "Listen Up! Speak Out! $TAG" --notes-file notes.md --target "$GITHUB_SHA"
+            gh release create "$TAG" files/* --title "From Zero To Hero $TAG" --notes-file notes.md --target "$GITHUB_SHA"
           fi

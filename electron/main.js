@@ -9,7 +9,7 @@ let win = null;
 function createWindow() {
   win = new BrowserWindow({
     width: 1280, height: 860, minWidth: 380, minHeight: 560,
-    title: 'Listen Up! Speak Out!',
+    title: 'From Zero To Hero (English Language)',
     icon: path.join(__dirname, '..', 'build-res', process.platform === 'win32' ? 'icon.ico' : 'icon.png'),
     backgroundColor: '#F5F7FC',
     autoHideMenuBar: true,

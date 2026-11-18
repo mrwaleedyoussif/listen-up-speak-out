@@ -1,18 +1,22 @@
 {
- "version": "1.8.0",
+ "version": "1.9.0",
  "date": "2026-11-18",
  "notes": {
   "en": [
-   "New look with the Andalus International Schools identity: the school logo and colours in the header, the home page and the sign-in screens.",
-   "After sign-in the home page is a departments hub: Listening and Speaking, Shadowing and MAP Test are open; Reading and Writing, Grammar and Vocabulary, STEP Preparation and Phonics are marked “Soon”.",
-   "More motion and colour: animated department cards, a moving home banner and smooth page transitions (switched off when the device asks for reduced motion).",
-   "Listening and Speaking now uses levels: the four sets are Level 2 to Level 5 (they were Grades 3 to 6). Lessons, audio and saved progress are unchanged."
+   "New name: From Zero To Hero (English Language).",
+   "The school logo now has no white background and moves gently; the welcome and sign-in pages are colourful and animated, with a goodbye animation at sign-out.",
+   "An entrance sound plays when you sign in (it follows the 🔔 Sounds button).",
+   "New department: Ghars (Soon), with Wordline and Performing Art inside it.",
+   "Sign in with Google: in the browser version, students can use Gmail or the school e-mail after the teacher adds the sign-in key in Settings.",
+   "The “Designed by” card is smaller, and Shadowing is now المحاكاة in Arabic."
   ],
   "ar": [
-   "مظهر جديد بهوية مدارس الأندلس العالمية: شعار المدرسة وألوانها في الشريط العلوي والصفحة الرئيسية وشاشات الدخول.",
-   "بعد تسجيل الدخول تظهر صفحة الأقسام: الاستماع والتحدث، والتظليل (المحاكاة)، واختبار MAP متاحة الآن؛ والقراءة والكتابة، والقواعد والمفردات، والتحضير لاختبار STEP، والصوتيات قريبًا.",
-   "حركة وألوان أكثر: بطاقات أقسام متحركة، ولافتة رئيسية متحركة، وانتقالات سلسة بين الصفحات (تتوقف إذا طلب الجهاز تقليل الحركة).",
-   "يستخدم قسم الاستماع والتحدث المستويات الآن: المجموعات الأربع هي المستوى 2 إلى المستوى 5 (كانت الصفوف 3 إلى 6)، دون تغيير في الدروس أو الصوت أو التقدّم المحفوظ."
+   "اسم جديد: From Zero To Hero (اللغة الإنجليزية).",
+   "شعار المدرسة الآن بلا خلفية بيضاء ويتحرك بلطف، وصفحتا الترحيب والدخول ملوّنتان ومتحركتان، مع حركة وداع عند تسجيل الخروج.",
+   "يُشغَّل صوت ترحيب عند الدخول (يتبع زر الأصوات 🔔).",
+   "قسم جديد: غراس (قريبًا)، وبداخله Wordline والفنون الأدائية.",
+   "الدخول عبر Google: في نسخة المتصفح يستطيع الطلاب استخدام Gmail أو بريد المدرسة بعد أن يضيف المعلم مفتاح الدخول من الإعدادات.",
+   "بطاقة «تصميم» أصغر، واسم قسم Shadowing بالعربية أصبح «المحاكاة»."
   ]
  },
  "files": {}

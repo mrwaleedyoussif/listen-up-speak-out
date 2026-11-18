@@ -1,5 +1,5 @@
 /* =====================================================================
-   Listen Up! Speak Out! — installable web app (PWA) helper
+   From Zero To Hero — installable web app (PWA) helper
    • registers the service worker (offline app + cached audio)
    • "Install the app" button / iPhone-iPad instructions
    • Offline audio: download a whole grade for use without internet
@@ -118,7 +118,7 @@
     if (standalone()) return `<p style="margin:.4rem 0 0">✅ You are using the installed app.</p><p class="ar ar-block">أنت تستخدم التطبيق المثبّت.</p>`;
     if (promptEv) return `<div class="approw"><button class="btn" id="instB">📲 Install on this device</button></div>
       <p class="ar ar-block">ثبّت البرنامج على هذا الجهاز ليعمل مثل أي تطبيق، حتى دون إنترنت.</p>`;
-    if (isIOS) return `<ol class="steps-ios"><li>Open this page in <b>Safari</b>.</li><li>Tap <b>Share</b> <span aria-hidden="true">⬆️</span>, then <b>Add to Home Screen</b>.</li><li>Open <b>Listen Up!</b> from the Home Screen.</li></ol>
+    if (isIOS) return `<ol class="steps-ios"><li>Open this page in <b>Safari</b>.</li><li>Tap <b>Share</b> <span aria-hidden="true">⬆️</span>, then <b>Add to Home Screen</b>.</li><li>Open <b>Zero To Hero</b> from the Home Screen.</li></ol>
       <p class="ar ar-block">على الآيفون والآيباد: افتح الصفحة في سفاري، ثم اضغط «مشاركة» ثم «إضافة إلى الشاشة الرئيسية».</p>`;
     return `<p style="margin:.4rem 0 0">In <b>Chrome</b> or <b>Edge</b>, open the browser menu and choose <b>Install app</b> (or the install icon in the address bar).</p>
       <p class="ar ar-block">في متصفح كروم أو إيدج: افتح قائمة المتصفح واختر «تثبيت التطبيق».</p>`;
@@ -127,7 +127,7 @@
     lastBox = el;
     if (!el || PLAT !== 'web') { if (el) el.innerHTML = ''; return; }
     if (!HTTP) {   // offline ZIP folder opened from the computer
-      el.innerHTML = `<section class="card appbox"><h3>📲 Get the app</h3><p style="margin:.3rem 0 0">Install Listen Up! Speak Out! on tablets, phones and computers.</p>${links()}</section>`;
+      el.innerHTML = `<section class="card appbox"><h3>📲 Get the app</h3><p style="margin:.3rem 0 0">Install From Zero To Hero on tablets, phones and computers.</p>${links()}</section>`;
       return;
     }
     el.innerHTML = `<section class="card appbox">

@@ -9,7 +9,7 @@
   <circle cx="200" cy="200" r="182" fill="url(#sg)"/>
   <circle cx="200" cy="200" r="168" fill="none" stroke="url(#gd)" stroke-width="2"/>
   <circle cx="200" cy="200" r="104" fill="none" stroke="url(#gd)" stroke-width="3"/>
-  <text font-family="Georgia, 'Times New Roman', serif" font-weight="800" font-size="25" letter-spacing="2.5" fill="url(#gd)"><textPath href="#top" startOffset="50%" text-anchor="middle">MR. WALEED YOUSSEF</textPath></text>
+  <text font-family="Georgia, 'Times New Roman', serif" font-weight="800" font-size="25" letter-spacing="2.5" fill="url(#gd)"><textPath href="#top" startOffset="50%" text-anchor="middle">WALEED YOUSSEF</textPath></text>
   <text font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="17" letter-spacing="2.5" fill="url(#gd)"><textPath href="#bot" startOffset="50%" text-anchor="middle">ENGLISH · CURRICULUM DESIGN</textPath></text>
   <g fill="url(#gd)"><circle cx="58" cy="200" r="0"/><path d="M47 200 l6 -6 l6 6 l-6 6z"/><path d="M341 200 l6 -6 l6 6 l-6 6z"/></g>
   <text x="200" y="236" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="800" font-size="112" fill="url(#gd)" letter-spacing="-2">WY</text>
