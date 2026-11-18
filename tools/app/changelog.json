@@ -1,4 +1,14 @@
 {
+ "1.10.1": {
+  "en": [
+   "Home banner: the app name and the welcome line are now centred; Settings and Switch user are under the left logo, and “Designed by Waleed Youssef” is under the right logo.",
+   "Fixed: the sound bars in the audio player no longer tilt."
+  ],
+  "ar": [
+   "لافتة الصفحة الرئيسية: اسم البرنامج وعبارة الترحيب في الوسط، وزرّا الإعدادات وتبديل المستخدم تحت الشعار الأيسر، و«تصميم وليد يوسف» تحت الشعار الأيمن.",
+   "إصلاح: أعمدة الصوت في مشغّل التسجيلات لم تعد تميل."
+  ]
+ },
  "1.10.0": {
   "en": [
    "The school logo now stands on both sides of the home banner and the welcome page.",

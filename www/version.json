@@ -1,18 +1,14 @@
 {
- "version": "1.10.0",
+ "version": "1.10.1",
  "date": "2026-11-18",
  "notes": {
   "en": [
-   "The school logo now stands on both sides of the home banner and the welcome page.",
-   "The logos move more calmly: they slide in, float slowly, and a light glint passes over them.",
-   "The school line now reads “Andalus International Schools · Taif Boys”.",
-   "Every department opens with a short introduction in English and Arabic. The Soon departments now open a page with their introduction."
+   "Home banner: the app name and the welcome line are now centred; Settings and Switch user are under the left logo, and “Designed by Waleed Youssef” is under the right logo.",
+   "Fixed: the sound bars in the audio player no longer tilt."
   ],
   "ar": [
-   "شعار المدرسة يظهر الآن على جانبي لافتة الصفحة الرئيسية وصفحة الترحيب.",
-   "حركة الشعارات أصبحت أهدأ: تدخل بانسياب، وتطفو ببطء، ويمرّ عليها بريق خفيف.",
-   "اسم المدرسة أصبح «Andalus International Schools · Taif Boys» (الطائف بنين).",
-   "كل قسم يبدأ الآن بمقدمة قصيرة بالإنجليزية والعربية، والأقسام القادمة تفتح صفحة فيها مقدمتها."
+   "لافتة الصفحة الرئيسية: اسم البرنامج وعبارة الترحيب في الوسط، وزرّا الإعدادات وتبديل المستخدم تحت الشعار الأيسر، و«تصميم وليد يوسف» تحت الشعار الأيمن.",
+   "إصلاح: أعمدة الصوت في مشغّل التسجيلات لم تعد تميل."
   ]
  },
  "files": {}
