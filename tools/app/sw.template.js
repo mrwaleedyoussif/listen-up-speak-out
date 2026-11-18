@@ -2,7 +2,7 @@
    App files are saved when the app is installed; audio is saved on first play
    or when a whole grade is downloaded from the Home page. */
 const V = '__VERSION__', AV = '__AUDIO_VERSION__';
-const SHELL = 'lsp-shell-' + V, AUDIO = 'lsp-audio-' + AV;
+const SHELL = 'lsp-shell-' + V, AUDIO = 'lsp-audio-' + AV, GVDATA = 'lsp-gvdata-1';   // Grammar and Vocabulary lessons: saved the first time each one is opened
 const FILES = __SHELL_FILES__;
 
 self.addEventListener('install', e => {
@@ -10,7 +10,7 @@ self.addEventListener('install', e => {
 });
 self.addEventListener('activate', e => {
   e.waitUntil((async () => {
-    for (const k of await caches.keys()) if (k.startsWith('lsp-') && k !== SHELL && k !== AUDIO) await caches.delete(k);
+    for (const k of await caches.keys()) if (k.startsWith('lsp-') && k !== SHELL && k !== AUDIO && k !== GVDATA) await caches.delete(k);
     await self.clients.claim();
   })());
 });
@@ -23,19 +23,28 @@ self.addEventListener('fetch', e => {
   if (u.origin !== location.origin) return;
   if (u.pathname.endsWith('/version.json')) return;   // always from the network: it says which version is newest
   if (u.pathname.endsWith('.mp3')) { e.respondWith(audio(r)); return; }
+  if (/\/gv\/data\/grammar_vocabulary\/(units|tests)\//.test(u.pathname)) { e.respondWith(lazy(r)); return; }
   e.respondWith(shell(r));
 });
 
 async function shell(r) {
   const c = await caches.open(SHELL);
   if (r.mode === 'navigate') {   // same saved version of every file until the user presses Update
-    const page = await c.match('index.html');
+    const page = await c.match(/\/gv\//.test(new URL(r.url).pathname) ? 'gv/index.html' : 'index.html');   // the Grammar and Vocabulary department has its own page
     if (page) return page;
     try { return await fetch(r); } catch (e) { return Response.error(); }
   }
   const hit = await c.match(r, { ignoreSearch: true });
   if (hit) return hit;
   try { return await fetch(r); } catch (e) { return Response.error(); }
+}
+
+/* Grammar and Vocabulary unit and test files: cache first, saved on first use. */
+async function lazy(r) {
+  const c = await caches.open(GVDATA);
+  const hit = await c.match(r.url);
+  if (hit) return hit;
+  try { const res = await fetch(r.url); if (res.status === 200) { try { await c.put(r.url, res.clone()); } catch (e) {} } return res; } catch (e) { return Response.error(); }
 }
 
 /* Audio: cache first. Safari asks for byte ranges, so ranges are cut from the saved file. */

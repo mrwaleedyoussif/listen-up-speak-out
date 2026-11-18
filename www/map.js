@@ -105,6 +105,9 @@ const MAPX = (() => {
   const keyIdx = k => String(k).split(/\s*,\s*/).map(x => L5.indexOf(x.trim())).filter(x => x >= 0);
   const pkey = (subj, g, id) => `map${subj === 'reading' ? 'R' : 'L'}${g}_${id}`;
   const prog = (p, id) => ((p || Store.me()).progress || {})[id] || null;
+  /* RIT units, practices and questions in a grade (from map/index.js) */
+  const CNT = (subj, g) => (window.MAP_COUNTS || {})[subj + '_' + g] || { u: 0, s: 12, q: 78 };
+  const gname = k => (GOALS[k] || [''])[0];
   function band(g) { const c = COL[g] || COL[3], r = document.documentElement.style; r.setProperty('--c', c[0]); r.setProperty('--cl', c[1]); r.setProperty('--cd', c[2]); }
   function answered(it, a) { return it.t === 'ms' ? Array.isArray(a) && a.length === 2 : it.t === 'tp' ? !!a && a.a != null && a.b != null : a != null; }
   function right(it, a) {
@@ -202,7 +205,7 @@ const MAPX = (() => {
     let sets = 0, setSum = 0, mocks = 0, mockSum = 0; const mk = {}, goals = {};
     Object.keys(pr).forEach(k => {
       if (!k.startsWith(pre) || k.includes('~')) return; const id = k.slice(pre.length), v = pr[k];
-      if (/^U\d[AB]$/.test(id) && v.done) { sets++; setSum += v.best || 0; }
+      if (/^R\d+-\d+$/.test(id) && v.done) { sets++; setSum += v.best || 0; }
       if (/^M[A-E]$/.test(id) && v.done) { mocks++; mockSum += v.best || 0; mk[id[1]] = v.best || 0;
         Object.entries(v.bg || {}).forEach(([gk, cn]) => { goals[gk] = goals[gk] || [0, 0]; goals[gk][0] += cn[0]; goals[gk][1] += cn[1]; }); }
     });
@@ -242,9 +245,9 @@ const MAPX = (() => {
       <section class="grid g3">${GRADES.map(g => { const ok = avail.includes(g), s = gradeSummary(me, subj, g);
         return `<button class="gcard mgc ${ok ? '' : 'off'}" style="background:${COL[g][3]}" ${ok ? `data-mg="${g}"` : 'disabled'}>
           <span class="em">${COL[g][4]}</span><span class="lv">${SUBJ[subj].name}</span><h3>Grade ${g}</h3>
-          <span style="font-weight:700;opacity:.95;margin:.2rem 0 .8rem">6 units · 5 mock exams</span>
-          <span class="bar"><i style="width:${Math.round(100 * (s.sets + s.mocks) / 17)}%"></i></span>
-          <span class="meta">${ok ? `${s.sets}/12 practice sets · ${s.mocks}/5 mocks${s.mockAvg != null ? ' · 🎯 ' + pct(s.mockAvg) + '%' : ''}` : 'Coming soon'}</span></button>`; }).join('')}</section>`;
+          <span style="font-weight:700;opacity:.95;margin:.2rem 0 .8rem">${CNT(subj, g).u} RIT units · 5 mock exams</span>
+          <span class="bar"><i style="width:${Math.round(100 * (s.sets + s.mocks) / (CNT(subj, g).s + 5))}%"></i></span>
+          <span class="meta">${ok ? `${s.sets}/${CNT(subj, g).s} practices · ${s.mocks}/5 mocks${s.mockAvg != null ? ' · 🎯 ' + pct(s.mockAvg) + '%' : ''}` : 'Coming soon'}</span></button>`; }).join('')}</section>`;
     $$('[data-mg]', B).forEach(b => b.onclick = () => go('mapgrade', { mg: +b.dataset.mg, subj }));
   };
 
@@ -252,16 +255,16 @@ const MAPX = (() => {
     const g = S.mg, subj = cur(), SJ = SUBJ[subj];
     const d = needData(m, subj, g, () => V.mapgrade(m)); if (!d) return;
     const parts = [['Home', () => go('home')], ['MAP Growth', () => go('map', { subj })], [`${SJ.name} · Grade ${g}`]];
-    const setRow = (u, s) => { const id = u.id + s.set, p = prog(null, pkey(subj, g, id)) || {};
-      return `<button class="lrow ${p.done ? 'done' : ''}" data-set="${u.id}|${s.set}"><span class="ic">${s.set === 'A' ? '📝' : '🧠'}</span><span class="tx"><small>Practice ${s.set} · ${s.items.length} questions</small><b>${esc((s.passage && s.passage.title) || SJ.noPass)}</b></span>${p.done ? `<span class="mscore">${pct(p.best)}%</span>${starHTML(p.stars || 0)}` : '<span class="muted">Start →</span>'}</button>`; };
+    const setRow = (u, s) => { const id = u.id + '-' + s.set, p = prog(null, pkey(subj, g, id)) || {};
+      return `<button class="lrow ${p.done ? 'done' : ''}" data-set="${u.id}|${s.set}"><span class="ic">${(GOALS[s.goal] || [])[2] || '📝'}</span><span class="tx"><small>Practice ${s.set} · ${s.items.length} question${s.items.length > 1 ? 's' : ''}${gname(s.goal) ? ' · ' + esc(gname(s.goal)) : ''}</small><b>${esc((s.passage && s.passage.title) || SJ.noPass)}</b></span>${p.done ? `<span class="mscore">${pct(p.best)}%</span>${starHTML(p.stars || 0)}` : '<span class="muted">Start →</span>'}</button>`; };
     m.innerHTML = crumbs(parts) + `
     <section class="lhead" style="background:${COL[g][3]}"><span class="k">MAP Growth · ${SJ.name}</span><h1>${COL[g][4]} Grade ${g}</h1>
-      <p style="margin:.3rem 0 0;opacity:.95">6 practice units (78 questions) and 5 full mock exams (43 questions each), ordered from easier to harder.</p>
-      <span class="ar ar-block">6 وحدات تدريب و5 اختبارات تجريبية كاملة، مرتبة من الأسهل إلى الأصعب.</span></section>
+      <p style="margin:.3rem 0 0;opacity:.95">${d.units.length} RIT units (${CNT(subj, g).q} practice questions) and 5 full mock exams (43 questions each). Every RIT unit covers 10 RIT points: RIT 1 is 151–160, RIT 2 is 161–170, and so on. Start with the unit that holds your own RIT score, then move up.</p>
+      <span class="ar ar-block">${d.units.length} وحدات RIT للتدريب و5 اختبارات تجريبية كاملة. كل وحدة تغطي 10 نقاط: RIT 1 من 151 إلى 160، و RIT 2 من 161 إلى 170، وهكذا. ابدأ بالوحدة التي تضم درجتك ثم انتقل إلى الأعلى.</span></section>
     <details class="card mhab"><summary><b>${SJ.habitsTitle[0]}</b> <span class="ar">${SJ.habitsTitle[1]}</span></summary><ol>${(subj === 'language' ? LHABITS : HABITS).map(h => `<li>${esc(h[0])}<span class="ar ar-block">${esc(h[1])}</span></li>`).join('')}</ol></details>
-    <div class="section-title"><h2>📘 Practice units</h2></div>
-    <section class="grid mg2">${d.units.map(u => { const G = GOALS[u.goal] || ['', '', '📘'];
-      return `<div class="card munit"><div class="uh"><span class="ue">${G[2]}</span><div><span class="pill">${esc(u.id.replace('U', 'Unit '))} · ${esc(G[0] || u.goal)}</span><h3>${esc(u.title)}</h3><span class="muted" style="font-size:.85rem">RIT ${esc(u.band)}</span></div></div>
+    <div class="section-title"><h2>📈 RIT units</h2></div>
+    <section class="grid mg2">${d.units.map(u => { const G = GOALS[u.goal] || ['', '', '📈'];
+      return `<div class="card munit"><div class="uh"><span class="ue">${G[2]}</span><div><span class="pill">RIT ${u.n}</span><h3>From ${esc(u.band.replace('–', ' to '))}</h3><span class="muted" style="font-size:.85rem">${(n => n + ' question' + (n > 1 ? 's' : ''))(u.sets.reduce((a, x) => a + x.items.length, 0))} in ${u.sets.length} practice${u.sets.length > 1 ? 's' : ''}</span></div></div>
         <ul class="msk-list">${u.skills.slice(0, 4).map(s => `<li>${esc(s)}</li>`).join('')}</ul>${u.sets.map(s => setRow(u, s)).join('')}</div>`; }).join('')}</section>
     <div class="section-title"><h2>🎯 Mock exams</h2></div>
     <p class="muted" style="margin:-4px 0 12px">${SJ.mockLine[0]} <span class="ar">${SJ.mockLine[1]}</span></p>
@@ -282,14 +285,14 @@ const MAPX = (() => {
     const d = needData(m, subj, g, () => V.mapset(m)); if (!d) return;
     const ui = d.units.findIndex(u => u.id === S.mu), u = d.units[ui], set = u && u.sets.find(s => s.set === S.ms);
     if (!set) { go('mapgrade', { mg: g, subj }); return; }
-    const id = pkey(subj, g, u.id + set.set), items = set.items, G = GOALS[u.goal] || ['', '', ''];
+    const id = pkey(subj, g, u.id + '-' + set.set), items = set.items, G = GOALS[set.goal] || ['', '', ''];
     S.A = S.A || {};
-    const parts = crumbsTo(g, `${u.id.replace('U', 'Unit ')} · Practice ${set.set}`);
+    const parts = crumbsTo(g, `RIT ${u.n} · Practice ${set.set}`);
     const next = (() => { const si = u.sets.indexOf(set); if (si < u.sets.length - 1) return { mu: u.id, ms: u.sets[si + 1].set }; const nu = d.units[ui + 1]; return nu ? { mu: nu.id, ms: nu.sets[0].set } : null; })();
     const best = prog(null, id);
     m.innerHTML = crumbs(parts) + `
-    <section class="lhead"><span class="k">Grade ${g} · ${esc(u.id.replace('U', 'Unit '))} · Practice ${set.set} · ${esc(G[0])}</span><h1>${esc(u.title)}</h1>
-      <p style="margin:.3rem 0 0;opacity:.95">${esc(u.skills.join(' · '))}</p></section>
+    <section class="lhead"><span class="k">Grade ${g} · Practice ${set.set}${G[0] ? ' · ' + esc(G[0]) : ''}</span><h1>RIT ${u.n} <span style="font-size:.7em;opacity:.92">· ${esc(u.band)}</span></h1>
+      <p style="margin:.3rem 0 0;opacity:.95">${esc([...new Set(items.map(x => x.sk))].join(' · '))}</p></section>
     ${set.set === 'A' && u.vocab && u.vocab.length ? `<div class="card mwords"><b>${SJ.words[0]}</b> <span class="ar">${SJ.words[1]}</span><div class="mw">${u.vocab.map(v => `<span class="mwd"><b>${esc(v[0])}</b> — ${esc(v[1])}</span>`).join('')}</div></div>` : ''}
     <p class="instrline">${SJ.instr[0]} <span class="ar ar-block">${SJ.instr[1]}</span></p>
     <div id="mScore"></div>
@@ -428,10 +431,10 @@ const MAPX = (() => {
   /* ---------- teacher dashboard ---------- */
   function dashRows(p) {
     return ['reading', 'language'].map(subj => GRADES.map(g => { const s = gradeSummary(p, subj, g); if (!s.any) return '';
-      return `<div class="selfrow"><span><b>🎯 MAP ${SUBJ[subj].name} G${g}</b> · ${s.sets}/12 sets${s.setAvg != null ? ' (' + pct(s.setAvg) + '%)' : ''}</span><span>${Object.keys(s.mk).length ? 'Mocks: ' + Object.keys(s.mk).sort().map(k => `${k} ${pct(s.mk[k])}%`).join(' · ') : 'no mocks yet'}</span></div>`; }).join('')).join('');
+      return `<div class="selfrow"><span><b>🎯 MAP ${SUBJ[subj].name} G${g}</b> · ${s.sets}/${CNT(subj, g).s} practices${s.setAvg != null ? ' (' + pct(s.setAvg) + '%)' : ''}</span><span>${Object.keys(s.mk).length ? 'Mocks: ' + Object.keys(s.mk).sort().map(k => `${k} ${pct(s.mk[k])}%`).join(' · ') : 'no mocks yet'}</span></div>`; }).join('')).join('');
   }
   function csv(profiles) {
-    const L = ['Student,Class,Subject,Grade,Practice sets done (of 12),Practice average %,Mock A %,Mock B %,Mock C %,Mock D %,Mock E %,Mock average %,Literary Text %,Informational Text %,Vocabulary %,Writing %,Grammar and Usage %,Mechanics %'];
+    const L = ['Student,Class,Subject,Grade,Practices done,Practice average %,Mock A %,Mock B %,Mock C %,Mock D %,Mock E %,Mock average %,Literary Text %,Informational Text %,Vocabulary %,Writing %,Grammar and Usage %,Mechanics %'];
     profiles.forEach(p => ['reading', 'language'].forEach(subj => GRADES.forEach(g => { const s = gradeSummary(p, subj, g); if (!s.any) return;
       const gp = k => s.goals[k] && s.goals[k][1] ? pct(s.goals[k][0] / s.goals[k][1]) : '';
       L.push([p.name, p.cls || '', SUBJ[subj].name, g, s.sets, s.setAvg == null ? '' : pct(s.setAvg), ...'ABCDE'.split('').map(k => s.mk[k] == null ? '' : pct(s.mk[k])), s.mockAvg == null ? '' : pct(s.mockAvg), gp('LT'), gp('IT'), gp('VO'), gp('WR'), gp('GU'), gp('ME')]

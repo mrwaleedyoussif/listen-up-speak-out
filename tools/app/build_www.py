@@ -31,7 +31,7 @@ for dp, dn, fn in os.walk(WWW):
     dn.sort()
     for f in sorted(fn):
         p = os.path.join(dp, f); r = rel(p)
-        if r.endswith('.mp3') or r in ('sw.js', 'index.html', 'version.json') or r.startswith(('icons/shots/', 'print/')) or f.startswith('.'): continue
+        if r.endswith('.mp3') or r in ('sw.js', 'index.html', 'version.json') or r.startswith(('icons/shots/', 'print/', 'gv/data/grammar_vocabulary/units/', 'gv/data/grammar_vocabulary/tests/')) or f.startswith('.'): continue
         shell.append(r)
 vh = hashlib.sha1()
 for r in shell: vh.update(r.encode()); vh.update(open(os.path.join(WWW, r), 'rb').read())
