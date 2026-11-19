@@ -41,9 +41,9 @@
     const S = P.store.get(), list = (await getStrands()).filter(x => x.enabled);
     const view = el('div');
     view.appendChild(el('section', { class: 'hero' },
-      el('h1', null, 'Grammar and Vocabulary'),
+      el('h1', null, 'Language Usage'),
       el('p', null, 'Levels A1 to C2 • 72 units • 360 lessons'),
-      P.ar('القواعد والمفردات – من المستوى A1 إلى المستوى C2')));
+      P.ar('استخدام اللغة – من المستوى A1 إلى المستوى C2')));
     view.appendChild(el('section', { class: 'panel intro' }, el('span', { class: 'in-k' }, 'Introduction ', el('span', { class: 'ar', lang: 'ar' }, 'مقدمة')),
       el('p', null, 'This department gives you the rules and the words that every skill needs. Each lesson explains one point with clear examples in English and Arabic, then you practise it in activities and a game and finish with a short exit quiz. Take the Placement Test to find your level, or start at Level A1.'),
       P.ar('هذا القسم يعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس يشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم تتدرّب عليها في أنشطة ولعبة وتنهي الدرس باختبار قصير. أدِّ اختبار تحديد المستوى لتعرف مستواك، أو ابدأ من المستوى A1.'),
@@ -69,7 +69,7 @@
     view.appendChild(el('h2', { style: { marginTop: '20px' } }, 'Quick start'));
     const due = P.srs.due().length;
     view.appendChild(el('div', { class: 'grid' },
-      el('a', { class: 'card', href: base('grammar_vocabulary') + '/placement' }, el('div', { class: 'big' }, '🧭 Placement Test'), el('div', { class: 'sub' }, 'Grammar and Vocabulary • 60 questions • find your level'), P.ar('اختبار تحديد المستوى')),
+      el('a', { class: 'card', href: base('grammar_vocabulary') + '/placement' }, el('div', { class: 'big' }, '🧭 Placement Test'), el('div', { class: 'sub' }, 'Language Usage • 60 questions • find your level'), P.ar('اختبار تحديد المستوى')),
       el('a', { class: 'card', href: '#/cards' }, el('div', { class: 'big' }, '🃏 Word Cards'), el('div', { class: 'sub' }, due + ' card(s) to review today'), P.ar('بطاقات المفردات')),
       el('a', { class: 'card', href: '#/progress' }, el('div', { class: 'big' }, '📈 My Progress'), el('div', { class: 'sub' }, 'Lessons, quizzes and tests'), P.ar('تقدّمي'))));
     return view;
@@ -387,7 +387,7 @@
       const I = await getIndex('grammar_vocabulary');
       const g = el('div', { class: 'grid' });
       I.levels.forEach(L => { const d = levelDone(I, L.level); g.appendChild(el('a', { class: 'card', href: base('grammar_vocabulary') + '/L' + L.level }, el('b', null, P.lv(L.level)), bar(d, 30), el('div', { class: 'sub' }, d + ' / 30 lessons'))); });
-      view.append(el('h2', null, 'Grammar & Vocabulary'), g);
+      view.append(el('h2', null, 'Language Usage'), g);
     } catch (e) { /* strand not installed */ }
     const tl = el('ul', { class: 'clean' });
     Object.entries(S.tests).sort((a, b) => b[1].ts - a[1].ts).forEach(([k, t]) => tl.appendChild(el('li', null, el('span', { class: 'pill ' + P.band(t.pct) }, t.pct + '%'), ' ', k, ' – best of ' + t.attempts + ' attempt(s)')));

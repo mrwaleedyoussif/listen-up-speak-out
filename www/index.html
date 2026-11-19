@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>From Zero To Hero (English Language)</title>
-<meta name="description" content="From Zero To Hero (English Language) — Andalus International Schools, Taif Boys: Listening and Speaking, Shadowing, Grammar and Vocabulary (Levels A1 to C2) and MAP test practice (Grades 3–9), with Arabic support. Designed by Waleed Youssef.">
+<meta name="description" content="From Zero To Hero (English Language) — Andalus International Schools, Taif Boys: Listening and Speaking, Shadowing, Language Usage (Levels A1 to C2) and MAP test practice (Grades 3–9), with Arabic support. Designed by Waleed Youssef.">
 <meta name="theme-color" content="#2E3074">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
@@ -660,7 +660,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.12.1';
+const APP_VER = '1.12.2';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1132,7 +1132,7 @@ const DEPTS = [
   ['sh', 'Shadowing', 'المحاكاة', 'Listen and speak with the speaker', '#FF7A59', '#E23E78', 'studio', 0],
   ['map', 'MAP Test', 'اختبار MAP', 'Reading · Language Usage · Grades 3–9', '#22B573', '#0B8A5A', 'map', 0],
   ['rw', 'Reading and Writing', 'القراءة والكتابة', '', '#F59E0B', '#EA5B0C', 'dept', 1],
-  ['gv', 'Grammar and Vocabulary', 'القواعد والمفردات', 'Levels A1 → C2 · 360 lessons', '#9B6CF6', '#6D3BE0', 'gvx', 0],
+  ['gv', 'Language Usage', 'استخدام اللغة', 'Levels A1 → C2 · 360 lessons', '#9B6CF6', '#6D3BE0', 'gvx', 0],
   ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '4 booklets · 132 lessons · 30 mock exams', '#12B5CB', '#0A7C96', 'step', 0],
   ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', 'dept', 1],
   ['ghars', 'Ghars', 'غراس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
@@ -1152,8 +1152,8 @@ const INTRO = {
   rw: ['Reading and Writing will take you from short, simple texts to clear paragraphs of your own. You will read and understand a text, learn its new words, and then write step by step with a model to follow.',
     'قسم القراءة والكتابة سيأخذك من النصوص القصيرة البسيطة إلى كتابة فقرات واضحة بنفسك. ستقرأ النص وتفهمه، وتتعلم كلماته الجديدة، ثم تكتب خطوة بخطوة مع نموذج تتبعه.',
     ['Read and understand', 'New words from the text', 'Write step by step']],
-  gv: ['Grammar and Vocabulary will give you the rules and the words that every skill needs. Each lesson will explain one point with clear examples in English and Arabic, then give you practice that grows harder little by little.',
-    'قسم القواعد والمفردات سيعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس سيشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم يقدّم لك تدريبًا يزداد صعوبة شيئًا فشيئًا.',
+  gv: ['Language Usage will give you the rules and the words that every skill needs. Each lesson will explain one point with clear examples in English and Arabic, then give you practice that grows harder little by little.',
+    'قسم استخدام اللغة سيعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس سيشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم يقدّم لك تدريبًا يزداد صعوبة شيئًا فشيئًا.',
     ['One point in each lesson', 'Clear examples', 'Practice from easy to hard']],
   step: ['This department prepares you for the Standardized Test of English Proficiency (STEP) in two steps. First, the four Foundation booklets (Grammar, Reading, Listening and Composition) teach each skill from A1 to B2+ in 132 lessons, each with a 30-question quiz. Then 30 full mock exams in three sets give you timed practice. Every answer comes with an explanation and an Arabic hint.',
     'هذا القسم يجهّزك لاختبار كفايات اللغة الإنجليزية (STEP) على مرحلتين: أولًا كتيبات التأسيس الأربعة (القواعد والقراءة والاستماع وتحليل الكتابة) تعلّمك كل مهارة من A1 إلى B2+ في 132 درسًا، ولكل درس اختبار من 30 سؤالًا. ثم 30 اختبارًا تجريبيًا كاملًا في ثلاث مجموعات للتدريب مع المؤقّت. ومع كل إجابة شرح وتلميح بالعربية.',
@@ -1225,7 +1225,7 @@ VIEWS.home = m => {
   $('#wSet', m).onclick = () => go('settings'); $('#wOut', m).onclick = () => Auth.signOut();
   $$('[data-dept]', m).forEach(b => b.onclick = () => {
     const d = DEPTS.find(x => x[0] === b.dataset.dept);
-    if (d[6] === 'gvx') { AU.stop(); Store.save(); location.href = 'gv/index.html'; return; }   // Grammar and Vocabulary has its own page
+    if (d[6] === 'gvx') { AU.stop(); Store.save(); location.href = 'gv/index.html'; return; }   // Language Usage has its own page
     go(d[6], d[6] === 'dept' ? { dp: d[0] } : {});
   });
   if (ENTER) { ENTER = false; setTimeout(() => RX.sfx('enter'), 180); }
@@ -1742,7 +1742,7 @@ VIEWS.teacher = m => {
     <li><b>Accounts (🔐):</b> the teacher signs in with a username and password; each student signs in with his name and a 4-digit PIN. Manage students, PINs, security and backups in ⚙️ Settings.</li>
     <li><b>Updates (🔄):</b> press 🔄 at the top to check for a new version. With automatic updates on, new versions install by themselves.</li>
     <li><b>Class mode (🧑‍🏫):</b> shows a Teacher card in every lesson with the Kagan structures and a teaching tip. Use it on the classroom screen.</li>
-    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels A1 to A2+; B1 to C2 are marked “Soon”), Shadowing, MAP Test, Grammar and Vocabulary (Levels A1 to C2) or STEP Preparation (30 mock exams). Reading and Writing, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”. Every department opens with a short introduction in English and Arabic.</li>
+    <li><b>Departments:</b> after sign-in, students choose a department: Listening and Speaking (Levels A1 to A2+; B1 to C2 are marked “Soon”), Shadowing, MAP Test, Language Usage (Levels A1 to C2) or STEP Preparation (30 mock exams). Reading and Writing, Phonics and Ghars (Wordline and Performing Art) are marked “Soon”. Every department opens with a short introduction in English and Arabic.</li>
     <li><b>Sign in with Google:</b> in the browser version, students can use Gmail or the school's Google e-mail after you add the sign-in key in ⚙️ Settings.</li>
     <li><b>Arabic support (ع):</b> in Listening and Speaking it is on by default in Levels A1 and A1+ and off in Levels A2 and A2+. Students can switch it for their level.</li>
     <li><b>Shadowing Studio (🎙️):</b> 5 steps — Listen &amp; Read, Echo, Shadow, Blind Shadow, Full Run — for every recording in the program, with word-by-word highlighting, speed control, recording, timing feedback and Arabic-speaker sound hints. Recordings stay on the device.</li>

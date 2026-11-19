@@ -1,4 +1,4 @@
-"""Grammar and Vocabulary department: brings the "English Pathway App" module (Strand D) into www/gv
+"""Language Usage department: brings the "English Pathway App" module (Strand D) into www/gv
 and fits it to From Zero To Hero.
 
     python3 -I tools/app/add_gv.py "<folder that holds the unpacked English Pathway App>"
@@ -39,13 +39,13 @@ for dp, dn, fn in os.walk(os.path.join(SRC, 'data')):
         assert s.startswith('PathwayData.put("' + rel[:-3] + '.json"'), rel
         s = re.sub(r'Level (\d+) \([A-C][12][ab+]?\)', lambda m: 'Level ' + LV[int(m.group(1))], s)
         if rel in ('data/strands.js', 'data/grammar_vocabulary/index.js'):
-            s = s.replace('"title":"Grammar & Vocabulary"', '"title":"Grammar and Vocabulary"')
+            s = s.replace('"title":"Language Usage"', '"title":"Language Usage"')
         wr(os.path.join(OUT, rel), s); n_data += 1
 assert not re.search(r'Level \d+ \(', rd(os.path.join(OUT, 'data/grammar_vocabulary/index.js')))
 
 # ---------------------------------------------------------------- core.js
 W = 'core.js'; s = rd(os.path.join(SRC, 'js', 'core.js'))
-s = one(s, '   © Mr. Waleed Yussuf. Shared by all four strand modules. */', '   Part of From Zero To Hero (Grammar and Vocabulary department). Designed by Waleed Youssef. */', 1, W)
+s = one(s, '   © Mr. Waleed Yussuf. Shared by all four strand modules. */', '   Part of From Zero To Hero (Language Usage department). Designed by Waleed Youssef. */', 1, W)
 s = one(s, """    if (location.protocol === 'file:') return viaScript();
     return fetch(path).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(j => (P._data[path] = j)).catch(viaScript);""", """    return viaScript();   // the .js mirrors load everywhere (web, Android, iPhone and the Windows app)""", 1, W)
@@ -98,9 +98,9 @@ assert not left, left
 # home: this department only, with a short introduction
 s = one(s, """      el('h1', null, 'English Pathway Programme'),
       el('p', null, 'Levels 1–12 (A1 to C2) • Four strands • Andalus International Schools – Taif'),
-      P.ar('برنامج المسار الإنجليزي – اثنا عشر مستوى في أربعة مسارات')));""", """      el('h1', null, 'Grammar and Vocabulary'),
+      P.ar('برنامج المسار الإنجليزي – اثنا عشر مستوى في أربعة مسارات')));""", """      el('h1', null, 'Language Usage'),
       el('p', null, 'Levels A1 to C2 • 72 units • 360 lessons'),
-      P.ar('القواعد والمفردات – من المستوى A1 إلى المستوى C2')));
+      P.ar('استخدام اللغة – من المستوى A1 إلى المستوى C2')));
     view.appendChild(el('section', { class: 'panel intro' }, el('span', { class: 'in-k' }, 'Introduction ', el('span', { class: 'ar', lang: 'ar' }, 'مقدمة')),
       el('p', null, 'This department gives you the rules and the words that every skill needs. Each lesson explains one point with clear examples in English and Arabic, then you practise it in activities and a game and finish with a short exit quiz. Take the Placement Test to find your level, or start at Level A1.'),
       P.ar('هذا القسم يعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس يشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم تتدرّب عليها في أنشطة ولعبة وتنهي الدرس باختبار قصير. أدِّ اختبار تحديد المستوى لتعرف مستواك، أو ابدأ من المستوى A1.'),
@@ -108,7 +108,7 @@ s = one(s, """      el('h1', null, 'English Pathway Programme'),
 s = one(s, "const S = P.store.get(), list = await getStrands();", "const S = P.store.get(), list = (await getStrands()).filter(x => x.enabled);", 1, W)
 s = one(s, "    view.appendChild(el('h2', null, 'Strands'));", "    view.appendChild(el('h2', null, 'Start here'));", 1, W)
 s = one(s, "const inner = [el('span', { class: 'tag' }, 'Strand ' + s.letter), el('div', { class: 'big' }, s.title), P.ar(s.title_ar),", "const inner = [el('span', { class: 'tag' }, 'Levels A1 → C2'), el('div', { class: 'big' }, 'All levels and units'), P.ar(s.title_ar),", 1, W)
-s = one(s, "el('div', { class: 'sub' }, 'Grammar & Vocabulary • 60 questions • find your level')", "el('div', { class: 'sub' }, 'Grammar and Vocabulary • 60 questions • find your level')", 1, W)
+s = one(s, "el('div', { class: 'sub' }, 'Language Usage • 60 questions • find your level')", "el('div', { class: 'sub' }, 'Language Usage • 60 questions • find your level')", 1, W)
 s = one(s, "el('h1', null, 'Strand ' + I._strand.letter + ': ' + I.title)", "el('h1', null, I.title)", 1, W)
 # teacher tools: for the teacher who is signed in to the main app (no separate PIN)
 s = one(s, """    view.append(crumbs(['Home', '#/'], ['Teacher']), el('h1', null, '👩‍🏫 Teacher Dashboard'), P.ar('لوحة المعلم'));
@@ -148,7 +148,7 @@ h1,h2,h3,.brand b,.big{font-family:'Baloo 2','Nunito',system-ui,sans-serif}
 wr(os.path.join(OUT, 'css', 'app.css'), css)
 
 # ---------------------------------------------------------------- page and bridge to the main app
-wr(os.path.join(OUT, 'host.js'), r"""/* Bridge between the Grammar and Vocabulary department and the main app (same device, same sign-in).
+wr(os.path.join(OUT, 'host.js'), r"""/* Bridge between the Language Usage department and the main app (same device, same sign-in).
    It reads who is signed in (the main app keeps that in localStorage), keeps the session awake while
    the student works here, and sends the visitor back to the sign-in page when nobody is signed in. */
 (function () {
@@ -176,8 +176,8 @@ wr(os.path.join(OUT, 'index.html'), """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>From Zero To Hero – Grammar and Vocabulary</title>
-<meta name="description" content="From Zero To Hero (English Language) – Grammar and Vocabulary, Levels A1 to C2. Andalus International Schools, Taif Boys. Designed by Waleed Youssef.">
+<title>From Zero To Hero – Language Usage</title>
+<meta name="description" content="From Zero To Hero (English Language) – Language Usage, Levels A1 to C2. Andalus International Schools, Taif Boys. Designed by Waleed Youssef.">
 <meta name="theme-color" content="#2E3074">
 <link rel="icon" href="../icons/icon-192.png">
 <link rel="stylesheet" href="../fonts.css">
@@ -186,7 +186,7 @@ wr(os.path.join(OUT, 'index.html'), """<!DOCTYPE html>
 <body>
 <header class="topbar">
   <a class="back" href="../index.html" title="Back to the departments">← Departments <span lang="ar" dir="rtl">الأقسام</span></a>
-  <a class="brand" href="#/"><img src="../img/andalus-shield.png" alt="Andalus International Schools"><span><b>Grammar and Vocabulary</b><small>From Zero To Hero · Andalus International Schools · Taif Boys</small></span></a>
+  <a class="brand" href="#/"><img src="../img/andalus-shield.png" alt="Andalus International Schools"><span><b>Language Usage</b><small>From Zero To Hero · Andalus International Schools · Taif Boys</small></span></a>
   <nav class="topnav" aria-label="Main">
     <a href="#/" data-nav="home">Home</a>
     <a href="#/cards" data-nav="cards">Word Cards <span id="dueBadge" class="badge" hidden></span></a>
@@ -197,7 +197,7 @@ wr(os.path.join(OUT, 'index.html'), """<!DOCTYPE html>
   <button id="arToggle" class="chip" type="button" title="Show or hide Arabic support">عربي</button>
 </header>
 <main id="app" tabindex="-1"><p class="loading">Loading…</p></main>
-<footer class="foot">From Zero To Hero (English Language) · Grammar and Vocabulary · Designed by Waleed Youssef · Andalus International Schools · Taif Boys</footer>
+<footer class="foot">From Zero To Hero (English Language) · Language Usage · Designed by Waleed Youssef · Andalus International Schools · Taif Boys</footer>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="host.js"></script>
 <script src="../sfx/reactions.js"></script>
