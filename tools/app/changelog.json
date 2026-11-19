@@ -1,4 +1,16 @@
 {
+ "1.14.0": {
+  "en": [
+   "New department: Phonics, with the book Phonics Made Clear (Grade 3): 40 parts in 11 units, each with its book pages and a recorded narration.",
+   "The Practice Book is interactive: 182 exercises (choose the answer, true or false, write the word, sort the words, dictation), checked with the book’s answer key, plus 10 unit reviews.",
+   "Fixed: the home page could fail to open after a student finished a whole STEP mock exam or a whole cursive page."
+  ],
+  "ar": [
+   "قسم جديد: الصوتيات، ويضم كتاب Phonics Made Clear للصف الثالث: 40 جزءًا في 11 وحدة، ولكل جزء صفحات الكتاب وتسجيل صوتي.",
+   "كتاب التدريب تفاعلي: 182 تمرينًا (اختيار الإجابة، صح أو خطأ، كتابة الكلمة، تصنيف الكلمات، الإملاء) تُصحَّح بمفتاح إجابات الكتاب، مع 10 مراجعات للوحدات.",
+   "إصلاح: كانت الصفحة الرئيسية قد لا تفتح بعد أن يُكمل الطالب اختبار STEP تجريبيًا كاملًا أو صفحة كاملة من الخط المتصل."
+  ]
+ },
  "1.13.0": {
   "en": [
    "New department: Cursive Handwriting. 77 practice pages (letters A to Z, joined letters and words), each with three steps: Watch, Trace and Write.",

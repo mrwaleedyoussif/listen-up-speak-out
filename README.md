@@ -36,3 +36,7 @@ Designed by Mr. Waleed Youssef. © 2026 Mr. Waleed Youssef. All rights reserved.
 ## Cursive Handwriting
 
 `www/hw.js` and `www/hw/data.js` (built by `tools/app/build_hw.py`): 77 practice pages (letters A–Z, joined letters, words) with three steps per item: Watch, Trace, Write. Writing is measured against the model's pen strokes (shape completed, staying on the line or matching the model, direction). Letter strokes come from the Hershey Script single-stroke font; the Hershey Fonts were originally created by Dr. A. V. Hershey while working at the U.S. National Bureau of Standards.
+
+## Phonics
+
+`www/ph.js`, `www/ph/index.js`, `www/ph/pg/` and `www/audio/phonics/` (built by `tools/app/build_phonics.py` from the two *Phonics Made Clear* PDFs and the 40 narration MP3s, which stay outside the repository): 40 parts in 11 units, each with its book pages, the recorded narration and the Practice Book exercises made interactive with the book's answer key.

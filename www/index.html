@@ -618,7 +618,7 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 }
 @media (prefers-reduced-motion:reduce){.lg,.lg-f,.lg-f::before,.lg-sheen,.bye img{animation:none!important}.brand .b-lg{transition:none}}
 /* ===== v1.11: four open departments, Soon levels ===== */
-@media (min-width:1001px){.depts.n4 .dept{grid-column:span 3}.depts.n4 .dept h3{font-size:1.32rem}.depts.n5 .dept{grid-column:span 4}.depts.n5 .dept:nth-child(n+4){grid-column:span 6}.depts.n6 .dept{grid-column:span 4}}
+@media (min-width:1001px){.depts.n4 .dept{grid-column:span 3}.depts.n4 .dept h3{font-size:1.32rem}.depts.n5 .dept{grid-column:span 4}.depts.n5 .dept:nth-child(n+4){grid-column:span 6}.depts.n6 .dept{grid-column:span 4}.depts.n7 .dept{grid-column:span 3}.depts.n7 .dept:nth-child(n+5){grid-column:span 4}.depts.n7 .dept h3{font-size:1.32rem}}
 .depts-soon{grid-template-columns:repeat(3,1fr)}
 @media (max-width:1000px){.depts-soon{grid-template-columns:repeat(2,1fr)}}
 .gcard.soonlv{background:linear-gradient(135deg,#8D97B4,#5C6787);cursor:default;min-height:150px;--b:#5C6787}
@@ -642,6 +642,8 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 <script src="step.js"></script>
 <script src="hw/data.js"></script>
 <script src="hw.js"></script>
+<script src="ph/index.js"></script>
+<script src="ph.js"></script>
 <script>
 'use strict';
 /* =========================================================
@@ -662,7 +664,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.13.0';
+const APP_VER = '1.14.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -1031,6 +1033,8 @@ const Nav = {
     if (v === 'map' || v === 'step') { go('home'); return true; }
     if (v === 'stepmock' || v === 'stepbook') { go('step'); return true; }
     if (v === 'hwp') { go('hw'); return true; }
+    if (v === 'phpart') { go('ph'); return true; }
+    if (v === 'ph') { go('home'); return true; }
     if (v === 'hw') { go('home'); return true; }
     if (v === 'steplesson' || (v === 'stepquiz' && S.sl === 'rev')) { go('stepbook', { sb: S.sb }); return true; }
     if (v === 'stepquiz') { go('steplesson', { sb: S.sb, su: S.su, sl: S.sl }); return true; }
@@ -1140,7 +1144,7 @@ const DEPTS = [
   ['gv', 'Language Usage', 'استخدام اللغة', 'Levels A1 → C2 · 360 lessons', '#9B6CF6', '#6D3BE0', 'gvx', 0],
   ['step', 'STEP Preparation', 'التحضير لاختبار STEP', '4 booklets · 132 lessons · 30 mock exams', '#12B5CB', '#0A7C96', 'step', 0],
   ['hw', 'Cursive Handwriting', 'الخط المتصل', 'Watch · Trace · Write · 77 pages', '#F2994A', '#D9480F', 'hw', 0],
-  ['ph', 'Phonics', 'الصوتيات', '', '#F0569C', '#C92671', 'dept', 1],
+  ['ph', 'Phonics', 'الصوتيات', 'Phonics Made Clear · 40 parts · audio', '#F0569C', '#C92671', 'ph', 0],
   ['ghars', 'Ghars', 'غرس', '', '#7CB518', '#3D7A0A', 'ghars', 1]
 ];
 const GHARS = [['wl', 'Wordline', '', '#12B5CB', '#0A7C96'], ['pa', 'Performing Art', 'الفنون الأدائية', '#F0569C', '#C92671']];
@@ -1167,9 +1171,9 @@ const INTRO = {
   hw: ['This department teaches you joined (cursive) handwriting, following the school cursive booklet: every capital and small letter, the common letter joins, and words for each letter. Each item has three steps. First watch the app write it, with a green dot where you start and arrows for the direction. Then trace over the model. Then write it alone on the lines. After each try the app shows your score, the parts you wrote correctly in green and the parts to fix in red.',
     'هذا القسم يعلّمك الخط المتصل وفق كتيّب الخط المتصل في المدرسة: كل الحروف الكبيرة والصغيرة، ووصلات الحروف الشائعة، وكلمات لكل حرف. لكل عنصر ثلاث خطوات: شاهد التطبيق وهو يكتب، مع نقطة خضراء لمكان البداية وأسهم للاتجاه، ثم تتبّع النموذج، ثم اكتبه وحدك على السطور. وبعد كل محاولة يعرض التطبيق درجتك، والأجزاء الصحيحة باللون الأخضر، والأجزاء التي تحتاج إلى تصحيح باللون الأحمر.',
     ['1 · Watch', '2 · Trace', '3 · Write', 'Score and feedback']],
-  ph: ['Phonics will teach you the sounds of English letters and letter groups, so that you can read new words and spell them correctly. You will hear each sound, say it, and join sounds together to make words.',
-    'قسم الصوتيات سيعلّمك أصوات الحروف الإنجليزية ومجموعات الحروف، لتقرأ الكلمات الجديدة وتكتبها كتابة صحيحة. ستسمع كل صوت وتنطقه، ثم تدمج الأصوات لتكوّن كلمات.',
-    ['Hear the sound', 'Say the sound', 'Blend sounds into words']],
+  ph: ['This department is the book Phonics Made Clear for Grade 3. It teaches the sounds of English letters and letter groups in 40 parts, from the alphabet and short vowels to syllables and long words. In each part, read the pages of the book and listen to the recording. Then do the practice exercises: the app checks your answers and shows the correct ones.',
+    'هذا القسم هو كتاب Phonics Made Clear للصف الثالث. يعلّمك أصوات الحروف الإنجليزية ومجموعات الحروف في 40 جزءًا، من الحروف الهجائية والحركات القصيرة إلى المقاطع والكلمات الطويلة. في كل جزء اقرأ صفحات الكتاب واستمع إلى التسجيل، ثم حُلّ تمارين التدريب: يصحّح التطبيق إجاباتك ويعرض الإجابات الصحيحة.',
+    ['Read the book pages', 'Listen to the recording', 'Practise and check']],
   ghars: ['Ghars will bring two programmes together in one place: Wordline and Performing Art. Each programme will have its own activities here.',
     'قسم غرس سيجمع برنامجين في مكان واحد: Wordline والفنون الأدائية. وسيكون لكل برنامج أنشطته الخاصة هنا.', []],
   wl: ['Wordline will be a programme about words: learning new words, saying them and using them.', 'برنامج عن الكلمات: تعلّم كلمات جديدة ونطقها واستخدامها.'],
@@ -1185,7 +1189,7 @@ const deptCard = ([id, en, ar, k, a, b, view, soon], i, meta, tx) => `
       ${k ? `<span class="d-k">${esc(k)}</span>` : ''}
       <h3>${esc(en)}</h3>
       ${ar ? `<span class="ar">${esc(ar)}</span>` : ''}${tx ? `<span class="d-in">${esc(tx[0])}</span><span class="d-in ar">${esc(tx[1])}</span>` : ''}
-      ${meta ? `<span class="d-meta">${meta.map(x => `<span>${x}</span>`).join('')}</span>` : ''}${view ? '<span class="d-go" aria-hidden="true">→</span>' : ''}
+      ${meta ? `<span class="d-meta">${[].concat(meta).map(x => `<span>${x}</span>`).join('')}</span>` : ''}${view ? '<span class="d-go" aria-hidden="true">→</span>' : ''}
     </button>`;
 let ENTER = false;   // set at sign-in: the home page then plays the entrance sound once
 
@@ -1216,7 +1220,7 @@ VIEWS.home = m => {
     </div>
   </section>
   <div class="section-title"><h2>Departments</h2><span class="ar" style="font-size:1.1rem;font-weight:800">الأقسام</span></div>
-  <section class="depts n${open.length}">${open.map((d, i) => deptCard(d, i, meta[d[0]] || (d[0] === 'step' && typeof STEPX !== 'undefined' ? STEPX.homeMeta() : d[0] === 'hw' && typeof HWX !== 'undefined' ? HWX.homeMeta() : ''))).join('')}</section>
+  <section class="depts n${open.length}">${open.map((d, i) => deptCard(d, i, meta[d[0]] || (d[0] === 'step' && typeof STEPX !== 'undefined' ? STEPX.homeMeta() : d[0] === 'hw' && typeof HWX !== 'undefined' ? HWX.homeMeta() : d[0] === 'ph' && typeof PHX !== 'undefined' ? PHX.homeMeta() : ''))).join('')}</section>
   <section class="depts-soon">${soon.map((d, i) => deptCard(d, i + open.length)).join('')}</section>
   <p class="soonmsg" id="soonMsg" role="status" aria-live="polite"></p>
   <div id="appBox"></div>
@@ -2775,7 +2779,7 @@ const Upd = {
     this.set('ready', { ver: this.ver || (this.info && this.info.version) || 'new' });
     if (this.auto()) this.safeApply(); else this.toast('✨ A new version is ready.', 'Update', () => this.apply(true));
   },
-  safe() { return ['home', 'ls', 'ghars', 'dept', 'step', 'stepmock', 'stepbook', 'steplesson', 'hw', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
+  safe() { return ['home', 'ls', 'ghars', 'dept', 'step', 'stepmock', 'stepbook', 'steplesson', 'hw', 'ph', 'grade', 'unit', 'signin', 'setup', 'settings', 'teacher', 'studio'].includes(S.view || 'home') && !Active.rec && (!AU.el || AU.el.paused) && !document.querySelector('.modal'); },
   safeApply() { if (this.kind() === 'web' && this.st === 'ready' && this.auto() && this.safe()) this.apply(true); },
   boot() {
     if (this.kind() === 'web') LSP_SW.onReady(() => this.webReady());
@@ -2945,7 +2949,7 @@ new MutationObserver(() => bidiFix(document)).observe(document.getElementById('a
 
 /* ---------- Boot ---------- */
 if (!D) { document.getElementById('app').innerHTML = '<div class="wrap"><p style="padding:40px">data.js is missing. Keep index.html, data.js and the audio folder together.</p></div>'; }
-else { if (typeof MAPX !== "undefined") MAPX.register(); if (typeof STEPX !== "undefined") STEPX.register(); if (typeof HWX !== "undefined") HWX.register(); Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
+else { if (typeof MAPX !== "undefined") MAPX.register(); if (typeof STEPX !== "undefined") STEPX.register(); if (typeof HWX !== "undefined") HWX.register(); if (typeof PHX !== "undefined") PHX.register(); Store.load(); Cfg.apply(); Auth.idleCheck(true); render(); window.addEventListener('load', () => Upd.boot()); }
 </script>
 <script src="pwa.js"></script>
 </body>
