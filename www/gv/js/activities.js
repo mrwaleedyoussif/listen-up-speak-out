@@ -267,7 +267,7 @@
     });
     let writing = null;
     if (opts.writing && opts.writing.task) {
-      wrap.appendChild(el('h2', null, 'Writing (10 marks)'));
+      wrap.appendChild(el('h2', null, 'Writing (' + (opts.writing.marks || 10) + ' marks)'));
       wrap.appendChild(el('div', { class: 'box mint' }, opts.writing.task));
       if (opts.writing.task_ar) wrap.appendChild(P.ar(opts.writing.task_ar, 'box sky'));
       writing = el('textarea', { rows: 8, 'aria-label': 'Your writing' });

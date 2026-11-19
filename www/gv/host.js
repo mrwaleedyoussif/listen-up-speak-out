@@ -16,6 +16,11 @@
   }
   ['pointerdown', 'keydown'].forEach(function (ev) { document.addEventListener(ev, touch, { capture: true, passive: true }); });
   document.addEventListener('DOMContentLoaded', function () {
+    if (/[?&]d=rw\b/.test(location.search)) {   // the same page serves the Reading and Writing department
+      document.title = 'From Zero To Hero – Reading and Writing';
+      var b = document.querySelector('.brand b'); if (b) b.textContent = 'Reading and Writing';
+      var f = document.querySelector('footer.foot'); if (f) f.textContent = f.textContent.replace('Language Usage', 'Reading and Writing');
+    }
     var w = document.getElementById('who'); if (w) { if (prof.name) w.textContent = '👤 ' + prof.name; else w.remove(); }
     if (window.GV_HOST.role !== 'teacher') { var t = document.querySelector('[data-nav="teacher"]'); if (t) t.remove(); }
   });

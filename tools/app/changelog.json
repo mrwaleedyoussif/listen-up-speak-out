@@ -1,4 +1,16 @@
 {
+ "1.16.0": {
+  "en": [
+   "Reading and Writing is open: Levels A1 to B2 (47 units, 235 lessons). Every unit has new words, close reading, a reading strategy, a writing skill and a writing workshop, plus a unit test.",
+   "New activities: find the evidence by tapping the sentence in the text, timed reading with words per minute, put the parts in order, and writing with a word count, a checklist and a model answer.",
+   "The higher levels of Reading and Writing are marked “Soon”."
+  ],
+  "ar": [
+   "قسم القراءة والكتابة متاح الآن: المستويات من A1 إلى B2 (47 وحدة و235 درسًا). في كل وحدة كلمات جديدة وقراءة متأنية واستراتيجية قراءة ومهارة كتابية وورشة كتابة، مع اختبار للوحدة.",
+   "أنشطة جديدة: إيجاد الدليل بالضغط على الجملة في النص، والقراءة الموقوتة مع عدد الكلمات في الدقيقة، وترتيب الأجزاء، والكتابة مع عدّاد كلمات وقائمة تحقق وإجابة نموذجية.",
+   "المستويات الأعلى في القراءة والكتابة عليها علامة «قريبًا»."
+  ]
+ },
  "1.15.0": {
   "en": [
    "Three new departments marked “Soon”: IELTS Preparation, SAT Preparation and GAT Preparation.",

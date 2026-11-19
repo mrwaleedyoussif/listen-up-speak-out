@@ -6,14 +6,21 @@
 (function () {
   const P = window.Pathway, el = P.el;
   const app = () => document.getElementById('app');
-  const LS_NAMES = { 1: 'Grammar discovery', 2: 'Grammar practice', 3: 'Vocabulary in depth', 4: 'Mechanics & editing', 5: 'Language in use & review' };
-  const LS_AR = { 1: 'اكتشاف القاعدة', 2: 'تدريب على القاعدة', 3: 'المفردات بعمق', 4: 'الترقيم والتحرير', 5: 'استخدام اللغة والمراجعة' };
+  const LS_RW = /[?&]d=rw\b/.test(location.search);   // the five lessons of a unit are named by department
+  const LS_NAMES = LS_RW ? { 1: 'Word power', 2: 'Close reading', 3: 'Reading strategy', 4: 'Writing skill', 5: 'Writing workshop' } : { 1: 'Grammar discovery', 2: 'Grammar practice', 3: 'Vocabulary in depth', 4: 'Mechanics & editing', 5: 'Language in use & review' };
+  const LS_AR = LS_RW ? { 1: 'قوة الكلمات', 2: 'القراءة المتأنية', 3: 'استراتيجية القراءة', 4: 'مهارة كتابية', 5: 'ورشة الكتابة' } : { 1: 'اكتشاف القاعدة', 2: 'تدريب على القاعدة', 3: 'المفردات بعمق', 4: 'الترقيم والتحرير', 5: 'استخدام اللغة والمراجعة' };
   const BANDS = [[8, 1], [14, 2], [19, 3], [24, 4], [29, 5], [34, 6], [39, 7], [44, 8], [49, 9], [53, 10], [57, 11], [60, 12]];
 
   /* ---------------------------------------------------------- data access */
+  /* one page, two departments: Language Usage (default) and Reading and Writing (?d=rw) */
+  const RW = /[?&]d=rw\b/.test(location.search);
+  const DEPT = RW ? { sid: 'reading_writing', name: 'Reading and Writing', line: 'Levels A1 to B2 • 47 units • 235 lessons', line_ar: 'القراءة والكتابة – من المستوى A1 إلى المستوى B2',
+    tag: 'Levels A1 → B2', card: '8 levels • 47 units • 235 lessons', hero: 'Word power • close reading • reading strategies • writing skills • writing workshop', placement: false }
+    : { sid: 'grammar_vocabulary', name: 'Language Usage', line: 'Levels A1 to C2 • 72 units • 360 lessons', line_ar: 'استخدام اللغة – من المستوى A1 إلى المستوى C2',
+      tag: 'Levels A1 → C2', card: '12 levels • 72 units • 360 lessons', hero: 'Language Usage • MAP-style items at every level • SAT-style items from Level 8', placement: true };
   let strands = null;
   const idx = {};
-  async function getStrands() { if (!strands) strands = await P.load('data/strands.json'); return strands; }
+  async function getStrands() { if (!strands) { strands = await P.load('data/strands.json'); strands.forEach(x => { x.enabled = x.enabled && x.id === DEPT.sid; }); } return strands; }
   async function getIndex(sid) {
     if (idx[sid]) return idx[sid];
     const st = (await getStrands()).find(s => s.id === sid);
@@ -41,10 +48,14 @@
     const S = P.store.get(), list = (await getStrands()).filter(x => x.enabled);
     const view = el('div');
     view.appendChild(el('section', { class: 'hero' },
-      el('h1', null, 'Language Usage'),
-      el('p', null, 'Levels A1 to C2 • 72 units • 360 lessons'),
-      P.ar('استخدام اللغة – من المستوى A1 إلى المستوى C2')));
-    view.appendChild(el('section', { class: 'panel intro' }, el('span', { class: 'in-k' }, 'Introduction ', el('span', { class: 'ar', lang: 'ar' }, 'مقدمة')),
+      el('h1', null, DEPT.name),
+      el('p', null, DEPT.line),
+      P.ar(DEPT.line_ar)));
+    if (RW) view.appendChild(el('section', { class: 'panel intro' }, el('span', { class: 'in-k' }, 'Introduction ', el('span', { class: 'ar', lang: 'ar' }, 'مقدمة')),
+      el('p', null, 'This department takes you from short, simple texts to clear writing of your own. Every unit has five lessons: the new words, a close reading of the main text, a reading strategy with a second text, a writing skill, and a writing workshop where you plan, write and improve your own piece. Levels A1 to B2 are open; the higher levels are coming soon.'),
+      P.ar('هذا القسم يأخذك من النصوص القصيرة البسيطة إلى كتابة واضحة بقلمك. في كل وحدة خمسة دروس: الكلمات الجديدة، ثم قراءة متأنية للنص الرئيس، ثم استراتيجية قراءة مع نص ثانٍ، ثم مهارة كتابية، ثم ورشة كتابة تخطط فيها وتكتب وتحسّن نصك. المستويات من A1 إلى B2 متاحة، والمستويات الأعلى قريبًا.'),
+      el('ul', { class: 'in-pts' }, ['Read and understand', 'Find the evidence', 'Plan, write and improve'].map(x => el('li', null, x)))));
+    else view.appendChild(el('section', { class: 'panel intro' }, el('span', { class: 'in-k' }, 'Introduction ', el('span', { class: 'ar', lang: 'ar' }, 'مقدمة')),
       el('p', null, 'This department gives you the rules and the words that every skill needs. Each lesson explains one point with clear examples in English and Arabic, then you practise it in activities and a game and finish with a short exit quiz. Take the Placement Test to find your level, or start at Level A1.'),
       P.ar('هذا القسم يعطيك القواعد والكلمات التي تحتاجها كل مهارة. كل درس يشرح نقطة واحدة بأمثلة واضحة بالإنجليزية والعربية، ثم تتدرّب عليها في أنشطة ولعبة وتنهي الدرس باختبار قصير. أدِّ اختبار تحديد المستوى لتعرف مستواك، أو ابدأ من المستوى A1.'),
       el('ul', { class: 'in-pts' }, ['12 steps from A1 to C2', '5 lessons in each unit', 'Word Cards for review'].map(x => el('li', null, x)))));
@@ -61,15 +72,15 @@
     view.appendChild(el('h2', null, 'Start here'));
     const g = el('div', { class: 'grid' });
     list.forEach(s => {
-      const inner = [el('span', { class: 'tag' }, 'Levels A1 → C2'), el('div', { class: 'big' }, 'All levels and units'), P.ar(s.title_ar),
-        el('div', { class: 'sub' }, s.enabled ? '12 levels • 72 units • 360 lessons' : 'Module not installed yet – it plugs in here.')];
+      const inner = [el('span', { class: 'tag' }, DEPT.tag), el('div', { class: 'big' }, 'All levels and units'), P.ar(s.title_ar),
+        el('div', { class: 'sub' }, s.enabled ? DEPT.card : 'Module not installed yet – it plugs in here.')];
       g.appendChild(s.enabled ? el('a', { class: 'card strand', href: base(s.id), style: { '--c': s.color } }, inner) : el('div', { class: 'card strand off', style: { '--c': s.color } }, inner));
     });
     view.appendChild(g);
     view.appendChild(el('h2', { style: { marginTop: '20px' } }, 'Quick start'));
     const due = P.srs.due().length;
     view.appendChild(el('div', { class: 'grid' },
-      el('a', { class: 'card', href: base('grammar_vocabulary') + '/placement' }, el('div', { class: 'big' }, '🧭 Placement Test'), el('div', { class: 'sub' }, 'Language Usage • 60 questions • find your level'), P.ar('اختبار تحديد المستوى')),
+      !DEPT.placement ? null : el('a', { class: 'card', href: base('grammar_vocabulary') + '/placement' }, el('div', { class: 'big' }, '🧭 Placement Test'), el('div', { class: 'sub' }, 'Language Usage • 60 questions • find your level'), P.ar('اختبار تحديد المستوى')),
       el('a', { class: 'card', href: '#/cards' }, el('div', { class: 'big' }, '🃏 Word Cards'), el('div', { class: 'sub' }, due + ' card(s) to review today'), P.ar('بطاقات المفردات')),
       el('a', { class: 'card', href: '#/progress' }, el('div', { class: 'big' }, '📈 My Progress'), el('div', { class: 'sub' }, 'Lessons, quizzes and tests'), P.ar('تقدّمي'))));
     return view;
@@ -80,15 +91,16 @@
     setFonts(0);
     const I = await getIndex(sid), view = el('div');
     view.append(crumbs(['Home', '#/'], [I.title]),
-      el('section', { class: 'hero' }, el('h1', null, I.title), el('p', null, 'Language Usage • MAP-style items at every level • SAT-style items from Level 8'), P.ar(I._strand.title_ar)));
+      el('section', { class: 'hero' }, el('h1', null, I.title), el('p', null, DEPT.hero), P.ar(I._strand.title_ar)));
     const g = el('div', { class: 'grid' });
     I.levels.forEach(L => {
       const d = levelDone(I, L.level);
+      if (!L.units.length) { g.appendChild(el('div', { class: 'card', style: { opacity: '.6' } }, el('span', { class: 'tag' }, 'Soon · قريبًا'), el('div', { class: 'big' }, P.lvs(L.level)), el('div', { class: 'sub' }, 'This level is being prepared.'))); return; }
       g.appendChild(el('a', { class: 'card', href: base(sid) + '/L' + L.level },
         el('span', { class: 'tag' }, 'Level'), el('div', { class: 'big' }, P.lvs(L.level)),
-        el('div', { class: 'sub' }, L.units.map(u => u.theme).slice(0, 3).join(' • ') + ' …'), bar(d, 30), el('div', { class: 'sub' }, d + ' / 30 lessons')));
+        el('div', { class: 'sub' }, L.units.map(u => u.theme).slice(0, 3).join(' • ') + ' …'), bar(d, L.units.length * 5), el('div', { class: 'sub' }, d + ' / ' + L.units.length * 5 + ' lessons')));
     });
-    view.append(g, el('div', { class: 'row', style: { marginTop: '16px' } }, el('a', { class: 'btn alt', href: base(sid) + '/placement' }, '🧭 Placement Test')));
+    view.append(g); if (DEPT.placement) view.append(el('div', { class: 'row', style: { marginTop: '16px' } }, el('a', { class: 'btn alt', href: base(sid) + '/placement' }, '🧭 Placement Test')));
     return view;
   }
 
@@ -111,8 +123,7 @@
       g.appendChild(el('a', { class: 'card', href: base(sid) + '/L' + lv + '/U' + U.unit },
         el('span', { class: 'tag' }, 'Unit ' + U.unit), el('div', { class: 'big' }, U.theme), P.ar(U.theme_ar),
         el('div', { class: 'sub' }, U.eq), bar(d, 5), el('div', { class: 'sub' }, d + ' / 5 lessons • ' + U.words + ' words')));
-      if (U.unit === 3) g.appendChild(testCard('MID'));
-      if (U.unit === 6) g.appendChild(testCard('END'));
+      [[3, 'MID'], [6, 'END']].forEach(([k, kind]) => { const c = U.unit === k && testCard(kind); if (c) g.appendChild(c); });
     });
     view.appendChild(g);
     return view;
@@ -126,7 +137,7 @@
     view.append(crumbs(['Home', '#/'], [I.title, base(sid)], [P.lv(lv), base(sid) + '/L' + lv], ['Unit ' + u]),
       el('section', { class: 'hero' }, el('h1', null, 'Unit ' + u + ': ' + J.theme), P.ar(J.theme_ar),
         el('p', null, el('b', null, 'Essential question: '), J.essential_question), P.ar(J.essential_question_ar)),
-      J.can_do ? el('div', { class: 'box mint' }, el('b', null, 'I can… '), J.can_do.replace(/^I can /, ''), P.ar(J.can_do_ar)) : null);
+      J.can_do ? el('div', { class: 'box mint' }, el('b', null, 'I can… '), J.can_do.replace(/^I can /, ''), P.ar(J.can_do_ar)) : '');
     const g = el('div', { class: 'grid' });
     J.lessons.forEach((L, i) => {
       const st = S.lessons[L.id] || {};
@@ -165,6 +176,7 @@
     if (tab === 'video') body.appendChild(videoTab(L));
     if (tab === 'practice') {
       const p = el('div', { class: 'panel' });
+      L.texts.forEach((t, i) => p.appendChild(el('details', { class: 'box sky', open: i === 0 && L.texts.length === 1 ? '' : null, style: { marginBottom: '12px' } }, el('summary', null, el('b', null, '📖 Read the text again: ' + t.title)), el('div', { class: 'pre', style: { fontSize: '1.05rem', marginTop: '8px' } }, t.body))));
       L.activities.forEach(a => p.appendChild(P.renderActivity(a, { onScore: (id, r, ans, tot) => { st.practice[id] = [r, ans, tot]; P.store.save(); if (ans === tot) { P.addXP(r); P.toast('Activity complete: ' + r + '/' + tot); } } })));
       body.appendChild(p);
     }
@@ -246,7 +258,7 @@
     view.append(crumbs(['Home', '#/'], [I.title, base(sid)], [P.lv(lv), base(sid) + '/L' + lv], ['Unit ' + u, base(sid) + '/L' + lv + '/U' + u], ['Unit Test']),
       el('h1', null, 'Unit Test: ' + J.theme), P.ar('اختبار الوحدة'));
     const p = el('div', { class: 'panel' });
-    p.appendChild(P.renderQuiz(J.unit_test, { onSubmit: (score, total) => { save(S, code, score, total, 'unit'); P.log('test', code, { score, total }); } }));
+    p.appendChild(P.renderQuiz(J.unit_test, { writing: J.unit_writing, onSubmit: (score, total) => { save(S, code, score, total, 'unit'); P.log('test', code, { score, total }); } }));
     view.appendChild(p);
     return view;
   }
@@ -384,10 +396,10 @@
         el('p', null, el('span', { class: 'pill ok' }, '★ ' + (S.xp || 0) + ' XP'), '  Lessons completed: ', el('b', null, sm.done), '  •  Exit-quiz average: ', el('b', null, sm.quizAvg === null ? '—' : sm.quizAvg + '%'),
           S.placement ? ['  •  Placement: ', el('b', null, P.lv(S.placement.level))] : null)));
     try {
-      const I = await getIndex('grammar_vocabulary');
+      const I = await getIndex(DEPT.sid);
       const g = el('div', { class: 'grid' });
-      I.levels.forEach(L => { const d = levelDone(I, L.level); g.appendChild(el('a', { class: 'card', href: base('grammar_vocabulary') + '/L' + L.level }, el('b', null, P.lv(L.level)), bar(d, 30), el('div', { class: 'sub' }, d + ' / 30 lessons'))); });
-      view.append(el('h2', null, 'Language Usage'), g);
+      I.levels.filter(L => L.units.length).forEach(L => { const d = levelDone(I, L.level); g.appendChild(el('a', { class: 'card', href: base(DEPT.sid) + '/L' + L.level }, el('b', null, P.lv(L.level)), bar(d, L.units.length * 5), el('div', { class: 'sub' }, d + ' / ' + L.units.length * 5 + ' lessons'))); });
+      view.append(el('h2', null, DEPT.name), g);
     } catch (e) { /* strand not installed */ }
     const tl = el('ul', { class: 'clean' });
     Object.entries(S.tests).sort((a, b) => b[1].ts - a[1].ts).forEach(([k, t]) => tl.appendChild(el('li', null, el('span', { class: 'pill ' + P.band(t.pct) }, t.pct + '%'), ' ', k, ' – best of ' + t.attempts + ' attempt(s)')));

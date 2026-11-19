@@ -23,7 +23,7 @@ self.addEventListener('fetch', e => {
   if (u.origin !== location.origin) return;
   if (u.pathname.endsWith('/version.json')) return;   // always from the network: it says which version is newest
   if (u.pathname.endsWith('.mp3')) { e.respondWith(audio(r)); return; }
-  if (/\/gv\/data\/grammar_vocabulary\/(units|tests)\//.test(u.pathname) || /\/ph\/pg\//.test(u.pathname)) { e.respondWith(lazy(r)); return; }
+  if (/\/gv\/data\/(grammar_vocabulary|reading_writing)\/(units|tests)\//.test(u.pathname) || /\/ph\/pg\//.test(u.pathname)) { e.respondWith(lazy(r)); return; }
   e.respondWith(shell(r));
 });
 

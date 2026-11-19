@@ -40,3 +40,7 @@ Designed by Mr. Waleed Youssef. © 2026 Mr. Waleed Youssef. All rights reserved.
 ## Phonics
 
 `www/ph.js`, `www/ph/index.js`, `www/ph/pg/` and `www/audio/phonics/` (built by `tools/app/build_phonics.py` from the two *Phonics Made Clear* PDFs and the 40 narration MP3s, which stay outside the repository): 40 parts in 11 units, each with its book pages, the recorded narration and the Practice Book exercises made interactive with the book's answer key.
+
+## Reading and Writing
+
+Served by the department page in `www/gv` (shared with Language Usage; `gv/index.html?d=rw`). Data: `www/gv/data/reading_writing/` built by `tools/app/build_rw.py` from the English Pathway unit files (kept outside the repository); page changes in `tools/app/patch_v116.py`; the strand's own activity types are in `www/gv/js/rw.js`. Levels 1–8 (47 units, 235 lessons); levels 9–12 are listed as “Soon”.
