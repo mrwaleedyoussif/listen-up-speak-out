@@ -1,3 +1,4 @@
+const LVN = g => { try { return lvs(+g); } catch (e) { return ({ 3: 'A1', 4: 'A1+', 5: 'A2', 6: 'A2+' })[+g] || (+g - 1); } };   // the level's name, as in the rest of the app
 /* =====================================================================
    From Zero To Hero — installable web app (PWA) helper
    • registers the service worker (offline app + cached audio)
@@ -144,7 +145,7 @@
       const rows = el.querySelector('#dlRows'); if (!rows) return;
       rows.innerHTML = Object.keys(files.grades).map(g => {
         const F = files.grades[g];
-        return `<div class="dlrow" data-dlg="${g}"><b>Level ${g - 1}</b><span class="dlbar"><i></i></span><span class="st"></span>
+        return `<div class="dlrow" data-dlg="${g}"><b>Level ${LVN(g)}</b><span class="dlbar"><i></i></span><span class="st"></span>
           <span class="muted" style="font-size:.85rem">${MB(F.bytes)}</span>
           ${jobs[g] ? `<button class="btn sm sec" data-dlx="${g}">Stop</button>` : (counts[g] || 0) >= F.files.length
             ? `<button class="btn sm sec" data-dlr="${g}">Remove</button>`
@@ -153,7 +154,7 @@
       Object.keys(files.grades).forEach(paint);
       rows.querySelectorAll('[data-dl]').forEach(b => b.onclick = () => download(b.dataset.dl));
       rows.querySelectorAll('[data-dlx]').forEach(b => b.onclick = () => { jobs[b.dataset.dlx].cancel = true; });
-      rows.querySelectorAll('[data-dlr]').forEach(b => b.onclick = () => modal(`<h3>Remove Level ${b.dataset.dlr - 1} audio?</h3><p>Lessons will need the internet again for this level.</p>`, () => remove(b.dataset.dlr), 'Remove'));
+      rows.querySelectorAll('[data-dlr]').forEach(b => b.onclick = () => modal(`<h3>Remove Level ${LVN(b.dataset.dlr)} audio?</h3><p>Lessons will need the internet again for this level.</p>`, () => remove(b.dataset.dlr), 'Remove'));
     }).catch(() => { const rows = el.querySelector('#dlRows'); if (rows) rows.innerHTML = '<p class="muted">Offline audio is not available in this browser.</p>'; });
   }
   window.LSP_PWA = { box };

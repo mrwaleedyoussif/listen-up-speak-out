@@ -155,11 +155,11 @@ const HWX = (() => {
 
   /* ---------- views ---------- */
   V.hw = m => {
-    stop(); const L = lessons(), parts = [['Home', () => go('home')], ['Cursive Handwriting']];
+    stop(); const L = lessons(), parts = [['Home', () => go('home')], ['Ghars', () => go('ghars')], ['Wordline', () => go('wl')], ['Cursive Handwriting']];
     const sec = (k, h, ar, note) => { const ls = L.filter(x => x.kind === k); return `<h2 style="margin:22px 0 0">${h} <span class="ar" style="font-size:.8em">${ar}</span></h2><p class="muted" style="margin:.2rem 0 0">${note} · ${ls.filter(lessonDone).length}/${ls.length} done</p>
       <section class="hw-grid">${ls.map(x => { const st = lessonStars(x); return `<button class="hw-tile${lessonDone(x) ? ' done' : ''}" data-hl="${x.id}"><canvas data-th="${esc(x.show)}"></canvas><b>${esc(k === 'L' ? x.t.replace('Letter ', '') : k === 'J' ? x.items.join(' · ') : x.t.replace('Words: ', ''))}</b><small>${prog(x.id) ? starTxt(st) : ''}</small></button>`; }).join('')}</section>`; };
     m.innerHTML = crumbs(parts) + `
-    <section class="lhead dhead" style="--a:${A};--b:${B}"><span class="d-ic">✍️</span><div><span class="k">Department · 26 letters · ${L.filter(x => x.kind === 'J').length} joined-letter pages · 104 words</span><h1>Cursive Handwriting <span class="ar" style="color:#fff;font-size:.8em">الخط المتصل</span></h1></div></section>
+    <section class="lhead dhead" style="--a:${A};--b:${B}"><span class="d-ic">✍️</span><div><span class="k">Ghars · Wordline · 26 letters · ${L.filter(x => x.kind === 'J').length} joined-letter pages · 104 words</span><h1>Cursive Handwriting <span class="ar" style="color:#fff;font-size:.8em">الخط المتصل</span></h1></div></section>
     ${typeof introCard === 'function' ? introCard('hw') : ''}
     ${sec('L', '🔤 Letters', 'الحروف', 'Capital and small letters, A to Z')}${sec('J', '🔗 Joined letters', 'الحروف الموصولة', 'How two or three letters join')}${sec('W', '📝 Words', 'الكلمات', 'Four words for every letter')}`;
     bindCrumbs(m, parts);
@@ -174,7 +174,7 @@ const HWX = (() => {
     stop(); const L = les(S.hk); if (!L) return go('hw');
     const idx = Math.min(S.hi || 0, L.items.length - 1), text = L.items[idx], mode = S.hm || 'v', p = prog(L.id);
     const all = lessons(), li = all.indexOf(L), nextL = all[li + 1];
-    const parts = [['Home', () => go('home')], ['Cursive Handwriting', () => go('hw')], [L.t]];
+    const parts = [['Home', () => go('home')], ['Wordline', () => go('wl')], ['Cursive Handwriting', () => go('hw')], [L.t]];
     const STEPS = [['v', '1 · Watch 👀', 'شاهد', 'See where to start and which way to go'], ['t', '2 · Trace ✏️', 'تتبّع', 'Write over the grey model'], ['w', '3 · Write 📝', 'اكتب', 'Write it alone on the lines']];
     m.innerHTML = crumbs(parts) + `
     <section class="lhead dhead" style="--a:${A};--b:${B}"><span class="d-ic">✍️</span><div><span class="k">Cursive Handwriting · ${L.kind === 'L' ? 'Letters' : L.kind === 'J' ? 'Joined letters' : 'Words'}</span><h1>${esc(L.t)}</h1></div></section>
