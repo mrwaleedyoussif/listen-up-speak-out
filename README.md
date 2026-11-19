@@ -32,3 +32,7 @@ Local commands (Node 22, Python 3):
 - `npm run sync`: copy `www` into the Android and iOS projects (then open them in Android Studio or Xcode).
 
 Designed by Mr. Waleed Youssef. © 2026 Mr. Waleed Youssef. All rights reserved.
+
+## Cursive Handwriting
+
+`www/hw.js` and `www/hw/data.js` (built by `tools/app/build_hw.py`): 77 practice pages (letters A–Z, joined letters, words) with three steps per item: Watch, Trace, Write. Writing is measured against the model's pen strokes (shape completed, staying on the line or matching the model, direction). Letter strokes come from the Hershey Script single-stroke font; the Hershey Fonts were originally created by Dr. A. V. Hershey while working at the U.S. National Bureau of Standards.

@@ -1,12 +1,16 @@
 {
- "version": "1.12.2",
+ "version": "1.13.0",
  "date": "2026-11-19",
  "notes": {
   "en": [
-   "The Grammar and Vocabulary department is now called Language Usage."
+   "New department: Cursive Handwriting. 77 practice pages (letters A to Z, joined letters and words), each with three steps: Watch, Trace and Write.",
+   "The app shows where each letter starts and which way to go, then scores your tracing and your writing and marks correct parts in green and parts to fix in red.",
+   "The Arabic name of the Ghars department is corrected to «غرس»."
   ],
   "ar": [
-   "قسم «القواعد والمفردات» أصبح اسمه «استخدام اللغة»."
+   "قسم جديد: الخط المتصل. 77 صفحة تدريب (الحروف من A إلى Z والحروف الموصولة والكلمات)، ولكل عنصر ثلاث خطوات: شاهد، تتبّع، اكتب.",
+   "يوضّح التطبيق مكان بداية كل حرف واتجاه الكتابة، ثم يقيّم التتبّع والكتابة ويلوّن الأجزاء الصحيحة بالأخضر والأجزاء التي تحتاج إلى تصحيح بالأحمر.",
+   "تصحيح الاسم العربي لقسم Ghars إلى «غرس»."
   ]
  },
  "files": {}
