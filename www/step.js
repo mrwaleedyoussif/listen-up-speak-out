@@ -137,7 +137,7 @@ const STEPX = (() => {
     const pal = `<div class="st-pal">${qs.map(q => `<button data-go="${q.n}" class="${done ? (A[q.n] === q.k ? 'ok' : 'no') : (A[q.n] != null ? 'a' : '')}${P.q.includes(q) ? ' cur' : ''}" title="Question ${q.n}">${q.n}</button>`).join('')}</div>`;
     const g = P.g;
     const lead = sc.id === 'L' ? `<div class="card st-aud" style="margin-top:14px"><span class="ic">🎧</span><div><b>Recording ${g.rec}</b>${done ? ` · ${esc(g.t)}` : ''}<br><span class="muted">${done ? 'Listen again while you read the script.' : 'Read the questions first. In the real test each recording is played once.'}</span></div>
-        <audio controls preload="none" src="audio/step/${g.a}.mp3"></audio>${done ? `<details class="st-scr" style="flex:1 1 100%"><summary>📜 Script <span class="ar">نص التسجيل</span></summary>${g.sc.map(l => `<p>${esc(l)}</p>`).join('')}</details>` : ''}</div>` : '';
+        <audio controls controlslist="nodownload" preload="none" src="audio/step/${g.a}.mp3"></audio>${done ? `<details class="st-scr" style="flex:1 1 100%"><summary>📜 Script <span class="ar">نص التسجيل</span></summary>${g.sc.map(l => `<p>${esc(l)}</p>`).join('')}</details>` : ''}</div>` : '';
     const qsHTML = `${g.i && sc.id === 'S' && P.q[0] === g.q[0] ? `<p class="note" style="margin-top:14px"><b>${esc(g.i)}</b></p>` : ''}${P.q.map(q => qHTML(q, A, done, !!g.err)).join('')}`;
     const body = sc.id === 'R' ? `<div class="st-split"><aside class="card st-pass"><span class="pill">Passage ${pi + 1} of ${pages.length}</span><h3 style="margin:.4rem 0 0">${esc(g.t)}</h3>${g.p.map((p, i) => `<p><b>[${i + 1}]</b> ${esc(p)}</p>`).join('')}</aside><div>${qsHTML}</div></div>` : lead + qsHTML;
     m.innerHTML = crumbs(parts) + `
