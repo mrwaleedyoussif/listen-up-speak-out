@@ -110,6 +110,7 @@ const LVN = g => { try { return lvs(+g); } catch (e) { return ({ 3: 'A1', 4: 'A1
   /* ---------- the home-page box ---------- */
   function redraw() { if (lastBox && lastBox.isConnected) box(lastBox); }
   function links() {
+    return '';   // the Android and Windows apps are no longer offered
     return `<div class="approw">
       <a class="btn sec" href="${REL}" target="_blank" rel="noopener">🤖 Android app</a>
       <a class="btn sec" href="${REL}" target="_blank" rel="noopener">🪟 Windows app</a>
@@ -128,7 +129,7 @@ const LVN = g => { try { return lvs(+g); } catch (e) { return ({ 3: 'A1', 4: 'A1
     lastBox = el;
     if (!el || PLAT !== 'web') { if (el) el.innerHTML = ''; return; }
     if (!HTTP) {   // offline ZIP folder opened from the computer
-      el.innerHTML = `<section class="card appbox"><h3>📲 Get the app</h3><p style="margin:.3rem 0 0">Install From Zero To Hero on tablets, phones and computers.</p>${links()}</section>`;
+      el.innerHTML = '';
       return;
     }
     el.innerHTML = `<section class="card appbox">
@@ -149,7 +150,7 @@ const LVN = g => { try { return lvs(+g); } catch (e) { return ({ 3: 'A1', 4: 'A1
           <span class="muted" style="font-size:.85rem">${MB(F.bytes)}</span>
           ${jobs[g] ? `<button class="btn sm sec" data-dlx="${g}">Stop</button>` : (counts[g] || 0) >= F.files.length
             ? `<button class="btn sm sec" data-dlr="${g}">Remove</button>`
-            : `<button class="btn sm" data-dl="${g}">⬇️ Download</button>`}</div>`;
+            : `<button class="btn sm" data-dl="${g}">💾 Save offline</button>`}</div>`;
       }).join('');
       Object.keys(files.grades).forEach(paint);
       rows.querySelectorAll('[data-dl]').forEach(b => b.onclick = () => download(b.dataset.dl));
