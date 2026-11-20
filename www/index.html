@@ -625,6 +625,13 @@ body.onauth .ptile:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 10p
 .gcard.soonlv .em{display:none}
 .gcard.soonlv .meta{font-size:.86rem;opacity:.95}
 .soonnote{margin-left:8px;background:#EEF0F7;color:#4B5574;font-weight:800}
+.pdfv{position:fixed;inset:0;z-index:9999;background:rgba(20,22,40,.96);display:flex;flex-direction:column;-webkit-user-select:none;user-select:none}
+.pdfv-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;color:#fff;background:#2E3074}.pdfv-bar b{flex:1;font-size:1rem}.pdfv-n{font-size:.85rem;opacity:.8}
+.pdfv-pages{flex:1;overflow:auto;padding:14px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.pdfv-pg{width:100%;max-width:900px;background:#fff;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.35);min-height:200px;position:relative}
+.pdfv-pg canvas{display:block;width:100%;height:auto;border-radius:6px;pointer-events:none}
+.pdfv-pages .muted{color:#ccd}
+@media print{.pdfv{display:none!important}}
 </style>
 </head>
 <body>
@@ -664,7 +671,7 @@ const picKey = e => [...String(e || '')].map(c => c.codePointAt(0).toString(16))
 const pic = (e, cls) => { const k = picKey(e); return PICS.has(k) ? `<img class="${cls || 'pic'}" src="img/pics/${k}.webp" alt="" draggable="false" loading="lazy">` : `<span class="emo">${e || '🔤'}</span>`; };
 
 /* ---------- Edition / platform ---------- */
-const APP_VER = '1.16.0';
+const APP_VER = '1.17.0';
 const PLAT = (() => { try { const C = window.Capacitor; if (C && C.isNativePlatform && C.isNativePlatform()) return C.getPlatform(); } catch (e) {} return /Electron\//.test(navigator.userAgent) ? 'electron' : 'web'; })();
 const NATIVE = PLAT === 'android' || PLAT === 'ios';      // phone/tablet app (Capacitor)
 document.documentElement.dataset.plat = PLAT;
@@ -672,8 +679,10 @@ const copyText = t => (navigator.clipboard && window.isSecureContext ? navigator
   const ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;top:-1000px;opacity:0';
   document.body.appendChild(ta); ta.select(); let r = false; try { r = document.execCommand('copy'); } catch (e) {} ta.remove(); r ? ok() : no();
 }));
+/* Downloads are switched off: files are view-only (results can still be copied). */
+const NODL = true;
 function saveFile(name, text, type) {
-  if (NATIVE || window.LSP_SPRITES) return false;
+  if (NODL || NATIVE || window.LSP_SPRITES) return false;
   try { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; document.body.appendChild(a); a.click(); a.remove(); return true; } catch (e) { return false; }
 }
 
@@ -1064,7 +1073,8 @@ window.addEventListener('popstate', () => {
 });
 function render() {
   // nobody signed in: the sign-in and sign-up page. The teacher-account form opens from its Teacher button, only while no teacher account exists.
-  if (!Auth.user()) { if (S.view !== 'signin' && !(S.view === 'setup' && !Auth.ready())) { for (const k of Object.keys(S)) delete S[k]; S.view = 'signin'; } }
+  if (GONLY() && Auth.user() && !(Auth.A.session && Auth.A.session.g)) { Auth.A.session = null; Store.data.current = 'guest'; Store.save(); S.signedOut = 'Please sign in with Google (Gmail or the school e-mail).'; }
+  if (!Auth.user()) { if (S.view !== 'signin' && !(S.view === 'setup' && !Auth.ready() && !GONLY())) { for (const k of Object.keys(S)) delete S[k]; S.view = 'signin'; } }
   else if (S.view === 'setup' || S.view === 'signin') { for (const k of Object.keys(S)) delete S[k]; S.view = 'home'; }
   const IN = !!Auth.user() && S.view !== 'setup' && S.view !== 'signin', T = Auth.isT();
   const g = S.g || null; setBand(g); if (S.mg && typeof MAPX !== "undefined") MAPX.band(S.mg);
@@ -1763,8 +1773,8 @@ VIEWS.teacher = m => {
   <div class="grid g2">${rows.map(({ p, per }) => `<div class="card"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h3>${esc(p.name)} <span class="muted" style="font-size:.9rem">${esc(p.cls || '')}</span></h3>${p.id !== 'guest' ? `<button class="btn sm sec" data-del="${esc(p.id)}">🗑️</button>` : ''}</div>
     ${(() => { const t = shStats(p); return `<div class="selfrow"><span><b>🎙️ Shadowing</b></span><span>${t.min} min · ${t.lines} lines · ⭐ ${t.mastered} · 🔥 ${t.streak} days</span></div>`; })()}
     ${per.map(x => `<div class="selfrow"><span><b>${lv(x.g)}</b> · ${x.done}/${x.total} lessons</span><span>★ ${x.stars}${x.ck != null ? ' · 🏅 ' + x.ck + '%' : ''}</span></div>`).join('')}${typeof MAPX !== "undefined" ? MAPX.dashRows(p) : ''}</div>`).join('') || '<p>No students yet.</p>'}</div>
-  <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="csv">⬇️ Download CSV</button>'}<button class="btn sec" id="cp">📋 Copy results</button>${navigator.share ? '<button class="btn sec" id="shr">📤 Share</button>' : ''}<span class="muted" id="cpm"></span></div>
-  ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>🎯 MAP Growth results</h2></div><div class="card"><p style="margin-top:0">Practice sets and mock-exam scores (percentage correct, by goal area) for every student on this device.</p><p class="ar ar-block">نتائج تدريبات واختبارات MAP التجريبية لجميع الطلاب على هذا الجهاز.</p><div class="ctrls" style="justify-content:flex-start;margin-top:10px">${(window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="mcsv">⬇️ MAP results (CSV)</button>'}<button class="btn sec" id="mcp">📋 Copy MAP results</button><span class="muted" id="mcpm"></span></div></div>` : ''}
+  <div class="ctrls" style="justify-content:flex-start;margin-top:14px">${(NODL || window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="csv">⬇️ Download CSV</button>'}<button class="btn sec" id="cp">📋 Copy results</button>${navigator.share ? '<button class="btn sec" id="shr">📤 Share</button>' : ''}<span class="muted" id="cpm"></span></div>
+  ${typeof MAPX !== "undefined" ? `<div class="section-title"><h2>🎯 MAP Growth results</h2></div><div class="card"><p style="margin-top:0">Practice sets and mock-exam scores (percentage correct, by goal area) for every student on this device.</p><p class="ar ar-block">نتائج تدريبات واختبارات MAP التجريبية لجميع الطلاب على هذا الجهاز.</p><div class="ctrls" style="justify-content:flex-start;margin-top:10px">${(NODL || window.LSP_SPRITES || NATIVE) ? '' : '<button class="btn" id="mcsv">⬇️ MAP results (CSV)</button>'}<button class="btn sec" id="mcp">📋 Copy MAP results</button><span class="muted" id="mcpm"></span></div></div>` : ''}
   <div class="section-title"><h2>Back up or move students</h2></div>
   <div class="card"><p style="margin-top:0">Save every student's progress in one backup, then restore it on another device or after reinstalling the app.</p>
     <p class="ar ar-block">احفظ تقدّم جميع الطلاب في نسخة احتياطية واحدة، ثم استعدها على جهاز آخر أو بعد إعادة تثبيت التطبيق.</p>
@@ -2324,16 +2334,21 @@ function byeFX(who) {
   setTimeout(() => RX.sfx('leave'), 60);
 }
 
+/* view-only: no "save" menu on audio, pictures and booklet pages */
+document.addEventListener('contextmenu', e => { if (e.target.closest && e.target.closest('audio,video,img,canvas,.pdfv')) e.preventDefault(); });
+document.addEventListener('play', e => { const a = e.target; if (a && a.tagName === 'AUDIO' && !a.hasAttribute('controlslist')) a.setAttribute('controlslist', 'nodownload noplaybackrate'); }, true);
+new MutationObserver(() => $$('audio[controls]:not([controlslist])').forEach(a => a.setAttribute('controlslist', 'nodownload'))).observe(document.documentElement, { childList: true, subtree: true });
+
 /* ---------- Accounts ---------- */
 const ITER = { pass: 600000, pin: 100000, code: 100000 };
 const T_AR = { four: 'اكتب 4 أرقام.', same: 'لا تستخدم الرقم نفسه 4 مرات.', seq: 'لا تستخدم أرقامًا متتالية مثل 1234.' };
 const Auth = {
   get A() { const d = Store.data; if (!d.auth) d.auth = { v: 1, teacher: null, session: null, fails: {} }; d.auth.fails = d.auth.fails || {}; return d.auth; },
-  ready() { return !!(Store.data.auth && Store.data.auth.teacher && Store.data.auth.teacher.pw); },
+  ready() { const T = Store.data.auth && Store.data.auth.teacher; return !!(T && (T.pw || T.google)); },
   user() { const s = this.A.session; return s && Store.data.profiles[s.id] ? Store.data.profiles[s.id] : null; },
   role() { const s = this.A.session; return s ? s.role : null; },
   isT() { return this.role() === 'teacher' && !!this.user(); },
-  start(id, role) { ENTER = true; const now = Date.now(); this.A.session = { id, role, at: now, last: now }; Store.data.current = id; delete this.A.fails[id]; Store.save(); },
+  start(id, role, g) { ENTER = true; const now = Date.now(); this.A.session = { id, role, at: now, last: now, g: !!g }; Store.data.current = id; delete this.A.fails[id]; Store.save(); },
   signOut(why) { const who = this.user(); if (!why && who) byeFX(who); AU.stop(); stopAllRec(); RX.hush(); this.A.session = null; Store.data.current = 'guest'; Store.save(); S.signedOut = why || ''; for (const k of Object.keys(S)) if (k !== 'signedOut') delete S[k]; S.view = 'signin'; render(); },
   locked(id) { const f = this.A.fails[id]; return f && f.until > Date.now() ? Math.ceil((f.until - Date.now()) / 1000) : 0; },
   fail(id, teacher) {
@@ -2382,6 +2397,15 @@ const Auth = {
     const id = 'p' + Date.now().toString(36) + [...Sec.rnd(2)].map(x => x.toString(16).padStart(2, '0')).join('');
     Store.data.profiles[id] = { id, name: name.trim(), cls: cls.trim(), progress: {}, created: Date.now(), pin: await Sec.make(pin, ITER.pin) };
     this.start(id, 'student'); return id;
+  },
+  /* the owner signed in with Google: he is the teacher on this device */
+  ownerIn(p) {
+    const T = this.A.teacher || (this.A.teacher = { created: Date.now() });
+    if (!T.name) T.name = String(p.name || 'Teacher').slice(0, 40);
+    if (!T.user) T.user = OWNER_EMAIL;
+    T.google = OWNER_EMAIL;
+    const P = Store.data.profiles; P.teacher = Object.assign(P.teacher || { progress: {} }, { id: 'teacher', name: T.name, cls: '', role: 'teacher', email: OWNER_EMAIL, g: true });
+    this.start('teacher', 'teacher', true);
   },
   guestIn() { if (!Cfg.sec().guest) return false; this.start('guest', 'guest'); return true; },
   async recover(code, pass) {
@@ -2515,6 +2539,16 @@ function showRecovery(m, code, next) {
 
 /* ---------- Sign in ---------- */
 VIEWS.signin = m => {
+  if (GONLY()) {
+    m.innerHTML = `<section class="auth wide">${AUTH_HERO()}<div class="card">
+      <div class="auth-head"><span class="big wave">👋</span><div><h1>Sign in</h1><span class="ar">تسجيل الدخول</span></div></div>
+      ${S.signedOut ? `<p class="note">🔒 ${esc(S.signedOut)} <span class="ar">سجّل الدخول عبر Google.</span></p>` : ''}
+      <p class="muted" style="margin:.2rem 0 0">Sign in with your <b>Gmail</b> or your <b>Andalus school (@as.edu.sa)</b> Google account. <span class="ar">سجّل الدخول ببريد Gmail أو بريد مدارس الأندلس.</span></p>
+      <div class="ctrls" style="justify-content:flex-start;margin-top:16px"><button class="btn gbtn pulse" id="gB">${GSI.ICON} Sign in with Google <span class="ar">Gmail أو بريد الأندلس</span></button></div></div>
+      <p class="foot">Andalus International Schools · Taif Boys · ${APP} · Designed by Waleed Youssef · v${APP_VER}</p></section>`;
+    $('#gB', m).onclick = () => GSI.open();
+    return;
+  }
   const sec = Cfg.sec(), list = Auth.students(), classes = [...new Set(list.map(p => p.cls || ''))].filter(Boolean).sort();
   const f = S.cls != null && classes.includes(S.cls) ? S.cls : '';
   const shown = f ? list.filter(p => (p.cls || '') === f) : list;
@@ -2544,9 +2578,13 @@ VIEWS.signin = m => {
    hands the page a signed ID token; the app reads the name and e-mail from it and opens (or creates) the
    matching account on this device. Only the browser version can use it: Google blocks sign-in inside app web views.
    The teacher pastes the Google "client ID" in Settings. */
+const OWNER_EMAIL = 'mr.waleedyoussif@gmail.com';   // the owner: signs in as the teacher
+const GSI_CID = '539437685507-emauliua6r7dulh68pf7ns25ma45j3il.apps.googleusercontent.com';
+const GSI_DOMAINS = 'gmail.com, as.edu.sa';
+const GONLY = () => GSI.can();   // the website: sign in with Google only
 const GSI = {
   ICON: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.5 5.4 2.6 13.2l7.9 6.2C12.4 13.6 17.7 9.5 24 9.5z"/><path fill="#4285F4" d="M46.6 24.6c0-1.6-.1-3.1-.4-4.6H24v9.1h12.7c-.6 3-2.2 5.5-4.7 7.2l7.6 5.9c4.5-4.1 7-10.2 7-17.6z"/><path fill="#FBBC05" d="M10.5 28.6c-.5-1.5-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.2C1 16.500 0 20.100 0 24s1 7.500 2.600 10.800l7.900-6.200z"/><path fill="#34A853" d="M24 48c6.300 0 11.700-2.100 15.600-5.700l-7.600-5.900c-2.100 1.400-4.800 2.300-8 2.300-6.300 0-11.600-4.100-13.500-9.900l-7.900 6.200C6.500 42.600 14.600 48 24 48z"/></svg>',
-  cfg() { return Object.assign({ cid: '', domains: 'gmail.com' }, Store.data.settings.gsi || {}); },
+  cfg() { const s = Store.data.settings.gsi || {}; return { cid: s.cid || GSI_CID, domains: s.domains || GSI_DOMAINS }; },
   put(k, v) { const s = Store.data.settings.gsi = Store.data.settings.gsi || {}; s[k] = v; Store.save(); },
   can() { return PLAT === 'web' && /^https?:$/.test(location.protocol); },
   domains() { return this.cfg().domains.toLowerCase().split(/[\s,;]+/).map(d => d.replace(/^@/, '')).filter(Boolean); },
@@ -2566,13 +2604,14 @@ const GSI = {
     const p = this.parse(resp && resp.credential), bad = this.check(p), E = m && $('#gE', m);
     if (bad) { if (E) E.innerHTML = `${esc(bad[0])} <span class="ar">${esc(bad[1])}</span>`; return false; }
     const email = p.email.toLowerCase(), P = Store.data.profiles;
+    if (email === OWNER_EMAIL) { Auth.ownerIn(p); if (m) m.remove(); go('home'); return true; }
     let u = Object.values(P).find(x => (x.email || '').toLowerCase() === email && x.id !== 'teacher' && x.id !== 'guest');
     if (!u) {
-      if (!Cfg.sec().selfSignup) { if (E) E.innerHTML = 'This e-mail is not on the class list. Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span>'; return false; }
+      if (!GONLY() && !Cfg.sec().selfSignup) { if (E) E.innerHTML = 'This e-mail is not on the class list. Ask your teacher to add you. <span class="ar">اطلب من معلمك إضافتك.</span>'; return false; }
       const id = 'p' + Date.now().toString(36) + [...Sec.rnd(2)].map(x => x.toString(16).padStart(2, '0')).join('');
       u = P[id] = { id, name: String(p.name || email.split('@')[0]).slice(0, 40), cls: '', email, g: true, progress: {}, created: Date.now() };
     }
-    u.g = true; Auth.start(u.id, 'student'); if (m) m.remove(); go('home'); return true;
+    u.g = true; Auth.start(u.id, 'student', true); if (m) m.remove(); go('home'); return true;
   },
   open(hint) {
     const c = this.cfg();
@@ -2595,7 +2634,7 @@ const GSI = {
 async function studentSignIn(id) {
   if (id === 'guest') { if (Auth.guestIn()) go('home'); return; }
   const p = Store.data.profiles[id]; if (!p) return;
-  if (p.g && GSI.can()) return GSI.open(p.email);
+  if (GONLY() || (p.g && GSI.can())) return GSI.open(p.email);
   if (!p.pin) {   // first sign-in after an update, or the teacher reset the PIN
     const pin = await newPinFlow(p, `Hello ${p.name}! Choose your PIN`); if (!pin) return;
     await Auth.setPin(id, pin); Auth.start(id, 'student'); go('home'); return;
@@ -2620,6 +2659,7 @@ async function signUpFlow() {
   };
 }
 function teacherSignIn(after) {
+  if (GONLY()) return GSI.open(OWNER_EMAIL);
   // no teacher account on this device yet: it is created from the sign-in page
   if (!Auth.ready()) { Auth.signOut('There is no teacher account yet. Press “Teacher — create the account”.'); render(); return; }
   const T = Auth.A.teacher || {};
@@ -2663,6 +2703,10 @@ function recoverFlow(after) {
 }
 // asks for the teacher password before a sensitive action; resolves true/false
 function confirmTeacher(title, en, ar) {
+  if (!(Auth.A.teacher && Auth.A.teacher.pw)) return new Promise(done => {   // the owner signed in with Google: no password to type
+    modal(`<h3>${title}</h3>${en ? `<p>${en}</p>` : ''}${ar ? `<p class="ar ar-block">${ar}</p>` : ''}`, () => done(true), 'Confirm');
+    const mm = [...document.querySelectorAll('.modal')].pop(); mm.querySelector('[data-m=no]').onclick = () => { mm.remove(); done(false); };
+  });
   return new Promise(done => {
     const m = sheet(`<h3>${title}</h3>${en ? `<p>${en}</p>` : ''}${ar ? `<p class="ar ar-block">${ar}</p>` : ''}
       <form id="ctF" novalidate>${pwField('ctP', 'Teacher password', 'كلمة مرور المعلم')}<p class="pinmsg bad" id="ctE" role="alert"></p>
@@ -2840,7 +2884,7 @@ VIEWS.settings = m => {
   </section>
   <section class="card setcard" id="acct"><h3>🔐 My account <span class="ar">حسابي</span></h3>
     ${u.id === 'guest' ? '<p class="muted">You are practising as a guest. Guest progress is shared by everyone on this device. <span class="ar ar-block">أنت تتدرّب كضيف، وتقدّم الضيف مشترك بين جميع مستخدمي الجهاز.</span></p>'
-      : T ? `<div class="srow"><span class="lbl"><b>${esc(Auth.A.teacher.name)}</b><small>Username: ${esc(Auth.A.teacher.user)}</small></span><span class="ctrls"><button class="btn sm sec" id="aName">✏️ Name</button><button class="btn sm sec" id="aPass">🔐 Change password</button><button class="btn sm sec" id="aCode">🗝️ New recovery code</button></span></div>`
+      : T ? `<div class="srow"><span class="lbl"><b>${esc(Auth.A.teacher.name)}</b><small>${Auth.A.teacher.pw ? 'Username: ' + esc(Auth.A.teacher.user) : 'Owner · Google: ' + esc(Auth.A.teacher.google || OWNER_EMAIL)}</small></span><span class="ctrls"><button class="btn sm sec" id="aName">✏️ Name</button>${Auth.A.teacher.pw ? '<button class="btn sm sec" id="aPass">🔐 Change password</button><button class="btn sm sec" id="aCode">🗝️ New recovery code</button>' : ''}</span></div>`
       : `<div class="srow"><span class="lbl"><b>${esc(u.name)}</b><small>${esc(u.cls || '')}</small></span><button class="btn sm sec" id="aPin">🔐 Change my PIN</button></div>`}
     <div class="srow"><span class="lbl"><b>Sign out</b><small>Use it when you finish, on a shared device.</small><span class="ar ar-block">سجّل الخروج عند الانتهاء على جهاز مشترك.</span></span><button class="btn sm sec" id="aOut">🚪 Sign out</button></div>
   </section>
@@ -2864,7 +2908,7 @@ VIEWS.settings = m => {
   ${tcard('👥', 'Students', 'الطلاب', `${studs.length ? studs.map(p => `<div class="srow"><span class="lbl" style="display:flex;align-items:center;gap:10px">${avHTML(p)}<span><b>${esc(p.name)}</b><small>${esc(p.cls || 'no class')} · ${p.pin ? 'PIN set' : 'no PIN yet'}${Auth.locked(p.id) ? ' · locked' : ''}</small></span></span><span class="ctrls"><button class="btn sm sec" data-rp="${esc(p.id)}">🔑 Reset PIN</button><button class="btn sm sec" data-rn="${esc(p.id)}">✏️</button><button class="btn sm sec" data-dl="${esc(p.id)}" aria-label="Delete">🗑️</button></span></div>`).join('') : '<p class="muted">No students yet.</p>'}
     <form id="adF" class="addrow" novalidate><input type="text" id="adN" maxlength="30" placeholder="Student name" aria-label="Student name"><input type="text" id="adC" maxlength="12" placeholder="Class" aria-label="Class"><button class="btn sm" type="submit">➕ Add student</button></form>
     <p class="muted" style="font-size:.85rem;margin:.4rem 0 0">A student you add chooses a PIN at the first sign-in. “Reset PIN” lets a student choose a new one.</p><p class="pinmsg bad" id="adE"></p>`)}
-  ${tcard('💾', 'Data', 'البيانات', `<div class="srow"><span class="lbl"><b>Back up all students</b><small>The backup file is encrypted with the teacher password.</small><span class="ar ar-block">نسخة احتياطية مشفّرة بكلمة مرور المعلم.</span></span><span class="ctrls"><button class="btn sm" id="dBk">💾 Back up</button><button class="btn sm sec" id="dRs">♻️ Restore</button></span></div>
+  ${tcard('💾', 'Data', 'البيانات', `<div class="srow"><span class="lbl"><b>Back up all students</b><small>The backup file is encrypted with the teacher password.</small><span class="ar ar-block">نسخة احتياطية مشفّرة بكلمة مرور المعلم.</span></span><span class="ctrls">${NODL ? '' : '<button class="btn sm" id="dBk">💾 Back up</button>'}<button class="btn sm sec" id="dRs">♻️ Restore</button></span></div>
     <div class="srow"><span class="lbl"><b>Reset all progress</b><small>Keeps the accounts; removes stars, scores and shadowing records.</small><span class="ar ar-block">يحذف التقدّم ويحتفظ بالحسابات.</span></span><button class="btn sm sec" id="dRz">🧹 Reset</button></div><p class="muted" id="dM"></p>`)}
   <section class="card setcard"><h3>ℹ️ About and privacy <span class="ar">حول البرنامج والخصوصية</span></h3>
     <p style="margin-top:.3rem"><b>From Zero To Hero</b> v${APP_VER} · designed by Waleed Youssef.</p>
@@ -2895,13 +2939,13 @@ VIEWS.settings = m => {
     { const gs = $('#gSave', m); if (gs) gs.onclick = () => { const cid = $('#gCid', m).value.trim(), G = $('#gMsg', m); if (cid && !/^[\w-]+\.apps\.googleusercontent\.com$/.test(cid)) { G.textContent = 'The key should end with .apps.googleusercontent.com'; return; } GSI.put('cid', cid); GSI.put('domains', $('#gDom', m).value.trim()); G.textContent = cid ? 'Saved. The Google button is now on the sign-in page (browser version).' : 'Saved. Google sign-in is off.'; }; }
     seg('sId', v => Cfg.putSec('idle', +v)); seg('sTi', v => Cfg.putSec('tidle', +v));
     $('#aName', m).onclick = () => { const mm = sheet(`<h3>✏️ Your name</h3><input type="text" id="nmI" maxlength="40" value="${esc(Auth.A.teacher.name)}" style="width:100%"><div class="navrow"><button class="btn sec" data-x>Cancel</button><button class="btn" data-s>Save</button></div>`); $('[data-x]', mm).onclick = () => mm.remove(); $('[data-s]', mm).onclick = () => { const v = $('#nmI', mm).value.trim(); if (v.length < 2) return; Auth.A.teacher.name = v; Store.data.profiles.teacher.name = v; Store.save(); mm.remove(); render(); }; };
-    $('#aPass', m).onclick = () => changePassFlow();
-    $('#aCode', m).onclick = async () => { if (!(await confirmTeacher('🗝️ New recovery code', 'The old recovery code will stop working.', 'سيتوقف رمز الاسترداد القديم عن العمل.'))) return; const c = await Auth.newCode(); const v = document.createElement('div'); v.className = 'modal'; showRecovery(v, c, () => v.remove()); document.body.appendChild(v); };
+    if ($('#aPass', m)) $('#aPass', m).onclick = () => changePassFlow();
+    if ($('#aCode', m)) $('#aCode', m).onclick = async () => { if (!(await confirmTeacher('🗝️ New recovery code', 'The old recovery code will stop working.', 'سيتوقف رمز الاسترداد القديم عن العمل.'))) return; const c = await Auth.newCode(); const v = document.createElement('div'); v.className = 'modal'; showRecovery(v, c, () => v.remove()); document.body.appendChild(v); };
     $$('[data-rp]', m).forEach(b => b.onclick = () => { const p = Store.data.profiles[b.dataset.rp]; modal(`<h3>Reset the PIN of ${esc(p.name)}?</h3><p>${esc(p.name)} will choose a new PIN at the next sign-in.</p><p class="ar ar-block">سيختار الطالب رمزًا جديدًا عند الدخول القادم.</p>`, () => { delete p.pin; delete Auth.A.fails[p.id]; Store.save(); render(); }, 'Reset PIN'); });
     $$('[data-rn]', m).forEach(b => b.onclick = () => { const p = Store.data.profiles[b.dataset.rn]; const mm = sheet(`<h3>✏️ Student</h3><div class="field"><label>Name</label><input type="text" id="rnN" maxlength="30" value="${esc(p.name)}"></div><div class="field"><label>Class</label><input type="text" id="rnC" maxlength="12" value="${esc(p.cls || '')}"></div><p class="pinmsg bad" id="rnE"></p><div class="navrow"><button class="btn sec" data-x>Cancel</button><button class="btn" data-s>Save</button></div>`); $('[data-x]', mm).onclick = () => mm.remove(); $('[data-s]', mm).onclick = () => { const n = $('#rnN', mm).value.trim(), c = $('#rnC', mm).value.trim(); if (n.length < 2) return; if (Auth.dupName(n, c, p.id)) { $('#rnE', mm).textContent = 'This name is already used in this class.'; return; } p.name = n; p.cls = c; Store.save(); mm.remove(); render(); }; });
     $$('[data-dl]', m).forEach(b => b.onclick = () => { const p = Store.data.profiles[b.dataset.dl]; modal(`<h3>Delete ${esc(p.name)}?</h3><p>The account and all saved progress of <b>${esc(p.name)}</b> on this device will be removed.</p><p class="ar ar-block">سيُحذف الحساب وكل التقدّم المحفوظ.</p>`, () => { delete Store.data.profiles[p.id]; delete Auth.A.fails[p.id]; Store.save(); render(); }, 'Delete'); });
     $('#adF', m).onsubmit = e => { e.preventDefault(); const n = $('#adN', m).value.trim(), c = $('#adC', m).value.trim(); if (n.length < 2) { $('#adN', m).focus(); return; } if (Auth.dupName(n, c)) { $('#adE', m).textContent = 'This name is already used in this class.'; return; } const id = 'p' + Date.now().toString(36) + [...Sec.rnd(2)].map(x => x.toString(16).padStart(2, '0')).join(''); Store.data.profiles[id] = { id, name: n, cls: c, progress: {}, created: Date.now() }; Store.save(); render(); };
-    $('#dBk', m).onclick = () => backupFlow($('#dM', m));
+    if ($('#dBk', m)) $('#dBk', m).onclick = () => backupFlow($('#dM', m));
     $('#dRs', m).onclick = () => restoreFlow();
     $('#dRz', m).onclick = async () => { if (!(await confirmTeacher('🧹 Reset all progress?', 'Stars, scores and shadowing records of every student on this device will be removed. The accounts stay.', 'سيُحذف تقدّم جميع الطلاب على هذا الجهاز، وتبقى الحسابات.'))) return; Object.values(Store.data.profiles).forEach(p => { p.progress = {}; delete p.shadow; }); Store.save(); $('#dM', m).textContent = '✅ All progress was reset.'; };
   }
