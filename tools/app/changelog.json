@@ -1,4 +1,16 @@
 {
+ "1.17.0": {
+  "en": [
+   "The website now opens at zero-2-heroenglish.com.",
+   "Sign in with Google only: students use Gmail or the Andalus school e-mail. The owner account (mr.waleedyoussif@gmail.com) opens the teacher dashboard.",
+   "View only: booklets open in an on-screen reader, and download buttons are removed."
+  ],
+  "ar": [
+   "الموقع متاح الآن على zero-2-heroenglish.com.",
+   "الدخول عبر Google فقط: يستخدم الطلاب بريد Gmail أو بريد مدارس الأندلس، ويفتح حساب المالك لوحة المعلم.",
+   "للعرض فقط: تُفتح الكتيّبات في قارئ على الشاشة، وأُزيلت أزرار التنزيل."
+  ]
+ },
  "1.16.0": {
   "en": [
    "Reading and Writing is open: Levels A1 to B2 (47 units, 235 lessons). Every unit has new words, close reading, a reading strategy, a writing skill and a writing workshop, plus a unit test.",
