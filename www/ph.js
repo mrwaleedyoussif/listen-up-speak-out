@@ -65,7 +65,7 @@ const PHX = (() => {
     m.innerHTML = crumbs(parts) + `
     <section class="lhead dhead" style="--a:${A};--b:${B}"><span class="d-ic">${rev ? '🏁' : '🔤'}</span><div><span class="k">Phonics Made Clear${rev ? '' : ` · ${P.pages.length} pages · ${ex.length} exercises`}</span><h1>${esc(title)}</h1></div></section>
     ${rev ? '' : `<div class="ph-tabs"><button class="ph-tab${tab === 'l' ? ' on' : ''}" data-t="l">📖 Lesson and audio <span class="ar">الدرس والصوت</span></button><button class="ph-tab${tab === 'x' ? ' on' : ''}" data-t="x">✏️ Practice · ${ex.length} exercises <span class="ar">التدريب</span></button></div>`}
-    ${tab === 'l' ? `<div class="ph-audio"><b>🎧 Listen to Part ${P.n}</b><audio controls preload="none" src="audio/phonics/P${String(P.n).padStart(2, '0')}.mp3"></audio></div>
+    ${tab === 'l' ? `<div class="ph-audio"><b>🎧 Listen to Part ${P.n}</b><audio controls controlslist="nodownload" preload="none" src="audio/phonics/P${String(P.n).padStart(2, '0')}.mp3"></audio></div>
       <div class="ph-pages">${P.pages.map((p, i) => `<img src="ph/pg/${String(p).padStart(3, '0')}.webp" alt="Phonics Made Clear, Part ${P.n}, page ${i + 1} of ${P.pages.length}" loading="${i ? 'lazy' : 'eager'}" width="794" height="1123">`).join('')}</div>
       <div class="navrow" style="margin-top:16px"><button class="btn sec" id="phBack">← All parts</button><button class="btn" id="phGoX">Go to the practice →</button></div>`
       : `${rev ? '' : `<section class="card" style="margin-top:14px;border-left:6px solid ${A}"><b>Remember</b> <span class="ar">تذكّر</span><p style="margin:.3rem 0 0">${esc(P.rem)}</p></section>`}
