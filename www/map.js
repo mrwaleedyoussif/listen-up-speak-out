@@ -73,13 +73,47 @@ const MAPX = (() => {
   const WEB = () => (typeof PLAT === 'undefined' || PLAT === 'web');
   const prnURL = f => (WEB() ? '' : (typeof SITE !== 'undefined' ? SITE : 'https://mrwaleedyoussif.github.io/listen-up-speak-out/')) + 'print/map/' + f;
   const mb = b => (b >= 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB');
+  /* view-only booklet reader: pages are drawn on screen with PDF.js (no download or print button) */
+  const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+  let pdfP = null;
+  const pdfLib = () => window.pdfjsLib ? Promise.resolve(window.pdfjsLib) : (pdfP || (pdfP = new Promise((ok, no) => {
+    const s = document.createElement('script'); s.src = PDFJS + 'pdf.min.js'; s.async = true;
+    s.onload = () => { if (window.pdfjsLib) { pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'pdf.worker.min.js'; ok(pdfjsLib); } else { pdfP = null; no(new Error('pdf')); } };
+    s.onerror = () => { pdfP = null; no(new Error('offline')); }; document.head.appendChild(s);
+  })));
+  function viewPDF(url, title) {
+    const v = document.createElement('div'); v.className = 'pdfv'; v.setAttribute('role', 'dialog'); v.setAttribute('aria-modal', 'true');
+    v.innerHTML = `<div class="pdfv-bar"><b></b><span class="pdfv-n"></span><button class="btn sm" data-x>✕ Close</button></div><div class="pdfv-pages"><p class="muted">Opening… <span class="ar">جارٍ الفتح…</span></p></div>`;
+    v.querySelector('b').textContent = title || '';
+    document.body.appendChild(v); document.body.style.overflow = 'hidden';
+    let doc = null, io = null; const pages = v.querySelector('.pdfv-pages');
+    const close = () => { if (io) io.disconnect(); if (doc) doc.destroy(); v.remove(); document.body.style.overflow = ''; document.removeEventListener('keydown', kd, true); };
+    const kd = e => { if (e.key === 'Escape') close(); if ((e.ctrlKey || e.metaKey) && /^[sp]$/i.test(e.key)) e.preventDefault(); };
+    document.addEventListener('keydown', kd, true); v.querySelector('[data-x]').onclick = close;
+    pdfLib().then(lib => lib.getDocument({ url }).promise).then(d => {
+      if (!v.isConnected) { d.destroy(); return; } doc = d;
+      v.querySelector('.pdfv-n').textContent = d.numPages + ' pages';
+      pages.innerHTML = Array.from({ length: d.numPages }, (_, i) => `<div class="pdfv-pg" data-n="${i + 1}"></div>`).join('');
+      const draw = async box => {
+        if (box.dataset.done) return; box.dataset.done = '1';
+        const pg = await d.getPage(+box.dataset.n), w = box.clientWidth || 800, vp0 = pg.getViewport({ scale: 1 });
+        const vp = pg.getViewport({ scale: (w / vp0.width) * Math.min(2, window.devicePixelRatio || 1) });
+        const c = document.createElement('canvas'); c.width = vp.width; c.height = vp.height; box.style.minHeight = '';
+        box.appendChild(c); await pg.render({ canvasContext: c.getContext('2d'), viewport: vp }).promise;
+      };
+      io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) draw(e.target); }), { root: pages, rootMargin: '600px 0px' });
+      pages.querySelectorAll('.pdfv-pg').forEach(b => { b.style.minHeight = Math.round((b.clientWidth || 800) * 1.3) + 'px'; io.observe(b); });
+    }).catch(() => { pages.innerHTML = '<p class="muted">The booklet could not be opened. Check the internet and try again. <span class="ar">تعذّر فتح الكتيّب. تحقّق من الإنترنت.</span></p>'; });
+  }
+  document.addEventListener('click', e => { const b = e.target.closest && e.target.closest('[data-pv]'); if (!b) return; e.preventDefault(); e.stopPropagation(); viewPDF(prnURL(b.dataset.pv), b.dataset.pt); }, true);
+
   function printHTML(subj, g) {
     const pr = PRN()[`${subj}_${g}`]; if (!pr) return '';
     const rows = [['booklet', '📘 Student booklet', 'كتيّب الطالب', '6 practice units · 78 questions'], ['mocks', '🎯 Mock exams A–E', 'الاختبارات التجريبية', '5 exams × 43 questions · answer sheets included']];
-    return `<div class="section-title"><h2>🖨️ Print copies</h2></div>
-    <p class="muted" style="margin:-4px 0 12px">Print the booklets for class or homework, or open them in Word to edit. Answer keys are in the teacher pack. An internet connection is needed. <span class="ar">نسخ للطباعة (PDF) أو للتعديل (Word)؛ يلزم الاتصال بالإنترنت.</span></p>
+    return `<div class="section-title"><h2>📖 Booklets</h2></div>
+    <p class="muted" style="margin:-4px 0 12px">View the booklets on screen (view only). Answer keys are in the teacher pack. An internet connection is needed. <span class="ar">اعرض الكتيّبات على الشاشة (للعرض فقط)؛ يلزم الاتصال بالإنترنت.</span></p>
     <section class="grid mg2">${rows.filter(r => pr[r[0]]).map(([k, t, ar, sub]) => `<div class="card mprint"><b>${t}</b> <span class="ar">${ar}</span><span class="muted" style="font-size:.88rem">${sub}</span>
-      <span class="mp-btns">${['pdf', 'docx'].filter(x => pr[k][x]).map(x => `<a class="btn sm ${x === 'pdf' ? 'band' : 'sec'}" href="${prnURL(pr[k][x].f)}" target="_blank" rel="noopener"${WEB() ? ` download="${pr[k][x].f}"` : ' data-ext="1"'}>⬇️ ${x === 'pdf' ? 'PDF' : 'Word'} <small>${mb(pr[k][x].b)}</small></a>`).join('')}</span></div>`).join('')}</section>`;
+      <span class="mp-btns">${pr[k].pdf ? `<button class="btn sm band" data-pv="${pr[k].pdf.f}" data-pt="${t.replace(/^\S+\s/, '')} · Grade ${g}">👁️ View</button>` : ''}</span></div>`).join('')}</section>`;
   }
 
   /* ---------- data ---------- */
